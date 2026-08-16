@@ -1,0 +1,67 @@
+{
+  "id": "deliver-as-one-arm",
+  "company": "arm",
+  "group": "one-arm",
+  "name": "Deliver as 'One Arm'",
+  "sort": 2,
+  "definition": "Understand the connections and complexities beyond your function. Collaboration isn't always consensus.",
+  "terms": [
+    {
+      "id": "one-arm",
+      "label": "one arm",
+      "kind": "alias"
+    },
+    {
+      "id": "deliver-as-one-arm",
+      "label": "deliver as one arm",
+      "kind": "alias"
+    },
+    {
+      "id": "beyond-your-function",
+      "label": "beyond your function",
+      "kind": "equivalent"
+    },
+    {
+      "id": "collaboration-is-not-always-consensus",
+      "label": "collaboration is not always consensus",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "beyond-your-function",
+      "situation": "Work that crosses functions",
+      "under": "Stays inside the function. Treats other groups as someone else's problem.",
+      "justRight": "Learns how the work connects beyond their function. Names the dependencies and the tradeoffs before they become surprises.",
+      "over": "Inserts themselves into every other function's work. Creates meetings instead of connections."
+    },
+    {
+      "id": "naming-complexities",
+      "situation": "Naming the complexities",
+      "under": "Pretends the path is simple when it is not. Hides the hard parts from partners.",
+      "justRight": "Surfaces the real complexities early, including the ones that sit outside their team. Helps others see the whole picture.",
+      "over": "Uses complexity as a reason to stall. Makes the work sound harder than it is."
+    },
+    {
+      "id": "collaboration-without-consensus",
+      "situation": "When collaboration is not consensus",
+      "under": "Either goes it alone or waits until everyone agrees.",
+      "justRight": "Collaborates to understand the connections, then moves when the decision is clear. Does not confuse alignment with unanimous agreement.",
+      "over": "Forces a vote on every detail. Treats dissent as a veto."
+    },
+    {
+      "id": "handing-work-across-teams",
+      "situation": "Handing work across teams",
+      "under": "Throws work over the wall. Does not check whether the next team can actually take it.",
+      "justRight": "Hands work off with the context the next team needs. Stays available until the connection holds.",
+      "over": "Never lets go. Sits in every other team's review so nothing moves without them."
+    },
+    {
+      "id": "company-over-function",
+      "situation": "A local win that hurts another team",
+      "under": "Optimizes the function and ignores the cost to the company.",
+      "justRight": "Chooses the outcome that works for Arm, even when it is harder for their own group.",
+      "over": "Sacrifices their team's real work to appear collaborative. Becomes a bottleneck for everyone else's priorities."
+    }
+  ]
+}

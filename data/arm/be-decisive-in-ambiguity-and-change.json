@@ -1,0 +1,67 @@
+{
+  "id": "be-decisive-in-ambiguity-and-change",
+  "company": "arm",
+  "group": "accelerate-impact",
+  "name": "Be decisive in ambiguity and change",
+  "sort": 9,
+  "definition": "Find the common threads and translate vague ideas into concrete execution plans to create focus.",
+  "terms": [
+    {
+      "id": "decisive-in-ambiguity",
+      "label": "decisive in ambiguity",
+      "kind": "alias"
+    },
+    {
+      "id": "ambiguity-and-change",
+      "label": "ambiguity and change",
+      "kind": "alias"
+    },
+    {
+      "id": "concrete-execution-plans",
+      "label": "concrete execution plans",
+      "kind": "equivalent"
+    },
+    {
+      "id": "create-focus",
+      "label": "create focus",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "finding-common-threads",
+      "situation": "Finding the common threads",
+      "under": "Treats every signal as a new direction. Cannot say what is shared.",
+      "justRight": "Finds the common threads in vague or conflicting input. Names the few things that actually matter.",
+      "over": "Forces a single thread too early. Drops the signal that would have changed the plan."
+    },
+    {
+      "id": "translating-vague-ideas",
+      "situation": "Translating a vague idea",
+      "under": "Leaves the idea in slogan form. Nobody knows what to build.",
+      "justRight": "Translates vague ideas into something a team can execute. Makes the first version concrete.",
+      "over": "Writes a plan so detailed that the idea can no longer change. Concrete becomes rigid."
+    },
+    {
+      "id": "creating-focus",
+      "situation": "Creating focus",
+      "under": "Keeps every option open. The team does not know what to do first.",
+      "justRight": "Creates focus. People know the plan, the order, and what can wait.",
+      "over": "Creates focus by shutting down useful questions. Focus becomes a way to shut people down."
+    },
+    {
+      "id": "deciding-in-ambiguity",
+      "situation": "Deciding while the picture is still incomplete",
+      "under": "Waits for certainty that will not arrive. The decision makes itself by delay.",
+      "justRight": "Makes the decision the work needs with the information they have. Says what would change their mind.",
+      "over": "Makes a hard call on a guess and treats it as settled science. Ambiguity is denied rather than managed."
+    },
+    {
+      "id": "plans-through-change",
+      "situation": "When the situation changes",
+      "under": "Sticks to the old plan after the facts have moved, or throws the plan out and starts from zero.",
+      "justRight": "Revises the execution plan when the situation changes. Keeps the team focused on the new concrete next steps.",
+      "over": "Changes the plan with every new slide. The team never gets a week of focus."
+    }
+  ]
+}

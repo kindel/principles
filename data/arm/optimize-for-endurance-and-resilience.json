@@ -1,0 +1,67 @@
+{
+  "id": "optimize-for-endurance-and-resilience",
+  "company": "arm",
+  "group": "accelerate-impact",
+  "name": "Optimize for endurance and resilience",
+  "sort": 10,
+  "definition": "Navigate continuous pace and intensity, optimizing your own energy levels to sustain momentum for the long-term.",
+  "terms": [
+    {
+      "id": "endurance",
+      "label": "endurance",
+      "kind": "alias"
+    },
+    {
+      "id": "resilience",
+      "label": "resilience",
+      "kind": "alias"
+    },
+    {
+      "id": "sustain-momentum",
+      "label": "sustain momentum",
+      "kind": "equivalent"
+    },
+    {
+      "id": "energy-levels",
+      "label": "energy levels",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "navigating-pace",
+      "situation": "Navigating continuous pace",
+      "under": "Treats every week as a sprint with no recovery, or slows to a crawl and calls it balance.",
+      "justRight": "Navigates continuous pace without pretending it is a short burst. Plans the work so the team can keep going.",
+      "over": "Makes pace the only metric. Tired people are treated as a commitment problem."
+    },
+    {
+      "id": "navigating-intensity",
+      "situation": "Navigating intensity",
+      "under": "Avoids the hard stretch even when the work needs it. Intensity is never allowed.",
+      "justRight": "Can work at intensity when the outcome needs it, then return to a pace that lasts. Does not confuse a peak with the new normal.",
+      "over": "Stays at peak intensity after the need has passed. Intensity becomes the culture."
+    },
+    {
+      "id": "optimizing-energy",
+      "situation": "Optimizing your own energy",
+      "under": "Ignores their own limits until they fail. Energy is not part of the plan.",
+      "justRight": "Optimizes their own energy so they can sustain the work. Sleep, focus, and recovery are treated as part of delivery.",
+      "over": "Optimizes energy by handing every hard problem to someone else. Care for themselves becomes an excuse to step back from the outcome."
+    },
+    {
+      "id": "sustaining-momentum",
+      "situation": "Sustaining momentum",
+      "under": "Starts strong and fades. The work loses energy after the first push.",
+      "justRight": "Sustains momentum for the long term. The second month is as deliberate as the first week.",
+      "over": "Protects momentum by never stopping to think. The team cannot recover or redirect."
+    },
+    {
+      "id": "a-tired-team",
+      "situation": "A tired team",
+      "under": "Does not notice. Pushes the same plan onto people who are already spent.",
+      "justRight": "Notices when the team is spent and changes the load or the timeline so the work can continue. Endurance is a team problem, not a personal secret.",
+      "over": "Lowers the bar for the work in the name of resilience. Recovery becomes an absence of standards."
+    }
+  ]
+}

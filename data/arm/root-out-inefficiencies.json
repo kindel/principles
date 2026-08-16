@@ -1,0 +1,67 @@
+{
+  "id": "root-out-inefficiencies",
+  "company": "arm",
+  "group": "one-arm",
+  "name": "Root out inefficiencies",
+  "sort": 5,
+  "definition": "Actively eliminate inefficiencies, simplify, and stay laser-focused on what really matters, whilst respecting any un-moveable constraints.",
+  "terms": [
+    {
+      "id": "root-out-inefficiencies",
+      "label": "root out inefficiencies",
+      "kind": "alias"
+    },
+    {
+      "id": "inefficiencies",
+      "label": "inefficiencies",
+      "kind": "alias"
+    },
+    {
+      "id": "simplify",
+      "label": "simplify",
+      "kind": "equivalent"
+    },
+    {
+      "id": "laser-focused",
+      "label": "laser-focused",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "eliminating-inefficiencies",
+      "situation": "Eliminating an inefficiency",
+      "under": "Lives with the waste. Treats a slow process as just how things are.",
+      "justRight": "Actively finds and removes inefficiencies. Makes the next pass through the work cheaper than the last.",
+      "over": "Tears down a process that was carrying a real constraint. Creates a new mess in the name of speed."
+    },
+    {
+      "id": "simplifying",
+      "situation": "Simplifying the work",
+      "under": "Adds steps. Leaves the complicated path in place because it already exists.",
+      "justRight": "Simplifies. Cuts the work that does not change the outcome.",
+      "over": "Simplifies past the point of safety. Drops the checks that were holding the product together."
+    },
+    {
+      "id": "staying-focused",
+      "situation": "Staying focused on what matters",
+      "under": "Treats every request as equal. The important work waits.",
+      "justRight": "Stays laser-focused on what really matters. Says no to work that does not move the outcome.",
+      "over": "Uses focus as a reason to ignore partners. \"Not our priority\" becomes a wall."
+    },
+    {
+      "id": "respecting-constraints",
+      "situation": "An un-moveable constraint",
+      "under": "Ignores a real constraint and plans as if it were optional. The plan fails on contact.",
+      "justRight": "Respects un-moveable constraints and designs around them. Does not waste energy fighting a wall that will not move.",
+      "over": "Treats every constraint as un-moveable. Stops looking for the ones that can actually change."
+    },
+    {
+      "id": "choosing-what-to-cut",
+      "situation": "Choosing what to cut",
+      "under": "Cuts nothing. The list only grows.",
+      "justRight": "Cuts the work that does not matter so the work that does can move. Explains the cut.",
+      "over": "Cuts the visible work and leaves the hidden waste. Looks efficient on a slide."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "challenge-skillfully",
+  "company": "arm",
+  "group": "one-arm",
+  "name": "Challenge skillfully",
+  "sort": 4,
+  "definition": "Challenge respectfully when things don't make sense and back yourself. Value independent thinking. Discuss openly, listen, then drive the decision quickly.",
+  "terms": [
+    {
+      "id": "challenge-skillfully",
+      "label": "challenge skillfully",
+      "kind": "alias"
+    },
+    {
+      "id": "independent-thinking",
+      "label": "independent thinking",
+      "kind": "equivalent"
+    },
+    {
+      "id": "back-yourself",
+      "label": "back yourself",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "challenging-when-it-does-not-make-sense",
+      "situation": "When something does not make sense",
+      "under": "Goes along. Does not say the thing that is wrong.",
+      "justRight": "Challenges respectfully when the plan does not make sense. Backs the challenge with a reason, not a vibe.",
+      "over": "Challenges everything as a habit. Respect becomes a preface for a fight."
+    },
+    {
+      "id": "backing-yourself",
+      "situation": "Backing yourself",
+      "under": "Drops a good point the first time someone pushes back.",
+      "justRight": "Backs themselves when they have done the thinking. Holds the point long enough for others to hear it.",
+      "over": "Digs in after the evidence has moved. Confuses backing yourself with never being wrong."
+    },
+    {
+      "id": "independent-thinking",
+      "situation": "Independent thinking",
+      "under": "Echoes the room. Brings no view of their own.",
+      "justRight": "Values independent thinking. Forms a view before the meeting, then tests it in the open.",
+      "over": "Treats independence as a refusal to listen. The view never updates."
+    },
+    {
+      "id": "discuss-openly-and-listen",
+      "situation": "Discussing openly, then listening",
+      "under": "Holds the real objection until after the meeting, or talks over the people who disagree.",
+      "justRight": "Discusses openly, then listens. Changes their mind when the better argument shows up.",
+      "over": "Turns every discussion into a debate to win. Listening is a pause before the next rebuttal."
+    },
+    {
+      "id": "driving-the-decision",
+      "situation": "Driving the decision",
+      "under": "Leaves the room without a decision. The debate continues in chat.",
+      "justRight": "After the open discussion, drives the decision quickly. People know what was decided and why.",
+      "over": "Cuts the discussion short to look decisive. The decision does not survive the first question."
+    }
+  ]
+}

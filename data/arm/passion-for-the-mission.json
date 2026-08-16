@@ -1,0 +1,67 @@
+{
+  "id": "passion-for-the-mission",
+  "company": "arm",
+  "group": "one-arm",
+  "name": "Passion for the mission",
+  "sort": 1,
+  "definition": "Internalize the strategy. Care deeply about our technology, products, customers, and impact.",
+  "terms": [
+    {
+      "id": "passion-for-the-mission",
+      "label": "passion for the mission",
+      "kind": "alias"
+    },
+    {
+      "id": "the-mission",
+      "label": "the mission",
+      "kind": "alias"
+    },
+    {
+      "id": "internalize-the-strategy",
+      "label": "internalize the strategy",
+      "kind": "equivalent"
+    },
+    {
+      "id": "care-deeply",
+      "label": "care deeply",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "internalizing-the-strategy",
+      "situation": "Internalizing the strategy",
+      "under": "Treats the strategy as someone else's document. Cannot say how their work serves it.",
+      "justRight": "Knows the strategy well enough to use it when choosing work. Can explain how today's decisions serve the company's direction.",
+      "over": "Recites the strategy in every conversation. Uses it as a slogan instead of a filter for real choices."
+    },
+    {
+      "id": "caring-about-the-technology",
+      "situation": "Caring about the technology",
+      "under": "Treats the technology as a black box. Does not learn enough to judge quality or risk.",
+      "justRight": "Cares about how the technology actually works. Learns enough to spot when a design, a product, or a customer outcome is at risk.",
+      "over": "Falls in love with the technology for its own sake. Loses sight of products, customers, and impact."
+    },
+    {
+      "id": "caring-about-products",
+      "situation": "Caring about the products",
+      "under": "Ships work without asking whether the product is better for it.",
+      "justRight": "Cares about the product as a whole, not only the piece they own. Notices when a change helps or hurts what customers actually use.",
+      "over": "Defends a product they built even when the strategy or the customer has moved on."
+    },
+    {
+      "id": "caring-about-customers",
+      "situation": "Caring about customers",
+      "under": "Talks about customers in the abstract. Does not know who is affected by the work.",
+      "justRight": "Knows which customers the work serves and what they need. Lets that knowledge change the plan.",
+      "over": "Treats every customer request as a mandate. Loses the strategy in the process."
+    },
+    {
+      "id": "caring-about-impact",
+      "situation": "Caring about impact",
+      "under": "Measures activity. Cannot say what changed for the company or the customer.",
+      "justRight": "Cares about the outcome, not the motion. Asks whether the work moved the strategy, the product, or the customer in a real way.",
+      "over": "Claims impact that is not theirs. Inflates every task into a mission."
+    }
+  ]
+}
