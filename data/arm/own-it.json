@@ -1,0 +1,67 @@
+{
+  "id": "own-it",
+  "company": "arm",
+  "group": "accelerate-impact",
+  "name": "Own it",
+  "sort": 8,
+  "definition": "Be accountable for the outcome; don't wait for instructions. Bring solutions, not problems.",
+  "terms": [
+    {
+      "id": "own-it",
+      "label": "own it",
+      "kind": "alias"
+    },
+    {
+      "id": "accountable-for-the-outcome",
+      "label": "accountable for the outcome",
+      "kind": "equivalent"
+    },
+    {
+      "id": "bring-solutions",
+      "label": "bring solutions",
+      "kind": "equivalent"
+    },
+    {
+      "id": "do-not-wait-for-instructions",
+      "label": "do not wait for instructions",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "accountable-for-the-outcome",
+      "situation": "Being accountable for the outcome",
+      "under": "Reports status. Treats the outcome as someone else's score.",
+      "justRight": "Is accountable for the outcome, not only the tasks. Stays with the work until the result is real.",
+      "over": "Claims every nearby outcome as theirs. Accountability becomes a land grab."
+    },
+    {
+      "id": "waiting-for-instructions",
+      "situation": "When the next step is not spelled out",
+      "under": "Waits for instructions. Does not move until someone assigns the work.",
+      "justRight": "Does not wait for instructions. Figures out the next step and takes it, then tells people what they did.",
+      "over": "Ignores the instructions that are already there. Invents a path that fights the plan."
+    },
+    {
+      "id": "bringing-solutions",
+      "situation": "Bringing a problem to the table",
+      "under": "Drops a problem and leaves. Expects someone else to solve it.",
+      "justRight": "Brings solutions, not only problems. Names the issue and a path through it.",
+      "over": "Insists on their solution before they have heard the problem. Solutions become a way to skip the discussion."
+    },
+    {
+      "id": "unowned-work",
+      "situation": "Work that has no clear owner",
+      "under": "Steps around it. If it is not on the list, it is not theirs.",
+      "justRight": "Picks up unowned work that blocks the outcome. Makes the ownership explicit so it does not drop again.",
+      "over": "Takes work that already has an owner. Creates a second plan in parallel."
+    },
+    {
+      "id": "after-a-miss",
+      "situation": "After a miss",
+      "under": "Explains why it was not their fault. The miss stays unowned.",
+      "justRight": "Owns the miss and the repair. Says what they will do differently.",
+      "over": "Owns the miss so loudly that the repair never starts. Apology replaces action."
+    }
+  ]
+}

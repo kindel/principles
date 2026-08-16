@@ -1,0 +1,67 @@
+{
+  "id": "relentlessly-push-boundaries",
+  "company": "arm",
+  "group": "accelerate-impact",
+  "name": "Relentlessly push boundaries",
+  "sort": 6,
+  "definition": "Always ask, \"How can this be better?\" \"How will we win?\" Know when to balance delivery with perfection.",
+  "terms": [
+    {
+      "id": "push-boundaries",
+      "label": "push boundaries",
+      "kind": "alias"
+    },
+    {
+      "id": "10x",
+      "label": "10x",
+      "kind": "alias"
+    },
+    {
+      "id": "how-can-this-be-better",
+      "label": "how can this be better",
+      "kind": "equivalent"
+    },
+    {
+      "id": "balance-delivery-with-perfection",
+      "label": "balance delivery with perfection",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "asking-how-it-can-be-better",
+      "situation": "Asking how this can be better",
+      "under": "Accepts the current design as good enough. Does not ask the next question.",
+      "justRight": "Always asks how this can be better. Looks for the change that would actually raise the bar.",
+      "over": "Asks the question so often that nothing ships. Better becomes a reason to restart."
+    },
+    {
+      "id": "asking-how-we-will-win",
+      "situation": "Asking how we will win",
+      "under": "Plans as if the competition will wait. Cannot say what winning looks like.",
+      "justRight": "Asks how we will win, and uses the answer to choose the work. Knows what would make the outcome matter.",
+      "over": "Treats every project as a war. Winning talk replaces a real plan."
+    },
+    {
+      "id": "balancing-delivery-and-perfection",
+      "situation": "Balancing delivery with perfection",
+      "under": "Ships the first draft and calls it done. Quality is someone else's problem.",
+      "justRight": "Knows when to balance delivery with perfection. Ships when the next increment of polish will not change the outcome.",
+      "over": "Holds the work until it is perfect. The window closes."
+    },
+    {
+      "id": "pushing-a-constraint",
+      "situation": "A constraint that looks fixed",
+      "under": "Treats the first limit as the last word. Stops at the obvious boundary.",
+      "justRight": "Pushes the boundary that can actually move. Tests whether the constraint is real before accepting it.",
+      "over": "Pushes every boundary, including the ones that protect the product or the customer."
+    },
+    {
+      "id": "raising-the-ambition",
+      "situation": "Raising the ambition of the work",
+      "under": "Takes the smallest version of the problem. Never asks what a much larger outcome would require.",
+      "justRight": "Raises the ambition when the current plan cannot win. Makes the bigger version concrete enough to start.",
+      "over": "Announces a much larger goal with no path. Ambition becomes a slide."
+    }
+  ]
+}

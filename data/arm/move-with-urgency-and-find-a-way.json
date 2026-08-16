@@ -1,0 +1,67 @@
+{
+  "id": "move-with-urgency-and-find-a-way",
+  "company": "arm",
+  "group": "accelerate-impact",
+  "name": "Move with urgency and find a way",
+  "sort": 7,
+  "definition": "Be comfortable with speed, uncertainty, and the unexpected. Have a strong bias for action.",
+  "terms": [
+    {
+      "id": "urgency",
+      "label": "urgency",
+      "kind": "alias"
+    },
+    {
+      "id": "find-a-way",
+      "label": "find a way",
+      "kind": "alias"
+    },
+    {
+      "id": "bias-for-action",
+      "label": "bias for action",
+      "kind": "equivalent"
+    },
+    {
+      "id": "comfortable-with-uncertainty",
+      "label": "comfortable with uncertainty",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "moving-with-speed",
+      "situation": "Moving with speed",
+      "under": "Waits for a perfect plan. Speed is someone else's job.",
+      "justRight": "Moves at the speed the outcome needs. Does not add delay that does not reduce risk.",
+      "over": "Equates speed with haste. Skips the one check that would have caught the failure."
+    },
+    {
+      "id": "working-in-uncertainty",
+      "situation": "Working in uncertainty",
+      "under": "Freezes until the picture is complete. Uncertainty is a reason to wait.",
+      "justRight": "Is comfortable with uncertainty. Takes the next useful step with the information they have.",
+      "over": "Treats uncertainty as a license to guess. Does not come back to check the guess."
+    },
+    {
+      "id": "the-unexpected",
+      "situation": "When the unexpected shows up",
+      "under": "Stops and waits for a new plan from above.",
+      "justRight": "Adjusts when the unexpected arrives. Finds a way that still serves the outcome.",
+      "over": "Throws out the whole plan at the first surprise. Creates more chaos than the event did."
+    },
+    {
+      "id": "bias-for-action",
+      "situation": "Having a bias for action",
+      "under": "Talks through options until the window closes.",
+      "justRight": "Has a strong bias for action. Prefers a reversible step now over a perfect step later.",
+      "over": "Acts before reading the problem. Action becomes motion with no aim."
+    },
+    {
+      "id": "finding-a-way",
+      "situation": "Finding a way through a blocker",
+      "under": "Reports the blocker and waits. \"We cannot\" is the end of the sentence.",
+      "justRight": "Finds a way. Tries the next path, escalates when needed, and keeps the outcome in view.",
+      "over": "Finds a way by burning the team or breaking a constraint that was there for a reason."
+    }
+  ]
+}

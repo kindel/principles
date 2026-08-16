@@ -1,0 +1,71 @@
+{
+  "id": "build-extraordinary-teams",
+  "company": "arm",
+  "group": "one-arm",
+  "name": "Build extraordinary teams",
+  "sort": 3,
+  "definition": "Hold a high bar. Give and seek candid feedback. Build connected, supportive, diverse, and inclusive teams that are greater than the sum of their parts.",
+  "terms": [
+    {
+      "id": "extraordinary-teams",
+      "label": "extraordinary teams",
+      "kind": "alias"
+    },
+    {
+      "id": "high-bar",
+      "label": "high bar",
+      "kind": "alias"
+    },
+    {
+      "id": "candid-feedback",
+      "label": "candid feedback",
+      "kind": "facet",
+      "rows": [
+        "giving-candid-feedback",
+        "seeking-candid-feedback"
+      ]
+    },
+    {
+      "id": "greater-than-the-sum-of-their-parts",
+      "label": "greater than the sum of their parts",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "holding-a-high-bar",
+      "situation": "Holding a high bar",
+      "under": "Lowers the bar to fill a seat or to keep the peace.",
+      "justRight": "Holds a high bar for who joins and what ships. Explains the bar so people can meet it.",
+      "over": "Raises the bar after the fact. Uses it to block people rather than to build the team."
+    },
+    {
+      "id": "giving-candid-feedback",
+      "situation": "Giving candid feedback",
+      "under": "Withholds the hard message. Lets weak work pass with a smile.",
+      "justRight": "Gives candid feedback while it can still change the work. Is specific, timely, and aimed at the outcome.",
+      "over": "Uses candor as cover for cruelty. Feedback becomes a performance, not a tool."
+    },
+    {
+      "id": "seeking-candid-feedback",
+      "situation": "Seeking candid feedback",
+      "under": "Asks only the people who will agree. Treats critique as disloyalty.",
+      "justRight": "Seeks candid feedback, including from people who will disagree. Changes course when the feedback is right.",
+      "over": "Collects so much feedback that no decision lands. Uses the search for input to avoid owning the call."
+    },
+    {
+      "id": "building-connected-teams",
+      "situation": "Building a connected, supportive team",
+      "under": "Lets people work in isolation. Does not notice when someone is stuck or excluded.",
+      "justRight": "Builds a team that is connected and supportive. People know how their work fits, and they help each other over the hard parts.",
+      "over": "Forces togetherness at the expense of the work. Meetings replace delivery."
+    },
+    {
+      "id": "diverse-and-inclusive-teams",
+      "situation": "Building a diverse and inclusive team",
+      "under": "Hires in their own image. Does not make space for people who work or think differently.",
+      "justRight": "Builds diverse and inclusive teams that are stronger than any one person. Different views are used, not just collected.",
+      "over": "Treats diversity as a slogan. Counts representation and stops before the team actually works as one."
+    }
+  ]
+}
