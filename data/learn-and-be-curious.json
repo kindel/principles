@@ -1,0 +1,99 @@
+{
+  "id": "learn-and-be-curious",
+  "name": "Learn and Be Curious",
+  "sort": 5,
+  "definition": "Leaders are never done learning and always seek to improve themselves. They are curious about new possibilities and act to explore them.",
+  "terms": [
+    {
+      "id": "labc",
+      "label": "labc",
+      "kind": "alias"
+    },
+    {
+      "id": "curious",
+      "label": "curious",
+      "kind": "alias"
+    },
+    {
+      "id": "curiosity",
+      "label": "curiosity",
+      "kind": "alias"
+    },
+    {
+      "id": "learn",
+      "label": "learn",
+      "kind": "alias"
+    },
+    {
+      "id": "learning",
+      "label": "learning",
+      "kind": "alias"
+    },
+    {
+      "id": "learn-and-be-curious",
+      "label": "learn and be curious",
+      "kind": "alias"
+    },
+    {
+      "id": "always-learning",
+      "label": "always learning",
+      "kind": "equivalent"
+    },
+    {
+      "id": "growth-mindset",
+      "label": "growth mindset",
+      "kind": "equivalent"
+    },
+    {
+      "id": "intellectual-curiosity",
+      "label": "intellectual curiosity",
+      "kind": "equivalent"
+    },
+    {
+      "id": "self-improvement",
+      "label": "self improvement",
+      "kind": "facet",
+      "rows": [
+        "new-process-missed-deadline",
+        "teammate-causes-an-outage"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "new-process-missed-deadline",
+      "situation": "You tried a new planning process and missed the deadline",
+      "under": "Blames the people, not the process. Forces the old process on the next project.",
+      "justRight": "Talks to the people who used it. Keeps what worked. Adjusts what did not. Tries the improved version next time.",
+      "over": "Throws the process out and tries a third one."
+    },
+    {
+      "id": "single-customer-contradicts-the-aggregate",
+      "situation": "One customer report contradicts a positive aggregate",
+      "under": "Calls it a rounding error. Ignores the single report because the overall response looks fine.",
+      "justRight": "Digs in. Finds what went wrong and what it will take to fix.",
+      "over": "Launches a three-month study aimed at that one issue."
+    },
+    {
+      "id": "teammate-causes-an-outage",
+      "situation": "A teammate makes a mistake that takes the site down",
+      "under": "Puts up a wall of shame so nobody ever makes that mistake again.",
+      "justRight": "Changes the system so that class of mistake cannot happen, or cannot have the same blast radius.",
+      "over": "Insists everyone must personally experience the mistake as training."
+    },
+    {
+      "id": "sharing-a-new-technique",
+      "situation": "Someone learns a useful technique on a project",
+      "under": "Uses it on their project and stops.",
+      "justRight": "Writes it down and teaches it in a short team session so others can use it.",
+      "over": "Makes the technique mandatory training for the whole team."
+    },
+    {
+      "id": "choosing-new-storage",
+      "situation": "The team needs a new data store",
+      "under": "Insists on the one technology everyone already knows.",
+      "justRight": "Researches options, prototypes the top two or three, and takes the findings to a design review.",
+      "over": "Prototypes every available option and stress-tests all of them before anyone can choose."
+    }
+  ]
+}
