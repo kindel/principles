@@ -1,0 +1,170 @@
+{
+  "id": "are-right-a-lot",
+  "name": "Are Right, A Lot",
+  "sort": 4,
+  "definition": "Leaders are right a lot. They have strong judgment and good instincts. They seek diverse perspectives and work to disconfirm their beliefs.",
+  "terms": [
+    {
+      "id": "aral",
+      "label": "aral",
+      "kind": "alias"
+    },
+    {
+      "id": "right-a-lot",
+      "label": "right a lot",
+      "kind": "alias"
+    },
+    {
+      "id": "are-right-a-lot",
+      "label": "are right a lot",
+      "kind": "alias"
+    },
+    {
+      "id": "judgment",
+      "label": "judgment",
+      "kind": "alias"
+    },
+    {
+      "id": "judgement",
+      "label": "judgement",
+      "kind": "alias"
+    },
+    {
+      "id": "right",
+      "label": "right",
+      "kind": "alias"
+    },
+    {
+      "id": "decision-quality",
+      "label": "decision quality",
+      "kind": "alias"
+    },
+    {
+      "id": "good-judgment",
+      "label": "good judgment",
+      "kind": "alias"
+    },
+    {
+      "id": "good-instincts",
+      "label": "good instincts",
+      "kind": "facet",
+      "rows": [
+        "committing-under-uncertainty",
+        "calculated-risks"
+      ]
+    },
+    {
+      "id": "seeks-diverse-perspectives",
+      "label": "seeks diverse perspectives",
+      "kind": "facet",
+      "rows": [
+        "listening-then-deciding",
+        "seeking-dissent",
+        "letting-others-be-right"
+      ]
+    },
+    {
+      "id": "seeks-disconfirming-evidence",
+      "label": "seeks disconfirming evidence",
+      "kind": "facet",
+      "rows": [
+        "seeking-dissent",
+        "always-right-trap"
+      ]
+    },
+    {
+      "id": "sound-judgment-under-uncertainty",
+      "label": "sound judgment under uncertainty",
+      "kind": "facet",
+      "rows": [
+        "committing-under-uncertainty",
+        "recommending-under-ambiguity",
+        "calculated-risks"
+      ]
+    },
+    {
+      "id": "makes-wise-decisions",
+      "label": "makes wise decisions",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "using-data",
+      "situation": "Using data to set direction",
+      "under": "Analysis paralysis. Does not deliver.",
+      "justRight": "Keeps gathering the relevant data and still sets direction.",
+      "over": "Treats today's right answer as permanent. Does not notice when the facts have moved."
+    },
+    {
+      "id": "committing-under-uncertainty",
+      "situation": "Committing when the picture is incomplete",
+      "under": "Vacillates. Cannot commit.",
+      "justRight": "Stays current on the business. Uses trends and evidence to make a consistent, informed call.",
+      "over": "Charges ahead with a blind spot. Ignores {lp:invent-and-simplify}. Optimizes the company at the cost of the people who have to live with the call."
+    },
+    {
+      "id": "recommending-under-ambiguity",
+      "situation": "Making a recommendation under ambiguity",
+      "under": "May not be right, but fakes a recommendation anyway.",
+      "justRight": "Drives to a resolution despite uncertainty. Says what is known, what is a guess, and why this path.",
+      "over": "May be right, and browbeats the room. Needs to be the smartest person present."
+    },
+    {
+      "id": "guiding-without-freezing",
+      "situation": "Guiding a team without taking the work",
+      "under": "Does not guide enough. The team makes expensive wrong calls or invents a costly process.",
+      "justRight": "Sets a clear direction, simplifies the work, and generates the same behavior downstream.",
+      "over": "Freezes the team with too much direction. Kills {lp:ownership}."
+    },
+    {
+      "id": "listening-then-deciding",
+      "situation": "Hearing the team, then calling it",
+      "under": "Does not use data. Makes a hasty call that sends the team down the wrong path.",
+      "justRight": "Takes input and data from the team and regularly makes the right call.",
+      "over": "Makes every decision. Will not listen. Unaware of blind spots. Disempowers the people closest to the work."
+    },
+    {
+      "id": "always-right-trap",
+      "situation": "Confusing this principle with always being right",
+      "under": "Undervalues their own experience. Never establishes respect.",
+      "justRight": "Knows \"a lot\" is not \"always.\" Seeks input. Applies experience. Champions the best path even when it was not theirs.",
+      "over": "Mistakes this principle for always being right. Will not integrate an outside view."
+    },
+    {
+      "id": "calculated-risks",
+      "situation": "How much you need to know before you act",
+      "under": "Decides on insufficient or flawed knowledge.",
+      "justRight": "Knows enough to take a well-informed, calculated risk.",
+      "over": "Gets paralyzed by the need to know everything. Unable to act."
+    },
+    {
+      "id": "letting-others-be-right",
+      "situation": "When the team should own the call",
+      "under": "Not in tune with whether the team is making right decisions.",
+      "justRight": "Knows when the team is on or off track. Lets them act without micromanaging.",
+      "over": "Unable to let others be right."
+    },
+    {
+      "id": "owning-the-call",
+      "situation": "Standing behind a decision you made",
+      "under": "Decides from third-party information they do not actually understand.",
+      "justRight": "Makes conscientious, well-considered decisions they can explain from first principles.",
+      "over": "Rationalizes when challenged. Or avoids deciding so they cannot be wrong."
+    },
+    {
+      "id": "long-term-vs-short-term",
+      "situation": "Balancing the long term and the short term",
+      "under": "Uses fuzzy long-term language to excuse a badly thought-out project, or optimizes this month and leaves the root cause in place.",
+      "justRight": "Balances long-term and short-term on purpose, and can say which one this call is for.",
+      "over": "Will not make a reasonable judgment call because they are hunting the perfect long-term solution."
+    },
+    {
+      "id": "seeking-dissent",
+      "situation": "Working to disconfirm your belief",
+      "under": "Seeks too much collaboration and affirmation before they will move.",
+      "justRight": "Invites challenge. Comfortable deciding with directional data. Stays accountable when they miss.",
+      "over": "Gets defensive when shown an opposing view. Lacks humility."
+    }
+  ]
+}
