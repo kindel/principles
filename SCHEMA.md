@@ -88,6 +88,10 @@ Arm records carry `group` for the lens (`one-arm` or `accelerate-impact`):
 ## Rules
 
 - `id` is kebab-case and matches the filename without `.json`.
+- `id` is unique within a company, not across companies. `dive-deep` belongs to
+  Amazon, Coupang, and Delivery Hero, and each is a different principle. A
+  consumer addresses a principle by `(company, id)`. A lookup by `id` alone
+  returns whichever company's record it happens to find first.
 - `company` is kebab-case and matches the parent directory. Current companies
   are `amazon`, `arm`, `coupang`, `delivery-hero`, and `gitlab`.
 - `group` is optional. Arm records carry it (`one-arm` or `accelerate-impact`)

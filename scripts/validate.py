@@ -11,38 +11,13 @@ import os
 import re
 import sys
 
+from companies import COMPANY_META
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 KINDS = ("alias", "equivalent", "facet")
 SLUG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 
-COMPANY_META = collections.OrderedDict([
-    ("amazon", {
-        "name": "Amazon",
-        "set": "Leadership Principles",
-        "source": "https://www.amazon.jobs/content/en/our-workplace/leadership-principles",
-    }),
-    ("arm", {
-        "name": "Arm",
-        "set": "10x Mindset",
-        "source": "https://careers.arm.com/life-at-arm",
-    }),
-    ("coupang", {
-        "name": "Coupang",
-        "set": "Leadership Principles",
-        "source": "https://www.coupang.jobs/en/coupang-leadership-principles/",
-    }),
-    ("delivery-hero", {
-        "name": "Delivery Hero",
-        "set": "Leadership Principles",
-        "source": "https://careers.deliveryhero.com/delivery-hero/2025-4/launching-our-leadership-principles",
-    }),
-    ("gitlab", {
-        "name": "GitLab",
-        "set": "CREDIT Values",
-        "source": "https://handbook.gitlab.com/handbook/values/",
-    }),
-])
 
 # Companies that publish their set under lenses, and the lens each sort
 # position falls in. A company absent from this table carries no group, and
@@ -285,6 +260,19 @@ def main():
              n_rows,
              sum(kinds.values()),
              ", ".join("%s %d" % kv for kv in sorted(kinds.items()))))
+
+    # Not an error. An id is unique within a company and nowhere else, so a
+    # consumer keys on (company, id). Printing the collisions keeps that
+    # visible here rather than discovered in an app.
+    shared = collections.defaultdict(list)
+    for company, items in by_company.items():
+        for _, rec in items:
+            shared[rec.get("id")].append(company)
+    shared = {k: v for k, v in shared.items() if len(v) > 1}
+    if shared:
+        print("ids used by more than one company, address by (company, id):")
+        for pid in sorted(shared):
+            print("  %-28s %s" % (pid, ", ".join(sorted(shared[pid]))))
     return 0
 
 
