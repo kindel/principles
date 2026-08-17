@@ -19,20 +19,21 @@ human behavior. That is the whole difference, and it is why the sets here are
 written as tenets and held to the same bar.
 
 A principle is only worth having when it decomposes into **behavior**:
-something a person can observe, teach, practice, and over-index on. Everything
-below exists to carry that decomposition.
+something a person can observe, teach, practice, and live with the appropriate
+balance. Everything below exists to carry that decomposition.
 
 **Calibration** is how behavior becomes observable. Each behavior is described
-in a real situation at three settings: under is not trying, just right is the
-bar, and over is the principle eating the job. Under and over are what make a
-principle teachable instead of inspirational, and they are the reason a set of
-abstract nouns cannot be modeled here. Integrity has no over.
+in a real situation at three settings: under indexing, getting the balance
+right, and over doing it. The two ends are what make a principle teachable
+instead of inspirational, and they are the reason a set of abstract nouns
+cannot be modeled here. Integrity has no over.
 
-**Facets** are the granular pieces that compose. Companies describe overlapping
-behavior with different words and different groupings, so the principle is the
-wrong unit to share. A facet names one slice of behavior and points at the
-calibration it covers, which is what lets two companies' differently named
-principles map onto the same human behavior.
+**Facets** are the granular pieces that compose. Companies publish their
+principles freely, but they carve the same behavior into different principles
+and give them different names, so two companies' sets rarely line up one to
+one. A facet names one slice of behavior and points at the calibration it
+covers, which is what lets differently named principles meet at the behavior
+underneath.
 
 **Terms** are the vocabulary. An alias is the short form used inside a company,
 an equivalent is how everyone else says the whole principle, and a facet is how
@@ -61,9 +62,9 @@ are tracked rather than implied:
 
 1. **A Principle is a Tenet About People.** A leadership principle is a tenet whose endeavor is an organization and whose subject is human behavior, so *we hold it to the tenet bar*: one idea, a stand, and a trade-off a person can act on. A set that reads as slogans is a set we have not finished modeling.
 
-2. **Behavior is the Unit.** A principle earns its place by decomposing into behavior that can be observed, taught, and over-indexed. *What cannot be calibrated under, just right, and over is a slogan*, and we model it or drop it.
+2. **Behavior is the Unit.** A principle earns its place by decomposing into behavior a person can observe, teach, and live with the appropriate balance. *A behavior we cannot show under indexed, balanced, and over done is a slogan*, and we model it or drop it.
 
-3. **Facets Compose, Wordings Differ.** Companies name overlapping behavior differently, and *the facet is the granular piece they share*. We compose principles from facets rather than re-authoring the same behavior once per company.
+3. **Facets Compose, Wordings Differ.** Companies carve the same behavior into different principles, so their sets rarely line up one to one. *The facet is the granular piece that does line up*, and we compose principles from facets rather than re-authoring one behavior per company.
 
 4. **Level and Role Set the Bar, Not the Behavior.** Junior, senior, and exec differ in the bar for one behavior, and so do an IC, a manager, an engineer, a PM, and a PGM. *The behavior is written once and projected*, because a tool that keeps its own copy per level cannot be compared with the tool beside it.
 
