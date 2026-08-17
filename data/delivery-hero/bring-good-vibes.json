@@ -1,0 +1,83 @@
+{
+  "id": "bring-good-vibes",
+  "company": "delivery-hero",
+  "name": "Bring Good Vibes",
+  "sort": 4,
+  "definition": "We support and celebrate each other, staying positive even in challenging times.",
+  "terms": [
+    {
+      "id": "bring-good-vibes",
+      "label": "bring good vibes",
+      "kind": "alias"
+    },
+    {
+      "id": "good-vibes",
+      "label": "good vibes",
+      "kind": "alias"
+    },
+    {
+      "id": "positive-energy",
+      "label": "positive energy",
+      "kind": "equivalent"
+    },
+    {
+      "id": "support-each-other",
+      "label": "support each other",
+      "kind": "equivalent"
+    },
+    {
+      "id": "celebrating-wins",
+      "label": "celebrating wins",
+      "kind": "facet",
+      "rows": [
+        "someone-elses-win"
+      ]
+    },
+    {
+      "id": "staying-positive-under-pressure",
+      "label": "staying positive under pressure",
+      "kind": "facet",
+      "rows": [
+        "bad-quarter-mood",
+        "delivering-bad-news"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "bad-quarter-mood",
+      "situation": "When the numbers are bad",
+      "under": "Lets the mood set itself, and the team runs on anxiety.",
+      "justRight": "Is honest about the situation and clear that the team can act on it. Steadiness, not cheer.",
+      "over": "Insists everything is fine, and people stop believing anything you say."
+    },
+    {
+      "id": "someone-elses-win",
+      "situation": "When someone else does something well",
+      "under": "Notices privately, and says nothing.",
+      "justRight": "Says it publicly and specifically, so the behavior is visible to everyone.",
+      "over": "Celebrates so indiscriminately that recognition stops meaning anything."
+    },
+    {
+      "id": "colleague-struggling",
+      "situation": "When a colleague is having a hard time",
+      "under": "Treats it as a performance issue and nothing else.",
+      "justRight": "Asks, listens, and takes something off their plate if that is what is needed.",
+      "over": "Carries them for so long that the underlying problem is never addressed."
+    },
+    {
+      "id": "disagreement-tone",
+      "situation": "When the disagreement gets sharp",
+      "under": "Lets it get personal, or goes silent and stays angry.",
+      "justRight": "Keeps the argument on the work and the tone warm. Hard on the problem, easy on the person.",
+      "over": "Keeps the tone so pleasant that the real disagreement never gets said."
+    },
+    {
+      "id": "delivering-bad-news",
+      "situation": "When you have to deliver bad news",
+      "under": "Softens it until the message is lost.",
+      "justRight": "Says it straight, says what happens next, and does not leave people alone with it.",
+      "over": "Wraps bad news in so much positivity that people do not realize anything is wrong."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "learn-voraciously",
+  "company": "coupang",
+  "name": "Learn Voraciously",
+  "sort": 12,
+  "definition": "We are hungry for the best ideas and seek them from all sources. We embrace growing pains. Ego is the enemy: we avoid rationalizing mistakes and are vocally self-critical.",
+  "terms": [
+    {
+      "id": "learn-voraciously",
+      "label": "learn voraciously",
+      "kind": "alias"
+    },
+    {
+      "id": "ego-is-the-enemy",
+      "label": "ego is the enemy",
+      "kind": "alias"
+    },
+    {
+      "id": "stay-curious",
+      "label": "stay curious",
+      "kind": "equivalent"
+    },
+    {
+      "id": "vocally-self-critical",
+      "label": "vocally self-critical",
+      "kind": "equivalent"
+    },
+    {
+      "id": "learning-from-outside",
+      "label": "learning from outside",
+      "kind": "facet",
+      "rows": [
+        "ideas-from-elsewhere",
+        "expert-in-the-room"
+      ]
+    },
+    {
+      "id": "admitting-mistakes",
+      "label": "admitting mistakes",
+      "kind": "facet",
+      "rows": [
+        "your-own-mistake",
+        "postmortem"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "your-own-mistake",
+      "situation": "When you were wrong in public",
+      "under": "Explains the context until the mistake dissolves.",
+      "justRight": "Says you were wrong, says what you now believe, and says what changes.",
+      "over": "Performs self-criticism so often that people stop trusting your judgment at all."
+    },
+    {
+      "id": "ideas-from-elsewhere",
+      "situation": "When someone else has already solved this",
+      "under": "Builds your own version without looking.",
+      "justRight": "Goes and reads how they did it, takes what transfers, and says where it came from.",
+      "over": "Copies a solution built for conditions you do not have."
+    },
+    {
+      "id": "growing-pains",
+      "situation": "When the new job is uncomfortable",
+      "under": "Retreats to the part of the job you were already good at.",
+      "justRight": "Stays in the uncomfortable part long enough to become competent at it.",
+      "over": "Chases discomfort for its own sake and never gets good at anything."
+    },
+    {
+      "id": "expert-in-the-room",
+      "situation": "When you are the expert",
+      "under": "Stops reading. Your knowledge goes a year out of date and you do not notice.",
+      "justRight": "Keeps a source of new input outside your own team, and lets it change your mind.",
+      "over": "Rethinks settled fundamentals so often that the team cannot build on anything."
+    },
+    {
+      "id": "feedback-you-disagree-with",
+      "situation": "When feedback lands badly",
+      "under": "Explains why the person misread the situation.",
+      "justRight": "Assumes there is something true in it, finds that part, and acts on it.",
+      "over": "Takes every piece of feedback as an instruction, and loses your own judgment."
+    },
+    {
+      "id": "postmortem",
+      "situation": "After something goes wrong",
+      "under": "Assigns blame and closes the file.",
+      "justRight": "Writes down what was believed, what was true, and what would have shown the difference earlier.",
+      "over": "Turns every event into a learning exercise until the team dreads shipping."
+    }
+  ]
+}

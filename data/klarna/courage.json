@@ -1,0 +1,83 @@
+{
+  "id": "courage",
+  "company": "klarna",
+  "name": "Courage",
+  "sort": 6,
+  "definition": "Own your decisions, speak up when it is uncomfortable, and admit mistakes openly. Reflect on them rather than defend them.",
+  "terms": [
+    {
+      "id": "courage",
+      "label": "courage",
+      "kind": "alias"
+    },
+    {
+      "id": "speak-up",
+      "label": "speak up",
+      "kind": "alias"
+    },
+    {
+      "id": "own-your-decisions",
+      "label": "own your decisions",
+      "kind": "equivalent"
+    },
+    {
+      "id": "admit-mistakes",
+      "label": "admit mistakes",
+      "kind": "equivalent"
+    },
+    {
+      "id": "owning-a-decision",
+      "label": "owning a decision",
+      "kind": "facet",
+      "rows": [
+        "deciding-without-cover",
+        "standing-behind-it"
+      ]
+    },
+    {
+      "id": "self-reflection",
+      "label": "self-reflection",
+      "kind": "facet",
+      "rows": [
+        "your-mistake"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "unpopular-view",
+      "situation": "When you are alone in the room",
+      "under": "Reads the room and folds.",
+      "justRight": "Says the thing, once, clearly, with the reason. Then lets the decision be made.",
+      "over": "Takes the contrary position as a habit, and stops being informative."
+    },
+    {
+      "id": "your-mistake",
+      "situation": "When you made the mistake",
+      "under": "Waits to see whether anyone notices.",
+      "justRight": "Says it first, says what it cost, and says what you are doing about it.",
+      "over": "Confesses so constantly that people cannot tell which mistakes were serious."
+    },
+    {
+      "id": "deciding-without-cover",
+      "situation": "When there is nobody to sign it off",
+      "under": "Waits for permission that was never going to arrive.",
+      "justRight": "Decides, writes down the reasoning, and tells the people it affects.",
+      "over": "Decides alone on things that needed other people, and spends the next month unwinding it."
+    },
+    {
+      "id": "hard-conversation",
+      "situation": "When someone needs to hear something difficult",
+      "under": "Says it to everyone except them.",
+      "justRight": "Says it to them, early, in private, along with what you would like to see instead.",
+      "over": "Delivers hard feedback so bluntly and so often that people stop hearing any of it."
+    },
+    {
+      "id": "standing-behind-it",
+      "situation": "When your decision is questioned after the fact",
+      "under": "Distances yourself from it, and finds someone else who agreed.",
+      "justRight": "Owns it, including the part that was wrong, and separates the reasoning from the outcome.",
+      "over": "Defends it past the point where the evidence has turned."
+    }
+  ]
+}

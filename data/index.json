@@ -161,6 +161,204 @@
           "file": "data/arm/optimize-for-endurance-and-resilience.json"
         }
       ]
+    },
+    {
+      "id": "coupang",
+      "name": "Coupang",
+      "set": "Leadership Principles",
+      "source": "https://www.coupang.jobs/en/coupang-leadership-principles/",
+      "principles": [
+        {
+          "id": "wow-the-customer",
+          "name": "Wow the Customer",
+          "sort": 1,
+          "file": "data/coupang/wow-the-customer.json"
+        },
+        {
+          "id": "ruthless-prioritization",
+          "name": "Ruthless Prioritization",
+          "sort": 2,
+          "file": "data/coupang/ruthless-prioritization.json"
+        },
+        {
+          "id": "company-wide-perspective",
+          "name": "Company-wide Perspective",
+          "sort": 3,
+          "file": "data/coupang/company-wide-perspective.json"
+        },
+        {
+          "id": "dive-deep",
+          "name": "Dive Deep",
+          "sort": 4,
+          "file": "data/coupang/dive-deep.json"
+        },
+        {
+          "id": "think-systematically",
+          "name": "Think Systematically",
+          "sort": 5,
+          "file": "data/coupang/think-systematically.json"
+        },
+        {
+          "id": "simplify",
+          "name": "Simplify",
+          "sort": 6,
+          "file": "data/coupang/simplify.json"
+        },
+        {
+          "id": "disagree-and-commit",
+          "name": "Disagree and Commit",
+          "sort": 7,
+          "file": "data/coupang/disagree-and-commit.json"
+        },
+        {
+          "id": "hire-and-develop-the-best",
+          "name": "Hire and Develop the Best",
+          "sort": 8,
+          "file": "data/coupang/hire-and-develop-the-best.json"
+        },
+        {
+          "id": "deliver-results-with-grit",
+          "name": "Deliver Results with Grit",
+          "sort": 9,
+          "file": "data/coupang/deliver-results-with-grit.json"
+        },
+        {
+          "id": "influence-without-authority",
+          "name": "Influence without Authority",
+          "sort": 10,
+          "file": "data/coupang/influence-without-authority.json"
+        },
+        {
+          "id": "aim-high-and-find-a-way",
+          "name": "Aim High and Find a Way",
+          "sort": 11,
+          "file": "data/coupang/aim-high-and-find-a-way.json"
+        },
+        {
+          "id": "learn-voraciously",
+          "name": "Learn Voraciously",
+          "sort": 12,
+          "file": "data/coupang/learn-voraciously.json"
+        },
+        {
+          "id": "demand-excellence",
+          "name": "Demand Excellence",
+          "sort": 13,
+          "file": "data/coupang/demand-excellence.json"
+        },
+        {
+          "id": "move-with-urgency",
+          "name": "Move with Urgency",
+          "sort": 14,
+          "file": "data/coupang/move-with-urgency.json"
+        },
+        {
+          "id": "hate-waste",
+          "name": "Hate Waste",
+          "sort": 15,
+          "file": "data/coupang/hate-waste.json"
+        }
+      ]
+    },
+    {
+      "id": "delivery-hero",
+      "name": "Delivery Hero",
+      "set": "Leadership Principles",
+      "source": "https://careers.deliveryhero.com/delivery-hero/2025-4/launching-our-leadership-principles",
+      "principles": [
+        {
+          "id": "own-it",
+          "name": "Own It",
+          "sort": 1,
+          "file": "data/delivery-hero/own-it.json"
+        },
+        {
+          "id": "dive-deep",
+          "name": "Dive Deep",
+          "sort": 2,
+          "file": "data/delivery-hero/dive-deep.json"
+        },
+        {
+          "id": "deliver-value-fast",
+          "name": "Deliver Value Fast",
+          "sort": 3,
+          "file": "data/delivery-hero/deliver-value-fast.json"
+        },
+        {
+          "id": "bring-good-vibes",
+          "name": "Bring Good Vibes",
+          "sort": 4,
+          "file": "data/delivery-hero/bring-good-vibes.json"
+        },
+        {
+          "id": "raise-the-bar",
+          "name": "Raise the Bar",
+          "sort": 5,
+          "file": "data/delivery-hero/raise-the-bar.json"
+        },
+        {
+          "id": "stay-humble",
+          "name": "Stay Humble",
+          "sort": 6,
+          "file": "data/delivery-hero/stay-humble.json"
+        }
+      ]
+    },
+    {
+      "id": "klarna",
+      "name": "Klarna",
+      "set": "Leadership Principles",
+      "source": "https://www.klarna.com/careers/life-at-klarna/heres-why-everyone-at-klarna-is-a-leader/",
+      "principles": [
+        {
+          "id": "customer-obsession",
+          "name": "Customer Obsession",
+          "sort": 1,
+          "file": "data/klarna/customer-obsession.json"
+        },
+        {
+          "id": "deliver-results",
+          "name": "Deliver Results",
+          "sort": 2,
+          "file": "data/klarna/deliver-results.json"
+        },
+        {
+          "id": "let-the-team-shine",
+          "name": "Let the Team Shine",
+          "sort": 3,
+          "file": "data/klarna/let-the-team-shine.json"
+        },
+        {
+          "id": "challenge-the-status-quo",
+          "name": "Challenge the Status Quo",
+          "sort": 4,
+          "file": "data/klarna/challenge-the-status-quo.json"
+        },
+        {
+          "id": "start-small-and-learn-fast",
+          "name": "Start Small and Learn Fast",
+          "sort": 5,
+          "file": "data/klarna/start-small-and-learn-fast.json"
+        },
+        {
+          "id": "courage",
+          "name": "Courage",
+          "sort": 6,
+          "file": "data/klarna/courage.json"
+        },
+        {
+          "id": "hire-and-develop-exceptional-talent",
+          "name": "Hire and Develop Exceptional Talent",
+          "sort": 7,
+          "file": "data/klarna/hire-and-develop-exceptional-talent.json"
+        },
+        {
+          "id": "detailed-thinkers",
+          "name": "Detailed Thinkers",
+          "sort": 8,
+          "file": "data/klarna/detailed-thinkers.json"
+        }
+      ]
     }
   ]
 }

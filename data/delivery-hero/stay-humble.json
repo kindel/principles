@@ -1,0 +1,83 @@
+{
+  "id": "stay-humble",
+  "company": "delivery-hero",
+  "name": "Stay Humble",
+  "sort": 6,
+  "definition": "We stay open-minded, grounded, and grateful for our successes, always looking for ways to improve and evolve.",
+  "terms": [
+    {
+      "id": "stay-humble",
+      "label": "stay humble",
+      "kind": "alias"
+    },
+    {
+      "id": "humility",
+      "label": "humility",
+      "kind": "alias"
+    },
+    {
+      "id": "no-entitlement",
+      "label": "no entitlement",
+      "kind": "equivalent"
+    },
+    {
+      "id": "open-minded",
+      "label": "open minded",
+      "kind": "equivalent"
+    },
+    {
+      "id": "admitting-you-were-wrong",
+      "label": "admitting you were wrong",
+      "kind": "facet",
+      "rows": [
+        "someone-disagrees-with-you",
+        "after-a-win"
+      ]
+    },
+    {
+      "id": "gratitude-for-success",
+      "label": "gratitude for success",
+      "kind": "facet",
+      "rows": [
+        "credit-for-the-outcome"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "after-a-win",
+      "situation": "After a big win",
+      "under": "Concludes the strategy is proven, and stops examining it.",
+      "justRight": "Asks how much was the plan and how much was luck, and keeps looking for the next improvement.",
+      "over": "Discounts the win so thoroughly that the team never gets to feel that it worked."
+    },
+    {
+      "id": "someone-disagrees-with-you",
+      "situation": "When someone tells you that you are wrong",
+      "under": "Defends the position because it is yours.",
+      "justRight": "Assumes there is something in it, finds that part, and changes your mind out loud when it is warranted.",
+      "over": "Concedes to whoever spoke last, and the team cannot rely on your position."
+    },
+    {
+      "id": "entitlement",
+      "situation": "When your title would get you the answer",
+      "under": "Uses the title. People comply, and stop telling you things.",
+      "justRight": "Earns the answer through the argument, and treats the title as irrelevant to whether you are right.",
+      "over": "Refuses to use your authority even when a decision genuinely needs it."
+    },
+    {
+      "id": "learning-from-smaller-players",
+      "situation": "When a smaller competitor does something better",
+      "under": "Explains why their situation does not apply to you.",
+      "justRight": "Goes and learns how they did it, and takes what transfers.",
+      "over": "Copies a competitor's move without asking whether their conditions are yours."
+    },
+    {
+      "id": "credit-for-the-outcome",
+      "situation": "When the outcome is being attributed",
+      "under": "Accepts the credit for work other people did.",
+      "justRight": "Names who did what, and says plainly which parts were outside anyone's control.",
+      "over": "Deflects credit so hard that your own contribution becomes invisible and unmanageable."
+    }
+  ]
+}

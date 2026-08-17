@@ -1,0 +1,84 @@
+{
+  "id": "let-the-team-shine",
+  "company": "klarna",
+  "name": "Let the Team Shine",
+  "sort": 3,
+  "definition": "Empower your colleagues and amplify what the team achieved rather than what you achieved.",
+  "terms": [
+    {
+      "id": "let-the-team-shine",
+      "label": "let the team shine",
+      "kind": "alias"
+    },
+    {
+      "id": "team-shine",
+      "label": "team shine",
+      "kind": "alias"
+    },
+    {
+      "id": "empower-the-team",
+      "label": "empower the team",
+      "kind": "equivalent"
+    },
+    {
+      "id": "share-the-credit",
+      "label": "share the credit",
+      "kind": "equivalent"
+    },
+    {
+      "id": "giving-credit",
+      "label": "giving credit",
+      "kind": "facet",
+      "rows": [
+        "credit",
+        "visibility"
+      ]
+    },
+    {
+      "id": "unblocking-others",
+      "label": "unblocking others",
+      "kind": "facet",
+      "rows": [
+        "someone-is-stuck",
+        "doing-it-yourself"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "credit",
+      "situation": "When the work went well",
+      "under": "Reports it as yours, because you were the one presenting.",
+      "justRight": "Names the people who did it, specifically, in front of the people who decide.",
+      "over": "Distributes credit so evenly that real contribution becomes invisible."
+    },
+    {
+      "id": "doing-it-yourself",
+      "situation": "When you could do it faster yourself",
+      "under": "Does it yourself. The team learns nothing and depends on you.",
+      "justRight": "Gives it away with the context needed to succeed, and absorbs the slower first attempt.",
+      "over": "Delegates work you are uniquely placed to do, and the team pays for your absence."
+    },
+    {
+      "id": "someone-is-stuck",
+      "situation": "When a colleague is blocked",
+      "under": "Notices, and waits for them to ask.",
+      "justRight": "Goes and unblocks them, then makes sure the block does not reform.",
+      "over": "Steps in so early that people stop trying to solve anything alone."
+    },
+    {
+      "id": "your-idea-and-theirs",
+      "situation": "When their idea is nearly as good as yours",
+      "under": "Argues yours through on the strength of your position.",
+      "justRight": "Takes theirs when the difference is small. Ownership is worth more than the margin.",
+      "over": "Never advocates your own view, and the team loses your judgment."
+    },
+    {
+      "id": "visibility",
+      "situation": "When leadership only ever sees you",
+      "under": "Enjoys it, and lets the team stay invisible.",
+      "justRight": "Puts the people doing the work in front of the people who decide.",
+      "over": "Pushes people into visibility they are not ready for, and lets them fail in public."
+    }
+  ]
+}

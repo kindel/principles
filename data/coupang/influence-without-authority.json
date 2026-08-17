@@ -1,0 +1,90 @@
+{
+  "id": "influence-without-authority",
+  "company": "coupang",
+  "name": "Influence without Authority",
+  "sort": 10,
+  "definition": "Leaders lead by communicating their ideas clearly. We drive alignment through data and insights. We create an environment where knowledge trumps position.",
+  "terms": [
+    {
+      "id": "influence-without-authority",
+      "label": "influence without authority",
+      "kind": "alias"
+    },
+    {
+      "id": "knowledge-trumps-position",
+      "label": "knowledge trumps position",
+      "kind": "alias"
+    },
+    {
+      "id": "bring-people-with-you",
+      "label": "bring people with you",
+      "kind": "equivalent"
+    },
+    {
+      "id": "align-through-data",
+      "label": "align through data",
+      "kind": "equivalent"
+    },
+    {
+      "id": "written-proposals",
+      "label": "written proposals",
+      "kind": "facet",
+      "rows": [
+        "writing-it-down"
+      ]
+    },
+    {
+      "id": "cross-team-alignment",
+      "label": "cross-team alignment",
+      "kind": "facet",
+      "rows": [
+        "no-authority-over-them",
+        "after-you-lose"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "no-authority-over-them",
+      "situation": "When the people you need do not report to you",
+      "under": "Escalates so the work gets assigned to them.",
+      "justRight": "Makes the case in their terms, with what it is worth to their goals, and lets them choose.",
+      "over": "Spends months building consensus on something you could simply have decided."
+    },
+    {
+      "id": "winning-with-data",
+      "situation": "When opinions are evenly split",
+      "under": "Wins on volume, seniority, or persistence.",
+      "justRight": "Brings the number, the customer evidence, or the experiment that settles it.",
+      "over": "Demands data for decisions too small or too fast to be worth measuring."
+    },
+    {
+      "id": "pulling-rank",
+      "situation": "When you could just pull rank",
+      "under": "Pulls rank as the first move. People comply and do not believe it.",
+      "justRight": "Explains until people are convinced, and keeps rank for the rare case where speed beats agreement.",
+      "over": "Refuses to ever decide, so the team waits for a consensus that never forms."
+    },
+    {
+      "id": "junior-person-is-right",
+      "situation": "When the best idea comes from the most junior person",
+      "under": "Lets it go unheard because of where it came from.",
+      "justRight": "Takes it, credits it, and makes the source visible so it happens again.",
+      "over": "Overcorrects until seniority and experience become disqualifying."
+    },
+    {
+      "id": "writing-it-down",
+      "situation": "When the argument has to travel without you",
+      "under": "Relies on the meeting. The idea dies when you leave the room.",
+      "justRight": "Writes it down clearly enough that someone who was not there can act on it.",
+      "over": "Writes a document for every decision, until reading becomes the bottleneck."
+    },
+    {
+      "id": "after-you-lose",
+      "situation": "When you did not persuade them",
+      "under": "Escalates the same argument to their manager, unchanged.",
+      "justRight": "Finds out what would change their mind, and either comes back with that or drops it.",
+      "over": "Keeps relitigating with new framing until the relationship costs more than the decision."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "hire-and-develop-exceptional-talent",
+  "company": "klarna",
+  "name": "Hire and Develop Exceptional Talent",
+  "sort": 7,
+  "definition": "Raise the level of the team with every hire, and share what you know through mentorship.",
+  "terms": [
+    {
+      "id": "hire-and-develop-exceptional-talent",
+      "label": "hire and develop exceptional talent",
+      "kind": "alias"
+    },
+    {
+      "id": "raise-the-bar",
+      "label": "raise the bar",
+      "kind": "alias"
+    },
+    {
+      "id": "grow-people",
+      "label": "grow people",
+      "kind": "equivalent"
+    },
+    {
+      "id": "mentorship",
+      "label": "mentorship",
+      "kind": "equivalent"
+    },
+    {
+      "id": "hiring-decisions",
+      "label": "hiring decisions",
+      "kind": "facet",
+      "rows": [
+        "bar-under-pressure",
+        "hiring-people-like-you"
+      ]
+    },
+    {
+      "id": "sharing-knowledge",
+      "label": "sharing knowledge",
+      "kind": "facet",
+      "rows": [
+        "sharing-what-you-know",
+        "mentoring"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "bar-under-pressure",
+      "situation": "When the team is short and the pipeline is thin",
+      "under": "Hires someone adequate, to stop the pain.",
+      "justRight": "Holds the bar and manages the gap another way. A wrong hire is more expensive than an open role.",
+      "over": "Leaves the role open so long that the standard drops from exhaustion instead."
+    },
+    {
+      "id": "hiring-people-like-you",
+      "situation": "When the candidate thinks the way you do",
+      "under": "Reads familiarity as quality, and hires your own reflection.",
+      "justRight": "Hires for what the team is missing, and treats the discomfort of difference as the point.",
+      "over": "Hires for difference alone, and builds a team that cannot agree on anything."
+    },
+    {
+      "id": "sharing-what-you-know",
+      "situation": "When you are the only one who knows how it works",
+      "under": "Keeps it. Being needed feels like being valuable.",
+      "justRight": "Writes it down and teaches it until someone else can do it without you.",
+      "over": "Documents and teaches so much that you stop producing anything yourself."
+    },
+    {
+      "id": "mentoring",
+      "situation": "When someone junior asks for the answer",
+      "under": "Gives the answer. It is faster, and they learn nothing.",
+      "justRight": "Gives enough that they can find it, and checks in before they are lost.",
+      "over": "Withholds the answer on principle while a deadline burns."
+    },
+    {
+      "id": "letting-people-go-up",
+      "situation": "When your best person is ready for a bigger role elsewhere in the company",
+      "under": "Blocks the move, because your team needs them.",
+      "justRight": "Backs the move, and starts building the replacement now.",
+      "over": "Pushes people upward before they are ready, and sets them up to fail."
+    }
+  ]
+}

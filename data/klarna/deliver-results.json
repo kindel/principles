@@ -1,0 +1,83 @@
+{
+  "id": "deliver-results",
+  "company": "klarna",
+  "name": "Deliver Results",
+  "sort": 2,
+  "definition": "Produce measurable outcomes rather than activity. What actually changed is the record, not how much was attempted.",
+  "terms": [
+    {
+      "id": "deliver-results",
+      "label": "deliver results",
+      "kind": "alias"
+    },
+    {
+      "id": "impact",
+      "label": "impact",
+      "kind": "alias"
+    },
+    {
+      "id": "get-it-done",
+      "label": "get it done",
+      "kind": "equivalent"
+    },
+    {
+      "id": "outcomes-over-activity",
+      "label": "outcomes over activity",
+      "kind": "equivalent"
+    },
+    {
+      "id": "measurable-outcomes",
+      "label": "measurable outcomes",
+      "kind": "facet",
+      "rows": [
+        "activity-as-progress",
+        "measuring-your-own-work"
+      ]
+    },
+    {
+      "id": "finishing-what-you-start",
+      "label": "finishing what you start",
+      "kind": "facet",
+      "rows": [
+        "half-finished"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "activity-as-progress",
+      "situation": "When the update is a list of activity",
+      "under": "Reports what was done. Nobody can tell whether anything moved.",
+      "justRight": "Reports what changed for the customer or the number, and what is still missing.",
+      "over": "Reports only the headline number, and hides the work that is at risk."
+    },
+    {
+      "id": "dependency",
+      "situation": "When someone else is late",
+      "under": "Waits, and reports the dependency as the reason.",
+      "justRight": "Finds the smaller path, the workaround, or the person who can unblock it now.",
+      "over": "Delivers by bulldozing a team that will have to live with what you built."
+    },
+    {
+      "id": "half-finished",
+      "situation": "When the work is 80 percent done and something newer appears",
+      "under": "Moves to the new thing, and the old one stays at 80 percent forever.",
+      "justRight": "Finishes the current thing to a state that delivers value, then moves.",
+      "over": "Refuses to abandon work that has clearly stopped being worth finishing."
+    },
+    {
+      "id": "measuring-your-own-work",
+      "situation": "When nobody has defined success",
+      "under": "Ships, and calls it a win because it went out.",
+      "justRight": "Names the number that would show this worked before you build it, then checks it after.",
+      "over": "Spends longer defining and instrumenting the measure than building the thing."
+    },
+    {
+      "id": "bad-quarter",
+      "situation": "When the results did not come",
+      "under": "Explains the circumstances until the miss blurs.",
+      "justRight": "States the miss plainly, owns it, and says what changes next quarter.",
+      "over": "Punishes an honest miss so hard that the team starts sandbagging targets."
+    }
+  ]
+}

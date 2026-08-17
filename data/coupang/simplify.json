@@ -1,0 +1,90 @@
+{
+  "id": "simplify",
+  "company": "coupang",
+  "name": "Simplify",
+  "sort": 6,
+  "definition": "Complexity is the enemy of scale, speed, and customer experience. Leaders are fanatical about simplifying what they touch.",
+  "terms": [
+    {
+      "id": "simplify",
+      "label": "simplify",
+      "kind": "alias"
+    },
+    {
+      "id": "complexity",
+      "label": "complexity",
+      "kind": "alias"
+    },
+    {
+      "id": "reduce-complexity",
+      "label": "reduce complexity",
+      "kind": "equivalent"
+    },
+    {
+      "id": "make-it-simpler",
+      "label": "make it simpler",
+      "kind": "equivalent"
+    },
+    {
+      "id": "removing-steps",
+      "label": "removing steps",
+      "kind": "facet",
+      "rows": [
+        "process-approvals",
+        "many-tools"
+      ]
+    },
+    {
+      "id": "simple-explanations",
+      "label": "simple explanations",
+      "kind": "facet",
+      "rows": [
+        "explaining-the-work"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "adding-a-feature",
+      "situation": "When the answer is another option or another setting",
+      "under": "Adds the option. Every request becomes a toggle.",
+      "justRight": "Finds the one behavior that serves most cases and removes the need for the choice.",
+      "over": "Refuses an option that a large group of customers genuinely needs, in the name of simplicity."
+    },
+    {
+      "id": "inherited-complexity",
+      "situation": "When you inherit something complicated",
+      "under": "Learns to live with it and passes it on intact.",
+      "justRight": "Takes a piece out each time you touch it. Leaves it simpler than you found it.",
+      "over": "Rewrites it from scratch and spends a year reproducing behavior that already worked."
+    },
+    {
+      "id": "explaining-the-work",
+      "situation": "When you explain the work to someone outside it",
+      "under": "Uses the jargon and the diagram with 40 boxes.",
+      "justRight": "Explains it in plain words in a minute. If you cannot, you do not understand it yet.",
+      "over": "Simplifies until the explanation is no longer true, and people plan against a picture that is wrong."
+    },
+    {
+      "id": "process-approvals",
+      "situation": "When a process has grown approvals",
+      "under": "Adds one more approval after the last mistake.",
+      "justRight": "Asks what each approval catches, and removes the ones that catch nothing.",
+      "over": "Strips out controls that exist because something expensive went wrong."
+    },
+    {
+      "id": "many-tools",
+      "situation": "When three tools do nearly the same thing",
+      "under": "Adds a fourth for the case none of them cover.",
+      "justRight": "Picks one, moves everyone onto it, and turns the others off.",
+      "over": "Forces one tool onto a team whose work genuinely does not fit it."
+    },
+    {
+      "id": "simple-versus-easy",
+      "situation": "When the simple option is more work to build",
+      "under": "Ships the complicated thing because it was faster to write.",
+      "justRight": "Pays the build cost once so that everyone downstream pays nothing.",
+      "over": "Polishes the internal elegance of something no customer will ever touch."
+    }
+  ]
+}

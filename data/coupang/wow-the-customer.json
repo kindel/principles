@@ -1,0 +1,91 @@
+{
+  "id": "wow-the-customer",
+  "company": "coupang",
+  "name": "Wow the Customer",
+  "sort": 1,
+  "definition": "We exist to transform customers' lives for the better. The customer is the beginning and the end in every decision we make.",
+  "terms": [
+    {
+      "id": "wow",
+      "label": "wow",
+      "kind": "alias"
+    },
+    {
+      "id": "wow-the-customer",
+      "label": "wow the customer",
+      "kind": "alias"
+    },
+    {
+      "id": "customer-obsession",
+      "label": "customer obsession",
+      "kind": "equivalent"
+    },
+    {
+      "id": "customer-first",
+      "label": "customer first",
+      "kind": "equivalent"
+    },
+    {
+      "id": "working-backwards-from-the-customer",
+      "label": "working backwards from the customer",
+      "kind": "facet",
+      "rows": [
+        "starting-a-project",
+        "speaking-for-the-customer"
+      ]
+    },
+    {
+      "id": "customer-trust",
+      "label": "customer trust",
+      "kind": "facet",
+      "rows": [
+        "trust-vs-quarter",
+        "complaints"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "starting-a-project",
+      "situation": "When a project starts",
+      "under": "Starts from the technology or the org chart, then looks for a customer to justify it.",
+      "justRight": "Names the customer and the change in their life first, then works backwards to what gets built.",
+      "over": "Rewrites the whole plan every time one customer says something, so nothing ever ships."
+    },
+    {
+      "id": "metric-vs-experience",
+      "situation": "When the metric improves and the experience does not",
+      "under": "Ships the metric win and calls the job done.",
+      "justRight": "Treats the gap as a defect and goes to look at what the customer actually got.",
+      "over": "Refuses to move any metric until every part of the experience is perfect."
+    },
+    {
+      "id": "complaints",
+      "situation": "When a complaint arrives",
+      "under": "Answers the ticket and closes it. The cause survives.",
+      "justRight": "Fixes this customer's problem now, then fixes the reason it happened so the next customer never sees it.",
+      "over": "Escalates every complaint into a company-wide project regardless of how many customers it touches."
+    },
+    {
+      "id": "internal-convenience",
+      "situation": "When the easy path is easier for us than for the customer",
+      "under": "Picks the path that suits the team and hopes the customer does not notice.",
+      "justRight": "Pays the internal cost so the customer pays nothing, and says out loud which side the convenience is on.",
+      "over": "Loads so much cost onto the team that the team can no longer serve the customer at all."
+    },
+    {
+      "id": "trust-vs-quarter",
+      "situation": "When a short-term gain would cost trust",
+      "under": "Takes the gain. Trust is not on anyone's scorecard this quarter.",
+      "justRight": "Gives up the gain. Trust is the asset the next 10 years are built on.",
+      "over": "Refuses every commercial decision that any customer could dislike."
+    },
+    {
+      "id": "speaking-for-the-customer",
+      "situation": "When nobody in the room has met the customer",
+      "under": "Argues from opinion and seniority. The customer is a guess.",
+      "justRight": "Brings the data, the recording, or the visit, and lets the customer's own words settle it.",
+      "over": "Uses 'the customer wants it' as an unfalsifiable trump card in every disagreement."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "demand-excellence",
+  "company": "coupang",
+  "name": "Demand Excellence",
+  "sort": 13,
+  "definition": "Leaders have a passion for excellence and do not tolerate mediocrity. We hold ourselves and others to a high standard that we raise perpetually.",
+  "terms": [
+    {
+      "id": "demand-excellence",
+      "label": "demand excellence",
+      "kind": "alias"
+    },
+    {
+      "id": "mediocrity",
+      "label": "mediocrity",
+      "kind": "alias"
+    },
+    {
+      "id": "high-standards",
+      "label": "high standards",
+      "kind": "equivalent"
+    },
+    {
+      "id": "raise-the-bar-perpetually",
+      "label": "raise the bar perpetually",
+      "kind": "equivalent"
+    },
+    {
+      "id": "reviewing-work",
+      "label": "reviewing work",
+      "kind": "facet",
+      "rows": [
+        "work-that-is-fine",
+        "praising-good-work"
+      ]
+    },
+    {
+      "id": "accepting-good-enough",
+      "label": "accepting good enough",
+      "kind": "facet",
+      "rows": [
+        "standard-drifts",
+        "tolerating-a-known-problem"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "work-that-is-fine",
+      "situation": "When the work is fine and not good",
+      "under": "Approves it. Nobody wants the conversation.",
+      "justRight": "Says exactly what is missing and what good would look like, then expects it.",
+      "over": "Sends work back over things no customer or colleague would ever notice."
+    },
+    {
+      "id": "standard-drifts",
+      "situation": "When the standard has quietly dropped",
+      "under": "Adapts to the new normal without noticing it moved.",
+      "justRight": "Names the drift, restates the bar, and holds the next piece of work to it.",
+      "over": "Raises the bar so often mid-project that nothing can ever be finished."
+    },
+    {
+      "id": "your-own-work",
+      "situation": "When the work below the bar is yours",
+      "under": "Applies the standard to others and not to yourself.",
+      "justRight": "Holds your own work to the bar first, and in public.",
+      "over": "Reworks your own output endlessly and becomes the bottleneck."
+    },
+    {
+      "id": "high-standard-and-speed",
+      "situation": "When excellence and the date conflict",
+      "under": "Lowers the standard silently to make the date.",
+      "justRight": "Decides openly which part must be excellent and which part can be good, and says why.",
+      "over": "Treats every part as equally critical and delivers nothing on time."
+    },
+    {
+      "id": "praising-good-work",
+      "situation": "When someone clears the bar",
+      "under": "Says nothing. The bar is the job.",
+      "justRight": "Names precisely what was excellent, so the standard becomes concrete for everyone.",
+      "over": "Praises so freely that the word excellent stops carrying information."
+    },
+    {
+      "id": "tolerating-a-known-problem",
+      "situation": "When everyone knows about the broken thing",
+      "under": "Routes around it. It has been broken so long that it feels permanent.",
+      "justRight": "Refuses to accept it. Fixes it, or gets it owned with a date.",
+      "over": "Stops all forward work to fix every known imperfection at once."
+    }
+  ]
+}

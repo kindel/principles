@@ -1,0 +1,91 @@
+{
+  "id": "dive-deep",
+  "company": "coupang",
+  "name": "Dive Deep",
+  "sort": 4,
+  "definition": "Operational excellence requires hands-on leadership with a passion for detail. We dig down to the smallest details to gain a full understanding, which equips us to empower the right people and deliver results. No task is beneath us.",
+  "terms": [
+    {
+      "id": "dive-deep",
+      "label": "dive deep",
+      "kind": "alias"
+    },
+    {
+      "id": "hands-on",
+      "label": "hands-on",
+      "kind": "alias"
+    },
+    {
+      "id": "get-into-the-details",
+      "label": "get into the details",
+      "kind": "equivalent"
+    },
+    {
+      "id": "go-and-see",
+      "label": "go and see",
+      "kind": "equivalent"
+    },
+    {
+      "id": "auditing-the-numbers",
+      "label": "auditing the numbers",
+      "kind": "facet",
+      "rows": [
+        "metric-you-did-not-build",
+        "anecdote-vs-data"
+      ]
+    },
+    {
+      "id": "root-cause",
+      "label": "root cause",
+      "kind": "facet",
+      "rows": [
+        "after-an-incident",
+        "escalation-from-the-floor"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "metric-you-did-not-build",
+      "situation": "When the number comes from someone else's dashboard",
+      "under": "Quotes it. Has never seen how it is computed.",
+      "justRight": "Opens the query, checks what it counts and what it drops, and then quotes it.",
+      "over": "Rebuilds every number from scratch and never gets to the decision."
+    },
+    {
+      "id": "anecdote-vs-data",
+      "situation": "When the data and the anecdote disagree",
+      "under": "Picks whichever one supports the plan.",
+      "justRight": "Treats the disagreement as a sign that the data is wrong or incomplete, and goes to find out which.",
+      "over": "Chases every anecdote to the bottom and lets the trend go unmanaged."
+    },
+    {
+      "id": "escalation-from-the-floor",
+      "situation": "When an operator says the process does not work",
+      "under": "Explains the process back to them.",
+      "justRight": "Goes and watches the process run, then fixes what actually breaks.",
+      "over": "Moves into the operation and starts running it instead of the person who owns it."
+    },
+    {
+      "id": "delegating-with-detail",
+      "situation": "When the work belongs to someone else",
+      "under": "Delegates and disappears, then finds out at the end.",
+      "justRight": "Knows the details well enough to ask the two questions that matter, then stays out of the way.",
+      "over": "Reviews every detail personally, and the owner becomes a messenger."
+    },
+    {
+      "id": "after-an-incident",
+      "situation": "After an incident is mitigated",
+      "under": "Closes it once the alarm stops.",
+      "justRight": "Keeps asking why until the answer is something the team can change, then changes it.",
+      "over": "Runs a review so long that the same failure happens again during it."
+    },
+    {
+      "id": "no-task-beneath-us",
+      "situation": "When the fix is unglamorous",
+      "under": "Waits for someone junior to pick it up.",
+      "justRight": "Picks it up. Reads the log, cleans the data, and works the shift.",
+      "over": "Spends every week on unglamorous fixes that one process change would have removed entirely."
+    }
+  ]
+}

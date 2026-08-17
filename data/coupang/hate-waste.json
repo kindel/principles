@@ -1,0 +1,91 @@
+{
+  "id": "hate-waste",
+  "company": "coupang",
+  "name": "Hate Waste",
+  "sort": 15,
+  "definition": "Leaders find ways to do more with less. We save costs rather than simply cut them. We do not skimp on a penny today if that will cost us a dollar tomorrow.",
+  "terms": [
+    {
+      "id": "hate-waste",
+      "label": "hate waste",
+      "kind": "alias"
+    },
+    {
+      "id": "save-not-cut",
+      "label": "save not cut",
+      "kind": "alias"
+    },
+    {
+      "id": "frugality",
+      "label": "frugality",
+      "kind": "equivalent"
+    },
+    {
+      "id": "do-more-with-less",
+      "label": "do more with less",
+      "kind": "equivalent"
+    },
+    {
+      "id": "cost-decisions",
+      "label": "cost decisions",
+      "kind": "facet",
+      "rows": [
+        "cutting-versus-saving",
+        "penny-today-dollar-tomorrow"
+      ]
+    },
+    {
+      "id": "wasted-time",
+      "label": "wasted time",
+      "kind": "facet",
+      "rows": [
+        "wasted-meetings",
+        "wasted-work"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "cutting-versus-saving",
+      "situation": "When the budget has to come down",
+      "under": "Cuts the line item and lets the work it funded fail somewhere else.",
+      "justRight": "Finds the way to get the same outcome for less, so the cost goes rather than the outcome.",
+      "over": "Redesigns everything to save an amount that will never show up in the accounts."
+    },
+    {
+      "id": "penny-today-dollar-tomorrow",
+      "situation": "When the cheap option has a tail",
+      "under": "Takes the cheap option and pays for it every month afterwards.",
+      "justRight": "Counts what the choice costs over its life, not what it costs to buy.",
+      "over": "Justifies any spend today with a long-term saving nobody will ever check."
+    },
+    {
+      "id": "wasted-meetings",
+      "situation": "When the meeting has 20 people in it",
+      "under": "Invites everyone, in case they are needed.",
+      "justRight": "Treats other people's hours as a real cost, and invites who decides and who does.",
+      "over": "Cuts people out of decisions they have to carry out, and pays for it in rework."
+    },
+    {
+      "id": "spending-on-tools",
+      "situation": "When the spend would make the team faster",
+      "under": "Refuses, because the line item is visible and the lost hours are not.",
+      "justRight": "Spends where it buys speed or safety, and is tight everywhere else.",
+      "over": "Buys every tool anyone asks for and calls it investing in the team."
+    },
+    {
+      "id": "wasted-work",
+      "situation": "When work is being done that nobody uses",
+      "under": "Keeps producing the report because it has always been produced.",
+      "justRight": "Finds out who reads it. If nobody does, stops it.",
+      "over": "Kills a cheap artifact that a small group depended on, without asking them."
+    },
+    {
+      "id": "growth-and-cost",
+      "situation": "When volume is growing fast",
+      "under": "Lets cost grow with volume and calls it the cost of growth.",
+      "justRight": "Drives the cost per unit down as volume rises, so growth funds itself.",
+      "over": "Starves the capacity that growth needs, and turns a good quarter into an outage."
+    }
+  ]
+}

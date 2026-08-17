@@ -28,6 +28,21 @@ COMPANY_META = collections.OrderedDict([
         "set": "10x Mindset",
         "source": "https://careers.arm.com/life-at-arm",
     }),
+    ("coupang", {
+        "name": "Coupang",
+        "set": "Leadership Principles",
+        "source": "https://www.coupang.jobs/en/coupang-leadership-principles/",
+    }),
+    ("delivery-hero", {
+        "name": "Delivery Hero",
+        "set": "Leadership Principles",
+        "source": "https://careers.deliveryhero.com/delivery-hero/2025-4/launching-our-leadership-principles",
+    }),
+    ("klarna", {
+        "name": "Klarna",
+        "set": "Leadership Principles",
+        "source": "https://www.klarna.com/careers/life-at-klarna/heres-why-everyone-at-klarna-is-a-leader/",
+    }),
 ])
 
 

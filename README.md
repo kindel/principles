@@ -9,7 +9,8 @@ tooling. An application depends on it without inheriting anything it did
 not ask for.
 
 A consumer must pick a company and show only that company's set. The sets
-today are Amazon's Leadership Principles and Arm's 10x Mindset.
+today are Amazon's Leadership Principles, Arm's 10x Mindset, and the
+Leadership Principles of Coupang, Delivery Hero, and Klarna.
 
 ## Layout
 
@@ -17,6 +18,9 @@ today are Amazon's Leadership Principles and Arm's 10x Mindset.
 data/index.json              manifest, generated, version 2
 data/amazon/<id>.json        one Amazon principle
 data/arm/<id>.json           one Arm factor
+data/coupang/<id>.json       one Coupang principle
+data/delivery-hero/<id>.json one Delivery Hero principle
+data/klarna/<id>.json        one Klarna principle
 scripts/build_index.py       regenerates the manifest
 scripts/validate.py          enforces SCHEMA.md
 SCHEMA.md                    the contract

@@ -1,0 +1,84 @@
+{
+  "id": "customer-obsession",
+  "company": "klarna",
+  "name": "Customer Obsession",
+  "sort": 1,
+  "definition": "Put the customer first, whether your work touches them directly or not. Foresee what customers expect and meet it before they ask.",
+  "terms": [
+    {
+      "id": "customer-obsession",
+      "label": "customer obsession",
+      "kind": "alias"
+    },
+    {
+      "id": "co",
+      "label": "co",
+      "kind": "alias"
+    },
+    {
+      "id": "customer-first",
+      "label": "customer first",
+      "kind": "equivalent"
+    },
+    {
+      "id": "put-the-customer-first",
+      "label": "put the customer first",
+      "kind": "equivalent"
+    },
+    {
+      "id": "anticipating-needs",
+      "label": "anticipating needs",
+      "kind": "facet",
+      "rows": [
+        "anticipation",
+        "internal-metric"
+      ]
+    },
+    {
+      "id": "customer-trust",
+      "label": "customer trust",
+      "kind": "facet",
+      "rows": [
+        "bad-news",
+        "merchant-and-consumer"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "whose-problem",
+      "situation": "When the problem is the customer's and not yours",
+      "under": "Optimizes for the internal roadmap and lets the customer wait.",
+      "justRight": "Starts from what the customer is trying to do, and works back to what you build.",
+      "over": "Chases every individual request until the product loses its shape."
+    },
+    {
+      "id": "anticipation",
+      "situation": "When the customer has not asked yet",
+      "under": "Waits for the request. Builds only what arrived on a ticket.",
+      "justRight": "Sees what the customer will need next, and has it ready before they ask.",
+      "over": "Builds for imagined needs nobody has expressed, and ships features nobody uses."
+    },
+    {
+      "id": "bad-news",
+      "situation": "When the customer has been let down",
+      "under": "Sends the templated apology and hopes it passes.",
+      "justRight": "Tells them what happened, what you are doing, and when. Then does it.",
+      "over": "Over-compensates every incident until the response costs more than the failure."
+    },
+    {
+      "id": "internal-metric",
+      "situation": "When the internal metric and the customer disagree",
+      "under": "Reports the metric and lets the experience rot.",
+      "justRight": "Treats the divergence as a broken metric, and goes to find out what the customer actually got.",
+      "over": "Refuses to use any metric, and runs the product on anecdote."
+    },
+    {
+      "id": "merchant-and-consumer",
+      "situation": "When two sides of the market want different things",
+      "under": "Serves whichever side is louder this quarter.",
+      "justRight": "Finds the answer that keeps both sides in the market, and says openly which side pays the cost.",
+      "over": "Waits for the option that costs neither side anything, and ships nothing."
+    }
+  ]
+}

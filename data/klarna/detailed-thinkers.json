@@ -1,0 +1,83 @@
+{
+  "id": "detailed-thinkers",
+  "company": "klarna",
+  "name": "Detailed Thinkers",
+  "sort": 8,
+  "definition": "Disrupting a competitive industry requires radical, detailed thinking. Communicate a daring direction, love the details, and keep a contagious desire for knowledge.",
+  "terms": [
+    {
+      "id": "detailed-thinkers",
+      "label": "detailed thinkers",
+      "kind": "alias"
+    },
+    {
+      "id": "details",
+      "label": "details",
+      "kind": "alias"
+    },
+    {
+      "id": "dive-deep",
+      "label": "dive deep",
+      "kind": "equivalent"
+    },
+    {
+      "id": "rigor",
+      "label": "rigor",
+      "kind": "equivalent"
+    },
+    {
+      "id": "planning-before-building",
+      "label": "planning before building",
+      "kind": "facet",
+      "rows": [
+        "plan-before-build",
+        "edge-cases"
+      ]
+    },
+    {
+      "id": "knowing-your-numbers",
+      "label": "knowing your numbers",
+      "kind": "facet",
+      "rows": [
+        "knowing-the-numbers"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "direction-and-detail",
+      "situation": "When you set an ambitious direction",
+      "under": "States the ambition, and leaves the details to whoever is unlucky.",
+      "justRight": "Communicates the daring direction, and knows the details well enough to say whether it is possible.",
+      "over": "Gets so deep into the details that nobody can see where you are going."
+    },
+    {
+      "id": "knowing-the-numbers",
+      "situation": "When you are asked how your area works",
+      "under": "Quotes the summary someone else prepared.",
+      "justRight": "Knows the numbers cold, including what they exclude, because you have looked yourself.",
+      "over": "Answers every question at a level of detail that stops the meeting from deciding anything."
+    },
+    {
+      "id": "plan-before-build",
+      "situation": "When the work is expensive to redo",
+      "under": "Starts building, and discovers the problem at integration.",
+      "justRight": "Thinks it through until the expensive mistakes are visible on paper, then builds.",
+      "over": "Plans until the market has moved, and the plan is about a world that has gone."
+    },
+    {
+      "id": "edge-cases",
+      "situation": "When the edge case is rare",
+      "under": "Ignores it. Rare means it will not happen to you.",
+      "justRight": "Works out what it costs when it does happen, and handles it if that cost is real.",
+      "over": "Handles every edge case up front, and the common path arrives a quarter late."
+    },
+    {
+      "id": "reviewing-someone-else",
+      "situation": "When you review someone else's detailed work",
+      "under": "Approves it without opening it.",
+      "justRight": "Reads it properly, and asks the questions that only appear at that depth.",
+      "over": "Rewrites their work in your own style, and calls it a review."
+    }
+  ]
+}

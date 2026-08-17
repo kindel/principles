@@ -1,0 +1,90 @@
+{
+  "id": "hire-and-develop-the-best",
+  "company": "coupang",
+  "name": "Hire and Develop the Best",
+  "sort": 8,
+  "definition": "Leaders raise the performance level of the team with every hire and promotion. We hire for the long-term need. We recognize exceptional talent and invest resources to develop their full potential. We empower them to pursue growth through internal rotations.",
+  "terms": [
+    {
+      "id": "hire-and-develop-the-best",
+      "label": "hire and develop the best",
+      "kind": "alias"
+    },
+    {
+      "id": "raise-the-bar",
+      "label": "raise the bar",
+      "kind": "alias"
+    },
+    {
+      "id": "talent",
+      "label": "talent",
+      "kind": "equivalent"
+    },
+    {
+      "id": "grow-people",
+      "label": "grow people",
+      "kind": "equivalent"
+    },
+    {
+      "id": "hiring-decisions",
+      "label": "hiring decisions",
+      "kind": "facet",
+      "rows": [
+        "open-role-pressure",
+        "hiring-for-the-gap"
+      ]
+    },
+    {
+      "id": "internal-rotation",
+      "label": "internal rotation",
+      "kind": "facet",
+      "rows": [
+        "strong-performer-stuck"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "open-role-pressure",
+      "situation": "When the role has been open for months",
+      "under": "Hires the best of the people who applied, and the bar drops.",
+      "justRight": "Keeps the role open. A wrong hire costs more than a slow one.",
+      "over": "Holds out for someone who does not exist while the team burns out covering the gap."
+    },
+    {
+      "id": "hiring-for-the-gap",
+      "situation": "When you hire for the work in front of you",
+      "under": "Hires for exactly today's task and outgrows the person within a year.",
+      "justRight": "Hires for the long-term need and the level the job will reach.",
+      "over": "Hires far above the work, and loses the person to boredom in six months."
+    },
+    {
+      "id": "strong-performer-stuck",
+      "situation": "When a strong performer has stopped growing",
+      "under": "Keeps them where they are because they are useful there.",
+      "justRight": "Opens a rotation or a harder problem, even when it costs your own team.",
+      "over": "Moves people so often that nobody stays long enough to own an outcome."
+    },
+    {
+      "id": "promotion-bar",
+      "situation": "When it is time to promote",
+      "under": "Promotes for tenure and effort.",
+      "justRight": "Promotes people already doing the next job, so the bar rises with every promotion.",
+      "over": "Sets a bar nobody clears, and the best people leave to be promoted elsewhere."
+    },
+    {
+      "id": "underperformance",
+      "situation": "When someone is not meeting the bar",
+      "under": "Waits and hopes, and tells them everything is fine.",
+      "justRight": "Says it early and specifically, and gives real support and a real deadline.",
+      "over": "Manages people out at the first weak quarter and loses people who were about to compound."
+    },
+    {
+      "id": "developing-others",
+      "situation": "When developing someone costs your own time",
+      "under": "Treats development as something the training team owns.",
+      "justRight": "Spends the hours yourself. Gives the hard, visible work away and coaches through it.",
+      "over": "Coaches so constantly that the person never gets to fail and learn anything."
+    }
+  ]
+}

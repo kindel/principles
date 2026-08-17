@@ -1,0 +1,91 @@
+{
+  "id": "deliver-results-with-grit",
+  "company": "coupang",
+  "name": "Deliver Results with Grit",
+  "sort": 9,
+  "definition": "Leaders deliver impact in timely fashion and with high quality. We do not confuse long hours or effort with results. We finish what we start. With grit, we work around dependencies and never let excuses stop us.",
+  "terms": [
+    {
+      "id": "deliver-results-with-grit",
+      "label": "deliver results with grit",
+      "kind": "alias"
+    },
+    {
+      "id": "grit",
+      "label": "grit",
+      "kind": "alias"
+    },
+    {
+      "id": "get-it-done",
+      "label": "get it done",
+      "kind": "equivalent"
+    },
+    {
+      "id": "no-excuses",
+      "label": "no excuses",
+      "kind": "equivalent"
+    },
+    {
+      "id": "working-around-blockers",
+      "label": "working around blockers",
+      "kind": "facet",
+      "rows": [
+        "blocked-by-another-team",
+        "excuses"
+      ]
+    },
+    {
+      "id": "finishing",
+      "label": "finishing",
+      "kind": "facet",
+      "rows": [
+        "last-mile",
+        "unglamorous-finish"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "blocked-by-another-team",
+      "situation": "When another team is the blocker",
+      "under": "Reports the dependency as the reason it did not land.",
+      "justRight": "Finds the path around it, the smaller version, or the person who can unblock it today.",
+      "over": "Routes around the team so aggressively that you ship something they now have to support and never agreed to."
+    },
+    {
+      "id": "hours-versus-results",
+      "situation": "When the team worked very hard and delivered little",
+      "under": "Counts the effort as the result.",
+      "justRight": "Says plainly that the outcome did not land, and changes what the effort is spent on.",
+      "over": "Dismisses the effort entirely, and teaches the team that trying is not worth reporting."
+    },
+    {
+      "id": "last-mile",
+      "situation": "When the work is nearly done",
+      "under": "Declares victory at 90 percent and moves to the next thing.",
+      "justRight": "Finishes what you start. Almost all the value is in the part still missing.",
+      "over": "Polishes the last five percent for a quarter while the next problem goes unworked."
+    },
+    {
+      "id": "quality-versus-date",
+      "situation": "When the date and the quality bar collide",
+      "under": "Ships on the date and lets the customer find the defects.",
+      "justRight": "Cuts scope rather than quality, and says early what is not in the release.",
+      "over": "Misses the date repeatedly over defects no customer would ever have noticed."
+    },
+    {
+      "id": "excuses",
+      "situation": "When the plan meets the real world",
+      "under": "Has a good reason. The reason arrives after the deadline.",
+      "justRight": "Raises the risk while there is still time to act on it, and brings the option you recommend.",
+      "over": "Never raises risk at all, so problems only become visible once they are already failures."
+    },
+    {
+      "id": "unglamorous-finish",
+      "situation": "When the remaining work is migration and cleanup",
+      "under": "Leaves the old system running and calls the project delivered.",
+      "justRight": "Finishes the migration and turns the old thing off. Delivered means nothing is left behind.",
+      "over": "Spends months removing a system that costs nothing to leave running."
+    }
+  ]
+}
