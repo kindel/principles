@@ -132,7 +132,7 @@ every other rule SCHEMA.md states.
 
 - `kindel/biq`, behavioral interview questions per principle. Owns the
   questions and the example generator prompt.
-- `kindel/porridge`, the user's manual. Owns what under and over look like in
-  practice.
+- `kindel/porridge`, the user's manual. Owns what under indexed, balanced, and
+  over done look like in practice.
 
 There is no kindel/lps repo.
