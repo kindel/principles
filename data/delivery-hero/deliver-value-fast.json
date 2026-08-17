@@ -1,0 +1,91 @@
+{
+  "id": "deliver-value-fast",
+  "company": "delivery-hero",
+  "name": "Deliver Value Fast",
+  "sort": 3,
+  "definition": "We focus on what matters most to our customers and partners, embracing change and adapting quickly in a fast-paced industry.",
+  "terms": [
+    {
+      "id": "deliver-value-fast",
+      "label": "deliver value fast",
+      "kind": "alias"
+    },
+    {
+      "id": "speed",
+      "label": "speed",
+      "kind": "alias"
+    },
+    {
+      "id": "bias-for-action",
+      "label": "bias for action",
+      "kind": "equivalent"
+    },
+    {
+      "id": "focus-on-what-matters",
+      "label": "focus on what matters",
+      "kind": "equivalent"
+    },
+    {
+      "id": "prioritization",
+      "label": "prioritization",
+      "kind": "facet",
+      "rows": [
+        "priorities-collide",
+        "big-plan-or-first-slice"
+      ]
+    },
+    {
+      "id": "adapting-to-change",
+      "label": "adapting to change",
+      "kind": "facet",
+      "rows": [
+        "the-market-changed",
+        "waiting-for-certainty"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "big-plan-or-first-slice",
+      "situation": "When the plan is large",
+      "under": "Builds the whole thing, and delivers value on the last day.",
+      "justRight": "Finds the slice that helps customers or partners this month, and ships that first.",
+      "over": "Ships slices so thin that nobody notices any of them, and the whole never arrives."
+    },
+    {
+      "id": "priorities-collide",
+      "situation": "When everything is a priority",
+      "under": "Works on all of it, and finishes none of it.",
+      "justRight": "Names the one or two things that matter most to customers and partners, and lets the rest wait visibly.",
+      "over": "Cuts so narrowly that the things quietly holding the business up stop being maintained."
+    },
+    {
+      "id": "the-market-changed",
+      "situation": "When the market moves under the plan",
+      "under": "Executes the plan, because it was agreed at the start of the year.",
+      "justRight": "Changes the plan quickly, and tells everyone what changed and why.",
+      "over": "Changes direction with every signal, and the team never finishes anything."
+    },
+    {
+      "id": "waiting-for-certainty",
+      "situation": "When the decision could wait for more data",
+      "under": "Waits. The window closes while the analysis runs.",
+      "justRight": "Decides on what would change the answer, ships, and learns from what happens.",
+      "over": "Moves before checking something cheap and obvious, and pays for it in rework."
+    },
+    {
+      "id": "fast-and-broken",
+      "situation": "When speed has started to hurt quality",
+      "under": "Keeps going, and lets partners absorb the defects.",
+      "justRight": "Keeps the pace and puts the check in the path, so speed does not depend on luck.",
+      "over": "Adds so much process after one bad release that nothing ships at all."
+    },
+    {
+      "id": "partner-facing-change",
+      "situation": "When the change lands on a partner",
+      "under": "Ships fast, and lets them find out.",
+      "justRight": "Moves fast on your side, and gives the partner the notice they need to move with you.",
+      "over": "Consults every partner on every change, and the pace drops to theirs."
+    }
+  ]
+}

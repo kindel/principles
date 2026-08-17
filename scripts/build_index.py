@@ -12,23 +12,11 @@ import json
 import os
 import sys
 
+from companies import COMPANY_META
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 
-# Catalog metadata lives here, not in the records. A record knows its
-# company id. The manifest adds the public name, set title, and source.
-COMPANY_META = collections.OrderedDict([
-    ("amazon", {
-        "name": "Amazon",
-        "set": "Leadership Principles",
-        "source": "https://www.amazon.jobs/content/en/our-workplace/leadership-principles",
-    }),
-    ("arm", {
-        "name": "Arm",
-        "set": "10x Mindset",
-        "source": "https://careers.arm.com/life-at-arm",
-    }),
-])
 
 
 def load_records():

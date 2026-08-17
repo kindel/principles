@@ -1,0 +1,91 @@
+{
+  "id": "aim-high-and-find-a-way",
+  "company": "coupang",
+  "name": "Aim High and Find a Way",
+  "sort": 11,
+  "definition": "We aim for jaw-dropping results and work backwards. Goals are often set to what seems possible within existing conditions. We have the courage to aim high and then embrace/force/drive/propel any change necessary to deliver the 'wow.'",
+  "terms": [
+    {
+      "id": "aim-high-and-find-a-way",
+      "label": "aim high and find a way",
+      "kind": "alias"
+    },
+    {
+      "id": "jaw-dropping",
+      "label": "jaw-dropping",
+      "kind": "alias"
+    },
+    {
+      "id": "think-big",
+      "label": "think big",
+      "kind": "equivalent"
+    },
+    {
+      "id": "work-backwards",
+      "label": "work backwards",
+      "kind": "equivalent"
+    },
+    {
+      "id": "goal-setting",
+      "label": "goal setting",
+      "kind": "facet",
+      "rows": [
+        "setting-the-goal",
+        "telling-people-the-goal"
+      ]
+    },
+    {
+      "id": "changing-the-conditions",
+      "label": "changing the conditions",
+      "kind": "facet",
+      "rows": [
+        "existing-conditions",
+        "no-precedent"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "setting-the-goal",
+      "situation": "When the goal is being set",
+      "under": "Sets what the current system can already deliver and calls it a target.",
+      "justRight": "Sets what would be jaw-dropping for the customer, then works backwards to what has to change.",
+      "over": "Sets a number nobody believes, and the team stops treating goals as real."
+    },
+    {
+      "id": "existing-conditions",
+      "situation": "When the conditions make the goal impossible",
+      "under": "Accepts the conditions as fixed and lowers the goal.",
+      "justRight": "Treats the conditions as the thing to change, and goes and changes them.",
+      "over": "Breaks working constraints that existed for a reason in order to hit a number."
+    },
+    {
+      "id": "incremental-plan",
+      "situation": "When the plan only gets to half the goal",
+      "under": "Ships the half and reports progress.",
+      "justRight": "Says out loud that the plan does not reach the goal, and keeps looking for the step change.",
+      "over": "Rejects every incremental gain while waiting for a step change that never arrives."
+    },
+    {
+      "id": "no-precedent",
+      "situation": "When nobody has done it before",
+      "under": "Treats the absence of precedent as proof it cannot be done.",
+      "justRight": "Finds the closest thing anyone has done, and works out what is genuinely new.",
+      "over": "Ignores every precedent and repeats mistakes other people already paid for."
+    },
+    {
+      "id": "telling-people-the-goal",
+      "situation": "When the goal will scare the team",
+      "under": "Softens it until it sounds achievable, and nobody stretches.",
+      "justRight": "States it plainly, with the reason it matters and the first step that is real.",
+      "over": "Repeats the ambition without ever funding it, until ambition becomes a word people ignore."
+    },
+    {
+      "id": "partial-failure",
+      "situation": "When the ambitious bet lands short",
+      "under": "Hides the shortfall, or restates the goal after the fact.",
+      "justRight": "Reports what landed against what was aimed at, and what was learned that is worth the gap.",
+      "over": "Punishes the miss so hard that the next goal is set safe."
+    }
+  ]
+}

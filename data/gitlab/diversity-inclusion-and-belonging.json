@@ -1,0 +1,91 @@
+{
+  "id": "diversity-inclusion-and-belonging",
+  "company": "gitlab",
+  "name": "Diversity, Inclusion & Belonging",
+  "sort": 4,
+  "definition": "Diversity, inclusion and belonging are fundamental to the success of GitLab. We aim to make a significant impact in our efforts to foster an environment where everyone can thrive. We are designing a multidimensional approach to ensure that GitLab is a place where people from every background and circumstance feel like they belong and can contribute.",
+  "terms": [
+    {
+      "id": "diversity-inclusion-and-belonging",
+      "label": "diversity, inclusion & belonging",
+      "kind": "alias"
+    },
+    {
+      "id": "dib",
+      "label": "dib",
+      "kind": "alias"
+    },
+    {
+      "id": "inclusion",
+      "label": "inclusion",
+      "kind": "equivalent"
+    },
+    {
+      "id": "belonging",
+      "label": "belonging",
+      "kind": "equivalent"
+    },
+    {
+      "id": "inclusive-meetings",
+      "label": "inclusive meetings",
+      "kind": "facet",
+      "rows": [
+        "who-speaks",
+        "time-zones"
+      ]
+    },
+    {
+      "id": "bias-in-decisions",
+      "label": "bias in decisions",
+      "kind": "facet",
+      "rows": [
+        "hiring-bias",
+        "unequal-opportunity"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "who-speaks",
+      "situation": "When the same few people do all the talking",
+      "under": "Lets the meeting run itself, and the quiet people stay quiet.",
+      "justRight": "Asks directly for the views that have not been heard, and leaves room for them to arrive.",
+      "over": "Calls on people unprepared, and turns inclusion into being put on the spot."
+    },
+    {
+      "id": "time-zones",
+      "situation": "When the team spans many time zones",
+      "under": "Schedules around the largest cluster, and the rest read the notes.",
+      "justRight": "Works asynchronously by default, so being awake is not a prerequisite for contributing.",
+      "over": "Refuses to ever meet live, and the relationships that make disagreement safe never form."
+    },
+    {
+      "id": "hiring-bias",
+      "situation": "When the candidate does not fit the usual mold",
+      "under": "Reads unfamiliarity as a lack of quality.",
+      "justRight": "Checks the judgment against the actual requirements of the job, and separates fit from familiarity.",
+      "over": "Treats background as the qualification, and the bar becomes unclear to everyone."
+    },
+    {
+      "id": "unequal-opportunity",
+      "situation": "When the visible work keeps going to the same people",
+      "under": "Assigns by who is closest to hand, and the pattern compounds unnoticed.",
+      "justRight": "Looks at who has had the growth work lately, and spreads it deliberately.",
+      "over": "Rotates opportunity mechanically, and puts people into work they are set up to fail at."
+    },
+    {
+      "id": "someone-gets-it-wrong",
+      "situation": "When a colleague says something exclusionary",
+      "under": "Says nothing, and hopes someone else does.",
+      "justRight": "Says it plainly, privately, and assumes good intent about how it happened.",
+      "over": "Escalates a first mistake so publicly that people stop speaking at all."
+    },
+    {
+      "id": "language-and-shorthand",
+      "situation": "When the team's shorthand excludes new people",
+      "under": "Keeps using it. People will pick it up eventually.",
+      "justRight": "Defines it in the handbook and in the moment, so nobody has to admit they were lost.",
+      "over": "Polices language so tightly that ordinary conversation becomes a hazard."
+    }
+  ]
+}

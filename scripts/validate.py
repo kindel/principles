@@ -11,36 +11,31 @@ import os
 import re
 import sys
 
+from companies import COMPANY_META
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 KINDS = ("alias", "equivalent", "facet")
 SLUG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 
-COMPANY_META = collections.OrderedDict([
-    ("amazon", {
-        "name": "Amazon",
-        "set": "Leadership Principles",
-        "source": "https://www.amazon.jobs/content/en/our-workplace/leadership-principles",
-    }),
-    ("arm", {
-        "name": "Arm",
-        "set": "10x Mindset",
-        "source": "https://careers.arm.com/life-at-arm",
-    }),
-])
 
-# Arm lenses. sort 1-5 are One Arm, sort 6-10 are Accelerate Impact.
-ARM_GROUP_BY_SORT = {
-    1: "one-arm",
-    2: "one-arm",
-    3: "one-arm",
-    4: "one-arm",
-    5: "one-arm",
-    6: "accelerate-impact",
-    7: "accelerate-impact",
-    8: "accelerate-impact",
-    9: "accelerate-impact",
-    10: "accelerate-impact",
+# Companies that publish their set under lenses, and the lens each sort
+# position falls in. A company absent from this table carries no group, and
+# validate_record rejects one. Arm sort 1-5 are One Arm, 6-10 are Accelerate
+# Impact.
+GROUP_BY_COMPANY = {
+    "arm": {
+        1: "one-arm",
+        2: "one-arm",
+        3: "one-arm",
+        4: "one-arm",
+        5: "one-arm",
+        6: "accelerate-impact",
+        7: "accelerate-impact",
+        8: "accelerate-impact",
+        9: "accelerate-impact",
+        10: "accelerate-impact",
+    },
 }
 
 
@@ -117,22 +112,22 @@ def validate_record(company, filename, rec, errs):
     if not SLUG.match(rec.get("company", "")):
         errs.append("%s: company is not kebab-case" % where)
 
-    if company == "amazon":
+    lenses = GROUP_BY_COMPANY.get(company)
+    if lenses is None:
         if "group" in rec:
-            errs.append("%s: Amazon records do not carry group" % where)
-    elif company == "arm":
+            errs.append("%s: %s records do not carry group, only %s do"
+                        % (where, company, ", ".join(sorted(GROUP_BY_COMPANY))))
+    else:
         group = rec.get("group")
         if not group:
-            errs.append("%s: Arm records require group" % where)
+            errs.append("%s: %s records require group" % (where, company))
         elif not SLUG.match(group):
             errs.append("%s: group %r is not kebab-case" % (where, group))
         else:
-            want = ARM_GROUP_BY_SORT.get(rec.get("sort"))
+            want = lenses.get(rec.get("sort"))
             if want and group != want:
                 errs.append("%s: group %r does not match sort %s (expected %s)"
                             % (where, group, rec.get("sort"), want))
-    elif "group" in rec and rec.get("group") and not SLUG.match(rec.get("group", "")):
-        errs.append("%s: group %r is not kebab-case" % (where, rec.get("group")))
 
     row_ids = set()
     for r in rec.get("rows", []):
@@ -265,6 +260,19 @@ def main():
              n_rows,
              sum(kinds.values()),
              ", ".join("%s %d" % kv for kv in sorted(kinds.items()))))
+
+    # Not an error. An id is unique within a company and nowhere else, so a
+    # consumer keys on (company, id). Printing the collisions keeps that
+    # visible here rather than discovered in an app.
+    shared = collections.defaultdict(list)
+    for company, items in by_company.items():
+        for _, rec in items:
+            shared[rec.get("id")].append(company)
+    shared = {k: v for k, v in shared.items() if len(v) > 1}
+    if shared:
+        print("ids used by more than one company, address by (company, id):")
+        for pid in sorted(shared):
+            print("  %-28s %s" % (pid, ", ".join(sorted(shared[pid]))))
     return 0
 
 

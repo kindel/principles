@@ -1,0 +1,91 @@
+{
+  "id": "ruthless-prioritization",
+  "company": "coupang",
+  "name": "Ruthless Prioritization",
+  "sort": 2,
+  "definition": "To focus on what we must win, we give up what we want to do. Laser focus requires courage and confidence. Fast iteration and high-quality execution begin with laser focus.",
+  "terms": [
+    {
+      "id": "ruthless-prioritization",
+      "label": "ruthless prioritization",
+      "kind": "alias"
+    },
+    {
+      "id": "laser-focus",
+      "label": "laser focus",
+      "kind": "alias"
+    },
+    {
+      "id": "focus",
+      "label": "focus",
+      "kind": "equivalent"
+    },
+    {
+      "id": "say-no",
+      "label": "say no",
+      "kind": "equivalent"
+    },
+    {
+      "id": "stack-ranking-work",
+      "label": "stack ranking work",
+      "kind": "facet",
+      "rows": [
+        "too-many-bets",
+        "giving-up-good-work"
+      ]
+    },
+    {
+      "id": "killing-projects",
+      "label": "killing projects",
+      "kind": "facet",
+      "rows": [
+        "giving-up-good-work",
+        "scope-inside-a-project"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "too-many-bets",
+      "situation": "When the list has more bets than the team can fund",
+      "under": "Funds them all at 20 percent and wins none of them.",
+      "justRight": "Picks the few that must be won, resources them fully, and says no to the rest out loud.",
+      "over": "Cuts to a single bet and leaves the company with no second move."
+    },
+    {
+      "id": "giving-up-good-work",
+      "situation": "When the work being cut is genuinely good",
+      "under": "Keeps it because it is good, not because it must be won.",
+      "justRight": "Kills good work to fund essential work, and tells the team why it was good and still cut.",
+      "over": "Cuts good work so often that nothing survives long enough to compound."
+    },
+    {
+      "id": "mid-quarter-arrival",
+      "situation": "When something new arrives mid-quarter",
+      "under": "Adds it. The plan grows and the date does not move.",
+      "justRight": "Names what comes off the list to make room, or declines the new thing.",
+      "over": "Refuses everything new on principle, including the thing that has genuinely changed the picture."
+    },
+    {
+      "id": "senior-request",
+      "situation": "When the request comes from someone senior",
+      "under": "Takes it on because of who asked.",
+      "justRight": "Asks what it displaces, and takes that answer back to the person who asked.",
+      "over": "Treats every senior request as noise and stops listening upward."
+    },
+    {
+      "id": "courage-to-say-no",
+      "situation": "When saying no will be unpopular",
+      "under": "Says maybe, and lets the work quietly rot instead.",
+      "justRight": "Says no clearly, once, with the reason, so there is no ambiguity about what is not happening.",
+      "over": "Enjoys saying no. Refusal becomes an identity rather than a tool."
+    },
+    {
+      "id": "scope-inside-a-project",
+      "situation": "When a shipping project keeps growing",
+      "under": "Accepts every addition and the launch slips again.",
+      "justRight": "Holds the smallest version that wins, and writes down what comes after launch.",
+      "over": "Cuts so far that what ships does not win anything."
+    }
+  ]
+}

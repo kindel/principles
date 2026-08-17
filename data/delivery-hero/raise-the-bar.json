@@ -1,0 +1,83 @@
+{
+  "id": "raise-the-bar",
+  "company": "delivery-hero",
+  "name": "Raise the Bar",
+  "sort": 5,
+  "definition": "We set ambitious goals, build high-performing teams, and deliver feedback that pushes everyone to grow.",
+  "terms": [
+    {
+      "id": "raise-the-bar",
+      "label": "raise the bar",
+      "kind": "alias"
+    },
+    {
+      "id": "high-bar",
+      "label": "high bar",
+      "kind": "alias"
+    },
+    {
+      "id": "high-standards",
+      "label": "high standards",
+      "kind": "equivalent"
+    },
+    {
+      "id": "ambitious-goals",
+      "label": "ambitious goals",
+      "kind": "equivalent"
+    },
+    {
+      "id": "giving-feedback",
+      "label": "giving feedback",
+      "kind": "facet",
+      "rows": [
+        "feedback-that-lands",
+        "good-enough-work"
+      ]
+    },
+    {
+      "id": "building-the-team",
+      "label": "building the team",
+      "kind": "facet",
+      "rows": [
+        "team-composition"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "setting-the-target",
+      "situation": "When the target is being set",
+      "under": "Sets what last year plus a little would produce.",
+      "justRight": "Sets what would be genuinely ambitious, then works out what has to change to reach it.",
+      "over": "Sets a number nobody believes, and the team stops treating targets as real."
+    },
+    {
+      "id": "feedback-that-lands",
+      "situation": "When the feedback would be uncomfortable",
+      "under": "Gives the general, positive version, and nothing changes.",
+      "justRight": "Gives the specific version, with the behavior, the effect, and what you want instead.",
+      "over": "Gives so much corrective feedback that the person stops taking any risk."
+    },
+    {
+      "id": "good-enough-work",
+      "situation": "When the work is acceptable",
+      "under": "Accepts it, to avoid the conversation.",
+      "justRight": "Says what would make it good, and expects the next version to get there.",
+      "over": "Sends work back over details that change nothing for anyone."
+    },
+    {
+      "id": "team-composition",
+      "situation": "When the team is not strong enough",
+      "under": "Works around the weak spots for years.",
+      "justRight": "Fixes it, by developing the person or by changing the team, and starts now.",
+      "over": "Churns the team so often that nothing institutional survives."
+    },
+    {
+      "id": "your-own-bar",
+      "situation": "When the bar applies to you",
+      "under": "Holds others to a standard you do not meet.",
+      "justRight": "Holds your own work to it first, and visibly, so the standard is credible.",
+      "over": "Reworks your own output endlessly, and becomes the thing the team waits on."
+    }
+  ]
+}

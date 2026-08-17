@@ -1,0 +1,91 @@
+{
+  "id": "think-systematically",
+  "company": "coupang",
+  "name": "Think Systematically",
+  "sort": 5,
+  "definition": "We build scalable processes with prompt feedback mechanisms. We take measures not only to fix defects, but also to prevent them in the future.",
+  "terms": [
+    {
+      "id": "think-systematically",
+      "label": "think systematically",
+      "kind": "alias"
+    },
+    {
+      "id": "mechanisms",
+      "label": "mechanisms",
+      "kind": "alias"
+    },
+    {
+      "id": "build-the-system-not-the-fix",
+      "label": "build the system, not the fix",
+      "kind": "equivalent"
+    },
+    {
+      "id": "prevention-over-correction",
+      "label": "prevention over correction",
+      "kind": "equivalent"
+    },
+    {
+      "id": "feedback-loops",
+      "label": "feedback loops",
+      "kind": "facet",
+      "rows": [
+        "feedback-delay",
+        "same-defect-twice"
+      ]
+    },
+    {
+      "id": "scalable-process",
+      "label": "scalable process",
+      "kind": "facet",
+      "rows": [
+        "designing-for-scale",
+        "manual-workaround"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "same-defect-twice",
+      "situation": "When the same defect appears twice",
+      "under": "Fixes it twice and moves on.",
+      "justRight": "Treats the repeat as the real defect and changes whatever let it through.",
+      "over": "Blocks all work until a perfect prevention exists for a defect that has cost almost nothing."
+    },
+    {
+      "id": "process-that-needs-a-hero",
+      "situation": "When the process only works because one person watches it",
+      "under": "Praises the person and leaves the process alone.",
+      "justRight": "Builds the check into the system so it holds when that person is on leave.",
+      "over": "Automates a process that runs three times a year and would have been cheaper by hand."
+    },
+    {
+      "id": "manual-workaround",
+      "situation": "When a manual workaround is holding things together",
+      "under": "Adds headcount to the workaround.",
+      "justRight": "Counts what the workaround costs per unit of growth, then fixes the system before that cost compounds.",
+      "over": "Rips out the workaround before the replacement works, and breaks the operation."
+    },
+    {
+      "id": "feedback-delay",
+      "situation": "When a defect takes weeks to surface",
+      "under": "Accepts the delay as the nature of the work.",
+      "justRight": "Shortens the loop so the signal comes back in hours, then actually uses it.",
+      "over": "Instruments everything and buries the team in alerts nobody reads."
+    },
+    {
+      "id": "designing-for-scale",
+      "situation": "When the volume is about to multiply",
+      "under": "Builds for today's volume and plans to revisit it later.",
+      "justRight": "Builds the version that holds at 10 times the volume, and knows where it breaks after that.",
+      "over": "Builds for a scale the business will not reach for years, and ships nothing this year."
+    },
+    {
+      "id": "exceptions",
+      "situation": "When a case does not fit the process",
+      "under": "Handles it by hand every time and never tells anyone.",
+      "justRight": "Handles it, counts how often it happens, and folds it into the process when it stops being rare.",
+      "over": "Forces every exception through the process and gives the customer a worse answer to keep the system clean."
+    }
+  ]
+}

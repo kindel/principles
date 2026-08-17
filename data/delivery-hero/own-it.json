@@ -1,0 +1,91 @@
+{
+  "id": "own-it",
+  "company": "delivery-hero",
+  "name": "Own It",
+  "sort": 1,
+  "definition": "We solve problems, go the extra mile, and always think long-term. We're intentional about how we use our resources to drive success.",
+  "terms": [
+    {
+      "id": "own-it",
+      "label": "own it",
+      "kind": "alias"
+    },
+    {
+      "id": "ownership",
+      "label": "ownership",
+      "kind": "alias"
+    },
+    {
+      "id": "act-like-an-owner",
+      "label": "act like an owner",
+      "kind": "equivalent"
+    },
+    {
+      "id": "think-long-term",
+      "label": "think long term",
+      "kind": "equivalent"
+    },
+    {
+      "id": "using-resources-well",
+      "label": "using resources well",
+      "kind": "facet",
+      "rows": [
+        "spending-the-companys-money",
+        "local-versus-global"
+      ]
+    },
+    {
+      "id": "going-the-extra-mile",
+      "label": "going the extra mile",
+      "kind": "facet",
+      "rows": [
+        "extra-mile",
+        "problem-with-no-owner"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "problem-with-no-owner",
+      "situation": "When a problem has no owner",
+      "under": "Flags it, and waits for someone to be assigned.",
+      "justRight": "Takes it, solves it, and gets a permanent owner named so it does not drift back.",
+      "over": "Collects unowned problems until your own commitments start slipping."
+    },
+    {
+      "id": "short-term-versus-long",
+      "situation": "When the fast answer costs something later",
+      "under": "Takes the fast answer. Later is someone else's quarter.",
+      "justRight": "Names what later costs, and takes the option that is still right in two years.",
+      "over": "Optimizes for a long term so distant that this year's business is not served."
+    },
+    {
+      "id": "extra-mile",
+      "situation": "When the work is technically finished",
+      "under": "Hands it over at the line, and leaves the last gap sitting.",
+      "justRight": "Goes the extra step that makes it genuinely usable by the person receiving it.",
+      "over": "Gold-plates every handover, and the next piece of work never starts."
+    },
+    {
+      "id": "spending-the-companys-money",
+      "situation": "When the resource is the company's and not yours",
+      "under": "Spends it as though it were free, because the budget exists.",
+      "justRight": "Spends it the way you would spend your own, deliberately and for a reason you could defend.",
+      "over": "Refuses spend that would obviously pay for itself, and the team works around a gap that costs more."
+    },
+    {
+      "id": "after-a-failure",
+      "situation": "When the thing you owned failed",
+      "under": "Points at the conditions and at the people upstream.",
+      "justRight": "Owns the outcome and the repair, and says what you will do differently.",
+      "over": "Takes the blame so completely that the systemic cause is never examined."
+    },
+    {
+      "id": "local-versus-global",
+      "situation": "When your market wins and the group loses",
+      "under": "Takes the local win, and lets the group absorb the cost.",
+      "justRight": "Weighs both, and says openly when your own number is the one that should give.",
+      "over": "Defers to the group on everything, and stops running your own business."
+    }
+  ]
+}

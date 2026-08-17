@@ -88,15 +88,28 @@ Arm records carry `group` for the lens (`one-arm` or `accelerate-impact`):
 ## Rules
 
 - `id` is kebab-case and matches the filename without `.json`.
+- `id` is unique within a company, not across companies. `dive-deep` belongs to
+  Amazon, Coupang, and Delivery Hero, and each is a different principle. A
+  consumer addresses a principle by `(company, id)`. A lookup by `id` alone
+  returns whichever company's record it happens to find first.
 - `company` is kebab-case and matches the parent directory. Current companies
-  are `amazon` and `arm`.
-- `group` is optional. Arm records carry it (`one-arm` or `accelerate-impact`).
-  Amazon records do not.
-- `sort` is unique one through n per company, in teaching order. Amazon is
-  Customer Obsession first and Deliver Results last (one through 14). Arm is
-  Passion for the mission first and Optimize for endurance and resilience last
-  (one through 10).
-- `definition` is the company's short statement of the principle.
+  are `amazon`, `arm`, `coupang`, `delivery-hero`, and `gitlab`.
+- `group` is optional. Arm records carry it (`one-arm` or `accelerate-impact`)
+  because Arm's set is published under two lenses. No other company's set is,
+  so no other record carries it.
+- `sort` is unique one through n per company, in teaching order, following the
+  order the company itself publishes. Amazon is Customer Obsession first and
+  Deliver Results last (one through 14). Arm is Passion for the mission first
+  and Optimize for endurance and resilience last (one through 10). Coupang is
+  Wow the Customer first and Hate Waste last (one through 15). Delivery Hero is
+  Own It first and Stay Humble last (one through six). GitLab is Collaboration
+  first and Transparency last (one through six), the order that spells CREDIT.
+- `definition` is the company's short statement of the principle, transcribed
+  from the company's own published page. It is a quotation, so it is never
+  condensed, reworded, reordered, or merged. Where the published statement runs
+  long, take a leading excerpt of whole sentences rather than summarizing.
+  Three normalizations are allowed and nothing else: strip markup, fold
+  punctuation to ASCII, and correct an obvious typographical error.
 - File paths in the manifest are `data/<company>/<id>.json`.
 - Nothing lives at `data/*.json` except `index.json`.
 
@@ -129,14 +142,20 @@ The calibration taxonomy, and the anchor a facet points at.
 
 - Five to 12 real situations per principle. Give each a kebab `id` and a short
   `situation` label.
-- `under`, `justRight`, and `over` are one to three sentences each. Under is
-  not trying. Over is the principle eating the job. Just right is the bar.
+- `under`, `justRight`, and `over` are one to three sentences each. They
+  describe one behavior under indexed, balanced, and over done.
 - Row ids are unique within a principle. A facet may only reference a row on
   its own principle.
 
 ### Style
 
-Every string: no em dash, no `---`, Oxford commas, numbers under 10 spelled out.
+Every authored string: no em dash, no `---`, Oxford commas, numbers under 10
+spelled out. That is `situation`, `under`, `justRight`, `over`, and term
+labels.
+
+`definition` is quoted, not authored, so the company's punctuation and grammar
+stand even where they disagree with the rules above. Pick an excerpt that
+carries no em dash, because the validator rejects one wherever it appears.
 
 ## Consuming this repository
 

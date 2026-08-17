@@ -1,0 +1,91 @@
+{
+  "id": "disagree-and-commit",
+  "company": "coupang",
+  "name": "Disagree and Commit",
+  "sort": 7,
+  "definition": "Constructive confrontation is essential to good decisions. Leaders challenge openly when they disagree. We do not compromise for social cohesion. Once a decision is made, we commit fully to ensure a successful outcome. Post decision, proponents and opponents are indistinguishable.",
+  "terms": [
+    {
+      "id": "disagree-and-commit",
+      "label": "disagree and commit",
+      "kind": "alias"
+    },
+    {
+      "id": "constructive-confrontation",
+      "label": "constructive confrontation",
+      "kind": "alias"
+    },
+    {
+      "id": "speak-up",
+      "label": "speak up",
+      "kind": "equivalent"
+    },
+    {
+      "id": "have-backbone",
+      "label": "have backbone",
+      "kind": "equivalent"
+    },
+    {
+      "id": "committing-after-the-decision",
+      "label": "committing after the decision",
+      "kind": "facet",
+      "rows": [
+        "after-the-decision",
+        "new-evidence"
+      ]
+    },
+    {
+      "id": "challenging-openly",
+      "label": "challenging openly",
+      "kind": "facet",
+      "rows": [
+        "disagreeing-with-the-room",
+        "disagreeing-upward"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "disagreeing-with-the-room",
+      "situation": "When you are the only one who disagrees",
+      "under": "Stays quiet and lets the room converge.",
+      "justRight": "Says the disagreement plainly, with the reason, while the decision is still open.",
+      "over": "Reopens the argument in every meeting until the room stops inviting you."
+    },
+    {
+      "id": "after-the-decision",
+      "situation": "After a decision goes against you",
+      "under": "Complies visibly and undermines quietly.",
+      "justRight": "Commits fully. Nobody watching can tell which side you argued.",
+      "over": "Commits so completely that you never flag the new evidence that the decision was wrong."
+    },
+    {
+      "id": "social-cohesion",
+      "situation": "When the group wants the meeting to end",
+      "under": "Trades the right answer for a comfortable room.",
+      "justRight": "Accepts the discomfort. Cohesion is not worth a decision the company will pay for.",
+      "over": "Manufactures conflict to prove independence and burns the room's patience."
+    },
+    {
+      "id": "disagreeing-upward",
+      "situation": "When the person you disagree with runs your organization",
+      "under": "Softens the point until it carries no information.",
+      "justRight": "Makes the case once, clearly, in their terms, and lets them decide.",
+      "over": "Turns every disagreement into a test of whether you are being listened to."
+    },
+    {
+      "id": "someone-else-dissents",
+      "situation": "When someone junior disagrees with you",
+      "under": "Lets seniority end the conversation.",
+      "justRight": "Draws the argument out, and makes it safe to have been the one who said it.",
+      "over": "Reopens your own settled decisions every time anyone objects, so nothing stays decided."
+    },
+    {
+      "id": "new-evidence",
+      "situation": "When the facts change after the commitment",
+      "under": "Sticks to the plan because it was agreed.",
+      "justRight": "Brings the new facts back and asks for the decision to be made again.",
+      "over": "Calls every inconvenience new evidence and relitigates the same choice."
+    }
+  ]
+}

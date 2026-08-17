@@ -1,0 +1,91 @@
+{
+  "id": "transparency",
+  "company": "gitlab",
+  "name": "Transparency",
+  "sort": 6,
+  "definition": "Be open about as many things as possible. By making information public, we can reduce the threshold to contribution and make collaboration easier. Use public issue trackers, projects, and repositories when possible.",
+  "terms": [
+    {
+      "id": "transparency",
+      "label": "transparency",
+      "kind": "alias"
+    },
+    {
+      "id": "public-by-default",
+      "label": "public by default",
+      "kind": "alias"
+    },
+    {
+      "id": "be-open",
+      "label": "be open",
+      "kind": "equivalent"
+    },
+    {
+      "id": "work-out-loud",
+      "label": "work out loud",
+      "kind": "equivalent"
+    },
+    {
+      "id": "handbook-first",
+      "label": "handbook first",
+      "kind": "facet",
+      "rows": [
+        "writing-it-down",
+        "decision-record"
+      ]
+    },
+    {
+      "id": "saying-the-hard-thing",
+      "label": "saying the hard thing",
+      "kind": "facet",
+      "rows": [
+        "admitting-a-mistake",
+        "bad-news"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "writing-it-down",
+      "situation": "When a decision is made in a call",
+      "under": "Leaves it in people's heads, and the reasoning is gone in a month.",
+      "justRight": "Writes it in the handbook where anyone can find it, including people not yet hired.",
+      "over": "Publishes so much unedited detail that the signal is impossible to find."
+    },
+    {
+      "id": "decision-record",
+      "situation": "When you changed your mind",
+      "under": "Quietly updates the plan, and people work from the old one.",
+      "justRight": "Says what changed and why, in the place people already look.",
+      "over": "Narrates every reconsideration in public until nobody can tell what is decided."
+    },
+    {
+      "id": "admitting-a-mistake",
+      "situation": "When you got it wrong",
+      "under": "Fixes it quietly and hopes nobody noticed.",
+      "justRight": "Says you made a mistake, in public, and says what you learned.",
+      "over": "Confesses so routinely that people cannot tell which mistakes mattered."
+    },
+    {
+      "id": "bad-news",
+      "situation": "When the news is bad and not yet final",
+      "under": "Waits for certainty, and people plan against a picture you know is wrong.",
+      "justRight": "Shares what you know and what is still open, and marks clearly which is which.",
+      "over": "Broadcasts every unconfirmed worry, and the team runs on alarm."
+    },
+    {
+      "id": "not-everything-is-public",
+      "situation": "When the information is genuinely restricted",
+      "under": "Shares it anyway, because openness is the default.",
+      "justRight": "Keeps what must be private private, and is transparent about the fact that a boundary exists.",
+      "over": "Classifies so much as sensitive that the default quietly inverts to closed."
+    },
+    {
+      "id": "published-is-not-communicated",
+      "situation": "When it is already in the handbook",
+      "under": "Sends the link and treats the matter as communicated.",
+      "justRight": "Tells the people who need to act, directly. Transparency is not communication.",
+      "over": "Repeats the same announcement in every channel until people filter you out."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "company-wide-perspective",
+  "company": "coupang",
+  "name": "Company-wide Perspective",
+  "sort": 3,
+  "definition": "Leaders think like owners and act in the best interest of the entire company. We understand and consider upstream and downstream implications. We bring attention to problems within or outside of our department. We never say 'get out of my kitchen' or 'that's not my job.'",
+  "terms": [
+    {
+      "id": "company-wide-perspective",
+      "label": "company-wide perspective",
+      "kind": "alias"
+    },
+    {
+      "id": "not-my-job",
+      "label": "not my job",
+      "kind": "alias"
+    },
+    {
+      "id": "think-like-an-owner",
+      "label": "think like an owner",
+      "kind": "equivalent"
+    },
+    {
+      "id": "global-optimization",
+      "label": "global optimization",
+      "kind": "equivalent"
+    },
+    {
+      "id": "upstream-and-downstream",
+      "label": "upstream and downstream",
+      "kind": "facet",
+      "rows": [
+        "upstream-effects",
+        "local-win-global-loss"
+      ]
+    },
+    {
+      "id": "cross-team-problems",
+      "label": "cross-team problems",
+      "kind": "facet",
+      "rows": [
+        "problem-outside-your-area",
+        "unowned-gap"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "local-win-global-loss",
+      "situation": "When your team can win by pushing cost onto another",
+      "under": "Takes the local win. The cost lands somewhere else and nobody counts it.",
+      "justRight": "Adds up the cost across both teams and takes the option best for the company, even when it is worse for the team.",
+      "over": "Refuses any local improvement until the whole company has been modelled."
+    },
+    {
+      "id": "problem-outside-your-area",
+      "situation": "When you spot a problem outside your area",
+      "under": "Says nothing. It is not your kitchen.",
+      "justRight": "Raises it with the owner, with what you saw and why it matters, and offers help.",
+      "over": "Takes over another team's problem and runs a shadow plan alongside theirs."
+    },
+    {
+      "id": "upstream-effects",
+      "situation": "When a change lands upstream of someone else",
+      "under": "Ships it and lets them find out.",
+      "justRight": "Traces who is downstream, tells them early, and gives them time to adapt.",
+      "over": "Consults so widely that a small change takes a quarter to make."
+    },
+    {
+      "id": "goal-conflict",
+      "situation": "When two teams have goals that fight each other",
+      "under": "Plays the conflict out in the metrics and lets both teams lose.",
+      "justRight": "Names the conflict, takes it to whoever owns both, and gets one goal changed.",
+      "over": "Escalates every friction as a goal conflict and stops solving anything locally."
+    },
+    {
+      "id": "unowned-gap",
+      "situation": "When something falls between two teams",
+      "under": "Both teams point at each other and the gap stays open.",
+      "justRight": "Closes the gap now, then gets an owner named so it does not reopen.",
+      "over": "Collects unowned work until your team is doing four other teams' jobs badly."
+    },
+    {
+      "id": "that-is-not-my-job",
+      "situation": "When the task is beneath your title",
+      "under": "Delegates it away, or leaves it undone.",
+      "justRight": "Does it. No task the company needs is beneath anyone.",
+      "over": "Does so much of the low-level work personally that the work only you can do never gets done."
+    }
+  ]
+}

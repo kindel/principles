@@ -1,0 +1,91 @@
+{
+  "id": "dive-deep",
+  "company": "delivery-hero",
+  "name": "Dive Deep",
+  "sort": 2,
+  "definition": "We challenge the data and strive to understand how things really work. We're hands-on and never shy away from getting into the details.",
+  "terms": [
+    {
+      "id": "dive-deep",
+      "label": "dive deep",
+      "kind": "alias"
+    },
+    {
+      "id": "hands-on",
+      "label": "hands-on",
+      "kind": "alias"
+    },
+    {
+      "id": "challenge-the-data",
+      "label": "challenge the data",
+      "kind": "equivalent"
+    },
+    {
+      "id": "get-into-the-details",
+      "label": "get into the details",
+      "kind": "equivalent"
+    },
+    {
+      "id": "questioning-numbers",
+      "label": "questioning numbers",
+      "kind": "facet",
+      "rows": [
+        "the-number-in-the-deck",
+        "surprising-result"
+      ]
+    },
+    {
+      "id": "understanding-the-mechanism",
+      "label": "understanding the mechanism",
+      "kind": "facet",
+      "rows": [
+        "how-it-really-works",
+        "recurring-issue"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "the-number-in-the-deck",
+      "situation": "When a number arrives in a deck",
+      "under": "Repeats it. Has never seen how it was built.",
+      "justRight": "Asks what it counts, what it excludes, and over what period, before using it.",
+      "over": "Interrogates every figure until nobody wants to bring you data at all."
+    },
+    {
+      "id": "how-it-really-works",
+      "situation": "When you are told how the process works",
+      "under": "Takes the description as the reality.",
+      "justRight": "Goes and watches it run once. The description and the reality are rarely the same.",
+      "over": "Insists on seeing everything personally, and becomes the constraint on every decision."
+    },
+    {
+      "id": "surprising-result",
+      "situation": "When the result is surprisingly good",
+      "under": "Celebrates it and moves on.",
+      "justRight": "Treats a surprise as a sign that something is misunderstood or miscounted, and checks.",
+      "over": "Assumes every good result is an error, and the team stops reporting wins."
+    },
+    {
+      "id": "operating-detail",
+      "situation": "When the detail belongs to the operation",
+      "under": "Stays at the strategy level, and never sees a shift, a courier, or a kitchen.",
+      "justRight": "Spends time in the operation often enough that you can smell when a number is wrong.",
+      "over": "Spends so long in the operation that the strategic work stops happening."
+    },
+    {
+      "id": "delegated-work",
+      "situation": "When someone else owns the detail",
+      "under": "Reviews the summary and signs.",
+      "justRight": "Knows enough of the detail to ask the questions that matter, then trusts the owner.",
+      "over": "Checks every line, and the owner becomes an assistant."
+    },
+    {
+      "id": "recurring-issue",
+      "situation": "When the same issue keeps coming back",
+      "under": "Applies the same fix each time.",
+      "justRight": "Keeps asking why until you reach something that can actually be changed, then changes it.",
+      "over": "Halts the operation for an investigation into an issue that costs less than the investigation."
+    }
+  ]
+}

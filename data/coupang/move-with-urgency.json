@@ -1,0 +1,90 @@
+{
+  "id": "move-with-urgency",
+  "company": "coupang",
+  "name": "Move with Urgency",
+  "sort": 14,
+  "definition": "Urgency is a sense of crisis. We treat inaction as a threat to survival. We 'learn by doing' and do not delay decisions to seek a 'perfect' solution.",
+  "terms": [
+    {
+      "id": "move-with-urgency",
+      "label": "move with urgency",
+      "kind": "alias"
+    },
+    {
+      "id": "sense-of-crisis",
+      "label": "sense of crisis",
+      "kind": "alias"
+    },
+    {
+      "id": "bias-for-action",
+      "label": "bias for action",
+      "kind": "equivalent"
+    },
+    {
+      "id": "speed",
+      "label": "speed",
+      "kind": "equivalent"
+    },
+    {
+      "id": "reversible-decisions",
+      "label": "reversible decisions",
+      "kind": "facet",
+      "rows": [
+        "reversible-decision",
+        "long-decisions"
+      ]
+    },
+    {
+      "id": "learn-by-doing",
+      "label": "learn by doing",
+      "kind": "facet",
+      "rows": [
+        "waiting-for-perfect"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "reversible-decision",
+      "situation": "When the decision can be undone cheaply",
+      "under": "Runs it through the same review as a decision that cannot be undone.",
+      "justRight": "Decides now, makes the way back explicit, and moves.",
+      "over": "Treats an expensive one-way decision as reversible, and cannot get back."
+    },
+    {
+      "id": "waiting-for-perfect",
+      "situation": "When more analysis is available",
+      "under": "Waits for the study. The window closes during it.",
+      "justRight": "Acts on the information that would change the decision, and starts learning by doing.",
+      "over": "Acts before reading the one number that was already sitting there."
+    },
+    {
+      "id": "inaction-as-a-threat",
+      "situation": "When nothing is technically on fire",
+      "under": "Treats a calm quarter as a safe quarter.",
+      "justRight": "Treats standing still as losing, and holds the pace when there is no crisis to force it.",
+      "over": "Manufactures crisis constantly, until urgency stops meaning anything to the team."
+    },
+    {
+      "id": "escalating-fast",
+      "situation": "When a problem needs someone senior tonight",
+      "under": "Waits for the morning and the normal channel.",
+      "justRight": "Wakes people up. A few interrupted evenings cost less than a lost week.",
+      "over": "Escalates everything immediately, and burns the channel you need for the real thing."
+    },
+    {
+      "id": "speed-and-defects",
+      "situation": "When moving fast has started producing defects",
+      "under": "Keeps the pace and lets quality slide out of view.",
+      "justRight": "Keeps the pace and puts the check in the path, so speed does not depend on nobody making a mistake.",
+      "over": "Slows to a crawl after one defect and stops shipping anything."
+    },
+    {
+      "id": "long-decisions",
+      "situation": "When a decision has been open for weeks",
+      "under": "Lets it stay open. Nobody has forced it.",
+      "justRight": "Sets a date, names who decides, and makes the call on that date with what is known.",
+      "over": "Forces decisions before the people who have to live with them have been asked."
+    }
+  ]
+}
