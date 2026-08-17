@@ -65,7 +65,7 @@
       "id": "new-process-missed-deadline",
       "situation": "You tried a new planning process and missed the deadline",
       "under": "Blames the people, not the process. Forces the old process on the next project.",
-      "justRight": "Talks to the people who used it. Keeps what worked. Adjusts what did not. Tries the improved version next time.",
+      "justRight": "Talks to the people who used it. Keeps what worked and adjusts what did not. Tries the improved version next time.",
       "over": "Throws the process out and tries a third one."
     },
     {

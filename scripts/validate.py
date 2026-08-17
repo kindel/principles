@@ -17,6 +17,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 KINDS = ("alias", "equivalent", "facet")
 SLUG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+# Sentence break for the one-to-three-sentence rule. Terminal punctuation may
+# be followed by a closing quote or bracket before the space, as in
+# 'is not "always." Seeks input', which is still a break. Naive about
+# abbreviations on purpose: the corpus carries none, and a row that needs one
+# is a row worth rewriting.
+SENTENCE = re.compile(r"(?<=[.!?])[\"'\)\]]*\s+")
 
 
 # Companies that publish their set under lenses, and the lens each sort
@@ -139,6 +145,14 @@ def validate_record(company, filename, rec, errs):
         for key in ("situation", "under", "justRight", "over"):
             if not r.get(key):
                 errs.append("%s: row %r missing %r" % (where, r.get("id"), key))
+        for key in ("under", "justRight", "over"):
+            text = (r.get(key) or "").strip()
+            if not text:
+                continue
+            n = len([x for x in SENTENCE.split(text) if x])
+            if not 1 <= n <= 3:
+                errs.append("%s: row %r %s has %d sentences, expected one to three"
+                            % (where, r.get("id"), key, n))
     if not 5 <= len(rec.get("rows", [])) <= 12:
         errs.append("%s: has %d rows, expected five to 12"
                     % (where, len(rec.get("rows", []))))

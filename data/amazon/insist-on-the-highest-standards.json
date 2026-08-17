@@ -108,7 +108,7 @@
       "id": "confronting-issues",
       "situation": "An issue shows up on the team",
       "under": "Avoids the conversation because they want to be liked.",
-      "justRight": "Does not cut corners. Names the issue. Stays respectful. Fixes it so it stays fixed.",
+      "justRight": "Does not cut corners. Names the issue and stays respectful. Fixes it so it stays fixed.",
       "over": "Hunts errors so constantly that people stop taking initiative."
     },
     {
@@ -122,7 +122,7 @@
       "id": "tracking-goals",
       "situation": "Goals, metrics, and drift",
       "under": "Sacrifices quality for speed. Sets loose goals. Does not investigate when the line goes sideways.",
-      "justRight": "Commits to a few measurable goals. Tracks them. Investigates as soon as the signal looks wrong. Finds the root cause.",
+      "justRight": "Commits to a few measurable goals and tracks them. Investigates as soon as the signal looks wrong. Finds the root cause.",
       "over": "Sets too many goals. Tracks metrics that do not matter. Escalates noise."
     },
     {
@@ -149,7 +149,7 @@
     {
       "id": "launch-defects",
       "situation": "A bad bug, a sloppy doc, an untested path",
-      "under": "Launches a process that customers have never seen. Numbers in the doc do not match. Typos everywhere. \"It is no big deal.\"",
+      "under": "Launches a process that customers have never seen. Numbers in the doc do not match, and there are typos everywhere. \"It is no big deal.\"",
       "justRight": "Will hold a launch a couple of days for a bad bug. Will not treat every nit as a blocker.",
       "over": "Will not launch unless everything is perfect. Treats every defect as priority one."
     }
