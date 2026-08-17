@@ -1,0 +1,90 @@
+{
+  "id": "efficiency",
+  "company": "gitlab",
+  "name": "Efficiency",
+  "sort": 3,
+  "definition": "Efficiency means producing results without wasting materials, time, or energy. We optimize solutions globally for the broader community over one person or a small group. Focus on efficiency should be global in nature, not just local to a given function.",
+  "terms": [
+    {
+      "id": "efficiency",
+      "label": "efficiency",
+      "kind": "alias"
+    },
+    {
+      "id": "boring-solutions",
+      "label": "boring solutions",
+      "kind": "alias"
+    },
+    {
+      "id": "do-more-with-less",
+      "label": "do more with less",
+      "kind": "equivalent"
+    },
+    {
+      "id": "global-optimization",
+      "label": "global optimization",
+      "kind": "equivalent"
+    },
+    {
+      "id": "choosing-the-boring-option",
+      "label": "choosing the boring option",
+      "kind": "facet",
+      "rows": [
+        "novel-or-boring"
+      ]
+    },
+    {
+      "id": "write-it-once",
+      "label": "write it once",
+      "kind": "facet",
+      "rows": [
+        "answering-the-same-question",
+        "meetings"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "novel-or-boring",
+      "situation": "When the interesting solution and the boring one both work",
+      "under": "Picks the novel one, because it is more satisfying to build.",
+      "justRight": "Picks the boring solution. Novelty is a cost paid by everyone who maintains it.",
+      "over": "Refuses a genuinely better new approach because it is unfamiliar."
+    },
+    {
+      "id": "local-versus-global",
+      "situation": "When the efficient thing for your team is costly elsewhere",
+      "under": "Optimizes locally. The cost lands on another function and nobody counts it.",
+      "justRight": "Optimizes globally for the broader community, even when your own function gets slower.",
+      "over": "Models the global picture so exhaustively that the local decision never gets made."
+    },
+    {
+      "id": "answering-the-same-question",
+      "situation": "When you are asked something for the third time",
+      "under": "Answers again in a direct message, and the answer stays private.",
+      "justRight": "Puts the answer in the handbook, and sends the link. Write it once, use it many times.",
+      "over": "Sends a link instead of an answer when the person needed judgment, not documentation."
+    },
+    {
+      "id": "meetings",
+      "situation": "When a meeting is being scheduled",
+      "under": "Accepts it, and the decision waits a week for a calendar slot.",
+      "justRight": "Handles it asynchronously in writing, and keeps meetings for what genuinely needs them.",
+      "over": "Refuses every synchronous conversation, and a 10 minute misunderstanding takes four days."
+    },
+    {
+      "id": "consistency-versus-efficiency",
+      "situation": "When the consistent process is slower",
+      "under": "Follows the process because it is the process.",
+      "justRight": "Asks what the consistency buys. Keeps it where it compounds and drops it where it only tidies.",
+      "over": "Abandons shared process so often that everyone pays to relearn how things are done."
+    },
+    {
+      "id": "perfect-versus-shipped",
+      "situation": "When the work could be polished further",
+      "under": "Ships something that does not do the job, and calls it efficient.",
+      "justRight": "Spends the energy where it changes the outcome, and stops when the next hour buys nothing.",
+      "over": "Optimizes a process that runs twice a year and will never repay the effort."
+    }
+  ]
+}

@@ -38,10 +38,10 @@ COMPANY_META = collections.OrderedDict([
         "set": "Leadership Principles",
         "source": "https://careers.deliveryhero.com/delivery-hero/2025-4/launching-our-leadership-principles",
     }),
-    ("klarna", {
-        "name": "Klarna",
-        "set": "Leadership Principles",
-        "source": "https://www.klarna.com/careers/life-at-klarna/heres-why-everyone-at-klarna-is-a-leader/",
+    ("gitlab", {
+        "name": "GitLab",
+        "set": "CREDIT Values",
+        "source": "https://handbook.gitlab.com/handbook/values/",
     }),
 ])
 

@@ -1,0 +1,91 @@
+{
+  "id": "results-for-customers",
+  "company": "gitlab",
+  "name": "Results for Customers",
+  "sort": 2,
+  "definition": "We exist to help our customers achieve more. Everything we do should be in service of making our customers successful. Results for Customers is at the top of our values hierarchy, as our customers achieving results drives overall business performance that enables everything else.",
+  "terms": [
+    {
+      "id": "results-for-customers",
+      "label": "results for customers",
+      "kind": "alias"
+    },
+    {
+      "id": "results",
+      "label": "results",
+      "kind": "alias"
+    },
+    {
+      "id": "customer-success",
+      "label": "customer success",
+      "kind": "equivalent"
+    },
+    {
+      "id": "outcomes",
+      "label": "outcomes",
+      "kind": "equivalent"
+    },
+    {
+      "id": "ambitious-goals",
+      "label": "ambitious goals",
+      "kind": "facet",
+      "rows": [
+        "setting-targets",
+        "measuring-the-outcome"
+      ]
+    },
+    {
+      "id": "customer-impact",
+      "label": "customer impact",
+      "kind": "facet",
+      "rows": [
+        "internal-work",
+        "hierarchy-conflict"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "setting-targets",
+      "situation": "When the target is being set",
+      "under": "Sets what is comfortably reachable, so the number is safe.",
+      "justRight": "Sets an ambitious goal, and is honest in the update about where it actually stands.",
+      "over": "Sets a number nobody believes, and the goal stops carrying information."
+    },
+    {
+      "id": "internal-work",
+      "situation": "When the work has no visible customer",
+      "under": "Does it because it is interesting, and never asks who it serves.",
+      "justRight": "Traces the line from this work to a customer achieving something. If there is no line, questions the work.",
+      "over": "Refuses all foundational work that cannot show a customer in the next quarter."
+    },
+    {
+      "id": "measuring-the-outcome",
+      "situation": "When the thing has shipped",
+      "under": "Counts the shipping as the result.",
+      "justRight": "Checks whether customers actually achieved more, and says so plainly when they did not.",
+      "over": "Measures so exhaustively that the measurement outlives anyone's interest in the answer."
+    },
+    {
+      "id": "hierarchy-conflict",
+      "situation": "When another value pulls against the customer",
+      "under": "Lets the loudest value in the room win.",
+      "justRight": "Uses the hierarchy. Results for Customers sits at the top, and says why that settles it here.",
+      "over": "Invokes the hierarchy to override collaboration and transparency in every disagreement."
+    },
+    {
+      "id": "bad-news-to-a-customer",
+      "situation": "When you have to tell a customer something went wrong",
+      "under": "Delays, in the hope the problem resolves itself.",
+      "justRight": "Tells them early, with what happened and what you are doing. Transparency serves the result.",
+      "over": "Volunteers so much internal detail that the customer loses confidence in a fixed problem."
+    },
+    {
+      "id": "saying-no-to-a-customer",
+      "situation": "When the customer asks for the wrong thing",
+      "under": "Builds it because they asked, and it helps nobody else.",
+      "justRight": "Finds what they are actually trying to achieve, and proposes the thing that gets them there.",
+      "over": "Substitutes your own judgment for theirs so often that they stop telling you what they need."
+    }
+  ]
+}

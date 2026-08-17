@@ -305,58 +305,46 @@
       ]
     },
     {
-      "id": "klarna",
-      "name": "Klarna",
-      "set": "Leadership Principles",
-      "source": "https://www.klarna.com/careers/life-at-klarna/heres-why-everyone-at-klarna-is-a-leader/",
+      "id": "gitlab",
+      "name": "GitLab",
+      "set": "CREDIT Values",
+      "source": "https://handbook.gitlab.com/handbook/values/",
       "principles": [
         {
-          "id": "customer-obsession",
-          "name": "Customer Obsession",
+          "id": "collaboration",
+          "name": "Collaboration",
           "sort": 1,
-          "file": "data/klarna/customer-obsession.json"
+          "file": "data/gitlab/collaboration.json"
         },
         {
-          "id": "deliver-results",
-          "name": "Deliver Results",
+          "id": "results-for-customers",
+          "name": "Results for Customers",
           "sort": 2,
-          "file": "data/klarna/deliver-results.json"
+          "file": "data/gitlab/results-for-customers.json"
         },
         {
-          "id": "let-the-team-shine",
-          "name": "Let the Team Shine",
+          "id": "efficiency",
+          "name": "Efficiency",
           "sort": 3,
-          "file": "data/klarna/let-the-team-shine.json"
+          "file": "data/gitlab/efficiency.json"
         },
         {
-          "id": "challenge-the-status-quo",
-          "name": "Challenge the Status Quo",
+          "id": "diversity-inclusion-and-belonging",
+          "name": "Diversity, Inclusion & Belonging",
           "sort": 4,
-          "file": "data/klarna/challenge-the-status-quo.json"
+          "file": "data/gitlab/diversity-inclusion-and-belonging.json"
         },
         {
-          "id": "start-small-and-learn-fast",
-          "name": "Start Small and Learn Fast",
+          "id": "iteration",
+          "name": "Iteration",
           "sort": 5,
-          "file": "data/klarna/start-small-and-learn-fast.json"
+          "file": "data/gitlab/iteration.json"
         },
         {
-          "id": "courage",
-          "name": "Courage",
+          "id": "transparency",
+          "name": "Transparency",
           "sort": 6,
-          "file": "data/klarna/courage.json"
-        },
-        {
-          "id": "hire-and-develop-exceptional-talent",
-          "name": "Hire and Develop Exceptional Talent",
-          "sort": 7,
-          "file": "data/klarna/hire-and-develop-exceptional-talent.json"
-        },
-        {
-          "id": "detailed-thinkers",
-          "name": "Detailed Thinkers",
-          "sort": 8,
-          "file": "data/klarna/detailed-thinkers.json"
+          "file": "data/gitlab/transparency.json"
         }
       ]
     }

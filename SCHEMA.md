@@ -89,7 +89,7 @@ Arm records carry `group` for the lens (`one-arm` or `accelerate-impact`):
 
 - `id` is kebab-case and matches the filename without `.json`.
 - `company` is kebab-case and matches the parent directory. Current companies
-  are `amazon`, `arm`, `coupang`, `delivery-hero`, and `klarna`.
+  are `amazon`, `arm`, `coupang`, `delivery-hero`, and `gitlab`.
 - `group` is optional. Arm records carry it (`one-arm` or `accelerate-impact`)
   because Arm's set is published under two lenses. No other company's set is,
   so no other record carries it.
@@ -98,8 +98,8 @@ Arm records carry `group` for the lens (`one-arm` or `accelerate-impact`):
   Deliver Results last (one through 14). Arm is Passion for the mission first
   and Optimize for endurance and resilience last (one through 10). Coupang is
   Wow the Customer first and Hate Waste last (one through 15). Delivery Hero is
-  Own It first and Stay Humble last (one through six). Klarna is Customer
-  Obsession first and Detailed Thinkers last (one through eight).
+  Own It first and Stay Humble last (one through six). GitLab is Collaboration
+  first and Transparency last (one through six), the order that spells CREDIT.
 - `definition` is the company's short statement of the principle.
 - File paths in the manifest are `data/<company>/<id>.json`.
 - Nothing lives at `data/*.json` except `index.json`.

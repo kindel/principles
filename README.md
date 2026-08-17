@@ -9,8 +9,11 @@ tooling. An application depends on it without inheriting anything it did
 not ask for.
 
 A consumer must pick a company and show only that company's set. The sets
-today are Amazon's Leadership Principles, Arm's 10x Mindset, and the
-Leadership Principles of Coupang, Delivery Hero, and Klarna.
+today are Amazon's Leadership Principles, Arm's 10x Mindset, the Leadership
+Principles of Coupang and Delivery Hero, and GitLab's CREDIT values.
+
+Every set here is transcribed from the company's own published page. A set the
+company no longer publishes does not belong in this repository.
 
 ## Layout
 
@@ -20,7 +23,7 @@ data/amazon/<id>.json        one Amazon principle
 data/arm/<id>.json           one Arm factor
 data/coupang/<id>.json       one Coupang principle
 data/delivery-hero/<id>.json one Delivery Hero principle
-data/klarna/<id>.json        one Klarna principle
+data/gitlab/<id>.json        one GitLab value
 scripts/build_index.py       regenerates the manifest
 scripts/validate.py          enforces SCHEMA.md
 SCHEMA.md                    the contract

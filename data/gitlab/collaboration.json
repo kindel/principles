@@ -1,0 +1,91 @@
+{
+  "id": "collaboration",
+  "company": "gitlab",
+  "name": "Collaboration",
+  "sort": 1,
+  "definition": "To achieve results, team members must work together effectively. Helping others is a priority, even when it is not immediately related to the goals that you are trying to achieve. You can rely on others for help and advice, and in fact you are expected to do so.",
+  "terms": [
+    {
+      "id": "collaboration",
+      "label": "collaboration",
+      "kind": "alias"
+    },
+    {
+      "id": "short-toes",
+      "label": "short toes",
+      "kind": "alias"
+    },
+    {
+      "id": "help-others",
+      "label": "help others",
+      "kind": "equivalent"
+    },
+    {
+      "id": "assume-good-intent",
+      "label": "assume good intent",
+      "kind": "equivalent"
+    },
+    {
+      "id": "asking-for-help",
+      "label": "asking for help",
+      "kind": "facet",
+      "rows": [
+        "stuck-on-something",
+        "kindness-and-feedback"
+      ]
+    },
+    {
+      "id": "working-across-teams",
+      "label": "working across teams",
+      "kind": "facet",
+      "rows": [
+        "someone-elses-area",
+        "unblocking-someone"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "stuck-on-something",
+      "situation": "When you have been stuck for an hour",
+      "under": "Keeps grinding alone, because asking looks like not knowing.",
+      "justRight": "Asks early and specifically. You are expected to rely on others.",
+      "over": "Asks before trying, and turns colleagues into your first search engine."
+    },
+    {
+      "id": "unblocking-someone",
+      "situation": "When helping someone costs you your own progress",
+      "under": "Says you are busy. Their problem is not on your goals.",
+      "justRight": "Helps anyway. Helping others is a priority even when it does not serve your own goals.",
+      "over": "Helps everyone constantly and delivers nothing you were accountable for."
+    },
+    {
+      "id": "someone-elses-area",
+      "situation": "When you see a fix in someone else's area",
+      "under": "Files an issue and waits for them to get to it.",
+      "justRight": "Makes the change and asks them to review. Short toes: assume people welcome the contribution.",
+      "over": "Rewrites their area without asking, and they lose the thread of their own work."
+    },
+    {
+      "id": "kindness-and-feedback",
+      "situation": "When the feedback is critical",
+      "under": "Softens it until nothing actionable survives.",
+      "justRight": "Says it directly and kindly, and assumes good intent in what you received back.",
+      "over": "Uses directness as cover for being unpleasant, and people stop asking you to review."
+    },
+    {
+      "id": "credit-and-blame",
+      "situation": "When something went wrong across two teams",
+      "under": "Establishes that it was not your team.",
+      "justRight": "Fixes it first, and describes the failure without naming individuals.",
+      "over": "Absorbs blame that belongs to a broken process, so the process never gets fixed."
+    },
+    {
+      "id": "handing-work-over",
+      "situation": "When you hand work to someone else",
+      "under": "Drops the link and moves on.",
+      "justRight": "Gives the context, the state, and what you would do next, so they are not starting cold.",
+      "over": "Wraps the handover in so much process that it would have been faster to finish it."
+    }
+  ]
+}

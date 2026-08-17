@@ -1,0 +1,91 @@
+{
+  "id": "iteration",
+  "company": "gitlab",
+  "name": "Iteration",
+  "sort": 5,
+  "definition": "We iterate to do the smallest valuable thing, to get fast feedback and efficiently reach a desired end goal. Feedback can come from internal users or from our broader user community. We validate each iteration and adjust, but not at the expense of the user experience.",
+  "terms": [
+    {
+      "id": "iteration",
+      "label": "iteration",
+      "kind": "alias"
+    },
+    {
+      "id": "mvc",
+      "label": "mvc",
+      "kind": "alias"
+    },
+    {
+      "id": "smallest-valuable-thing",
+      "label": "smallest valuable thing",
+      "kind": "equivalent"
+    },
+    {
+      "id": "ship-small",
+      "label": "ship small",
+      "kind": "equivalent"
+    },
+    {
+      "id": "scoping-down",
+      "label": "scoping down",
+      "kind": "facet",
+      "rows": [
+        "big-change",
+        "scope-creep"
+      ]
+    },
+    {
+      "id": "acting-on-feedback",
+      "label": "acting on feedback",
+      "kind": "facet",
+      "rows": [
+        "after-the-release",
+        "validating"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "big-change",
+      "situation": "When the change is large",
+      "under": "Builds the whole thing, and the first feedback arrives at the end.",
+      "justRight": "Finds the smallest valuable version that a real user can react to, and ships that.",
+      "over": "Breaks it so small that no single piece is usable, and users see churn instead of progress."
+    },
+    {
+      "id": "after-the-release",
+      "situation": "When the small version is out",
+      "under": "Moves to the next thing without reading what happened.",
+      "justRight": "Validates the iteration, adjusts, and says what you now know that you did not before.",
+      "over": "Reverses direction on every data point, and the product never accumulates."
+    },
+    {
+      "id": "scope-creep",
+      "situation": "When the iteration keeps growing",
+      "under": "Adds to it until it is the large change you were avoiding.",
+      "justRight": "Holds the boundary, and writes the rest down as the next iteration.",
+      "over": "Cuts scope so hard that what ships is below the quality users should ever see."
+    },
+    {
+      "id": "validating",
+      "situation": "When nobody is sure the iteration worked",
+      "under": "Assumes it worked, because it shipped.",
+      "justRight": "Gets feedback from a real user or from dogfooding, and treats that as the evidence.",
+      "over": "Waits for statistical certainty on a change that could simply be tried."
+    },
+    {
+      "id": "user-experience-cost",
+      "situation": "When iterating would degrade the experience",
+      "under": "Ships the rough version anyway, because iteration is the value.",
+      "justRight": "Iterates without making the experience worse. Small is not a license to ship something broken.",
+      "over": "Refuses to ship anything short of complete, and iteration stops meaning anything."
+    },
+    {
+      "id": "long-running-work",
+      "situation": "When the work genuinely cannot be split",
+      "under": "Splits it artificially, and ships pieces that do not work on their own.",
+      "justRight": "Says plainly that this one is not divisible, and puts checkpoints in for feedback instead.",
+      "over": "Calls every large project indivisible, and nothing is ever iterated."
+    }
+  ]
+}
