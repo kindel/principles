@@ -48,6 +48,6 @@ every other rule SCHEMA.md states.
 ## Consumers
 
 - `kindel/biq`, behavioral interview questions per principle.
-- kindel.com/porridge, the user's manual (under, just right, over).
+- `kindel/porridge`, the user's manual (under, just right, over).
 
 There is no kindel/lps repo.
