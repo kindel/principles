@@ -26,7 +26,7 @@ balance. Everything below exists to carry that decomposition.
 in a real situation at three settings: under indexing, getting the balance
 right, and over doing it. The two ends are what make a principle teachable
 instead of inspirational, and they are the reason a set of abstract nouns
-cannot be modeled here. Integrity has no over.
+cannot be modeled here.
 
 **Facets** are the granular pieces that compose. Companies publish their
 principles freely, but they carve the same behavior into different principles
@@ -85,13 +85,11 @@ are tracked rather than implied:
 
 6. **Company is a Parameter, Never a Constant.** No code branches on a company's name, and *every lookup, path, and cache key carries the company*. A bare id fails silently, because `dive-deep` is three different principles.
 
-7. **The Company's Own Words, or Nothing.** A set arrives transcribed from the company's own published page, and leaves when that page goes. *A secondhand summary is not evidence*, however confident it reads.
+7. **The Check is the Contract.** *A new rule ships with the check that fails on it*, or it is a suggestion. A rule only a human enforces is already broken somewhere in the tree.
 
-8. **The Check is the Contract.** *A new rule ships with the check that fails on it*, or it is a suggestion. A rule only a human enforces is already broken somewhere in the tree.
+8. **Break in the Open.** The core changes shape when the model demands it, and apps follow. *A breaking change ships with the issues and pull requests that fix each app*, so we accept the breakage and never the silence.
 
-9. **Break in the Open.** The core changes shape when the model demands it, and apps follow. *A breaking change ships with the issues and pull requests that fix each app*, so we accept the breakage and never the silence.
-
-10. **A Copy is Generated and Verified, or It Does Not Exist.** An app that must serve the model from its own origin generates its copy from a pin and fails its build on drift. *A copy a human keeps in step is drift with a delay.*
+9. **A Copy is Generated and Verified, or It Does Not Exist.** An app that must serve the model from its own origin generates its copy from a pin and fails its build on drift. *A copy a human keeps in step is drift with a delay.*
 
 Unless you know better ones.
 
@@ -143,9 +141,9 @@ every other rule SCHEMA.md states.
 
 ## Apps
 
+There will be more over time, but this is the start:
+
 - `kindel/biq`, behavioral interview questions per principle. Owns the
   questions and the example generator prompt.
 - `kindel/porridge`, the user's manual. Owns what under indexed, balanced, and
   over done look like in practice.
-
-There is no kindel/lps repo.
