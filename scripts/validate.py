@@ -44,18 +44,23 @@ COMPANY_META = collections.OrderedDict([
     }),
 ])
 
-# Arm lenses. sort 1-5 are One Arm, sort 6-10 are Accelerate Impact.
-ARM_GROUP_BY_SORT = {
-    1: "one-arm",
-    2: "one-arm",
-    3: "one-arm",
-    4: "one-arm",
-    5: "one-arm",
-    6: "accelerate-impact",
-    7: "accelerate-impact",
-    8: "accelerate-impact",
-    9: "accelerate-impact",
-    10: "accelerate-impact",
+# Companies that publish their set under lenses, and the lens each sort
+# position falls in. A company absent from this table carries no group, and
+# validate_record rejects one. Arm sort 1-5 are One Arm, 6-10 are Accelerate
+# Impact.
+GROUP_BY_COMPANY = {
+    "arm": {
+        1: "one-arm",
+        2: "one-arm",
+        3: "one-arm",
+        4: "one-arm",
+        5: "one-arm",
+        6: "accelerate-impact",
+        7: "accelerate-impact",
+        8: "accelerate-impact",
+        9: "accelerate-impact",
+        10: "accelerate-impact",
+    },
 }
 
 
@@ -132,22 +137,22 @@ def validate_record(company, filename, rec, errs):
     if not SLUG.match(rec.get("company", "")):
         errs.append("%s: company is not kebab-case" % where)
 
-    if company == "amazon":
+    lenses = GROUP_BY_COMPANY.get(company)
+    if lenses is None:
         if "group" in rec:
-            errs.append("%s: Amazon records do not carry group" % where)
-    elif company == "arm":
+            errs.append("%s: %s records do not carry group, only %s do"
+                        % (where, company, ", ".join(sorted(GROUP_BY_COMPANY))))
+    else:
         group = rec.get("group")
         if not group:
-            errs.append("%s: Arm records require group" % where)
+            errs.append("%s: %s records require group" % (where, company))
         elif not SLUG.match(group):
             errs.append("%s: group %r is not kebab-case" % (where, group))
         else:
-            want = ARM_GROUP_BY_SORT.get(rec.get("sort"))
+            want = lenses.get(rec.get("sort"))
             if want and group != want:
                 errs.append("%s: group %r does not match sort %s (expected %s)"
                             % (where, group, rec.get("sort"), want))
-    elif "group" in rec and rec.get("group") and not SLUG.match(rec.get("group", "")):
-        errs.append("%s: group %r is not kebab-case" % (where, rec.get("group")))
 
     row_ids = set()
     for r in rec.get("rows", []):

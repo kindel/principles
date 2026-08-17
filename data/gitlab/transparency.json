@@ -3,7 +3,7 @@
   "company": "gitlab",
   "name": "Transparency",
   "sort": 6,
-  "definition": "Be open about as many things as possible. By making information public, we reduce the threshold to contribution and make collaboration easier. Transparency is not communication: something existing in the handbook does not mean it should not also be communicated to the people who need to understand it.",
+  "definition": "Be open about as many things as possible. By making information public, we can reduce the threshold to contribution and make collaboration easier. Use public issue trackers, projects, and repositories when possible.",
   "terms": [
     {
       "id": "transparency",

@@ -3,7 +3,7 @@
   "company": "gitlab",
   "name": "Collaboration",
   "sort": 1,
-  "definition": "To achieve results, team members must work together effectively. Helping others is a priority, even when it is not immediately related to the goals that you are trying to achieve. You can rely on others for help and advice, and in fact you are expected to do so.",
+  "definition": "To achieve results, team members must work together effectively. At GitLab, helping others is a priority, even when it is not immediately related to the goals that you are trying to achieve.",
   "terms": [
     {
       "id": "collaboration",
@@ -30,8 +30,7 @@
       "label": "asking for help",
       "kind": "facet",
       "rows": [
-        "stuck-on-something",
-        "kindness-and-feedback"
+        "stuck-on-something"
       ]
     },
     {

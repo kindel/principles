@@ -3,7 +3,7 @@
   "company": "gitlab",
   "name": "Iteration",
   "sort": 5,
-  "definition": "We iterate to do the smallest valuable thing, to get fast feedback and efficiently reach a desired end goal. Feedback can come from internal users or from our broader user community. We validate each iteration and adjust, but not at the expense of the user experience.",
+  "definition": "At GitLab, we iterate to do the smallest valuable thing to get fast feedback and efficiently reach a desired end goal. Feedback can be from internal users (dogfooding), or through feedback from our broader user community. We validate each iteration and adjust, but not at the expense of the user experience that we deliver to our customers.",
   "terms": [
     {
       "id": "iteration",

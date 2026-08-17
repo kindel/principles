@@ -3,7 +3,7 @@
   "company": "gitlab",
   "name": "Efficiency",
   "sort": 3,
-  "definition": "Efficiency means producing results without wasting materials, time, or energy. We optimize solutions globally for the broader community over one person or a small group. Focus on efficiency should be global in nature, not just local to a given function.",
+  "definition": "At GitLab, efficiency means producing results without wasting materials, time, or energy. We optimize solutions globally for the broader GitLab community over one person or a small group. Focus on efficiency should be global in nature, not just local to a given function.",
   "terms": [
     {
       "id": "efficiency",
@@ -70,7 +70,7 @@
       "situation": "When a meeting is being scheduled",
       "under": "Accepts it, and the decision waits a week for a calendar slot.",
       "justRight": "Handles it asynchronously in writing, and keeps meetings for what genuinely needs them.",
-      "over": "Refuses every synchronous conversation, and a 10 minute misunderstanding takes four days."
+      "over": "Refuses every synchronous conversation, and a 10-minute misunderstanding takes four days."
     },
     {
       "id": "consistency-versus-efficiency",

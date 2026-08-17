@@ -100,7 +100,12 @@ Arm records carry `group` for the lens (`one-arm` or `accelerate-impact`):
   Wow the Customer first and Hate Waste last (one through 15). Delivery Hero is
   Own It first and Stay Humble last (one through six). GitLab is Collaboration
   first and Transparency last (one through six), the order that spells CREDIT.
-- `definition` is the company's short statement of the principle.
+- `definition` is the company's short statement of the principle, transcribed
+  from the company's own published page. It is a quotation, so it is never
+  condensed, reworded, reordered, or merged. Where the published statement runs
+  long, take a leading excerpt of whole sentences rather than summarizing.
+  Three normalizations are allowed and nothing else: strip markup, fold
+  punctuation to ASCII, and correct an obvious typographical error.
 - File paths in the manifest are `data/<company>/<id>.json`.
 - Nothing lives at `data/*.json` except `index.json`.
 
@@ -140,7 +145,13 @@ The calibration taxonomy, and the anchor a facet points at.
 
 ### Style
 
-Every string: no em dash, no `---`, Oxford commas, numbers under 10 spelled out.
+Every authored string: no em dash, no `---`, Oxford commas, numbers under 10
+spelled out. That is `situation`, `under`, `justRight`, `over`, and term
+labels.
+
+`definition` is quoted, not authored, so the company's punctuation and grammar
+stand even where they disagree with the rules above. Pick an excerpt that
+carries no em dash, because the validator rejects one wherever it appears.
 
 ## Consuming this repository
 
