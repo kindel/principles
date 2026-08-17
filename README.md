@@ -50,7 +50,8 @@ particular behavior genuinely does read differently by level, that is a
 property of that behavior rather than a rule about level, so it is stated on
 the behavior and not applied across the board. The behavior is written once and
 projected, so that two tools reading the same behavior at the same level
-agree.
+agree. Level and role also scope whole sets, not only behaviors within one: a
+set can apply to one role at one level and layer on the set beneath it.
 
 ### Where the schema is today
 
@@ -63,6 +64,10 @@ are tracked rather than implied:
 - Level and role are not in the schema. Apps carry their own notions today.
   Calibration is level-independent, so this is an additive selection and
   weighting layer rather than a change to `rows`.
+- A company has one set. Amazon publishes at least two, the Leadership
+  Principles and the Principal Engineering Community Tenets, and the second
+  layers on the first for engineers at principal and above. A set scoped to a
+  role and a level, or layered on another set, cannot be expressed.
 - The core ships validation and manifest generation. Resolution and projection
   live nowhere yet.
 
