@@ -133,8 +133,8 @@ The calibration taxonomy, and the anchor a facet points at.
 
 - Five to 12 real situations per principle. Give each a kebab `id` and a short
   `situation` label.
-- `under`, `justRight`, and `over` are one to three sentences each. Under is
-  not trying. Over is the principle eating the job. Just right is the bar.
+- `under`, `justRight`, and `over` are one to three sentences each. They
+  describe one behavior under indexed, balanced, and over done.
 - Row ids are unique within a principle. A facet may only reference a row on
   its own principle.
 
