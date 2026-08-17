@@ -104,7 +104,7 @@
       "id": "responding-to-a-complaint",
       "situation": "A customer complains about a product they bought",
       "under": "Ignores the complaint because it is only one customer.",
-      "justRight": "Investigates. Confirms the product is described accurately and is not defective. Fixes it if it is faulty. Tells the customer what you found. Replaces it when that is the honest fix.",
+      "justRight": "Investigates, and confirms the product is described accurately and is not defective. Fixes it if it is faulty, and replaces it when that is the honest fix. Tells the customer what you found.",
       "over": "Pulls the entire listing because one person complained."
     },
     {

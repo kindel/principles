@@ -123,13 +123,13 @@
       "situation": "Hearing the team, then calling it",
       "under": "Does not use data. Makes a hasty call that sends the team down the wrong path.",
       "justRight": "Takes input and data from the team and regularly makes the right call.",
-      "over": "Makes every decision. Will not listen. Unaware of blind spots. Disempowers the people closest to the work."
+      "over": "Makes every decision and will not listen. Unaware of blind spots. Disempowers the people closest to the work."
     },
     {
       "id": "always-right-trap",
       "situation": "Confusing this principle with always being right",
       "under": "Undervalues their own experience. Never establishes respect.",
-      "justRight": "Knows \"a lot\" is not \"always.\" Seeks input. Applies experience. Champions the best path even when it was not theirs.",
+      "justRight": "Knows \"a lot\" is not \"always.\" Seeks input and applies experience. Champions the best path even when it was not theirs.",
       "over": "Mistakes this principle for always being right. Will not integrate an outside view."
     },
     {

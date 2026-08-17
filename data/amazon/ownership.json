@@ -89,7 +89,7 @@
       "id": "owning-dependencies",
       "situation": "A dependency is late or broken",
       "under": "Lets the dependency derail the work. Blames them. Does not try to fix what is broken.",
-      "justRight": "Owns the dependency. Follows up. Escalates when needed. Still responsible for the outcome.",
+      "justRight": "Owns the dependency and follows up. Escalates when needed. Still responsible for the outcome.",
       "over": "Never gives the dependency the benefit of the doubt. Micromanages their work instead of setting an audit and letting them do the job."
     },
     {
