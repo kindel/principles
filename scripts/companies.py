@@ -2,8 +2,10 @@
 """The catalog of companies, in manifest order.
 
 A record knows its own company id. This adds the public name, the title of
-the set, and the page the definitions are transcribed from. It lives here so
-build_index.py and validate.py cannot disagree about it.
+the set, and where the definitions are transcribed from. `source` is a URL when
+the company publishes the set itself and the name of the first-party document
+when it does not; see Sourcing in SCHEMA.md. It lives here so build_index.py
+and validate.py cannot disagree about it.
 """
 
 import collections

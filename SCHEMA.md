@@ -65,6 +65,19 @@ Amazon records do not carry `group`:
 }
 ```
 
+A record with company-written calibration marks every row:
+
+```json
+{
+  "rows": [
+    { "id": "the-companys-own-example", "situation": "...",
+      "under": "...", "justRight": "...", "over": "...", "words": "quoted" },
+    { "id": "one-we-wrote", "situation": "...",
+      "under": "...", "justRight": "...", "over": "...", "words": "authored" }
+  ]
+}
+```
+
 Arm records carry `group` for the lens (`one-arm` or `accelerate-impact`):
 
 ```json
@@ -105,11 +118,14 @@ Arm records carry `group` for the lens (`one-arm` or `accelerate-impact`):
   Own It first and Stay Humble last (one through six). GitLab is Collaboration
   first and Transparency last (one through six), the order that spells CREDIT.
 - `definition` is the company's short statement of the principle, transcribed
-  from the company's own published page. It is a quotation, so it is never
-  condensed, reworded, reordered, or merged. Where the published statement runs
+  from the company's own text under Sourcing below. It is a quotation, so it is
+  never condensed, reworded, reordered, or merged. Where the statement runs
   long, take a leading excerpt of whole sentences rather than summarizing.
   Three normalizations are allowed and nothing else: strip markup, fold
   punctuation to ASCII, and correct an obvious typographical error.
+- `source` is where the set was transcribed from. A URL when the company
+  publishes the set itself, otherwise the name of the first-party document. See
+  Sourcing.
 - File paths in the manifest are `data/<company>/<id>.json`.
 - Nothing lives at `data/*.json` except `index.json`.
 
@@ -146,6 +162,36 @@ The calibration taxonomy, and the anchor a facet points at.
   describe one behavior under indexed, balanced, and over done.
 - Row ids are unique within a principle. A facet may only reference a row on
   its own principle.
+- `words` records whose words the calibration is: `quoted` for the company's,
+  `authored` for a person's, `generated` for a tool's. It is optional, and a row
+  without it is `authored`. When any row in a record carries `words`, every row
+  in that record carries it, so a reader of one file never has to infer it.
+
+`words` describes `under`, `justRight`, and `over`. The `situation` label is
+always ours, because it names the row rather than quoting the company, and it
+follows the authoring rules whatever the row is marked.
+
+A `quoted` row's calibration is transcribed from the company, the same standing
+`definition` has, and the same consequences follow. It is never condensed,
+reworded, or split to fit, the authoring rules do not apply to it, and neither
+does the one-to-three-sentence rule. Eleven of Dawn Aerospace's 45 calibration
+strings run past three sentences and one runs to eight; that is the company's
+writing, not a defect to correct. The em dash and `---` checks still apply,
+because those are about what the file may contain, exactly as they are for
+`definition`.
+
+A `quoted` row counts toward the five-to-12 minimum. A company that published
+one triple per principle gives one row, and the rest are authored alongside it.
+Recording which is which is the point: mixing the two voices inside `rows` with
+nothing to tell them apart is the thing this field exists to prevent.
+
+`generated` exists because rows will be generated. `kindel/porridge` is where
+that happens, and its output generalizes the human-written rows across
+companies. A generated row that arrives here marked `authored` is
+indistinguishable from a person's work, and the next generator trains on it.
+Marking it is what keeps the human-written rows identifiable as the reference
+they are, and what lets a generator skip the rows it should not be reading. See
+`tests/README.md` and kindel/porridge#3.
 
 ### Style
 
@@ -153,9 +199,29 @@ Every authored string: no em dash, no `---`, Oxford commas, numbers under 10
 spelled out. That is `situation`, `under`, `justRight`, `over`, and term
 labels.
 
-`definition` is quoted, not authored, so the company's punctuation and grammar
-stand even where they disagree with the rules above. Pick an excerpt that
-carries no em dash, because the validator rejects one wherever it appears.
+`definition`, and the calibration of any row marked `words: "quoted"`, is
+quoted rather than authored, so the company's punctuation and grammar stand
+even where they disagree with the rules above. The em dash and `---` checks are
+the exception and run everywhere, so pick an excerpt that carries neither.
+
+## Sourcing
+
+Every set is the company's own text, published here with the company's
+permission.
+
+Usually that is a page the company publishes itself, and permission is not in
+question. `source` is the URL.
+
+It can also be a first-party document the company has authorized us to publish,
+an internal handbook or wiki page that the company has not put on its marketing
+site. `source` names the document. Dawn Aerospace's Company Tenets arrive this
+way.
+
+What it is never is somebody else's account of a set. A set reconstructed from
+a conference talk, a recruiter's summary, or a page the company has taken down
+and not replaced does not belong here, however faithful the reproduction looks.
+Klarna was dropped for exactly this: the page is gone and what remains is other
+people's copies of it.
 
 ## Consuming this repository
 

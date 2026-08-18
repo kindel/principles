@@ -99,8 +99,16 @@ An app picks a company and shows only that company's set. The sets today are
 Amazon's Leadership Principles, Arm's 10x Mindset, the Leadership Principles of
 Coupang and Delivery Hero, and GitLab's CREDIT values.
 
-Every set is transcribed from the company's own published page. A set the
-company no longer publishes does not belong here.
+Every set is the company's own text, published here with the company's
+permission. Usually that is a page the company publishes itself. It can also be
+a first-party document the company has authorized us to publish, an internal
+handbook or wiki page, named in `source` instead of a URL. What it is never is
+somebody else's account of a set, however faithful the reproduction looks.
+
+Where a company has written its own calibration, that is transcribed too and
+marked `words: "quoted"`, so the company's words and ours never blur together
+inside one record. Rows a tool writes are marked `generated` for the same
+reason.
 
 ## Layout
 
@@ -113,8 +121,14 @@ data/delivery-hero/<id>.json one Delivery Hero principle
 data/gitlab/<id>.json        one GitLab value
 scripts/build_index.py       regenerates the manifest
 scripts/validate.py          enforces SCHEMA.md
+tests/                       what CI runs, and the calibration it checks against
+.github/workflows/ci.yml     validate, test, and check the manifest
 SCHEMA.md                    the contract
 ```
+
+Generating rows, and judging generated rows, belong in the apps. `tests/` keeps
+a copy of the human-written calibration those apps generalize from, and uses it
+to check that the model can still express the real thing. See `tests/README.md`.
 
 ## Use it
 

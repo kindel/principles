@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "heldOut": true,
+  "company": {
+    "id": "dawn",
+    "name": "Dawn Aerospace",
+    "set": "Company Tenets"
+  },
+  "provenance": {
+    "author": "Stefan Powell",
+    "created": "2023-06-12",
+    "document": "Dawn Aerospace Company Tenets.docx",
+    "route": "Wiki export from Heather Kinghorn, emailed 2026-08-17.",
+    "transcription": "OCR of the wiki table screenshots, corrected by reading. Definitions are from the document body.",
+    "issue": "https://github.com/kindel/principles/issues/14#issuecomment-5325381142"
+  },
+  "shape": {
+    "triplesPerPrinciple": 1,
+    "situation": "Dawn's table gives one triple per tenet with no situation label, so `situation` is absent here. When #14 lands, each triple becomes one row marked `words: \"quoted\"` with a situation label we write, and four or more authored rows join it to meet the five-to-12 minimum. Those authored rows are what a generator produces and what this fixture scores.",
+    "holdOut": "These rows are the reference generated rows are measured against, so a generator must not read them as examples. tests/test_corpus.py checks what it can from files: no quoted row edited away from this fixture, and no authored row reusing a company's wording. The generator and the eval live in kindel/porridge, and so does the check that a prompt is clean."
+  },
+  "traps": [
+    {
+      "principle": "scrappy-not-crappy",
+      "kind": "polarity",
+      "note": "Perfectionism is the under, not the over. A generator that has learned \"under means not trying\" inverts this one. Include it in every run."
+    },
+    {
+      "principle": "bias-for-action",
+      "kind": "brevity",
+      "note": "The under is two words. Length is not the measure."
+    },
+    {
+      "principle": "no-surprises",
+      "kind": "same-failure-mode",
+      "note": "The over is overwork for a low-impact deadline, which is too much of the same behavior, not a different failure."
+    },
+    {
+      "principle": "race-on-the-racetrack-walk-on-ice",
+      "kind": "concreteness",
+      "note": "The just-right names a real incident with a citation. A generator will not invent this and should not be rewarded for inventing one."
+    }
+  ],
+  "principles": [
+    {
+      "id": "think-big-start-small",
+      "name": "Think big, start small",
+      "sort": 1,
+      "definition": "We start small and test early. As we scale, we frequently zoom out to ensure we remain on track toward our grand mission.",
+      "expected": {
+        "under": "We forget the point of what we are doing and don't know how it helps the company. We work on something that will only help us in 10 years' time.",
+        "justRight": "We know what we are trying to achieve over the next 1, 5, and 10 years. We directly match the work that we are doing today to how it helps us walk this road. The scale that we are working at is well-matched to the resources that we have. We only bite off as much as we can chew...or maybe just a little more.",
+        "over": "We try to build a warp drive from day 1. We start at a scale that is not interesting and not relevant to what we want to prove in the end."
+      }
+    },
+    {
+      "id": "customer-success-is-our-success",
+      "name": "Customer success is our success",
+      "sort": 2,
+      "definition": "If our customers are successful, then it will shine on us as well. We strive to understand our customers and ensure that they are successful in their mission too. This applies equally to internal and external customers.",
+      "expected": {
+        "under": "We don't know who the customer is for our work, nor do we care.",
+        "justRight": "We understand the core need of what we are doing. We get clear expectations from our external customers at regular intervals, e.g. project kickoff, PDR, CDR, etc. We talk to them if major changes occur. We recognize that EVERYONE has a customer, and thus do the same for internal customers too!",
+        "over": "We are constantly asking all stakeholders for input on every decision. We deflect from taking ownership of product decisions ourselves by always pointing to a customer need. As a result, our products are overkill for almost all customers and impossible to make."
+      }
+    },
+    {
+      "id": "break-down-silos",
+      "name": "Break down silos",
+      "sort": 3,
+      "definition": "We work constructively and positively with people in the company no matter which location, division, project, or team they might be in today. We share what we know freely, ask when we don’t know, and refrain from using \"us and them\" words. We proactively communicate across the natural silos that do form and are acutely aware that we succeed or fail together.",
+      "expected": {
+        "under": "Create a private Slack channel for a project that affects many internal stakeholders. Company-wide support systems are closed, intransparent, and hinge on one person that knows how to work the system being present.",
+        "justRight": "Creating a new public Slack channel is in line with Dawn guidelines. Invite key stakeholders only. Everyone has access to data and systems unless there is a good reason for them not to. You leave your office door open whenever you can to let others come in to discuss problems.",
+        "over": "Create an open Slack channel, and add the whole company. Welcome everyone with @channel. Company-wide systems (e.g. HR incl. salaries) are openly accessible to anyone with no access control."
+      }
+    },
+    {
+      "id": "ownership",
+      "name": "Ownership",
+      "sort": 4,
+      "definition": "We take ownership of our work. We think long-term and bias toward long-term value over short-term results. We act on behalf of the entire company, beyond just our own team.",
+      "expected": {
+        "under": "We only make sure that \"the hole is not in my side of the boat\". Refuse to take responsibility to get a result.",
+        "justRight": "We consistently give and set clear expectations, and do the work to meet them. We practice \"no surprises\". We assist a fellow team lead who is struggling by offering to help as an individual contributor, rather than by taking control.",
+        "over": "Take ownership of everything and do not let others do their job. Impose on others' responsibilities and disempower them."
+      }
+    },
+    {
+      "id": "no-surprises",
+      "name": "No surprises",
+      "sort": 5,
+      "definition": "Our goals have dates, or at least dates for dates. We deliver when we say, or inform stakeholders when we know a date will slip. There are no surprises.",
+      "expected": {
+        "under": "We refuse to give answers on when or to what standard something will be done. Deliverable dates and specifications are fuzzily defined, so that slip can easily be explained away.",
+        "justRight": "You regularly update your stakeholders on whether or not you are on track. You actively take ownership to manage expectations with all stakeholders. When plans need to change, as can occur, we identify this early and present the customer with a range of options to get to an acceptable outcome for all.",
+        "over": "Pulling an 80-hour week for a low-impact deadline in the grand scheme."
+      }
+    },
+    {
+      "id": "invent-and-simplify",
+      "name": "Invent and simplify",
+      "sort": 6,
+      "definition": "We expect and require innovation from our teams and always find ways to simplify. We are externally aware, look for new ideas from everywhere, and are not limited by “not invented here.” We practice 'love every idea for at least 5 minutes'. As we do new things, we accept that we may be misunderstood for long periods of time.",
+      "expected": {
+        "under": "You regularly and immediately shoot down \"obviously stupid ideas\" in order to save time.",
+        "justRight": "You allow 5 minutes to positively explore crazy ideas and all the reasons why they could work. Only then do you decide to pursue or reject. You exercise good judgment in how often and deeply you do this. You regularly zoom out to ask \"Is this the best way to solve this problem?\"",
+        "over": "You spend half your time chasing ideas and neglect your other duties and deliverables."
+      }
+    },
+    {
+      "id": "bias-for-action",
+      "name": "Bias for action",
+      "sort": 7,
+      "definition": "Speed matters in business. Many decisions and actions are reversible and do not need extensive study. We value calculated risk-taking.",
+      "expected": {
+        "under": "\"Analysis paralysis\"",
+        "justRight": "We apply a good level of thinking to the magnitude of the problem and plan appropriately. Our planning time never takes up more than 5-10% of our execution time, i.e. a 1-week task can be planned in less than a few hours.",
+        "over": "We do work without thinking. We usually end up working on something that turns out to be useless."
+      }
+    },
+    {
+      "id": "earn-trust",
+      "name": "Earn trust",
+      "sort": 8,
+      "definition": "We do what we say. We listen attentively, speak candidly, and treat others respectfully. We are humble enough to recognize our own mistakes and commit to improving.",
+      "expected": {
+        "under": "Our word is worthless. We change plans without telling anyone. We talk over and past one another. We refuse to recognize our own faults when something we work on just fails.",
+        "justRight": "When a major flaw in someone's analysis is suspected, instead of pointing it out at the most inconvenient time, such as a design review with the CTO, you raise your concern as soon as possible, ideally in person, such that they can address the issue, without causing a lot of 'noise' (especially because you might be wrong in your own analysis!). If possible, you approach someone with a grievance personally before escalating the matter to your superiors.",
+        "over": "We over-communicate every detail. We speak candidly, but in an offensive way, with poor timing, or in inappropriate settings. We are \"respectful\" to the point where we do not say what we really think."
+      }
+    },
+    {
+      "id": "better-than-yesterday",
+      "name": "Better than yesterday",
+      "sort": 9,
+      "definition": "1% better each day, 5 days a week, is 11x better a year. We take small gains every day, even if big ones are 'just around the corner'. In that way, we build towards the highest standards, and achieve goals many think are impossible.",
+      "expected": {
+        "under": "We don't bother making simple improvements to our products, processes and workspaces. We find that we are doing the same grind one year to the next.",
+        "justRight": "We take every opportunity to improve without jeopardizing key deliverables. We achieve gains on a daily basis and celebrate when others make even small improvements.",
+        "over": "We spend so much time improving that we miss key deadlines."
+      }
+    },
+    {
+      "id": "hire-and-develop-the-best",
+      "name": "Hire and develop the best",
+      "sort": 10,
+      "definition": "We raise the performance bar with every hire and promotion. We recognize exceptional talent, and willingly move them throughout the organization. We develop leaders and take seriously their role in coaching others. We work on behalf of our people to invent mechanisms for development like Career Choice.",
+      "expected": {
+        "under": "Not dedicating time to hiring. Locking exceptional people down to a niche rather than letting them spread their culture throughout the company. Letting errors always slip by without encouraging learning from mistakes. Leaning heavily on HR to make hiring decisions without providing meaningful input or engaging actively in the hiring process.",
+        "justRight": "Skillfully balances immediate project needs with the longer-term goal of staff development. Provides mobility to team members within the company to allow them to develop, and seeks it themselves. Regularly recognizes and rewards high performers. Gives frequent feedback to everyone they have regular contact with, not just those who are struggling or excelling. Makes a positive situation out of bad results. Creating positive learning moments out of errors without disempowering or overloading.",
+        "over": "Pushing employees into roles or promotions before they are ready. Spending so much time on training sessions, workshops, and seminars that core responsibilities get neglected. Making an example of every minor error in an effort to teach, especially at inopportune times."
+      }
+    },
+    {
+      "id": "have-backbone-disagree-and-commit",
+      "name": "Have Backbone; Disagree and commit",
+      "sort": 11,
+      "definition": "We are obligated to respectfully challenge decisions when we disagree, even when doing so is uncomfortable. We have conviction and are tenacious. We do not compromise for the sake of social cohesion. Once a decision is determined, we commit wholly. We keep on moving forward, together.",
+      "expected": {
+        "under": "Withholding new information that indicates the present path is sub-optimal. Getting emotionally caught up in a decision that is not yours, e.g. when a decision-maker goes against your advice.",
+        "justRight": "Raising new ideas. Ensuring they are heard for at least 5 minutes, then moving forward with whatever the conclusion is. Argue hard to make sure your point is understood, understand why a decision has been made, then direct your energy into making the chosen solution work.",
+        "over": "Raising every tiny issue that you could have solved yourself with minimal involvement of others. Continuing to dispute a decision without presenting new justification for why the decision should be changed."
+      }
+    },
+    {
+      "id": "respect-time",
+      "name": "Respect time",
+      "sort": 12,
+      "definition": "Time is our most constrained resource, so we are cognisant of it in everything we do and every interaction we have with others. We take our own time to communicate clearly before amplifying noise and consuming others' time. We always consider spending more money to save time. Dawn recognizes the need for overtime on an irregular basis but respects the need for employees to have recovery time to ensure their own well-being.",
+      "expected": {
+        "under": "We always arrive 10 min late to meetings.",
+        "justRight": "We are punctual and prepared for meetings.",
+        "over": "We are unforgiving when plans change, schedules slip for good reasons, or colleagues make minor organizational screwups."
+      }
+    },
+    {
+      "id": "scrappy-not-crappy",
+      "name": "Scrappy, not crappy",
+      "sort": 13,
+      "definition": "We strive to get maximum value by being as lean as possible in everything we do. But we are not afraid to spend the time and effort required to make sure our work is fit for purpose. We understand that tension and constantly refine our work to be everything it needs to be, and nothing more.",
+      "expected": {
+        "under": "\"I am only 'finished' when it's perfect.\" \"I'll buy a year's worth of spare parts because they aren't that expensive, but I have no idea if we'll actually need them.\" Overanalyzing using FEA when a simple hand calculation would have been sufficient.",
+        "justRight": "My work is everything it needs to be. The customer is happy, and I am moving on to the next job. The \"back of the envelope\" assessment says we'll need 3-5 of these this year and they won't be obsolete by then, so I'll get 4. Thorough analysis when it yields benefit. Simple when that is sufficient.",
+        "over": "Not bothering to check if my work really meets my customer's needs. Just giving it to them and hoping for the best. \"I won't buy spare parts until we need them, but then we end up with excess downtime waiting for replacement parts to arrive.\" Guessing geometry without thinking about load paths and just \"see if it breaks\"."
+      }
+    },
+    {
+      "id": "rocket-engineering-not-rocket-science",
+      "name": "Rocket engineering, not rocket science",
+      "sort": 14,
+      "definition": "We are a product company that builds what customers love. A scientific method is an invaluable tool to design better things, but the science itself is rarely the point. We keep the product and the customer in mind.",
+      "expected": {
+        "under": "Wanting to do a deep dive into every detail of what we are doing, even if that aspect of the design is not very impactful on the overall performance.",
+        "justRight": "We have a healthy respect for difficult problems but are selective about which ones we delve deep into and solve at the root. We often make do with a lack of understanding when faced with short-term challenges we know we will solve in the long term in some other way.",
+        "over": "Avoiding the fundamental understanding needed to conquer an issue that is core to our IP. Trying to solve the problem through brute force trial and error."
+      }
+    },
+    {
+      "id": "race-on-the-racetrack-walk-on-ice",
+      "name": "Race on the racetrack, walk on ice",
+      "sort": 15,
+      "definition": "Our work involves a wide spectrum of activities, from early-stage RnD to certified flight systems. We are acutely aware of the differing demands and opportunities each of these environments presents us, and of which environment we are in. We are agile and adaptable in our thinking, and thus able to move from one environment to the next quickly without conflating these worlds.",
+      "expected": {
+        "under": "We falsely apply RnD methods and a cavalier attitude in flight-critical situations, and \"flight\" rigor with overzealous controls in an R&D environment.",
+        "justRight": "When a major issue on a flight system comes up, we quickly assess if it is safety-critical, mission-critical, or will just result in a loss of performance which may be acceptable. We apply the appropriate level of rigor to the situation and move forward with confidence. Real example from SpaceX: a crack was found in a second-stage engine nozzle. Analysis showed the cracked section could be cut off with acceptable performance loss. A technician climbed inside a fully integrated rocket on the launch pad to cut off a cracked section with tin snips. The next day, the mission flew flawlessly. Months of delay were saved. https://www.elonx.net/spacex-stories-how-spacex-used-tin-snips-to-fix-a-rocket/",
+        "over": "We cannot tolerate innovation or change, even ones that make sense and can be demonstrated as acceptable risks when in flight-critical situations. We stifle innovation at the most critical moments."
+      }
+    }
+  ]
+}

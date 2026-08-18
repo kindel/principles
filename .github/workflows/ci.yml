@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # The schema contract. Also fails when data/index.json has drifted from
+      # the records, which is the mistake a human cannot see in a diff.
+      - name: Validate the corpus
+        run: python3 scripts/validate.py
+
+      - name: Run the tests
+        run: python3 -m unittest discover -s tests -v
+
+      # The manifest is generated. If regenerating it changes anything, the
+      # committed copy was hand edited or stale.
+      - name: Check the manifest is what the generator produces
+        run: |
+          python3 scripts/build_index.py
+          git diff --exit-code data/index.json
