@@ -185,10 +185,10 @@ one triple per principle gives one row, and the rest are authored alongside it.
 Recording which is which is the point: mixing the two voices inside `rows` with
 nothing to tell them apart is the thing this field exists to prevent.
 
-`words` is also the hold-out marker. `eval/` keeps company-written calibration
+`words` is also the hold-out marker. `holdout/` keeps company-written calibration
 as a golden set for scoring a row generator, and a generator that reads this
 corpus for examples must skip every `quoted` row or it is scoring itself. See
-`eval/README.md`.
+`holdout/README.md`.
 
 ### Style
 

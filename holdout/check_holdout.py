@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Guard the held-out calibration in eval/golden/.
+"""Guard the held-out calibration in holdout/golden/.
 
 The fixtures here are the only calibration in this repository written by a
 company rather than by us. They are worth something only for as long as no
@@ -23,6 +23,9 @@ people can read it, because a generator can and must skip it. See SCHEMA.md.
 
 Neither check can see a prompt. Paste a fixture into a generator as few-shot
 examples and nothing here will notice.
+
+This is not the eval. It keeps the fixture clean; scoring a generator against
+it belongs to the app that generates rows, which is kindel/porridge.
 """
 
 import json
@@ -31,7 +34,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-GOLDEN = ROOT / "eval" / "golden"
+GOLDEN = ROOT / "holdout" / "golden"
 DATA = ROOT / "data"
 
 SETTINGS = ("under", "justRight", "over")
@@ -78,7 +81,7 @@ def load_rows():
 def main():
     golden_by_company, golden = load_golden()
     if not golden:
-        print("no fixtures under eval/golden/, nothing to protect", file=sys.stderr)
+        print("no fixtures under holdout/golden/, nothing to protect", file=sys.stderr)
         return 1
 
     authored = []

@@ -120,8 +120,12 @@ data/delivery-hero/<id>.json one Delivery Hero principle
 data/gitlab/<id>.json        one GitLab value
 scripts/build_index.py       regenerates the manifest
 scripts/validate.py          enforces SCHEMA.md
+holdout/                     company-written calibration, held out
 SCHEMA.md                    the contract
 ```
+
+Apps that generate rows, and the evals that score them, live in the apps.
+`holdout/` is the data they score against and the guarantee that it is clean.
 
 ## Use it
 
