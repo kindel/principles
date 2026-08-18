@@ -18,6 +18,21 @@
       "kind": "alias"
     },
     {
+      "id": "energy",
+      "label": "energy",
+      "kind": "alias"
+    },
+    {
+      "id": "sustainable-pace",
+      "label": "sustainable pace",
+      "kind": "alias"
+    },
+    {
+      "id": "long-term",
+      "label": "long term",
+      "kind": "alias"
+    },
+    {
       "id": "sustain-momentum",
       "label": "sustain momentum",
       "kind": "equivalent"

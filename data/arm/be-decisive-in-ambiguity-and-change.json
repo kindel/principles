@@ -18,6 +18,26 @@
       "kind": "alias"
     },
     {
+      "id": "decisive",
+      "label": "decisive",
+      "kind": "alias"
+    },
+    {
+      "id": "ambiguity",
+      "label": "ambiguity",
+      "kind": "alias"
+    },
+    {
+      "id": "vague-ideas",
+      "label": "vague ideas",
+      "kind": "alias"
+    },
+    {
+      "id": "execution-plan",
+      "label": "execution plan",
+      "kind": "alias"
+    },
+    {
       "id": "concrete-execution-plans",
       "label": "concrete execution plans",
       "kind": "equivalent"

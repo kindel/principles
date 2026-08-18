@@ -18,6 +18,16 @@
       "kind": "alias"
     },
     {
+      "id": "how-will-we-win",
+      "label": "how will we win",
+      "kind": "alias"
+    },
+    {
+      "id": "delivery-vs-perfection",
+      "label": "delivery vs perfection",
+      "kind": "alias"
+    },
+    {
       "id": "how-can-this-be-better",
       "label": "how can this be better",
       "kind": "equivalent"
