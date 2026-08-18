@@ -18,6 +18,16 @@
       "kind": "alias"
     },
     {
+      "id": "passion",
+      "label": "passion",
+      "kind": "alias"
+    },
+    {
+      "id": "mission",
+      "label": "mission",
+      "kind": "alias"
+    },
+    {
       "id": "internalize-the-strategy",
       "label": "internalize the strategy",
       "kind": "equivalent"

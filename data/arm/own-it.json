@@ -13,6 +13,21 @@
       "kind": "alias"
     },
     {
+      "id": "accountable",
+      "label": "accountable",
+      "kind": "alias"
+    },
+    {
+      "id": "do-not-wait",
+      "label": "do not wait",
+      "kind": "alias"
+    },
+    {
+      "id": "solutions-not-problems",
+      "label": "solutions not problems",
+      "kind": "alias"
+    },
+    {
       "id": "accountable-for-the-outcome",
       "label": "accountable for the outcome",
       "kind": "equivalent"

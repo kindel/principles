@@ -13,6 +13,11 @@
       "kind": "alias"
     },
     {
+      "id": "challenge",
+      "label": "challenge",
+      "kind": "alias"
+    },
+    {
       "id": "independent-thinking",
       "label": "independent thinking",
       "kind": "equivalent"
@@ -21,6 +26,11 @@
       "id": "back-yourself",
       "label": "back yourself",
       "kind": "equivalent"
+    },
+    {
+      "id": "drive-the-decision",
+      "label": "drive the decision",
+      "kind": "alias"
     }
   ],
   "rows": [
