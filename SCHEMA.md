@@ -137,7 +137,8 @@ facet share the rows mapped to that facet.
 
 - `id` is kebab-case, unique across all facets.
 - `label` is the human name, and `id` must be its slug.
-- `principles` lists numeric principle ids from any company. At least one.
+- `principles` lists numeric principle ids from any company, including multiple
+  principles from the same company. At least one.
 - `rows` lists the examples for this facet. Each points at an existing row on an
   existing record by `principle` id and row `id`. At least one.
 
