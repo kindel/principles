@@ -1,0 +1,45 @@
+{
+  "id": "break-down-silos",
+  "company": "dawn",
+  "group": "collaboration-and-communication",
+  "name": "Break down silos",
+  "sort": 3,
+  "definition": "We work constructively and positively with people in the company no matter which location, division, project, or team they might be in today. We share what we know freely, ask when we don’t know, and refrain from using \"us and them\" words. We proactively communicate across the natural silos that do form and are acutely aware that we succeed or fail together.",
+  "terms": [
+    {
+      "id": "break-down-silos",
+      "label": "break down silos",
+      "kind": "alias"
+    },
+    {
+      "id": "silos",
+      "label": "silos",
+      "kind": "alias"
+    },
+    {
+      "id": "us-and-them",
+      "label": "us and them",
+      "kind": "alias"
+    },
+    {
+      "id": "work-across-teams",
+      "label": "work across teams",
+      "kind": "equivalent"
+    },
+    {
+      "id": "default-to-open",
+      "label": "default to open",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Deciding who gets access",
+      "under": "Create a private Slack channel for a project that affects many internal stakeholders. Company-wide support systems are closed, intransparent, and hinge on one person that knows how to work the system being present.",
+      "justRight": "Creating a new public Slack channel is in line with Dawn guidelines. Invite key stakeholders only. Everyone has access to data and systems unless there is a good reason for them not to. You leave your office door open whenever you can to let others come in to discuss problems.",
+      "over": "Create an open Slack channel, and add the whole company. Welcome everyone with @channel. Company-wide systems (e.g. HR incl. salaries) are openly accessible to anyone with no access control.",
+      "words": "quoted"
+    }
+  ]
+}

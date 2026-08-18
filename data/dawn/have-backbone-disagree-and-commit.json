@@ -1,0 +1,40 @@
+{
+  "id": "have-backbone-disagree-and-commit",
+  "company": "dawn",
+  "group": "agility-and-action",
+  "name": "Have Backbone; Disagree and commit",
+  "sort": 11,
+  "definition": "We are obligated to respectfully challenge decisions when we disagree, even when doing so is uncomfortable. We have conviction and are tenacious. We do not compromise for the sake of social cohesion. Once a decision is determined, we commit wholly. We keep on moving forward, together.",
+  "terms": [
+    {
+      "id": "have-backbone",
+      "label": "have backbone",
+      "kind": "alias"
+    },
+    {
+      "id": "disagree-and-commit",
+      "label": "disagree and commit",
+      "kind": "alias"
+    },
+    {
+      "id": "challenge-decisions",
+      "label": "challenge decisions",
+      "kind": "equivalent"
+    },
+    {
+      "id": "social-cohesion",
+      "label": "social cohesion",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Disagreeing with a decision",
+      "under": "Withholding new information that indicates the present path is sub-optimal. Getting emotionally caught up in a decision that is not yours, e.g. when a decision-maker goes against your advice.",
+      "justRight": "Raising new ideas. Ensuring they are heard for at least 5 minutes, then moving forward with whatever the conclusion is. Argue hard to make sure your point is understood, understand why a decision has been made, then direct your energy into making the chosen solution work.",
+      "over": "Raising every tiny issue that you could have solved yourself with minimal involvement of others. Continuing to dispute a decision without presenting new justification for why the decision should be changed.",
+      "words": "quoted"
+    }
+  ]
+}

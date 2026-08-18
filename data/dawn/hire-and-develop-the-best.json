@@ -1,0 +1,45 @@
+{
+  "id": "hire-and-develop-the-best",
+  "company": "dawn",
+  "group": "talent-and-development",
+  "name": "Hire and develop the best",
+  "sort": 10,
+  "definition": "We raise the performance bar with every hire and promotion. We recognize exceptional talent, and willingly move them throughout the organization. We develop leaders and take seriously their role in coaching others. We work on behalf of our people to invent mechanisms for development like Career Choice.",
+  "terms": [
+    {
+      "id": "hire-and-develop-the-best",
+      "label": "hire and develop the best",
+      "kind": "alias"
+    },
+    {
+      "id": "raise-the-bar",
+      "label": "raise the bar",
+      "kind": "alias"
+    },
+    {
+      "id": "career-choice",
+      "label": "career choice",
+      "kind": "alias"
+    },
+    {
+      "id": "develop-leaders",
+      "label": "develop leaders",
+      "kind": "equivalent"
+    },
+    {
+      "id": "coach-others",
+      "label": "coach others",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Growing the people you work with",
+      "under": "Not dedicating time to hiring. Locking exceptional people down to a niche rather than letting them spread their culture throughout the company. Letting errors always slip by without encouraging learning from mistakes. Leaning heavily on HR to make hiring decisions without providing meaningful input or engaging actively in the hiring process.",
+      "justRight": "Skillfully balances immediate project needs with the longer-term goal of staff development. Provides mobility to team members within the company to allow them to develop, and seeks it themselves. Regularly recognizes and rewards high performers. Gives frequent feedback to everyone they have regular contact with, not just those who are struggling or excelling. Makes a positive situation out of bad results. Creating positive learning moments out of errors without disempowering or overloading.",
+      "over": "Pushing employees into roles or promotions before they are ready. Spending so much time on training sessions, workshops, and seminars that core responsibilities get neglected. Making an example of every minor error in an effort to teach, especially at inopportune times.",
+      "words": "quoted"
+    }
+  ]
+}

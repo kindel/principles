@@ -1,0 +1,40 @@
+{
+  "id": "better-than-yesterday",
+  "company": "dawn",
+  "group": "innovation-and-continuous-improvement",
+  "name": "Better than yesterday",
+  "sort": 9,
+  "definition": "1% better each day, 5 days a week, is 11x better a year. We take small gains every day, even if big ones are 'just around the corner'. In that way, we build towards the highest standards, and achieve goals many think are impossible.",
+  "terms": [
+    {
+      "id": "better-than-yesterday",
+      "label": "better than yesterday",
+      "kind": "alias"
+    },
+    {
+      "id": "one-percent-better",
+      "label": "one percent better",
+      "kind": "alias"
+    },
+    {
+      "id": "continuous-improvement",
+      "label": "continuous improvement",
+      "kind": "equivalent"
+    },
+    {
+      "id": "highest-standards",
+      "label": "highest standards",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Making small improvements",
+      "under": "We don't bother making simple improvements to our products, processes and workspaces. We find that we are doing the same grind one year to the next.",
+      "justRight": "We take every opportunity to improve without jeopardizing key deliverables. We achieve gains on a daily basis and celebrate when others make even small improvements.",
+      "over": "We spend so much time improving that we miss key deadlines.",
+      "words": "quoted"
+    }
+  ]
+}

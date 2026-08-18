@@ -1,0 +1,40 @@
+{
+  "id": "no-surprises",
+  "company": "dawn",
+  "group": "ownership-and-accountability",
+  "name": "No surprises",
+  "sort": 5,
+  "definition": "Our goals have dates, or at least dates for dates. We deliver when we say, or inform stakeholders when we know a date will slip. There are no surprises.",
+  "terms": [
+    {
+      "id": "no-surprises",
+      "label": "no surprises",
+      "kind": "alias"
+    },
+    {
+      "id": "dates-for-dates",
+      "label": "dates for dates",
+      "kind": "alias"
+    },
+    {
+      "id": "deliver-when-you-say",
+      "label": "deliver when you say",
+      "kind": "equivalent"
+    },
+    {
+      "id": "manage-expectations",
+      "label": "manage expectations",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Committing to a date",
+      "under": "We refuse to give answers on when or to what standard something will be done. Deliverable dates and specifications are fuzzily defined, so that slip can easily be explained away.",
+      "justRight": "You regularly update your stakeholders on whether or not you are on track. You actively take ownership to manage expectations with all stakeholders. When plans need to change, as can occur, we identify this early and present the customer with a range of options to get to an acceptable outcome for all.",
+      "over": "Pulling an 80-hour week for a low-impact deadline in the grand scheme.",
+      "words": "quoted"
+    }
+  ]
+}

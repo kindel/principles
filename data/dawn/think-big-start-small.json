@@ -1,0 +1,40 @@
+{
+  "id": "think-big-start-small",
+  "company": "dawn",
+  "group": "strategic-approach",
+  "name": "Think big, start small",
+  "sort": 1,
+  "definition": "We start small and test early. As we scale, we frequently zoom out to ensure we remain on track toward our grand mission.",
+  "terms": [
+    {
+      "id": "think-big-start-small",
+      "label": "Think big, start small",
+      "kind": "alias"
+    },
+    {
+      "id": "start-small",
+      "label": "start small",
+      "kind": "alias"
+    },
+    {
+      "id": "think-big",
+      "label": "think big",
+      "kind": "equivalent"
+    },
+    {
+      "id": "zoom-out",
+      "label": "zoom out",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Matching today's work to the mission",
+      "under": "We forget the point of what we are doing and don't know how it helps the company. We work on something that will only help us in 10 years' time.",
+      "justRight": "We know what we are trying to achieve over the next 1, 5, and 10 years. We directly match the work that we are doing today to how it helps us walk this road. The scale that we are working at is well-matched to the resources that we have. We only bite off as much as we can chew...or maybe just a little more.",
+      "over": "We try to build a warp drive from day 1. We start at a scale that is not interesting and not relevant to what we want to prove in the end.",
+      "words": "quoted"
+    }
+  ]
+}

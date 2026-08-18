@@ -1,0 +1,40 @@
+{
+  "id": "respect-time",
+  "company": "dawn",
+  "group": "ownership-and-accountability",
+  "name": "Respect time",
+  "sort": 12,
+  "definition": "Time is our most constrained resource, so we are cognisant of it in everything we do and every interaction we have with others. We take our own time to communicate clearly before amplifying noise and consuming others' time. We always consider spending more money to save time. Dawn recognizes the need for overtime on an irregular basis but respects the need for employees to have recovery time to ensure their own well-being.",
+  "terms": [
+    {
+      "id": "respect-time",
+      "label": "respect time",
+      "kind": "alias"
+    },
+    {
+      "id": "most-constrained-resource",
+      "label": "most constrained resource",
+      "kind": "alias"
+    },
+    {
+      "id": "spend-money-to-save-time",
+      "label": "spend money to save time",
+      "kind": "equivalent"
+    },
+    {
+      "id": "punctual",
+      "label": "punctual",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Turning up to meetings",
+      "under": "We always arrive 10 min late to meetings.",
+      "justRight": "We are punctual and prepared for meetings.",
+      "over": "We are unforgiving when plans change, schedules slip for good reasons, or colleagues make minor organizational screwups.",
+      "words": "quoted"
+    }
+  ]
+}

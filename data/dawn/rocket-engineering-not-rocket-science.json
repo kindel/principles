@@ -1,0 +1,40 @@
+{
+  "id": "rocket-engineering-not-rocket-science",
+  "company": "dawn",
+  "group": "strategic-approach",
+  "name": "Rocket engineering, not rocket science",
+  "sort": 14,
+  "definition": "We are a product company that builds what customers love. A scientific method is an invaluable tool to design better things, but the science itself is rarely the point. We keep the product and the customer in mind.",
+  "terms": [
+    {
+      "id": "rocket-engineering-not-rocket-science",
+      "label": "rocket engineering, not rocket science",
+      "kind": "alias"
+    },
+    {
+      "id": "rocket-engineering",
+      "label": "rocket engineering",
+      "kind": "alias"
+    },
+    {
+      "id": "product-company",
+      "label": "product company",
+      "kind": "equivalent"
+    },
+    {
+      "id": "keep-the-customer-in-mind",
+      "label": "keep the customer in mind",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Choosing what to understand deeply",
+      "under": "Wanting to do a deep dive into every detail of what we are doing, even if that aspect of the design is not very impactful on the overall performance.",
+      "justRight": "We have a healthy respect for difficult problems but are selective about which ones we delve deep into and solve at the root. We often make do with a lack of understanding when faced with short-term challenges we know we will solve in the long term in some other way.",
+      "over": "Avoiding the fundamental understanding needed to conquer an issue that is core to our IP. Trying to solve the problem through brute force trial and error.",
+      "words": "quoted"
+    }
+  ]
+}

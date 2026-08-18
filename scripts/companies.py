@@ -36,4 +36,12 @@ COMPANY_META = collections.OrderedDict([
         "set": "CREDIT Values",
         "source": "https://handbook.gitlab.com/handbook/values/",
     }),
+    ("dawn", {
+        "name": "Dawn Aerospace",
+        "set": "Company Tenets",
+        # Not on dawnaerospace.com. Dawn's internal wiki, exported to
+        # "Dawn Aerospace Company Tenets.docx" and published here with Dawn's
+        # permission. See Sourcing in SCHEMA.md.
+        "source": "Dawn Aerospace Company Tenets, Dawn's internal wiki, published with Dawn's permission",
+    }),
 ])

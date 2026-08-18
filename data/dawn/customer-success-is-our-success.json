@@ -1,0 +1,40 @@
+{
+  "id": "customer-success-is-our-success",
+  "company": "dawn",
+  "group": "customer-focus",
+  "name": "Customer success is our success",
+  "sort": 2,
+  "definition": "If our customers are successful, then it will shine on us as well. We strive to understand our customers and ensure that they are successful in their mission too. This applies equally to internal and external customers.",
+  "terms": [
+    {
+      "id": "customer-success",
+      "label": "customer success",
+      "kind": "alias"
+    },
+    {
+      "id": "customer-obsession",
+      "label": "customer obsession",
+      "kind": "equivalent"
+    },
+    {
+      "id": "work-backwards-from-the-customer",
+      "label": "work backwards from the customer",
+      "kind": "equivalent"
+    },
+    {
+      "id": "internal-customer",
+      "label": "internal customer",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Knowing who the customer is",
+      "under": "We don't know who the customer is for our work, nor do we care.",
+      "justRight": "We understand the core need of what we are doing. We get clear expectations from our external customers at regular intervals, e.g. project kickoff, PDR, CDR, etc. We talk to them if major changes occur. We recognize that EVERYONE has a customer, and thus do the same for internal customers too!",
+      "over": "We are constantly asking all stakeholders for input on every decision. We deflect from taking ownership of product decisions ourselves by always pointing to a customer need. As a result, our products are overkill for almost all customers and impossible to make.",
+      "words": "quoted"
+    }
+  ]
+}
