@@ -86,7 +86,7 @@ class FixtureTest(unittest.TestCase):
                 for key in SETTINGS:
                     self.assertTrue(
                         p["expected"].get(key),
-                        "%s/%s is missing %s" % (company, p["id"], key))
+                        "%s/%s is missing %s" % (company, p["slug"], key))
 
     def test_sort_is_one_through_n_with_no_gaps(self):
         for company, doc in self.fixtures.items():
@@ -95,9 +95,9 @@ class FixtureTest(unittest.TestCase):
 
     def test_the_named_traps_exist(self):
         for company, doc in self.fixtures.items():
-            ids = {p["id"] for p in doc["principles"]}
+            slugs = {p["slug"] for p in doc["principles"]}
             for trap in doc.get("traps", []):
-                self.assertIn(trap["principle"], ids, company)
+                self.assertIn(trap["principle"], slugs, company)
 
     # The one that would be easy to lose in a reformat, and the one the whole
     # fixture is most valuable for: Dawn inverts the usual polarity, because
@@ -105,7 +105,8 @@ class FixtureTest(unittest.TestCase):
     def test_dawn_scrappy_keeps_its_inverted_polarity(self):
         dawn = self.fixtures.get("dawn")
         self.assertIsNotNone(dawn, "the Dawn fixture is gone")
-        p = next(x for x in dawn["principles"] if x["id"] == "scrappy-not-crappy")
+        p = next(x for x in dawn["principles"]
+                 if x["slug"] == "scrappy-not-crappy")
         self.assertIn("only 'finished' when it's perfect", p["expected"]["under"])
         self.assertIn("hoping for the best", p["expected"]["over"])
 
@@ -134,12 +135,12 @@ class QuotationTest(unittest.TestCase):
             # the one thing this test exists to prevent.
             expected = next(
                 (p["expected"] for p in fixture["principles"]
-                 if p["id"] == doc["id"]), None)
+                 if p["slug"] == doc["slug"]), None)
             self.assertIsNotNone(
                 expected,
                 "%s is quoted and %s has a fixture, but the fixture has no %r, "
                 "so the quotation is unverified"
-                % (where, doc["company"], doc["id"]))
+                % (where, doc["company"], doc["slug"]))
 
             for key in SETTINGS:
                 self.assertEqual(
@@ -151,7 +152,7 @@ class QuotationTest(unittest.TestCase):
         for company, doc in self.fixtures.items():
             for p in doc["principles"]:
                 for key in SETTINGS:
-                    golden.append(("%s/%s %s" % (company, p["id"], key),
+                    golden.append(("%s/%s %s" % (company, p["slug"], key),
                                    shingles(p["expected"][key])))
 
         for where, _, row in self.rows:
@@ -180,6 +181,12 @@ class DocumentationTest(unittest.TestCase):
         self.assertIsNotNone(listed, "SCHEMA.md no longer lists the companies")
         named = set(re.findall(r"`([a-z-]+)`", listed.group(1)))
         self.assertEqual(set(COMPANY_META), named)
+
+    def test_schema_lists_the_block_each_company_owns(self):
+        for cid, meta in COMPANY_META.items():
+            self.assertIn(
+                str(meta["block"]), self.schema,
+                "SCHEMA.md does not name %s's block, %d" % (cid, meta["block"]))
 
     def test_schema_describes_every_value_words_accepts(self):
         for value in validate.WORDS:

@@ -49,14 +49,15 @@ def main():
             ("source", meta["source"]),
             ("principles", [collections.OrderedDict([
                 ("id", r["id"]),
+                ("slug", r["slug"]),
                 ("name", r["name"]),
                 ("sort", r["sort"]),
-                ("file", "data/%s/%s.json" % (cid, r["id"])),
+                ("file", "data/%s/%s.json" % (cid, r["slug"])),
             ]) for r in records]),
         ]))
 
     index = collections.OrderedDict([
-        ("version", 2),
+        ("version", 3),
         ("generated", "scripts/build_index.py"),
         ("companies", companies),
     ])

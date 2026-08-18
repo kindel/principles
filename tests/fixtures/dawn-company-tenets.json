@@ -17,7 +17,8 @@
   "shape": {
     "triplesPerPrinciple": 1,
     "situation": "Dawn's table gives one triple per tenet with no situation label, so `situation` is absent here. When #14 lands, each triple becomes one row marked `words: \"quoted\"` with a situation label we write, and four or more authored rows join it to meet the five-to-12 minimum. Those authored rows are what a generator produces and what this fixture scores.",
-    "holdOut": "These rows are the reference generated rows are measured against, so a generator must not read them as examples. tests/test_corpus.py checks what it can from files: no quoted row edited away from this fixture, and no authored row reusing a company's wording. The generator and the eval live in kindel/porridge, and so does the check that a prompt is clean."
+    "holdOut": "These rows are the reference generated rows are measured against, so a generator must not read them as examples. tests/test_corpus.py checks what it can from files: no quoted row edited away from this fixture, and no authored row reusing a company's wording. The generator and the eval live in kindel/porridge, and so does the check that a prompt is clean.",
+    "identity": "Entries are keyed by slug, not by the numbered id records carry. This is a snapshot of what Dawn published, and Dawn did not number its tenets."
   },
   "traps": [
     {
@@ -43,7 +44,7 @@
   ],
   "principles": [
     {
-      "id": "think-big-start-small",
+      "slug": "think-big-start-small",
       "name": "Think big, start small",
       "sort": 1,
       "definition": "We start small and test early. As we scale, we frequently zoom out to ensure we remain on track toward our grand mission.",
@@ -54,7 +55,7 @@
       }
     },
     {
-      "id": "customer-success-is-our-success",
+      "slug": "customer-success-is-our-success",
       "name": "Customer success is our success",
       "sort": 2,
       "definition": "If our customers are successful, then it will shine on us as well. We strive to understand our customers and ensure that they are successful in their mission too. This applies equally to internal and external customers.",
@@ -65,7 +66,7 @@
       }
     },
     {
-      "id": "break-down-silos",
+      "slug": "break-down-silos",
       "name": "Break down silos",
       "sort": 3,
       "definition": "We work constructively and positively with people in the company no matter which location, division, project, or team they might be in today. We share what we know freely, ask when we don’t know, and refrain from using \"us and them\" words. We proactively communicate across the natural silos that do form and are acutely aware that we succeed or fail together.",
@@ -76,7 +77,7 @@
       }
     },
     {
-      "id": "ownership",
+      "slug": "ownership",
       "name": "Ownership",
       "sort": 4,
       "definition": "We take ownership of our work. We think long-term and bias toward long-term value over short-term results. We act on behalf of the entire company, beyond just our own team.",
@@ -87,7 +88,7 @@
       }
     },
     {
-      "id": "no-surprises",
+      "slug": "no-surprises",
       "name": "No surprises",
       "sort": 5,
       "definition": "Our goals have dates, or at least dates for dates. We deliver when we say, or inform stakeholders when we know a date will slip. There are no surprises.",
@@ -98,7 +99,7 @@
       }
     },
     {
-      "id": "invent-and-simplify",
+      "slug": "invent-and-simplify",
       "name": "Invent and simplify",
       "sort": 6,
       "definition": "We expect and require innovation from our teams and always find ways to simplify. We are externally aware, look for new ideas from everywhere, and are not limited by “not invented here.” We practice 'love every idea for at least 5 minutes'. As we do new things, we accept that we may be misunderstood for long periods of time.",
@@ -109,7 +110,7 @@
       }
     },
     {
-      "id": "bias-for-action",
+      "slug": "bias-for-action",
       "name": "Bias for action",
       "sort": 7,
       "definition": "Speed matters in business. Many decisions and actions are reversible and do not need extensive study. We value calculated risk-taking.",
@@ -120,7 +121,7 @@
       }
     },
     {
-      "id": "earn-trust",
+      "slug": "earn-trust",
       "name": "Earn trust",
       "sort": 8,
       "definition": "We do what we say. We listen attentively, speak candidly, and treat others respectfully. We are humble enough to recognize our own mistakes and commit to improving.",
@@ -131,7 +132,7 @@
       }
     },
     {
-      "id": "better-than-yesterday",
+      "slug": "better-than-yesterday",
       "name": "Better than yesterday",
       "sort": 9,
       "definition": "1% better each day, 5 days a week, is 11x better a year. We take small gains every day, even if big ones are 'just around the corner'. In that way, we build towards the highest standards, and achieve goals many think are impossible.",
@@ -142,7 +143,7 @@
       }
     },
     {
-      "id": "hire-and-develop-the-best",
+      "slug": "hire-and-develop-the-best",
       "name": "Hire and develop the best",
       "sort": 10,
       "definition": "We raise the performance bar with every hire and promotion. We recognize exceptional talent, and willingly move them throughout the organization. We develop leaders and take seriously their role in coaching others. We work on behalf of our people to invent mechanisms for development like Career Choice.",
@@ -153,7 +154,7 @@
       }
     },
     {
-      "id": "have-backbone-disagree-and-commit",
+      "slug": "have-backbone-disagree-and-commit",
       "name": "Have Backbone; Disagree and commit",
       "sort": 11,
       "definition": "We are obligated to respectfully challenge decisions when we disagree, even when doing so is uncomfortable. We have conviction and are tenacious. We do not compromise for the sake of social cohesion. Once a decision is determined, we commit wholly. We keep on moving forward, together.",
@@ -164,7 +165,7 @@
       }
     },
     {
-      "id": "respect-time",
+      "slug": "respect-time",
       "name": "Respect time",
       "sort": 12,
       "definition": "Time is our most constrained resource, so we are cognisant of it in everything we do and every interaction we have with others. We take our own time to communicate clearly before amplifying noise and consuming others' time. We always consider spending more money to save time. Dawn recognizes the need for overtime on an irregular basis but respects the need for employees to have recovery time to ensure their own well-being.",
@@ -175,7 +176,7 @@
       }
     },
     {
-      "id": "scrappy-not-crappy",
+      "slug": "scrappy-not-crappy",
       "name": "Scrappy, not crappy",
       "sort": 13,
       "definition": "We strive to get maximum value by being as lean as possible in everything we do. But we are not afraid to spend the time and effort required to make sure our work is fit for purpose. We understand that tension and constantly refine our work to be everything it needs to be, and nothing more.",
@@ -186,7 +187,7 @@
       }
     },
     {
-      "id": "rocket-engineering-not-rocket-science",
+      "slug": "rocket-engineering-not-rocket-science",
       "name": "Rocket engineering, not rocket science",
       "sort": 14,
       "definition": "We are a product company that builds what customers love. A scientific method is an invaluable tool to design better things, but the science itself is rarely the point. We keep the product and the customer in mind.",
@@ -197,7 +198,7 @@
       }
     },
     {
-      "id": "race-on-the-racetrack-walk-on-ice",
+      "slug": "race-on-the-racetrack-walk-on-ice",
       "name": "Race on the racetrack, walk on ice",
       "sort": 15,
       "definition": "Our work involves a wide spectrum of activities, from early-stage RnD to certified flight systems. We are acutely aware of the differing demands and opportunities each of these environments presents us, and of which environment we are in. We are agile and adaptable in our thinking, and thus able to move from one environment to the next quickly without conflating these worlds.",

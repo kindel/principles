@@ -37,7 +37,8 @@ def row(i, **kw):
 
 def record(company="amazon", rows=None, **kw):
     rec = {
-        "id": "a-principle",
+        "id": 1001,
+        "slug": "a-principle",
         "company": company,
         "name": "A Principle",
         "sort": 1,
@@ -71,13 +72,38 @@ class ValidatorTest(unittest.TestCase):
     def test_a_good_record_passes(self):
         self.assertClean(record())
 
-    def test_id_must_match_the_filename(self):
+    def test_slug_must_match_the_filename(self):
         self.assertCaught(record(), "does not match the filename",
                           filename="something-else.json")
 
     def test_company_must_match_the_directory(self):
         rec = record(company="amazon")
         self.assertCaught(rec, "does not match the directory", company="coupang")
+
+    # The id carries identity, so it is the one field that has to be a number
+    # and has to sit in its owner's block. A string id is what version 2 had,
+    # and a record still carrying one should say so plainly.
+    def test_a_string_id_is_rejected(self):
+        rec = record()
+        rec["id"] = "a-principle"
+        self.assertCaught(rec, "is not a number")
+
+    def test_an_id_outside_the_company_block_is_rejected(self):
+        rec = record(company="amazon")
+        rec["id"] = 6004
+        self.assertCaught(rec, "outside amazon's block")
+
+    def test_the_block_boundaries_themselves_are_not_valid_ids(self):
+        for pid in (1000, 2000):
+            rec = record(company="amazon")
+            rec["id"] = pid
+            self.assertCaught(rec, "outside amazon's block")
+
+    # A bool is an int in Python, and `id: true` should not pass for it.
+    def test_a_boolean_id_is_rejected(self):
+        rec = record()
+        rec["id"] = True
+        self.assertCaught(rec, "is not a number")
 
     # The rule that was written down and unenforced. Only companies that
     # publish their set under lenses carry `group`.
@@ -86,10 +112,13 @@ class ValidatorTest(unittest.TestCase):
                           "do not carry group")
 
     def test_group_is_required_where_the_company_has_lenses(self):
-        self.assertCaught(record(company="arm"), "require group")
+        rec = record(company="arm")
+        rec["id"] = 2001
+        self.assertCaught(rec, "require group")
 
     def test_group_must_match_the_lens_the_sort_falls_in(self):
         rec = record(company="arm", sort=1, group="accelerate-impact")
+        rec["id"] = 2001
         self.assertCaught(rec, "does not match sort")
 
     # The schema's one real claim is that a principle decomposes into behavior

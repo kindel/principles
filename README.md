@@ -114,7 +114,7 @@ reason.
 ## Layout
 
 ```
-data/index.json              manifest, generated, version 2
+data/index.json              manifest, generated, version 3
 data/amazon/<id>.json        one Amazon principle
 data/arm/<id>.json           one Arm factor
 data/coupang/<id>.json       one Coupang principle

@@ -1,5 +1,6 @@
 {
-  "id": "customer-obsession",
+  "id": 1001,
+  "slug": "customer-obsession",
   "company": "amazon",
   "name": "Customer Obsession",
   "sort": 1,
