@@ -26,15 +26,25 @@ table gives one triple per tenet with no situation label, so there is no
 
 ## The rule
 
-**Golden text does not appear under `data/`.**
+**Golden text does not appear in an authored row.**
 
-A generator that reads the corpus for examples sees everything in `data/`. Land
-Dawn's calibration there and the eval is scoring a model on its own input.
-Few-shot examples and the eval set cannot be the same rows.
+A generator reads the corpus for examples. Whatever it may read is its input,
+and its input cannot also be its exam.
 
-`check_holdout.py` enforces this. It compares every golden string against every
-row in `data/` on eight-word shingles, which catches the copy and the light
-paraphrase:
+The hold-out is not "keep Dawn's rows out of `data/`". Dawn's calibration is
+going into `data/dawn/` when #14 lands, and it should: it is the best writing
+in the corpus and people should be able to read it. It goes in marked
+`words: "quoted"`, and the contract on a generator is that it skips every
+quoted row. Provenance per row is what makes that possible, and it is the
+reason the hold-out survives the set being published.
+
+`check_holdout.py` enforces two things:
+
+- **No leak.** No golden string overlaps an authored row on eight-word
+  shingles, which catches the copy and the light paraphrase.
+- **No drift.** A quoted row must match the fixture exactly where a fixture
+  covers the same principle. A mismatch means a quotation was edited, or one of
+  the two transcriptions is wrong.
 
 ```
 python3 eval/check_holdout.py
@@ -42,16 +52,14 @@ python3 eval/check_holdout.py
 
 Two of Dawn's strings are shorter than eight words -- "Analysis paralysis" and
 "We are punctual and prepared for meetings." -- and cannot be fingerprinted.
-The check reports them by name rather than passing over them.
+The check names them rather than passing over them. "Analysis paralysis" is
+already in three Amazon rows written long before Dawn was on the list, which is
+a fair demonstration that a two-word idiom proves nothing.
 
-The check cannot see a prompt. If Dawn's rows are pasted into a generator as
-few-shot examples, nothing here will notice, and the eval is dead. If Dawn's
-voice is wanted in a prompt, split the set: some tenets seed, the rest score,
-and never mix.
-
-This matters for #14. Dawn's set is going to land in `data/dawn/`, and the
-calibration is the reason it is valuable. The fixture is captured here first so
-that the value survives the set being added.
+Neither check can see a prompt. Paste Dawn's rows into a generator as few-shot
+examples and nothing here will notice, and the eval is dead. If Dawn's voice is
+wanted in a prompt, split the set: some tenets seed, the rest score, and never
+mix.
 
 ## Scoring
 

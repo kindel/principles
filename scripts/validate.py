@@ -16,6 +16,7 @@ from companies import COMPANY_META
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 KINDS = ("alias", "equivalent", "facet")
+WORDS = ("quoted", "authored")
 SLUG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 # Sentence break for the one-to-three-sentence rule. Terminal punctuation may
 # be followed by a closing quote or bracket before the space, as in
@@ -135,8 +136,17 @@ def validate_record(company, filename, rec, errs):
                 errs.append("%s: group %r does not match sort %s (expected %s)"
                             % (where, group, rec.get("sort"), want))
 
+    rows = rec.get("rows", [])
+    # `words` is all or nothing within a record. A record with any quoted
+    # calibration marks every row, so reading one file is enough to know whose
+    # words each row is.
+    marked = [r for r in rows if "words" in r]
+    if marked and len(marked) != len(rows):
+        errs.append("%s: %d of %d rows carry words, mark all of them or none"
+                    % (where, len(marked), len(rows)))
+
     row_ids = set()
-    for r in rec.get("rows", []):
+    for r in rows:
         if not SLUG.match(r.get("id", "")):
             errs.append("%s: row id %r is not kebab-case" % (where, r.get("id")))
         if r.get("id") in row_ids:
@@ -145,6 +155,14 @@ def validate_record(company, filename, rec, errs):
         for key in ("situation", "under", "justRight", "over"):
             if not r.get(key):
                 errs.append("%s: row %r missing %r" % (where, r.get("id"), key))
+        if "words" in r and r["words"] not in WORDS:
+            errs.append("%s: row %r has words %r, expected one of %s"
+                        % (where, r.get("id"), r.get("words"), ", ".join(WORDS)))
+        # Quoted calibration is the company's writing, so the sentence rule
+        # does not apply to it, the same way it does not apply to definition.
+        # The situation label is ours either way.
+        if r.get("words") == "quoted":
+            continue
         for key in ("under", "justRight", "over"):
             text = (r.get(key) or "").strip()
             if not text:
@@ -153,9 +171,8 @@ def validate_record(company, filename, rec, errs):
             if not 1 <= n <= 3:
                 errs.append("%s: row %r %s has %d sentences, expected one to three"
                             % (where, r.get("id"), key, n))
-    if not 5 <= len(rec.get("rows", [])) <= 12:
-        errs.append("%s: has %d rows, expected five to 12"
-                    % (where, len(rec.get("rows", []))))
+    if not 5 <= len(rows) <= 12:
+        errs.append("%s: has %d rows, expected five to 12" % (where, len(rows)))
 
     local = set()
     for t in rec.get("terms", []):
@@ -262,10 +279,12 @@ def main():
 
     n_principles = sum(len(items) for items in by_company.values())
     n_rows = 0
+    n_quoted = 0
     kinds = {}
     for items in by_company.values():
         for _, rec in items:
             n_rows += len(rec["rows"])
+            n_quoted += sum(1 for r in rec["rows"] if r.get("words") == "quoted")
             for t in rec["terms"]:
                 kinds[t["kind"]] = kinds.get(t["kind"], 0) + 1
     print("OK: %d companies, %d principles, %d rows, %d terms (%s)"
@@ -274,6 +293,8 @@ def main():
              n_rows,
              sum(kinds.values()),
              ", ".join("%s %d" % kv for kv in sorted(kinds.items()))))
+    print("rows: %d authored, %d quoted from the company"
+          % (n_rows - n_quoted, n_quoted))
 
     # Not an error. An id is unique within a company and nowhere else, so a
     # consumer keys on (company, id). Printing the collisions keeps that
