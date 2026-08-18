@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "facets": [
+    {
+      "id": "acts-like-an-owner",
+      "label": "acts like an owner",
+      "principles": [1002, 2008, 4001, 6004],
+      "rows": [
+        { "principle": 1002, "id": "knowing-what-you-own" },
+        { "principle": 1002, "id": "credit-and-blame" },
+        { "principle": 1002, "id": "unowned-blockers" },
+        { "principle": 1002, "id": "holding-responsibility" },
+        { "principle": 1002, "id": "owning-dependencies" },
+        { "principle": 1002, "id": "tough-decisions" },
+        { "principle": 1002, "id": "long-term-bets" },
+        { "principle": 1002, "id": "problems-outside-your-area" },
+        { "principle": 2008, "id": "accountable-for-the-outcome" },
+        { "principle": 2008, "id": "waiting-for-instructions" },
+        { "principle": 2008, "id": "bringing-solutions" },
+        { "principle": 2008, "id": "unowned-work" },
+        { "principle": 2008, "id": "after-a-miss" },
+        { "principle": 4001, "id": "problem-with-no-owner" },
+        { "principle": 4001, "id": "short-term-versus-long" },
+        { "principle": 4001, "id": "extra-mile" },
+        { "principle": 4001, "id": "spending-the-companys-money" },
+        { "principle": 4001, "id": "after-a-failure" },
+        { "principle": 4001, "id": "local-versus-global" },
+        { "principle": 6004, "id": "dawns-own-example" }
+      ]
+    },
+    {
+      "id": "better-every-day",
+      "label": "better every day",
+      "principles": [1007, 6009],
+      "rows": [
+        { "principle": 1007, "id": "tracking-goals" },
+        { "principle": 1007, "id": "confronting-issues" },
+        { "principle": 6009, "id": "dawns-own-example" }
+      ]
+    },
+    {
+      "id": "bias-for-action",
+      "label": "bias for action",
+      "principles": [1009, 6007],
+      "rows": [
+        { "principle": 1009, "id": "team-effectiveness" },
+        { "principle": 1009, "id": "step-up" },
+        { "principle": 1009, "id": "follow-through" },
+        { "principle": 1009, "id": "fear-of-wrong" },
+        { "principle": 1009, "id": "motion-vs-progress" },
+        { "principle": 1009, "id": "prototype" },
+        { "principle": 1009, "id": "input-and-reversibility" },
+        { "principle": 1009, "id": "customer-pain" },
+        { "principle": 6007, "id": "dawns-own-example" }
+      ]
+    },
+    {
+      "id": "customer-obsession",
+      "label": "customer obsession",
+      "principles": [1001, 3001, 6002],
+      "rows": [
+        { "principle": 1001, "id": "decision-making" },
+        { "principle": 1001, "id": "collecting-and-responding-to-feedback" },
+        { "principle": 1001, "id": "setting-priorities-and-delivering-results" },
+        { "principle": 1001, "id": "responding-to-a-complaint" },
+        { "principle": 1001, "id": "accidental-overcharge" },
+        { "principle": 1001, "id": "responding-to-customer-comments" },
+        { "principle": 1001, "id": "product-design" },
+        { "principle": 3001, "id": "starting-a-project" },
+        { "principle": 3001, "id": "metric-vs-experience" },
+        { "principle": 3001, "id": "complaints" },
+        { "principle": 3001, "id": "internal-convenience" },
+        { "principle": 3001, "id": "trust-vs-quarter" },
+        { "principle": 3001, "id": "speaking-for-the-customer" },
+        { "principle": 6002, "id": "dawns-own-example" }
+      ]
+    },
+    {
+      "id": "dive-deep",
+      "label": "dive deep",
+      "principles": [1012, 3004, 4002],
+      "rows": [
+        { "principle": 1012, "id": "unit-economics" },
+        { "principle": 1012, "id": "metrics-review" },
+        { "principle": 1012, "id": "unusual-metric" },
+        { "principle": 1012, "id": "good-results" },
+        { "principle": 1012, "id": "sleeves" },
+        { "principle": 1012, "id": "all-levels" },
+        { "principle": 1012, "id": "drivers-not-minutiae" },
+        { "principle": 1012, "id": "symptoms-vs-root" },
+        { "principle": 1012, "id": "business-case" },
+        { "principle": 1012, "id": "facts-not-i-think" },
+        { "principle": 3004, "id": "metric-you-did-not-build" },
+        { "principle": 3004, "id": "anecdote-vs-data" },
+        { "principle": 3004, "id": "escalation-from-the-floor" },
+        { "principle": 3004, "id": "delegating-with-detail" },
+        { "principle": 3004, "id": "after-an-incident" },
+        { "principle": 3004, "id": "no-task-beneath-us" },
+        { "principle": 4002, "id": "the-number-in-the-deck" },
+        { "principle": 4002, "id": "how-it-really-works" },
+        { "principle": 4002, "id": "surprising-result" },
+        { "principle": 4002, "id": "operating-detail" },
+        { "principle": 4002, "id": "delegated-work" },
+        { "principle": 4002, "id": "recurring-issue" }
+      ]
+    },
+    {
+      "id": "earn-trust",
+      "label": "earn trust",
+      "principles": [1011, 6008],
+      "rows": [
+        { "principle": 1011, "id": "vocally-self-critical" },
+        { "principle": 1011, "id": "upward-and-the-team" },
+        { "principle": 1011, "id": "hiding-vs-dwelling" },
+        { "principle": 1011, "id": "listen-and-candor" },
+        { "principle": 1011, "id": "respect-for-peers" },
+        { "principle": 1011, "id": "hard-promises" },
+        { "principle": 1011, "id": "call-it-like-it-is" },
+        { "principle": 1011, "id": "humility-and-the-bar" },
+        { "principle": 1011, "id": "feedback-both-ways" },
+        { "principle": 1011, "id": "no-politics" },
+        { "principle": 6008, "id": "dawns-own-example" }
+      ]
+    },
+    {
+      "id": "have-backbone-disagree-and-commit",
+      "label": "have backbone, disagree and commit",
+      "principles": [1013, 6011],
+      "rows": [
+        { "principle": 1013, "id": "speak-with-an-alternative" },
+        { "principle": 1013, "id": "data-then-commit" },
+        { "principle": 1013, "id": "escalate-then-commit" },
+        { "principle": 1013, "id": "conviction-and-commit" },
+        { "principle": 1013, "id": "issue-not-person" },
+        { "principle": 1013, "id": "style-in-the-room" },
+        { "principle": 1013, "id": "after-the-decision" },
+        { "principle": 1013, "id": "social-cohesion" },
+        { "principle": 1013, "id": "failed-path" },
+        { "principle": 1013, "id": "manager-translation" },
+        { "principle": 6011, "id": "dawns-own-example" }
+      ]
+    },
+    {
+      "id": "hire-and-develop-the-best",
+      "label": "hire and develop the best",
+      "principles": [1006, 3008, 6010],
+      "rows": [
+        { "principle": 1006, "id": "new-hire-quality" },
+        { "principle": 1006, "id": "underperformers-and-stretch" },
+        { "principle": 1006, "id": "mentoring-beyond-your-team" },
+        { "principle": 1006, "id": "principles-over-function" },
+        { "principle": 1006, "id": "raising-the-bar" },
+        { "principle": 1006, "id": "exporting-talent" },
+        { "principle": 1006, "id": "hiring-for-a-deadline" },
+        { "principle": 1006, "id": "goal-setting-with-employees" },
+        { "principle": 1006, "id": "coaching-follow-up" },
+        { "principle": 1006, "id": "hiring-bigger" },
+        { "principle": 3008, "id": "open-role-pressure" },
+        { "principle": 3008, "id": "hiring-for-the-gap" },
+        { "principle": 3008, "id": "strong-performer-stuck" },
+        { "principle": 3008, "id": "promotion-bar" },
+        { "principle": 3008, "id": "underperformance" },
+        { "principle": 3008, "id": "developing-others" },
+        { "principle": 6010, "id": "dawns-own-example" }
+      ]
+    },
+    {
+      "id": "invent-and-simplify",
+      "label": "invent and simplify",
+      "principles": [1003, 6006],
+      "rows": [
+        { "principle": 1003, "id": "complexity-vs-novelty" },
+        { "principle": 1003, "id": "scalability-thinking" },
+        { "principle": 1003, "id": "product-simplicity" },
+        { "principle": 1003, "id": "team-independence" },
+        { "principle": 1003, "id": "maintainable-features" },
+        { "principle": 1003, "id": "build-vs-buy" },
+        { "principle": 1003, "id": "simplifying-a-process" },
+        { "principle": 1003, "id": "bureaucracy-vs-novelty" },
+        { "principle": 1003, "id": "purpose-of-innovation" },
+        { "principle": 6006, "id": "dawns-own-example" }
+      ]
+    }
+  ]
+}

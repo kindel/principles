@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "generated": "scripts/build_index.py",
   "companies": [
     {
@@ -13,21 +13,30 @@
           "slug": "customer-obsession",
           "name": "Customer Obsession",
           "sort": 1,
-          "file": "data/amazon/customer-obsession.json"
+          "file": "data/amazon/customer-obsession.json",
+          "facets": [
+            "customer-obsession"
+          ]
         },
         {
           "id": 1002,
           "slug": "ownership",
           "name": "Ownership",
           "sort": 2,
-          "file": "data/amazon/ownership.json"
+          "file": "data/amazon/ownership.json",
+          "facets": [
+            "acts-like-an-owner"
+          ]
         },
         {
           "id": 1003,
           "slug": "invent-and-simplify",
           "name": "Invent and Simplify",
           "sort": 3,
-          "file": "data/amazon/invent-and-simplify.json"
+          "file": "data/amazon/invent-and-simplify.json",
+          "facets": [
+            "invent-and-simplify"
+          ]
         },
         {
           "id": 1004,
@@ -48,14 +57,20 @@
           "slug": "hire-and-develop-the-best",
           "name": "Hire and Develop the Best",
           "sort": 6,
-          "file": "data/amazon/hire-and-develop-the-best.json"
+          "file": "data/amazon/hire-and-develop-the-best.json",
+          "facets": [
+            "hire-and-develop-the-best"
+          ]
         },
         {
           "id": 1007,
           "slug": "insist-on-the-highest-standards",
           "name": "Insist on the Highest Standards",
           "sort": 7,
-          "file": "data/amazon/insist-on-the-highest-standards.json"
+          "file": "data/amazon/insist-on-the-highest-standards.json",
+          "facets": [
+            "better-every-day"
+          ]
         },
         {
           "id": 1008,
@@ -69,7 +84,10 @@
           "slug": "bias-for-action",
           "name": "Bias for Action",
           "sort": 9,
-          "file": "data/amazon/bias-for-action.json"
+          "file": "data/amazon/bias-for-action.json",
+          "facets": [
+            "bias-for-action"
+          ]
         },
         {
           "id": 1010,
@@ -83,21 +101,30 @@
           "slug": "earn-trust",
           "name": "Earn Trust",
           "sort": 11,
-          "file": "data/amazon/earn-trust.json"
+          "file": "data/amazon/earn-trust.json",
+          "facets": [
+            "earn-trust"
+          ]
         },
         {
           "id": 1012,
           "slug": "dive-deep",
           "name": "Dive Deep",
           "sort": 12,
-          "file": "data/amazon/dive-deep.json"
+          "file": "data/amazon/dive-deep.json",
+          "facets": [
+            "dive-deep"
+          ]
         },
         {
           "id": 1013,
           "slug": "have-backbone-disagree-and-commit",
           "name": "Have Backbone; Disagree and Commit",
           "sort": 13,
-          "file": "data/amazon/have-backbone-disagree-and-commit.json"
+          "file": "data/amazon/have-backbone-disagree-and-commit.json",
+          "facets": [
+            "have-backbone-disagree-and-commit"
+          ]
         },
         {
           "id": 1014,
@@ -168,7 +195,10 @@
           "slug": "own-it",
           "name": "Own it",
           "sort": 8,
-          "file": "data/arm/own-it.json"
+          "file": "data/arm/own-it.json",
+          "facets": [
+            "acts-like-an-owner"
+          ]
         },
         {
           "id": 2009,
@@ -197,7 +227,10 @@
           "slug": "wow-the-customer",
           "name": "Wow the Customer",
           "sort": 1,
-          "file": "data/coupang/wow-the-customer.json"
+          "file": "data/coupang/wow-the-customer.json",
+          "facets": [
+            "customer-obsession"
+          ]
         },
         {
           "id": 3002,
@@ -218,7 +251,10 @@
           "slug": "dive-deep",
           "name": "Dive Deep",
           "sort": 4,
-          "file": "data/coupang/dive-deep.json"
+          "file": "data/coupang/dive-deep.json",
+          "facets": [
+            "dive-deep"
+          ]
         },
         {
           "id": 3005,
@@ -246,7 +282,10 @@
           "slug": "hire-and-develop-the-best",
           "name": "Hire and Develop the Best",
           "sort": 8,
-          "file": "data/coupang/hire-and-develop-the-best.json"
+          "file": "data/coupang/hire-and-develop-the-best.json",
+          "facets": [
+            "hire-and-develop-the-best"
+          ]
         },
         {
           "id": 3009,
@@ -310,14 +349,20 @@
           "slug": "own-it",
           "name": "Own It",
           "sort": 1,
-          "file": "data/delivery-hero/own-it.json"
+          "file": "data/delivery-hero/own-it.json",
+          "facets": [
+            "acts-like-an-owner"
+          ]
         },
         {
           "id": 4002,
           "slug": "dive-deep",
           "name": "Dive Deep",
           "sort": 2,
-          "file": "data/delivery-hero/dive-deep.json"
+          "file": "data/delivery-hero/dive-deep.json",
+          "facets": [
+            "dive-deep"
+          ]
         },
         {
           "id": 4003,
@@ -417,7 +462,10 @@
           "slug": "customer-success-is-our-success",
           "name": "Customer success is our success",
           "sort": 2,
-          "file": "data/dawn/customer-success-is-our-success.json"
+          "file": "data/dawn/customer-success-is-our-success.json",
+          "facets": [
+            "customer-obsession"
+          ]
         },
         {
           "id": 6003,
@@ -431,7 +479,10 @@
           "slug": "ownership",
           "name": "Ownership",
           "sort": 4,
-          "file": "data/dawn/ownership.json"
+          "file": "data/dawn/ownership.json",
+          "facets": [
+            "acts-like-an-owner"
+          ]
         },
         {
           "id": 6005,
@@ -445,42 +496,60 @@
           "slug": "invent-and-simplify",
           "name": "Invent and simplify",
           "sort": 6,
-          "file": "data/dawn/invent-and-simplify.json"
+          "file": "data/dawn/invent-and-simplify.json",
+          "facets": [
+            "invent-and-simplify"
+          ]
         },
         {
           "id": 6007,
           "slug": "bias-for-action",
           "name": "Bias for action",
           "sort": 7,
-          "file": "data/dawn/bias-for-action.json"
+          "file": "data/dawn/bias-for-action.json",
+          "facets": [
+            "bias-for-action"
+          ]
         },
         {
           "id": 6008,
           "slug": "earn-trust",
           "name": "Earn trust",
           "sort": 8,
-          "file": "data/dawn/earn-trust.json"
+          "file": "data/dawn/earn-trust.json",
+          "facets": [
+            "earn-trust"
+          ]
         },
         {
           "id": 6009,
           "slug": "better-than-yesterday",
           "name": "Better than yesterday",
           "sort": 9,
-          "file": "data/dawn/better-than-yesterday.json"
+          "file": "data/dawn/better-than-yesterday.json",
+          "facets": [
+            "better-every-day"
+          ]
         },
         {
           "id": 6010,
           "slug": "hire-and-develop-the-best",
           "name": "Hire and develop the best",
           "sort": 10,
-          "file": "data/dawn/hire-and-develop-the-best.json"
+          "file": "data/dawn/hire-and-develop-the-best.json",
+          "facets": [
+            "hire-and-develop-the-best"
+          ]
         },
         {
           "id": 6011,
           "slug": "have-backbone-disagree-and-commit",
           "name": "Have Backbone; Disagree and commit",
           "sort": 11,
-          "file": "data/dawn/have-backbone-disagree-and-commit.json"
+          "file": "data/dawn/have-backbone-disagree-and-commit.json",
+          "facets": [
+            "have-backbone-disagree-and-commit"
+          ]
         },
         {
           "id": 6012,
