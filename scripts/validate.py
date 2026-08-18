@@ -16,7 +16,7 @@ from companies import COMPANY_META
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 KINDS = ("alias", "equivalent", "facet")
-WORDS = ("quoted", "authored")
+WORDS = ("quoted", "authored", "generated")
 SLUG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 # Sentence break for the one-to-three-sentence rule. Terminal punctuation may
 # be followed by a closing quote or bracket before the space, as in
@@ -92,7 +92,8 @@ def load_records(errs):
                             % (name, f))
                 continue
             try:
-                rec = json.load(open(fpath))
+                with open(fpath, encoding="utf-8") as fh:
+                    rec = json.load(fh)
             except ValueError as e:
                 errs.append("data/%s/%s: not valid JSON, %s" % (name, f, e))
                 continue
@@ -255,7 +256,8 @@ def main():
         errs.append("data/index.json is missing")
     else:
         try:
-            index = json.load(open(index_path))
+            with open(index_path, encoding="utf-8") as fh:
+                index = json.load(fh)
         except ValueError as e:
             errs.append("data/index.json: not valid JSON, %s" % e)
             index = None
@@ -279,12 +281,13 @@ def main():
 
     n_principles = sum(len(items) for items in by_company.values())
     n_rows = 0
-    n_quoted = 0
+    whose = collections.Counter()
     kinds = {}
     for items in by_company.values():
         for _, rec in items:
             n_rows += len(rec["rows"])
-            n_quoted += sum(1 for r in rec["rows"] if r.get("words") == "quoted")
+            for r in rec["rows"]:
+                whose[r.get("words", "authored")] += 1
             for t in rec["terms"]:
                 kinds[t["kind"]] = kinds.get(t["kind"], 0) + 1
     print("OK: %d companies, %d principles, %d rows, %d terms (%s)"
@@ -293,8 +296,8 @@ def main():
              n_rows,
              sum(kinds.values()),
              ", ".join("%s %d" % kv for kv in sorted(kinds.items()))))
-    print("rows: %d authored, %d quoted from the company"
-          % (n_rows - n_quoted, n_quoted))
+    print("rows by whose words: %s"
+          % ", ".join("%s %d" % (k, whose[k]) for k in WORDS if whose[k]))
 
     # Not an error. An id is unique within a company and nowhere else, so a
     # consumer keys on (company, id). Printing the collisions keeps that

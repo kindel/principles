@@ -162,10 +162,10 @@ The calibration taxonomy, and the anchor a facet points at.
   describe one behavior under indexed, balanced, and over done.
 - Row ids are unique within a principle. A facet may only reference a row on
   its own principle.
-- `words` records whose words the calibration is, `quoted` or `authored`. It is
-  optional, and a row without it is `authored`. When any row in a record is
-  `quoted`, every row in that record carries `words`, so that a reader of one
-  file never has to infer it.
+- `words` records whose words the calibration is: `quoted` for the company's,
+  `authored` for a person's, `generated` for a tool's. It is optional, and a row
+  without it is `authored`. When any row in a record carries `words`, every row
+  in that record carries it, so a reader of one file never has to infer it.
 
 `words` describes `under`, `justRight`, and `over`. The `situation` label is
 always ours, because it names the row rather than quoting the company, and it
@@ -185,10 +185,13 @@ one triple per principle gives one row, and the rest are authored alongside it.
 Recording which is which is the point: mixing the two voices inside `rows` with
 nothing to tell them apart is the thing this field exists to prevent.
 
-`words` is also the hold-out marker. `holdout/` keeps company-written calibration
-as a golden set for scoring a row generator, and a generator that reads this
-corpus for examples must skip every `quoted` row or it is scoring itself. See
-`holdout/README.md`.
+`generated` exists because rows will be generated. `kindel/porridge` is where
+that happens, and its output generalizes the human-written rows across
+companies. A generated row that arrives here marked `authored` is
+indistinguishable from a person's work, and the next generator trains on it.
+Marking it is what keeps the human-written rows identifiable as the reference
+they are, and what lets a generator skip the rows it should not be reading. See
+`tests/README.md` and kindel/porridge#3.
 
 ### Style
 

@@ -107,7 +107,8 @@ somebody else's account of a set, however faithful the reproduction looks.
 
 Where a company has written its own calibration, that is transcribed too and
 marked `words: "quoted"`, so the company's words and ours never blur together
-inside one record.
+inside one record. Rows a tool writes are marked `generated` for the same
+reason.
 
 ## Layout
 
@@ -120,12 +121,14 @@ data/delivery-hero/<id>.json one Delivery Hero principle
 data/gitlab/<id>.json        one GitLab value
 scripts/build_index.py       regenerates the manifest
 scripts/validate.py          enforces SCHEMA.md
-holdout/                     company-written calibration, held out
+tests/                       what CI runs, and the calibration it checks against
+.github/workflows/ci.yml     validate, test, and check the manifest
 SCHEMA.md                    the contract
 ```
 
-Apps that generate rows, and the evals that score them, live in the apps.
-`holdout/` is the data they score against and the guarantee that it is clean.
+Generating rows, and judging generated rows, belong in the apps. `tests/` keeps
+a copy of the human-written calibration those apps generalize from, and uses it
+to check that the model can still express the real thing. See `tests/README.md`.
 
 ## Use it
 

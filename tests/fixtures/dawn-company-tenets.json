@@ -17,7 +17,7 @@
   "shape": {
     "triplesPerPrinciple": 1,
     "situation": "Dawn's table gives one triple per tenet with no situation label, so `situation` is absent here. When #14 lands, each triple becomes one row marked `words: \"quoted\"` with a situation label we write, and four or more authored rows join it to meet the five-to-12 minimum. Those authored rows are what a generator produces and what this fixture scores.",
-    "holdOut": "A generator reading data/ for examples must skip every row marked `words: \"quoted\"`. holdout/check_holdout.py enforces the rest: no golden string in an authored row, and no drift between a quoted row and this file. The generator and the eval that scores it live in kindel/porridge, not here."
+    "holdOut": "These rows are the reference generated rows are measured against, so a generator must not read them as examples. tests/test_corpus.py checks what it can from files: no quoted row edited away from this fixture, and no authored row reusing a company's wording. The generator and the eval live in kindel/porridge, and so does the check that a prompt is clean."
   },
   "traps": [
     {
