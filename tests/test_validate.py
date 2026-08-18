@@ -92,31 +92,17 @@ class ValidatorTest(unittest.TestCase):
         rec = record(company="arm", sort=1, group="accelerate-impact")
         self.assertCaught(rec, "does not match sort")
 
-    def test_too_few_rows(self):
-        self.assertCaught(record(rows=[row(i) for i in range(4)]),
-                          "expected five to 12")
+    # The schema's one real claim is that a principle decomposes into behavior
+    # you can observe. A record with no rows makes that claim and does not keep
+    # it. How many rows past one is judgment, not a rule.
+    def test_a_record_with_no_rows_is_rejected(self):
+        self.assertCaught(record(rows=[]), "has no rows")
 
-    def test_too_many_rows(self):
-        self.assertCaught(record(rows=[row(i) for i in range(13)]),
-                          "expected five to 12")
+    def test_one_row_is_enough(self):
+        self.assertClean(record(rows=[row(0)]))
 
-    # A company that published one triple per principle gets one row. Padding
-    # it up to five with our prose would put two voices in one list.
-    def test_a_record_of_only_quoted_rows_is_exempt_from_the_minimum(self):
-        self.assertClean(record(rows=[row(0, words="quoted")]))
-
-    # The exemption is all or nothing. Writing in the record ends it.
-    def test_one_authored_row_beside_a_quoted_one_owes_the_full_five(self):
-        rows = [row(0, words="quoted"), row(1, words="authored")]
-        self.assertCaught(record(rows=rows), "expected five to 12")
-
-    def test_a_quoted_row_plus_four_authored_meets_the_minimum(self):
-        rows = [row(0, words="quoted")] + [row(i, words="authored")
-                                           for i in range(1, 5)]
-        self.assertClean(record(rows=rows))
-
-    def test_the_exemption_does_not_apply_without_words(self):
-        self.assertCaught(record(rows=[row(0)]), "expected five to 12")
+    def test_many_rows_are_fine(self):
+        self.assertClean(record(rows=[row(i) for i in range(20)]))
 
     def test_an_authored_row_may_not_run_long(self):
         rows = [row(i) for i in range(5)]
