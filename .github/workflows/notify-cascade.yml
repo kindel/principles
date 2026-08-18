@@ -1,0 +1,24 @@
+name: Notify cascade
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "scripts/companies.py"
+      - ".kindel/**"
+      - ".github/workflows/notify-cascade.yml"
+      - ".github/scripts/dispatch.sh"
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ping consumers and the site
+        env:
+          CASCADE_TOKEN: ${{ secrets.CASCADE_TOKEN }}
+          SOURCE_REPO: ${{ github.repository }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: bash .github/scripts/dispatch.sh .kindel/consumers.txt
