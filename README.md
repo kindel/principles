@@ -115,12 +115,12 @@ reason.
 
 ```
 data/index.json              manifest, generated, version 3
-data/amazon/<id>.json        one Amazon principle
-data/arm/<id>.json           one Arm factor
-data/coupang/<id>.json       one Coupang principle
-data/delivery-hero/<id>.json one Delivery Hero principle
-data/gitlab/<id>.json        one GitLab value
-data/dawn/<id>.json          one Dawn Aerospace tenet
+data/amazon/<slug>.json        one Amazon principle
+data/arm/<slug>.json           one Arm factor
+data/coupang/<slug>.json       one Coupang principle
+data/delivery-hero/<slug>.json one Delivery Hero principle
+data/gitlab/<slug>.json        one GitLab value
+data/dawn/<slug>.json          one Dawn Aerospace tenet
 scripts/build_index.py       regenerates the manifest
 scripts/validate.py          enforces SCHEMA.md
 tests/                       what CI runs, and the calibration it checks against
