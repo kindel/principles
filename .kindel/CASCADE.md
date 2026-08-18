@@ -39,3 +39,13 @@ Amazon aliases stay `/lps/<slug>/` and `/porridge/<slug>/`. Other companies get 
 ### BIQ shells
 
 Keep or add `slug` for the readable name. The `id` is the number. Match existing rows by slug when migrating, then by numeric id. New companies land with `examples: false` and empty questions. Do not generate packs.
+
+### Facet map
+
+A consumer that shows examples uses the facet map, not company-local rows alone.
+
+- Read facet ids from the principle entry in `index.json` (the `facets` array).
+- Read row refs from `data/facets.json` for those facets.
+- A principle's examples are the union of rows on every facet that lists it.
+- Do not copy row prose into the map. Do not rewrite rows.
+- `words` on a row stays unchanged: `quoted` rows are the company's writing.

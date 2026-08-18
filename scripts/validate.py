@@ -95,8 +95,8 @@ def load_records(errs):
         if name.startswith("."):
             continue
         if os.path.isfile(path):
-            if name != "index.json":
-                errs.append("data/%s: only index.json may sit directly under data/"
+            if name not in ("index.json", "facets.json"):
+                errs.append("data/%s: only index.json and facets.json may sit directly under data/"
                             % name)
             continue
         if not os.path.isdir(path):
@@ -245,25 +245,113 @@ def validate_record(company, filename, rec, errs):
     return row_ids
 
 
-def expected_index(by_company):
+def load_facets(errs):
+    """Load data/facets.json if it exists, validating its basic structure."""
+    path = os.path.join(DATA, "facets.json")
+    if not os.path.exists(path):
+        errs.append("data/facets.json is missing")
+        return None
+    try:
+        with open(path, encoding="utf-8") as fh:
+            facets = json.load(fh)
+    except ValueError as e:
+        errs.append("data/facets.json: not valid JSON, %s" % e)
+        return None
+    return facets
+
+
+def validate_facets(facets, principle_rows, errs):
+    """Validate facets.json against the principle records.
+
+    principle_rows is a dict mapping principle id to the set of row ids on
+    that principle.
+    """
+    if facets is None:
+        return {}
+
+    if facets.get("version") != 1:
+        errs.append("data/facets.json: version must be 1, got %r"
+                    % facets.get("version"))
+
+    if not isinstance(facets.get("facets"), list):
+        errs.append("data/facets.json: facets must be an array")
+        return {}
+
+    seen_ids = set()
+    principle_to_facets = collections.defaultdict(list)
+
+    for f in facets.get("facets", []):
+        fid = f.get("id", "")
+        where = "data/facets.json facet %r" % fid
+
+        if not SLUG.match(fid):
+            errs.append("%s: id is not kebab-case" % where)
+        if fid in seen_ids:
+            errs.append("%s: duplicate facet id" % where)
+        seen_ids.add(fid)
+
+        label = f.get("label", "")
+        if not label:
+            errs.append("%s: missing label" % where)
+        elif slug(label) != fid:
+            errs.append("%s: id %r is not the slug of label %r"
+                        % (where, fid, label))
+
+        principles = f.get("principles", [])
+        if not principles:
+            errs.append("%s: must list at least one principle" % where)
+        for pid in principles:
+            if not isinstance(pid, int) or isinstance(pid, bool):
+                errs.append("%s: principle %r is not a number" % (where, pid))
+            elif pid not in principle_rows:
+                errs.append("%s: principle %d does not exist" % (where, pid))
+            else:
+                principle_to_facets[pid].append(fid)
+
+        rows = f.get("rows", [])
+        if not rows:
+            errs.append("%s: must list at least one row" % where)
+        for row in rows:
+            rpid = row.get("principle")
+            rid = row.get("id")
+            if not isinstance(rpid, int) or isinstance(rpid, bool):
+                errs.append("%s: row principle %r is not a number" % (where, rpid))
+            elif rpid not in principle_rows:
+                errs.append("%s: row references principle %d which does not exist"
+                            % (where, rpid))
+            elif rid not in principle_rows[rpid]:
+                errs.append("%s: row references %d/%r which does not exist"
+                            % (where, rpid, rid))
+
+        check_style(f, where, errs)
+
+    return principle_to_facets
+
+
+def expected_index(by_company, principle_to_facets):
     companies = []
     for cid, meta in COMPANY_META.items():
         records = [rec for _, rec in by_company[cid]]
         records.sort(key=lambda r: r.get("sort", 0))
+        principles = []
+        for r in records:
+            pid = r["id"]
+            facet_ids = sorted(principle_to_facets.get(pid, []))
+            p = {"id": pid, "slug": r["slug"], "name": r["name"],
+                 "sort": r["sort"],
+                 "file": "data/%s/%s.json" % (cid, r["slug"])}
+            if facet_ids:
+                p["facets"] = facet_ids
+            principles.append(p)
         companies.append({
             "id": cid,
             "name": meta["name"],
             "set": meta["set"],
             "source": meta["source"],
-            "principles": [
-                {"id": r["id"], "slug": r["slug"], "name": r["name"],
-                 "sort": r["sort"],
-                 "file": "data/%s/%s.json" % (cid, r["slug"])}
-                for r in records
-            ],
+            "principles": principles,
         })
     return {
-        "version": 3,
+        "version": 4,
         "generated": "scripts/build_index.py",
         "companies": companies,
     }
@@ -273,9 +361,14 @@ def main():
     errs = []
     by_company = load_records(errs)
 
+    # Build principle_rows: principle id -> set of row ids
+    principle_rows = {}
     for company, items in by_company.items():
         for filename, rec in items:
-            validate_record(company, filename, rec, errs)
+            row_ids = validate_record(company, filename, rec, errs)
+            pid = rec.get("id")
+            if isinstance(pid, int) and not isinstance(pid, bool):
+                principle_rows[pid] = row_ids
 
         # sort is unique 1..n per company
         sorts = [rec.get("sort") for _, rec in items]
@@ -306,6 +399,10 @@ def main():
                             % (pid, seen_ids[pid], "%s/%s" % (company, rec.get("slug"))))
             seen_ids[pid] = "%s/%s" % (company, rec.get("slug"))
 
+    # Validate facets.json
+    facets = load_facets(errs)
+    principle_to_facets = validate_facets(facets, principle_rows, errs)
+
     index_path = os.path.join(DATA, "index.json")
     if not os.path.exists(index_path):
         errs.append("data/index.json is missing")
@@ -317,10 +414,10 @@ def main():
             errs.append("data/index.json: not valid JSON, %s" % e)
             index = None
         if index is not None:
-            if index.get("version") != 3:
-                errs.append("data/index.json: version must be 3, got %r"
+            if index.get("version") != 4:
+                errs.append("data/index.json: version must be 4, got %r"
                             % index.get("version"))
-            want = expected_index(by_company)
+            want = expected_index(by_company, principle_to_facets)
             # Compare the generated shape, ignoring key order by using the
             # same structure validate just built from the records.
             if (index.get("generated") != want["generated"]
@@ -345,12 +442,16 @@ def main():
                 whose[r.get("words", "authored")] += 1
             for t in rec["terms"]:
                 kinds[t["kind"]] = kinds.get(t["kind"], 0) + 1
-    print("OK: %d companies, %d principles, %d rows, %d terms (%s)"
+    n_facets = len(facets.get("facets", [])) if facets else 0
+    n_mapped = len(principle_to_facets)
+    print("OK: %d companies, %d principles, %d rows, %d terms (%s), %d facets (%d principles mapped)"
           % (len(by_company),
              n_principles,
              n_rows,
              sum(kinds.values()),
-             ", ".join("%s %d" % kv for kv in sorted(kinds.items()))))
+             ", ".join("%s %d" % kv for kv in sorted(kinds.items())),
+             n_facets,
+             n_mapped))
     print("rows by whose words: %s"
           % ", ".join("%s %d" % (k, whose[k]) for k in WORDS if whose[k]))
 

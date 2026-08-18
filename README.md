@@ -58,9 +58,9 @@ set can apply to one role at one level and layer on the set beneath it.
 The model above is the target. The schema implements part of it, and the gaps
 are tracked rather than implied:
 
-- Facets are scoped to one principle in one company and cannot yet compose
-  across companies, so the shared behavior underneath two companies' sets is
-  not expressed.
+- The cross-company facet map (`data/facets.json`) expresses the shared behavior
+  underneath two companies' sets. Same facet, same examples: principles that
+  share a facet share the rows mapped to that facet.
 - Level and role are not in the schema. Apps carry their own notions today.
   Calibration is level-independent, so this is an additive selection and
   weighting layer rather than a change to `rows`.
@@ -114,7 +114,8 @@ reason.
 ## Layout
 
 ```
-data/index.json              manifest, generated, version 3
+data/index.json              manifest, generated, version 4
+data/facets.json             cross-company facet map
 data/amazon/<slug>.json        one Amazon principle
 data/arm/<slug>.json           one Arm factor
 data/coupang/<slug>.json       one Coupang principle
