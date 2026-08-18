@@ -347,6 +347,104 @@
           "file": "data/gitlab/transparency.json"
         }
       ]
+    },
+    {
+      "id": "dawn",
+      "name": "Dawn Aerospace",
+      "set": "Company Tenets",
+      "source": "Dawn Aerospace Company Tenets, Dawn's internal wiki, published with Dawn's permission",
+      "principles": [
+        {
+          "id": "think-big-start-small",
+          "name": "Think big, start small",
+          "sort": 1,
+          "file": "data/dawn/think-big-start-small.json"
+        },
+        {
+          "id": "customer-success-is-our-success",
+          "name": "Customer success is our success",
+          "sort": 2,
+          "file": "data/dawn/customer-success-is-our-success.json"
+        },
+        {
+          "id": "break-down-silos",
+          "name": "Break down silos",
+          "sort": 3,
+          "file": "data/dawn/break-down-silos.json"
+        },
+        {
+          "id": "ownership",
+          "name": "Ownership",
+          "sort": 4,
+          "file": "data/dawn/ownership.json"
+        },
+        {
+          "id": "no-surprises",
+          "name": "No surprises",
+          "sort": 5,
+          "file": "data/dawn/no-surprises.json"
+        },
+        {
+          "id": "invent-and-simplify",
+          "name": "Invent and simplify",
+          "sort": 6,
+          "file": "data/dawn/invent-and-simplify.json"
+        },
+        {
+          "id": "bias-for-action",
+          "name": "Bias for action",
+          "sort": 7,
+          "file": "data/dawn/bias-for-action.json"
+        },
+        {
+          "id": "earn-trust",
+          "name": "Earn trust",
+          "sort": 8,
+          "file": "data/dawn/earn-trust.json"
+        },
+        {
+          "id": "better-than-yesterday",
+          "name": "Better than yesterday",
+          "sort": 9,
+          "file": "data/dawn/better-than-yesterday.json"
+        },
+        {
+          "id": "hire-and-develop-the-best",
+          "name": "Hire and develop the best",
+          "sort": 10,
+          "file": "data/dawn/hire-and-develop-the-best.json"
+        },
+        {
+          "id": "have-backbone-disagree-and-commit",
+          "name": "Have Backbone; Disagree and commit",
+          "sort": 11,
+          "file": "data/dawn/have-backbone-disagree-and-commit.json"
+        },
+        {
+          "id": "respect-time",
+          "name": "Respect time",
+          "sort": 12,
+          "file": "data/dawn/respect-time.json"
+        },
+        {
+          "id": "scrappy-not-crappy",
+          "name": "Scrappy, not crappy",
+          "sort": 13,
+          "file": "data/dawn/scrappy-not-crappy.json"
+        },
+        {
+          "id": "rocket-engineering-not-rocket-science",
+          "name": "Rocket engineering, not rocket science",
+          "sort": 14,
+          "file": "data/dawn/rocket-engineering-not-rocket-science.json"
+        },
+        {
+          "id": "race-on-the-racetrack-walk-on-ice",
+          "name": "Race on the racetrack, walk on ice",
+          "sort": 15,
+          "file": "data/dawn/race-on-the-racetrack-walk-on-ice.json"
+        }
+      ]
     }
   ]
 }

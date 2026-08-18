@@ -1,0 +1,45 @@
+{
+  "id": "invent-and-simplify",
+  "company": "dawn",
+  "group": "innovation-and-continuous-improvement",
+  "name": "Invent and simplify",
+  "sort": 6,
+  "definition": "We expect and require innovation from our teams and always find ways to simplify. We are externally aware, look for new ideas from everywhere, and are not limited by “not invented here.” We practice 'love every idea for at least 5 minutes'. As we do new things, we accept that we may be misunderstood for long periods of time.",
+  "terms": [
+    {
+      "id": "invent-and-simplify",
+      "label": "invent and simplify",
+      "kind": "alias"
+    },
+    {
+      "id": "love-every-idea-for-at-least-five-minutes",
+      "label": "love every idea for at least five minutes",
+      "kind": "alias"
+    },
+    {
+      "id": "not-invented-here",
+      "label": "not invented here",
+      "kind": "alias"
+    },
+    {
+      "id": "innovate",
+      "label": "innovate",
+      "kind": "equivalent"
+    },
+    {
+      "id": "simplify",
+      "label": "simplify",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Hearing out a new idea",
+      "under": "You regularly and immediately shoot down \"obviously stupid ideas\" in order to save time.",
+      "justRight": "You allow 5 minutes to positively explore crazy ideas and all the reasons why they could work. Only then do you decide to pursue or reject. You exercise good judgment in how often and deeply you do this. You regularly zoom out to ask \"Is this the best way to solve this problem?\"",
+      "over": "You spend half your time chasing ideas and neglect your other duties and deliverables.",
+      "words": "quoted"
+    }
+  ]
+}

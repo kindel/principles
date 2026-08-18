@@ -1,0 +1,45 @@
+{
+  "id": "bias-for-action",
+  "company": "dawn",
+  "group": "agility-and-action",
+  "name": "Bias for action",
+  "sort": 7,
+  "definition": "Speed matters in business. Many decisions and actions are reversible and do not need extensive study. We value calculated risk-taking.",
+  "terms": [
+    {
+      "id": "bias-for-action",
+      "label": "bias for action",
+      "kind": "alias"
+    },
+    {
+      "id": "bfa",
+      "label": "bfa",
+      "kind": "alias"
+    },
+    {
+      "id": "speed-matters",
+      "label": "speed matters",
+      "kind": "alias"
+    },
+    {
+      "id": "move-fast",
+      "label": "move fast",
+      "kind": "equivalent"
+    },
+    {
+      "id": "calculated-risk",
+      "label": "calculated risk",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Deciding how much to plan",
+      "under": "\"Analysis paralysis\"",
+      "justRight": "We apply a good level of thinking to the magnitude of the problem and plan appropriately. Our planning time never takes up more than 5-10% of our execution time, i.e. a 1-week task can be planned in less than a few hours.",
+      "over": "We do work without thinking. We usually end up working on something that turns out to be useless.",
+      "words": "quoted"
+    }
+  ]
+}

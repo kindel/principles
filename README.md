@@ -97,7 +97,8 @@ Unless you know better ones.
 
 An app picks a company and shows only that company's set. The sets today are
 Amazon's Leadership Principles, Arm's 10x Mindset, the Leadership Principles of
-Coupang and Delivery Hero, and GitLab's CREDIT values.
+Coupang and Delivery Hero, GitLab's CREDIT values, and Dawn Aerospace's Company
+Tenets.
 
 Every set is the company's own text, published here with the company's
 permission. Usually that is a page the company publishes itself. It can also be
@@ -119,6 +120,7 @@ data/arm/<id>.json           one Arm factor
 data/coupang/<id>.json       one Coupang principle
 data/delivery-hero/<id>.json one Delivery Hero principle
 data/gitlab/<id>.json        one GitLab value
+data/dawn/<id>.json          one Dawn Aerospace tenet
 scripts/build_index.py       regenerates the manifest
 scripts/validate.py          enforces SCHEMA.md
 tests/                       what CI runs, and the calibration it checks against

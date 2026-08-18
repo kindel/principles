@@ -1,0 +1,45 @@
+{
+  "id": "scrappy-not-crappy",
+  "company": "dawn",
+  "group": "innovation-and-continuous-improvement",
+  "name": "Scrappy, not crappy",
+  "sort": 13,
+  "definition": "We strive to get maximum value by being as lean as possible in everything we do. But we are not afraid to spend the time and effort required to make sure our work is fit for purpose. We understand that tension and constantly refine our work to be everything it needs to be, and nothing more.",
+  "terms": [
+    {
+      "id": "scrappy-not-crappy",
+      "label": "scrappy, not crappy",
+      "kind": "alias"
+    },
+    {
+      "id": "scrappy",
+      "label": "scrappy",
+      "kind": "alias"
+    },
+    {
+      "id": "fit-for-purpose",
+      "label": "fit for purpose",
+      "kind": "alias"
+    },
+    {
+      "id": "frugality",
+      "label": "frugality",
+      "kind": "equivalent"
+    },
+    {
+      "id": "lean",
+      "label": "lean",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Deciding how much effort is enough",
+      "under": "\"I am only 'finished' when it's perfect.\" \"I'll buy a year's worth of spare parts because they aren't that expensive, but I have no idea if we'll actually need them.\" Overanalyzing using FEA when a simple hand calculation would have been sufficient.",
+      "justRight": "My work is everything it needs to be. The customer is happy, and I am moving on to the next job. The \"back of the envelope\" assessment says we'll need 3-5 of these this year and they won't be obsolete by then, so I'll get 4. Thorough analysis when it yields benefit. Simple when that is sufficient.",
+      "over": "Not bothering to check if my work really meets my customer's needs. Just giving it to them and hoping for the best. \"I won't buy spare parts until we need them, but then we end up with excess downtime waiting for replacement parts to arrive.\" Guessing geometry without thinking about load paths and just \"see if it breaks\".",
+      "words": "quoted"
+    }
+  ]
+}

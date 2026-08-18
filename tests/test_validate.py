@@ -100,6 +100,24 @@ class ValidatorTest(unittest.TestCase):
         self.assertCaught(record(rows=[row(i) for i in range(13)]),
                           "expected five to 12")
 
+    # A company that published one triple per principle gets one row. Padding
+    # it up to five with our prose would put two voices in one list.
+    def test_a_record_of_only_quoted_rows_is_exempt_from_the_minimum(self):
+        self.assertClean(record(rows=[row(0, words="quoted")]))
+
+    # The exemption is all or nothing. Writing in the record ends it.
+    def test_one_authored_row_beside_a_quoted_one_owes_the_full_five(self):
+        rows = [row(0, words="quoted"), row(1, words="authored")]
+        self.assertCaught(record(rows=rows), "expected five to 12")
+
+    def test_a_quoted_row_plus_four_authored_meets_the_minimum(self):
+        rows = [row(0, words="quoted")] + [row(i, words="authored")
+                                           for i in range(1, 5)]
+        self.assertClean(record(rows=rows))
+
+    def test_the_exemption_does_not_apply_without_words(self):
+        self.assertCaught(record(rows=[row(0)]), "expected five to 12")
+
     def test_an_authored_row_may_not_run_long(self):
         rows = [row(i) for i in range(5)]
         rows[0]["justRight"] = "One. Two. Three. Four."

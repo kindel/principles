@@ -1,0 +1,40 @@
+{
+  "id": "race-on-the-racetrack-walk-on-ice",
+  "company": "dawn",
+  "group": "strategic-approach",
+  "name": "Race on the racetrack, walk on ice",
+  "sort": 15,
+  "definition": "Our work involves a wide spectrum of activities, from early-stage RnD to certified flight systems. We are acutely aware of the differing demands and opportunities each of these environments presents us, and of which environment we are in. We are agile and adaptable in our thinking, and thus able to move from one environment to the next quickly without conflating these worlds.",
+  "terms": [
+    {
+      "id": "race-on-the-racetrack-walk-on-ice",
+      "label": "race on the racetrack, walk on ice",
+      "kind": "alias"
+    },
+    {
+      "id": "walk-on-ice",
+      "label": "walk on ice",
+      "kind": "alias"
+    },
+    {
+      "id": "right-level-of-rigor",
+      "label": "right level of rigor",
+      "kind": "equivalent"
+    },
+    {
+      "id": "agile-and-adaptable",
+      "label": "agile and adaptable",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Judging how much rigor a situation needs",
+      "under": "We falsely apply RnD methods and a cavalier attitude in flight-critical situations, and \"flight\" rigor with overzealous controls in an R&D environment.",
+      "justRight": "When a major issue on a flight system comes up, we quickly assess if it is safety-critical, mission-critical, or will just result in a loss of performance which may be acceptable. We apply the appropriate level of rigor to the situation and move forward with confidence. Real example from SpaceX: a crack was found in a second-stage engine nozzle. Analysis showed the cracked section could be cut off with acceptable performance loss. A technician climbed inside a fully integrated rocket on the launch pad to cut off a cracked section with tin snips. The next day, the mission flew flawlessly. Months of delay were saved. https://www.elonx.net/spacex-stories-how-spacex-used-tin-snips-to-fix-a-rocket/",
+      "over": "We cannot tolerate innovation or change, even ones that make sense and can be demonstrated as acceptable risks when in flight-critical situations. We stifle innovation at the most critical moments.",
+      "words": "quoted"
+    }
+  ]
+}

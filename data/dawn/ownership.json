@@ -1,0 +1,40 @@
+{
+  "id": "ownership",
+  "company": "dawn",
+  "group": "ownership-and-accountability",
+  "name": "Ownership",
+  "sort": 4,
+  "definition": "We take ownership of our work. We think long-term and bias toward long-term value over short-term results. We act on behalf of the entire company, beyond just our own team.",
+  "terms": [
+    {
+      "id": "ownership",
+      "label": "ownership",
+      "kind": "alias"
+    },
+    {
+      "id": "own-it",
+      "label": "own it",
+      "kind": "alias"
+    },
+    {
+      "id": "acts-like-an-owner",
+      "label": "acts like an owner",
+      "kind": "equivalent"
+    },
+    {
+      "id": "think-long-term",
+      "label": "think long term",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Taking responsibility for a result",
+      "under": "We only make sure that \"the hole is not in my side of the boat\". Refuse to take responsibility to get a result.",
+      "justRight": "We consistently give and set clear expectations, and do the work to meet them. We practice \"no surprises\". We assist a fellow team lead who is struggling by offering to help as an individual contributor, rather than by taking control.",
+      "over": "Take ownership of everything and do not let others do their job. Impose on others' responsibilities and disempower them.",
+      "words": "quoted"
+    }
+  ]
+}

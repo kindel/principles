@@ -106,10 +106,13 @@ Arm records carry `group` for the lens (`one-arm` or `accelerate-impact`):
   consumer addresses a principle by `(company, id)`. A lookup by `id` alone
   returns whichever company's record it happens to find first.
 - `company` is kebab-case and matches the parent directory. Current companies
-  are `amazon`, `arm`, `coupang`, `delivery-hero`, and `gitlab`.
-- `group` is optional. Arm records carry it (`one-arm` or `accelerate-impact`)
-  because Arm's set is published under two lenses. No other company's set is,
-  so no other record carries it.
+  are `amazon`, `arm`, `coupang`, `delivery-hero`, `gitlab`, and `dawn`.
+- `group` is optional, and a record carries it when the company publishes its
+  set under lenses. Arm has two, `one-arm` and `accelerate-impact`, five
+  principles each. Dawn has seven headings over 15 tenets, from its September
+  2024 poster, and they do not follow the numbering. A company that publishes
+  no lenses carries no `group`, and `GROUP_BY_COMPANY` in `validate.py` is the
+  list of the ones that do.
 - `sort` is unique one through n per company, in teaching order, following the
   order the company itself publishes. Amazon is Customer Obsession first and
   Deliver Results last (one through 14). Arm is Passion for the mission first
@@ -117,6 +120,8 @@ Arm records carry `group` for the lens (`one-arm` or `accelerate-impact`):
   Wow the Customer first and Hate Waste last (one through 15). Delivery Hero is
   Own It first and Stay Humble last (one through six). GitLab is Collaboration
   first and Transparency last (one through six), the order that spells CREDIT.
+  Dawn is Think big, start small first and Race on the racetrack, walk on ice
+  last (one through 15), following the document's numbering.
 - `definition` is the company's short statement of the principle, transcribed
   from the company's own text under Sourcing below. It is a quotation, so it is
   never condensed, reworded, reordered, or merged. Where the statement runs
@@ -157,7 +162,8 @@ of Customer Obsession back.
 The calibration taxonomy, and the anchor a facet points at.
 
 - Five to 12 real situations per principle. Give each a kebab `id` and a short
-  `situation` label.
+  `situation` label. The exception is a record whose rows are **all** `quoted`,
+  which carries exactly what the company published and no more.
 - `under`, `justRight`, and `over` are one to three sentences each. They
   describe one behavior under indexed, balanced, and over done.
 - Row ids are unique within a principle. A facet may only reference a row on
@@ -180,10 +186,16 @@ writing, not a defect to correct. The em dash and `---` checks still apply,
 because those are about what the file may contain, exactly as they are for
 `definition`.
 
-A `quoted` row counts toward the five-to-12 minimum. A company that published
-one triple per principle gives one row, and the rest are authored alongside it.
-Recording which is which is the point: mixing the two voices inside `rows` with
-nothing to tell them apart is the thing this field exists to prevent.
+A record whose rows are all `quoted` is exempt from the five-to-12 minimum.
+Dawn published one under, just-right, and over per tenet, so its records carry
+one row each. Padding that up to five with our own prose would put two voices
+in one list, which is the thing `words` exists to prevent, and it would be
+doing it deliberately.
+
+The exemption is all or nothing, so adding one authored row to a one-row record
+takes it to two and fails. That is intended: a record stops being the company's
+statement the moment we write in it, and at that point it owes the full five.
+Whoever writes those rows writes five in one go.
 
 `generated` exists because rows will be generated. `kindel/porridge` is where
 that happens, and its output generalizes the human-written rows across

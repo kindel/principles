@@ -1,0 +1,40 @@
+{
+  "id": "earn-trust",
+  "company": "dawn",
+  "group": "collaboration-and-communication",
+  "name": "Earn trust",
+  "sort": 8,
+  "definition": "We do what we say. We listen attentively, speak candidly, and treat others respectfully. We are humble enough to recognize our own mistakes and commit to improving.",
+  "terms": [
+    {
+      "id": "earn-trust",
+      "label": "earn trust",
+      "kind": "alias"
+    },
+    {
+      "id": "do-what-we-say",
+      "label": "do what we say",
+      "kind": "alias"
+    },
+    {
+      "id": "speak-candidly",
+      "label": "speak candidly",
+      "kind": "equivalent"
+    },
+    {
+      "id": "listen-attentively",
+      "label": "listen attentively",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "dawns-own-example",
+      "situation": "Raising a concern about someone's work",
+      "under": "Our word is worthless. We change plans without telling anyone. We talk over and past one another. We refuse to recognize our own faults when something we work on just fails.",
+      "justRight": "When a major flaw in someone's analysis is suspected, instead of pointing it out at the most inconvenient time, such as a design review with the CTO, you raise your concern as soon as possible, ideally in person, such that they can address the issue, without causing a lot of 'noise' (especially because you might be wrong in your own analysis!). If possible, you approach someone with a grievance personally before escalating the matter to your superiors.",
+      "over": "We over-communicate every detail. We speak candidly, but in an offensive way, with poor timing, or in inappropriate settings. We are \"respectful\" to the point where we do not say what we really think.",
+      "words": "quoted"
+    }
+  ]
+}

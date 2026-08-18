@@ -29,7 +29,8 @@ SENTENCE = re.compile(r"(?<=[.!?])[\"'\)\]]*\s+")
 # Companies that publish their set under lenses, and the lens each sort
 # position falls in. A company absent from this table carries no group, and
 # validate_record rejects one. Arm sort 1-5 are One Arm, 6-10 are Accelerate
-# Impact.
+# Impact. Dawn's seven headings are from its September 2024 poster and do not
+# follow the numbering, so the table is the only place the mapping lives.
 GROUP_BY_COMPANY = {
     "arm": {
         1: "one-arm",
@@ -42,6 +43,23 @@ GROUP_BY_COMPANY = {
         8: "accelerate-impact",
         9: "accelerate-impact",
         10: "accelerate-impact",
+    },
+    "dawn": {
+        1: "strategic-approach",
+        2: "customer-focus",
+        3: "collaboration-and-communication",
+        4: "ownership-and-accountability",
+        5: "ownership-and-accountability",
+        6: "innovation-and-continuous-improvement",
+        7: "agility-and-action",
+        8: "collaboration-and-communication",
+        9: "innovation-and-continuous-improvement",
+        10: "talent-and-development",
+        11: "agility-and-action",
+        12: "ownership-and-accountability",
+        13: "innovation-and-continuous-improvement",
+        14: "strategic-approach",
+        15: "strategic-approach",
     },
 }
 
@@ -172,8 +190,16 @@ def validate_record(company, filename, rec, errs):
             if not 1 <= n <= 3:
                 errs.append("%s: row %r %s has %d sentences, expected one to three"
                             % (where, r.get("id"), key, n))
-    if not 5 <= len(rows) <= 12:
-        errs.append("%s: has %d rows, expected five to 12" % (where, len(rows)))
+    # Five to 12 rows, unless every row is the company's own calibration, in
+    # which case the record carries exactly what the company published. Padding
+    # a company that wrote one triple up to five with our prose is the mistake
+    # `words` exists to prevent, and it would be doing it on purpose.
+    all_quoted = bool(rows) and all(r.get("words") == "quoted" for r in rows)
+    if not all_quoted and not 5 <= len(rows) <= 12:
+        errs.append("%s: has %d rows, expected five to 12%s"
+                    % (where, len(rows),
+                       " (the exemption is for a record whose rows are all quoted)"
+                       if any(r.get("words") == "quoted" for r in rows) else ""))
 
     local = set()
     for t in rec.get("terms", []):
