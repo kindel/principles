@@ -190,16 +190,13 @@ def validate_record(company, filename, rec, errs):
             if not 1 <= n <= 3:
                 errs.append("%s: row %r %s has %d sentences, expected one to three"
                             % (where, r.get("id"), key, n))
-    # Five to 12 rows, unless every row is the company's own calibration, in
-    # which case the record carries exactly what the company published. Padding
-    # a company that wrote one triple up to five with our prose is the mistake
-    # `words` exists to prevent, and it would be doing it on purpose.
-    all_quoted = bool(rows) and all(r.get("words") == "quoted" for r in rows)
-    if not all_quoted and not 5 <= len(rows) <= 12:
-        errs.append("%s: has %d rows, expected five to 12%s"
-                    % (where, len(rows),
-                       " (the exemption is for a record whose rows are all quoted)"
-                       if any(r.get("words") == "quoted" for r in rows) else ""))
+    # One row, at least. A principle that decomposes into no observable
+    # behavior is not modeled, and that is the schema's one real claim. How
+    # many rows past one is editorial and belongs in review: a company that
+    # published a single triple gets one, and a principle that earns 15
+    # situations gets 15.
+    if not rows:
+        errs.append("%s: has no rows, so nothing about it is observable" % where)
 
     local = set()
     for t in rec.get("terms", []):

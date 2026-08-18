@@ -161,9 +161,12 @@ of Customer Obsession back.
 
 The calibration taxonomy, and the anchor a facet points at.
 
-- Five to 12 real situations per principle. Give each a kebab `id` and a short
-  `situation` label. The exception is a record whose rows are **all** `quoted`,
-  which carries exactly what the company published and no more.
+- Real situations, at least one, each with a kebab `id` and a short `situation`
+  label. A principle with no rows is not modeled, and that is the only count
+  this file has an opinion about. How many past one is judgment: enough that a
+  person could recognize the behavior in their own week. Most principles land
+  somewhere around five to a dozen, but that is an observation rather than a
+  rule, and a company that published a single triple gets one row.
 - `under`, `justRight`, and `over` are one to three sentences each. They
   describe one behavior under indexed, balanced, and over done.
 - Row ids are unique within a principle. A facet may only reference a row on
@@ -186,16 +189,11 @@ writing, not a defect to correct. The em dash and `---` checks still apply,
 because those are about what the file may contain, exactly as they are for
 `definition`.
 
-A record whose rows are all `quoted` is exempt from the five-to-12 minimum.
 Dawn published one under, just-right, and over per tenet, so its records carry
-one row each. Padding that up to five with our own prose would put two voices
-in one list, which is the thing `words` exists to prevent, and it would be
-doing it deliberately.
-
-The exemption is all or nothing, so adding one authored row to a one-row record
-takes it to two and fails. That is intended: a record stops being the company's
-statement the moment we write in it, and at that point it owes the full five.
-Whoever writes those rows writes five in one go.
+one row each. Padding those up with our own prose to hit a number would put two
+voices in one list, which is the thing `words` exists to prevent. Rows get
+added to a Dawn record when someone has a situation worth adding, not to
+satisfy a count.
 
 `generated` exists because rows will be generated. `kindel/porridge` is where
 that happens, and its output generalizes the human-written rows across
