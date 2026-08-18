@@ -1,5 +1,6 @@
 {
-  "id": "efficiency",
+  "id": 5003,
+  "slug": "efficiency",
   "company": "gitlab",
   "name": "Efficiency",
   "sort": 3,

@@ -17,6 +17,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 KINDS = ("alias", "equivalent", "facet")
 WORDS = ("quoted", "authored", "generated")
+# Numbers per company block. Generous on purpose: the largest set here is
+# 15, and a company that outgrows a thousand principles has a bigger
+# problem than this file.
+BLOCK_SIZE = 1000
 SLUG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 # Sentence break for the one-to-three-sentence rule. Terminal punctuation may
 # be followed by a closing quote or bracket before the space, as in
@@ -120,21 +124,35 @@ def load_records(errs):
 
 
 def validate_record(company, filename, rec, errs):
-    where = "%s/%s" % (company, rec.get("id", filename))
+    where = "%s/%s" % (company, rec.get("slug", filename))
     stem = filename[:-5] if filename.endswith(".json") else filename
 
-    if rec.get("id") != stem:
-        errs.append("%s: id %r does not match the filename" % (where, rec.get("id")))
+    if rec.get("slug") != stem:
+        errs.append("%s: slug %r does not match the filename"
+                    % (where, rec.get("slug")))
     if rec.get("company") != company:
         errs.append("%s: company %r does not match the directory"
                     % (where, rec.get("company")))
 
-    required = ("id", "company", "name", "sort", "definition", "terms", "rows")
+    required = ("id", "slug", "company", "name", "sort", "definition",
+                "terms", "rows")
     for key in required:
         if key not in rec:
             errs.append("%s: missing %r" % (where, key))
-    if not SLUG.match(rec.get("id", "")):
-        errs.append("%s: id is not kebab-case" % where)
+
+    # The id is a number so that it can be globally unique, which is what
+    # stops an app that looks a principle up by id alone from landing on
+    # another company's record. The block says which company owns it.
+    pid = rec.get("id")
+    block = COMPANY_META.get(company, {}).get("block")
+    if not isinstance(pid, int) or isinstance(pid, bool):
+        errs.append("%s: id %r is not a number" % (where, pid))
+    elif block is not None and not block < pid < block + BLOCK_SIZE:
+        errs.append("%s: id %d is outside %s's block, %d to %d"
+                    % (where, pid, company, block + 1, block + BLOCK_SIZE - 1))
+
+    if not SLUG.match(rec.get("slug") or ""):
+        errs.append("%s: slug is not kebab-case" % where)
     if not SLUG.match(rec.get("company", "")):
         errs.append("%s: company is not kebab-case" % where)
 
@@ -238,13 +256,14 @@ def expected_index(by_company):
             "set": meta["set"],
             "source": meta["source"],
             "principles": [
-                {"id": r["id"], "name": r["name"], "sort": r["sort"],
-                 "file": "data/%s/%s.json" % (cid, r["id"])}
+                {"id": r["id"], "slug": r["slug"], "name": r["name"],
+                 "sort": r["sort"],
+                 "file": "data/%s/%s.json" % (cid, r["slug"])}
                 for r in records
             ],
         })
     return {
-        "version": 2,
+        "version": 3,
         "generated": "scripts/build_index.py",
         "companies": companies,
     }
@@ -274,6 +293,19 @@ def main():
                                 % (company, tid, seen[tid], rec.get("id")))
                 seen[tid] = rec.get("id")
 
+    # Globally unique ids. This is the property the whole scheme exists for,
+    # so it is checked across the corpus rather than per company.
+    seen_ids = {}
+    for company, items in by_company.items():
+        for _, rec in items:
+            pid = rec.get("id")
+            if not isinstance(pid, int) or isinstance(pid, bool):
+                continue
+            if pid in seen_ids:
+                errs.append("id %d used by both %s and %s"
+                            % (pid, seen_ids[pid], "%s/%s" % (company, rec.get("slug"))))
+            seen_ids[pid] = "%s/%s" % (company, rec.get("slug"))
+
     index_path = os.path.join(DATA, "index.json")
     if not os.path.exists(index_path):
         errs.append("data/index.json is missing")
@@ -285,8 +317,8 @@ def main():
             errs.append("data/index.json: not valid JSON, %s" % e)
             index = None
         if index is not None:
-            if index.get("version") != 2:
-                errs.append("data/index.json: version must be 2, got %r"
+            if index.get("version") != 3:
+                errs.append("data/index.json: version must be 3, got %r"
                             % index.get("version"))
             want = expected_index(by_company)
             # Compare the generated shape, ignoring key order by using the
@@ -322,18 +354,19 @@ def main():
     print("rows by whose words: %s"
           % ", ".join("%s %d" % (k, whose[k]) for k in WORDS if whose[k]))
 
-    # Not an error. An id is unique within a company and nowhere else, so a
-    # consumer keys on (company, id). Printing the collisions keeps that
-    # visible here rather than discovered in an app.
+    # Not an error. A slug is unique within a company and nowhere else, which
+    # is fine now that the id carries identity. Two companies sharing a slug
+    # is the signal that they may be describing the same behavior, so it is
+    # worth seeing rather than hiding.
     shared = collections.defaultdict(list)
     for company, items in by_company.items():
         for _, rec in items:
-            shared[rec.get("id")].append(company)
+            shared[rec.get("slug")].append(company)
     shared = {k: v for k, v in shared.items() if len(v) > 1}
     if shared:
-        print("ids used by more than one company, address by (company, id):")
-        for pid in sorted(shared):
-            print("  %-28s %s" % (pid, ", ".join(sorted(shared[pid]))))
+        print("slugs used by more than one company, which is allowed:")
+        for slug_ in sorted(shared):
+            print("  %-34s %s" % (slug_, ", ".join(sorted(shared[slug_]))))
     return 0
 
 
