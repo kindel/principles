@@ -118,25 +118,33 @@ class QuotationTest(unittest.TestCase):
         self.rows = list(load_rows())
 
     def test_no_quoted_row_drifts_from_the_fixture(self):
-        checked = 0
         for where, doc, row in self.rows:
             if row.get("words") != "quoted":
                 continue
-            doc_fixture = self.fixtures.get(doc["company"])
-            if not doc_fixture:
+            fixture = self.fixtures.get(doc["company"])
+            if fixture is None:
+                # A company may publish calibration we have no fixture for.
+                # Nothing to compare against, and nothing to conclude.
                 continue
+
+            # A fixture covers its company's whole set, so a quoted row in a
+            # record the fixture does not know about is a misspelled id, a
+            # principle added since the snapshot, or a fixture that has fallen
+            # behind. Skipping it would leave the quotation unchecked, which is
+            # the one thing this test exists to prevent.
             expected = next(
-                (p["expected"] for p in doc_fixture["principles"]
+                (p["expected"] for p in fixture["principles"]
                  if p["id"] == doc["id"]), None)
-            if expected is None:
-                continue
-            checked += 1
+            self.assertIsNotNone(
+                expected,
+                "%s is quoted and %s has a fixture, but the fixture has no %r, "
+                "so the quotation is unverified"
+                % (where, doc["company"], doc["id"]))
+
             for key in SETTINGS:
                 self.assertEqual(
                     expected[key], row.get(key),
                     "%s %s has been edited away from the fixture" % (where, key))
-        self.assertTrue(checked or not any(
-            r.get("words") == "quoted" for _, _, r in self.rows))
 
     def test_no_authored_row_reuses_a_company_s_words(self):
         golden = []
