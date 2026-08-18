@@ -20,3 +20,22 @@ Without the secret, notify jobs skip. Same-repo sync and pin jobs still run from
 3. kindelwww pin job `go get`s every direct `github.com/kindel/*` require and opens `pin/modules`
 
 Porridge writes missing page stubs. BIQ writes missing company and principle shells with `examples: false` and empty questions. It does not invent a bank or generate packs.
+
+## Consumer contract
+
+A principle's `id` is a number, unique across the repository. A principle's `slug` is kebab-case and matches the filename. A company's `id` is the directory name. Both keys are named `id`, and they are different kinds of thing.
+
+- Paths, URLs, and filenames come from `slug`.
+- Identity, stored references, and pack keys come from the numeric `id`.
+- Never write a filename, `lpId`, or URL from the numeric `id`. A file named `6004.md` or an `lpId: 6004` front matter key is the bug this contract exists to prevent.
+- Company `id` is unchanged (directory name).
+
+### Porridge stubs
+
+`content/porridge/<company>/<slug>.md` with front matter `lpId: <slug>`.
+
+Amazon aliases stay `/lps/<slug>/` and `/porridge/<slug>/`. Other companies get no aliases.
+
+### BIQ shells
+
+Keep or add `slug` for the readable name. The `id` is the number. Match existing rows by slug when migrating, then by numeric id. New companies land with `examples: false` and empty questions. Do not generate packs.
