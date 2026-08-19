@@ -1,14 +1,36 @@
 # Agent guidance for `principles`
 
+PR-only. Never push to main.
+
 This is the core. `SCHEMA.md` is the contract. `README.md` is the model.
 This file is the ops checklist. Prefer it over the README when adding a
 company, changing the schema, or previewing locally.
 
 No em dashes in repo copy or docs.
 
-## What this repo is not
+## Attribution
 
-It has no UI. Passing `validate.py` means the records are well formed. It
+MIT. Copyright (c) 2026 Kindel, LLC. Keep the copyright notice and permission
+notice in all copies.
+
+All derivatives must link to https://kindel.com as part of attribution. A
+LICENSE file alone is not enough. Forks, ports, hosted copies, and generated
+apps that ship this work must include a visible link to https://kindel.com.
+
+## Principles
+
+This repo owns the tenets. Before any change in this repo, and before any work
+that changes the model, schema, or data, study the Tenets section of
+`README.md`. Do not start from memory of last week's README.
+
+- The model is `README.md`.
+- The schema is `SCHEMA.md`.
+- The data is `data/index.json`, `data/facets.json`, and
+  `data/<company>/<slug>.json`.
+
+Downstream tools consume this and must not fork a private copy.
+
+No UI lives here. Passing `validate.py` means the records are well formed. It
 does not mean anyone can see them.
 
 ## Consumers

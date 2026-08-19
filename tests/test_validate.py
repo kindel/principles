@@ -20,7 +20,9 @@ import unittest
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
     os.path.abspath(__file__))), "scripts"))
 
-from validate import validate_record
+from companies import COMPANY_META
+from validate import (expected_index, validate_company, validate_facets,
+                      validate_record)
 
 
 def row(i, **kw):
@@ -194,6 +196,182 @@ class ValidatorTest(unittest.TestCase):
         rows = [row(i) for i in range(5)]
         del rows[0]["over"]
         self.assertCaught(record(rows=rows), "missing 'over'")
+
+
+class CompanyChecksTest(unittest.TestCase):
+    """Checks that span a company's directory rather than one record.
+
+    A malformed record has already been reported by validate_record. The
+    company-level pass must still report its own rule readably instead of
+    dying on the malformed value, or the contributor sees a traceback where
+    the queued errors should have been.
+    """
+
+    def check(self, items, company="amazon"):
+        errs = []
+        validate_company(company, items, errs)
+        return errs
+
+    def test_a_complete_sequence_passes(self):
+        items = [("a.json", record(sort=1)), ("b.json", record(sort=2))]
+        self.assertEqual([], self.check(items))
+
+    def test_a_gap_in_the_sorts_is_rejected(self):
+        items = [("a.json", record(sort=1)), ("b.json", record(sort=3))]
+        errs = self.check(items)
+        self.assertTrue(any("sort must be one through 2" in e for e in errs),
+                        errs)
+
+    def test_a_missing_sort_is_an_error_not_a_traceback(self):
+        rec = record()
+        del rec["sort"]
+        items = [("a.json", record(sort=1)), ("b.json", rec)]
+        errs = self.check(items)
+        self.assertTrue(any("sort must be one through" in e for e in errs),
+                        errs)
+
+    def test_a_non_numeric_sort_is_an_error_not_a_traceback(self):
+        items = [("a.json", record(sort=1)), ("b.json", record(sort="2"))]
+        errs = self.check(items)
+        self.assertTrue(any("sort must be one through" in e for e in errs),
+                        errs)
+
+    def test_a_term_id_reused_across_records_is_rejected(self):
+        terms = [{"id": "a-slice", "label": "a slice", "kind": "equivalent"}]
+        items = [("a.json", record(sort=1, terms=copy.deepcopy(terms))),
+                 ("b.json", record(sort=2, terms=copy.deepcopy(terms)))]
+        errs = self.check(items)
+        self.assertTrue(any("used by both" in e for e in errs), errs)
+
+
+class ExpectedIndexTest(unittest.TestCase):
+    """The stale-index comparison must survive a malformed record.
+
+    validate_record has already queued the schema error for it; the index
+    builder skipping the record keeps the run alive so those errors print.
+    """
+
+    def build(self, items):
+        by_company = {cid: [] for cid in COMPANY_META}
+        by_company["amazon"] = items
+        return expected_index(by_company, {})
+
+    def amazon(self, idx):
+        return next(c for c in idx["companies"] if c["id"] == "amazon")
+
+    def test_a_good_record_lands_in_the_index(self):
+        idx = self.build([("a-principle.json", record())])
+        self.assertEqual(["a-principle"],
+                         [p["slug"] for p in self.amazon(idx)["principles"]])
+
+    def test_a_record_missing_name_is_skipped_not_a_traceback(self):
+        rec = record()
+        del rec["name"]
+        idx = self.build([("a-principle.json", rec)])
+        self.assertEqual([], self.amazon(idx)["principles"])
+
+    def test_a_record_missing_sort_is_skipped_not_a_traceback(self):
+        rec = record()
+        del rec["sort"]
+        idx = self.build([("a-principle.json", rec)])
+        self.assertEqual([], self.amazon(idx)["principles"])
+
+    def test_a_non_numeric_sort_is_skipped_not_a_traceback(self):
+        idx = self.build([("a-principle.json", record(sort="1")),
+                          ("b-principle.json", record(sort=2, slug="b-principle",
+                                                      name="B Principle", id=1002))])
+        self.assertEqual(["b-principle"],
+                         [p["slug"] for p in self.amazon(idx)["principles"]])
+
+
+def facet(**kw):
+    f = {
+        "id": "a-facet",
+        "label": "a facet",
+        "principles": [1001],
+        "rows": [{"principle": 1001, "id": "row-0"}],
+    }
+    f.update(kw)
+    return f
+
+
+class FacetMapTest(unittest.TestCase):
+    """facets.json rows must come from principles the facet itself lists.
+
+    A row from an unlisted principle renders on every member of the facet
+    while its own principle never gets the facet in the index.
+    """
+
+    ROWS = {1001: {"row-0"}, 2001: {"row-x"}}
+
+    def check(self, *facets):
+        errs = []
+        validate_facets({"version": 1, "facets": list(facets)}, self.ROWS, errs)
+        return errs
+
+    def test_a_good_facet_passes(self):
+        self.assertEqual([], self.check(facet()))
+
+    def test_a_row_from_an_unlisted_principle_is_rejected(self):
+        f = facet(rows=[{"principle": 1001, "id": "row-0"},
+                        {"principle": 2001, "id": "row-x"}])
+        errs = self.check(f)
+        self.assertTrue(
+            any("not in this facet's principles" in e for e in errs), errs)
+
+    def test_listing_the_principle_makes_the_same_row_legal(self):
+        f = facet(principles=[1001, 2001],
+                  rows=[{"principle": 1001, "id": "row-0"},
+                        {"principle": 2001, "id": "row-x"}])
+        self.assertEqual([], self.check(f))
+
+    def test_an_inline_generated_row_passes(self):
+        f = facet(rows=[{
+            "id": "a-new-situation",
+            "situation": "A new situation",
+            "under": "Does not own it.",
+            "justRight": "Owns it and finishes it.",
+            "over": "Takes over everyone else's work.",
+            "words": "generated",
+        }])
+        self.assertEqual([], self.check(f))
+
+    def test_an_inline_row_must_be_marked_generated(self):
+        f = facet(rows=[{
+            "id": "a-new-situation",
+            "situation": "A new situation",
+            "under": "Does not own it.",
+            "justRight": "Owns it and finishes it.",
+            "over": "Takes over everyone else's work.",
+            "words": "authored",
+        }])
+        errs = self.check(f)
+        self.assertTrue(any("words must be generated" in e for e in errs), errs)
+
+    def test_an_inline_row_must_not_name_a_principle(self):
+        f = facet(rows=[{
+            "id": "a-new-situation",
+            "principle": 1001,
+            "situation": "A new situation",
+            "under": "Does not own it.",
+            "justRight": "Owns it and finishes it.",
+            "over": "Takes over everyone else's work.",
+            "words": "generated",
+        }])
+        errs = self.check(f)
+        self.assertTrue(any("must not name a principle" in e for e in errs), errs)
+
+    def test_an_inline_row_still_needs_one_to_three_sentences(self):
+        f = facet(rows=[{
+            "id": "a-new-situation",
+            "situation": "A new situation",
+            "under": "One. Two. Three. Four.",
+            "justRight": "Owns it.",
+            "over": "Takes over.",
+            "words": "generated",
+        }])
+        errs = self.check(f)
+        self.assertTrue(any("one to three" in e for e in errs), errs)
 
 
 if __name__ == "__main__":

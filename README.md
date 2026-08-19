@@ -173,3 +173,7 @@ apps can show it.
   this module will show porridge and still miss BIQ.
 
 See `AGENTS.md` for the add-a-company path.
+
+## License
+
+MIT. Copyright (c) 2026 Kindel, LLC. Keep the copyright notice and permission notice in all copies.

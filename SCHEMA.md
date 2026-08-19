@@ -139,8 +139,11 @@ facet share the rows mapped to that facet.
 - `label` is the human name, and `id` must be its slug.
 - `principles` lists numeric principle ids from any company, including multiple
   principles from the same company. At least one.
-- `rows` lists the examples for this facet. Each points at an existing row on an
-  existing record by `principle` id and row `id`. At least one.
+- `rows` lists the examples for this facet. A row is either a ref
+  `{principle, id}` to an existing record, so human prose is not copied, or an
+  inline generated row `{id, situation, under, justRight, over, words:
+  "generated"}` that belongs to the facet rather than to a company. At least
+  one. Generated rows must not carry `principle`.
 
 A principle's examples are the union of rows on every facet that lists that
 principle. A principle may also have local rows that no facet claims; those stay
@@ -156,9 +159,11 @@ intra-principle slices. The facet map is the cross-company layer.
 
 ### Consumer contract
 
-A consumer that shows examples reads facet ids from `index.json` and row refs
-from `facets.json`. It does not copy row prose into the map, does not rewrite
-rows, and does not use company-local rows alone when the principle is mapped.
+A consumer that shows examples reads facet ids from `index.json` and rows from
+`facets.json`. A `{principle, id}` ref is resolved against the record; that
+prose is not copied into the map. An inline generated row already carries its
+prose on the facet. A consumer does not rewrite rows, and does not use
+company-local rows alone when the principle is mapped.
 
 `words` on a row stays unchanged. A `quoted` row is the company's writing, so
 human-authored and company-quoted rows appear side by side when a facet spans
@@ -276,7 +281,9 @@ satisfy a count.
 
 `generated` exists because rows will be generated. `kindel/porridge` is where
 that happens, and its output generalizes the human-written rows across
-companies. A generated row that arrives here marked `authored` is
+companies. Generated rows land on the facet, inline in `facets.json`, not on a
+company record. A facet that already has a quoted or authored ref is not
+generated onto. A generated row that arrives here marked `authored` is
 indistinguishable from a person's work, and the next generator trains on it.
 Marking it is what keeps the human-written rows identifiable as the reference
 they are, and what lets a generator skip the rows it should not be reading. See
