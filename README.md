@@ -128,6 +128,8 @@ scripts/validate.py          enforces SCHEMA.md
 tests/                       what CI runs, and the calibration it checks against
 .github/workflows/ci.yml     validate, test, and check the manifest
 SCHEMA.md                    the contract
+AGENTS.md                    agent ops: adding a company, the consumers
+.kindel/consumers.txt        who the cascade pings
 ```
 
 Generating rows, and judging generated rows, belong in the apps. `tests/` keeps
@@ -159,9 +161,15 @@ every other rule SCHEMA.md states.
 
 ## Apps
 
-There will be more over time, but this is the start:
+Two apps, plus the site that hosts them. `.kindel/consumers.txt` is the
+list the cascade pings. Adding a company here is not finished until both
+apps can show it.
 
-- `kindel/biq`, behavioral interview questions per principle. Owns the
-  questions and the example generator prompt.
-- `kindel/porridge`, the user's manual. Owns what under indexed, balanced, and
-  over done look like in practice.
+- `kindel/porridge` mounts this module and renders the calibration.
+- `kindel/biq` keeps its own question bank. It does not read this repo at
+  runtime. A sync adds shells; questions and example packs are a later
+  step in that repo.
+- `kindel/kindelwww` is the host. A local Hugo preview that only replaces
+  this module will show porridge and still miss BIQ.
+
+See `AGENTS.md` for the add-a-company path.

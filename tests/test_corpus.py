@@ -194,5 +194,31 @@ class DocumentationTest(unittest.TestCase):
                           "SCHEMA.md does not mention words value %r" % value)
 
 
+class AgentsDocTest(unittest.TestCase):
+    """AGENTS.md is the ops checklist. A consumer the cascade pings that
+    this file does not name will be skipped the next time a company lands.
+    """
+
+    def test_agents_md_names_every_cascade_consumer(self):
+        agents_path = os.path.join(ROOT, "AGENTS.md")
+        self.assertTrue(os.path.exists(agents_path), "AGENTS.md is missing")
+        with open(agents_path, encoding="utf-8") as f:
+            agents = f.read()
+        consumers = os.path.join(ROOT, ".kindel", "consumers.txt")
+        with open(consumers, encoding="utf-8") as f:
+            lines = f.readlines()
+        named = 0
+        for line in lines:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            repo = line.split()[0]
+            self.assertIn(
+                repo, agents,
+                "AGENTS.md does not mention cascade consumer %s" % repo)
+            named += 1
+        self.assertGreater(named, 0, ".kindel/consumers.txt has no targets")
+
+
 if __name__ == "__main__":
     unittest.main()
