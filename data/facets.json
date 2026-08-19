@@ -31,11 +31,34 @@
     {
       "id": "better-every-day",
       "label": "better every day",
-      "principles": [1007, 6009],
+      "principles": [1007, 6009, 7002],
       "rows": [
         { "principle": 1007, "id": "tracking-goals" },
         { "principle": 1007, "id": "confronting-issues" },
-        { "principle": 6009, "id": "dawns-own-example" }
+        { "principle": 6009, "id": "dawns-own-example" },
+        { "principle": 7002, "id": "a-small-defect" },
+        { "principle": 7002, "id": "after-a-good-week" },
+        { "principle": 7002, "id": "improvement-versus-delivery" },
+        { "principle": 7002, "id": "the-standard" }
+      ]
+    },
+    {
+      "id": "think-big",
+      "label": "think big",
+      "principles": [1008, 7001],
+      "rows": [
+        { "principle": 1008, "id": "stretch-goals" },
+        { "principle": 1008, "id": "status-quo" },
+        { "principle": 1008, "id": "larger-problem" },
+        { "principle": 1008, "id": "strategy-direction" },
+        { "principle": 1008, "id": "time-horizon" },
+        { "principle": 1008, "id": "growth-goals" },
+        { "principle": 7001, "id": "a-long-term-vision" },
+        { "principle": 7001, "id": "a-hard-problem" },
+        { "principle": 7001, "id": "after-the-first-try-fails" },
+        { "principle": 7001, "id": "people-say-it-cannot-be-done" },
+        { "principle": 7001, "id": "courage-versus-recklessness" },
+        { "principle": 7001, "id": "creativity-on-the-path" }
       ]
     },
     {
@@ -78,7 +101,7 @@
     {
       "id": "dive-deep",
       "label": "dive deep",
-      "principles": [1012, 3004, 4002],
+      "principles": [1012, 3004, 4002, 7003],
       "rows": [
         { "principle": 1012, "id": "unit-economics" },
         { "principle": 1012, "id": "metrics-review" },
@@ -101,13 +124,19 @@
         { "principle": 4002, "id": "surprising-result" },
         { "principle": 4002, "id": "operating-detail" },
         { "principle": 4002, "id": "delegated-work" },
-        { "principle": 4002, "id": "recurring-issue" }
+        { "principle": 4002, "id": "recurring-issue" },
+        { "principle": 7003, "id": "a-problem-on-the-floor" },
+        { "principle": 7003, "id": "number-and-story-disagree" },
+        { "principle": 7003, "id": "sending-someone-else" },
+        { "principle": 7003, "id": "building-consensus" },
+        { "principle": 7003, "id": "speed" },
+        { "principle": 7003, "id": "a-secondhand-report" }
       ]
     },
     {
       "id": "earn-trust",
       "label": "earn trust",
-      "principles": [1011, 6008],
+      "principles": [1011, 6008, 7004],
       "rows": [
         { "principle": 1011, "id": "vocally-self-critical" },
         { "principle": 1011, "id": "upward-and-the-team" },
@@ -119,7 +148,11 @@
         { "principle": 1011, "id": "humility-and-the-bar" },
         { "principle": 1011, "id": "feedback-both-ways" },
         { "principle": 1011, "id": "no-politics" },
-        { "principle": 6008, "id": "dawns-own-example" }
+        { "principle": 6008, "id": "dawns-own-example" },
+        { "principle": 7004, "id": "before-judging" },
+        { "principle": 7004, "id": "building-mutual-trust" },
+        { "principle": 7004, "id": "respect-versus-agreement" },
+        { "principle": 7004, "id": "effort-to-understand" }
       ]
     },
     {
@@ -143,7 +176,7 @@
     {
       "id": "hire-and-develop-the-best",
       "label": "hire and develop the best",
-      "principles": [1006, 3008, 6010],
+      "principles": [1006, 3008, 6010, 7005],
       "rows": [
         { "principle": 1006, "id": "new-hire-quality" },
         { "principle": 1006, "id": "underperformers-and-stretch" },
@@ -161,7 +194,10 @@
         { "principle": 3008, "id": "promotion-bar" },
         { "principle": 3008, "id": "underperformance" },
         { "principle": 3008, "id": "developing-others" },
-        { "principle": 6010, "id": "dawns-own-example" }
+        { "principle": 6010, "id": "dawns-own-example" },
+        { "principle": 7005, "id": "a-person-ready-for-more" },
+        { "principle": 7005, "id": "sharing-a-stretch-assignment" },
+        { "principle": 7005, "id": "a-teammate-who-is-struggling" }
       ]
     },
     {

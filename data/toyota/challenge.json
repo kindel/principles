@@ -1,0 +1,80 @@
+{
+  "id": 7001,
+  "slug": "challenge",
+  "company": "toyota",
+  "group": "continuous-improvement",
+  "name": "Challenge",
+  "sort": 1,
+  "definition": "We form a long-term vision, meeting challenges with courage and creativity to realize our dreams.",
+  "terms": [
+    {
+      "id": "challenge",
+      "label": "challenge",
+      "kind": "alias"
+    },
+    {
+      "id": "long-term-vision",
+      "label": "long term vision",
+      "kind": "alias"
+    },
+    {
+      "id": "take-on-challenges",
+      "label": "take on challenges",
+      "kind": "alias"
+    },
+    {
+      "id": "form-a-long-term-vision",
+      "label": "form a long term vision",
+      "kind": "equivalent"
+    },
+    {
+      "id": "courage-and-creativity",
+      "label": "courage and creativity",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "a-long-term-vision",
+      "situation": "When setting the destination",
+      "under": "Plans to the next review. The destination is whatever will be easy to hit.",
+      "justRight": "Names a destination years out, then picks the work that actually moves toward it.",
+      "over": "Announces a 20-year vision and cannot say what this week is for."
+    },
+    {
+      "id": "a-hard-problem",
+      "situation": "When the problem is hard",
+      "under": "Shrinks the goal until it fits the current method.",
+      "justRight": "Holds the goal and invents a path that has a chance of reaching it.",
+      "over": "Treats every constraint as optional, and the team spends a year on a path that was never going to work."
+    },
+    {
+      "id": "after-the-first-try-fails",
+      "situation": "After the first try fails",
+      "under": "Drops the goal. Failure is treated as proof it was the wrong dream.",
+      "justRight": "Keeps the destination and changes the method. Courage is staying with the problem, not with the first idea.",
+      "over": "Repeats the same try louder, because changing course would look like giving up."
+    },
+    {
+      "id": "people-say-it-cannot-be-done",
+      "situation": "When people say it cannot be done",
+      "under": "Agrees, and the conversation ends.",
+      "justRight": "Asks what would have to be true, then tests the smallest version of that.",
+      "over": "Dismisses every objection as lack of courage, including the ones that would have saved the work."
+    },
+    {
+      "id": "courage-versus-recklessness",
+      "situation": "When the next step has real risk",
+      "under": "Waits for a path with no downside. The vision stays a slide.",
+      "justRight": "Takes the risk that is required, with eyes open, and owns what happens.",
+      "over": "Picks the dramatic option so that people will see the courage."
+    },
+    {
+      "id": "creativity-on-the-path",
+      "situation": "When the known method will not reach the goal",
+      "under": "Runs last year's plan harder.",
+      "justRight": "Changes the method. Creativity is in service of the destination, not a substitute for it.",
+      "over": "Collects novel ideas and never commits to one long enough to learn."
+    }
+  ]
+}

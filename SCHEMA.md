@@ -174,7 +174,7 @@ companies.
 - `id` is a number, and it is unique across the whole repository. A consumer
   addresses a principle by `id` alone and cannot land on the wrong record.
 - Each company owns a block of a thousand ids: Amazon 1000, Arm 2000, Coupang
-  3000, Delivery Hero 4000, GitLab 5000, Dawn 6000. `block` in
+  3000, Delivery Hero 4000, GitLab 5000, Dawn 6000, Toyota 7000. `block` in
   `scripts/companies.py` is the registry, and claiming the next free block is
   the whole of adding a company. A new principle takes the next free number in
   its company's block.
@@ -188,13 +188,14 @@ companies.
   signal that they may be describing the same behavior, so `validate.py` prints
   the list rather than hiding it.
 - `company` is kebab-case and matches the parent directory. Current companies
-  are `amazon`, `arm`, `coupang`, `delivery-hero`, `gitlab`, and `dawn`.
+  are `amazon`, `arm`, `coupang`, `delivery-hero`, `gitlab`, `dawn`, and `toyota`.
 - `group` is optional, and a record carries it when the company publishes its
   set under lenses. Arm has two, `one-arm` and `accelerate-impact`, five
-  principles each. Dawn has seven headings over 15 tenets, from its September
-  2024 poster, and they do not follow the numbering. A company that publishes
-  no lenses carries no `group`, and `GROUP_BY_COMPANY` in `validate.py` is the
-  list of the ones that do.
+  principles each. Toyota has two, `continuous-improvement` and
+  `respect-for-people`, three then two. Dawn has seven headings over 15 tenets,
+  from its September 2024 poster, and they do not follow the numbering. A
+  company that publishes no lenses carries no `group`, and `GROUP_BY_COMPANY`
+  in `validate.py` is the list of the ones that do.
 - `sort` is unique one through n per company, in teaching order, following the
   order the company itself publishes. Amazon is Customer Obsession first and
   Deliver Results last (one through 14). Arm is Passion for the mission first
@@ -203,7 +204,8 @@ companies.
   Own It first and Stay Humble last (one through six). GitLab is Collaboration
   first and Transparency last (one through six), the order that spells CREDIT.
   Dawn is Think big, start small first and Race on the racetrack, walk on ice
-  last (one through 15), following the document's numbering.
+  last (one through 15), following the document's numbering. Toyota is Challenge
+  first and Teamwork last (one through five).
 - `definition` is the company's short statement of the principle, transcribed
   from the company's own text under Sourcing below. It is a quotation, so it is
   never condensed, reworded, reordered, or merged. Where the statement runs

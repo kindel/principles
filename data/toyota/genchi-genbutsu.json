@@ -1,0 +1,90 @@
+{
+  "id": 7003,
+  "slug": "genchi-genbutsu",
+  "company": "toyota",
+  "group": "continuous-improvement",
+  "name": "Genchi Genbutsu",
+  "sort": 3,
+  "definition": "We practice genchi genbutsu... go to the source to find the facts to make correct decisions, build consensus and achieve goals at our best speed.",
+  "terms": [
+    {
+      "id": "genchi-genbutsu",
+      "label": "genchi genbutsu",
+      "kind": "alias"
+    },
+    {
+      "id": "go-and-see",
+      "label": "go and see",
+      "kind": "alias"
+    },
+    {
+      "id": "gemba",
+      "label": "gemba",
+      "kind": "alias"
+    },
+    {
+      "id": "go-to-the-source",
+      "label": "go to the source",
+      "kind": "equivalent"
+    },
+    {
+      "id": "dive-deep",
+      "label": "dive deep",
+      "kind": "equivalent"
+    },
+    {
+      "id": "find-the-facts",
+      "label": "find the facts",
+      "kind": "facet",
+      "rows": [
+        "a-problem-on-the-floor",
+        "number-and-story-disagree",
+        "a-secondhand-report"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "a-problem-on-the-floor",
+      "situation": "When a problem is reported from the work",
+      "under": "Decides from the summary. Does not go.",
+      "justRight": "Goes to the place, looks at the actual work, and decides from what is there.",
+      "over": "Moves the office to the floor, and every decision now waits for a personal visit."
+    },
+    {
+      "id": "number-and-story-disagree",
+      "situation": "When the number and the story disagree",
+      "under": "Picks whichever is more convenient and moves on.",
+      "justRight": "Goes to the source of both until they reconcile, then decides.",
+      "over": "Audits both until the decision window has closed."
+    },
+    {
+      "id": "sending-someone-else",
+      "situation": "When you could send someone else to look",
+      "under": "Always sends someone else, and the facts arrive pre-interpreted.",
+      "justRight": "Goes in person for the decisions that depend on seeing, and sends someone when they do not.",
+      "over": "Insists on seeing every detail personally, and becomes the bottleneck."
+    },
+    {
+      "id": "building-consensus",
+      "situation": "When people disagree about what is happening",
+      "under": "Votes, or picks the most senior account.",
+      "justRight": "Takes the people who disagree to the source, and lets the facts settle it.",
+      "over": "Requires a field trip for disagreements that a single measurement would end."
+    },
+    {
+      "id": "speed",
+      "situation": "When the decision is needed today",
+      "under": "Skips the look because there is no time, and the decision is wrong.",
+      "justRight": "Goes quickly, sees the thing that matters, and decides at the speed the facts allow.",
+      "over": "Treats going to see as a ritual that cannot be shortened, even when the fact is already in hand."
+    },
+    {
+      "id": "a-secondhand-report",
+      "situation": "When the report is already thorough",
+      "under": "Treats every report as gospel because it is long.",
+      "justRight": "Reads it, then checks the one claim that would change the decision if it were wrong.",
+      "over": "Ignores good reports on principle, because nothing counts unless you saw it yourself."
+    }
+  ]
+}

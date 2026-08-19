@@ -1,0 +1,90 @@
+{
+  "id": 7005,
+  "slug": "teamwork",
+  "company": "toyota",
+  "group": "respect-for-people",
+  "name": "Teamwork",
+  "sort": 5,
+  "definition": "We stimulate personal and professional growth, share the opportunities of development and maximize individual and team performance.",
+  "terms": [
+    {
+      "id": "teamwork",
+      "label": "teamwork",
+      "kind": "alias"
+    },
+    {
+      "id": "develop-people",
+      "label": "develop people",
+      "kind": "alias"
+    },
+    {
+      "id": "share-opportunities",
+      "label": "share opportunities",
+      "kind": "equivalent"
+    },
+    {
+      "id": "grow-the-person",
+      "label": "grow the person",
+      "kind": "facet",
+      "rows": [
+        "a-person-ready-for-more",
+        "sharing-a-stretch-assignment",
+        "a-teammate-who-is-struggling"
+      ]
+    },
+    {
+      "id": "team-performance",
+      "label": "team performance",
+      "kind": "facet",
+      "rows": [
+        "individual-heroics",
+        "credit-for-a-win",
+        "team-versus-star"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "a-person-ready-for-more",
+      "situation": "When someone is ready for more",
+      "under": "Keeps them in the role they already do well.",
+      "justRight": "Gives them the next stretch and the support to survive it.",
+      "over": "Promotes them into a hole the team needed filled, whether they are ready or not."
+    },
+    {
+      "id": "sharing-a-stretch-assignment",
+      "situation": "When a visible assignment appears",
+      "under": "Keeps it. Development is something other people should get.",
+      "justRight": "Shares the opportunity, including the ones that would have made you look good.",
+      "over": "Hands off every interesting problem, and you stop being useful on the work."
+    },
+    {
+      "id": "a-teammate-who-is-struggling",
+      "situation": "When a teammate is struggling",
+      "under": "Works around them. Their performance is their problem.",
+      "justRight": "Helps them get better, in the work, before deciding they cannot.",
+      "over": "Carries them indefinitely, and the rest of the team learns that struggling is a strategy."
+    },
+    {
+      "id": "individual-heroics",
+      "situation": "When one person can finish it alone",
+      "under": "Lets them, and the team learns nothing.",
+      "justRight": "Uses the work to raise the team's capability, even if it takes longer.",
+      "over": "Forces pair work on tasks that one skilled person should just finish."
+    },
+    {
+      "id": "credit-for-a-win",
+      "situation": "When the team ships something good",
+      "under": "Tells the story as a solo. The others become supporting cast.",
+      "justRight": "Makes the real contributions visible, including the unglamorous ones.",
+      "over": "Spreads credit so evenly that the people who did the hard part cannot be found."
+    },
+    {
+      "id": "team-versus-star",
+      "situation": "When one person is far ahead of the others",
+      "under": "Builds the plan around the star, and everyone else becomes a helper.",
+      "justRight": "Uses the star to raise the team's ceiling, not to replace the team.",
+      "over": "Slows the star to the team's average so that nobody feels behind."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": 7002,
+  "slug": "kaizen",
+  "company": "toyota",
+  "group": "continuous-improvement",
+  "name": "Kaizen",
+  "sort": 2,
+  "definition": "We improve our business operations continuously, always driving for innovation and evolution.",
+  "terms": [
+    {
+      "id": "kaizen",
+      "label": "kaizen",
+      "kind": "alias"
+    },
+    {
+      "id": "continuous-improvement",
+      "label": "continuous improvement",
+      "kind": "alias"
+    },
+    {
+      "id": "always-improve",
+      "label": "always improve",
+      "kind": "equivalent"
+    },
+    {
+      "id": "better-every-day",
+      "label": "better every day",
+      "kind": "equivalent"
+    },
+    {
+      "id": "never-satisfied",
+      "label": "never satisfied",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "a-small-defect",
+      "situation": "When a small defect shows up in the work",
+      "under": "Lives with it. Small things are not worth the interruption.",
+      "justRight": "Fixes it and the condition that produced it, even when the defect looks minor.",
+      "over": "Stops the whole line for a nick that could have been noted and fixed at the next break."
+    },
+    {
+      "id": "after-a-good-week",
+      "situation": "After a week that already hit the target",
+      "under": "Leaves the process alone. Good enough is the new standard.",
+      "justRight": "Asks what still wasted time, and takes one improvement into next week.",
+      "over": "Restarts the process because it can always be better, and the team never gets a stable week."
+    },
+    {
+      "id": "who-may-change-the-work",
+      "situation": "When the person doing the work sees a better way",
+      "under": "They need permission from somewhere that will not look. The idea dies.",
+      "justRight": "The person who does the work can change it, then tells the people who need to know.",
+      "over": "Everyone changes the process on their own, and there is no longer a process."
+    },
+    {
+      "id": "improvement-versus-delivery",
+      "situation": "When improvement would delay a deadline",
+      "under": "Ships the known waste because the date is sacred.",
+      "justRight": "Takes the improvement that pays back inside the work, and parks the rest.",
+      "over": "Misses the deadline to polish a process nobody will run this month."
+    },
+    {
+      "id": "the-standard",
+      "situation": "When the standard work is wrong",
+      "under": "Works around it and never writes the workaround down.",
+      "justRight": "Updates the standard so the next person does not have to rediscover the fix.",
+      "over": "Rewrites the standard so often that nobody can tell what the current one is."
+    },
+    {
+      "id": "innovation-and-evolution",
+      "situation": "When the process needs more than a tweak",
+      "under": "Tunes a process that should be replaced.",
+      "justRight": "Improves daily, and still knows when the next step is a different process.",
+      "over": "Reinvents the operation for the pleasure of it, and the last change never lands."
+    }
+  ]
+}

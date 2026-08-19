@@ -94,6 +94,37 @@ class FacetSharingTest(unittest.TestCase):
         self.assertIsNotNone(facet)
         self.assertEqual(sorted(facet["principles"]), [1002, 2008, 4001, 6004])
 
+    def test_toyota_genchi_genbutsu_shares_dive_deep(self):
+        # Toyota 7003 is the same go-and-see behavior as Amazon, Coupang,
+        # and Delivery Hero Dive Deep.
+        toyota_facets = principle_facets_from_index(self.index, 7003)
+        amazon_facets = principle_facets_from_index(self.index, 1012)
+        self.assertIn("dive-deep", toyota_facets)
+        self.assertIn("dive-deep", amazon_facets)
+
+    def test_toyota_challenge_shares_think_big(self):
+        toyota_facets = principle_facets_from_index(self.index, 7001)
+        amazon_facets = principle_facets_from_index(self.index, 1008)
+        self.assertIn("think-big", toyota_facets)
+        self.assertIn("think-big", amazon_facets)
+
+    def test_toyota_kaizen_shares_better_every_day(self):
+        # Toyota 7002 and Dawn 6009 share better-every-day
+        toyota_facets = principle_facets_from_index(self.index, 7002)
+        dawn_facets = principle_facets_from_index(self.index, 6009)
+        self.assertIn("better-every-day", toyota_facets)
+        self.assertIn("better-every-day", dawn_facets)
+
+    def test_better_every_day_is_a_slice_of_kaizen_not_the_whole_list(self):
+        # better-every-day takes Kaizen's daily-improvement rows, not the
+        # replace-the-process one.
+        facet = facet_by_id(self.facets, "better-every-day")
+        self.assertIsNotNone(facet)
+        kaizen_rows = rows_for_principle_on_facet(facet, 7002)
+        self.assertIn("a-small-defect", kaizen_rows)
+        self.assertIn("the-standard", kaizen_rows)
+        self.assertNotIn("innovation-and-evolution", kaizen_rows)
+
     def test_facet_ids_in_index_match_facets_json(self):
         # Every facet id in the index should exist in facets.json
         facet_ids = {f["id"] for f in self.facets["facets"]}
