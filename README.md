@@ -164,3 +164,7 @@ There will be more over time, but this is the start:
   questions and the example generator prompt.
 - `kindel/porridge`, the user's manual. Owns what under indexed, balanced, and
   over done look like in practice.
+
+## License
+
+MIT. Copyright (c) 2026 Kindel, LLC. Keep the copyright notice and permission notice in all copies.
