@@ -1,0 +1,75 @@
+{
+  "id": 7004,
+  "slug": "respect",
+  "company": "toyota",
+  "group": "respect-for-people",
+  "name": "Respect",
+  "sort": 4,
+  "definition": "We respect others, make every effort to understand each other, take responsibility and do our best to build mutual trust.",
+  "terms": [
+    {
+      "id": "respect",
+      "label": "respect",
+      "kind": "alias"
+    },
+    {
+      "id": "mutual-trust",
+      "label": "mutual trust",
+      "kind": "alias"
+    },
+    {
+      "id": "understand-each-other",
+      "label": "understand each other",
+      "kind": "equivalent"
+    },
+    {
+      "id": "take-responsibility",
+      "label": "take responsibility",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "before-judging",
+      "situation": "When you disagree with someone's call",
+      "under": "Writes them off. Their reasons are not worth hearing.",
+      "justRight": "Works to understand why they see it that way, then takes a position.",
+      "over": "Spends so long understanding that you never take a position."
+    },
+    {
+      "id": "taking-responsibility",
+      "situation": "When the work has hurt someone",
+      "under": "Explains why it was reasonable from your side.",
+      "justRight": "Takes responsibility, and does the work of repairing the trust.",
+      "over": "Apologizes so thoroughly that the repair never starts."
+    },
+    {
+      "id": "building-mutual-trust",
+      "situation": "When trust is not yet there",
+      "under": "Proceeds as if it were, and is surprised when it breaks.",
+      "justRight": "Does what you said you would, in the small things, until trust is real.",
+      "over": "Demands trust as a precondition, before you have given any."
+    },
+    {
+      "id": "a-stakeholder-not-in-the-room",
+      "situation": "When a stakeholder is not in the room",
+      "under": "Talks as if they do not exist. Their interest is an inconvenience.",
+      "justRight": "Represents them fairly, including the parts that complicate the plan.",
+      "over": "Blocks every move on their behalf without checking whether they would have cared."
+    },
+    {
+      "id": "respect-versus-agreement",
+      "situation": "When respect is confused with agreement",
+      "under": "Calls disagreement disrespect, and people stop saying what they see.",
+      "justRight": "Disagrees without diminishing the person. Understanding is not the same as agreeing.",
+      "over": "Softens every disagreement into a compliment, and the real issue never gets named."
+    },
+    {
+      "id": "effort-to-understand",
+      "situation": "When the other person's context is unfamiliar",
+      "under": "Judges from your own context and calls it a standard.",
+      "justRight": "Puts in the work to learn theirs, then holds a shared standard.",
+      "over": "Treats every difference as equally valid, including the ones that break the work."
+    }
+  ]
+}

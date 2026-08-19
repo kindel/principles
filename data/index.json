@@ -580,6 +580,55 @@
           "file": "data/dawn/race-on-the-racetrack-walk-on-ice.json"
         }
       ]
+    },
+    {
+      "id": "toyota",
+      "name": "Toyota",
+      "set": "The Toyota Way",
+      "source": "https://www.toyota-global.com/pages/contents/investors/ir_library/annual/pdf/2018/ar18_3_en.pdf",
+      "principles": [
+        {
+          "id": 7001,
+          "slug": "challenge",
+          "name": "Challenge",
+          "sort": 1,
+          "file": "data/toyota/challenge.json"
+        },
+        {
+          "id": 7002,
+          "slug": "kaizen",
+          "name": "Kaizen",
+          "sort": 2,
+          "file": "data/toyota/kaizen.json",
+          "facets": [
+            "better-every-day"
+          ]
+        },
+        {
+          "id": 7003,
+          "slug": "genchi-genbutsu",
+          "name": "Genchi Genbutsu",
+          "sort": 3,
+          "file": "data/toyota/genchi-genbutsu.json",
+          "facets": [
+            "dive-deep"
+          ]
+        },
+        {
+          "id": 7004,
+          "slug": "respect",
+          "name": "Respect",
+          "sort": 4,
+          "file": "data/toyota/respect.json"
+        },
+        {
+          "id": 7005,
+          "slug": "teamwork",
+          "name": "Teamwork",
+          "sort": 5,
+          "file": "data/toyota/teamwork.json"
+        }
+      ]
     }
   ]
 }

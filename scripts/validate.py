@@ -33,7 +33,8 @@ SENTENCE = re.compile(r"(?<=[.!?])[\"'\)\]]*\s+")
 # Companies that publish their set under lenses, and the lens each sort
 # position falls in. A company absent from this table carries no group, and
 # validate_record rejects one. Arm sort 1-5 are One Arm, 6-10 are Accelerate
-# Impact. Dawn's seven headings are from its September 2024 poster and do not
+# Impact. Toyota sort 1-3 are Continuous Improvement, 4-5 are Respect for
+# People. Dawn's seven headings are from its September 2024 poster and do not
 # follow the numbering, so the table is the only place the mapping lives.
 GROUP_BY_COMPANY = {
     "arm": {
@@ -47,6 +48,13 @@ GROUP_BY_COMPANY = {
         8: "accelerate-impact",
         9: "accelerate-impact",
         10: "accelerate-impact",
+    },
+    "toyota": {
+        1: "continuous-improvement",
+        2: "continuous-improvement",
+        3: "continuous-improvement",
+        4: "respect-for-people",
+        5: "respect-for-people",
     },
     "dawn": {
         1: "strategic-approach",

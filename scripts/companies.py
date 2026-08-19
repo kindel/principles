@@ -58,4 +58,15 @@ COMPANY_META = collections.OrderedDict([
         # permission. See Sourcing in SCHEMA.md.
         "source": "Dawn Aerospace Company Tenets, Dawn's internal wiki, published with Dawn's permission",
     }),
+    ("toyota", {
+        "block": 7000,
+        "name": "Toyota",
+        "set": "The Toyota Way",
+        # Toyota Way 2001: five keywords under two pillars. Definitions from
+        # TMC Annual Report 2018, p. 29, the first-party text that states
+        # each keyword. The named historical page is
+        # toyota-global.com/.../philosophy/toyotaway2001.html. Toyota Way
+        # 2020 is a later set and is not this one.
+        "source": "https://www.toyota-global.com/pages/contents/investors/ir_library/annual/pdf/2018/ar18_3_en.pdf",
+    }),
 ])

@@ -31,11 +31,15 @@
     {
       "id": "better-every-day",
       "label": "better every day",
-      "principles": [1007, 6009],
+      "principles": [1007, 6009, 7002],
       "rows": [
         { "principle": 1007, "id": "tracking-goals" },
         { "principle": 1007, "id": "confronting-issues" },
-        { "principle": 6009, "id": "dawns-own-example" }
+        { "principle": 6009, "id": "dawns-own-example" },
+        { "principle": 7002, "id": "a-small-defect" },
+        { "principle": 7002, "id": "after-a-good-week" },
+        { "principle": 7002, "id": "improvement-versus-delivery" },
+        { "principle": 7002, "id": "the-standard" }
       ]
     },
     {
@@ -78,7 +82,7 @@
     {
       "id": "dive-deep",
       "label": "dive deep",
-      "principles": [1012, 3004, 4002],
+      "principles": [1012, 3004, 4002, 7003],
       "rows": [
         { "principle": 1012, "id": "unit-economics" },
         { "principle": 1012, "id": "metrics-review" },
@@ -101,7 +105,13 @@
         { "principle": 4002, "id": "surprising-result" },
         { "principle": 4002, "id": "operating-detail" },
         { "principle": 4002, "id": "delegated-work" },
-        { "principle": 4002, "id": "recurring-issue" }
+        { "principle": 4002, "id": "recurring-issue" },
+        { "principle": 7003, "id": "a-problem-on-the-floor" },
+        { "principle": 7003, "id": "number-and-story-disagree" },
+        { "principle": 7003, "id": "sending-someone-else" },
+        { "principle": 7003, "id": "building-consensus" },
+        { "principle": 7003, "id": "speed" },
+        { "principle": 7003, "id": "a-secondhand-report" }
       ]
     },
     {
