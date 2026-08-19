@@ -245,6 +245,34 @@ def validate_record(company, filename, rec, errs):
     return row_ids
 
 
+def is_inline_generated(row):
+    """True when the facet row carries its own prose instead of a record ref."""
+    if not isinstance(row, dict):
+        return False
+    return any(k in row for k in ("situation", "under", "justRight", "over"))
+
+
+def validate_generated_row(row, where, errs):
+    """An inline facet row belongs to the facet, not to a company record."""
+    rid = row.get("id")
+    label = "%s generated row %r" % (where, rid)
+    if "principle" in row:
+        errs.append("%s: must not name a principle" % label)
+    if row.get("words") != "generated":
+        errs.append("%s: words must be generated, got %r" % (label, row.get("words")))
+    for key in ("situation", "under", "justRight", "over"):
+        if not row.get(key):
+            errs.append("%s: missing %r" % (label, key))
+    for key in ("under", "justRight", "over"):
+        text = (row.get(key) or "").strip()
+        if not text:
+            continue
+        n = len([x for x in SENTENCE.split(text) if x])
+        if not 1 <= n <= 3:
+            errs.append("%s: %s has %d sentences, expected one to three"
+                        % (label, key, n))
+
+
 def load_facets(errs):
     """Load data/facets.json if it exists, validating its basic structure."""
     path = os.path.join(DATA, "facets.json")
@@ -314,9 +342,19 @@ def validate_facets(facets, principle_rows, errs):
         rows = f.get("rows", [])
         if not rows:
             errs.append("%s: must list at least one row" % where)
+        row_ids = set()
         for row in rows:
-            rpid = row.get("principle")
             rid = row.get("id")
+            if not SLUG.match(rid or ""):
+                errs.append("%s: row id %r is not kebab-case" % (where, rid))
+            elif rid in row_ids:
+                errs.append("%s: duplicate row id %r" % (where, rid))
+            else:
+                row_ids.add(rid)
+            if is_inline_generated(row):
+                validate_generated_row(row, where, errs)
+                continue
+            rpid = row.get("principle")
             if not isinstance(rpid, int) or isinstance(rpid, bool):
                 errs.append("%s: row principle %r is not a number" % (where, rpid))
                 continue

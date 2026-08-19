@@ -325,6 +325,54 @@ class FacetMapTest(unittest.TestCase):
                         {"principle": 2001, "id": "row-x"}])
         self.assertEqual([], self.check(f))
 
+    def test_an_inline_generated_row_passes(self):
+        f = facet(rows=[{
+            "id": "a-new-situation",
+            "situation": "A new situation",
+            "under": "Does not own it.",
+            "justRight": "Owns it and finishes it.",
+            "over": "Takes over everyone else's work.",
+            "words": "generated",
+        }])
+        self.assertEqual([], self.check(f))
+
+    def test_an_inline_row_must_be_marked_generated(self):
+        f = facet(rows=[{
+            "id": "a-new-situation",
+            "situation": "A new situation",
+            "under": "Does not own it.",
+            "justRight": "Owns it and finishes it.",
+            "over": "Takes over everyone else's work.",
+            "words": "authored",
+        }])
+        errs = self.check(f)
+        self.assertTrue(any("words must be generated" in e for e in errs), errs)
+
+    def test_an_inline_row_must_not_name_a_principle(self):
+        f = facet(rows=[{
+            "id": "a-new-situation",
+            "principle": 1001,
+            "situation": "A new situation",
+            "under": "Does not own it.",
+            "justRight": "Owns it and finishes it.",
+            "over": "Takes over everyone else's work.",
+            "words": "generated",
+        }])
+        errs = self.check(f)
+        self.assertTrue(any("must not name a principle" in e for e in errs), errs)
+
+    def test_an_inline_row_still_needs_one_to_three_sentences(self):
+        f = facet(rows=[{
+            "id": "a-new-situation",
+            "situation": "A new situation",
+            "under": "One. Two. Three. Four.",
+            "justRight": "Owns it.",
+            "over": "Takes over.",
+            "words": "generated",
+        }])
+        errs = self.check(f)
+        self.assertTrue(any("one to three" in e for e in errs), errs)
+
 
 if __name__ == "__main__":
     unittest.main()

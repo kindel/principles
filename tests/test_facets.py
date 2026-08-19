@@ -43,7 +43,7 @@ def facet_by_id(facets, facet_id):
 
 def rows_for_principle_on_facet(facet, principle_id):
     """Return the row ids mapped to a principle on a facet."""
-    return [r["id"] for r in facet["rows"] if r["principle"] == principle_id]
+    return [r["id"] for r in facet["rows"] if r.get("principle") == principle_id]
 
 
 class FacetSharingTest(unittest.TestCase):
