@@ -458,7 +458,10 @@
           "slug": "think-big-start-small",
           "name": "Think big, start small",
           "sort": 1,
-          "file": "data/dawn/think-big-start-small.json"
+          "file": "data/dawn/think-big-start-small.json",
+          "facets": [
+            "think-big"
+          ]
         },
         {
           "id": 6002,

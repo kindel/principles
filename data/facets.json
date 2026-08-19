@@ -45,7 +45,7 @@
     {
       "id": "think-big",
       "label": "think big",
-      "principles": [1008, 7001],
+      "principles": [1008, 6001, 7001],
       "rows": [
         { "principle": 1008, "id": "stretch-goals" },
         { "principle": 1008, "id": "status-quo" },
@@ -53,6 +53,7 @@
         { "principle": 1008, "id": "strategy-direction" },
         { "principle": 1008, "id": "time-horizon" },
         { "principle": 1008, "id": "growth-goals" },
+        { "principle": 6001, "id": "dawns-own-example" },
         { "principle": 7001, "id": "a-long-term-vision" },
         { "principle": 7001, "id": "a-hard-problem" },
         { "principle": 7001, "id": "after-the-first-try-fails" },
