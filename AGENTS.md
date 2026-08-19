@@ -66,7 +66,13 @@ replace github.com/kindel/biq => ../biq-<n>
 ```
 
 Hit `/porridge/?c=<id>` and `/biq/?c=<id>`. BIQ shells with zero questions
-are expected. The company has to appear in the picker.
+are expected until someone writes the interview. The company has to appear
+in the picker.
+
+BIQ questions are not generic "tell me about this principle" prompts. They
+name a calibration situation, the row. Where a principle shares a facet,
+reuse the existing interview on that facet: same behavior, same questions.
+`generate.py` already skips example packs when the facet is covered.
 
 ## Local Hugo
 
