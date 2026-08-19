@@ -59,8 +59,9 @@ The model above is the target. The schema implements part of it, and the gaps
 are tracked rather than implied:
 
 - The cross-company facet map (`data/facets.json`) expresses the shared behavior
-  underneath two companies' sets. Same facet, same examples: principles that
-  share a facet share the rows mapped to that facet.
+  underneath two companies' sets. Same facet, same generated examples in the
+  app. Human rows on records are source for the generator, not the porridge
+  table.
 - Level and role are not in the schema. Apps carry their own notions today.
   Calibration is level-independent, so this is an additive selection and
   weighting layer rather than a change to `rows`.

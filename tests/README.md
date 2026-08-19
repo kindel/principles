@@ -70,9 +70,15 @@ still ours.
 
 ## A note for whoever writes the generator
 
-These rows are the reference a generator is measured against, so a generator
-must not read them as examples. Nothing here can enforce that. These tests read
-files; a prompt is assembled at runtime and never becomes a file. Marking rows
-`quoted` and `generated` is what makes the distinction available to a generator
-that wants to respect it, and porridge#3 is where the check that a prompt is
-clean has to live, because that is where the prompt exists.
+These human rows *are* the source. Amazon authored and Dawn quoted are the
+quality bar the model should sound like. They are not a hold-out exam, and
+they are not the porridge table. Porridge shows only `words: generated` rows
+on the facet, the way BIQ shows generated packs and keeps the question bank
+human.
+
+Nothing in this repo can enforce that split. These tests read files; a prompt
+is assembled at runtime and never becomes a file. Marking rows `quoted`,
+`authored`, and `generated` is what makes the distinction available.
+porridge#3 is where the generator must use the human rows as source, write
+generated rows onto the facet, and never copy a human row into the app table
+or mark generated output as authored.
