@@ -135,6 +135,9 @@ class FacetSharingTest(unittest.TestCase):
                                   "principle %d lists unknown facet %r"
                                   % (p["id"], fid))
 
+    def test_index_is_version_5(self):
+        self.assertEqual(5, self.index["version"])
+
 
 class FacetStructureTest(unittest.TestCase):
     """Basic structural tests for facets.json."""
@@ -158,6 +161,13 @@ class FacetStructureTest(unittest.TestCase):
         for f in self.facets["facets"]:
             self.assertTrue(f["rows"],
                             "facet %r has no rows" % f["id"])
+
+    def test_every_facet_has_at_least_one_source_ref(self):
+        # Source refs are generator input. Generated rows are the app table
+        # and may still be absent; that is unpublished, not a fallback.
+        for f in self.facets["facets"]:
+            refs = [r for r in f["rows"] if "principle" in r]
+            self.assertTrue(refs, "facet %r has no source refs" % f["id"])
 
 
 if __name__ == "__main__":

@@ -81,7 +81,7 @@ def main():
         ]))
 
     index = collections.OrderedDict([
-        ("version", 4),
+        ("version", 5),
         ("generated", "scripts/build_index.py"),
         ("companies", companies),
     ])

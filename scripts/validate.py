@@ -351,6 +351,7 @@ def validate_facets(facets, principle_rows, errs):
         if not rows:
             errs.append("%s: must list at least one row" % where)
         row_ids = set()
+        n_source = 0
         for row in rows:
             rid = row.get("id")
             if not SLUG.match(rid or ""):
@@ -362,6 +363,7 @@ def validate_facets(facets, principle_rows, errs):
             if is_inline_generated(row):
                 validate_generated_row(row, where, errs)
                 continue
+            n_source += 1
             rpid = row.get("principle")
             if not isinstance(rpid, int) or isinstance(rpid, bool):
                 errs.append("%s: row principle %r is not a number" % (where, rpid))
@@ -378,6 +380,9 @@ def validate_facets(facets, principle_rows, errs):
             if rpid not in listed:
                 errs.append("%s: row principle %d is not in this facet's principles"
                             % (where, rpid))
+
+        if rows and n_source == 0:
+            errs.append("%s: must list at least one source ref" % where)
 
         check_style(f, where, errs)
 
@@ -438,7 +443,7 @@ def expected_index(by_company, principle_to_facets):
             "principles": principles,
         })
     return {
-        "version": 4,
+        "version": 5,
         "generated": "scripts/build_index.py",
         "companies": companies,
     }
@@ -487,8 +492,8 @@ def main():
             errs.append("data/index.json: not valid JSON, %s" % e)
             index = None
         if index is not None:
-            if index.get("version") != 4:
-                errs.append("data/index.json: version must be 4, got %r"
+            if index.get("version") != 5:
+                errs.append("data/index.json: version must be 5, got %r"
                             % index.get("version"))
             want = expected_index(by_company, principle_to_facets)
             # Compare the generated shape, ignoring key order by using the

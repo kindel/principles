@@ -283,6 +283,13 @@ class ExpectedIndexTest(unittest.TestCase):
         self.assertEqual(["b-principle"],
                          [p["slug"] for p in self.amazon(idx)["principles"]])
 
+    def test_the_index_is_version_5(self):
+        # Version 4 resolved {principle, id} refs into the display table.
+        # Version 5 displays only inline generated rows. A silent reuse of 4
+        # would leave consumers with no signal to stop showing human rows.
+        idx = self.build([("a-principle.json", record())])
+        self.assertEqual(5, idx["version"])
+
 
 def facet(**kw):
     f = {
@@ -326,6 +333,23 @@ class FacetMapTest(unittest.TestCase):
         self.assertEqual([], self.check(f))
 
     def test_an_inline_generated_row_passes(self):
+        f = facet(rows=[
+            {"principle": 1001, "id": "row-0"},
+            {
+                "id": "a-new-situation",
+                "situation": "A new situation",
+                "under": "Does not own it.",
+                "justRight": "Owns it and finishes it.",
+                "over": "Takes over everyone else's work.",
+                "words": "generated",
+            },
+        ])
+        self.assertEqual([], self.check(f))
+
+    def test_a_generated_only_facet_is_rejected(self):
+        # Generated rows are the app table. Source refs are what the
+        # generator reads. A facet with only generated rows has lost its
+        # source, so it cannot be regenerated.
         f = facet(rows=[{
             "id": "a-new-situation",
             "situation": "A new situation",
@@ -334,7 +358,8 @@ class FacetMapTest(unittest.TestCase):
             "over": "Takes over everyone else's work.",
             "words": "generated",
         }])
-        self.assertEqual([], self.check(f))
+        errs = self.check(f)
+        self.assertTrue(any("at least one source ref" in e for e in errs), errs)
 
     def test_an_inline_row_must_be_marked_generated(self):
         f = facet(rows=[{
