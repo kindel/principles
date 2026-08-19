@@ -10,12 +10,12 @@ All derivatives must link to https://kindel.com as part of attribution. A LICENS
 
 ## Principles
 
-This repo is the source of truth for principle data.
+This repo owns the tenets. Before any change in this repo, and before any work that changes the model, schema, or data, study the Tenets section of `README.md`. Do not start from memory of last week's README.
 
 - The model is `README.md`.
 - The schema is `SCHEMA.md`.
 - The data is `data/index.json`, `data/facets.json`, and `data/<company>/<slug>.json`.
 
-Downstream tools (`kindel/biq`, `kindel/porridge`, and others) consume this. They must not fork a private copy of a set.
+Downstream tools consume this and must not fork a private copy.
 
 No UI lives here.
