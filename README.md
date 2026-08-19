@@ -115,7 +115,7 @@ reason.
 ## Layout
 
 ```
-data/index.json              manifest, generated, version 4
+data/index.json              manifest, generated, version 5
 data/facets.json             cross-company facet map
 data/amazon/<slug>.json        one Amazon principle
 data/arm/<slug>.json           one Arm factor

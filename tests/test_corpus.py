@@ -110,6 +110,17 @@ class FixtureTest(unittest.TestCase):
         self.assertIn("only 'finished' when it's perfect", p["expected"]["under"])
         self.assertIn("hoping for the best", p["expected"]["over"])
 
+    def test_dawn_fixture_is_source_not_a_hold_out(self):
+        # These rows are the quality bar a generator should sound like, not a
+        # set it must not read. heldOut: true told the opposite story.
+        dawn = self.fixtures.get("dawn")
+        self.assertIsNotNone(dawn, "the Dawn fixture is gone")
+        self.assertFalse(dawn.get("heldOut"),
+                         "Dawn fixture is still marked heldOut")
+        hold = dawn.get("shape", {}).get("holdOut", "")
+        self.assertIn("source", hold.lower())
+        self.assertNotIn("must not read them as examples", hold.lower())
+
 
 class QuotationTest(unittest.TestCase):
     """Quotations stay quotations, and nobody else's words become ours."""
@@ -192,6 +203,17 @@ class DocumentationTest(unittest.TestCase):
         for value in validate.WORDS:
             self.assertIn("`%s`" % value, self.schema,
                           "SCHEMA.md does not mention words value %r" % value)
+
+    def test_schema_names_the_manifest_version(self):
+        self.assertIn("`version` in the manifest is 5", self.schema)
+
+    def test_schema_does_not_treat_a_source_ref_as_an_app_row(self):
+        # A refs-only facet is valid source. It is not the porridge table.
+        # "either kind" implied the two row types were interchangeable for
+        # display, which hid that generated rows may still be absent.
+        self.assertNotIn("of either kind", self.schema)
+        self.assertIn("may be absent", self.schema)
+        self.assertIn("does not fall back", self.schema)
 
 
 class AgentsDocTest(unittest.TestCase):

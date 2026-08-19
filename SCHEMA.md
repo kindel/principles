@@ -11,7 +11,7 @@ A consumer picks one company and shows only that company's set.
 
 ```json
 {
-  "version": 4,
+  "version": 5,
   "generated": "scripts/build_index.py",
   "companies": [
     {
@@ -146,8 +146,10 @@ facet share the rows mapped to that facet.
   quoted). That is source data for the generator: which behaviors this facet
   covers, and the voice it should sound like. An inline row `{id, situation,
   under, justRight, over, words: "generated"}` is app data. Porridge shows
-  those. Generated rows must not carry `principle`. At least one row of either
-  kind.
+  those. Generated rows must not carry `principle`. At least one source ref.
+  Generated rows are the app table and may be absent until the generator
+  writes them. A display consumer that finds none shows nothing; it does
+  not fall back to the refs.
 
 A principle that is on a facet inherits that facet's *generated* rows in the
 app. Human rows on the records, and `{principle, id}` refs on the facet, stay
@@ -168,7 +170,8 @@ intra-principle slices. The facet map is the cross-company layer.
 A consumer that *shows* calibration (porridge, like BIQ example packs) reads
 facet ids from `index.json` and displays only inline generated rows from
 `facets.json`. It does not resolve `{principle, id}` refs into the table, and
-it does not fall back to the principle's own human rows.
+it does not fall back to the principle's own human rows. Generated rows may
+be absent; that is unpublished, not a reason to show the source refs.
 
 A consumer that *generates* calibration (porridge's generator) reads those
 refs, loads the human rows, and uses them as the quality bar. It writes a full
@@ -354,6 +357,7 @@ is `id`. A consumer that keys on `slug` alone is the bug this schema was
 changed to prevent.
 
 Version with tags. A schema change is a major version, so consumers can move
-at their own pace. `version` in the manifest is 4: version 3 had no
-cross-company facet map, version 2 had a kebab-case `id` that was unique only
-within a company.
+at their own pace. `version` in the manifest is 5: version 4 resolved
+`{principle, id}` refs into the display table, version 3 had no cross-company
+facet map, version 2 had a kebab-case `id` that was unique only within a
+company.
