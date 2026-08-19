@@ -166,9 +166,9 @@ list the cascade pings. Adding a company here is not finished until both
 apps can show it.
 
 - `kindel/porridge` mounts this module and renders the calibration.
-- `kindel/biq` keeps its own question bank. It does not read this repo at
-  runtime. A sync adds shells; questions and example packs are a later
-  step in that repo.
+- `kindel/biq` keeps a fixed question set. Each question maps to facets.
+  A new company inherits those questions (and their generated examples)
+  through the facet map, not by writing a second bank.
 - `kindel/kindelwww` is the host. A local Hugo preview that only replaces
   this module will show porridge and still miss BIQ.
 

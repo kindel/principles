@@ -77,7 +77,10 @@
           "slug": "think-big",
           "name": "Think Big",
           "sort": 8,
-          "file": "data/amazon/think-big.json"
+          "file": "data/amazon/think-big.json",
+          "facets": [
+            "think-big"
+          ]
         },
         {
           "id": 1009,
@@ -592,7 +595,10 @@
           "slug": "challenge",
           "name": "Challenge",
           "sort": 1,
-          "file": "data/toyota/challenge.json"
+          "file": "data/toyota/challenge.json",
+          "facets": [
+            "think-big"
+          ]
         },
         {
           "id": 7002,
@@ -619,14 +625,20 @@
           "slug": "respect",
           "name": "Respect",
           "sort": 4,
-          "file": "data/toyota/respect.json"
+          "file": "data/toyota/respect.json",
+          "facets": [
+            "earn-trust"
+          ]
         },
         {
           "id": 7005,
           "slug": "teamwork",
           "name": "Teamwork",
           "sort": 5,
-          "file": "data/toyota/teamwork.json"
+          "file": "data/toyota/teamwork.json",
+          "facets": [
+            "hire-and-develop-the-best"
+          ]
         }
       ]
     }

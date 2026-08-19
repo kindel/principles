@@ -102,6 +102,12 @@ class FacetSharingTest(unittest.TestCase):
         self.assertIn("dive-deep", toyota_facets)
         self.assertIn("dive-deep", amazon_facets)
 
+    def test_toyota_challenge_shares_think_big(self):
+        toyota_facets = principle_facets_from_index(self.index, 7001)
+        amazon_facets = principle_facets_from_index(self.index, 1008)
+        self.assertIn("think-big", toyota_facets)
+        self.assertIn("think-big", amazon_facets)
+
     def test_toyota_kaizen_shares_better_every_day(self):
         # Toyota 7002 and Dawn 6009 share better-every-day
         toyota_facets = principle_facets_from_index(self.index, 7002)

@@ -20,11 +20,12 @@ does not mean anyone can see them.
   and renders it. A new company needs one content stub per principle under
   `content/porridge/<company>/`, which `scripts/sync_from_principles.py` in
   porridge writes.
-- `kindel/biq`, the interview question bank. **It does not read this repo
-  at runtime.** `data/questions.json` is its own bank. `scripts/sync_from_principles.py`
-  in biq adds company and principle shells (empty `questions`,
-  `examples: false`). Writing the questions, generating hire/no-hire
-  packs, and flipping `examples` to true are later steps in that repo.
+- `kindel/biq`, the interview question bank. It keeps a **fixed set of
+  questions**. Each question maps to one or more facets. A new company
+  does not get new questions written. Mapping the company's principles
+  onto facets is what makes the existing questions (and their generated
+  example packs) appear. `scripts/sync_from_principles.py` in biq adds
+  shells and facet ids; it does not author questions.
 - `kindel/kindelwww`, the host. It mounts both as Hugo modules. A local
   preview that only replaces `github.com/kindel/principles` will show
   porridge and still miss BIQ.
@@ -65,14 +66,10 @@ replace github.com/kindel/principles => ../principles-<n>
 replace github.com/kindel/biq => ../biq-<n>
 ```
 
-Hit `/porridge/?c=<id>` and `/biq/?c=<id>`. BIQ shells with zero questions
-are expected until someone writes the interview. The company has to appear
-in the picker.
-
-BIQ questions are not generic "tell me about this principle" prompts. They
-name a calibration situation, the row. Where a principle shares a facet,
-reuse the existing interview on that facet: same behavior, same questions.
-`generate.py` already skips example packs when the facet is covered.
+Hit `/porridge/?c=<id>` and `/biq/?c=<id>`. On BIQ, a principle with no
+facet map shows no questions. A principle that shares a facet with the
+fixed bank shows those questions, and the Examples button uses the
+existing pack id. Do not author a parallel question list per company.
 
 ## Local Hugo
 
