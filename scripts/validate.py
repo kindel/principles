@@ -308,6 +308,9 @@ def validate_facets(facets, principle_rows, errs):
             else:
                 principle_to_facets[pid].append(fid)
 
+        listed = set(p for p in principles
+                     if isinstance(p, int) and not isinstance(p, bool))
+
         rows = f.get("rows", [])
         if not rows:
             errs.append("%s: must list at least one row" % where)
@@ -316,23 +319,61 @@ def validate_facets(facets, principle_rows, errs):
             rid = row.get("id")
             if not isinstance(rpid, int) or isinstance(rpid, bool):
                 errs.append("%s: row principle %r is not a number" % (where, rpid))
-            elif rpid not in principle_rows:
+                continue
+            if rpid not in principle_rows:
                 errs.append("%s: row references principle %d which does not exist"
                             % (where, rpid))
             elif rid not in principle_rows[rpid]:
                 errs.append("%s: row references %d/%r which does not exist"
                             % (where, rpid, rid))
+            # A row from a principle the facet does not list would render on
+            # every member of the facet while its own principle never gets
+            # the facet in the index.
+            if rpid not in listed:
+                errs.append("%s: row principle %d is not in this facet's principles"
+                            % (where, rpid))
 
         check_style(f, where, errs)
 
     return principle_to_facets
 
 
+def validate_company(company, items, errs):
+    """Checks that span one company's directory rather than one record."""
+    # sort is unique 1..n per company. A record whose sort is missing or not
+    # a number has already been reported by validate_record; it must not
+    # crash this comparison, or the queued errors never print.
+    numeric = sorted(rec.get("sort") for _, rec in items
+                     if isinstance(rec.get("sort"), int)
+                     and not isinstance(rec.get("sort"), bool))
+    if numeric != list(range(1, len(items) + 1)):
+        errs.append("%s: sort must be one through %d with no gaps or repeats, got %s"
+                    % (company, len(items), numeric))
+
+    # term ids unique per company
+    seen = {}
+    for _, rec in items:
+        for t in rec.get("terms", []):
+            tid = t.get("id")
+            if tid in seen:
+                errs.append("%s: term id %r used by both %s and %s"
+                            % (company, tid, seen[tid], rec.get("id")))
+            seen[tid] = rec.get("id")
+
+
 def expected_index(by_company, principle_to_facets):
     companies = []
     for cid, meta in COMPANY_META.items():
-        records = [rec for _, rec in by_company[cid]]
-        records.sort(key=lambda r: r.get("sort", 0))
+        # A record missing one of these keys has already failed validation;
+        # skipping it here keeps the run alive so those errors print instead
+        # of a KeyError traceback. The comparison against index.json may then
+        # also report the index as stale, which is true until the record is
+        # fixed and the index rebuilt.
+        records = [rec for _, rec in by_company[cid]
+                   if all(k in rec for k in ("id", "slug", "name", "sort"))
+                   and isinstance(rec.get("sort"), int)
+                   and not isinstance(rec.get("sort"), bool)]
+        records.sort(key=lambda r: r["sort"])
         principles = []
         for r in records:
             pid = r["id"]
@@ -370,21 +411,7 @@ def main():
             if isinstance(pid, int) and not isinstance(pid, bool):
                 principle_rows[pid] = row_ids
 
-        # sort is unique 1..n per company
-        sorts = [rec.get("sort") for _, rec in items]
-        if sorted(sorts) != list(range(1, len(items) + 1)):
-            errs.append("%s: sort must be one through %d with no gaps or repeats, got %s"
-                        % (company, len(items), sorted(sorts)))
-
-        # term ids unique per company
-        seen = {}
-        for _, rec in items:
-            for t in rec.get("terms", []):
-                tid = t.get("id")
-                if tid in seen:
-                    errs.append("%s: term id %r used by both %s and %s"
-                                % (company, tid, seen[tid], rec.get("id")))
-                seen[tid] = rec.get("id")
+        validate_company(company, items, errs)
 
     # Globally unique ids. This is the property the whole scheme exists for,
     # so it is checked across the corpus rather than per company.
