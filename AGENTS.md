@@ -70,6 +70,9 @@ Do all of this, in this repo first:
 3. If the company publishes lenses, add `group` and an entry in
    `GROUP_BY_COMPANY` in `scripts/validate.py`.
 4. Map facets only where the behavior is the same, including slices.
+   Classify every new principle in `tests/fixtures/facet-audit.json`
+   (map, skip, or new-facet). Unmapped is an empty table, not a
+   fallback. A stretch is a skip.
 5. Update the company list and block in `SCHEMA.md`. Tests fail if you
    skip this.
 6. Update the sets list and layout in `README.md`.

@@ -628,20 +628,14 @@
           "slug": "respect",
           "name": "Respect",
           "sort": 4,
-          "file": "data/toyota/respect.json",
-          "facets": [
-            "earn-trust"
-          ]
+          "file": "data/toyota/respect.json"
         },
         {
           "id": 7005,
           "slug": "teamwork",
           "name": "Teamwork",
           "sort": 5,
-          "file": "data/toyota/teamwork.json",
-          "facets": [
-            "hire-and-develop-the-best"
-          ]
+          "file": "data/toyota/teamwork.json"
         }
       ]
     }

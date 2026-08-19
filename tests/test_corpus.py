@@ -39,13 +39,24 @@ def shingles(text):
 
 
 def load_fixtures():
+    """Company calibration fixtures only.
+
+    Other JSON in this directory (the facet audit, later snapshots) is not
+    a quotation reference. A file without the company-fixture shape is
+    skipped so adding one cannot crash the quotation tests.
+    """
     out = {}
     for name in sorted(os.listdir(FIXTURES)):
         if not name.endswith(".json"):
             continue
         with open(os.path.join(FIXTURES, name), encoding="utf-8") as f:
             doc = json.load(f)
-        out[doc["company"]["id"]] = doc
+        company = doc.get("company")
+        if not isinstance(company, dict) or "id" not in company:
+            continue
+        if "principles" not in doc:
+            continue
+        out[company["id"]] = doc
     return out
 
 
@@ -79,6 +90,13 @@ class FixtureTest(unittest.TestCase):
 
     def test_there_is_at_least_one(self):
         self.assertTrue(self.fixtures, "no fixtures in tests/fixtures/")
+
+    def test_non_company_json_in_fixtures_is_ignored(self):
+        # The facet audit lives beside the Dawn fixture. Loading every JSON
+        # in the directory as a company snapshot is the crash this guards.
+        self.assertNotIn("facet-audit", self.fixtures)
+        audit = os.path.join(FIXTURES, "facet-audit.json")
+        self.assertTrue(os.path.exists(audit), "facet-audit.json is missing")
 
     def test_every_entry_is_a_complete_triple(self):
         for company, doc in self.fixtures.items():
