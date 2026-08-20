@@ -17,6 +17,8 @@ All derivatives must link to https://kindel.com as part of attribution. A
 LICENSE file alone is not enough. Forks, ports, hosted copies, and generated
 apps that ship this work must include a visible link to https://kindel.com.
 
+On kindel.com, these are Apps (canonical `/apps/`; `/tools/` is an alias).
+
 ## Principles
 
 This repo owns the tenets. Before any change in this repo, and before any work
@@ -28,7 +30,7 @@ that changes the model, schema, or data, study the Tenets section of
 - The data is `data/index.json`, `data/facets.json`, and
   `data/<company>/<slug>.json`.
 
-Downstream tools consume this and must not fork a private copy.
+Downstream apps consume this and must not fork a private copy.
 
 No UI lives here. Passing `validate.py` means the records are well formed. It
 does not mean anyone can see them.
