@@ -49,7 +49,7 @@ which behaviors carry weight, and the scope at which they are expected. Where a
 particular behavior genuinely does read differently by level, that is a
 property of that behavior rather than a rule about level, so it is stated on
 the behavior and not applied across the board. The behavior is written once and
-projected, so that two tools reading the same behavior at the same level
+projected, so that two apps reading the same behavior at the same level
 agree. Level and role also scope whole sets, not only behaviors within one: a
 set can apply to one role at one level and layer on the set beneath it.
 
@@ -80,7 +80,7 @@ are tracked rather than implied:
 
 3. **Facets Compose, Wordings Differ.** Companies carve the same behavior into different principles, so their sets rarely line up one to one. *The facet is the granular piece that does line up*, and we compose principles from facets rather than re-authoring one behavior per company.
 
-4. **Level and Role Change What Counts, Not What Good Looks Like.** Over doing it looks the same for a junior and an exec, so calibration does not move with level or role. What moves is which behaviors carry weight and the scope expected, and *the behavior is written once and projected*, because a tool that keeps its own copy per level cannot be compared with the tool beside it.
+4. **Level and Role Change What Counts, Not What Good Looks Like.** Over doing it looks the same for a junior and an exec, so calibration does not move with level or role. What moves is which behaviors carry weight and the scope expected, and *the behavior is written once and projected*, because an app that keeps its own copy per level cannot be compared with the app beside it.
 
 5. **The Core Owns the Model, Apps Own the Experience.** The core holds the lexicon, the taxonomy, the composition rules, and the code that enforces them. Apps hold questions, prompts, manuals, and pages, and *an app that reimplements the model has forked it*.
 
@@ -109,7 +109,7 @@ somebody else's account of a set, however faithful the reproduction looks.
 
 Where a company has written its own calibration, that is transcribed too and
 marked `words: "quoted"`, so the company's words and ours never blur together
-inside one record. Rows a tool writes are marked `generated` for the same
+inside one record. Rows an app writes are marked `generated` for the same
 reason.
 
 ## Layout

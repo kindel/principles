@@ -270,7 +270,7 @@ The calibration taxonomy, and the anchor a facet points at.
 - Row ids are unique within a principle. A facet may only reference a row on
   its own principle.
 - `words` records whose words the calibration is: `quoted` for the company's,
-  `authored` for a person's, `generated` for a tool's. It is optional, and a row
+  `authored` for a person's, `generated` for an app's. It is optional, and a row
   without it is `authored`. When any row in a record carries `words`, every row
   in that record carries it, so a reader of one file never has to infer it.
 
