@@ -1,0 +1,423 @@
+{
+  "version": 1,
+  "issue": 45,
+  "bar": "High confidence only. Same behavior, including when the facet is the slice. A stretch is a skip. A new facet is named here and not created in this change.",
+  "principles": [
+    {
+      "id": 1001,
+      "decision": "map",
+      "facets": ["customer-obsession"],
+      "reason": "Source principle for the customer-obsession facet."
+    },
+    {
+      "id": 1002,
+      "decision": "map",
+      "facets": ["acts-like-an-owner"],
+      "reason": "Source principle for the acts-like-an-owner facet."
+    },
+    {
+      "id": 1003,
+      "decision": "map",
+      "facets": ["invent-and-simplify"],
+      "reason": "Source principle for the invent-and-simplify facet."
+    },
+    {
+      "id": 1004,
+      "decision": "skip",
+      "reason": "Judgment and disconfirming your own beliefs. No second company shares it, and no existing facet is that behavior."
+    },
+    {
+      "id": 1005,
+      "decision": "new-facet",
+      "new_facets": ["learn-and-be-curious"],
+      "follow_on": 50,
+      "reason": "Same ongoing-learning behavior as Coupang Learn Voraciously. No facet yet."
+    },
+    {
+      "id": 1006,
+      "decision": "map",
+      "facets": ["hire-and-develop-the-best"],
+      "reason": "Source principle for the hire-and-develop-the-best facet."
+    },
+    {
+      "id": 1007,
+      "decision": "map",
+      "facets": ["better-every-day"],
+      "new_facets": ["highest-standards"],
+      "follow_on": 53,
+      "reason": "Already on the continuous-improvement slice. The high-standards remainder matches Coupang Demand Excellence and needs its own facet."
+    },
+    {
+      "id": 1008,
+      "decision": "map",
+      "facets": ["think-big"],
+      "reason": "Source principle for the think-big facet."
+    },
+    {
+      "id": 1009,
+      "decision": "map",
+      "facets": ["bias-for-action"],
+      "reason": "Source principle for the bias-for-action facet."
+    },
+    {
+      "id": 1010,
+      "decision": "new-facet",
+      "new_facets": ["frugality"],
+      "follow_on": 51,
+      "reason": "Same do-more-with-less behavior as Coupang Hate Waste. No facet yet."
+    },
+    {
+      "id": 1011,
+      "decision": "map",
+      "facets": ["earn-trust"],
+      "reason": "Source principle for the earn-trust facet."
+    },
+    {
+      "id": 1012,
+      "decision": "map",
+      "facets": ["dive-deep"],
+      "reason": "Source principle for the dive-deep facet."
+    },
+    {
+      "id": 1013,
+      "decision": "map",
+      "facets": ["have-backbone-disagree-and-commit"],
+      "reason": "Source principle for the have-backbone-disagree-and-commit facet."
+    },
+    {
+      "id": 1014,
+      "decision": "new-facet",
+      "new_facets": ["deliver-results"],
+      "follow_on": 52,
+      "reason": "Same finish-the-work behavior as Coupang Deliver Results with Grit. No facet yet."
+    },
+    {
+      "id": 2001,
+      "decision": "skip",
+      "reason": "Mission passion is not customer-obsession and not think-big. Unique here."
+    },
+    {
+      "id": 2002,
+      "decision": "skip",
+      "reason": "Company over function is adjacent to ownership and to Dawn silos, not the same as either."
+    },
+    {
+      "id": 2003,
+      "decision": "skip",
+      "reason": "Mix of a hiring bar, candid feedback, and inclusive teams. Not the whole hire-and-develop-the-best table."
+    },
+    {
+      "id": 2004,
+      "decision": "skip",
+      "reason": "Challenge and decide quickly is a stretch for disagree-and-commit, which requires the commit after the call."
+    },
+    {
+      "id": 2005,
+      "decision": "skip",
+      "reason": "Cutting waste and staying focused is not invent-and-simplify and not frugality."
+    },
+    {
+      "id": 2006,
+      "decision": "skip",
+      "reason": "Mix of ambition, winning, and delivery versus perfection. Not think-big and not better-every-day."
+    },
+    {
+      "id": 2007,
+      "decision": "map",
+      "facets": ["bias-for-action"],
+      "pending": true,
+      "follow_on": 46,
+      "reason": "Definition names a strong bias for action. Same speed-under-uncertainty behavior as Amazon 1009."
+    },
+    {
+      "id": 2008,
+      "decision": "map",
+      "facets": ["acts-like-an-owner"],
+      "reason": "Already mapped. Accountable for the outcome, do not wait for instructions."
+    },
+    {
+      "id": 2009,
+      "decision": "skip",
+      "reason": "Turning vague ideas into a plan is not are-right-a-lot and not bias-for-action."
+    },
+    {
+      "id": 2010,
+      "decision": "skip",
+      "reason": "Endurance and energy are not a behavior any existing facet names."
+    },
+    {
+      "id": 3001,
+      "decision": "map",
+      "facets": ["customer-obsession"],
+      "reason": "Already mapped. The customer is the beginning and the end of every decision."
+    },
+    {
+      "id": 3002,
+      "decision": "skip",
+      "reason": "Ruthless focus and killing work is unique here."
+    },
+    {
+      "id": 3003,
+      "decision": "skip",
+      "reason": "Company-wide and never-not-my-job is a slice of ownership, not the whole acts-like-an-owner table."
+    },
+    {
+      "id": 3004,
+      "decision": "map",
+      "facets": ["dive-deep"],
+      "reason": "Already mapped. Shared slug, same hands-on detail behavior."
+    },
+    {
+      "id": 3005,
+      "decision": "skip",
+      "reason": "Mechanisms and prevention are unique here."
+    },
+    {
+      "id": 3006,
+      "decision": "skip",
+      "reason": "Simplify-only is a slice of invent-and-simplify, not the invention-and-simplify table."
+    },
+    {
+      "id": 3007,
+      "decision": "map",
+      "facets": ["have-backbone-disagree-and-commit"],
+      "pending": true,
+      "follow_on": 47,
+      "reason": "Same challenge-then-commit behavior as Amazon 1013, including no compromise for social cohesion."
+    },
+    {
+      "id": 3008,
+      "decision": "map",
+      "facets": ["hire-and-develop-the-best"],
+      "reason": "Already mapped. Shared slug, same hiring and development bar."
+    },
+    {
+      "id": 3009,
+      "decision": "new-facet",
+      "new_facets": ["deliver-results"],
+      "follow_on": 52,
+      "reason": "Same finish-with-quality behavior as Amazon Deliver Results. No facet yet."
+    },
+    {
+      "id": 3010,
+      "decision": "skip",
+      "reason": "Influence without authority is unique here."
+    },
+    {
+      "id": 3011,
+      "decision": "map",
+      "facets": ["think-big"],
+      "pending": true,
+      "follow_on": 48,
+      "reason": "Already lists think big as an equivalent. Same class of miss as Dawn 6001."
+    },
+    {
+      "id": 3012,
+      "decision": "new-facet",
+      "new_facets": ["learn-and-be-curious"],
+      "follow_on": 50,
+      "reason": "Same hungry-for-ideas behavior as Amazon Learn and Be Curious. No facet yet."
+    },
+    {
+      "id": 3013,
+      "decision": "new-facet",
+      "new_facets": ["highest-standards"],
+      "follow_on": 53,
+      "reason": "Same raise-the-bar-and-refuse-mediocrity behavior as Amazon Insist on the Highest Standards, not the better-every-day slice."
+    },
+    {
+      "id": 3014,
+      "decision": "map",
+      "facets": ["bias-for-action"],
+      "pending": true,
+      "follow_on": 49,
+      "reason": "Already lists bias for action as an equivalent. Inaction as a threat is that behavior."
+    },
+    {
+      "id": 3015,
+      "decision": "new-facet",
+      "new_facets": ["frugality"],
+      "follow_on": 51,
+      "reason": "Already lists frugality as an equivalent. Same do-more-with-less behavior as Amazon 1010."
+    },
+    {
+      "id": 4001,
+      "decision": "map",
+      "facets": ["acts-like-an-owner"],
+      "reason": "Already mapped. Own it, extra mile, long term."
+    },
+    {
+      "id": 4002,
+      "decision": "map",
+      "facets": ["dive-deep"],
+      "reason": "Already mapped. Shared slug, same challenge-the-data behavior."
+    },
+    {
+      "id": 4003,
+      "decision": "skip",
+      "reason": "Customer value plus adapting fast is a mix, not the whole bias-for-action table."
+    },
+    {
+      "id": 4004,
+      "decision": "skip",
+      "reason": "Mood and celebration are not earn-trust."
+    },
+    {
+      "id": 4005,
+      "decision": "skip",
+      "reason": "Mix of ambitious goals, team composition, and feedback. Not hire-and-develop-the-best and not highest-standards."
+    },
+    {
+      "id": 4006,
+      "decision": "skip",
+      "reason": "Humility after a win is a stretch for earn-trust, which is candor and self-criticism."
+    },
+    {
+      "id": 5001,
+      "decision": "skip",
+      "reason": "Helping others and short toes are not ownership and not a current facet."
+    },
+    {
+      "id": 5002,
+      "decision": "skip",
+      "reason": "Results for customers mixes outcomes, hierarchy, and saying no. Adjacent to customer-obsession, not the same table."
+    },
+    {
+      "id": 5003,
+      "decision": "skip",
+      "reason": "Boring solutions and global efficiency are a mix of frugality and simplify, not either whole facet."
+    },
+    {
+      "id": 5004,
+      "decision": "skip",
+      "reason": "Diversity, inclusion, and belonging is unique here."
+    },
+    {
+      "id": 5005,
+      "decision": "skip",
+      "reason": "Ship the smallest change is not bias-for-action."
+    },
+    {
+      "id": 5006,
+      "decision": "skip",
+      "reason": "Public by default is unique here."
+    },
+    {
+      "id": 6001,
+      "decision": "map",
+      "facets": ["think-big"],
+      "reason": "Already mapped in issue 44. Lists think big as an equivalent."
+    },
+    {
+      "id": 6002,
+      "decision": "map",
+      "facets": ["customer-obsession"],
+      "reason": "Already mapped. Customer success is the same behavior."
+    },
+    {
+      "id": 6003,
+      "decision": "skip",
+      "reason": "Breaking silos is adjacent to ownership and to Arm One Arm, not the same as either."
+    },
+    {
+      "id": 6004,
+      "decision": "map",
+      "facets": ["acts-like-an-owner"],
+      "reason": "Already mapped. Shared slug, same owner behavior."
+    },
+    {
+      "id": 6005,
+      "decision": "skip",
+      "reason": "Dates and no surprises is unique here."
+    },
+    {
+      "id": 6006,
+      "decision": "map",
+      "facets": ["invent-and-simplify"],
+      "reason": "Already mapped. Shared slug."
+    },
+    {
+      "id": 6007,
+      "decision": "map",
+      "facets": ["bias-for-action"],
+      "reason": "Already mapped. Shared slug."
+    },
+    {
+      "id": 6008,
+      "decision": "map",
+      "facets": ["earn-trust"],
+      "reason": "Already mapped. Shared slug."
+    },
+    {
+      "id": 6009,
+      "decision": "map",
+      "facets": ["better-every-day"],
+      "reason": "Already mapped. The continuous-improvement slice."
+    },
+    {
+      "id": 6010,
+      "decision": "map",
+      "facets": ["hire-and-develop-the-best"],
+      "reason": "Already mapped. Shared slug."
+    },
+    {
+      "id": 6011,
+      "decision": "map",
+      "facets": ["have-backbone-disagree-and-commit"],
+      "reason": "Already mapped. Shared slug."
+    },
+    {
+      "id": 6012,
+      "decision": "skip",
+      "reason": "Time as the constrained resource is unique here."
+    },
+    {
+      "id": 6013,
+      "decision": "skip",
+      "reason": "Lists frugality as an equivalent, but the behavior is the lean versus fit-for-purpose tension, including inverted polarity. A stretch."
+    },
+    {
+      "id": 6014,
+      "decision": "skip",
+      "reason": "Product not science is not customer-obsession."
+    },
+    {
+      "id": 6015,
+      "decision": "skip",
+      "reason": "Rigor that matches the environment is unique here."
+    },
+    {
+      "id": 7001,
+      "decision": "map",
+      "facets": ["think-big"],
+      "toyota": "keep",
+      "reason": "Long-term vision, courage, and not shrinking the goal. Same think-big behavior. Keep."
+    },
+    {
+      "id": 7002,
+      "decision": "map",
+      "facets": ["better-every-day"],
+      "toyota": "keep",
+      "reason": "Daily improvement, not the replace-the-process row. The facet is the slice. Keep."
+    },
+    {
+      "id": 7003,
+      "decision": "map",
+      "facets": ["dive-deep"],
+      "toyota": "keep",
+      "reason": "Go to the source for the facts. Lists dive deep as an equivalent. Keep."
+    },
+    {
+      "id": 7004,
+      "decision": "skip",
+      "toyota": "revert",
+      "reason": "Respect is understand-each-other and mutual trust, not candor and vocal self-criticism. Mapping it puts the whole earn-trust table on Respect. Revert."
+    },
+    {
+      "id": 7005,
+      "decision": "skip",
+      "toyota": "revert",
+      "reason": "Teamwork is grow-the-person plus team-versus-star. Mapping it puts hiring and the promotion bar on Teamwork. Revert."
+    }
+  ]
+}

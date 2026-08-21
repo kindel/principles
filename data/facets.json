@@ -137,7 +137,7 @@
     {
       "id": "earn-trust",
       "label": "earn trust",
-      "principles": [1011, 6008, 7004],
+      "principles": [1011, 6008],
       "rows": [
         { "principle": 1011, "id": "vocally-self-critical" },
         { "principle": 1011, "id": "upward-and-the-team" },
@@ -149,11 +149,7 @@
         { "principle": 1011, "id": "humility-and-the-bar" },
         { "principle": 1011, "id": "feedback-both-ways" },
         { "principle": 1011, "id": "no-politics" },
-        { "principle": 6008, "id": "dawns-own-example" },
-        { "principle": 7004, "id": "before-judging" },
-        { "principle": 7004, "id": "building-mutual-trust" },
-        { "principle": 7004, "id": "respect-versus-agreement" },
-        { "principle": 7004, "id": "effort-to-understand" }
+        { "principle": 6008, "id": "dawns-own-example" }
       ]
     },
     {
@@ -177,7 +173,7 @@
     {
       "id": "hire-and-develop-the-best",
       "label": "hire and develop the best",
-      "principles": [1006, 3008, 6010, 7005],
+      "principles": [1006, 3008, 6010],
       "rows": [
         { "principle": 1006, "id": "new-hire-quality" },
         { "principle": 1006, "id": "underperformers-and-stretch" },
@@ -195,10 +191,7 @@
         { "principle": 3008, "id": "promotion-bar" },
         { "principle": 3008, "id": "underperformance" },
         { "principle": 3008, "id": "developing-others" },
-        { "principle": 6010, "id": "dawns-own-example" },
-        { "principle": 7005, "id": "a-person-ready-for-more" },
-        { "principle": 7005, "id": "sharing-a-stretch-assignment" },
-        { "principle": 7005, "id": "a-teammate-who-is-struggling" }
+        { "principle": 6010, "id": "dawns-own-example" }
       ]
     },
     {
