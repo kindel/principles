@@ -281,7 +281,10 @@
           "slug": "disagree-and-commit",
           "name": "Disagree and Commit",
           "sort": 7,
-          "file": "data/coupang/disagree-and-commit.json"
+          "file": "data/coupang/disagree-and-commit.json",
+          "facets": [
+            "have-backbone-disagree-and-commit"
+          ]
         },
         {
           "id": 3008,

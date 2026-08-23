@@ -332,6 +332,56 @@ class FacetMapTest(unittest.TestCase):
                         {"principle": 2001, "id": "row-x"}])
         self.assertEqual([], self.check(f))
 
+    def test_two_principles_may_share_a_row_id(self):
+        # Row ids are unique within a principle, not across the facet.
+        # Coupang 3007 mirrors Amazon 1013's row ids on purpose.
+        rows_by_principle = {1001: {"row-0"}, 2001: {"row-0"}}
+        f = facet(principles=[1001, 2001],
+                  rows=[{"principle": 1001, "id": "row-0"},
+                        {"principle": 2001, "id": "row-0"}])
+        errs = []
+        validate_facets({"version": 1, "facets": [f]}, rows_by_principle, errs)
+        self.assertEqual([], errs)
+
+    def test_the_same_ref_twice_is_rejected(self):
+        f = facet(rows=[{"principle": 1001, "id": "row-0"},
+                        {"principle": 1001, "id": "row-0"}])
+        errs = self.check(f)
+        self.assertTrue(any("duplicate row ref" in e for e in errs), errs)
+
+    def test_duplicate_generated_row_ids_are_rejected(self):
+        inline = {
+            "id": "a-new-situation",
+            "situation": "A new situation",
+            "under": "Does not own it.",
+            "justRight": "Owns it and finishes it.",
+            "over": "Takes over everyone else's work.",
+            "words": "generated",
+        }
+        f = facet(rows=[{"principle": 1001, "id": "row-0"},
+                        dict(inline), dict(inline)])
+        errs = self.check(f)
+        self.assertTrue(any("duplicate row id" in e for e in errs), errs)
+
+    def test_a_generated_row_may_not_reuse_a_ref_id(self):
+        # The generator reserves human ref ids; the check is the contract.
+        inline = {
+            "id": "row-0",
+            "situation": "A shadowing situation",
+            "under": "Does not own it.",
+            "justRight": "Owns it and finishes it.",
+            "over": "Takes over everyone else's work.",
+            "words": "generated",
+        }
+        f = facet(rows=[{"principle": 1001, "id": "row-0"}, dict(inline)])
+        errs = self.check(f)
+        self.assertTrue(any("reuses a source ref id" in e for e in errs), errs)
+        # Order must not matter: a ref after the inline row is the same clash.
+        f = facet(rows=[dict(inline), {"principle": 1001, "id": "row-0"}])
+        errs = self.check(f)
+        self.assertTrue(any("reuses a generated row id" in e for e in errs),
+                        errs)
+
     def test_an_inline_generated_row_passes(self):
         f = facet(rows=[
             {"principle": 1001, "id": "row-0"},

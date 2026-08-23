@@ -179,8 +179,6 @@
       "id": 3007,
       "decision": "map",
       "facets": ["have-backbone-disagree-and-commit"],
-      "pending": true,
-      "follow_on": 47,
       "reason": "Same challenge-then-commit behavior as Amazon 1013, including no compromise for social cohesion."
     },
     {

@@ -166,7 +166,7 @@
     {
       "id": "have-backbone-disagree-and-commit",
       "label": "have backbone, disagree and commit",
-      "principles": [1013, 6011],
+      "principles": [1013, 3007, 6011],
       "rows": [
         { "principle": 1013, "id": "speak-with-an-alternative" },
         { "principle": 1013, "id": "data-then-commit" },
@@ -178,6 +178,12 @@
         { "principle": 1013, "id": "social-cohesion" },
         { "principle": 1013, "id": "failed-path" },
         { "principle": 1013, "id": "manager-translation" },
+        { "principle": 3007, "id": "disagreeing-with-the-room" },
+        { "principle": 3007, "id": "after-the-decision" },
+        { "principle": 3007, "id": "social-cohesion" },
+        { "principle": 3007, "id": "disagreeing-upward" },
+        { "principle": 3007, "id": "someone-else-dissents" },
+        { "principle": 3007, "id": "new-evidence" },
         { "principle": 6011, "id": "dawns-own-example" }
       ]
     },
