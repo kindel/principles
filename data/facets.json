@@ -274,6 +274,27 @@
         { "principle": 3009, "id": "excuses" },
         { "principle": 3009, "id": "unglamorous-finish" }
       ]
+    },
+    {
+      "id": "frugality",
+      "label": "frugality",
+      "principles": [1010, 3015],
+      "rows": [
+        { "principle": 1010, "id": "invent-around-spend" },
+        { "principle": 1010, "id": "owner-mindset" },
+        { "principle": 1010, "id": "people-in-trouble" },
+        { "principle": 1010, "id": "infrastructure" },
+        { "principle": 1010, "id": "near-vs-long" },
+        { "principle": 1010, "id": "budget-as-input" },
+        { "principle": 1010, "id": "travel" },
+        { "principle": 1010, "id": "builder-tools" },
+        { "principle": 3015, "id": "cutting-versus-saving" },
+        { "principle": 3015, "id": "penny-today-dollar-tomorrow" },
+        { "principle": 3015, "id": "wasted-meetings" },
+        { "principle": 3015, "id": "spending-on-tools" },
+        { "principle": 3015, "id": "wasted-work" },
+        { "principle": 3015, "id": "growth-and-cost" }
+      ]
     }
   ]
 }

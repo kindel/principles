@@ -100,7 +100,10 @@
           "slug": "frugality",
           "name": "Frugality",
           "sort": 10,
-          "file": "data/amazon/frugality.json"
+          "file": "data/amazon/frugality.json",
+          "facets": [
+            "frugality"
+          ]
         },
         {
           "id": 1011,
@@ -361,7 +364,10 @@
           "slug": "hate-waste",
           "name": "Hate Waste",
           "sort": 15,
-          "file": "data/coupang/hate-waste.json"
+          "file": "data/coupang/hate-waste.json",
+          "facets": [
+            "frugality"
+          ]
         }
       ]
     },
