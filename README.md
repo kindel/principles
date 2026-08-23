@@ -10,7 +10,7 @@ inheriting anything it did not ask for.
 ## The model
 
 A **tenet** is a carefully articulated guiding principle for one endeavor. It
-takes a stand, it guides a trade-off, and it settles the calls that data
+states one idea, it guides a trade-off, and it settles the calls that data
 cannot.
 
 A **leadership principle** is a tenet with a particular subject. Its endeavor
@@ -74,7 +74,7 @@ are tracked rather than implied:
 
 ## Tenets
 
-1. **A Principle is a Tenet About People.** A leadership principle is a tenet whose endeavor is an organization and whose subject is human behavior, so *we hold it to the tenet bar*: one idea, a stand, and a trade-off a person can act on. A set that reads as slogans is a set we have not finished modeling.
+1. **A Principle is a Tenet About People.** A leadership principle is a tenet whose endeavor is an organization and whose subject is human behavior, so *we hold it to the tenet bar*: one idea and a trade-off a person can act on. A set that reads as slogans is a set we have not finished modeling.
 
 2. **Behavior is the Unit.** A principle earns its place by decomposing into behavior a person can observe, teach, and live with the appropriate balance. *A behavior we cannot show under indexed, balanced, and over done is a slogan*, and we model it or drop it.
 
