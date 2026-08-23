@@ -45,7 +45,7 @@
     {
       "id": "think-big",
       "label": "think big",
-      "principles": [1008, 6001, 7001],
+      "principles": [1008, 3011, 6001, 7001],
       "rows": [
         { "principle": 1008, "id": "stretch-goals" },
         { "principle": 1008, "id": "status-quo" },
@@ -53,6 +53,12 @@
         { "principle": 1008, "id": "strategy-direction" },
         { "principle": 1008, "id": "time-horizon" },
         { "principle": 1008, "id": "growth-goals" },
+        { "principle": 3011, "id": "setting-the-goal" },
+        { "principle": 3011, "id": "existing-conditions" },
+        { "principle": 3011, "id": "incremental-plan" },
+        { "principle": 3011, "id": "no-precedent" },
+        { "principle": 3011, "id": "telling-people-the-goal" },
+        { "principle": 3011, "id": "partial-failure" },
         { "principle": 6001, "id": "dawns-own-example" },
         { "principle": 7001, "id": "a-long-term-vision" },
         { "principle": 7001, "id": "a-hard-problem" },
