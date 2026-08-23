@@ -268,7 +268,6 @@ class FacetAuditCorpusTest(unittest.TestCase):
                 "deliver-results",
                 "frugality",
                 "highest-standards",
-                "learn-and-be-curious",
             ],
             named,
         )
