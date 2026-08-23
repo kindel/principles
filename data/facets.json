@@ -251,6 +251,29 @@
         { "principle": 3012, "id": "feedback-you-disagree-with" },
         { "principle": 3012, "id": "postmortem" }
       ]
+    },
+    {
+      "id": "deliver-results",
+      "label": "deliver results",
+      "principles": [1014, 3009],
+      "rows": [
+        { "principle": 1014, "id": "quality-and-date" },
+        { "principle": 1014, "id": "resources-vs-quality" },
+        { "principle": 1014, "id": "metrics-cadence" },
+        { "principle": 1014, "id": "right-metrics" },
+        { "principle": 1014, "id": "obstacles" },
+        { "principle": 1014, "id": "goal-tradeoffs" },
+        { "principle": 1014, "id": "sustainable-pace" },
+        { "principle": 1014, "id": "schedules" },
+        { "principle": 1014, "id": "plan-vs-reality" },
+        { "principle": 1014, "id": "planning-and-load" },
+        { "principle": 3009, "id": "blocked-by-another-team" },
+        { "principle": 3009, "id": "hours-versus-results" },
+        { "principle": 3009, "id": "last-mile" },
+        { "principle": 3009, "id": "quality-versus-date" },
+        { "principle": 3009, "id": "excuses" },
+        { "principle": 3009, "id": "unglamorous-finish" }
+      ]
     }
   ]
 }

@@ -85,10 +85,9 @@
     },
     {
       "id": 1014,
-      "decision": "new-facet",
-      "new_facets": ["deliver-results"],
-      "follow_on": 52,
-      "reason": "Same finish-the-work behavior as Coupang Deliver Results with Grit. No facet yet."
+      "decision": "map",
+      "facets": ["deliver-results"],
+      "reason": "Source principle for the deliver-results facet. Same finish-the-work behavior as Coupang Deliver Results with Grit."
     },
     {
       "id": 2001,
@@ -188,10 +187,9 @@
     },
     {
       "id": 3009,
-      "decision": "new-facet",
-      "new_facets": ["deliver-results"],
-      "follow_on": 52,
-      "reason": "Same finish-with-quality behavior as Amazon Deliver Results. No facet yet."
+      "decision": "map",
+      "facets": ["deliver-results"],
+      "reason": "Same finish-with-quality behavior as Amazon Deliver Results."
     },
     {
       "id": 3010,
