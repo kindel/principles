@@ -22,6 +22,15 @@ fixture, and that no `authored` row has borrowed a company's wording. It also
 checks that SCHEMA.md still describes the code, because a contract the code has
 moved on from is worse than no contract.
 
+`test_facet_audit.py` is the written pass over the facet map. Unmapped now
+means an empty calibration table, so a principle that lands without a map,
+skip, or new-facet decision is a silent miss. `tests/fixtures/facet-audit.json`
+is that pass. `scripts/facet_audit.py` is the check. A pending map is a
+follow-on change, not a dump into `facets.json`. A new facet is named in the
+audit and not created in the same change. The quotation loader reads only
+company calibration fixtures from this directory, so the audit file does not
+get treated as one.
+
 ## Why the fixture is duplicated from porridge
 
 `fixtures/dawn-company-tenets.json` is Dawn Aerospace's own under-index,
