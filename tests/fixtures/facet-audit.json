@@ -203,8 +203,6 @@
       "id": 3011,
       "decision": "map",
       "facets": ["think-big"],
-      "pending": true,
-      "follow_on": 48,
       "reason": "Already lists think big as an equivalent. Same class of miss as Dawn 6001."
     },
     {

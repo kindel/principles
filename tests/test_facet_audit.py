@@ -247,21 +247,14 @@ class FacetAuditCorpusTest(unittest.TestCase):
         errs = check_audit(*load_corpus_inputs())
         self.assertEqual([], errs, "facet audit failed:\n" + "\n".join(errs))
 
-    def test_pending_maps_are_the_named_follow_ons(self):
-        audit, _, membership, _ = load_corpus_inputs()
+    def test_no_pending_maps_remain(self):
+        audit, _, _, _ = load_corpus_inputs()
         pending = sorted(
             (e["id"], tuple(e["facets"]))
             for e in audit["principles"]
             if e.get("pending")
         )
-        self.assertEqual(
-            [
-                (3011, ("think-big",)),
-            ],
-            pending,
-        )
-        for pid, _facets in pending:
-            self.assertNotIn(pid, membership)
+        self.assertEqual([], pending)
 
     def test_named_new_facets_do_not_exist_yet(self):
         audit, _, _, facet_ids = load_corpus_inputs()
