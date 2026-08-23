@@ -258,7 +258,6 @@ class FacetAuditCorpusTest(unittest.TestCase):
             [
                 (3007, ("have-backbone-disagree-and-commit",)),
                 (3011, ("think-big",)),
-                (3014, ("bias-for-action",)),
             ],
             pending,
         )

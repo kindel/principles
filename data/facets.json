@@ -65,7 +65,7 @@
     {
       "id": "bias-for-action",
       "label": "bias for action",
-      "principles": [1009, 2007, 6007],
+      "principles": [1009, 2007, 3014, 6007],
       "rows": [
         { "principle": 1009, "id": "team-effectiveness" },
         { "principle": 1009, "id": "step-up" },
@@ -80,6 +80,12 @@
         { "principle": 2007, "id": "the-unexpected" },
         { "principle": 2007, "id": "bias-for-action" },
         { "principle": 2007, "id": "finding-a-way" },
+        { "principle": 3014, "id": "reversible-decision" },
+        { "principle": 3014, "id": "waiting-for-perfect" },
+        { "principle": 3014, "id": "inaction-as-a-threat" },
+        { "principle": 3014, "id": "escalating-fast" },
+        { "principle": 3014, "id": "speed-and-defects" },
+        { "principle": 3014, "id": "long-decisions" },
         { "principle": 6007, "id": "dawns-own-example" }
       ]
     },

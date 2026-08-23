@@ -227,8 +227,6 @@
       "id": 3014,
       "decision": "map",
       "facets": ["bias-for-action"],
-      "pending": true,
-      "follow_on": 49,
       "reason": "Already lists bias for action as an equivalent. Inaction as a threat is that behavior."
     },
     {
