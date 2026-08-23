@@ -350,17 +350,27 @@ def validate_facets(facets, principle_rows, errs):
         rows = f.get("rows", [])
         if not rows:
             errs.append("%s: must list at least one row" % where)
-        row_ids = set()
+        # A source ref is scoped by its principle. Row ids are unique within
+        # a principle, not across the facet, and two principles on one facet
+        # may name the same situation (Coupang 3007 mirrors Amazon 1013).
+        # Inline generated rows are one app table, so their ids stand alone.
+        seen_rows = set()
         n_source = 0
         for row in rows:
             rid = row.get("id")
+            inline = is_inline_generated(row)
+            key = (None, rid) if inline else (row.get("principle"), rid)
             if not SLUG.match(rid or ""):
                 errs.append("%s: row id %r is not kebab-case" % (where, rid))
-            elif rid in row_ids:
-                errs.append("%s: duplicate row id %r" % (where, rid))
+            elif key in seen_rows:
+                if inline:
+                    errs.append("%s: duplicate row id %r" % (where, rid))
+                else:
+                    errs.append("%s: duplicate row ref %r/%r"
+                                % (where, row.get("principle"), rid))
             else:
-                row_ids.add(rid)
-            if is_inline_generated(row):
+                seen_rows.add(key)
+            if inline:
                 validate_generated_row(row, where, errs)
                 continue
             n_source += 1
