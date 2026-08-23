@@ -72,7 +72,8 @@
           "sort": 7,
           "file": "data/amazon/insist-on-the-highest-standards.json",
           "facets": [
-            "better-every-day"
+            "better-every-day",
+            "highest-standards"
           ]
         },
         {
@@ -347,7 +348,10 @@
           "slug": "demand-excellence",
           "name": "Demand Excellence",
           "sort": 13,
-          "file": "data/coupang/demand-excellence.json"
+          "file": "data/coupang/demand-excellence.json",
+          "facets": [
+            "highest-standards"
+          ]
         },
         {
           "id": 3014,

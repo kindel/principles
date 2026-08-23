@@ -256,21 +256,14 @@ class FacetAuditCorpusTest(unittest.TestCase):
         )
         self.assertEqual([], pending)
 
-    def test_named_new_facets_do_not_exist_yet(self):
-        audit, _, _, facet_ids = load_corpus_inputs()
+    def test_no_named_new_facets_remain(self):
+        audit, _, _, _ = load_corpus_inputs()
         named = sorted({
             fid
             for e in audit["principles"]
             for fid in e.get("new_facets", [])
         })
-        self.assertEqual(
-            [
-                "highest-standards",
-            ],
-            named,
-        )
-        for fid in named:
-            self.assertNotIn(fid, facet_ids)
+        self.assertEqual([], named)
 
     def test_reverted_toyota_maps_are_gone(self):
         audit, _, membership, _ = load_corpus_inputs()

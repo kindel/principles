@@ -295,6 +295,27 @@
         { "principle": 3015, "id": "wasted-work" },
         { "principle": 3015, "id": "growth-and-cost" }
       ]
+    },
+    {
+      "id": "highest-standards",
+      "label": "highest standards",
+      "principles": [1007, 3013],
+      "rows": [
+        { "principle": 1007, "id": "reviewing-work" },
+        { "principle": 1007, "id": "holding-accountable" },
+        { "principle": 1007, "id": "setting-goals" },
+        { "principle": 1007, "id": "underachievers" },
+        { "principle": 1007, "id": "catalog-quality" },
+        { "principle": 1007, "id": "right-vs-perfect" },
+        { "principle": 1007, "id": "launch-triage" },
+        { "principle": 1007, "id": "launch-defects" },
+        { "principle": 3013, "id": "work-that-is-fine" },
+        { "principle": 3013, "id": "standard-drifts" },
+        { "principle": 3013, "id": "your-own-work" },
+        { "principle": 3013, "id": "high-standard-and-speed" },
+        { "principle": 3013, "id": "praising-good-work" },
+        { "principle": 3013, "id": "tolerating-a-known-problem" }
+      ]
     }
   ]
 }
