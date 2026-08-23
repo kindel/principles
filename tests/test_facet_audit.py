@@ -256,7 +256,6 @@ class FacetAuditCorpusTest(unittest.TestCase):
         )
         self.assertEqual(
             [
-                (3007, ("have-backbone-disagree-and-commit",)),
                 (3011, ("think-big",)),
             ],
             pending,
