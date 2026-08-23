@@ -315,7 +315,10 @@
           "slug": "aim-high-and-find-a-way",
           "name": "Aim High and Find a Way",
           "sort": 11,
-          "file": "data/coupang/aim-high-and-find-a-way.json"
+          "file": "data/coupang/aim-high-and-find-a-way.json",
+          "facets": [
+            "think-big"
+          ]
         },
         {
           "id": 3012,
