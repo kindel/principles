@@ -137,7 +137,10 @@
           "slug": "deliver-results",
           "name": "Deliver Results",
           "sort": 14,
-          "file": "data/amazon/deliver-results.json"
+          "file": "data/amazon/deliver-results.json",
+          "facets": [
+            "deliver-results"
+          ]
         }
       ]
     },
@@ -304,7 +307,10 @@
           "slug": "deliver-results-with-grit",
           "name": "Deliver Results with Grit",
           "sort": 9,
-          "file": "data/coupang/deliver-results-with-grit.json"
+          "file": "data/coupang/deliver-results-with-grit.json",
+          "facets": [
+            "deliver-results"
+          ]
         },
         {
           "id": 3010,
