@@ -28,10 +28,9 @@
     },
     {
       "id": 1005,
-      "decision": "new-facet",
-      "new_facets": ["learn-and-be-curious"],
-      "follow_on": 50,
-      "reason": "Same ongoing-learning behavior as Coupang Learn Voraciously. No facet yet."
+      "decision": "map",
+      "facets": ["learn-and-be-curious"],
+      "reason": "Source principle for the learn-and-be-curious facet. Same ongoing-learning behavior as Coupang Learn Voraciously."
     },
     {
       "id": 1006,
@@ -207,10 +206,9 @@
     },
     {
       "id": 3012,
-      "decision": "new-facet",
-      "new_facets": ["learn-and-be-curious"],
-      "follow_on": 50,
-      "reason": "Same hungry-for-ideas behavior as Amazon Learn and Be Curious. No facet yet."
+      "decision": "map",
+      "facets": ["learn-and-be-curious"],
+      "reason": "Same hungry-for-ideas behavior as Amazon Learn and Be Curious."
     },
     {
       "id": 3013,
