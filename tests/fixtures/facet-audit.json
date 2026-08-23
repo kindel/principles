@@ -60,10 +60,9 @@
     },
     {
       "id": 1010,
-      "decision": "new-facet",
-      "new_facets": ["frugality"],
-      "follow_on": 51,
-      "reason": "Same do-more-with-less behavior as Coupang Hate Waste. No facet yet."
+      "decision": "map",
+      "facets": ["frugality"],
+      "reason": "Source principle for the frugality facet. Same do-more-with-less behavior as Coupang Hate Waste."
     },
     {
       "id": 1011,
@@ -223,9 +222,8 @@
     },
     {
       "id": 3015,
-      "decision": "new-facet",
-      "new_facets": ["frugality"],
-      "follow_on": 51,
+      "decision": "map",
+      "facets": ["frugality"],
       "reason": "Already lists frugality as an equivalent. Same do-more-with-less behavior as Amazon 1010."
     },
     {
