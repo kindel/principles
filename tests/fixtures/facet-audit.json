@@ -125,8 +125,6 @@
       "id": 2007,
       "decision": "map",
       "facets": ["bias-for-action"],
-      "pending": true,
-      "follow_on": 46,
       "reason": "Definition names a strong bias for action. Same speed-under-uncertainty behavior as Amazon 1009."
     },
     {

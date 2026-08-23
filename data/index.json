@@ -191,7 +191,10 @@
           "slug": "move-with-urgency-and-find-a-way",
           "name": "Move with urgency and find a way",
           "sort": 7,
-          "file": "data/arm/move-with-urgency-and-find-a-way.json"
+          "file": "data/arm/move-with-urgency-and-find-a-way.json",
+          "facets": [
+            "bias-for-action"
+          ]
         },
         {
           "id": 2008,
