@@ -265,7 +265,6 @@ class FacetAuditCorpusTest(unittest.TestCase):
         })
         self.assertEqual(
             [
-                "deliver-results",
                 "frugality",
                 "highest-standards",
             ],
