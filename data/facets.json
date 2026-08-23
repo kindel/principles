@@ -65,7 +65,7 @@
     {
       "id": "bias-for-action",
       "label": "bias for action",
-      "principles": [1009, 6007],
+      "principles": [1009, 2007, 6007],
       "rows": [
         { "principle": 1009, "id": "team-effectiveness" },
         { "principle": 1009, "id": "step-up" },
@@ -75,6 +75,11 @@
         { "principle": 1009, "id": "prototype" },
         { "principle": 1009, "id": "input-and-reversibility" },
         { "principle": 1009, "id": "customer-pain" },
+        { "principle": 2007, "id": "moving-with-speed" },
+        { "principle": 2007, "id": "working-in-uncertainty" },
+        { "principle": 2007, "id": "the-unexpected" },
+        { "principle": 2007, "id": "bias-for-action" },
+        { "principle": 2007, "id": "finding-a-way" },
         { "principle": 6007, "id": "dawns-own-example" }
       ]
     },
