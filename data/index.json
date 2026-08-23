@@ -50,7 +50,10 @@
           "slug": "learn-and-be-curious",
           "name": "Learn and Be Curious",
           "sort": 5,
-          "file": "data/amazon/learn-and-be-curious.json"
+          "file": "data/amazon/learn-and-be-curious.json",
+          "facets": [
+            "learn-and-be-curious"
+          ]
         },
         {
           "id": 1006,
@@ -325,7 +328,10 @@
           "slug": "learn-voraciously",
           "name": "Learn Voraciously",
           "sort": 12,
-          "file": "data/coupang/learn-voraciously.json"
+          "file": "data/coupang/learn-voraciously.json",
+          "facets": [
+            "learn-and-be-curious"
+          ]
         },
         {
           "id": 3013,

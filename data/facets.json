@@ -233,6 +233,24 @@
         { "principle": 1003, "id": "purpose-of-innovation" },
         { "principle": 6006, "id": "dawns-own-example" }
       ]
+    },
+    {
+      "id": "learn-and-be-curious",
+      "label": "learn and be curious",
+      "principles": [1005, 3012],
+      "rows": [
+        { "principle": 1005, "id": "new-process-missed-deadline" },
+        { "principle": 1005, "id": "single-customer-contradicts-the-aggregate" },
+        { "principle": 1005, "id": "teammate-causes-an-outage" },
+        { "principle": 1005, "id": "sharing-a-new-technique" },
+        { "principle": 1005, "id": "choosing-new-storage" },
+        { "principle": 3012, "id": "your-own-mistake" },
+        { "principle": 3012, "id": "ideas-from-elsewhere" },
+        { "principle": 3012, "id": "growing-pains" },
+        { "principle": 3012, "id": "expert-in-the-room" },
+        { "principle": 3012, "id": "feedback-you-disagree-with" },
+        { "principle": 3012, "id": "postmortem" }
+      ]
     }
   ]
 }
