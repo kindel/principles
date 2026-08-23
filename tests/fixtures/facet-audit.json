@@ -41,10 +41,8 @@
     {
       "id": 1007,
       "decision": "map",
-      "facets": ["better-every-day"],
-      "new_facets": ["highest-standards"],
-      "follow_on": 53,
-      "reason": "Already on the continuous-improvement slice. The high-standards remainder matches Coupang Demand Excellence and needs its own facet."
+      "facets": ["better-every-day", "highest-standards"],
+      "reason": "Sits on both slices: the continuous-improvement slice stays on better-every-day, and the high-standards remainder sits on highest-standards with Coupang Demand Excellence."
     },
     {
       "id": 1008,
@@ -209,10 +207,9 @@
     },
     {
       "id": 3013,
-      "decision": "new-facet",
-      "new_facets": ["highest-standards"],
-      "follow_on": 53,
-      "reason": "Same raise-the-bar-and-refuse-mediocrity behavior as Amazon Insist on the Highest Standards, not the better-every-day slice."
+      "decision": "map",
+      "facets": ["highest-standards"],
+      "reason": "Already lists high standards as an equivalent. Same raise-the-bar-and-refuse-mediocrity behavior as Amazon 1007, not the better-every-day slice."
     },
     {
       "id": 3014,
