@@ -363,6 +363,25 @@ class FacetMapTest(unittest.TestCase):
         errs = self.check(f)
         self.assertTrue(any("duplicate row id" in e for e in errs), errs)
 
+    def test_a_generated_row_may_not_reuse_a_ref_id(self):
+        # The generator reserves human ref ids; the check is the contract.
+        inline = {
+            "id": "row-0",
+            "situation": "A shadowing situation",
+            "under": "Does not own it.",
+            "justRight": "Owns it and finishes it.",
+            "over": "Takes over everyone else's work.",
+            "words": "generated",
+        }
+        f = facet(rows=[{"principle": 1001, "id": "row-0"}, dict(inline)])
+        errs = self.check(f)
+        self.assertTrue(any("reuses a source ref id" in e for e in errs), errs)
+        # Order must not matter: a ref after the inline row is the same clash.
+        f = facet(rows=[dict(inline), {"principle": 1001, "id": "row-0"}])
+        errs = self.check(f)
+        self.assertTrue(any("reuses a generated row id" in e for e in errs),
+                        errs)
+
     def test_an_inline_generated_row_passes(self):
         f = facet(rows=[
             {"principle": 1001, "id": "row-0"},

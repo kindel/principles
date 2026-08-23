@@ -353,8 +353,12 @@ def validate_facets(facets, principle_rows, errs):
         # A source ref is scoped by its principle. Row ids are unique within
         # a principle, not across the facet, and two principles on one facet
         # may name the same situation (Coupang 3007 mirrors Amazon 1013).
-        # Inline generated rows are one app table, so their ids stand alone.
+        # Inline generated rows are one app table, so their ids stand alone,
+        # and they never reuse a source ref's id: the generator reserves
+        # those, so a shadowed ref id here is hand-edited ambiguity.
         seen_rows = set()
+        ref_ids = set()
+        inline_ids = set()
         n_source = 0
         for row in rows:
             rid = row.get("id")
@@ -368,8 +372,15 @@ def validate_facets(facets, principle_rows, errs):
                 else:
                     errs.append("%s: duplicate row ref %r/%r"
                                 % (where, row.get("principle"), rid))
+            elif inline and rid in ref_ids:
+                errs.append("%s: generated row id %r reuses a source ref id"
+                            % (where, rid))
+            elif not inline and rid in inline_ids:
+                errs.append("%s: row ref %r/%r reuses a generated row id"
+                            % (where, row.get("principle"), rid))
             else:
                 seen_rows.add(key)
+                (inline_ids if inline else ref_ids).add(rid)
             if inline:
                 validate_generated_row(row, where, errs)
                 continue
