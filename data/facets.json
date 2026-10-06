@@ -95,32 +95,32 @@
           "id": "covering-before-time-off",
           "situation": "Covering work before time off",
           "under": "Leaves without a handoff. Open threads sit until they get back.",
-          "justRight": "Writes what is in flight, who can decide what, and the one case worth a ping. The team can move, and they actually rest.",
-          "over": "Stays in the threads all week and redoes the backup's calls. The backup never owns it, and they return already tired.",
+          "justRight": "Writes down what is in progress, who can make which calls, and the one kind of problem worth texting them about. The team keeps moving, and they actually rest.",
+          "over": "Stays on email and chat all week and overrides the calls their backup makes. The backup never really owns the work, and they come back already tired.",
           "words": "generated"
         },
         {
           "id": "closing-the-ticket",
           "situation": "Closing the ticket",
           "under": "Marks it done when the code is merged. Does not check whether the person who needed it can finish the job.",
-          "justRight": "Confirms the outcome landed. If something remains, they name an owner for it before they close.",
-          "over": "Leaves it open to chase extras that were never in the ask. Work behind it waits.",
+          "justRight": "Confirms the person who asked for it can actually use it. If something is left, they name an owner for it before they close the ticket.",
+          "over": "Leaves it open to chase extras nobody asked for. The work queued behind it waits.",
           "words": "generated"
         },
         {
           "id": "a-workaround-that-will-stick",
           "situation": "A workaround that will stick",
-          "under": "Ships the patch and walks away. The next person hits the same hole with no note.",
-          "justRight": "Ships the patch so the week is unblocked, then either schedules the real fix or writes why the patch is the answer.",
+          "under": "Ships the patch and walks away. The next person hits the same problem and finds no note explaining it.",
+          "justRight": "Ships the patch so people can keep working this week, then either schedules the real fix or writes down why the patch is good enough.",
           "over": "Holds the release for a full rewrite. People wait on a problem that already had a safe patch.",
           "words": "generated"
         },
         {
           "id": "a-stalled-decision-thread",
           "situation": "A stalled decision thread",
-          "under": "Watches the thread and adds nothing. The week slips while people wait for a more senior voice.",
-          "justRight": "Posts a recommendation, who is hurt if they wait, and a time they will proceed if no one objects.",
-          "over": "Calls it alone on something that binds other teams. The next days are spent undoing it.",
+          "under": "Watches the thread and adds nothing. The week slips while people wait for someone more senior to weigh in.",
+          "justRight": "Posts a recommendation, who gets hurt by waiting, and when they will go ahead if no one objects.",
+          "over": "Makes the call alone on something that commits other teams. The next few days go to undoing it.",
           "words": "generated"
         },
         {
@@ -128,30 +128,30 @@
           "situation": "Leftovers after a launch",
           "under": "Treats launch day as the finish line. Docs, known bugs, and follow-ups have no name on them.",
           "justRight": "Before the team scatters, they list what is left, what can wait, and who takes each piece.",
-          "over": "Will not call it launched until every leftover is gone. The next start date moves.",
+          "over": "Will not call it launched until every leftover is gone. The start date for the next project moves.",
           "words": "generated"
         },
         {
           "id": "two-teams-started-the-same-work",
           "situation": "Two teams started the same work",
-          "under": "Notices the overlap and keeps building their version. Two answers land and one gets thrown out.",
+          "under": "Notices the overlap and keeps building their version. Two versions get built and one gets thrown out.",
           "justRight": "Stops, compares scope, and picks which team finishes. The other team's time goes back to their plan.",
-          "over": "Takes both piles and rebuilds a combined version so they can be the owner. Both teams lose the week they already spent.",
+          "over": "Takes over both efforts and rebuilds a combined version so they can be the owner. Both teams lose the week they already spent.",
           "words": "generated"
         },
         {
           "id": "changing-a-shared-interface",
           "situation": "Changing a shared interface",
           "under": "Changes it for their case and ships. Other teams find out when their work breaks.",
-          "justRight": "Names who consumes it, gives them a window, and keeps a path for old callers through this week.",
-          "over": "Waits until every consumer has moved, including teams not using the field. A small fix sits while their own users stay blocked.",
+          "justRight": "Lists the teams that depend on it, gives them time to move, and keeps the old version working through this week.",
+          "over": "Waits until every team that depends on it has moved, even teams that never use the field being changed. A small fix sits while their own users stay blocked.",
           "words": "generated"
         },
         {
           "id": "a-promise-someone-else-made",
           "situation": "A promise someone else made",
           "under": "Tells the customer it is not their promise. The customer is left with no next step.",
-          "justRight": "Owns the next conversation. They confirm what was promised, what can actually ship, and who will say so.",
+          "justRight": "Takes the next call with the customer. They confirm what was promised, what can actually ship, and who will tell the customer.",
           "over": "Honors a promise the team cannot keep so they look like the owner. Planned work for the week gets dropped.",
           "words": "generated"
         }
@@ -199,14 +199,14 @@
           "situation": "A standing meeting that always runs long",
           "under": "Lets the meeting keep the same shape. People stop preparing because nothing about it ever changes.",
           "justRight": "Changes one part of the meeting this week, such as the timebox or the order, and watches the next few sessions before changing anything else. Protects the time the meeting is supposed to save.",
-          "over": "Redesigns the meeting every few days. The team spends more energy on the ritual than on the work the meeting should unblock.",
+          "over": "Redesigns the meeting every few days. The team spends more energy on the meeting format than on the work the meeting should unblock.",
           "words": "generated"
         },
         {
           "id": "handing-work-downstream",
           "situation": "Handing work to the next person",
           "under": "Passes a messy draft and assumes they will clean it up. The same gaps appear again one step later.",
-          "justRight": "Removes the defects they would not want to inherit, and names the one leftover risk. Leaves the next person real work, not a cleanup they did not plan for.",
+          "justRight": "Fixes the problems they would not want to inherit, and names the one risk that is still open. Leaves the next person real work, not a cleanup they did not plan for.",
           "over": "Polishes every edge before anyone else can see it. The handoff is late, and the next person has no time left to react.",
           "words": "generated"
         },
@@ -223,14 +223,14 @@
           "situation": "Reviewing a teammate's draft",
           "under": "Approves it to stay out of the way. Leaves known gaps for someone later to find.",
           "justRight": "Flags the few issues that would hurt the reader or the next step, and lets the rest go. Says what the bar is so the next draft starts higher.",
-          "over": "Rewrites the draft in their own voice. The author spends the rest of the week on taste, not on the substance that still needs work.",
+          "over": "Rewrites the draft in their own voice. The author spends the rest of the week arguing about wording, not fixing the substance that still needs work.",
           "words": "generated"
         },
         {
           "id": "a-fix-that-came-back",
           "situation": "A problem that was fixed and came back",
           "under": "Applies the same patch and moves on. Does not ask why the first fix did not hold.",
-          "justRight": "Restores the immediate path, then spends a short block on the condition that let it return. Leaves a note so the next person does not repeat the shallow fix.",
+          "justRight": "Gets things working again, then spends an hour or two on why the problem came back. Leaves a note so the next person does not repeat the quick fix.",
           "over": "Opens a rewrite of the whole area. The original problem stays open longer, and other work waits on a redesign nobody needed this week.",
           "words": "generated"
         },
@@ -238,8 +238,8 @@
           "id": "picking-this-weeks-improvement",
           "situation": "Picking what to improve this week",
           "under": "Says the team is too busy to change anything. Next week looks exactly like this one.",
-          "justRight": "Chooses one friction the team actually felt and makes a small, reversible change. Guards delivery time so the improvement does not become the project.",
-          "over": "Starts several improvement threads at once. Meetings fill with process talk, and the customer-facing work slips.",
+          "justRight": "Picks one thing that actually slowed the team down and makes a small change they can undo. Protects delivery time so the improvement does not become the project.",
+          "over": "Starts several improvement efforts at once. Meetings fill with process talk, and the customer-facing work slips.",
           "words": "generated"
         },
         {
@@ -253,9 +253,9 @@
         {
           "id": "the-day-after-something-ships",
           "situation": "The day after something ships",
-          "under": "Closes the ticket and does not look at what was clumsy in the last mile. The same scramble will happen next time.",
+          "under": "Closes the ticket and does not look at what was clumsy in the final push. The same scramble will happen next time.",
           "justRight": "Writes down one step that was harder than it needed to be and does a small cleanup while the memory is fresh. Does not reopen the whole release.",
-          "over": "Holds a long wash-up and starts a quality program. The next release waits while the team debates standards.",
+          "over": "Holds a long retrospective and starts a quality program. The next release waits while the team debates standards.",
           "words": "generated"
         }
       ]
@@ -358,31 +358,31 @@
           "id": "a-customer-asks-for-a-tweak",
           "situation": "A customer asks for a tweak",
           "under": "Builds exactly the tweak and stops. Never asks whether the request points at a bigger gap.",
-          "justRight": "Ships a useful fix this week and writes down the larger need it hints at. The customer is helped now, and the next bet is informed instead of locked into a dead end.",
+          "justRight": "Ships a useful fix this week and writes down the larger need it hints at. The customer gets help now, and the team has a better idea of what to build next.",
           "over": "Pauses the tweak to redesign the whole product around one request. The customer waits, and the team spends the week on a vision that nothing can test yet.",
           "words": "generated"
         },
         {
           "id": "writing-the-proposal",
           "situation": "Writing the proposal",
-          "under": "The writeup only covers what the team already knows how to do. The ask is safe and easy to forget.",
-          "justRight": "States a destination that would matter if it worked, then proposes a cheap first proof. Reviewers can argue both the ambition and the first step in the same meeting.",
-          "over": "The proposal is all destination and no first step. The room agrees with the vision and leaves with nothing to build this week.",
+          "under": "The proposal only covers what the team already knows how to do. The request is safe and easy to forget.",
+          "justRight": "States a goal that would matter if it worked, then proposes a cheap first test. Reviewers can argue about both the ambition and the first step in the same meeting.",
+          "over": "The proposal is all vision and no first step. The room agrees with the vision and leaves with nothing to build this week.",
           "words": "generated"
         },
         {
           "id": "when-a-constraint-feels-fixed",
           "situation": "When a constraint feels fixed",
           "under": "Treats headcount, tooling, or policy as immovable and shrinks the idea to fit. Nobody asks whether the constraint should change.",
-          "justRight": "Names the constraint, checks whether it is real, and either works around it or makes a specific ask to lift it. The idea stays large enough to matter, and the ask is concrete enough to answer this week.",
-          "over": "Insists every constraint come off the table before any work starts. The team waits on permissions while a smaller proof could have run.",
+          "justRight": "Names the constraint, checks whether it is real, and either works around it or asks specifically for it to be lifted. The idea stays large enough to matter, and the request is specific enough to get an answer this week.",
+          "over": "Insists every constraint come off the table before any work starts. The team waits on permissions when a smaller test could have run.",
           "words": "generated"
         },
         {
           "id": "the-standup-update",
           "situation": "The standup update",
           "under": "Reports only the task. Teammates cannot tell what larger bet the work belongs to.",
-          "justRight": "Ties today's task to the larger bet in one sentence, then says what will be true by Friday. People leave knowing the direction and the week's proof.",
+          "justRight": "Ties today's task to the larger bet in one sentence, then says what will be true by Friday. People leave knowing the direction and what this week should prove.",
           "over": "Uses standup to restate the long vision. The update runs long and nobody knows what is shipping.",
           "words": "generated"
         },
@@ -390,7 +390,7 @@
           "id": "reviewing-a-design",
           "situation": "Reviewing a design",
           "under": "Approves a design that only clears the current ticket. Does not ask what happens if the bet actually works.",
-          "justRight": "Asks how the design would hold if usage grew, then accepts a simpler first version if the path to that scale is visible. The author leaves with a small build and a named next constraint.",
+          "justRight": "Asks how the design would hold up if usage grew, then accepts a simpler first version if the path to that scale is clear. The author leaves with a small first version to build and knows which limit to plan for next.",
           "over": "Rejects every simple design until it handles imagined future scale. The first version never ships, and the team keeps redrawing.",
           "words": "generated"
         },
@@ -406,8 +406,8 @@
           "id": "a-workaround-shows-up",
           "situation": "A workaround shows up",
           "under": "Notes the workaround and moves on. Treats it as a one-off instead of a signal of a larger unmet need.",
-          "justRight": "Eases the immediate pain, then spends a short pass asking what job people are hiring the workaround for. A bigger opportunity is named without dropping this week's work.",
-          "over": "Throws out the current plan to chase the workaround as the next platform. Focus scatters and committed work slips.",
+          "justRight": "Eases the immediate pain, then spends an hour asking what people are really trying to get done with the workaround. A bigger opportunity gets named without dropping this week's work.",
+          "over": "Throws out the current plan to turn the workaround into the next big product. Focus scatters and committed work slips.",
           "words": "generated"
         }
       ]
@@ -507,7 +507,7 @@
           "situation": "A thread that needs a decision",
           "under": "Lets the thread sit. People keep adding comments instead of making a call.",
           "justRight": "Names the decision, picks a reversible option with the information already in the thread, and writes what would change it.",
-          "over": "Closes the thread with a snap call that ignores a constraint already written there. The team spends the rest of the week undoing the work.",
+          "over": "Closes the thread with a snap decision that ignores a constraint someone already raised there. The team spends the rest of the week undoing the work.",
           "words": "generated"
         },
         {
@@ -515,13 +515,13 @@
           "situation": "Another round of research",
           "under": "Starts more research when the open questions would not change this week's action.",
           "justRight": "Stops the research once it will not move the decision, starts the reversible work, and leaves a note on what is still unknown.",
-          "over": "Skips the afternoon of research that would have answered the one real risk. Someone else inherits the miss.",
+          "over": "Skips the afternoon of research that would have answered the one real risk. Someone else has to clean up the mistake.",
           "words": "generated"
         },
         {
           "id": "unblocking-yourself",
           "situation": "Unblocking yourself",
-          "under": "Waits for the owner to return before touching work that is stuck. The week goes idle.",
+          "under": "Waits for the owner to return before touching work that is stuck. Nothing moves for the week.",
           "justRight": "Tries a cheap path that can be reversed, and tells the owner what they did.",
           "over": "Forces a path the owner had already ruled out. The owner spends their first day back cleaning it up.",
           "words": "generated"
@@ -530,15 +530,15 @@
           "id": "the-plan-breaks-midweek",
           "situation": "The plan breaks midweek",
           "under": "Freezes until a new plan is approved. The remaining days are spent waiting.",
-          "justRight": "Picks a next step that keeps learning cheap, and updates the people who were on the old path.",
-          "over": "Scraps the plan and starts a new one the same day without checking who is already midstream. Their work no longer connects.",
+          "justRight": "Picks a next step that is cheap to try and easy to reverse, and tells the people who were working on the old plan.",
+          "over": "Scraps the plan and starts a new one the same day without checking who is already partway through the old one. Their work no longer fits.",
           "words": "generated"
         },
         {
           "id": "one-more-review",
           "situation": "One more review before acting",
           "under": "Adds another review because it feels safer. The action waits for a slot that is not this week.",
-          "justRight": "Takes the review that would catch a hard to reverse miss, and skips the rest so the work can start.",
+          "justRight": "Takes the review that would catch a mistake that is hard to undo, and skips the rest so the work can start.",
           "over": "Skips the review that was going to catch a known risk. The people who would have flagged it find out after the cost is real.",
           "words": "generated"
         },
@@ -644,16 +644,16 @@
         {
           "id": "picking-which-bugs-to-fix",
           "situation": "Picking which bugs to fix",
-          "under": "Works the newest or easiest tickets. Breakage that stops customer work sits in the list.",
+          "under": "Works the newest or easiest tickets. Bugs that stop customers from getting their work done sit in the backlog.",
           "justRight": "Asks which defects are blocking real jobs this week. Fixes those first, even when they are messy, and leaves cosmetic issues with a short note on why they wait.",
-          "over": "Treats every reported nit as urgent. The team spends the week on one-off annoyances while a workflow break stays open.",
+          "over": "Treats every small complaint as urgent. The team spends the week on one-off annoyances while a bug that blocks customers stays open.",
           "words": "generated"
         },
         {
           "id": "another-team-is-waiting-on-you",
           "situation": "Another team is waiting on you",
           "under": "Leaves the request in the queue. Does not ask what customer work is stuck behind it.",
-          "justRight": "Learns who is blocked and what they need to finish this week. Sends a thinner handoff that unblocks them and parks the extras, so both teams' customer work can move.",
+          "justRight": "Learns who is blocked and what they need to finish this week. Sends a smaller first version that unblocks them and holds the extras for later, so both teams' customer work can move.",
           "over": "Drops their own customer commitments to polish the internal request past what was asked. The asking team gets more than they needed, and external customers wait.",
           "words": "generated"
         },
@@ -661,7 +661,7 @@
           "id": "in-a-customer-meeting",
           "situation": "In a customer meeting",
           "under": "Walks through internal plans. Leaves without knowing what the customer is trying to get done.",
-          "justRight": "Starts with their current work and what is in the way. Commits only to what the team can do soon, writes it down, and takes the rest back as input rather than a promise.",
+          "justRight": "Starts by asking what the customer is working on and what is in the way. Commits only to what the team can do soon, writes it down, and takes the rest back as input rather than a promise.",
           "over": "Says yes to every request to keep the meeting warm. The team spends the following days untangling commitments it cannot staff.",
           "words": "generated"
         },
@@ -678,7 +678,7 @@
           "situation": "One customer asks for a custom change",
           "under": "Parks the request and never checks whether anyone else has the same problem.",
           "justRight": "Asks how widespread the need is. Builds a shared version if it is common, or declines the one-off and offers a path the product already supports.",
-          "over": "Cuts the special case into this week's work. Support now carries an exception, and the next customer expects the same treatment.",
+          "over": "Squeezes the special case into this week's work. Support now has to handle an exception, and the next customer expects the same treatment.",
           "words": "generated"
         },
         {
@@ -686,14 +686,14 @@
           "situation": "Reviewing a change before it ships",
           "under": "Marks the ticket done without walking the customer path. Confusing steps go out unnoticed.",
           "justRight": "Tries the change the way a customer will. Holds the release for a step that would block them, and lets leftover polish wait until after it ships.",
-          "over": "Stops the release for rare wording and edge cases. The fix customers are waiting on sits another week.",
+          "over": "Stops the release over minor wording and rare edge cases. The fix customers are waiting on sits another week.",
           "words": "generated"
         },
         {
           "id": "telling-a-customer-no",
           "situation": "Telling a customer no",
           "under": "Avoids the conversation. The customer keeps planning around something the team will not build.",
-          "justRight": "States the no, the constraint, and what saying yes would cost other customers. Offers the closest supported path and writes it down so the hope does not get revived by accident.",
+          "justRight": "States the no, the reason, and what saying yes would cost other customers. Offers the closest supported option and writes it down so nobody brings the request back by accident.",
           "over": "Softens the no until it sounds like a later yes. The customer staffs a plan around a capability that never arrives.",
           "words": "generated"
         }
@@ -826,7 +826,7 @@
           "situation": "A weekly status that is all green",
           "under": "Treats the green boxes as the update. Does not open a single item to see the work behind it.",
           "justRight": "Samples the two or three items that would hurt next week if they were false, traces those to the actual work, and leaves the rest once the sample holds.",
-          "over": "Reopens every line until the owner spends the next day rebuilding the status instead of doing the work.",
+          "over": "Questions every line until the owner spends the next day rebuilding the status report instead of doing the work.",
           "words": "generated"
         },
         {
@@ -841,40 +841,40 @@
           "id": "approving-a-purchase",
           "situation": "Approving a purchase",
           "under": "Signs because the amount looks familiar or the requester is trusted. Does not open the quote.",
-          "justRight": "Reads the quote and the alternatives, asks the one or two questions that could change the buy, and then signs or sends it back.",
+          "justRight": "Reads the quote and the alternatives, asks the one or two questions that could change the decision, and then signs or sends it back.",
           "over": "Rebuilds the vendor comparison from scratch and holds the order. The team misses the window they needed the thing for.",
           "words": "generated"
         },
         {
           "id": "handoff-between-teams",
           "situation": "A handoff between teams",
-          "under": "Accepts the summary note and never opens the artifacts being handed over.",
-          "justRight": "Opens the artifacts the next team will use this week, names the gaps that would stall them, and then lets the handoff go.",
-          "over": "Rewrites the other team's package before taking it. Both teams wait on a polish pass that was not in the plan.",
+          "under": "Accepts the summary email and never opens the docs, code, or tickets being handed over.",
+          "justRight": "Opens the docs and tickets their team will need this week, names the gaps that would stall them, and then lets the handoff go.",
+          "over": "Rewrites the other team's docs before accepting the handoff. Both teams wait on a cleanup that was not in the plan.",
           "words": "generated"
         },
         {
           "id": "launch-checklist",
           "situation": "A launch checklist",
-          "under": "Marks lines done from memory. Does not open the evidence next to each item.",
+          "under": "Marks lines done from memory. Does not look at the test results or dashboards behind each item.",
           "justRight": "Verifies the few items that would hurt customers if they were false, then ships on the rest of the list.",
-          "over": "Demands a live walkthrough of every checkbox. The launch window closes while the team restages work that was already finished.",
+          "over": "Demands a live demo of every checkbox. The launch window closes while the team redoes work that was already finished.",
           "words": "generated"
         },
         {
           "id": "vendor-claim",
           "situation": "A vendor claim",
           "under": "Repeats the vendor's number in the internal update. Does not compare it to our own records.",
-          "justRight": "Checks the claim against a week of our own records, names any gap, and then decides whether to keep, push, or drop the vendor.",
-          "over": "Opens a full history audit before the next conversation. The renewal or cutover sits while the audit keeps growing.",
+          "justRight": "Checks the claim against a week of our own records, names any gap, and then decides whether to keep the vendor, push back, or drop them.",
+          "over": "Starts an audit of the vendor's whole history before the next call. The renewal or the switch to a new vendor sits while the audit keeps growing.",
           "words": "generated"
         },
         {
           "id": "quick-approve-ping",
-          "situation": "A ping asking for a quick approve",
+          "situation": "A message asking for a quick approval",
           "under": "Replies yes without opening the attachment.",
           "justRight": "Opens the attachment, checks the part that cannot be undone, and answers the same day.",
-          "over": "Holds the ping overnight to reread the whole thread. The person who needed the approve misses their cutoff.",
+          "over": "Holds the message overnight to reread the whole thread. The person who needed the approval misses their deadline.",
           "words": "generated"
         },
         {
@@ -943,7 +943,7 @@
           "id": "a-date-you-gave-slips",
           "situation": "A date you gave slips",
           "under": "Lets the day pass and hopes no one notices. The other person finds out when they chase the work.",
-          "justRight": "Flags the slip as soon as it is real, says what still holds, and offers a new date they can keep. Owns the miss in one pass, then gets back to the work.",
+          "justRight": "Flags the slip as soon as it is real, says what still holds, and offers a new date they can keep. Owns the miss once, then gets back to the work.",
           "over": "Sends a long apology and keeps asking if people are still disappointed. The delivery waits while the relationship gets managed.",
           "words": "generated"
         },
@@ -959,7 +959,7 @@
           "id": "asked-something-you-do-not-know",
           "situation": "Asked something you do not know",
           "under": "Answers with confidence anyway. The gap shows up later in the work.",
-          "justRight": "Says what they know, what they do not, and when they will come back with the rest. People can plan around the hole.",
+          "justRight": "Says what they know, what they do not, and when they will come back with the rest. People can plan around the gap.",
           "over": "Prefaces every answer with how little they know. The meeting stalls because no one will take a position.",
           "words": "generated"
         },
@@ -968,7 +968,7 @@
           "situation": "A gap in a peer's draft",
           "under": "Stays quiet to keep things easy. The issue ships with their name next to the review.",
           "justRight": "Takes the concern to the person first, with the specific evidence, and stays open if they have context the reviewer lacked.",
-          "over": "Copies the wider thread to show they caught it. The peer spends the week defending the draft instead of fixing it.",
+          "over": "Raises it on a wide email thread to show they caught it. The peer spends the week defending the draft instead of fixing it.",
           "words": "generated"
         },
         {
@@ -976,14 +976,14 @@
           "situation": "Bad news for a stakeholder",
           "under": "Softens the update until the risk is hard to read. The stakeholder learns the truth from the outcome.",
           "justRight": "States the miss, the impact, and the next step in the same note. Does not pad it, and does not dump it without a path.",
-          "over": "Leads every update with everything that might go wrong. People stop trusting the signal because alarm is the default.",
+          "over": "Leads every update with everything that might go wrong. People stop paying attention because every update sounds like an alarm.",
           "words": "generated"
         },
         {
           "id": "you-were-wrong-in-a-review",
           "situation": "You were wrong in a review",
           "under": "Lets the written comment stand. People keep building on a view they already know is off.",
-          "justRight": "Corrects themselves in the same review thread, briefly, and updates the decision. Pays the awkward minute so the record is clean.",
+          "justRight": "Corrects themselves in the same review thread, briefly, and updates the decision. Takes the awkward minute so the written record is right.",
           "over": "Replays the miss in later meetings. The team spends more time on the apology than on the new call.",
           "words": "generated"
         },
@@ -992,7 +992,7 @@
           "situation": "A newer teammate flags a risk",
           "under": "Waves it off because the person is new. The risk sits unexamined.",
           "justRight": "Hears them out, checks the claim, and credits the flag if it holds. Pushes back with reasons if it does not, so they still bring the next one.",
-          "over": "Treats every new concern as equally urgent. Senior judgment drops out and the queue fills with noise.",
+          "over": "Treats every new concern as equally urgent. Nobody weighs which ones matter, and the list fills with noise.",
           "words": "generated"
         },
         {
@@ -1000,7 +1000,7 @@
           "situation": "Comparing the team's work",
           "under": "Talks as if this team is already the standard. No one looks at stronger work nearby.",
           "justRight": "Puts this week's work next to a stronger example, without shaming the people who built it. Uses the gap to pick one thing to raise this week.",
-          "over": "Holds the team against a distant, famous group so often that people stop believing the comparison. Energy goes into feeling behind, not into the next fix.",
+          "over": "Compares the team to a famous team somewhere else so often that people stop believing the comparison. Energy goes into feeling behind, not into the next fix.",
           "words": "generated"
         }
       ]
@@ -1086,7 +1086,7 @@
           "id": "design-review-challenge",
           "situation": "The design review",
           "under": "Sits through the review and saves the real objection for the hallway. The room leaves thinking there is alignment.",
-          "justRight": "Names the specific risk while the owner can still change course, and offers a smaller test or a narrower change. Once the owner decides, writes the recap as a decision, not as another round.",
+          "justRight": "Names the specific risk while the owner can still change course, and offers a smaller test or a narrower change. Once the owner decides, writes up the decision as settled, not as another round of debate.",
           "over": "Relitigates last week's same point in every review. People stop sending this person the doc in time, and the design lands later than it needed to.",
           "words": "generated"
         },
@@ -1117,7 +1117,7 @@
         {
           "id": "hiring-debrief",
           "situation": "The hiring debrief",
-          "under": "Goes along with a hire they would not staff on their own team. The concern never makes the notes.",
+          "under": "Goes along with a hire they would not want on their own team. The concern never makes the notes.",
           "justRight": "States the specific gap and how it would show up in the first month of the job. Votes, then honors the group's call and helps the person land if they join.",
           "over": "Relitigates the candidate after the offer is out. The loop loses a week, and the candidate feels the delay.",
           "words": "generated"
@@ -1246,7 +1246,7 @@
           "situation": "Weekly one on one",
           "under": "Runs through tickets and deadlines. Growth never makes the agenda.",
           "justRight": "Spends part of the hour on one skill to practice this week and the rest on the work in front of them. The person leaves with a next step that fits the current load.",
-          "over": "Turns the meeting into a standing career workshop. Delivery slips, and the person is coached more than they are staffed.",
+          "over": "Turns the meeting into a weekly career workshop. Delivery slips, and the person spends more time being coached than doing the work.",
           "words": "generated"
         },
         {
@@ -1270,7 +1270,7 @@
           "situation": "Reviewing this week's resumes",
           "under": "Screens for keywords that match the people already on the team. Unusual backgrounds never get a loop.",
           "justRight": "Advances people who could do the work the team will need next year, even when their titles do not match. Passes on a comfortable lookalike who would only add a pair of hands.",
-          "over": "Advances anyone who looks impressive on paper. Interviewers spend the week on people who cannot do the job, and the matches who could are still waiting.",
+          "over": "Advances anyone who looks impressive on paper. Interviewers spend the week on people who cannot do the job, and the candidates who could are still waiting.",
           "words": "generated"
         },
         {
@@ -1358,7 +1358,7 @@
         {
           "id": "a-prototype-in-review",
           "situation": "A prototype in review",
-          "under": "Pulls the prototype when the room looks confused. The week goes back to the familiar design so no one has to sit with something new.",
+          "under": "Pulls the prototype when the room looks confused. The team goes back to the familiar design so no one has to sit with something new.",
           "justRight": "Walks through what the prototype is trying to make simpler and names what is still unproven. Leaves it in play long enough to get one concrete reaction from the people who would use it.",
           "over": "Treats every objection as proof the room just does not get it. Review time runs out, and the people who have to live with the change stop offering useful pushback.",
           "words": "generated"
@@ -1368,7 +1368,7 @@
           "situation": "A rough idea in standup",
           "under": "Cuts it off because it is not ready. People learn to bring only finished thoughts, and the half formed ones never show up.",
           "justRight": "Gives the idea a few minutes and asks what pain it would remove. Either parks it with a next step or says why this week is the wrong time.",
-          "over": "Turns every spark into a thread or a spike. Standup runs long, and the work that was already on the board loses the morning.",
+          "over": "Turns every passing idea into a chat thread or a research task. Standup runs long, and the work that was already on the board loses the morning.",
           "words": "generated"
         },
         {
@@ -1384,21 +1384,21 @@
           "situation": "A manual weekly patch",
           "under": "Does the same hand edit again and treats it as normal. No one looks for a simpler way to make the patch unnecessary.",
           "justRight": "Does the patch so this week's delivery still goes out, and names a simpler fix with an owner. Comes back to it before the patch becomes the official path.",
-          "over": "Halts the delivery to invent a clean replacement immediately. The thing people are waiting on slips while the team rebuilds a side path.",
+          "over": "Halts the delivery to build a clean replacement right away. The thing people are waiting on slips while the team builds something nobody needed this week.",
           "words": "generated"
         },
         {
           "id": "a-repetitive-afternoon-task",
           "situation": "A repetitive task that eats the afternoon",
           "under": "Clicks through the same steps again and treats that as the work. Nobody asks whether the middle can go away.",
-          "justRight": "Automates the boring middle and keeps a human check where a wrong output would go out the door. The next pass is shorter, and the risk is still visible.",
+          "justRight": "Automates the boring middle and keeps a person checking any step where a wrong answer would reach a customer. The task takes less time next week, and the risk is still visible.",
           "over": "Scripts the whole path, including the judgment call. When the odd case shows up, the afternoon goes to untangling a tool no one else can read.",
           "words": "generated"
         },
         {
           "id": "first-cut-in-a-demo",
           "situation": "First cut in a demo",
-          "under": "Hides the draft until it looks finished. The demo is a slide, and no one has used the thing.",
+          "under": "Hides the draft until it looks finished. The demo is a slide deck, and no one has actually tried the thing.",
           "justRight": "Shows the rough cut and says what is still missing. Gets a reaction on the simple path before the design is locked.",
           "over": "Demos every half built idea as if it is already the plan. People leave confused about what is real, and the next few days go to resetting expectations.",
           "words": "generated"
@@ -1470,7 +1470,7 @@
           "situation": "A new library that might help this week",
           "under": "Ignores it and stays on the familiar path even when that path is slow.",
           "justRight": "Gives the library a short, time boxed try. Keeps the old path if the try does not clearly help this ticket.",
-          "over": "Rebuilds the ticket around the library. The original work slips while they compare options.",
+          "over": "Rebuilds the whole task around the library. The original work slips while they compare options.",
           "words": "generated"
         },
         {
@@ -1493,7 +1493,7 @@
           "id": "ticket-outside-your-stack",
           "situation": "A ticket outside your stack",
           "under": "Leaves it for the specialist. Does not open the docs or attempt a first cut.",
-          "justRight": "Takes the ticket, learns the slice it needs, and checks with someone who knows the area before merging.",
+          "justRight": "Takes the ticket, learns the part it needs, and checks with someone who knows the area before merging.",
           "over": "Uses the ticket as a reason to study the whole stack. The ticket sits while they take a course.",
           "words": "generated"
         },
@@ -1516,7 +1516,7 @@
         {
           "id": "someone-asks-why-we-do-it-this-way",
           "situation": "Someone asks why we do it this way",
-          "under": "Answers with that is how we do it and moves on. Does not check whether the reason still holds.",
+          "under": "Answers \"that is how we do it\" and moves on. Does not check whether the reason still holds.",
           "justRight": "Explains the history, admits the parts they are unsure about, and looks it up if the answer may be stale. Changes the practice only if that check warrants it.",
           "over": "Turns the question into a rewrite of the team's process. Shipping pauses for a long debate.",
           "words": "generated"
@@ -1600,7 +1600,7 @@
           "situation": "An open commitment from Monday",
           "under": "Starts new work and leaves the Monday item sitting. The person waiting finds out only when they ask.",
           "justRight": "Finishes it or names a new date before picking up the next thing. Says what will wait and who needs to know.",
-          "over": "Guards every leftover thread until each one is perfect. Time-sensitive work waits while old items get extra polish.",
+          "over": "Keeps reworking every old item until each one is perfect. Time-sensitive work waits.",
           "words": "generated"
         },
         {
@@ -1753,7 +1753,7 @@
           "id": "existing-internal-solution",
           "situation": "Another team already built something close",
           "under": "Starts from scratch because the existing thing is not a perfect fit. The week goes into rebuilding what already shipped.",
-          "justRight": "Adapts the existing work where it fits, and builds only the gap. Accepts a few rough edges instead of a second stack to maintain.",
+          "justRight": "Adapts the existing work where it fits, and builds only the gap. Accepts a few rough edges instead of a second system to maintain.",
           "over": "Forces the old thing onto a problem it cannot serve. People spend more time fighting the mismatch than a small new build would have taken.",
           "words": "generated"
         },
@@ -1769,22 +1769,22 @@
           "id": "small-purchase",
           "situation": "A teammate needs a small purchase",
           "under": "Buys without checking whether a shared option already exists. Duplicate kits and licenses collect on desks.",
-          "justRight": "Checks what the team already has, then buys the cheapest thing that will last the job. Does not send people looking for a free workaround that will burn the afternoon.",
-          "over": "Makes people use a broken spare or a clumsy free path. The task takes the rest of the day, and the save is gone.",
+          "justRight": "Checks what the team already has, then buys the cheapest thing that will hold up for the job. Does not send people hunting for a free workaround that eats the afternoon.",
+          "over": "Makes people use a broken spare or a clumsy free tool. The task takes the rest of the day, and the savings are gone.",
           "words": "generated"
         },
         {
           "id": "short-contractor",
-          "situation": "A short contractor is on the table",
+          "situation": "Hiring a contractor for a short job",
           "under": "Brings in outside help for work the team could finish with a small scope cut. The invoice covers hours that were never scarce.",
-          "justRight": "Uses a contractor when the skill is missing and the window is real. Keeps the brief tight so the team still owns the result and does not pay for idle time.",
+          "justRight": "Uses a contractor when the skill is missing and the deadline is real. Keeps the scope of work tight so the team still owns the result and does not pay for idle time.",
           "over": "Refuses outside help to avoid the fee. The only person who can do the work is already booked, so the launch waits.",
           "words": "generated"
         },
         {
           "id": "late-order",
           "situation": "An order will miss the date",
-          "under": "Pays rush fees on every slip without checking whether the original day still matters. Expedite becomes the default.",
+          "under": "Pays rush fees on every slip without checking whether the original day still matters. Rush shipping becomes the default.",
           "justRight": "Expedites only when a miss is real and costly. For the rest, resets the date and stays on the standard path.",
           "over": "Refuses every rush charge. A customer who needed that day is left waiting, and the team spends the next week on recovery.",
           "words": "generated"
@@ -1860,7 +1860,7 @@
           "situation": "Handing work to the next team",
           "under": "Sends the work with known gaps and lets the next team find them.",
           "justRight": "Fixes the issues that would become someone else's defects, and names what is still open. Leaves polish that would delay the handoff more than it helps.",
-          "over": "Holds the package until every edge case is clean. The next team waits and the shared date moves.",
+          "over": "Holds the work until every edge case is clean. The next team waits and the shared date moves.",
           "words": "generated"
         },
         {
@@ -1876,7 +1876,7 @@
           "situation": "Reviewing a teammate's draft",
           "under": "Skims and approves so the author can stay on the calendar.",
           "justRight": "Calls out the few places that would actually lower the bar, and says why. Leaves wording nits that do not change the outcome.",
-          "over": "Rewrites the draft in their own voice. The author stops owning it and the review sits in the way of the week.",
+          "over": "Rewrites the draft in their own voice. The author stops owning it, and the draft sits in review for the rest of the week.",
           "words": "generated"
         },
         {
@@ -1908,7 +1908,7 @@
           "situation": "A partner team's deliverable is rough",
           "under": "Takes it as-is to keep the relationship easy.",
           "justRight": "Sends it back with the specific gaps that would turn into defects here, and a way to land it this week.",
-          "over": "Rejects the whole package and rebuilds it inside. The partner stops trying and this team now owns their work.",
+          "over": "Rejects the whole deliverable and rebuilds it themselves. The partner stops trying, and this team now owns the partner's work.",
           "words": "generated"
         },
         {
