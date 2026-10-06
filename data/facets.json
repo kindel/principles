@@ -1117,7 +1117,7 @@
         {
           "id": "hiring-debrief",
           "situation": "The hiring debrief",
-          "under": "Goes along with a hire they would not want on their own team. The concern never makes the notes.",
+          "under": "Goes along with a hire they do not think can do the job. The concern never makes the notes.",
           "justRight": "States the specific gap and how it would show up in the first month of the job. Votes, then honors the group's call and helps the person land if they join.",
           "over": "Relitigates the candidate after the offer is out. The loop loses a week, and the candidate feels the delay.",
           "words": "generated"
