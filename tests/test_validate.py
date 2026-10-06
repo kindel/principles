@@ -477,8 +477,21 @@ class TeachingValidatorTest(unittest.TestCase):
         return {
             "id": 1001,
             "slug": "customer-obsession",
-            "why": ["See {lp:ownership}."],
-            "related": [{"id": "ownership", "note": "They connect."}],
+            "why": ["One paragraph.", "Another paragraph.", "See {lp:ownership}."],
+            "calibrationIntro": "How to use the rows.",
+            "examples": [
+                {"title": "One case", "body": "What happened."},
+                {"title": "Another case", "body": "What happened next."},
+            ],
+            "looksLike": {
+                "individual": "What an IC does.",
+                "manager": "What a manager does.",
+            },
+            "deepen": ["One?", "Two?", "Three?", "Four?", "Five?", "Six?"],
+            "related": [
+                {"id": "ownership", "note": "They connect."},
+                {"id": "customer-obsession", "note": "The set includes this one."},
+            ],
             "blog": [{
                 "title": "Do Your Job \u2013 Don't Use Placeholder Text",
                 "url": "https://example.com/job",
@@ -592,6 +605,57 @@ class TeachingValidatorTest(unittest.TestCase):
             self.write(root, "x.json", {"slug": "x"}, company="nope")
             errs = self.check(root)
             self.assertTrue(any("unknown company" in e for e in errs), errs)
+
+    def test_why_must_be_three_to_six_paragraphs(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["why"] = ["Only one."]
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("why must be 3 to 6" in e for e in errs), errs)
+
+    def test_deepen_questions_must_end_with_a_question_mark(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["deepen"] = ["One?", "Two?", "Three?", "Four?", "Five?", "Not a question."]
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("end with ?" in e for e in errs), errs)
+
+    def test_blog_must_have_title_url_and_note(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"] = [{"title": "A title", "url": "https://example.com"}]
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("blog[0].note" in e for e in errs), errs)
+
+    def test_an_en_dash_in_prose_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["why"] = [
+                "One paragraph.",
+                "Another paragraph.",
+                "A clause \u2013 and another. See {lp:ownership}.",
+            ]
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("en dash" in e for e in errs), errs)
+
+    def test_a_json_array_is_rejected_without_crashing(self):
+        with tempfile.TemporaryDirectory() as root:
+            d = os.path.join(root, "teaching", "amazon")
+            os.makedirs(d)
+            with open(os.path.join(d, "customer-obsession.json"), "w", encoding="utf-8") as f:
+                f.write("[1, 2, 3]")
+            errs = self.check(root)
+            self.assertTrue(any("must be a JSON object" in e for e in errs), errs)
+
+    def test_null_is_rejected_without_crashing(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "customer-obsession.json", None)
+            errs = self.check(root)
+            self.assertTrue(any("must be a JSON object" in e for e in errs), errs)
 
 
 if __name__ == "__main__":

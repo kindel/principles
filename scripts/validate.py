@@ -97,25 +97,79 @@ def check_style(obj, where, errs):
             errs.append("%s: --- in %r" % (where, obj[:80]))
 
 
-def check_teaching_dashes(obj, where, errs):
-    """Reject an em dash or ---. Leave an en dash alone.
+def check_teaching_dashes(obj, where, errs, path=""):
+    """Reject an em dash or ---. An en dash is allowed only in a blog title.
 
     A published Further reading title keeps the source heading's
     punctuation. One title in this corpus uses an en dash (U+2013).
-    check_style rejects that dash, which is right for principle records
-    and wrong for a verbatim title, so teaching files do not call it.
+    Authored prose does not get that exception. check_style rejects every
+    en dash, which is right for principle records and wrong for these
+    titles, so teaching files do not call it.
     """
     if isinstance(obj, dict):
-        for v in obj.values():
-            check_teaching_dashes(v, where, errs)
+        for k, v in obj.items():
+            check_teaching_dashes(v, where, errs, path + "." + str(k))
     elif isinstance(obj, list):
-        for v in obj:
-            check_teaching_dashes(v, where, errs)
+        for i, v in enumerate(obj):
+            check_teaching_dashes(v, where, errs, "%s[%d]" % (path, i))
     elif isinstance(obj, str):
-        if "\u2014" in obj:
-            errs.append("%s: em dash in %r" % (where, obj[:80]))
+        published_title = path.endswith(".title") and ".blog[" in path
+        if "\u2014" in obj or ("\u2013" in obj and not published_title):
+            errs.append("%s: em dash or en dash in %r" % (where, obj[:80]))
         if "---" in obj:
             errs.append("%s: --- in %r" % (where, obj[:80]))
+
+
+def _nonempty_str(value):
+    return isinstance(value, str) and bool(value.strip())
+
+
+def validate_blog(items, where, errs):
+    """Further reading is a non-empty list of title, url, and note."""
+    if not isinstance(items, list) or not items:
+        errs.append("%s: blog must be a non-empty list" % where)
+        return
+    for i, item in enumerate(items):
+        if not isinstance(item, dict):
+            errs.append("%s: blog[%d] must be an object" % (where, i))
+            continue
+        for key in ("title", "url", "note"):
+            if not _nonempty_str(item.get(key)):
+                errs.append("%s: blog[%d].%s must be a non-empty string"
+                            % (where, i, key))
+
+
+def validate_teaching_shape(doc, where, errs):
+    """The counts and object shapes SCHEMA.md states for one principle."""
+    why = doc.get("why")
+    if (not isinstance(why, list) or not 3 <= len(why) <= 6
+            or not all(_nonempty_str(x) for x in why)):
+        errs.append("%s: why must be 3 to 6 paragraphs" % where)
+    intro = doc.get("calibrationIntro")
+    if not _nonempty_str(intro):
+        errs.append("%s: calibrationIntro must be a non-empty string" % where)
+    examples = doc.get("examples")
+    if not isinstance(examples, list) or not 2 <= len(examples) <= 4:
+        errs.append("%s: examples must be 2 to 4 cases" % where)
+    else:
+        for i, item in enumerate(examples):
+            if (not isinstance(item, dict) or not _nonempty_str(item.get("title"))
+                    or not _nonempty_str(item.get("body"))):
+                errs.append("%s: examples[%d] needs a title and a body" % (where, i))
+    looks = doc.get("looksLike")
+    if (not isinstance(looks, dict)
+            or not _nonempty_str(looks.get("individual"))
+            or not _nonempty_str(looks.get("manager"))):
+        errs.append("%s: looksLike needs individual and manager" % where)
+    deepen = doc.get("deepen")
+    if (not isinstance(deepen, list) or not 6 <= len(deepen) <= 12
+            or not all(_nonempty_str(x) for x in deepen)):
+        errs.append("%s: deepen must be 6 to 12 questions" % where)
+    elif any(not x.endswith("?") for x in deepen):
+        errs.append("%s: each deepen question must end with ?" % where)
+    related = doc.get("related")
+    if not isinstance(related, list) or len(related) < 2:
+        errs.append("%s: related needs at least two principles" % where)
 
 
 def load_records(errs):
@@ -544,17 +598,28 @@ def validate_teaching(by_company, errs, root=None):
             except ValueError as e:
                 errs.append("%s: not valid JSON, %s" % (where, e))
                 continue
+            if not isinstance(doc, dict):
+                errs.append("%s: must be a JSON object" % where)
+                continue
             check_teaching_dashes(doc, where, errs)
             if filename == "index.json":
-                for item in doc.get("principles") or []:
-                    slug_ = item.get("slug") if isinstance(item, dict) else None
-                    if slug_ not in slugs:
-                        errs.append("%s: catalog slug %r does not exist" % (where, slug_))
-                        continue
-                    rec = slugs[slug_]
-                    if item.get("id") != rec.get("id"):
-                        errs.append("%s: catalog id for %s is %r, record is %r"
-                                    % (where, slug_, item.get("id"), rec.get("id")))
+                principles = doc.get("principles")
+                if not isinstance(principles, list) or not principles:
+                    errs.append("%s: principles must be a non-empty list" % where)
+                else:
+                    for item in principles:
+                        if not isinstance(item, dict):
+                            errs.append("%s: catalog entry must be an object" % where)
+                            continue
+                        slug_ = item.get("slug")
+                        if slug_ not in slugs:
+                            errs.append("%s: catalog slug %r does not exist" % (where, slug_))
+                            continue
+                        rec = slugs[slug_]
+                        if item.get("id") != rec.get("id"):
+                            errs.append("%s: catalog id for %s is %r, record is %r"
+                                        % (where, slug_, item.get("id"), rec.get("id")))
+                validate_blog(doc.get("blog"), where, errs)
                 texts = []
                 _strings(doc, texts)
                 for text in texts:
@@ -563,6 +628,8 @@ def validate_teaching(by_company, errs, root=None):
                         if tok not in slugs:
                             errs.append("%s: {lp:%s} does not resolve" % (where, tok))
                 continue
+            validate_teaching_shape(doc, where, errs)
+            validate_blog(doc.get("blog"), where, errs)
             stem = filename[:-5]
             if doc.get("slug") != stem:
                 errs.append("%s: slug %r does not match the filename"
@@ -573,12 +640,18 @@ def validate_teaching(by_company, errs, root=None):
                 errs.append("%s: id %r does not match the principle record"
                             % (where, doc.get("id")))
             related = []
-            for rel in doc.get("related") or []:
-                rid = rel.get("id") if isinstance(rel, dict) else None
-                if rid not in slugs:
-                    errs.append("%s: related id %r does not exist" % (where, rid))
-                else:
-                    related.append(rid)
+            rels = doc.get("related")
+            if isinstance(rels, list):
+                for rel in rels:
+                    if not isinstance(rel, dict) or not _nonempty_str(rel.get("note")):
+                        errs.append("%s: related entry needs an id and a note" % where)
+                        rid = rel.get("id") if isinstance(rel, dict) else None
+                    else:
+                        rid = rel.get("id")
+                    if rid not in slugs:
+                        errs.append("%s: related id %r does not exist" % (where, rid))
+                    else:
+                        related.append(rid)
             texts = []
             for key in TEACH_PROSE:
                 if key in doc:

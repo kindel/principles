@@ -387,7 +387,7 @@ Rules:
 - Every string: no em dash, no `---`, Oxford commas, numbers under 10 spelled out.
 - No source-company names, products, executives, internal tools, or wiki chrome in the prose and notes. Further reading titles may name the author, the book, or the source company.
 
-`validate.py` checks that the slug exists, that each `related` id exists, and that every `{lp:...}` token in the prose resolves to a slug in the company and is listed in `related`. A token in the catalog must resolve too. It rejects an em dash and `---`. An en dash in a published title is allowed. `tests/test_reading.py` checks the Further reading shape and the approved cites.
+`validate.py` checks that the slug exists, that each `related` id exists, and that every `{lp:...}` token in the prose resolves to a slug in the company and is listed in `related`. A token in the catalog must resolve too. It also checks the counts and object shapes in the rules above, and that `blog` is a non-empty list of title, url, and note. It rejects an em dash and `---`. An en dash is allowed only in a Further reading title. `tests/test_reading.py` checks the Further reading shape and the approved cites.
 
 ## Sourcing
 
