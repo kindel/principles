@@ -693,7 +693,7 @@
           "id": "telling-a-customer-no",
           "situation": "Telling a customer no",
           "under": "Avoids the conversation. The customer keeps planning around something the team will not build.",
-          "justRight": "States the no, the reason, and what saying yes would cost other customers. Offers the closest supported option and writes it down so nobody brings the request back by accident.",
+          "justRight": "States the no, the reason, and what saying yes would cost other customers. Offers the closest supported option and puts the answer in writing, including what would have to change for the team to reconsider.",
           "over": "Softens the no until it sounds like a later yes. The customer staffs a plan around a capability that never arrives.",
           "words": "generated"
         }
@@ -848,9 +848,9 @@
         {
           "id": "handoff-between-teams",
           "situation": "A handoff between teams",
-          "under": "Accepts the summary email and never opens the docs, code, or tickets being handed over.",
-          "justRight": "Opens the docs and tickets their team will need this week, names the gaps that would stall them, and then lets the handoff go.",
-          "over": "Rewrites the other team's docs before accepting the handoff. Both teams wait on a cleanup that was not in the plan.",
+          "under": "Accepts the summary email and never opens the docs or code being handed over.",
+          "justRight": "Reads the docs and code their team will need this week, names the gaps that would stall them, and then lets the handoff go.",
+          "over": "Rewrites the other team's docs and code before accepting the handoff. Both teams wait on a cleanup that was not in the plan.",
           "words": "generated"
         },
         {
@@ -858,7 +858,7 @@
           "situation": "A launch checklist",
           "under": "Marks lines done from memory. Does not look at the test results or dashboards behind each item.",
           "justRight": "Verifies the few items that would hurt customers if they were false, then ships on the rest of the list.",
-          "over": "Demands a live demo of every checkbox. The launch window closes while the team redoes work that was already finished.",
+          "over": "Makes the team rerun every test and walk through every item on the list live, including ones already checked. The launch window closes while the team redoes work that was already finished.",
           "words": "generated"
         },
         {
