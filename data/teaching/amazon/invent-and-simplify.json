@@ -12,7 +12,7 @@
   "examples": [
     {
       "title": "The whiteboard in the corner",
-      "body": "The room is staring at a chart of arrows. Someone walks to the board, crosses out half of it, and the whole thing fits in a corner. People say it cannot be that easy. Look for the person who did that, and also whether they checked the failure cases with the people who run the process. Simplifying in private and throwing the result over the wall is the over move."
+      "body": "The room is staring at a chart of arrows. Someone walks to the board, crosses out half of it, and the whole thing fits in a corner. People say it cannot be that easy. Look for the person who did that, and also whether they checked the failure cases with the people who run the process. Simplifying in private and throwing the result over the wall is over."
     },
     {
       "title": "Pilot it",
@@ -25,7 +25,7 @@
   ],
   "looksLike": {
     "individual": "You notice when you are solving the same problem for the third time. You ask what you could remove. You look outside your team before you write a new system. You can explain the customer problem in a sentence, then show the simpler path.",
-    "manager": "You require invention and you require simplicity. You fund small experiments and kill the ones that do not move a customer metric. You do not let \"not invented here\" become a team sport, and you do not let elegance eat the goal."
+    "manager": "You require invention and you require simplicity. You fund small experiments and kill the ones that do not move a customer metric. You do not let \"not invented here\" become a team sport, and you do not let a prettier design replace the goal."
   },
   "deepen": [
     "When did you last recognize that last year's solution was no longer scaling?",
@@ -69,7 +69,7 @@
     {
       "title": "Breaking Down Innovation & Invention",
       "url": "https://blog.kindel.com/2023/01/08/breaking-down-innovation-invention/",
-      "note": "A lexicon for invention versus innovation, so the words stop floating."
+      "note": "A plain definition of invention versus innovation, so the words mean something."
     },
     {
       "title": "Jeff Bezos's 2015 Letter to Amazon Shareholders",

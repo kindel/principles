@@ -1125,7 +1125,7 @@
         {
           "id": "presenting-the-chosen-plan",
           "situation": "Presenting a plan you opposed",
-          "under": "Reads the slides with visible distance, or sends someone else so they do not have to stand behind it.",
+          "under": "Presents the summary deck as if it belongs to someone else, or sends someone else so they do not have to defend the plan.",
           "justRight": "Presents the chosen plan as the team's plan and keeps the real risks on the table as watch items. Does not use the stage to reopen the vote.",
           "over": "Uses the presentation to argue the old case one more time. The audience leaves unsure what was decided, and the team loses a day re-explaining the call.",
           "words": "generated"

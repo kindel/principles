@@ -7,11 +7,11 @@
     "This principle shows up as operational excellence. You never assume the current process is good enough. You pick the few metrics that tell you the truth. You fix the root cause so the defect cannot travel. You balance this with {lp:bias-for-action}. Highest standards is not a reason to block the business while you polish.",
     "It also shows up in the thinking. The best calls come from writing: a press release for the vision, a FAQ for the hard questions, a short narrative that tests the assertions with data. Inviting scrutiny on the writing is how the work gets better. Sloppy prose is sloppy thought."
   ],
-  "calibrationIntro": "Look for a defect they stopped from going downstream, and a launch they held for a real reason. \"I have high standards\" is a slogan. Perfection that never ships is the over move. Shipping junk and calling it {lp:bias-for-action} is the under move.",
+  "calibrationIntro": "Look for a defect they stopped from going downstream, and a launch they held for a real reason. \"I have high standards\" is a slogan. Perfection that never ships is over. Shipping junk and calling it {lp:bias-for-action} is under.",
   "examples": [
     {
       "title": "Stop the line",
-      "body": "A defect is about to travel to the next team, or to a customer. The just-right move is to stop the line, fix the cause, and start again. Passing it downstream so your date looks clean is the under move. Look for a time they pulled that cord, and what stayed fixed afterward."
+      "body": "A defect is about to travel to the next team, or to a customer. Just right is to stop the line, fix the cause, and start again. Passing it downstream so your date looks clean is under. Look for a time they pulled that cord, and what stayed fixed afterward."
     },
     {
       "title": "Hold the launch two days, not two months",

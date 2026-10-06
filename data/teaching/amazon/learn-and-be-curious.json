@@ -12,7 +12,7 @@
   "examples": [
     {
       "title": "Iterate the process, do not blame the people",
-      "body": "A new planning process missed the date. The under move is \"the people failed the process.\" The over move is a brand-new process by Monday. The just-right move is a short, honest review with the people who used it, then one more attempt with the sharp edges filed off. Look for whether they can learn without thrashing."
+      "body": "A new planning process missed the date. Blaming the people for the process is under. Inventing a brand-new process by Monday is over. Just right is a short, honest review with the people who used it, then one more attempt that fixes the parts that actually failed. Look for whether they can learn without starting over every time."
     },
     {
       "title": "Change the system after the outage",
@@ -34,7 +34,7 @@
     "Who did you ask for feedback, and what did they see you change afterward?",
     "Which part of your system have you never actually opened, and why not?",
     "What did you do with two pieces of feedback that contradicted each other?",
-    "How did a miss on your team change the system, not just the slide deck?",
+    "How did a miss on your team change how the work actually runs, not just the deck you showed afterward?",
     "What new skill have you practiced on purpose in the last quarter?",
     "When a teammate challenged how you saw a problem, what did you do with that challenge?",
     "What are you reading or studying that is not required for this week's deliverable?"
@@ -46,11 +46,11 @@
     },
     {
       "id": "are-right-a-lot",
-      "note": "You get righter by learning in public. Stubborn consistency is how judgment rots."
+      "note": "You get better at being right by learning in public. Stubborn consistency is how judgment rots."
     },
     {
       "id": "dive-deep",
-      "note": "Learn the nuts and bolts before the outage. Curiosity without depth is browsing."
+      "note": "Learn the nuts and bolts before the outage. Curiosity without depth is just looking around."
     },
     {
       "id": "hire-and-develop-the-best",
