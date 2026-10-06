@@ -1,0 +1,16 @@
+{
+  "id": 8001,
+  "slug": "customer-obsession",
+  "company": "generic",
+  "name": "Customer Obsession",
+  "sort": 1,
+  "definition": "Leaders start with customer needs and work backwards. Customers are anyone we serve, inside or outside the company. Leaders build relationships that help them understand and anticipate customer pain, then innovate to solve it. They earn and keep customer trust while protecting the long-term health of the business.",
+  "terms": [
+    {
+      "id": "customer-obsession",
+      "label": "customer obsession",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}

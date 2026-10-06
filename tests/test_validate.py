@@ -131,6 +131,13 @@ class ValidatorTest(unittest.TestCase):
     def test_a_record_with_no_rows_is_rejected(self):
         self.assertCaught(record(rows=[]), "has no rows")
 
+    # Definitions can ship before calibration. Only a company marked
+    # unpublished gets that pass. Amazon still fails above.
+    def test_unpublished_calibration_may_have_no_rows(self):
+        rec = record(company="generic", rows=[])
+        rec["id"] = 8001
+        self.assertClean(rec)
+
     def test_one_row_is_enough(self):
         self.assertClean(record(rows=[row(0)]))
 

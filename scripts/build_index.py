@@ -74,13 +74,16 @@ def main():
                 p["facets"] = facet_ids
                 n_mapped += 1
             principles.append(p)
-        companies.append(collections.OrderedDict([
+        company = [
             ("id", cid),
             ("name", meta["name"]),
             ("set", meta["set"]),
             ("source", meta["source"]),
-            ("principles", principles),
-        ]))
+        ]
+        if meta.get("preamble"):
+            company.append(("preamble", meta["preamble"]))
+        company.append(("principles", principles))
+        companies.append(collections.OrderedDict(company))
 
     index = collections.OrderedDict([
         ("version", 5),

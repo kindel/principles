@@ -3,6 +3,120 @@
   "generated": "scripts/build_index.py",
   "companies": [
     {
+      "id": "generic",
+      "name": "Any Company",
+      "set": "Leadership Principles",
+      "source": "https://github.com/kindel/principles/issues/71",
+      "preamble": "**Everyone is a leader.** These principles apply to every person, not just people managers. They guide judgment rather than replace it. They remain open to revision: *unless you know better.*",
+      "principles": [
+        {
+          "id": 8001,
+          "slug": "customer-obsession",
+          "name": "Customer Obsession",
+          "sort": 1,
+          "file": "data/generic/customer-obsession.json"
+        },
+        {
+          "id": 8002,
+          "slug": "earn-trust",
+          "name": "Earn Trust",
+          "sort": 2,
+          "file": "data/generic/earn-trust.json"
+        },
+        {
+          "id": 8003,
+          "slug": "ownership",
+          "name": "Ownership",
+          "sort": 3,
+          "file": "data/generic/ownership.json"
+        },
+        {
+          "id": 8004,
+          "slug": "are-right-a-lot",
+          "name": "Are Right, A Lot",
+          "sort": 4,
+          "file": "data/generic/are-right-a-lot.json"
+        },
+        {
+          "id": 8005,
+          "slug": "learn-and-be-curious",
+          "name": "Learn and Be Curious",
+          "sort": 5,
+          "file": "data/generic/learn-and-be-curious.json"
+        },
+        {
+          "id": 8006,
+          "slug": "invent-and-simplify",
+          "name": "Invent and Simplify",
+          "sort": 6,
+          "file": "data/generic/invent-and-simplify.json"
+        },
+        {
+          "id": 8007,
+          "slug": "insist-on-high-standards",
+          "name": "Insist on High Standards",
+          "sort": 7,
+          "file": "data/generic/insist-on-high-standards.json"
+        },
+        {
+          "id": 8008,
+          "slug": "hire-and-develop-the-best",
+          "name": "Hire and Develop the Best",
+          "sort": 8,
+          "file": "data/generic/hire-and-develop-the-best.json"
+        },
+        {
+          "id": 8009,
+          "slug": "think-big",
+          "name": "Think Big",
+          "sort": 9,
+          "file": "data/generic/think-big.json"
+        },
+        {
+          "id": 8010,
+          "slug": "bias-for-action",
+          "name": "Bias for Action",
+          "sort": 10,
+          "file": "data/generic/bias-for-action.json"
+        },
+        {
+          "id": 8011,
+          "slug": "frugality",
+          "name": "Frugality",
+          "sort": 11,
+          "file": "data/generic/frugality.json"
+        },
+        {
+          "id": 8012,
+          "slug": "dive-deep",
+          "name": "Dive Deep",
+          "sort": 12,
+          "file": "data/generic/dive-deep.json"
+        },
+        {
+          "id": 8013,
+          "slug": "have-backbone-disagree-and-commit",
+          "name": "Have Backbone; Disagree and Commit",
+          "sort": 13,
+          "file": "data/generic/have-backbone-disagree-and-commit.json"
+        },
+        {
+          "id": 8014,
+          "slug": "deliver-results",
+          "name": "Deliver Results",
+          "sort": 14,
+          "file": "data/generic/deliver-results.json"
+        },
+        {
+          "id": 8015,
+          "slug": "intentional-about-culture",
+          "name": "Intentional About Culture",
+          "sort": 15,
+          "file": "data/generic/intentional-about-culture.json"
+        }
+      ]
+    },
+    {
       "id": "amazon",
       "name": "Amazon",
       "set": "Leadership Principles",

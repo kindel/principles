@@ -1,0 +1,16 @@
+{
+  "id": 8012,
+  "slug": "dive-deep",
+  "company": "generic",
+  "name": "Dive Deep",
+  "sort": 12,
+  "definition": "Leaders stay connected to the details and operate at every level. They build mechanisms to observe performance, identify problems, and recognize what is working well. They investigate when metrics and anecdotes differ. No task is beneath them.",
+  "terms": [
+    {
+      "id": "dive-deep",
+      "label": "dive deep",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}

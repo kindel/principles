@@ -1,0 +1,16 @@
+{
+  "id": 8004,
+  "slug": "are-right-a-lot",
+  "company": "generic",
+  "name": "Are Right, A Lot",
+  "sort": 4,
+  "definition": "Leaders build strong judgment by learning from experience, especially their mistakes. They seek diverse perspectives, challenge their assumptions, and actively work to disconfirm their beliefs. Being right is not about defending an opinion; it is about reaching better decisions and applying what they learn.",
+  "terms": [
+    {
+      "id": "are-right-a-lot",
+      "label": "are right, a lot",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}

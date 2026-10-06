@@ -300,7 +300,11 @@ def validate_record(company, filename, rec, errs):
     # many rows past one is editorial and belongs in review: a company that
     # published a single triple gets one, and a principle that earns 15
     # situations gets 15.
-    if not rows:
+    # A principle with no rows is not modeled. The one exception is a company
+    # marked calibration "unpublished": the definitions are published and the
+    # calibration is not. Inventing rows to clear the flag is not allowed.
+    unpublished = COMPANY_META.get(company, {}).get("calibration") == "unpublished"
+    if not rows and not unpublished:
         errs.append("%s: has no rows, so nothing about it is observable" % where)
 
     local = set()
@@ -535,13 +539,16 @@ def expected_index(by_company, principle_to_facets):
             if facet_ids:
                 p["facets"] = facet_ids
             principles.append(p)
-        companies.append({
+        company = {
             "id": cid,
             "name": meta["name"],
             "set": meta["set"],
             "source": meta["source"],
-            "principles": principles,
-        })
+        }
+        if meta.get("preamble"):
+            company["preamble"] = meta["preamble"]
+        company["principles"] = principles
+        companies.append(company)
     return {
         "version": 5,
         "generated": "scripts/build_index.py",

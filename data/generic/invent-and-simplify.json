@@ -1,0 +1,16 @@
+{
+  "id": 8006,
+  "slug": "invent-and-simplify",
+  "company": "generic",
+  "name": "Invent and Simplify",
+  "sort": 6,
+  "definition": "Leaders expect innovation and continually seek simpler solutions. They look for ideas everywhere and use proven approaches without being limited by \"not invented here.\" They accept that new approaches may be misunderstood for a time. They reduce unnecessary complexity and consistently communicate with simple clarity.",
+  "terms": [
+    {
+      "id": "invent-and-simplify",
+      "label": "invent and simplify",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}

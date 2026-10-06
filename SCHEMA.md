@@ -44,6 +44,13 @@ A company's `id` is its kebab-case directory name. A principle's `id` is its
 number. They are different kinds of thing that share a key name, which is
 worth knowing before reading the file.
 
+The first company in `companies` is the default set. A consumer opened with no
+company selected shows that set. `name` is the display name, and it is the only
+place that name is stored. The id does not change when the display name does.
+
+`preamble` is optional. It is the set's opening paragraph, markdown emphasis
+allowed, and it is omitted when the company has none.
+
 `facets` is the list of cross-company facet ids that include this principle,
 projected from `data/facets.json`. A principle that appears on no facet carries
 no `facets` key. A consumer that *generates* examples reads the facet ids from
@@ -188,7 +195,8 @@ generated set marked as generated.
 - `id` is a number, and it is unique across the whole repository. A consumer
   addresses a principle by `id` alone and cannot land on the wrong record.
 - Each company owns a block of a thousand ids: Amazon 1000, Arm 2000, Coupang
-  3000, Delivery Hero 4000, GitLab 5000, Dawn 6000, Toyota 7000. `block` in
+  3000, Delivery Hero 4000, GitLab 5000, Dawn 6000, Toyota 7000, Generic 8000.
+  `block` in
   `scripts/companies.py` is the registry, and claiming the next free block is
   the whole of adding a company. A new principle takes the next free number in
   its company's block.
@@ -202,7 +210,7 @@ generated set marked as generated.
   signal that they may be describing the same behavior, so `validate.py` prints
   the list rather than hiding it.
 - `company` is kebab-case and matches the parent directory. Current companies
-  are `amazon`, `arm`, `coupang`, `delivery-hero`, `gitlab`, `dawn`, and `toyota`.
+  are `generic`, `amazon`, `arm`, `coupang`, `delivery-hero`, `gitlab`, `dawn`, and `toyota`.
 - `group` is optional, and a record carries it when the company publishes its
   set under lenses. Arm has two, `one-arm` and `accelerate-impact`, five
   principles each. Toyota has two, `continuous-improvement` and
@@ -219,7 +227,9 @@ generated set marked as generated.
   first and Transparency last (one through six), the order that spells CREDIT.
   Dawn is Think big, start small first and Race on the racetrack, walk on ice
   last (one through 15), following the document's numbering. Toyota is Challenge
-  first and Teamwork last (one through five).
+  first and Teamwork last (one through five). Generic, shown as Any Company,
+  is Customer Obsession first and Intentional About Culture last (one through
+  15), the order in kindel/principles issue 71.
 - `definition` is the company's short statement of the principle, transcribed
   from the company's own text under Sourcing below. It is a quotation, so it is
   never condensed, reworded, reordered, or merged. Where the statement runs
@@ -264,7 +274,12 @@ The calibration taxonomy, and the anchor a facet points at.
   this file has an opinion about. How many past one is judgment: enough that a
   person could recognize the behavior in their own week. Most principles land
   somewhere around five to a dozen, but that is an observation rather than a
-  rule, and a company that published a single triple gets one row.
+  rule, and a company that published a single triple gets one row. A company
+  may set `calibration` to `unpublished` in `scripts/companies.py` when the set
+  is definitions only and the calibration has not been written. Those records
+  carry `rows: []`. Consumers show no calibration table. Every other company
+  still fails validation with no rows. Remove the flag when the rows exist.
+  Do not invent rows to clear it.
 - `under`, `justRight`, and `over` are one to three sentences each. They
   describe one behavior under indexed, balanced, and over done.
 - Row ids are unique within a principle. A facet may only reference a row on

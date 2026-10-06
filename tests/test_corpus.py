@@ -76,6 +76,11 @@ def load_rows():
 
 class CorpusTest(unittest.TestCase):
 
+    def test_the_first_company_is_the_default_set(self):
+        self.assertEqual("generic", next(iter(COMPANY_META)))
+        self.assertEqual("Any Company", COMPANY_META["generic"]["name"])
+        self.assertEqual("unpublished", COMPANY_META["generic"]["calibration"])
+
     def test_the_corpus_validates(self):
         with redirect_stdout(io.StringIO()) as out:
             code = validate.main()

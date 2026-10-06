@@ -1,0 +1,16 @@
+{
+  "id": 8010,
+  "slug": "bias-for-action",
+  "company": "generic",
+  "name": "Bias for Action",
+  "sort": 10,
+  "definition": "Leaders move quickly when decisions are reversible and take greater care when consequences are difficult to undo. They assess what could go wrong, what is at stake, and what they can recover from. They take calculated risks, use judgment when information is incomplete, and keep others informed as they act.",
+  "terms": [
+    {
+      "id": "bias-for-action",
+      "label": "bias for action",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}

@@ -96,10 +96,11 @@ Unless you know better ones.
 
 ## The sets
 
-An app picks a company and shows only that company's set. The sets today are
-Amazon's Leadership Principles, Arm's 10x Mindset, the Leadership Principles of
-Coupang and Delivery Hero, GitLab's CREDIT values, Dawn Aerospace's Company
-Tenets, and Toyota's The Toyota Way.
+An app picks a company and shows only that company's set. The first company in
+the manifest is the default. That is the generic set, display name Any Company,
+id `generic`. The other sets are Amazon's Leadership Principles, Arm's 10x
+Mindset, the Leadership Principles of Coupang and Delivery Hero, GitLab's
+CREDIT values, Dawn Aerospace's Company Tenets, and Toyota's The Toyota Way.
 
 Every set is the company's own text, published here with the company's
 permission. Usually that is a page the company publishes itself. It can also be
@@ -118,6 +119,7 @@ reason.
 data/index.json              manifest, generated, version 5
 data/facets.json             cross-company facet map
 data/teaching/<company>/     teaching prose (Amazon only today)
+data/generic/<slug>.json       one generic principle (display name Any Company)
 data/amazon/<slug>.json        one Amazon principle
 data/arm/<slug>.json           one Arm factor
 data/coupang/<slug>.json       one Coupang principle

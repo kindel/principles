@@ -1,0 +1,16 @@
+{
+  "id": 8015,
+  "slug": "intentional-about-culture",
+  "company": "generic",
+  "name": "Intentional About Culture",
+  "sort": 15,
+  "definition": "Leaders actively work to create a safe, respectful, and supportive work environment. They lead with empathy, make room for enjoyment, and respect excellent work at every level, regardless of title. They view culture as part of their job.",
+  "terms": [
+    {
+      "id": "intentional-about-culture",
+      "label": "intentional about culture",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}
