@@ -22,6 +22,8 @@ WORDS = ("quoted", "authored", "generated")
 # problem than this file.
 BLOCK_SIZE = 1000
 SLUG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+LP_TOKEN = re.compile(r"\{lp:([a-z0-9]+(?:-[a-z0-9]+)*)\}")
+TEACH_PROSE = ("why", "calibrationIntro", "examples", "looksLike", "deepen")
 # Sentence break for the one-to-three-sentence rule. Terminal punctuation may
 # be followed by a closing quote or bracket before the space, as in
 # 'is not "always." Seeks input', which is still a break. Naive about
@@ -95,6 +97,27 @@ def check_style(obj, where, errs):
             errs.append("%s: --- in %r" % (where, obj[:80]))
 
 
+def check_teaching_dashes(obj, where, errs):
+    """Reject an em dash or ---. Leave an en dash alone.
+
+    A published Further reading title keeps the source heading's
+    punctuation. One title in this corpus uses an en dash (U+2013).
+    check_style rejects that dash, which is right for principle records
+    and wrong for a verbatim title, so teaching files do not call it.
+    """
+    if isinstance(obj, dict):
+        for v in obj.values():
+            check_teaching_dashes(v, where, errs)
+    elif isinstance(obj, list):
+        for v in obj:
+            check_teaching_dashes(v, where, errs)
+    elif isinstance(obj, str):
+        if "\u2014" in obj:
+            errs.append("%s: em dash in %r" % (where, obj[:80]))
+        if "---" in obj:
+            errs.append("%s: --- in %r" % (where, obj[:80]))
+
+
 def load_records(errs):
     by_company = collections.OrderedDict((cid, []) for cid in COMPANY_META)
 
@@ -108,6 +131,8 @@ def load_records(errs):
                             % name)
             continue
         if not os.path.isdir(path):
+            continue
+        if name == "teaching":
             continue
         if name not in COMPANY_META:
             errs.append("data/%s: unknown company directory" % name)
@@ -470,6 +495,103 @@ def expected_index(by_company, principle_to_facets):
     }
 
 
+def _strings(obj, out):
+    if isinstance(obj, str):
+        out.append(obj)
+    elif isinstance(obj, dict):
+        for v in obj.values():
+            _strings(v, out)
+    elif isinstance(obj, list):
+        for v in obj:
+            _strings(v, out)
+
+
+def validate_teaching(by_company, errs, root=None):
+    """Teaching files point at real principles.
+
+    A slug in data/teaching/<company>/ must be a principle of that company.
+    Each related id must be one too. Every {lp:slug} token in the prose
+    must resolve, and it must be listed in related. A token in the catalog
+    must resolve. root is for tests; the corpus uses DATA.
+    """
+    teaching = os.path.join(root or DATA, "teaching")
+    if not os.path.isdir(teaching):
+        return
+    for company in sorted(os.listdir(teaching)):
+        cdir = os.path.join(teaching, company)
+        if company.startswith("."):
+            continue
+        if not os.path.isdir(cdir):
+            errs.append("data/teaching/%s: not a directory" % company)
+            continue
+        if company not in by_company:
+            errs.append("data/teaching/%s: unknown company" % company)
+            continue
+        slugs = {}
+        for _, rec in by_company[company]:
+            slug_ = rec.get("slug")
+            if isinstance(slug_, str):
+                slugs[slug_] = rec
+        for filename in sorted(os.listdir(cdir)):
+            path = os.path.join(cdir, filename)
+            where = "data/teaching/%s/%s" % (company, filename)
+            if not filename.endswith(".json") or not os.path.isfile(path):
+                errs.append("%s: only .json teaching files belong here" % where)
+                continue
+            try:
+                with open(path, encoding="utf-8") as fh:
+                    doc = json.load(fh)
+            except ValueError as e:
+                errs.append("%s: not valid JSON, %s" % (where, e))
+                continue
+            check_teaching_dashes(doc, where, errs)
+            if filename == "index.json":
+                for item in doc.get("principles") or []:
+                    slug_ = item.get("slug") if isinstance(item, dict) else None
+                    if slug_ not in slugs:
+                        errs.append("%s: catalog slug %r does not exist" % (where, slug_))
+                        continue
+                    rec = slugs[slug_]
+                    if item.get("id") != rec.get("id"):
+                        errs.append("%s: catalog id for %s is %r, record is %r"
+                                    % (where, slug_, item.get("id"), rec.get("id")))
+                texts = []
+                _strings(doc, texts)
+                for text in texts:
+                    for match in LP_TOKEN.finditer(text):
+                        tok = match.group(1)
+                        if tok not in slugs:
+                            errs.append("%s: {lp:%s} does not resolve" % (where, tok))
+                continue
+            stem = filename[:-5]
+            if doc.get("slug") != stem:
+                errs.append("%s: slug %r does not match the filename"
+                            % (where, doc.get("slug")))
+            if stem not in slugs:
+                errs.append("%s: slug %r is not a principle of %s" % (where, stem, company))
+            elif doc.get("id") != slugs[stem].get("id"):
+                errs.append("%s: id %r does not match the principle record"
+                            % (where, doc.get("id")))
+            related = []
+            for rel in doc.get("related") or []:
+                rid = rel.get("id") if isinstance(rel, dict) else None
+                if rid not in slugs:
+                    errs.append("%s: related id %r does not exist" % (where, rid))
+                else:
+                    related.append(rid)
+            texts = []
+            for key in TEACH_PROSE:
+                if key in doc:
+                    _strings(doc[key], texts)
+            for text in texts:
+                for match in LP_TOKEN.finditer(text):
+                    tok = match.group(1)
+                    if tok not in slugs:
+                        errs.append("%s: {lp:%s} does not resolve" % (where, tok))
+                    elif tok not in related:
+                        errs.append("%s: {lp:%s} is missing from related" % (where, tok))
+
+
 def main():
     errs = []
     by_company = load_records(errs)
@@ -497,6 +619,8 @@ def main():
                 errs.append("id %d used by both %s and %s"
                             % (pid, seen_ids[pid], "%s/%s" % (company, rec.get("slug"))))
             seen_ids[pid] = "%s/%s" % (company, rec.get("slug"))
+
+    validate_teaching(by_company, errs)
 
     # Validate facets.json
     facets = load_facets(errs)

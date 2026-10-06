@@ -1,9 +1,9 @@
 # Schema
 
 `data/index.json` is the manifest. `data/facets.json` is the cross-company facet
-map. `data/<company>/<slug>.json` is one principle. Nothing else in this
-repository is data, and nothing here knows about any application that consumes
-it.
+map. `data/<company>/<slug>.json` is one principle. `data/teaching/<company>/`
+is the teaching prose for a set. Nothing here knows about any application that
+consumes it.
 
 A consumer picks one company and shows only that company's set.
 
@@ -316,6 +316,78 @@ labels.
 quoted rather than authored, so the company's punctuation and grammar stand
 even where they disagree with the rules above. The em dash and `---` checks are
 the exception and run everywhere, so pick an excerpt that carries neither.
+
+## Teaching
+
+Amazon teaching prose. Name, definition, and rows stay on the principle
+record. Porridge renders this directory. The field names are the ones the
+files already use. `blog` is the Further reading list. It is not renamed.
+
+### Files
+
+- `data/teaching/<company>/index.json` catalog. Amazon only today.
+- `data/teaching/<company>/<slug>.json` one principle.
+
+kindelwww mounts this repo's `data/` at `assets/data/principles`, so Hugo
+reads `data/principles/teaching/amazon/<slug>.json`. The standalone app
+fetches `https://cdn.jsdelivr.net/gh/kindel/principles@main/data/teaching/amazon/<slug>.json`.
+
+Identity is `(company, numeric id)`. The filename is the slug.
+
+### Cross-refs
+
+When prose mentions another principle, write a token `{lp:<slug>}` inline.
+
+Example: `That is {lp:ownership}, not heroics.`
+
+Renderers replace the token with a link. Agents treat tokens as hard links.
+
+Every `{lp:slug}` token in `why`, `calibrationIntro`, `examples`, `looksLike`, or `deepen` must also appear in `related`. Navigation built from `related` has to see the same slugs the prose links. `related` may include extra principles that are not tokenized in prose.
+
+Never write raw company names or product names in the prose and notes. Principle names stay. Further reading titles may name the author, the book, or the source company.
+
+### Principle object
+
+```json
+{
+  "id": 1001,
+  "slug": "customer-obsession",
+  "why": ["Short paragraph.", "Another paragraph."],
+  "calibrationIntro": "How to use the rows below.",
+  "examples": [
+    {"title": "Short title", "body": "Teaching example, company-agnostic."}
+  ],
+  "looksLike": {
+    "individual": "What it looks like for an IC.",
+    "manager": "What it looks like for a manager."
+  },
+  "deepen": [
+    "Diagnostic question you ask yourself, a teammate, or anyone you are reviewing."
+  ],
+  "related": [
+    {"id": "ownership", "note": "Why they connect, one sentence."}
+  ],
+  "blog": [
+    {"title": "Essay title", "url": "https://blog.kindel.com/...", "note": "Why this essay belongs here."},
+    {"title": "Book or letter title", "url": "https://...", "note": "Why this source belongs here."}
+  ]
+}
+```
+
+Rules:
+
+- `id` is the numeric id of the principle record in this company.
+- `slug` matches the filename without `.json`, and that slug exists on a principle record for the company.
+- `why` is 3-6 short paragraphs. Each array item is one paragraph.
+- `examples` 2-4 teaching cases. Generalize retail and ops specifics. Drop named-exec anecdotes you cannot restate without the company.
+- `deepen` 6-12 questions. Each is a full sentence ending with `?`.
+- `related` is the union of every `{lp:slug}` token in the prose fields plus any extra curated links. Each `related` id is a slug in this company. Two is a floor, not a cap.
+- `blog` is the Further reading list. It holds published tig.log essays that amplify this principle, plus at least one external source: the published principles, a shareholder letter, a book, or an essay or talk by someone who shaped the practice. Same shape on every file, including the catalog. Empty is not allowed. A principle with no tig.log essay still gets its external source.
+- Every `blog` link is real. Never invent a URL, and check that each URL resolves before it lands. External titles are the cite on the list. Use the published heading when it already names the work. When it is only a year or a short title, name the author or the source, and the work. Titles may name the source company or an executive. Notes follow the rules below.
+- Every string: no em dash, no `---`, Oxford commas, numbers under 10 spelled out.
+- No source-company names, products, executives, internal tools, or wiki chrome in the prose and notes. Further reading titles may name the author, the book, or the source company.
+
+`validate.py` checks that the slug exists, that each `related` id exists, and that every `{lp:...}` token in the prose resolves to a slug in the company and is listed in `related`. A token in the catalog must resolve too. It rejects an em dash and `---`. An en dash in a published title is allowed. `tests/test_reading.py` checks the Further reading shape and the approved cites.
 
 ## Sourcing
 

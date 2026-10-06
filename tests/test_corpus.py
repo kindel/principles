@@ -63,7 +63,7 @@ def load_fixtures():
 def load_rows():
     for company in sorted(os.listdir(DATA)):
         d = os.path.join(DATA, company)
-        if not os.path.isdir(d):
+        if not os.path.isdir(d) or company not in COMPANY_META:
             continue
         for name in sorted(os.listdir(d)):
             if not name.endswith(".json"):

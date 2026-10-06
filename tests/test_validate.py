@@ -13,8 +13,10 @@ to review.
 """
 
 import copy
+import json
 import os
 import sys
+import tempfile
 import unittest
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
@@ -22,7 +24,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
 
 from companies import COMPANY_META
 from validate import (expected_index, validate_company, validate_facets,
-                      validate_record)
+                      validate_record, validate_teaching)
 
 
 def row(i, **kw):
@@ -447,6 +449,149 @@ class FacetMapTest(unittest.TestCase):
         }])
         errs = self.check(f)
         self.assertTrue(any("one to three" in e for e in errs), errs)
+
+
+class TeachingValidatorTest(unittest.TestCase):
+    """Teaching files have to point at principles that exist."""
+
+    def bank(self):
+        return {
+            "amazon": [
+                ("customer-obsession.json", {"id": 1001, "slug": "customer-obsession"}),
+                ("ownership.json", {"id": 1002, "slug": "ownership"}),
+            ]
+        }
+
+    def write(self, root, name, doc, company="amazon"):
+        d = os.path.join(root, "teaching", company)
+        os.makedirs(d, exist_ok=True)
+        with open(os.path.join(d, name), "w", encoding="utf-8") as f:
+            json.dump(doc, f)
+
+    def check(self, root, bank=None):
+        errs = []
+        validate_teaching(bank if bank is not None else self.bank(), errs, root=root)
+        return errs
+
+    def good(self):
+        return {
+            "id": 1001,
+            "slug": "customer-obsession",
+            "why": ["See {lp:ownership}."],
+            "related": [{"id": "ownership", "note": "They connect."}],
+            "blog": [{
+                "title": "Do Your Job \u2013 Don't Use Placeholder Text",
+                "url": "https://example.com/job",
+                "note": "The published heading.",
+            }],
+        }
+
+    def test_a_good_teaching_file_passes(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "customer-obsession.json", self.good())
+            self.assertEqual([], self.check(root))
+
+    def test_an_en_dash_in_a_published_title_is_allowed(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["title"] = "Do Your Job \u2013 Don't Use Placeholder Text"
+            self.write(root, "customer-obsession.json", doc)
+            self.assertEqual([], self.check(root))
+
+    def test_slug_must_be_a_principle(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["slug"] = "not-a-principle"
+            self.write(root, "not-a-principle.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("is not a principle of amazon" in e for e in errs), errs)
+
+    def test_slug_must_match_the_filename(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "ownership.json", self.good())
+            errs = self.check(root)
+            self.assertTrue(any("does not match the filename" in e for e in errs), errs)
+
+    def test_id_must_match_the_record(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["id"] = 9999
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("does not match the principle record" in e for e in errs), errs)
+
+    def test_related_id_must_exist(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["related"] = [{"id": "nope", "note": "Missing."}]
+            doc["why"] = ["No token here."]
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("related id 'nope' does not exist" in e for e in errs), errs)
+
+    def test_token_must_resolve(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["why"] = ["See {lp:nope}."]
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("{lp:nope} does not resolve" in e for e in errs), errs)
+
+    def test_token_must_be_listed_in_related(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["related"] = []
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("{lp:ownership} is missing from related" in e for e in errs), errs)
+
+    def test_an_em_dash_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["why"] = ["A clause \u2014 and another."]
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("em dash" in e for e in errs), errs)
+
+    def test_a_triple_hyphen_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["why"] = ["A clause --- and another."]
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("---" in e for e in errs), errs)
+
+    def test_catalog_slug_must_exist(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "index.json", {
+                "principles": [{"slug": "nope", "id": 1}],
+                "howTo": ["Cross-refs look like {lp:ownership}."],
+            })
+            errs = self.check(root)
+            self.assertTrue(any("catalog slug 'nope' does not exist" in e for e in errs), errs)
+
+    def test_catalog_id_must_match(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "index.json", {
+                "principles": [{"slug": "customer-obsession", "id": 1}],
+            })
+            errs = self.check(root)
+            self.assertTrue(any("catalog id for customer-obsession" in e for e in errs), errs)
+
+    def test_catalog_token_must_resolve(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "index.json", {
+                "principles": [{"slug": "customer-obsession", "id": 1001}],
+                "howTo": ["See {lp:nope}."],
+            })
+            errs = self.check(root)
+            self.assertTrue(any("{lp:nope} does not resolve" in e for e in errs), errs)
+
+    def test_unknown_company_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "x.json", {"slug": "x"}, company="nope")
+            errs = self.check(root)
+            self.assertTrue(any("unknown company" in e for e in errs), errs)
 
 
 if __name__ == "__main__":
