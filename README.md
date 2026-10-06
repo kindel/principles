@@ -117,6 +117,7 @@ reason.
 ```
 data/index.json              manifest, generated, version 5
 data/facets.json             cross-company facet map
+data/teaching/<company>/     teaching prose (Amazon only today)
 data/amazon/<slug>.json        one Amazon principle
 data/arm/<slug>.json           one Arm factor
 data/coupang/<slug>.json       one Coupang principle
@@ -166,7 +167,7 @@ Two apps, plus the site that hosts them. `.kindel/consumers.txt` is the
 list the cascade pings. Adding a company here is not finished until both
 apps can show it.
 
-- `kindel/porridge` mounts this module and renders the calibration.
+- `kindel/porridge` mounts this module and renders the calibration. Amazon teaching prose is `data/teaching/amazon/`.
 - `kindel/biq` keeps a fixed question set. Each question maps to facets.
   A new company inherits those questions (and their generated examples)
   through the facet map, not by writing a second bank.

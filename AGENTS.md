@@ -27,8 +27,8 @@ that changes the model, schema, or data, study the Tenets section of
 
 - The model is `README.md`.
 - The schema is `SCHEMA.md`.
-- The data is `data/index.json`, `data/facets.json`, and
-  `data/<company>/<slug>.json`.
+- The data is `data/index.json`, `data/facets.json`,
+  `data/<company>/<slug>.json`, and `data/teaching/<company>/`.
 
 Downstream apps consume this and must not fork a private copy.
 
@@ -41,7 +41,7 @@ does not mean anyone can see them.
 `data/**` lands on `main`. Today that is:
 
 - `kindel/porridge`, the user's manual. Hugo mounts this module's `data/`
-  and renders it. A new company needs one content stub per principle under
+  and renders it. Amazon teaching prose is `data/teaching/amazon/`. A new company needs one content stub per principle under
   `content/porridge/<company>/`, which `scripts/sync_from_principles.py` in
   porridge writes.
 - `kindel/biq`, the interview question bank. It keeps a **fixed set of
