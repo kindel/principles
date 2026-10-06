@@ -3,8 +3,8 @@
   "slug": "frugality",
   "why": [
     "Frugality is not being cheap. It is spending on what matters to customers and to the long-term health of the business. The cheapest move is to turn the product off. That saves a lot of money, and it kills the company. Most spending decisions are less dramatic than that, and they still have the same shape: spend where it makes you faster, better, or more useful to the customer.",
-    "Look for resourcefulness, not deprivation. Buying junk hardware that slows every builder is not frugality. It is being cheap in a way that costs more later. Skipping the trip that keeps a builder from building is the same mistake. Constraints should force invention, not chew through the two-by-fours.",
-    "Many problems go away if you throw cash at them. That is why the constraint is useful. If traffic grows 135 percent and you refuse to grow the budget by the same amount, you have to reinvent how you scale, build, and deploy. The invention is the point. Headcount, budget, and fixed expense are not scoreboard categories.",
+    "Look for resourcefulness, not deprivation. Buying junk hardware that slows every builder is not frugality. It is being cheap in a way that costs more later. Skipping the trip that keeps a builder from building is the same mistake. Constraints should force invention, not take away the tools the builders need.",
+    "Many problems go away if you throw cash at them. That is why the constraint is useful. If traffic grows 135 percent and you refuse to grow the budget by the same amount, you have to reinvent how you scale, build, and deploy. The invention is the point. Headcount, budget, and fixed expense are not how you keep score.",
     "Frugality also means you will take a five million dollar hit now for a $50 million payout later, and you will not spend the leftover budget in December so nobody cuts you next year. The budget is an input. It is not the decision."
   ],
   "calibrationIntro": "Score whether someone invents under constraint and still invests in what matters. Under looks like waste, and spending as if the budget is owed to you. Over looks like penny-pinching that starves the builders, the customers, or the long term.",
@@ -23,7 +23,7 @@
     }
   ],
   "looksLike": {
-    "individual": "An individual who is frugal knows what their work costs, and they treat time and other people's time as real money. They reuse before they buy. They can tell you the last time a constraint forced a better design. They do not wear thrift as a costume, and they do not hide waste behind \"the customer needed it.\"",
+    "individual": "An individual who is frugal knows what their work costs, and they treat time and other people's time as real money. They reuse before they buy. They can tell you the last time a constraint forced a better design. They do not pretend to be cheap, and they do not hide waste behind \"the customer needed it.\"",
     "manager": "A manager who is frugal sets constraints that force invention, funds the tools and people that raise output, and refuses both the leftover-budget spend and the cut that breaks the customer. They pay for merit. They can explain a short-term loss that buys a long-term return. They do not keep score by headcount."
   },
   "deepen": [

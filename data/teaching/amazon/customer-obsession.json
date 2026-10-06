@@ -7,7 +7,7 @@
     "Many jobs never touch the end customer. That does not let you off. Your customer may be another team. You still work backwards from their need, and you still understand how their work reaches the person who pays.",
     "Mature teams get arrogant. They start believing they know better than the people they depend on. The habit that prevents that: in every decision, ask how this affects the customer."
   ],
-  "calibrationIntro": "Look for a named customer and a real tradeoff. A story that starts with an internal plan and retrofits a customer line is not this principle. Neither is making a process exception for every loud person, or ignoring a complaint because it is only one.",
+  "calibrationIntro": "Look for a named customer and a real tradeoff. A story that starts with an internal plan and sticks a sentence about the customer on the end is not this principle. Neither is making a process exception for every loud person, or ignoring a complaint because it is only one.",
   "examples": [
     {
       "title": "Keep a broken promise in person",
@@ -19,7 +19,7 @@
     },
     {
       "title": "Say no to a request that would hurt them later",
-      "body": "A loud customer wants a shortcut that would help this week and damage the experience for everyone else. The under move is to hide. The over move is to say yes and yank the team off its plan. The just-right move is to explain the tradeoff, ship the thing that is best for all of your customers, and stay in the conversation. That is how you earn trust with customers without becoming a vending machine."
+      "body": "A loud customer wants a shortcut that would help this week and damage the experience for everyone else. Hiding is under. Saying yes and yanking the team off its plan is over. Just right is explaining the tradeoff, shipping what is best for all of your customers, and staying in the conversation. That is how you earn trust with customers without saying yes to every request."
     }
   ],
   "looksLike": {

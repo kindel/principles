@@ -8,7 +8,7 @@
     "You own the future. You examine whether today's foundations can support growth. You make the long-term call even when the short-term call is easier and more popular.",
     "In some ways Ownership is the other principles applied. {lp:customer-obsession} tells you what is worth owning. {lp:deliver-results} is what ownership looks like when the date arrives. {lp:have-backbone-disagree-and-commit} is how you fight for the long-term fix when it is unpopular."
   ],
-  "calibrationIntro": "Look for what someone did when the work sat outside their job description, and what they did when a dependency failed. \"I flagged it\" is not ownership. Neither is annexing someone else's area so you can be the hero.",
+  "calibrationIntro": "Look for what someone did when the work sat outside their job description, and what they did when a dependency failed. \"I flagged it\" is not ownership. Neither is taking over someone else's area so you can be the hero.",
   "examples": [
     {
       "title": "The leaky roof",
@@ -16,7 +16,7 @@
     },
     {
       "title": "The silent dependency",
-      "body": "Another team missed a date that your launch needed. The under story is a status update that blames them. The over story is you rewriting their plan. The just-right story is you followed up, escalated, offered help, and still treated the customer outcome as yours. That is owning a dependency, not annexing a team."
+      "body": "Another team missed a date that your launch needed. A status update that blames them is under. Rewriting their plan for them is over. Just right is following up, escalating, offering help, and still treating the customer outcome as yours. That is owning a dependency, not taking over their team."
     },
     {
       "title": "Give it to a better owner",

@@ -2,8 +2,8 @@
   "title": "Leadership Principles: a user's manual",
   "source": "Kindel leadership principles user's manual. Classic 14. Amazon teaching prose only.",
   "howTo": [
-    "Use this when you are applying a principle, studying one, reviewing work, or coaching someone who is over-rotating.",
-    "Under is not trying. Over is the principle eating the job. Just Right is the bar.",
+    "Use this when you are applying a principle, studying one, reviewing work, or coaching someone who has taken it too far.",
+    "Under means they are not really doing it. Over means the principle has taken over the job. Just Right is the bar.",
     "Score the situation against a row, then say under, just right, or over, and write the evidence. Rows come from kindel/principles.",
     "Cross-refs look like {lp:ownership}. Render them as links. Agents treat them as hard links to that principle file."
   ],
