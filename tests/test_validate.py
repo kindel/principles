@@ -589,6 +589,33 @@ class TeachingValidatorTest(unittest.TestCase):
                 any("https://kindel.com/essays/ownership/" in e for e in errs),
                 errs)
 
+    def test_a_canonical_essay_url_passes(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/ownership/"
+            self.write(root, "customer-obsession.json", doc)
+            self.assertEqual([], self.check(root))
+
+    def test_an_apex_essay_url_needs_the_trailing_slash(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/ownership"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_an_unknown_apex_slug_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/owneship/"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("not in scripts/essay_catalog.json" in e for e in errs),
+                errs)
+
     def test_a_non_essay_blog_url_is_allowed(self):
         with tempfile.TemporaryDirectory() as root:
             doc = self.good()
