@@ -3884,6 +3884,169 @@
           "words": "generated"
         }
       ]
+    },
+    {
+      "id": "best-person-for-the-role",
+      "label": "best person for the role",
+      "principles": [
+        1006,
+        2003,
+        3008,
+        4005,
+        5004,
+        6010,
+        8008
+      ],
+      "rows": [
+        {
+          "principle": 1006,
+          "id": "new-hire-quality"
+        },
+        {
+          "principle": 1006,
+          "id": "raising-the-bar"
+        },
+        {
+          "principle": 1006,
+          "id": "hiring-bigger"
+        },
+        {
+          "principle": 2003,
+          "id": "holding-a-high-bar"
+        },
+        {
+          "principle": 3008,
+          "id": "open-role-pressure"
+        },
+        {
+          "principle": 3008,
+          "id": "hiring-for-the-gap"
+        },
+        {
+          "principle": 5004,
+          "id": "hiring-bias"
+        },
+        {
+          "id": "two-finalists",
+          "situation": "Two finalists",
+          "under": "Chooses the finalist with the same background and the same way of thinking. The finalist who would do the job better does not get the offer.",
+          "justRight": "Chooses the finalist who will do this role best, and says which parts of the work decided it.",
+          "over": "Chooses the weaker finalist so the team will look more varied on paper.",
+          "words": "generated"
+        },
+        {
+          "id": "a-familiar-candidate",
+          "situation": "A familiar candidate",
+          "under": "Treats a shared background and the same skills as proof they can do the job. The interviews never test the work.",
+          "justRight": "Tests the work. A shared background is not a reason to hire them, and it is not a reason to pass.",
+          "over": "Rejects them for sharing that background, even though they are the best person for the role.",
+          "words": "generated"
+        },
+        {
+          "id": "a-gap-in-the-first-month",
+          "situation": "A gap in the first month",
+          "under": "Waves off a real gap because the candidate will be easy to manage. The team finds the gap after the offer.",
+          "justRight": "Names the gap, asks whether this person is still the best choice for the role, and hires only if the answer is yes.",
+          "over": "Hires them with the gap because a target says the next person should change how the team looks. Other people then do the work the role was opened to do.",
+          "words": "generated"
+        },
+        {
+          "id": "who-interviews-the-candidate",
+          "situation": "Who interviews the candidate",
+          "under": "Asks only people who share the hiring manager's background, thinking style, and skills to do the interviews. Every vote repeats the same narrow judgment.",
+          "justRight": "Asks people who can test the role, including someone whose skills differ, and still decides on who can do the job.",
+          "over": "Picks interviewers so the panel will hit a target for who should be in the room. A strong candidate gets a no, and the work was never the question.",
+          "words": "generated"
+        },
+        {
+          "id": "a-referral-from-your-own-circle",
+          "situation": "A referral from your own circle",
+          "under": "Moves the referral ahead because they come from the same places and think the same way. Someone who might do the job better waits.",
+          "justRight": "Runs the same bar as any other candidate. The referral gets the offer only if they are the best person for the role.",
+          "over": "Sets aside a strong referral so the team will not look narrower, and offers the role to someone less able to do it.",
+          "words": "generated"
+        },
+        {
+          "id": "the-job-as-written",
+          "situation": "The job as written",
+          "under": "Writes the role as a copy of the manager: the same background and the same skills. People who could do the work better never match the posting.",
+          "justRight": "Writes the work the role must do, then hires the best person who can do that work.",
+          "over": "Writes the role as a slot in a target for how the team should look. The posting describes the look, not the work.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "team-for-the-outcome",
+      "label": "team for the outcome",
+      "principles": [
+        1006,
+        2003,
+        3008,
+        4005,
+        5004,
+        6010,
+        8008,
+        8015
+      ],
+      "rows": [
+        {
+          "principle": 2003,
+          "id": "diverse-and-inclusive-teams"
+        },
+        {
+          "principle": 4005,
+          "id": "team-composition"
+        },
+        {
+          "id": "a-team-like-the-manager",
+          "situation": "A team like the manager",
+          "under": "Builds a team with the same background, the same thinking style, and the same skills as the manager. The same blind spots show up in every review, and nobody in the room catches them.",
+          "justRight": "Hires the best person for each role. The set of roles covers more than one background, style, and skill when that is what the outcome needs.",
+          "over": "Sets a target for how the team should look and accepts a weaker hire to hit it. The team under-delivers because it was not built for the outcome.",
+          "words": "generated"
+        },
+        {
+          "id": "the-same-miss-again",
+          "situation": "The same miss again",
+          "under": "Hires again from the same background and the same skills after the team misses the same kind of problem. The next person would have missed it too.",
+          "justRight": "Names the judgment or the skill the team lacks, then hires the best person who can close that gap and still do the role.",
+          "over": "Adds someone who changes how the team looks on paper and does not have the missing skill. The miss happens again.",
+          "words": "generated"
+        },
+        {
+          "id": "one-temperament-in-the-room",
+          "situation": "One temperament in the room",
+          "under": "Hires people who decide the way the manager decides. A bad call gets no pushback until a customer feels it.",
+          "justRight": "Includes styles that challenge the default, because the outcome is better when the room is not one temperament.",
+          "over": "Collects contrasting styles to hit a target for how the room looks. The meeting never reaches the decision the business needed.",
+          "words": "generated"
+        },
+        {
+          "id": "the-skill-the-work-needs",
+          "situation": "The skill the work needs",
+          "under": "Fills every seat with the skill the manager already has. Work that needs a different skill is done badly, or not done.",
+          "justRight": "Looks at the outcome the team owes, then fills the missing skill with the best person who has it.",
+          "over": "Gives up a needed skill to hit a mix on paper. The outcome slips, and the team does not call that a hiring miss.",
+          "words": "generated"
+        },
+        {
+          "id": "the-next-three-hires",
+          "situation": "The next three hires",
+          "under": "Plans the next hires as more people the manager already trusts, which means people like the manager.",
+          "justRight": "Plans each seat against the work the outcome needs. The person who gets the seat is the best one for that work, including when the work needs a background, a style, or a skill the team does not have.",
+          "over": "Assigns the next three hires to a quota. Capable people are passed over when they miss the slot, and less capable people are hired when they fill it.",
+          "words": "generated"
+        },
+        {
+          "id": "after-the-team-misses",
+          "situation": "After the team misses",
+          "under": "Blames the miss on not having enough people who already work the manager's way, and hires more of them.",
+          "justRight": "Asks what the outcome needed that the team could not do, and whether the people in the seats could do the work.",
+          "over": "Hires again to change how the team looks. The result does not improve, because the new person still cannot do the work.",
+          "words": "generated"
+        }
+      ]
     }
   ]
 }
