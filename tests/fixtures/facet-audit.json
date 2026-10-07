@@ -36,8 +36,8 @@
     {
       "id": 1006,
       "decision": "map",
-      "facets": ["hire-and-develop-the-best"],
-      "reason": "Source principle for the hire-and-develop-the-best facet."
+      "facets": ["best-person-for-the-role", "hire-and-develop-the-best", "team-for-the-outcome"],
+      "reason": "Source principle for hire-and-develop-the-best. best-person-for-the-role is the single hiring decision. team-for-the-outcome is the mix of backgrounds, styles, and skills chosen because the business result is better."
     },
     {
       "id": 1007,
@@ -102,8 +102,8 @@
     {
       "id": 2003,
       "decision": "map",
-      "facets": ["build-extraordinary-teams"],
-      "reason": "A high bar, candid feedback, and a connected team greater than its parts. The hiring table is a different behavior."
+      "facets": ["best-person-for-the-role", "build-extraordinary-teams", "team-for-the-outcome"],
+      "reason": "A high bar, candid feedback, and a connected team greater than its parts stay on build-extraordinary-teams. The hiring and development table stays off. best-person-for-the-role is the bar for who joins. team-for-the-outcome is a team stronger than one background, one style, and one skill set."
     },
     {
       "id": 2004,
@@ -192,8 +192,8 @@
     {
       "id": 3008,
       "decision": "map",
-      "facets": ["hire-and-develop-the-best"],
-      "reason": "Already mapped. Shared slug, same hiring and development bar."
+      "facets": ["best-person-for-the-role", "hire-and-develop-the-best", "team-for-the-outcome"],
+      "reason": "Same hiring and development bar as Amazon Hire and Develop the Best. The two new facets are the hire itself and the team that hire builds. Coaching and rotations stay on hire-and-develop-the-best."
     },
     {
       "id": 3009,
@@ -264,8 +264,8 @@
     {
       "id": 4005,
       "decision": "map",
-      "facets": ["raise-the-bar"],
-      "reason": "Ambitious goals, a strong team, and feedback that grows people. The hiring bar and the standards table are different slices."
+      "facets": ["best-person-for-the-role", "raise-the-bar", "team-for-the-outcome"],
+      "reason": "Ambitious goals and feedback stay on raise-the-bar. Building a high-performing team is the other slice: best-person-for-the-role and team-for-the-outcome. The hire-and-develop table, which is coaching and promotion, stays off."
     },
     {
       "id": 4006,
@@ -294,8 +294,8 @@
     {
       "id": 5004,
       "decision": "map",
-      "facets": ["belonging"],
-      "reason": "People from different backgrounds and circumstances can contribute here. Culture and hiring are different behaviors."
+      "facets": ["belonging", "best-person-for-the-role", "team-for-the-outcome"],
+      "reason": "belonging stays the room, the norms, and whether people can contribute. best-person-for-the-role and team-for-the-outcome are the hiring decision and the mix that helps the work. The hire-and-develop table stays off."
     },
     {
       "id": 5005,
@@ -366,8 +366,8 @@
     {
       "id": 6010,
       "decision": "map",
-      "facets": ["hire-and-develop-the-best"],
-      "reason": "Already mapped. Shared slug."
+      "facets": ["best-person-for-the-role", "hire-and-develop-the-best", "team-for-the-outcome"],
+      "reason": "Same hiring principle as Amazon Hire and Develop the Best. The two new facets cover who joins and the team that produces the outcome. Development stays on hire-and-develop-the-best."
     },
     {
       "id": 6011,
@@ -479,8 +479,8 @@
     {
       "id": 8008,
       "decision": "map",
-      "facets": ["hire-and-develop-the-best"],
-      "reason": "Same behavior as Amazon Hire and Develop the Best. Generic adds the culture bar and that urgency does not lower it. Interview and referral rows already score filling a seat as under. This facet is not the map for Intentional About Culture. No row was dropped."
+      "facets": ["best-person-for-the-role", "hire-and-develop-the-best", "team-for-the-outcome"],
+      "reason": "Same behavior as Amazon Hire and Develop the Best. Generic adds the culture bar and that urgency does not lower it. best-person-for-the-role is the hiring decision. team-for-the-outcome is the team, and that facet is also on Intentional About Culture. hire-and-develop-the-best is still not the map for Intentional About Culture. No row was dropped."
     },
     {
       "id": 8009,
@@ -521,8 +521,8 @@
     {
       "id": 8015,
       "decision": "map",
-      "facets": ["intentional-about-culture"],
-      "reason": "A safe, respectful, supportive room, empathy, enjoyment, and respect for excellent work at every level. No existing facet is that. The hiring table stays off."
+      "facets": ["intentional-about-culture", "team-for-the-outcome"],
+      "reason": "The room, the credit, and the hard meeting stay on intentional-about-culture. team-for-the-outcome is the team a leader builds: not a copy of the manager, and not a target for how the team looks. best-person-for-the-role is the interview decision, so it stays on the hiring principles. hire-and-develop-the-best stays off."
     }
   ]
 }
