@@ -28,7 +28,7 @@ flowchart TD
   principle -->|Amazon and generic only| teaching
   teaching -->|blog| further
   gmap -->|pairs a generic principle with an Amazon principle| principle
-  principle -->|stored on the principle, in kindel/biq| biqQ
+  principle -->|fixed bank stores it on a principle| biqQ
   facet -.->|empty list inherits through the facet| biqQ
 ```
 
@@ -42,15 +42,15 @@ Every principle has a calibration table. `scripts/validate.py` rejects a princip
 
 Teaching prose is in `data/teaching/`. Only Amazon and `generic` have it. Further reading is the `blog` list on a teaching file: a title, a URL, and a note. `data/maps/generic-amazon.json` pairs a generic principle with the Amazon principle it reuses, and lists the sentences that were edited. Intentional About Culture has no Amazon principle in this corpus, so that pair has no target. Its teaching was written for it.
 
-BIQ questions are not in this repo. They live in kindel/biq, stored on a principle. A principle with an empty question list inherits the questions of another principle that shares a facet. `generic` and Toyota store an empty list and inherit. The other sets store their own questions on the principle.
+BIQ keeps a fixed question bank in kindel/biq. A question is stored on a principle, and a principle with an empty list inherits the questions of another principle that shares a facet. A new company does not get a new list of questions. Mapping its principles onto facets is what makes the existing questions show up.
 
-Two facets are about the team. Best person for the role is the hire for one seat: the person who will do that work. Team for the outcome is the mix of backgrounds, thinking styles, and skills, chosen because the business result is better. Those two are not in `data/facets.json` on main. They are in [pull request 75](https://github.com/kindel/principles/pull/75).
+Two facets are about the team. Best person for the role is the hire for one seat: the person who will do that work. Team for the outcome is the mix of backgrounds, thinking styles, and skills, chosen because the business result is better.
 
 ## Contribute without writing code
 
 Open an issue. That is where a change starts. I, or an agent, turn it into a pull request. Say in the issue if you want your name on the pull request.
 
-- Propose a company's principles. Name the company, link the official page where they published them, and, if you want, say how you know them.
+- Propose a company's principles. Name the company. Give the source: a link to the official page where they published them, or the name of a first-party document they have authorized us to publish. Say how you know them if you want.
 - Improve an example or a calibration row. Name or link the principle, quote the current text, suggest the better text, and say why.
 - Report something wrong or out of date. Say what it is and where it is.
 - Suggest a new facet. Describe the behavior under, just right, and over. A blank issue is fine for this.

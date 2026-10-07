@@ -4,7 +4,7 @@ A change to the principles starts as a GitHub issue, unless you are opening the 
 
 Use the issue forms:
 
-- Add a company's principles. Name the company, link the official page where they published them, and, if you want, say how you know them.
+- Add a company's principles. Name the company. Give the source: a link to the official page where they published them, or the name of a first-party document they have authorized us to publish. Say how you know them if you want.
 - Improve an example or a calibration row. Name or link the principle, quote the current text, suggest the better text, and say why.
 - Something is wrong or out of date. Say what it is and where it is.
 
