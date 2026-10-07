@@ -96,9 +96,11 @@ Unless you know better ones.
 
 ## The sets
 
-An app picks a company and shows only that company's set. The first company in
-the manifest is the default. That is the generic set, display name Any Company,
-id `generic`. The other sets are Amazon's Leadership Principles, Arm's 10x
+An app opens on the generic set: universal leadership principles that work
+for any company. A company set is a view you opt into. The first company in
+the manifest is that default. The display name is Universal Leadership
+Principles. The id is `generic`.
+The other sets are Amazon's Leadership Principles, Arm's 10x
 Mindset, the Leadership Principles of Coupang and Delivery Hero, GitLab's
 CREDIT values, Dawn Aerospace's Company Tenets, and Toyota's The Toyota Way.
 
@@ -121,8 +123,9 @@ reason.
 ```
 data/index.json              manifest, generated, version 5
 data/facets.json             cross-company facet map
-data/teaching/<company>/     teaching prose (Amazon only today)
-data/generic/<slug>.json       one generic principle (display name Any Company)
+data/maps/                   principle reuse, one <source>-<target>.json
+data/teaching/<company>/     teaching prose, for each set that has it
+data/generic/<slug>.json       one generic principle (display name Universal Leadership Principles)
 data/amazon/<slug>.json        one Amazon principle
 data/arm/<slug>.json           one Arm factor
 data/coupang/<slug>.json       one Coupang principle
@@ -172,7 +175,7 @@ Two apps, plus the site that hosts them. `.kindel/consumers.txt` is the
 list the cascade pings. Adding a company here is not finished until both
 apps can show it.
 
-- `kindel/porridge` mounts this module and renders the calibration. Amazon teaching prose is `data/teaching/amazon/`.
+- `kindel/porridge` mounts this module and renders the calibration. Teaching prose is `data/teaching/<company>/`. Amazon is the classic 14. Any Company reuses it, with the counterpart map in `data/maps/generic-amazon.json`.
 - `kindel/biq` keeps a fixed question set. Each question maps to facets.
   A new company inherits those questions (and their generated examples)
   through the facet map, not by writing a second bank.

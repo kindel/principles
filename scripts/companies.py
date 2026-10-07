@@ -24,7 +24,7 @@ COMPANY_META = collections.OrderedDict([
     # display name changes. `name` is the only display name.
     ("generic", {
         "block": 8000,
-        "name": "Any Company",
+        "name": "Universal Leadership Principles",
         "set": "Leadership Principles",
         "source": "https://github.com/kindel/principles/issues/71",
         "preamble": (

@@ -1,0 +1,69 @@
+{
+  "id": 8015,
+  "slug": "intentional-about-culture",
+  "why": [
+    "A team can hit every date and still be a place people endure. Safety, respect, and support are how the work stays honest. If people are managing the room instead of the problem, the other principles are theater.",
+    "Empathy is not a lower bar. It is understanding what the person is carrying, then still telling the truth about the work. Enjoyment is not a party budget. It is leaving room for the work to be something people are glad to do. Both are part of the job, the same way a date is.",
+    "Excellent work does not get more real because a senior person did it. The person closest to the work, at any title, gets the same respect for a good result and the same straight feedback for a bad one. A culture that only celebrates rank teaches everyone else to hide.",
+    "This is not a program another team runs. {lp:ownership} includes the room you work in. {lp:earn-trust} is how people learn they can speak. {lp:hire-and-develop-the-best} is who walks in the door. If you treat culture as leftover time, you are under."
+  ],
+  "calibrationIntro": "Look for what the leader does in the week the pressure is high. A calm offsite and a sharp review are not the evidence. The evidence is a hard meeting that stays respectful, credit that finds the person who did the work, and a standard that does not depend on title.",
+  "examples": [
+    {
+      "title": "The hard meeting stays safe",
+      "body": "The result is bad and the room is tense. Under is silence, or a joke at someone's expense. Over is a lecture about culture while the problem sits there. Just right is naming the miss, asking what the person closest to it sees, and ending with a next step people can say out loud."
+    },
+    {
+      "title": "Credit without the title",
+      "body": "A junior person fixed the thing everyone was stuck on. Under is telling the story as your own. Over is a public ceremony that embarrasses them and skips the work. Just right is saying who did it, what was hard about it, and what the team should copy."
+    },
+    {
+      "title": "Enjoyment on a hard week",
+      "body": "The week was long. Under is pretending morale is a private matter. Over is a forced celebration while the broken thing is still broken. Just right is a real pause, thanks that name the work, and a plan that does not require the same hours again next week."
+    }
+  ],
+  "looksLike": {
+    "individual": "You make it easy for someone to disagree with you. You give credit in the room, including to people who do not have your title. You do not confuse being nice with being clear. You treat a mean joke as a problem, even when the work is late.",
+    "manager": "You do not delegate the culture to a program. You intervene when a meeting gets personal. You staff hard problems to the people who can do them, not only to the people with the senior title. You leave room for the team to enjoy the work, and you do not buy that with a lower bar."
+  },
+  "deepen": [
+    "Who in the room would hesitate to tell you that you are wrong, and why?",
+    "When did you last give credit to someone whose title is below yours, in front of the people who matter?",
+    "What did you do the last time a joke landed on one person?",
+    "Where is the work still excellent, and who did it, regardless of title?",
+    "What did you protect this week so people could recover, and what did you refuse to drop?",
+    "How would a new person describe what it is like to disagree here?",
+    "Which part of the culture are you hoping someone else will fix?",
+    "Did empathy change the standard, or only the way you delivered it?"
+  ],
+  "related": [
+    {
+      "id": "ownership",
+      "note": "The environment is part of the outcome you own, not a side task."
+    },
+    {
+      "id": "earn-trust",
+      "note": "People tell you the truth about the room only after they trust you with it."
+    },
+    {
+      "id": "hire-and-develop-the-best",
+      "note": "Who you bring in, and who you keep, is the culture, week after week."
+    },
+    {
+      "id": "have-backbone-disagree-and-commit",
+      "note": "A safe room is one where a real disagreement can happen, and then end."
+    }
+  ],
+  "blog": [
+    {
+      "title": "People Management Is Not a Hobby",
+      "url": "https://blog.kindel.com/2025/04/10/people-management-is-not-a-hobby/",
+      "note": "The environment is the day job, not the leftover after the product work."
+    },
+    {
+      "title": "Amazon's Leadership Principles",
+      "url": "https://www.amazon.jobs/content/en/our-workplace/leadership-principles",
+      "note": "The published list includes Strive to be Earth's Best Employer. That principle is not in this corpus, so this page was not copied from it."
+    }
+  ]
+}

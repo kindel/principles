@@ -201,7 +201,7 @@ def load_records(errs):
             continue
         if not os.path.isdir(path):
             continue
-        if name == "teaching":
+        if name in ("teaching", "maps"):
             continue
         if name not in COMPANY_META:
             errs.append("data/%s: unknown company directory" % name)
@@ -500,12 +500,45 @@ def validate_facets(facets, principle_rows, errs):
                 errs.append("%s: row principle %d is not in this facet's principles"
                             % (where, rpid))
 
-        if rows and n_source == 0:
+        # A source ref points at human rows. A principle with no record rows
+        # (unpublished calibration) has nothing to point at. A facet whose
+        # every known member is in that state may be generated rows only.
+        # A member that has record rows still requires a source ref.
+        known = [pid for pid in listed if pid in principle_rows]
+        members_with_rows = [pid for pid in known if principle_rows[pid]]
+        if rows and n_source == 0 and (not known or members_with_rows):
             errs.append("%s: must list at least one source ref" % where)
 
         check_style(f, where, errs)
 
     return principle_to_facets
+
+
+def validate_calibration_coverage(facets, principle_rows, principle_to_facets, names, errs):
+    """Every principle must have generated calibration rows.
+
+    Porridge's table is those rows. A principle with none is an empty page,
+    not an unpublished draft. Record rows may still be empty when the company
+    marks calibration unpublished. That flag does not excuse a missing table.
+    """
+    if not facets:
+        return
+    generated = set()
+    for f in facets.get("facets", []):
+        fid = f.get("id")
+        rows = f.get("rows") or []
+        if any(isinstance(row, dict) and is_inline_generated(row)
+               and row.get("words") == "generated" and row.get("under")
+               for row in rows):
+            generated.add(fid)
+    for pid in sorted(principle_rows):
+        label = names.get(pid, str(pid))
+        facs = principle_to_facets.get(pid) or []
+        if not facs:
+            errs.append("%s has no calibration table" % label)
+        elif not any(fid in generated for fid in facs):
+            errs.append("%s has no calibration table (on %s, which has no generated rows)"
+                        % (label, ", ".join(facs)))
 
 
 def validate_company(company, items, errs):
@@ -690,6 +723,288 @@ def validate_teaching(by_company, errs, root=None):
                         errs.append("%s: {lp:%s} is missing from related" % (where, tok))
 
 
+def _record_by_id(by_company, company):
+    out = {}
+    for _, rec in by_company.get(company, []):
+        pid = rec.get("id")
+        if isinstance(pid, int) and not isinstance(pid, bool):
+            out[pid] = rec
+    return out
+
+
+def _map_strings(obj, fn):
+    if isinstance(obj, dict):
+        return {k: _map_strings(v, fn) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_map_strings(v, fn) for v in obj]
+    if isinstance(obj, str):
+        return fn(obj)
+    return obj
+
+
+def _collect_strings(obj, out):
+    if isinstance(obj, dict):
+        for v in obj.values():
+            _collect_strings(v, out)
+    elif isinstance(obj, list):
+        for v in obj:
+            _collect_strings(v, out)
+    elif isinstance(obj, str):
+        out.append(obj)
+
+
+def _first_diff(a, b, path):
+    if type(a) != type(b):
+        return "%s: type" % path
+    if isinstance(a, dict):
+        if set(a) != set(b):
+            return "%s: keys" % path
+        for k in a:
+            found = _first_diff(a[k], b[k], "%s.%s" % (path, k))
+            if found:
+                return found
+        return None
+    if isinstance(a, list):
+        if len(a) != len(b):
+            return "%s: length" % path
+        for i, (x, y) in enumerate(zip(a, b)):
+            found = _first_diff(x, y, "%s[%d]" % (path, i))
+            if found:
+                return found
+        return None
+    if a != b:
+        return path
+    return None
+
+
+def _load_json(path, where, errs):
+    try:
+        with open(path, encoding="utf-8") as fh:
+            doc = json.load(fh)
+    except ValueError as e:
+        errs.append("%s: not valid JSON, %s" % (where, e))
+        return None
+    if not isinstance(doc, dict):
+        errs.append("%s: must be an object" % where)
+        return None
+    return doc
+
+
+def validate_derivation_maps(by_company, principle_to_facets, errs, root=None):
+    """A source set may reuse a target set's facets and teaching.
+
+    data/maps/<source>-<target>.json names both companies. Lookups and
+    teaching paths use those ids. Sentence changes are an allowlist on the
+    map. Everything else in the reused teaching must match the target,
+    aside from the source principle's id and slug.
+    """
+    data = root or DATA
+    maps_dir = os.path.join(data, "maps")
+    if not os.path.isdir(maps_dir):
+        errs.append("data/maps is missing")
+        return
+    names = [n for n in sorted(os.listdir(maps_dir)) if not n.startswith(".")]
+    if not names:
+        errs.append("data/maps has no derivation map")
+        return
+    for name in names:
+        where = "data/maps/%s" % name
+        if not name.endswith(".json") or not os.path.isfile(os.path.join(maps_dir, name)):
+            errs.append("%s: only .json maps belong here" % where)
+            continue
+        _validate_one_map(data, name, by_company, principle_to_facets, errs)
+
+
+def _validate_one_map(data, name, by_company, principle_to_facets, errs):
+    where = "data/maps/%s" % name
+    doc = _load_json(os.path.join(data, "maps", name), where, errs)
+    if doc is None:
+        return
+    check_style(doc, where, errs)
+    if doc.get("version") != 1:
+        errs.append("%s: version must be 1" % where)
+    source_id = doc.get("source")
+    target_id = doc.get("target")
+    if not isinstance(source_id, str) or source_id not in by_company:
+        errs.append("%s: source must name a company in this corpus" % where)
+        return
+    if not isinstance(target_id, str) or target_id not in by_company:
+        errs.append("%s: target must name a company in this corpus" % where)
+        return
+    if name != "%s-%s.json" % (source_id, target_id):
+        errs.append("%s: file name must be %s-%s.json" % (where, source_id, target_id))
+    source_recs = _record_by_id(by_company, source_id)
+    target_recs = _record_by_id(by_company, target_id)
+    edits = doc.get("edits")
+    if not isinstance(edits, list) or any(
+            not isinstance(pair, list) or len(pair) != 2
+            or not _nonempty_str(pair[0]) or not _nonempty_str(pair[1])
+            or pair[0] == pair[1] for pair in edits):
+        errs.append("%s: edits must be a list of [before, after] string pairs" % where)
+        edits = []
+    left = doc.get("leftOut")
+    if not isinstance(left, list) or not left:
+        errs.append("%s: leftOut must name target principles with no source counterpart" % where)
+    else:
+        for item in left:
+            if (not isinstance(item, dict) or not _nonempty_str(item.get("name"))
+                    or not _nonempty_str(item.get("reason"))):
+                errs.append("%s: leftOut entries need a name and a reason" % where)
+    pairs = doc.get("pairs")
+    if not isinstance(pairs, list) or not pairs:
+        errs.append("%s: pairs must be a non-empty list" % where)
+        return
+    seen = set()
+    renames = []
+    comparable = []
+    for i, pair in enumerate(pairs):
+        pw = "%s pairs[%d]" % (where, i)
+        if not isinstance(pair, dict):
+            errs.append("%s: must be an object" % pw)
+            continue
+        sid = pair.get("sourceId")
+        if sid not in source_recs:
+            errs.append("%s: sourceId %r is not a %s principle" % (pw, sid, source_id))
+            continue
+        if sid in seen:
+            errs.append("%s: duplicate sourceId %s" % (pw, sid))
+        seen.add(sid)
+        rec = source_recs[sid]
+        if pair.get("sourceSlug") != rec.get("slug"):
+            errs.append("%s: slug %r does not match %s"
+                        % (pw, pair.get("sourceSlug"), rec.get("slug")))
+        if pair.get("sourceName") != rec.get("name"):
+            errs.append("%s: name does not match the record" % pw)
+        target_ids = pair.get("targetIds")
+        if not isinstance(target_ids, list) or any(
+                not isinstance(x, int) or isinstance(x, bool) for x in target_ids):
+            errs.append("%s: targetIds must be a list of ids" % pw)
+            target_ids = []
+        if len(target_ids) != len(set(target_ids)):
+            errs.append("%s: targetIds repeats an id" % pw)
+        for tid in target_ids:
+            if tid not in target_recs:
+                errs.append("%s: target id %s is not in this corpus" % (pw, tid))
+        facets = pair.get("facets")
+        if not isinstance(facets, list) or any(not isinstance(x, str) for x in facets):
+            errs.append("%s: facets must be a list of facet ids" % pw)
+            facets = []
+        actual = sorted(principle_to_facets.get(sid, []))
+        if sorted(facets) != actual:
+            errs.append("%s: facets %s do not match the facet map %s"
+                        % (pw, sorted(facets), actual))
+        counterpart = []
+        for tid in target_ids:
+            if tid in target_recs:
+                counterpart.extend(principle_to_facets.get(tid, []))
+        # A pair with no target has no facet set to copy. Its facets are
+        # authored, and the check above already matches them to the map.
+        if target_ids and sorted(set(counterpart)) != actual:
+            errs.append("%s: facets are not the target's facets" % pw)
+        flags = pair.get("rowFlags")
+        if not isinstance(flags, list):
+            errs.append("%s: rowFlags must be a list" % pw)
+        else:
+            for flag in flags:
+                if (not isinstance(flag, dict) or not _nonempty_str(flag.get("facet"))
+                        or not _nonempty_str(flag.get("row"))
+                        or not _nonempty_str(flag.get("reason"))):
+                    errs.append("%s: a row flag needs facet, row, and reason" % pw)
+        public = pair.get("publicCounterpart")
+        in_corpus = pair.get("inThisCorpus", True)
+        if target_ids and in_corpus is False:
+            errs.append("%s: inThisCorpus is false while targetIds is set" % pw)
+        if not target_ids:
+            if in_corpus is not False or not _nonempty_str(public):
+                errs.append("%s: a pair with no target id needs publicCounterpart "
+                            "and inThisCorpus false" % pw)
+            # No target to copy. A teaching file here is authored from the
+            # principle's own definition. validate_teaching checks that file.
+            # It is not a reused document and it is not diffed against a target.
+            continue
+        if len(target_ids) != 1 or target_ids[0] not in target_recs:
+            errs.append("%s: teaching reuse needs exactly one target principle" % pw)
+            continue
+        target_rec = target_recs[target_ids[0]]
+        if rec.get("slug") != target_rec.get("slug"):
+            renames.append((target_rec["slug"], rec["slug"]))
+        comparable.append((pw, rec, target_rec))
+    missing = sorted(set(source_recs) - seen)
+    for sid in missing:
+        errs.append("%s: %s principle %s has no pair" % (where, source_id, sid))
+    _compare_reused_teaching(
+        data, source_id, target_id, comparable, renames, edits, where, errs)
+
+
+def _compare_reused_teaching(data, source_id, target_id, comparable, renames, edits, where, errs):
+    """Copied teaching matches the target after the allowlist and slug renames."""
+    renames = sorted(set(renames), key=lambda item: len(item[0]), reverse=True)
+
+    def apply_text(text):
+        for old, new in renames:
+            text = text.replace(old, new)
+        for before, after in edits:
+            text = text.replace(before, after)
+        return text
+
+    target_blobs = []
+    source_blobs = []
+
+    def take(company, slug):
+        path = os.path.join(data, "teaching", company, slug + ".json")
+        label = "data/teaching/%s/%s.json" % (company, slug)
+        if not os.path.isfile(path):
+            return None, label
+        return _load_json(path, label, errs), label
+
+    for pw, rec, target_rec in comparable:
+        src, src_label = take(source_id, rec["slug"])
+        dst, dst_label = take(target_id, target_rec["slug"])
+        if dst is None:
+            if src is not None:
+                errs.append("%s: teaching exists without a target teaching file" % pw)
+            continue
+        if src is None:
+            errs.append("%s: missing reused teaching %s" % (pw, rec["slug"]))
+            continue
+        _collect_strings(dst, target_blobs)
+        _collect_strings(src, source_blobs)
+        got = _map_strings(dst, apply_text)
+        got["id"] = rec["id"]
+        diff = _first_diff(got, src, rec["slug"])
+        if diff:
+            errs.append("%s: reused teaching differs from %s at %s"
+                        % (pw, target_rec["slug"], diff))
+
+    src_index_path = os.path.join(data, "teaching", source_id, "index.json")
+    dst_index_path = os.path.join(data, "teaching", target_id, "index.json")
+    src_index = _load_json(src_index_path, "data/teaching/%s/index.json" % source_id, errs)
+    dst_index = _load_json(dst_index_path, "data/teaching/%s/index.json" % target_id, errs)
+    if isinstance(src_index, dict) and isinstance(dst_index, dict):
+        src_index = dict(src_index)
+        dst_index = dict(dst_index)
+        src_index.pop("principles", None)
+        dst_index.pop("principles", None)
+        _collect_strings(dst_index, target_blobs)
+        _collect_strings(src_index, source_blobs)
+        got = _map_strings(dst_index, apply_text)
+        diff = _first_diff(got, src_index, "index")
+        if diff:
+            errs.append("%s: set teaching index differs from the target at %s" % (where, diff))
+    elif os.path.isfile(dst_index_path) and not os.path.isfile(src_index_path):
+        errs.append("%s: missing reused set teaching index" % where)
+
+    target_text = "\n".join(target_blobs)
+    source_text = "\n".join(source_blobs)
+    for before, after in edits:
+        if before not in target_text:
+            errs.append("%s: allowlisted edit is not in the target teaching: %r"
+                        % (where, before[:80]))
+        if after not in source_text:
+            errs.append("%s: allowlisted edit is not in the source teaching: %r"
+                        % (where, after[:80]))
+
+
 def main():
     errs = []
     by_company = load_records(errs)
@@ -723,6 +1038,16 @@ def main():
     # Validate facets.json
     facets = load_facets(errs)
     principle_to_facets = validate_facets(facets, principle_rows, errs)
+    names = {}
+    for company, items in by_company.items():
+        for _, rec in items:
+            pid = rec.get("id")
+            if isinstance(pid, int) and not isinstance(pid, bool):
+                names[pid] = "%s/%s (%d %s)" % (
+                    company, rec.get("slug"), pid, rec.get("name"))
+    validate_calibration_coverage(
+        facets, principle_rows, principle_to_facets, names, errs)
+    validate_derivation_maps(by_company, principle_to_facets, errs)
 
     index_path = os.path.join(DATA, "index.json")
     if not os.path.exists(index_path):

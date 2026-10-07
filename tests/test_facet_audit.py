@@ -266,12 +266,14 @@ class FacetAuditCorpusTest(unittest.TestCase):
         self.assertEqual([], named)
 
     def test_reverted_toyota_maps_are_gone(self):
+        # Respect and Teamwork were reverted off earn-trust and
+        # hire-and-develop-the-best. They now sit on their own facets.
         audit, _, membership, _ = load_corpus_inputs()
         reverted = [e["id"] for e in audit["principles"]
                     if e.get("toyota") == "revert"]
-        self.assertEqual([7004, 7005], reverted)
-        for pid in reverted:
-            self.assertNotIn(pid, membership)
+        self.assertEqual([], reverted)
+        self.assertNotIn("earn-trust", membership.get(7004, set()))
+        self.assertNotIn("hire-and-develop-the-best", membership.get(7005, set()))
 
     def test_kept_toyota_maps_are_still_on_the_facet(self):
         audit, _, membership, _ = load_corpus_inputs()
@@ -285,6 +287,8 @@ class FacetAuditCorpusTest(unittest.TestCase):
                 7001: {"think-big"},
                 7002: {"better-every-day"},
                 7003: {"dive-deep"},
+                7004: {"mutual-respect"},
+                7005: {"grow-the-team"},
             },
             kept,
         )

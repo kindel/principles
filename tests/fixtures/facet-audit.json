@@ -1,7 +1,7 @@
 {
   "version": 1,
   "issue": 45,
-  "bar": "High confidence only. Same behavior, including when the facet is the slice. A stretch is a skip. A new facet is named here and not created in this change.",
+  "bar": "High confidence only. Same behavior, including when the facet is the slice. A stretch is not a map onto the wrong table. Every principle has generated calibration rows.",
   "principles": [
     {
       "id": 1001,
@@ -23,8 +23,9 @@
     },
     {
       "id": 1004,
-      "decision": "skip",
-      "reason": "Judgment and disconfirming your own beliefs. No second company shares it, and no existing facet is that behavior."
+      "decision": "map",
+      "facets": ["are-right-a-lot"],
+      "reason": "Judgment, diverse perspectives, and disconfirming your own beliefs. are-right-a-lot is that behavior, shared with the principle of the same name."
     },
     {
       "id": 1005,
@@ -88,33 +89,39 @@
     },
     {
       "id": 2001,
-      "decision": "skip",
-      "reason": "Mission passion is not customer-obsession and not think-big. Unique here."
+      "decision": "map",
+      "facets": ["care-about-the-mission"],
+      "reason": "Internalize the strategy and care about the technology, the product, the customers, and the impact. No existing facet is that whole behavior."
     },
     {
       "id": 2002,
-      "decision": "skip",
-      "reason": "Company over function is adjacent to ownership and to Dawn silos, not the same as either."
+      "decision": "map",
+      "facets": ["beyond-your-function"],
+      "reason": "Connections beyond your own function, and collaboration is not consensus. The ownership table would smuggle in a different behavior."
     },
     {
       "id": 2003,
-      "decision": "skip",
-      "reason": "Mix of a hiring bar, candid feedback, and inclusive teams. Not the whole hire-and-develop-the-best table."
+      "decision": "map",
+      "facets": ["build-extraordinary-teams"],
+      "reason": "A high bar, candid feedback, and a connected team greater than its parts. The hiring table is a different behavior."
     },
     {
       "id": 2004,
-      "decision": "skip",
-      "reason": "Challenge and decide quickly is a stretch for disagree-and-commit, which requires the commit after the call."
+      "decision": "map",
+      "facets": ["challenge-then-decide"],
+      "reason": "Challenge respectfully, listen, and drive the decision quickly. Disagree-and-commit adds a commit step this definition does not make the whole behavior."
     },
     {
       "id": 2005,
-      "decision": "skip",
-      "reason": "Cutting waste and staying focused is not invent-and-simplify and not frugality."
+      "decision": "map",
+      "facets": ["cut-the-waste"],
+      "reason": "Remove inefficiency, stay on what matters, and respect a constraint that cannot move. Simplify-only and frugality each drop part of that."
     },
     {
       "id": 2006,
-      "decision": "skip",
-      "reason": "Mix of ambition, winning, and delivery versus perfection. Not think-big and not better-every-day."
+      "decision": "map",
+      "facets": ["push-the-boundary"],
+      "reason": "Ask how it can be better and how you will win, and know when to stop perfecting. The daily-improvement table is a smaller slice."
     },
     {
       "id": 2007,
@@ -130,13 +137,15 @@
     },
     {
       "id": 2009,
-      "decision": "skip",
-      "reason": "Turning vague ideas into a plan is not are-right-a-lot and not bias-for-action."
+      "decision": "map",
+      "facets": ["make-it-concrete"],
+      "reason": "Turn vague ideas into an execution plan that creates focus. Judgment and speed are adjacent, not this behavior."
     },
     {
       "id": 2010,
-      "decision": "skip",
-      "reason": "Endurance and energy are not a behavior any existing facet names."
+      "decision": "map",
+      "facets": ["sustain-the-pace"],
+      "reason": "Manage your own energy so intensity lasts. No existing facet is endurance."
     },
     {
       "id": 3001,
@@ -146,13 +155,15 @@
     },
     {
       "id": 3002,
-      "decision": "skip",
-      "reason": "Ruthless focus and killing work is unique here."
+      "decision": "map",
+      "facets": ["ruthless-focus"],
+      "reason": "Give up work you want so the work you must win can move. That is a cut, not a simplification."
     },
     {
       "id": 3003,
-      "decision": "skip",
-      "reason": "Company-wide and never-not-my-job is a slice of ownership, not the whole acts-like-an-owner table."
+      "decision": "map",
+      "facets": ["whole-company"],
+      "reason": "The whole company, upstream and downstream, and never not-my-job. The ownership table is wider than this slice."
     },
     {
       "id": 3004,
@@ -162,13 +173,15 @@
     },
     {
       "id": 3005,
-      "decision": "skip",
-      "reason": "Mechanisms and prevention are unique here."
+      "decision": "map",
+      "facets": ["prevent-the-next-one"],
+      "reason": "Fix the defect and install the mechanism that stops the next one. No existing facet is that pair."
     },
     {
       "id": 3006,
-      "decision": "skip",
-      "reason": "Simplify-only is a slice of invent-and-simplify, not the invention-and-simplify table."
+      "decision": "map",
+      "facets": ["simplify-what-you-touch"],
+      "reason": "Complexity is the enemy, and you simplify what you touch. Invent-and-simplify adds invention this definition does not."
     },
     {
       "id": 3007,
@@ -190,8 +203,9 @@
     },
     {
       "id": 3010,
-      "decision": "skip",
-      "reason": "Influence without authority is unique here."
+      "decision": "map",
+      "facets": ["influence-without-authority"],
+      "reason": "Clear ideas, evidence, and knowledge ahead of position. No existing facet is influence without the title."
     },
     {
       "id": 3011,
@@ -237,53 +251,63 @@
     },
     {
       "id": 4003,
-      "decision": "skip",
-      "reason": "Customer value plus adapting fast is a mix, not the whole bias-for-action table."
+      "decision": "map",
+      "facets": ["adapt-for-the-customer"],
+      "reason": "What the customer needs, plus changing course quickly. The customer table does not carry the adapting, and the speed table does not carry the customer."
     },
     {
       "id": 4004,
-      "decision": "skip",
-      "reason": "Mood and celebration are not earn-trust."
+      "decision": "map",
+      "facets": ["good-vibes"],
+      "reason": "Support, celebration, and staying decent when the week is bad. Candor is a different behavior."
     },
     {
       "id": 4005,
-      "decision": "skip",
-      "reason": "Mix of ambitious goals, team composition, and feedback. Not hire-and-develop-the-best and not highest-standards."
+      "decision": "map",
+      "facets": ["raise-the-bar"],
+      "reason": "Ambitious goals, a strong team, and feedback that grows people. The hiring bar and the standards table are different slices."
     },
     {
       "id": 4006,
-      "decision": "skip",
-      "reason": "Humility after a win is a stretch for earn-trust, which is candor and self-criticism."
+      "decision": "map",
+      "facets": ["stay-humble"],
+      "reason": "Open, grounded, and grateful after a win, still looking to improve. The trust table is candor and promises, not this."
     },
     {
       "id": 5001,
-      "decision": "skip",
-      "reason": "Helping others and short toes are not ownership and not a current facet."
+      "decision": "map",
+      "facets": ["help-anyway"],
+      "reason": "Helping someone is a priority even when it is not your goal. Ownership does not say that."
     },
     {
       "id": 5002,
-      "decision": "skip",
-      "reason": "Results for customers mixes outcomes, hierarchy, and saying no. Adjacent to customer-obsession, not the same table."
+      "decision": "map",
+      "facets": ["customer-obsession"],
+      "reason": "The generated rows are customers getting their work done, including a no that protects other customers. That is this definition. No row contradicted it."
     },
     {
       "id": 5003,
-      "decision": "skip",
-      "reason": "Boring solutions and global efficiency are a mix of frugality and simplify, not either whole facet."
+      "decision": "map",
+      "facets": ["global-efficiency"],
+      "reason": "Do not waste materials, time, or energy, and prefer the broader group over a local win. Frugality and simplify each miss half of that."
     },
     {
       "id": 5004,
-      "decision": "skip",
-      "reason": "Diversity, inclusion, and belonging is unique here."
+      "decision": "map",
+      "facets": ["belonging"],
+      "reason": "People from different backgrounds and circumstances can contribute here. Culture and hiring are different behaviors."
     },
     {
       "id": 5005,
-      "decision": "skip",
-      "reason": "Ship the smallest change is not bias-for-action."
+      "decision": "map",
+      "facets": ["smallest-useful-step"],
+      "reason": "The smallest slice that teaches you something, without breaking the experience people already have. Speed alone is a different behavior."
     },
     {
       "id": 5006,
-      "decision": "skip",
-      "reason": "Public by default is unique here."
+      "decision": "map",
+      "facets": ["make-it-public"],
+      "reason": "Default to public so other people can contribute. No existing facet is that."
     },
     {
       "id": 6001,
@@ -299,8 +323,9 @@
     },
     {
       "id": 6003,
-      "decision": "skip",
-      "reason": "Breaking silos is adjacent to ownership and to Arm One Arm, not the same as either."
+      "decision": "map",
+      "facets": ["break-down-silos"],
+      "reason": "Share across the silo, ask when you do not know, and drop us-and-them. The ownership table is a different slice."
     },
     {
       "id": 6004,
@@ -310,8 +335,9 @@
     },
     {
       "id": 6005,
-      "decision": "skip",
-      "reason": "Dates and no surprises is unique here."
+      "decision": "map",
+      "facets": ["no-surprises"],
+      "reason": "A goal has a date, and a slip is said when you know it. One trust row is a date slip. The rest of that table is not this behavior."
     },
     {
       "id": 6006,
@@ -351,23 +377,27 @@
     },
     {
       "id": 6012,
-      "decision": "skip",
-      "reason": "Time as the constrained resource is unique here."
+      "decision": "map",
+      "facets": ["respect-time"],
+      "reason": "Time is the scarce resource, including spending money to save it and recovering after overtime. Frugality contradicts the spending."
     },
     {
       "id": 6013,
-      "decision": "skip",
-      "reason": "Lists frugality as an equivalent, but the behavior is the lean versus fit-for-purpose tension, including inverted polarity. A stretch."
+      "decision": "map",
+      "facets": ["scrappy-not-crappy"],
+      "reason": "Lean, and still fit for purpose. Frugality does not carry the fit-for-purpose half."
     },
     {
       "id": 6014,
-      "decision": "skip",
-      "reason": "Product not science is not customer-obsession."
+      "decision": "map",
+      "facets": ["product-not-the-science"],
+      "reason": "The product and the customer are the point. The method is a tool. Customer obsession does not say that about the method."
     },
     {
       "id": 6015,
-      "decision": "skip",
-      "reason": "Rigor that matches the environment is unique here."
+      "decision": "map",
+      "facets": ["match-the-rigor"],
+      "reason": "Early work and certified work are different worlds, and you do not mix the habits. No existing facet is that switch."
     },
     {
       "id": 7001,
@@ -392,90 +422,107 @@
     },
     {
       "id": 7004,
-      "decision": "skip",
-      "toyota": "revert",
-      "reason": "Respect is understand-each-other and mutual trust, not candor and vocal self-criticism. Mapping it puts the whole earn-trust table on Respect. Revert."
+      "decision": "map",
+      "facets": ["mutual-respect"],
+      "toyota": "keep",
+      "reason": "Respect is understand each other, take responsibility, and build mutual trust. The trust table is candor, so it stays off. mutual-respect is the table."
     },
     {
       "id": 7005,
-      "decision": "skip",
-      "toyota": "revert",
-      "reason": "Teamwork is grow-the-person plus team-versus-star. Mapping it puts hiring and the promotion bar on Teamwork. Revert."
+      "decision": "map",
+      "facets": ["grow-the-team"],
+      "toyota": "keep",
+      "reason": "Teamwork is personal growth, shared chances, and the person plus the team. The hiring table is the hiring bar, so it stays off. grow-the-team is the table."
     },
     {
       "id": 8001,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["customer-obsession"],
+      "reason": "Same behavior as Amazon Customer Obsession. Generic counts anyone served, inside or outside. The generated rows already include an internal team as the customer. No row contradicted that, so none were dropped."
     },
     {
       "id": 8002,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["earn-trust"],
+      "reason": "Same behavior as Amazon Earn Trust. Generic adds asking for help before a surprise, and that results do not excuse a breach of trust. Generated rows score hiding a slip and taking credit as under. None treat results as an excuse, so none were dropped."
     },
     {
       "id": 8003,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["acts-like-an-owner"],
+      "reason": "Same behavior as Amazon Ownership. Generic adds help for a struggling colleague and company success ahead of empire building. The two-teams over cell is taking over so you can be the owner. No row contradicted that, so none were dropped."
     },
     {
       "id": 8004,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["are-right-a-lot"],
+      "reason": "Same judgment, diverse perspectives, and disconfirming your beliefs as the principle of the same name. The table is shared. Teaching stays the reused text."
     },
     {
       "id": 8005,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["learn-and-be-curious"],
+      "reason": "Same behavior as Amazon Learn and Be Curious. Generated rows fit the generic wording. None were dropped."
     },
     {
       "id": 8006,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["invent-and-simplify"],
+      "reason": "Same behavior as Amazon Invent and Simplify. Generated rows fit not-invented-here, simpler paths, and ideas that are misunderstood for a time. None were dropped."
     },
     {
       "id": 8007,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["better-every-day", "highest-standards"],
+      "reason": "Same two slices as Amazon Insist on the Highest Standards. Generic says not to confuse excellence with unreasonable demands. The pushback row scores refusing every cut and working late as over, which fits. No row was dropped."
     },
     {
       "id": 8008,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["hire-and-develop-the-best"],
+      "reason": "Same behavior as Amazon Hire and Develop the Best. Generic adds the culture bar and that urgency does not lower it. Interview and referral rows already score filling a seat as under. This facet is not the map for Intentional About Culture. No row was dropped."
     },
     {
       "id": 8009,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["think-big"],
+      "reason": "Same behavior as Amazon Think Big. Generic also credits colleagues whose strength is focused delivery. Generated under cells score missing the larger outcome, and just-right cells still require this week's delivery. No row treats that delivery as the failure by itself, so none were dropped."
     },
     {
       "id": 8010,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["bias-for-action"],
+      "reason": "Same behavior as Amazon Bias for Action. Generic states the reversible and hard-to-undo split in the definition. Every generated row already turns on that split. None were dropped."
     },
     {
       "id": 8011,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["frugality"],
+      "reason": "Same behavior as Amazon Frugality. Generic says headcount growth is not an achievement. The slipping-project under cell is asking for people first, and the over cell is refusing needed help. That still fits. No row was dropped."
     },
     {
       "id": 8012,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["dive-deep"],
+      "reason": "Same behavior as Amazon Dive Deep. Generated rows fit staying in the details and checking a metric against the work. None were dropped."
     },
     {
       "id": 8013,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["have-backbone-disagree-and-commit"],
+      "reason": "Same behavior as Amazon Have Backbone; Disagree and Commit. Generic adds curiosity after the outcome, not I told you so. Rows score relitigating after the decision as over and committing to the chosen path as just right. No row was dropped."
     },
     {
       "id": 8014,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["deliver-results"],
+      "reason": "Same behavior as Amazon Deliver Results. Generic says hours, effort, and tenure are not the result. Rows score usable delivery and an early risk call, not hours logged. None were dropped."
     },
     {
       "id": 8015,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["intentional-about-culture"],
+      "reason": "A safe, respectful, supportive room, empathy, enjoyment, and respect for excellent work at every level. No existing facet is that. The hiring table stays off."
     }
   ]
 }

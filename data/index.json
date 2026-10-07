@@ -4,7 +4,7 @@
   "companies": [
     {
       "id": "generic",
-      "name": "Any Company",
+      "name": "Universal Leadership Principles",
       "set": "Leadership Principles",
       "source": "https://github.com/kindel/principles/issues/71",
       "preamble": "**Everyone is a leader.** These principles apply to every person, not just people managers. They guide judgment rather than replace it. They remain open to revision: *unless you know better.*",
@@ -14,105 +14,151 @@
           "slug": "customer-obsession",
           "name": "Customer Obsession",
           "sort": 1,
-          "file": "data/generic/customer-obsession.json"
+          "file": "data/generic/customer-obsession.json",
+          "facets": [
+            "customer-obsession"
+          ]
         },
         {
           "id": 8002,
           "slug": "earn-trust",
           "name": "Earn Trust",
           "sort": 2,
-          "file": "data/generic/earn-trust.json"
+          "file": "data/generic/earn-trust.json",
+          "facets": [
+            "earn-trust"
+          ]
         },
         {
           "id": 8003,
           "slug": "ownership",
           "name": "Ownership",
           "sort": 3,
-          "file": "data/generic/ownership.json"
+          "file": "data/generic/ownership.json",
+          "facets": [
+            "acts-like-an-owner"
+          ]
         },
         {
           "id": 8004,
           "slug": "are-right-a-lot",
           "name": "Are Right, A Lot",
           "sort": 4,
-          "file": "data/generic/are-right-a-lot.json"
+          "file": "data/generic/are-right-a-lot.json",
+          "facets": [
+            "are-right-a-lot"
+          ]
         },
         {
           "id": 8005,
           "slug": "learn-and-be-curious",
           "name": "Learn and Be Curious",
           "sort": 5,
-          "file": "data/generic/learn-and-be-curious.json"
+          "file": "data/generic/learn-and-be-curious.json",
+          "facets": [
+            "learn-and-be-curious"
+          ]
         },
         {
           "id": 8006,
           "slug": "invent-and-simplify",
           "name": "Invent and Simplify",
           "sort": 6,
-          "file": "data/generic/invent-and-simplify.json"
+          "file": "data/generic/invent-and-simplify.json",
+          "facets": [
+            "invent-and-simplify"
+          ]
         },
         {
           "id": 8007,
           "slug": "insist-on-high-standards",
           "name": "Insist on High Standards",
           "sort": 7,
-          "file": "data/generic/insist-on-high-standards.json"
+          "file": "data/generic/insist-on-high-standards.json",
+          "facets": [
+            "better-every-day",
+            "highest-standards"
+          ]
         },
         {
           "id": 8008,
           "slug": "hire-and-develop-the-best",
           "name": "Hire and Develop the Best",
           "sort": 8,
-          "file": "data/generic/hire-and-develop-the-best.json"
+          "file": "data/generic/hire-and-develop-the-best.json",
+          "facets": [
+            "hire-and-develop-the-best"
+          ]
         },
         {
           "id": 8009,
           "slug": "think-big",
           "name": "Think Big",
           "sort": 9,
-          "file": "data/generic/think-big.json"
+          "file": "data/generic/think-big.json",
+          "facets": [
+            "think-big"
+          ]
         },
         {
           "id": 8010,
           "slug": "bias-for-action",
           "name": "Bias for Action",
           "sort": 10,
-          "file": "data/generic/bias-for-action.json"
+          "file": "data/generic/bias-for-action.json",
+          "facets": [
+            "bias-for-action"
+          ]
         },
         {
           "id": 8011,
           "slug": "frugality",
           "name": "Frugality",
           "sort": 11,
-          "file": "data/generic/frugality.json"
+          "file": "data/generic/frugality.json",
+          "facets": [
+            "frugality"
+          ]
         },
         {
           "id": 8012,
           "slug": "dive-deep",
           "name": "Dive Deep",
           "sort": 12,
-          "file": "data/generic/dive-deep.json"
+          "file": "data/generic/dive-deep.json",
+          "facets": [
+            "dive-deep"
+          ]
         },
         {
           "id": 8013,
           "slug": "have-backbone-disagree-and-commit",
           "name": "Have Backbone; Disagree and Commit",
           "sort": 13,
-          "file": "data/generic/have-backbone-disagree-and-commit.json"
+          "file": "data/generic/have-backbone-disagree-and-commit.json",
+          "facets": [
+            "have-backbone-disagree-and-commit"
+          ]
         },
         {
           "id": 8014,
           "slug": "deliver-results",
           "name": "Deliver Results",
           "sort": 14,
-          "file": "data/generic/deliver-results.json"
+          "file": "data/generic/deliver-results.json",
+          "facets": [
+            "deliver-results"
+          ]
         },
         {
           "id": 8015,
           "slug": "intentional-about-culture",
           "name": "Intentional About Culture",
           "sort": 15,
-          "file": "data/generic/intentional-about-culture.json"
+          "file": "data/generic/intentional-about-culture.json",
+          "facets": [
+            "intentional-about-culture"
+          ]
         }
       ]
     },
@@ -157,7 +203,10 @@
           "slug": "are-right-a-lot",
           "name": "Are Right, A Lot",
           "sort": 4,
-          "file": "data/amazon/are-right-a-lot.json"
+          "file": "data/amazon/are-right-a-lot.json",
+          "facets": [
+            "are-right-a-lot"
+          ]
         },
         {
           "id": 1005,
@@ -273,42 +322,60 @@
           "slug": "passion-for-the-mission",
           "name": "Passion for the mission",
           "sort": 1,
-          "file": "data/arm/passion-for-the-mission.json"
+          "file": "data/arm/passion-for-the-mission.json",
+          "facets": [
+            "care-about-the-mission"
+          ]
         },
         {
           "id": 2002,
           "slug": "deliver-as-one-arm",
           "name": "Deliver as 'One Arm'",
           "sort": 2,
-          "file": "data/arm/deliver-as-one-arm.json"
+          "file": "data/arm/deliver-as-one-arm.json",
+          "facets": [
+            "beyond-your-function"
+          ]
         },
         {
           "id": 2003,
           "slug": "build-extraordinary-teams",
           "name": "Build extraordinary teams",
           "sort": 3,
-          "file": "data/arm/build-extraordinary-teams.json"
+          "file": "data/arm/build-extraordinary-teams.json",
+          "facets": [
+            "build-extraordinary-teams"
+          ]
         },
         {
           "id": 2004,
           "slug": "challenge-skillfully",
           "name": "Challenge skillfully",
           "sort": 4,
-          "file": "data/arm/challenge-skillfully.json"
+          "file": "data/arm/challenge-skillfully.json",
+          "facets": [
+            "challenge-then-decide"
+          ]
         },
         {
           "id": 2005,
           "slug": "root-out-inefficiencies",
           "name": "Root out inefficiencies",
           "sort": 5,
-          "file": "data/arm/root-out-inefficiencies.json"
+          "file": "data/arm/root-out-inefficiencies.json",
+          "facets": [
+            "cut-the-waste"
+          ]
         },
         {
           "id": 2006,
           "slug": "relentlessly-push-boundaries",
           "name": "Relentlessly push boundaries",
           "sort": 6,
-          "file": "data/arm/relentlessly-push-boundaries.json"
+          "file": "data/arm/relentlessly-push-boundaries.json",
+          "facets": [
+            "push-the-boundary"
+          ]
         },
         {
           "id": 2007,
@@ -335,14 +402,20 @@
           "slug": "be-decisive-in-ambiguity-and-change",
           "name": "Be decisive in ambiguity and change",
           "sort": 9,
-          "file": "data/arm/be-decisive-in-ambiguity-and-change.json"
+          "file": "data/arm/be-decisive-in-ambiguity-and-change.json",
+          "facets": [
+            "make-it-concrete"
+          ]
         },
         {
           "id": 2010,
           "slug": "optimize-for-endurance-and-resilience",
           "name": "Optimize for endurance and resilience",
           "sort": 10,
-          "file": "data/arm/optimize-for-endurance-and-resilience.json"
+          "file": "data/arm/optimize-for-endurance-and-resilience.json",
+          "facets": [
+            "sustain-the-pace"
+          ]
         }
       ]
     },
@@ -367,14 +440,20 @@
           "slug": "ruthless-prioritization",
           "name": "Ruthless Prioritization",
           "sort": 2,
-          "file": "data/coupang/ruthless-prioritization.json"
+          "file": "data/coupang/ruthless-prioritization.json",
+          "facets": [
+            "ruthless-focus"
+          ]
         },
         {
           "id": 3003,
           "slug": "company-wide-perspective",
           "name": "Company-wide Perspective",
           "sort": 3,
-          "file": "data/coupang/company-wide-perspective.json"
+          "file": "data/coupang/company-wide-perspective.json",
+          "facets": [
+            "whole-company"
+          ]
         },
         {
           "id": 3004,
@@ -391,14 +470,20 @@
           "slug": "think-systematically",
           "name": "Think Systematically",
           "sort": 5,
-          "file": "data/coupang/think-systematically.json"
+          "file": "data/coupang/think-systematically.json",
+          "facets": [
+            "prevent-the-next-one"
+          ]
         },
         {
           "id": 3006,
           "slug": "simplify",
           "name": "Simplify",
           "sort": 6,
-          "file": "data/coupang/simplify.json"
+          "file": "data/coupang/simplify.json",
+          "facets": [
+            "simplify-what-you-touch"
+          ]
         },
         {
           "id": 3007,
@@ -435,7 +520,10 @@
           "slug": "influence-without-authority",
           "name": "Influence without Authority",
           "sort": 10,
-          "file": "data/coupang/influence-without-authority.json"
+          "file": "data/coupang/influence-without-authority.json",
+          "facets": [
+            "influence-without-authority"
+          ]
         },
         {
           "id": 3011,
@@ -520,28 +608,40 @@
           "slug": "deliver-value-fast",
           "name": "Deliver Value Fast",
           "sort": 3,
-          "file": "data/delivery-hero/deliver-value-fast.json"
+          "file": "data/delivery-hero/deliver-value-fast.json",
+          "facets": [
+            "adapt-for-the-customer"
+          ]
         },
         {
           "id": 4004,
           "slug": "bring-good-vibes",
           "name": "Bring Good Vibes",
           "sort": 4,
-          "file": "data/delivery-hero/bring-good-vibes.json"
+          "file": "data/delivery-hero/bring-good-vibes.json",
+          "facets": [
+            "good-vibes"
+          ]
         },
         {
           "id": 4005,
           "slug": "raise-the-bar",
           "name": "Raise the Bar",
           "sort": 5,
-          "file": "data/delivery-hero/raise-the-bar.json"
+          "file": "data/delivery-hero/raise-the-bar.json",
+          "facets": [
+            "raise-the-bar"
+          ]
         },
         {
           "id": 4006,
           "slug": "stay-humble",
           "name": "Stay Humble",
           "sort": 6,
-          "file": "data/delivery-hero/stay-humble.json"
+          "file": "data/delivery-hero/stay-humble.json",
+          "facets": [
+            "stay-humble"
+          ]
         }
       ]
     },
@@ -556,42 +656,60 @@
           "slug": "collaboration",
           "name": "Collaboration",
           "sort": 1,
-          "file": "data/gitlab/collaboration.json"
+          "file": "data/gitlab/collaboration.json",
+          "facets": [
+            "help-anyway"
+          ]
         },
         {
           "id": 5002,
           "slug": "results-for-customers",
           "name": "Results for Customers",
           "sort": 2,
-          "file": "data/gitlab/results-for-customers.json"
+          "file": "data/gitlab/results-for-customers.json",
+          "facets": [
+            "customer-obsession"
+          ]
         },
         {
           "id": 5003,
           "slug": "efficiency",
           "name": "Efficiency",
           "sort": 3,
-          "file": "data/gitlab/efficiency.json"
+          "file": "data/gitlab/efficiency.json",
+          "facets": [
+            "global-efficiency"
+          ]
         },
         {
           "id": 5004,
           "slug": "diversity-inclusion-and-belonging",
           "name": "Diversity, Inclusion & Belonging",
           "sort": 4,
-          "file": "data/gitlab/diversity-inclusion-and-belonging.json"
+          "file": "data/gitlab/diversity-inclusion-and-belonging.json",
+          "facets": [
+            "belonging"
+          ]
         },
         {
           "id": 5005,
           "slug": "iteration",
           "name": "Iteration",
           "sort": 5,
-          "file": "data/gitlab/iteration.json"
+          "file": "data/gitlab/iteration.json",
+          "facets": [
+            "smallest-useful-step"
+          ]
         },
         {
           "id": 5006,
           "slug": "transparency",
           "name": "Transparency",
           "sort": 6,
-          "file": "data/gitlab/transparency.json"
+          "file": "data/gitlab/transparency.json",
+          "facets": [
+            "make-it-public"
+          ]
         }
       ]
     },
@@ -626,7 +744,10 @@
           "slug": "break-down-silos",
           "name": "Break down silos",
           "sort": 3,
-          "file": "data/dawn/break-down-silos.json"
+          "file": "data/dawn/break-down-silos.json",
+          "facets": [
+            "break-down-silos"
+          ]
         },
         {
           "id": 6004,
@@ -643,7 +764,10 @@
           "slug": "no-surprises",
           "name": "No surprises",
           "sort": 5,
-          "file": "data/dawn/no-surprises.json"
+          "file": "data/dawn/no-surprises.json",
+          "facets": [
+            "no-surprises"
+          ]
         },
         {
           "id": 6006,
@@ -710,28 +834,40 @@
           "slug": "respect-time",
           "name": "Respect time",
           "sort": 12,
-          "file": "data/dawn/respect-time.json"
+          "file": "data/dawn/respect-time.json",
+          "facets": [
+            "respect-time"
+          ]
         },
         {
           "id": 6013,
           "slug": "scrappy-not-crappy",
           "name": "Scrappy, not crappy",
           "sort": 13,
-          "file": "data/dawn/scrappy-not-crappy.json"
+          "file": "data/dawn/scrappy-not-crappy.json",
+          "facets": [
+            "scrappy-not-crappy"
+          ]
         },
         {
           "id": 6014,
           "slug": "rocket-engineering-not-rocket-science",
           "name": "Rocket engineering, not rocket science",
           "sort": 14,
-          "file": "data/dawn/rocket-engineering-not-rocket-science.json"
+          "file": "data/dawn/rocket-engineering-not-rocket-science.json",
+          "facets": [
+            "product-not-the-science"
+          ]
         },
         {
           "id": 6015,
           "slug": "race-on-the-racetrack-walk-on-ice",
           "name": "Race on the racetrack, walk on ice",
           "sort": 15,
-          "file": "data/dawn/race-on-the-racetrack-walk-on-ice.json"
+          "file": "data/dawn/race-on-the-racetrack-walk-on-ice.json",
+          "facets": [
+            "match-the-rigor"
+          ]
         }
       ]
     },
@@ -776,14 +912,20 @@
           "slug": "respect",
           "name": "Respect",
           "sort": 4,
-          "file": "data/toyota/respect.json"
+          "file": "data/toyota/respect.json",
+          "facets": [
+            "mutual-respect"
+          ]
         },
         {
           "id": 7005,
           "slug": "teamwork",
           "name": "Teamwork",
           "sort": 5,
-          "file": "data/toyota/teamwork.json"
+          "file": "data/toyota/teamwork.json",
+          "facets": [
+            "grow-the-team"
+          ]
         }
       ]
     }

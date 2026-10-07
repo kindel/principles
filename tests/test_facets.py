@@ -88,11 +88,12 @@ class FacetSharingTest(unittest.TestCase):
         # catalog-quality is NOT on this facet (it stays IHS-only)
         self.assertNotIn("catalog-quality", ihs_rows)
 
-    def test_acts_like_an_owner_includes_all_four_companies(self):
-        # acts-like-an-owner maps Amazon 1002, Dawn 6004, Arm 2008, DH 4001
+    def test_acts_like_an_owner_includes_the_owner_principles(self):
+        # acts-like-an-owner maps Amazon 1002, Dawn 6004, Arm 2008, DH 4001,
+        # and Any Company Ownership 8003.
         facet = facet_by_id(self.facets, "acts-like-an-owner")
         self.assertIsNotNone(facet)
-        self.assertEqual(sorted(facet["principles"]), [1002, 2008, 4001, 6004])
+        self.assertEqual(sorted(facet["principles"]), [1002, 2008, 4001, 6004, 8003])
 
     def test_toyota_genchi_genbutsu_shares_dive_deep(self):
         # Toyota 7003 is the same go-and-see behavior as Amazon, Coupang,
@@ -162,12 +163,31 @@ class FacetStructureTest(unittest.TestCase):
             self.assertTrue(f["rows"],
                             "facet %r has no rows" % f["id"])
 
-    def test_every_facet_has_at_least_one_source_ref(self):
-        # Source refs are generator input. Generated rows are the app table
-        # and may still be absent; that is unpublished, not a fallback.
+    def test_every_facet_has_a_source_ref_or_only_empty_records(self):
+        # Source refs point at record rows. A facet whose principles have
+        # rows: [] has nothing to point at, and generated rows are the table.
+        records = {}
+        for company in os.listdir(DATA):
+            d = os.path.join(DATA, company)
+            if not os.path.isdir(d) or company in ("teaching", "maps"):
+                continue
+            for name in os.listdir(d):
+                if not name.endswith(".json"):
+                    continue
+                with open(os.path.join(d, name), encoding="utf-8") as fh:
+                    rec = json.load(fh)
+                records[rec["id"]] = rec
         for f in self.facets["facets"]:
             refs = [r for r in f["rows"] if "principle" in r]
-            self.assertTrue(refs, "facet %r has no source refs" % f["id"])
+            if refs:
+                continue
+            gens = [r for r in f["rows"] if r.get("words") == "generated"]
+            self.assertTrue(gens, "facet %r has neither source refs nor generated rows" % f["id"])
+            for pid in f["principles"]:
+                self.assertEqual(
+                    [], records[pid]["rows"],
+                    "facet %r has no source ref but principle %s has record rows"
+                    % (f["id"], pid))
 
 
 if __name__ == "__main__":

@@ -28,7 +28,8 @@ that changes the model, schema, or data, study the Tenets section of
 - The model is `README.md`.
 - The schema is `SCHEMA.md`.
 - The data is `data/index.json`, `data/facets.json`,
-  `data/<company>/<slug>.json`, and `data/teaching/<company>/`.
+  `data/<company>/<slug>.json`, `data/teaching/<company>/`, and
+  `data/maps/generic-amazon.json` (which generic principle reuses which Amazon principle).
 
 Downstream apps consume this and must not fork a private copy.
 
@@ -41,7 +42,8 @@ does not mean anyone can see them.
 `data/**` lands on `main`. Today that is:
 
 - `kindel/porridge`, the user's manual. Hugo mounts this module's `data/`
-  and renders it. Amazon teaching prose is `data/teaching/amazon/`. A new company needs one content stub per principle under
+  and renders it. Teaching prose is `data/teaching/<company>/` when that
+  company has it. Amazon is required. A new company needs one content stub per principle under
   `content/porridge/<company>/`, which `scripts/sync_from_principles.py` in
   porridge writes.
 - `kindel/biq`, the interview question bank. It keeps a **fixed set of
@@ -73,10 +75,13 @@ Do all of this, in this repo first:
    `rows: []`. Do not invent rows to clear that flag.
 3. If the company publishes lenses, add `group` and an entry in
    `GROUP_BY_COMPANY` in `scripts/validate.py`.
-4. Map facets only where the behavior is the same, including slices.
-   Classify every new principle in `tests/fixtures/facet-audit.json`
-   (map, skip, or new-facet). Unmapped is an empty table, not a
-   fallback. A stretch is a skip.
+4. Every principle needs generated calibration rows on a facet. Map an
+   existing facet only when its rows fit the principle's text. Otherwise
+   author a new facet. A stretch onto the wrong table is not a map.
+   Record rows stay empty when calibration is `unpublished`. Do not invent
+   record rows to clear that flag. Classify every principle in
+   `tests/fixtures/facet-audit.json`. The decision for a facet that exists
+   is `map`.
 5. Update the company list and block in `SCHEMA.md`. Tests fail if you
    skip this.
 6. Update the sets list and layout in `README.md`.

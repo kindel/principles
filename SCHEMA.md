@@ -158,10 +158,13 @@ facet share the rows mapped to that facet.
   quoted). That is source data for the generator: which behaviors this facet
   covers, and the voice it should sound like. An inline row `{id, situation,
   under, justRight, over, words: "generated"}` is app data. Porridge shows
-  those. Generated rows must not carry `principle`. At least one source ref.
-  Generated rows are the app table and may be absent until the generator
-  writes them. A display consumer that finds none shows nothing; it does
-  not fall back to the refs.
+  those. Generated rows must not carry `principle`. At least one source ref
+  when any listed principle has record rows to point at. A facet whose every
+  principle has `rows: []` may be generated rows only, because there is no
+  human row to reference. Every principle in the corpus must appear on a
+  facet that has at least one generated row. A display consumer that finds
+  none fails the build rather than rendering an empty table. It does not
+  fall back to the refs.
 
 A principle that is on a facet inherits that facet's *generated* rows in the
 app. Human rows on the records, and `{principle, id}` refs on the facet, stay
@@ -182,8 +185,10 @@ intra-principle slices. The facet map is the cross-company layer.
 A consumer that *shows* calibration (porridge, like BIQ example packs) reads
 facet ids from `index.json` and displays only inline generated rows from
 `facets.json`. It does not resolve `{principle, id}` refs into the table, and
-it does not fall back to the principle's own human rows. Generated rows may
-be absent; that is unpublished, not a reason to show the source refs.
+it does not fall back to the principle's own human rows. A real principle
+with no generated rows is invalid. The build fails. A fallback sentence may
+remain in the template for data that failed this check. It is not a state a
+valid manifest can render.
 
 A consumer that *generates* calibration (porridge's generator) reads those
 refs, loads the human rows, and uses them as the quality bar. It writes a full
@@ -232,9 +237,9 @@ generated set marked as generated.
   first and Transparency last (one through six), the order that spells CREDIT.
   Dawn is Think big, start small first and Race on the racetrack, walk on ice
   last (one through 15), following the document's numbering. Toyota is Challenge
-  first and Teamwork last (one through five). Generic, shown as Any Company,
-  is Customer Obsession first and Intentional About Culture last (one through
-  15), the order in kindel/principles issue 71.
+  first and Teamwork last (one through five). Generic, shown as Universal
+  Leadership Principles, is Customer Obsession first and Intentional About Culture
+  last (one through 15), the order in kindel/principles issue 71.
 - `definition` is the short statement of the principle, transcribed from
   `source` under Sourcing below. For a company set that source is the
   company's own text. For the generic set it is kindel/principles issue 71.
@@ -283,10 +288,11 @@ The calibration taxonomy, and the anchor a facet points at.
   somewhere around five to a dozen, but that is an observation rather than a
   rule, and a company that published a single triple gets one row. A company
   may set `calibration` to `unpublished` in `scripts/companies.py` when the set
-  is definitions only and the calibration has not been written. Those records
-  carry `rows: []`. Consumers show no calibration table. Every other company
-  still fails validation with no rows. Remove the flag when the rows exist.
-  Do not invent rows to clear it.
+  is definitions only and the record-level calibration has not been written.
+  Those records carry `rows: []`. Do not invent record rows to clear the flag.
+  The porridge table is still required: the principle sits on a facet with
+  generated rows. Every other company still fails validation with no record
+  rows. Remove the flag when the record rows exist.
 - `under`, `justRight`, and `over` are one to three sentences each. They
   describe one behavior under indexed, balanced, and over done.
 - Row ids are unique within a principle. A facet may only reference a row on
@@ -341,18 +347,29 @@ the exception and run everywhere, so pick an excerpt that carries neither.
 
 ## Teaching
 
-Amazon teaching prose. Name, definition, and rows stay on the principle
-record. Porridge renders this directory. The field names are the ones the
-files already use. `blog` is the Further reading list. It is not renamed.
+Teaching prose for a set that has it. Name, definition, and rows stay on the
+principle record. Porridge renders this directory. The field names are the ones
+the files already use. `blog` is the Further reading list. It is not renamed.
 
 ### Files
 
-- `data/teaching/<company>/index.json` catalog. Amazon only today.
+- `data/teaching/<company>/index.json` catalog, for each company that has teaching.
 - `data/teaching/<company>/<slug>.json` one principle.
 
+Amazon is the classic 14. Any Company (`generic`) reuses that teaching.
+`data/maps/<source>-<target>.json` records the reuse. The file names both
+companies, and every lookup uses those ids. `generic-amazon.json` is the Any
+Company map. `edits` is the allowlist of sentences that differ. A slug rename
+is not an edit: the source principle's slug replaces the target slug in the
+copied text. A source principle with no target id is not a copy. Teaching
+on that principle, when it exists, is authored from its own definition and
+is not diffed against a target.
+
 kindelwww mounts this repo's `data/` at `assets/data/principles`, so Hugo
-reads `data/principles/teaching/amazon/<slug>.json`. The standalone app
-fetches `https://cdn.jsdelivr.net/gh/kindel/principles@main/data/teaching/amazon/<slug>.json`.
+reads `data/principles/teaching/<company>/<slug>.json` when that file exists.
+Amazon is required: a missing Amazon file is an error. The standalone app
+fetches `https://cdn.jsdelivr.net/gh/kindel/principles@main/data/teaching/amazon/<slug>.json`
+for Amazon, and the same path with the company directory for a set that has teaching.
 
 Identity is `(company, numeric id)`. The filename is the slug.
 

@@ -1,0 +1,109 @@
+{
+  "title": "Leadership Principles: a user's manual",
+  "source": "Kindel leadership principles user's manual for Any Company. Reused from the classic set and edited where the wording differs.",
+  "howTo": [
+    "Use this when you are applying a principle, studying one, reviewing work, or coaching someone who has taken it too far.",
+    "Under means they are not really doing it. Over means the principle has taken over the job. Just Right is the bar.",
+    "Score the situation against a row, then say under, just right, or over, and write the evidence. Rows come from kindel/principles.",
+    "Cross-refs look like {lp:ownership}. Render them as links. Agents treat them as hard links to that principle file."
+  ],
+  "crossRef": {
+    "token": "{lp:<slug>}",
+    "example": "{lp:customer-obsession}",
+    "render": "Replace the token with a link to that LP. Agents treat tokens as hard links."
+  },
+  "principles": [
+    {
+      "id": 8001,
+      "slug": "customer-obsession",
+      "file": "customer-obsession.json"
+    },
+    {
+      "id": 8002,
+      "slug": "earn-trust",
+      "file": "earn-trust.json"
+    },
+    {
+      "id": 8003,
+      "slug": "ownership",
+      "file": "ownership.json"
+    },
+    {
+      "id": 8004,
+      "slug": "are-right-a-lot",
+      "file": "are-right-a-lot.json"
+    },
+    {
+      "id": 8005,
+      "slug": "learn-and-be-curious",
+      "file": "learn-and-be-curious.json"
+    },
+    {
+      "id": 8006,
+      "slug": "invent-and-simplify",
+      "file": "invent-and-simplify.json"
+    },
+    {
+      "id": 8007,
+      "slug": "insist-on-high-standards",
+      "file": "insist-on-high-standards.json"
+    },
+    {
+      "id": 8008,
+      "slug": "hire-and-develop-the-best",
+      "file": "hire-and-develop-the-best.json"
+    },
+    {
+      "id": 8009,
+      "slug": "think-big",
+      "file": "think-big.json"
+    },
+    {
+      "id": 8010,
+      "slug": "bias-for-action",
+      "file": "bias-for-action.json"
+    },
+    {
+      "id": 8011,
+      "slug": "frugality",
+      "file": "frugality.json"
+    },
+    {
+      "id": 8012,
+      "slug": "dive-deep",
+      "file": "dive-deep.json"
+    },
+    {
+      "id": 8013,
+      "slug": "have-backbone-disagree-and-commit",
+      "file": "have-backbone-disagree-and-commit.json"
+    },
+    {
+      "id": 8014,
+      "slug": "deliver-results",
+      "file": "deliver-results.json"
+    },
+    {
+      "id": 8015,
+      "slug": "intentional-about-culture",
+      "file": "intentional-about-culture.json"
+    }
+  ],
+  "blog": [
+    {
+      "title": "Just Right Porridge and Leadership Principles",
+      "url": "https://blog.kindel.com/2019/03/21/just-right-porridge-and-leadership-principles/",
+      "note": "The under, just right, over idea this manual is built on."
+    },
+    {
+      "title": "The Tension is Intentional",
+      "url": "https://blog.kindel.com/2019/05/16/the-tension-is-intentional/",
+      "note": "The principles pull against each other on purpose. That is the work."
+    },
+    {
+      "title": "Amazon's Leadership Principles",
+      "url": "https://www.amazon.jobs/content/en/our-workplace/leadership-principles",
+      "note": "The published source this set is derived from. It lists 16 now. This manual covers the counterparts of the classic 14."
+    }
+  ]
+}

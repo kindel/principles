@@ -78,7 +78,7 @@ class CorpusTest(unittest.TestCase):
 
     def test_the_first_company_is_the_default_set(self):
         self.assertEqual("generic", next(iter(COMPANY_META)))
-        self.assertEqual("Any Company", COMPANY_META["generic"]["name"])
+        self.assertEqual("Universal Leadership Principles", COMPANY_META["generic"]["name"])
         self.assertEqual("unpublished", COMPANY_META["generic"]["calibration"])
 
     def test_the_corpus_validates(self):
@@ -236,11 +236,10 @@ class DocumentationTest(unittest.TestCase):
         self.assertIn("non-empty string", self.schema)
 
     def test_schema_does_not_treat_a_source_ref_as_an_app_row(self):
-        # A refs-only facet is valid source. It is not the porridge table.
-        # "either kind" implied the two row types were interchangeable for
-        # display, which hid that generated rows may still be absent.
+        # A source ref is not the porridge table. Every principle needs
+        # generated rows, and a display consumer does not fall back to refs.
         self.assertNotIn("of either kind", self.schema)
-        self.assertIn("may be absent", self.schema)
+        self.assertIn("at least one generated row", self.schema)
         self.assertIn("does not fall back", self.schema)
 
 
