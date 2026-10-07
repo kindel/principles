@@ -75,10 +75,13 @@ Do all of this, in this repo first:
    `rows: []`. Do not invent rows to clear that flag.
 3. If the company publishes lenses, add `group` and an entry in
    `GROUP_BY_COMPANY` in `scripts/validate.py`.
-4. Map facets only where the behavior is the same, including slices.
-   Classify every new principle in `tests/fixtures/facet-audit.json`
-   (map, skip, or new-facet). Unmapped is an empty table, not a
-   fallback. A stretch is a skip.
+4. Every principle needs generated calibration rows on a facet. Map an
+   existing facet only when its rows fit the principle's text. Otherwise
+   author a new facet. A stretch onto the wrong table is not a map.
+   Record rows stay empty when calibration is `unpublished`. Do not invent
+   record rows to clear that flag. Classify every principle in
+   `tests/fixtures/facet-audit.json`. The decision for a facet that exists
+   is `map`.
 5. Update the company list and block in `SCHEMA.md`. Tests fail if you
    skip this.
 6. Update the sets list and layout in `README.md`.

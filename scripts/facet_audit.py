@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """The facet-map audit: every principle is map, skip, or new-facet.
 
-Unmapped now means an empty calibration table, so an unreviewed principle is
-a silent miss. tests/fixtures/facet-audit.json is the written pass. This
-file is the check that fails when a principle is added, mapped, or unmapped
-without updating that pass.
+An unreviewed principle is a silent miss. tests/fixtures/facet-audit.json is
+the written pass. This file is the check that fails when a principle is
+added, mapped, or unmapped without updating that pass. validate.py also
+rejects a principle with no generated calibration rows.
 
 High confidence only, same bar as the first map. A pending map is a follow-on
-change, not a dump into facets.json. A new facet is named here and not
-created in the same change as the audit.
+change, not a dump into facets.json. A new-facet decision names a facet that
+does not exist yet. Once the facet exists, the decision is map.
 """
 
 import json

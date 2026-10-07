@@ -579,7 +579,8 @@
         1001,
         3001,
         6002,
-        8001
+        8001,
+        5002
       ],
       "rows": [
         {
@@ -1931,6 +1932,1955 @@
           "under": "Leaves the clumsy step alone because it has not failed loudly this week.",
           "justRight": "Tightens the one step that keeps producing rework, and leaves the rest until that change sticks.",
           "over": "Redesigns the whole process in the same week. People spend their time learning new steps instead of doing the work.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "are-right-a-lot",
+      "label": "are right a lot",
+      "principles": [
+        1004,
+        8004
+      ],
+      "rows": [
+        {
+          "principle": 1004,
+          "id": "using-data"
+        },
+        {
+          "id": "someone-junior-has-the-fact",
+          "situation": "Someone junior has the fact",
+          "under": "Treats rank as the argument and keeps the original call.",
+          "justRight": "Lets the fact win in the room, says what changed, and moves the decision.",
+          "over": "Opens a second debate after the fact is already in, so the team leaves with no call.",
+          "words": "generated"
+        },
+        {
+          "id": "a-room-that-already-agrees",
+          "situation": "A room that already agrees",
+          "under": "Takes the agreement as proof and locks the path.",
+          "justRight": "Asks who would bet against it, and what evidence would change the call, before locking it.",
+          "over": "Keeps hunting dissent after a real objection has been answered, and the work waits.",
+          "words": "generated"
+        },
+        {
+          "id": "a-question-the-data-can-settle",
+          "situation": "A question the data can settle",
+          "under": "Runs the meeting on opinions when a test or the arithmetic would settle it.",
+          "justRight": "Runs the test or does the math, and uses judgment only for the part that remains.",
+          "over": "Refuses to decide the leftover until every unknown is gone, including ones that do not change the call.",
+          "words": "generated"
+        },
+        {
+          "id": "you-were-wrong-last-week",
+          "situation": "You were wrong last week",
+          "under": "Hopes nobody notices, or defends the old call so it still looks consistent.",
+          "justRight": "Says the miss in the same week, names the better path, and switches to it.",
+          "over": "Spends the week narrating the miss and does not make the next call.",
+          "words": "generated"
+        },
+        {
+          "id": "a-hunch-after-the-fact-showed-up",
+          "situation": "A hunch after the fact showed up",
+          "under": "Drops the hunch at the first objection and asks someone else to decide.",
+          "justRight": "Names the hunch, the fact that cuts against it, and which one the decision now follows.",
+          "over": "Keeps the hunch after the fact has cut it down, and calls that instinct.",
+          "words": "generated"
+        },
+        {
+          "id": "defending-the-announced-plan",
+          "situation": "Defending the plan you already announced",
+          "under": "Treats the announcement as the reason to stay, and argues with the new evidence.",
+          "justRight": "Updates the plan in public and says which assumption was wrong.",
+          "over": "Reverses the plan on every new comment, so nobody can tell which evidence mattered.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "intentional-about-culture",
+      "label": "intentional about culture",
+      "principles": [
+        8015
+      ],
+      "rows": [
+        {
+          "id": "a-hard-meeting",
+          "situation": "A hard meeting",
+          "under": "Lets the room go personal, or goes quiet so the tension will pass.",
+          "justRight": "Names the miss, asks the person closest to it what they see, and ends with a next step people can say out loud.",
+          "over": "Gives a lecture about culture while the actual problem sits untouched.",
+          "words": "generated"
+        },
+        {
+          "id": "credit-for-work-without-the-title",
+          "situation": "Credit for work without the title",
+          "under": "Tells the story as if the senior person did the work.",
+          "justRight": "Says who did it, what was hard, and what the team should copy, in the room that matters.",
+          "over": "Stages a ceremony that embarrasses the person and skips the work itself.",
+          "words": "generated"
+        },
+        {
+          "id": "a-joke-that-lands-on-one-person",
+          "situation": "A joke that lands on one person",
+          "under": "Laughs along, or waits to see if the person will object.",
+          "justRight": "Stops it in the moment, checks on the person, and says that kind of joke is not how this team works.",
+          "over": "Turns the correction into a long public scolding and the original work is lost.",
+          "words": "generated"
+        },
+        {
+          "id": "the-week-was-long",
+          "situation": "The week was long",
+          "under": "Treats recovery and morale as private matters and schedules the same hours again.",
+          "justRight": "Thanks people for the specific work, protects a real pause, and changes the plan so the same crush is not the default.",
+          "over": "Throws a celebration while the broken thing is still broken and calls that culture.",
+          "words": "generated"
+        },
+        {
+          "id": "excellent-work-at-any-level",
+          "situation": "Excellent work at any level",
+          "under": "Reviews the senior person's work carefully and waves the junior person's work through, or the reverse.",
+          "justRight": "Uses the same bar and the same straight feedback regardless of title.",
+          "over": "Holds the junior person's work to a performance so the review itself becomes the point.",
+          "words": "generated"
+        },
+        {
+          "id": "culture-left-to-a-program",
+          "situation": "Culture left to a program",
+          "under": "Waits for a survey, a poster, or another team to fix the room.",
+          "justRight": "Treats the room as part of this week's job and fixes the one behavior that made it worse.",
+          "over": "Builds a culture program and stops doing the management the room actually needed.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "mutual-respect",
+      "label": "mutual respect",
+      "principles": [
+        7004
+      ],
+      "rows": [
+        {
+          "principle": 7004,
+          "id": "before-judging"
+        },
+        {
+          "id": "before-you-judge-a-miss",
+          "situation": "Before you judge a miss",
+          "under": "Decides why they failed before asking what they saw.",
+          "justRight": "Asks what happened, restates it back, and only then says what should change.",
+          "over": "Interviews so long that the miss has no owner and no next step.",
+          "words": "generated"
+        },
+        {
+          "id": "a-disagreement-about-the-work",
+          "situation": "A disagreement about the work",
+          "under": "Treats the disagreement as a verdict on the person.",
+          "justRight": "Stays on the work, gives the other view a fair hearing, and still makes the call.",
+          "over": "Avoids the disagreement so thoroughly that the team cannot tell what was decided.",
+          "words": "generated"
+        },
+        {
+          "id": "trust-after-you-caused-the-miss",
+          "situation": "Trust after you caused the miss",
+          "under": "Explains why it was not really yours and moves on.",
+          "justRight": "Owns the miss, says what you will do differently, and follows through on that small promise.",
+          "over": "Over-apologizes for days and leaves the repair to someone else.",
+          "words": "generated"
+        },
+        {
+          "id": "you-already-know-the-answer",
+          "situation": "You already know the answer",
+          "under": "Asks for input and then repeats the answer you walked in with.",
+          "justRight": "Listens long enough to be able to change the answer, and says so if you do not.",
+          "over": "Refuses to close because someone in the room might still feel unheard.",
+          "words": "generated"
+        },
+        {
+          "id": "a-shared-miss",
+          "situation": "A shared miss",
+          "under": "Points at the other team and waits.",
+          "justRight": "Takes your piece of it, says what you need from them, and does not make them carry your share.",
+          "over": "Takes the whole miss, including the parts you do not understand, and crowds them out of the repair.",
+          "words": "generated"
+        },
+        {
+          "id": "respect-that-never-says-the-problem",
+          "situation": "Respect that never says the problem",
+          "under": "Says the harsh version in the hallway afterward.",
+          "justRight": "Says the problem to the person, plainly, and keeps the relationship intact enough to keep working.",
+          "over": "Softens the problem until they leave thinking everything is fine.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "grow-the-team",
+      "label": "grow the team",
+      "principles": [
+        7005
+      ],
+      "rows": [
+        {
+          "principle": 7005,
+          "id": "a-person-ready-for-more"
+        },
+        {
+          "id": "a-person-ready-for-harder-work",
+          "situation": "A person ready for harder work",
+          "under": "Keeps the hard piece because it is faster if you do it.",
+          "justRight": "Gives them the piece, stays close enough to catch a real miss, and lets them own the result.",
+          "over": "Hands over the whole area in one week and disappears.",
+          "words": "generated"
+        },
+        {
+          "id": "credit-for-a-team-result",
+          "situation": "Credit for a team result",
+          "under": "Names only the star, or only yourself.",
+          "justRight": "Names what the group did and the specific growth you saw in more than one person.",
+          "over": "Spreads the credit so evenly that nobody can tell what to do again.",
+          "words": "generated"
+        },
+        {
+          "id": "one-person-wants-every-hard-problem",
+          "situation": "One person wants every hard problem",
+          "under": "Lets them take all of it because the result will be better this week.",
+          "justRight": "Gives them a hard piece and gives the next one to someone who needs the practice.",
+          "over": "Benches the strong person to make a point, and the work suffers for the lesson.",
+          "words": "generated"
+        },
+        {
+          "id": "a-development-chance",
+          "situation": "A development chance",
+          "under": "Offers it only to the person who already looks like the last person who had it.",
+          "justRight": "Says what the chance is, what good looks like, and invites more than one person to make a case.",
+          "over": "Rotates the chance so mechanically that the work has no owner who can succeed at it.",
+          "words": "generated"
+        },
+        {
+          "id": "coaching-versus-doing-it",
+          "situation": "Coaching versus doing it",
+          "under": "Rewrites their work after hours and tells them it was fine.",
+          "justRight": "Shows them the gap, lets them fix it, and checks the result.",
+          "over": "Turns every task into a lesson and the delivery date slips for the teaching.",
+          "words": "generated"
+        },
+        {
+          "id": "growth-that-ignores-the-week",
+          "situation": "Growth that ignores the week",
+          "under": "Has no growth in the plan at all, only this week's tickets.",
+          "justRight": "Picks one stretch that still lets the week's commitment ship.",
+          "over": "Builds a development plan that replaces the job the team was hired to do.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "care-about-the-mission",
+      "label": "care about the mission",
+      "principles": [
+        2001
+      ],
+      "rows": [
+        {
+          "principle": 2001,
+          "id": "internalizing-the-strategy"
+        },
+        {
+          "id": "explaining-the-strategy",
+          "situation": "Explaining the strategy",
+          "under": "Recites a slogan and cannot say what it changes in this week's work.",
+          "justRight": "Says the strategy in their own words and points at the one decision it should change today.",
+          "over": "Rewrites the strategy in the hallway so it matches the project they already wanted.",
+          "words": "generated"
+        },
+        {
+          "id": "a-task-that-does-not-connect",
+          "situation": "A task that does not connect",
+          "under": "Does the task because it was assigned and never asks what it serves.",
+          "justRight": "Asks what outcome it moves, and drops or reshapes it when the answer is nothing.",
+          "over": "Drops assigned work they dislike and calls the preference the mission.",
+          "words": "generated"
+        },
+        {
+          "id": "the-product-versus-the-metric",
+          "situation": "The product versus the metric",
+          "under": "Moves the number and does not notice the product got worse for the people who use it.",
+          "justRight": "Knows which number matters and checks that the product still does the job the strategy named.",
+          "over": "Ignores a number the strategy depends on because they prefer the craft of the product.",
+          "words": "generated"
+        },
+        {
+          "id": "impact-you-cannot-see",
+          "situation": "Impact you cannot see from your desk",
+          "under": "Cares about the work in front of them and treats the rest of the mission as someone else's.",
+          "justRight": "Goes and looks at the impact, then brings one concrete change back to the team.",
+          "over": "Spends the week touring the impact and does not finish the work that would change it.",
+          "words": "generated"
+        },
+        {
+          "id": "technology-you-do-not-own",
+          "situation": "Technology you do not own",
+          "under": "Dismisses the stack, the product, or the customer problem because it is not their specialty.",
+          "justRight": "Learns enough to care about the outcome and to ask a useful question of the people who own it.",
+          "over": "Becomes a second owner of the technology and crowds out the people who already know it.",
+          "words": "generated"
+        },
+        {
+          "id": "passion-ahead-of-the-plan",
+          "situation": "Passion ahead of the plan",
+          "under": "Waits to be told why the work matters and stays lukewarm until then.",
+          "justRight": "Brings energy to the agreed strategy, including the parts that are not the most interesting.",
+          "over": "Chases the part they love and lets the agreed plan stall.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "beyond-your-function",
+      "label": "beyond your function",
+      "principles": [
+        2002
+      ],
+      "rows": [
+        {
+          "principle": 2002,
+          "id": "beyond-your-function"
+        },
+        {
+          "id": "a-decision-that-touches-another-team",
+          "situation": "A decision that touches another team",
+          "under": "Decides inside the function and tells the other team after it has shipped.",
+          "justRight": "Learns how the decision lands on them, then makes the call without waiting for every vote.",
+          "over": "Will not decide until every adjacent team has agreed, and the week is gone.",
+          "words": "generated"
+        },
+        {
+          "id": "a-dependency-you-do-not-own",
+          "situation": "A dependency you do not own",
+          "under": "Treats the other team's queue as none of your business until you are blocked.",
+          "justRight": "Says what you need, what they are carrying, and a smaller slice that unblocks both sides.",
+          "over": "Takes over their work so you do not have to depend on them.",
+          "words": "generated"
+        },
+        {
+          "id": "a-meeting-of-only-your-function",
+          "situation": "A meeting of only your function",
+          "under": "Solves a cross-team problem with the people who already share your view.",
+          "justRight": "Brings in the person who will live with the result, hears them, and still leaves with a decision.",
+          "over": "Invites so many functions that the meeting cannot decide anything.",
+          "words": "generated"
+        },
+        {
+          "id": "collaboration-versus-consensus",
+          "situation": "Collaboration versus consensus",
+          "under": "Equates disagreement with a failed collaboration and forces a watered-down middle.",
+          "justRight": "Understands the other view, states the disagreement, and decides.",
+          "over": "Calls a solo decision collaboration because you sent a note afterward.",
+          "words": "generated"
+        },
+        {
+          "id": "connections-you-have-not-mapped",
+          "situation": "Connections you have not mapped",
+          "under": "Optimizes the function and is surprised by what breaks downstream.",
+          "justRight": "Draws the two or three connections that matter for this decision and checks them.",
+          "over": "Maps the whole company before a local call that only one other team feels.",
+          "words": "generated"
+        },
+        {
+          "id": "backing-a-cross-team-call",
+          "situation": "Backing a cross-team call",
+          "under": "Agrees in the meeting and undoes it back inside the function.",
+          "justRight": "Carries the decision back, including the part your own team did not prefer.",
+          "over": "Polices the other team all week to prove you are collaborating.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "build-extraordinary-teams",
+      "label": "build extraordinary teams",
+      "principles": [
+        2003
+      ],
+      "rows": [
+        {
+          "principle": 2003,
+          "id": "holding-a-high-bar"
+        },
+        {
+          "id": "filling-an-open-seat",
+          "situation": "Filling an open seat",
+          "under": "Hires the first acceptable person so the seat is no longer empty.",
+          "justRight": "Holds the bar, keeps looking, and says what the team still needs that it does not have.",
+          "over": "Holds the seat empty for a perfect hire while the team cannot do the job in front of it.",
+          "words": "generated"
+        },
+        {
+          "id": "feedback-that-is-only-praise",
+          "situation": "Feedback that is only praise",
+          "under": "Skips the hard note to keep the relationship comfortable.",
+          "justRight": "Gives the specific gap and the specific strength, and asks for the same in return.",
+          "over": "Delivers only criticism and calls the volume a high bar.",
+          "words": "generated"
+        },
+        {
+          "id": "who-speaks-in-the-room",
+          "situation": "Who speaks in the room",
+          "under": "Lets the same two people decide and treats silence as agreement.",
+          "justRight": "Asks the quiet person for the view the room is missing, then uses it or says why not.",
+          "over": "Runs the meeting as a tour of every voice and never reaches a decision.",
+          "words": "generated"
+        },
+        {
+          "id": "support-that-hides-a-gap",
+          "situation": "Support that hides a gap",
+          "under": "Protects a teammate from feedback the team can already see.",
+          "justRight": "Supports the person and still names the gap in the work.",
+          "over": "Removes every hard assignment so nobody feels pressure, and the team stops growing.",
+          "words": "generated"
+        },
+        {
+          "id": "a-set-of-strong-individuals",
+          "situation": "A set of strong individuals",
+          "under": "Staffs heroes and hopes the sum appears.",
+          "justRight": "Pairs people so the work needs more than one strength, and judges the result as a team.",
+          "over": "Blends roles so thoroughly that nobody is accountable for a piece.",
+          "words": "generated"
+        },
+        {
+          "id": "a-high-bar-that-becomes-a-club",
+          "situation": "A high bar that becomes a club",
+          "under": "Lowers the bar to keep the current group comfortable.",
+          "justRight": "Keeps the bar and makes the path onto the team legible to people who are not already inside it.",
+          "over": "Uses the bar to exclude people who work differently, and calls the sameness excellence.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "challenge-then-decide",
+      "label": "challenge then decide",
+      "principles": [
+        2004
+      ],
+      "rows": [
+        {
+          "principle": 2004,
+          "id": "challenging-when-it-does-not-make-sense"
+        },
+        {
+          "id": "a-plan-that-does-not-add-up",
+          "situation": "A plan that does not add up",
+          "under": "Lets it pass because challenging it would slow the room.",
+          "justRight": "Says what does not make sense, listens, and drives a decision before the meeting ends.",
+          "over": "Keeps challenging after the decision so the work cannot start.",
+          "words": "generated"
+        },
+        {
+          "id": "you-see-it-differently",
+          "situation": "You see it differently from the room",
+          "under": "Goes along and saves the objection for later.",
+          "justRight": "Puts the independent view on the table, hears the reply, and either updates or holds it.",
+          "over": "Treats independent thinking as refusing to hear anyone else.",
+          "words": "generated"
+        },
+        {
+          "id": "the-room-wants-to-keep-talking",
+          "situation": "The room wants to keep talking",
+          "under": "Lets the discussion replace the decision.",
+          "justRight": "Summarizes the options, picks one, and names when you will revisit it.",
+          "over": "Cuts off the discussion before the objection has been understood.",
+          "words": "generated"
+        },
+        {
+          "id": "you-were-the-only-dissenter",
+          "situation": "You were the only dissenter",
+          "under": "Drops the point as soon as you notice you are alone.",
+          "justRight": "States it once, clearly, and then commits to whatever the decision is.",
+          "over": "Reopens it with each new audience so the decision never settles.",
+          "words": "generated"
+        },
+        {
+          "id": "a-call-that-can-be-made-today",
+          "situation": "A call that can be made today",
+          "under": "Asks for another meeting because the topic feels important.",
+          "justRight": "Decides today on the part that is clear and writes down the one question that can wait.",
+          "over": "Decides in the first minute and skips the listening the principle requires.",
+          "words": "generated"
+        },
+        {
+          "id": "backing-yourself",
+          "situation": "Backing yourself",
+          "under": "Abandons a sound objection the moment a senior person frowns.",
+          "justRight": "Holds the objection while it still has a reason, and drops it when the reason is answered.",
+          "over": "Holds it after the reason is gone, and calls that backbone.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "cut-the-waste",
+      "label": "cut the waste",
+      "principles": [
+        2005
+      ],
+      "rows": [
+        {
+          "principle": 2005,
+          "id": "eliminating-inefficiencies"
+        },
+        {
+          "id": "a-step-nobody-can-explain",
+          "situation": "A step nobody can explain",
+          "under": "Leaves it in because it has always been there.",
+          "justRight": "Removes it, watches the next few runs, and puts it back only if something real breaks.",
+          "over": "Removes a step that exists because a constraint cannot move, and finds out in production.",
+          "words": "generated"
+        },
+        {
+          "id": "a-side-effort-that-is-interesting",
+          "situation": "A side effort that is interesting",
+          "under": "Keeps it alive because the team enjoys it.",
+          "justRight": "Stops it and puts the time back on the thing that matters this quarter.",
+          "over": "Kills a required obligation because it is not the interesting goal.",
+          "words": "generated"
+        },
+        {
+          "id": "a-constraint-that-is-real",
+          "situation": "A constraint that is real",
+          "under": "Treats every constraint as optional friction.",
+          "justRight": "Names the ones that cannot move, simplifies around them, and does not pretend they are gone.",
+          "over": "Adds process to honor the constraint in three places when one check would do.",
+          "words": "generated"
+        },
+        {
+          "id": "a-report-with-one-use",
+          "situation": "A report with one use",
+          "under": "Keeps producing it for an audience that no longer reads it.",
+          "justRight": "Asks who decides from it, cuts the rest, and shortens what remains.",
+          "over": "Deletes the one figure the decision actually needs.",
+          "words": "generated"
+        },
+        {
+          "id": "a-full-plate",
+          "situation": "A full plate",
+          "under": "Tries to move every item a little and finishes none of what matters.",
+          "justRight": "Picks the work that matters, finishes that, and explicitly drops the rest for this week.",
+          "over": "Drops so much that a real commitment with a date is included in the waste.",
+          "words": "generated"
+        },
+        {
+          "id": "simplifying-past-the-job",
+          "situation": "Simplifying past the job",
+          "under": "Polishes a complicated path instead of removing a step.",
+          "justRight": "Takes out steps until the job is still done and nothing extra remains.",
+          "over": "Simplifies until the person who needs the result cannot complete it.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "push-the-boundary",
+      "label": "push the boundary",
+      "principles": [
+        2006
+      ],
+      "rows": [
+        {
+          "principle": 2006,
+          "id": "asking-how-it-can-be-better"
+        },
+        {
+          "id": "a-result-that-is-merely-fine",
+          "situation": "A result that is merely fine",
+          "under": "Ships it and does not ask how it could win, not just finish.",
+          "justRight": "Asks what would make it clearly better for the customer, and does the one change that fits the date.",
+          "over": "Holds the result for a leap that misses the date and does not improve what ships.",
+          "words": "generated"
+        },
+        {
+          "id": "how-will-we-win",
+          "situation": "How will we win",
+          "under": "Plans the work as a list of tasks and never asks what winning means.",
+          "justRight": "Says what winning looks like, in the customer's terms, and checks the plan against it.",
+          "over": "Rewrites the ambition every few days so the team cannot deliver any version of it.",
+          "words": "generated"
+        },
+        {
+          "id": "delivery-versus-perfection",
+          "situation": "Delivery versus perfection",
+          "under": "Calls done as soon as it runs, including the parts a customer would trip on.",
+          "justRight": "Sets the bar for this delivery, hits it, and writes down the improvement that waits until next time.",
+          "over": "Keeps perfecting past the bar you set, and the delivery moves.",
+          "words": "generated"
+        },
+        {
+          "id": "a-path-the-customer-could-choose-instead",
+          "situation": "A path the customer could choose instead",
+          "under": "Ignores the other way they could get the job done.",
+          "justRight": "Looks at that alternative and changes one thing so your path is the better one.",
+          "over": "Copies the alternative feature for feature and loses the date and the point.",
+          "words": "generated"
+        },
+        {
+          "id": "the-first-version-is-not-the-win",
+          "situation": "The first version is not the win",
+          "under": "Treats the first version as the finished ambition.",
+          "justRight": "Ships a version that teaches you something, with a dated next step toward the win.",
+          "over": "Refuses to ship until the full ambition is in the first version.",
+          "words": "generated"
+        },
+        {
+          "id": "raising-the-bar-on-a-date",
+          "situation": "Raising the bar on a date",
+          "under": "Lowers the bar quietly so the date is easy.",
+          "justRight": "Keeps the date and raises one part of the result that the customer will actually feel.",
+          "over": "Raises every part of the bar and then misses the date you promised.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "make-it-concrete",
+      "label": "make it concrete",
+      "principles": [
+        2009
+      ],
+      "rows": [
+        {
+          "principle": 2009,
+          "id": "finding-common-threads"
+        },
+        {
+          "id": "a-vague-goal-at-kickoff",
+          "situation": "A vague goal at kickoff",
+          "under": "Leaves the goal as a phrase and lets each person invent a project.",
+          "justRight": "Turns it into the outcome, the owner, and the first week of work before the meeting ends.",
+          "over": "Writes a plan so detailed it pretends the uncertainty is already gone.",
+          "words": "generated"
+        },
+        {
+          "id": "three-ideas-that-are-one",
+          "situation": "Three ideas that are one",
+          "under": "Staffs all three because they were said out loud.",
+          "justRight": "Names the thread they share and picks one execution plan.",
+          "over": "Forces a merger that keeps every idea's scope, so nothing got more concrete.",
+          "words": "generated"
+        },
+        {
+          "id": "a-plan-with-no-owner",
+          "situation": "A plan with no owner",
+          "under": "Ends the discussion with a shared sense of progress and no name on the work.",
+          "justRight": "Writes the next three steps, who does each, and the date of the first one.",
+          "over": "Assigns an owner to every hypothetical branch, including ones you will not hit.",
+          "words": "generated"
+        },
+        {
+          "id": "the-team-is-stuck-in-ambiguity",
+          "situation": "The team is stuck in ambiguity",
+          "under": "Tells people to get comfortable with ambiguity and adds no plan.",
+          "justRight": "Separates what is known, what is a guess, and the next action that would reduce the guess.",
+          "over": "Demands certainty before anyone may move, which freezes the week.",
+          "words": "generated"
+        },
+        {
+          "id": "a-discussion-that-should-become-work",
+          "situation": "A discussion that should become work",
+          "under": "Schedules another discussion.",
+          "justRight": "Leaves with a one-page plan the team can start tomorrow.",
+          "over": "Produces a long document nobody will run, and calls the document the plan.",
+          "words": "generated"
+        },
+        {
+          "id": "false-precision",
+          "situation": "False precision",
+          "under": "Keeps the idea vague so you cannot be wrong.",
+          "justRight": "Puts a number, a date, and a scope on it, and marks which figures are still guesses.",
+          "over": "Publishes exact figures you have not earned, and the team plans around fiction.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "sustain-the-pace",
+      "label": "sustain the pace",
+      "principles": [
+        2010
+      ],
+      "rows": [
+        {
+          "principle": 2010,
+          "id": "navigating-pace"
+        },
+        {
+          "id": "a-week-of-late-nights",
+          "situation": "A week of late nights",
+          "under": "Treats the late nights as the plan for the next month.",
+          "justRight": "Finishes the spike, then cuts the following week's load so the team can sustain the pace.",
+          "over": "Cancels the spike entirely and calls rest a strategy while the commitment slips with no warning.",
+          "words": "generated"
+        },
+        {
+          "id": "energy-before-a-long-push",
+          "situation": "Energy before a long push",
+          "under": "Starts the push already depleted and hopes intensity will appear.",
+          "justRight": "Clears the calendar, says how long the push is, and protects sleep and one real stop.",
+          "over": "Prepares so carefully that the push never starts.",
+          "words": "generated"
+        },
+        {
+          "id": "every-urgent-thread",
+          "situation": "Every urgent thread",
+          "under": "Says yes to each one and the long-term work dies in the noise.",
+          "justRight": "Takes the urgent thread that truly cannot wait and names the ones that will wait until next week.",
+          "over": "Refuses every urgent thread to protect a plan, including the one that would stop the team.",
+          "words": "generated"
+        },
+        {
+          "id": "recovery-after-a-spike",
+          "situation": "Recovery after a spike",
+          "under": "Schedules the next spike on top of the last one.",
+          "justRight": "Puts recovery on the calendar and uses it, then returns to a pace you can repeat.",
+          "over": "Takes a recovery so long that the team loses the momentum the spike created.",
+          "words": "generated"
+        },
+        {
+          "id": "intensity-that-is-theater",
+          "situation": "Intensity that is theater",
+          "under": "Looks busy and does not manage the energy the work will actually take.",
+          "justRight": "Matches effort to the real duration of the work, not to how urgent the room sounds.",
+          "over": "Polices other people's hours as a substitute for your own pace.",
+          "words": "generated"
+        },
+        {
+          "id": "your-own-energy",
+          "situation": "Your own energy",
+          "under": "Ignores the slump and makes worse decisions as the week goes on.",
+          "justRight": "Notices the slump, changes the order of the work, and asks for help on the piece that can move.",
+          "over": "Makes the team's pace revolve around your energy and calls that sustainability.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "ruthless-focus",
+      "label": "ruthless focus",
+      "principles": [
+        3002
+      ],
+      "rows": [
+        {
+          "principle": 3002,
+          "id": "too-many-bets"
+        },
+        {
+          "id": "a-project-the-team-loves",
+          "situation": "A project the team loves",
+          "under": "Keeps it because stopping it would disappoint people.",
+          "justRight": "Stops it in public, says what the team is choosing to win instead, and moves the people.",
+          "over": "Kills it so abruptly that in-flight commitments to customers are part of the wreckage.",
+          "words": "generated"
+        },
+        {
+          "id": "too-many-bets-at-once",
+          "situation": "Too many bets at once",
+          "under": "Funds all of them a little so nobody has to lose.",
+          "justRight": "Picks the one or two that must win and gives them enough to move this month.",
+          "over": "Picks one and refuses a small bet that protects it, such as the fix that keeps the current product alive.",
+          "words": "generated"
+        },
+        {
+          "id": "saying-no-to-wanted-work",
+          "situation": "Saying no to wanted work",
+          "under": "Adds the wanted work beside the necessary work and hopes both fit.",
+          "justRight": "Says no, writes down what you are giving up, and does not reopen it this week.",
+          "over": "Says no to the work that is the actual win because it is less exciting.",
+          "words": "generated"
+        },
+        {
+          "id": "a-roadmap-that-is-a-wish-list",
+          "situation": "A roadmap that is a wish list",
+          "under": "Publishes every idea as if it were a commitment.",
+          "justRight": "Marks what will happen, what will not, and what would have to be true to reopen it.",
+          "over": "Cuts the list so hard that the team has no next step after the current week.",
+          "words": "generated"
+        },
+        {
+          "id": "courage-in-the-room",
+          "situation": "Courage in the room",
+          "under": "Waits for someone senior to kill the extra work.",
+          "justRight": "Recommends the cut yourself, with what it costs and what it saves.",
+          "over": "Announces cuts you have not thought through, to look decisive.",
+          "words": "generated"
+        },
+        {
+          "id": "focus-before-speed",
+          "situation": "Focus before speed",
+          "under": "Starts executing five things quickly and calls the motion focus.",
+          "justRight": "Cuts the list first, then moves fast on what remains.",
+          "over": "Spends the month debating the cut and never executes the winner.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "whole-company",
+      "label": "whole company",
+      "principles": [
+        3003
+      ],
+      "rows": [
+        {
+          "principle": 3003,
+          "id": "local-win-global-loss"
+        },
+        {
+          "id": "a-problem-outside-your-department",
+          "situation": "A problem outside your department",
+          "under": "Says it is not your job and walks past it.",
+          "justRight": "Raises it to the people who own it, with what you have seen, and stays available for the part you can actually do.",
+          "over": "Takes over the other department's problem and leaves your own undone.",
+          "words": "generated"
+        },
+        {
+          "id": "a-local-win-that-hurts-the-next-team",
+          "situation": "A local win that hurts the next team",
+          "under": "Takes the local win and lets the next team discover the cost.",
+          "justRight": "Shows the downstream cost and picks the option that is better for the whole company, even if your number looks worse.",
+          "over": "Blocks every local improvement in the name of a global view you have not checked.",
+          "words": "generated"
+        },
+        {
+          "id": "upstream-of-you",
+          "situation": "Upstream of you",
+          "under": "Absorbs the upstream mess and complains later.",
+          "justRight": "Goes upstream with the specific defect and the effect on your customers, and agrees a change.",
+          "over": "Dictates the upstream team's priorities as if their whole job were your input.",
+          "words": "generated"
+        },
+        {
+          "id": "not-my-job",
+          "situation": "Not my job",
+          "under": "Uses the phrase, or the polite version of it, and the customer waits.",
+          "justRight": "Does the next useful step or finds the person who will, and does not leave the problem in the gap.",
+          "over": "Collects other people's jobs until you are the bottleneck you meant to avoid.",
+          "words": "generated"
+        },
+        {
+          "id": "optimizing-your-own-score",
+          "situation": "Optimizing your own score",
+          "under": "Chooses the metric that makes your team look best this month.",
+          "justRight": "Chooses the metric the company would pick if it could see what you see.",
+          "over": "Ignores your own commitments and calls every local goal selfish.",
+          "words": "generated"
+        },
+        {
+          "id": "get-out-of-my-kitchen",
+          "situation": "Get out of my kitchen",
+          "under": "Turns another team away from a problem that crosses the boundary.",
+          "justRight": "Lets them in for the part that affects them, and keeps a clear owner for the decision.",
+          "over": "Invites every team into every decision so the kitchen has no cook.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "prevent-the-next-one",
+      "label": "prevent the next one",
+      "principles": [
+        3005
+      ],
+      "rows": [
+        {
+          "principle": 3005,
+          "id": "same-defect-twice"
+        },
+        {
+          "id": "the-same-defect-twice",
+          "situation": "The same defect twice",
+          "under": "Patches it again and does not ask why the first patch failed.",
+          "justRight": "Fixes the customer impact, then adds the one check that would have caught this cause.",
+          "over": "Opens a program to prevent every class of defect and the current one stays open.",
+          "words": "generated"
+        },
+        {
+          "id": "a-fix-with-no-check",
+          "situation": "A fix with no check",
+          "under": "Ships the fix and relies on someone remembering next time.",
+          "justRight": "Adds a small check, a test, or a step in the process that runs without heroics.",
+          "over": "Adds a review board for a problem a single automated check would catch.",
+          "words": "generated"
+        },
+        {
+          "id": "a-process-nobody-can-run-twice",
+          "situation": "A process nobody can run twice",
+          "under": "Depends on one person who knows the trick.",
+          "justRight": "Writes the process so a second person can run it, and watches them do it once.",
+          "over": "Documents every branch until nobody will read it, and the hero remains the process.",
+          "words": "generated"
+        },
+        {
+          "id": "feedback-that-arrives-late",
+          "situation": "Feedback that arrives late",
+          "under": "Learns about the defect from a customer weeks after the next batch has shipped.",
+          "justRight": "Puts a signal where the work happens, so the next run can change.",
+          "over": "Builds a dashboard nobody checks and calls the mechanism done.",
+          "words": "generated"
+        },
+        {
+          "id": "prevention-versus-the-fix",
+          "situation": "Prevention versus the fix",
+          "under": "Only prevents, and the people already hit by the defect are still stuck.",
+          "justRight": "Fixes the people who are stuck now, then spends the next slice on the cause.",
+          "over": "Only fixes, and schedules the same incident for next month.",
+          "words": "generated"
+        },
+        {
+          "id": "a-mechanism-that-becomes-the-job",
+          "situation": "A mechanism that becomes the job",
+          "under": "Has no mechanism, only a promise to be more careful.",
+          "justRight": "Adds the smallest mechanism that changes the next occurrence, and leaves it alone if it works.",
+          "over": "Keeps adding steps after the defect has stopped, and the process is now the delay.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "simplify-what-you-touch",
+      "label": "simplify what you touch",
+      "principles": [
+        3006
+      ],
+      "rows": [
+        {
+          "principle": 3006,
+          "id": "adding-a-feature"
+        },
+        {
+          "id": "when-you-add-a-feature",
+          "situation": "Adding a feature",
+          "under": "Adds it beside the old path and leaves both.",
+          "justRight": "Adds it only if it replaces a harder path, and removes that path.",
+          "over": "Removes the old path before the new one can do the job the customer already does.",
+          "words": "generated"
+        },
+        {
+          "id": "a-setting-nobody-needs",
+          "situation": "A setting nobody needs",
+          "under": "Ships the setting so you do not have to choose a default.",
+          "justRight": "Picks the default that fits almost everyone and deletes the setting.",
+          "over": "Deletes a setting a real group depends on, and calls the deletion simplicity.",
+          "words": "generated"
+        },
+        {
+          "id": "a-name-that-needs-a-paragraph",
+          "situation": "A name that needs a paragraph",
+          "under": "Adds a glossary entry and keeps the name.",
+          "justRight": "Renames it to what a new person would guess, and updates the one place people look.",
+          "over": "Renames it every month in the name of clarity, and nobody can find the old notes.",
+          "words": "generated"
+        },
+        {
+          "id": "five-steps-that-could-be-two",
+          "situation": "Five steps that could be two",
+          "under": "Optimizes each step and leaves the count alone.",
+          "justRight": "Cuts the path to the two steps that change the outcome.",
+          "over": "Collapses the path into one step that hides a decision the person needed to make.",
+          "words": "generated"
+        },
+        {
+          "id": "complexity-you-did-not-add",
+          "situation": "Complexity you did not add",
+          "under": "Walks past a tangled path because you did not create it.",
+          "justRight": "Simplifies the part you are touching anyway, and leaves a note on the rest.",
+          "over": "Rewrites the whole area while you were only there to change one thing.",
+          "words": "generated"
+        },
+        {
+          "id": "simple-for-you-worse-for-them",
+          "situation": "Simple for you, worse for the customer",
+          "under": "Makes the internal workflow tidy and adds steps for the customer.",
+          "justRight": "Judges simplicity by the customer's path, including the support burden it creates.",
+          "over": "Strips the product until it is simple and no longer does the job.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "influence-without-authority",
+      "label": "influence without authority",
+      "principles": [
+        3010
+      ],
+      "rows": [
+        {
+          "principle": 3010,
+          "id": "no-authority-over-them"
+        },
+        {
+          "id": "a-team-you-do-not-manage",
+          "situation": "A team you do not manage",
+          "under": "Escalates to their boss as the first move.",
+          "justRight": "Writes the idea, the evidence, and what you need, and asks them to decide.",
+          "over": "Works the room until a reluctant yes appears, and the evidence was never the point.",
+          "words": "generated"
+        },
+        {
+          "id": "leading-with-title",
+          "situation": "Leading with title",
+          "under": "Opens with who you are instead of what you know.",
+          "justRight": "Opens with the insight and lets the argument carry the ask.",
+          "over": "Hides a weak argument behind a humble tone and still expects the title to finish it.",
+          "words": "generated"
+        },
+        {
+          "id": "a-writeup-versus-a-meeting",
+          "situation": "A writeup versus a meeting",
+          "under": "Calls a meeting because you have not made the idea clear yet.",
+          "justRight": "Sends a short writeup first, and uses the meeting only for the decision.",
+          "over": "Sends a long document and treats silence as alignment.",
+          "words": "generated"
+        },
+        {
+          "id": "data-against-a-senior-view",
+          "situation": "Data against a senior view",
+          "under": "Buries the data because the senior person has already spoken.",
+          "justRight": "Shows the data, says what decision it supports, and accepts the call if they still disagree for a stated reason.",
+          "over": "Uses the data as a weapon and keeps score after the decision.",
+          "words": "generated"
+        },
+        {
+          "id": "an-insight-nobody-can-use",
+          "situation": "An insight nobody can use",
+          "under": "Mentions it once in a channel and moves on.",
+          "justRight": "States the insight, who it is for, and the decision it should change.",
+          "over": "Campaigns for the insight after the decision has gone another way.",
+          "words": "generated"
+        },
+        {
+          "id": "knowledge-versus-position",
+          "situation": "Knowledge versus position",
+          "under": "Defers because you are junior, even when you have the fact.",
+          "justRight": "Puts the fact in front of the decision and does not pretend the org chart is the evidence.",
+          "over": "Treats every position as illegitimate and will not follow a decision you lost.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "adapt-for-the-customer",
+      "label": "adapt for the customer",
+      "principles": [
+        4003
+      ],
+      "rows": [
+        {
+          "principle": 4003,
+          "id": "big-plan-or-first-slice"
+        },
+        {
+          "id": "what-customers-need-has-changed",
+          "situation": "What customers need has changed",
+          "under": "Finishes the old plan because changing it would admit the plan was wrong.",
+          "justRight": "Changes the next slice to the new need and says what you are dropping.",
+          "over": "Chases the new request so fast that nothing already promised gets finished.",
+          "words": "generated"
+        },
+        {
+          "id": "a-partners-priority-shifts",
+          "situation": "A partner's priority shifts",
+          "under": "Tells them the roadmap is the roadmap.",
+          "justRight": "Asks what they now need this month, and moves one commitment to meet it.",
+          "over": "Rebuilds the whole plan around one partner and your other customers wait.",
+          "words": "generated"
+        },
+        {
+          "id": "clinging-to-last-quarters-bet",
+          "situation": "Clinging to last quarter's bet",
+          "under": "Keeps staffing it after the customer signal has turned.",
+          "justRight": "Stops or shrinks it, and moves the people onto the bet the signal now supports.",
+          "over": "Kills it on the first quiet week, before you know whether the signal is real.",
+          "words": "generated"
+        },
+        {
+          "id": "a-change-that-is-only-internal",
+          "situation": "A change that is only internal",
+          "under": "Calls an internal reorganization a customer response.",
+          "justRight": "Checks that the change removes a wait, a defect, or a step the customer feels.",
+          "over": "Refuses every internal improvement, including one that would let you adapt faster next time.",
+          "words": "generated"
+        },
+        {
+          "id": "speed-of-response",
+          "situation": "Speed of response",
+          "under": "Schedules the response for the next planning cycle by default.",
+          "justRight": "Responds this week with a small change, and saves the larger redesign for when you understand it.",
+          "over": "Promises a full new solution in the same week and misses both the promise and the current job.",
+          "words": "generated"
+        },
+        {
+          "id": "adapting-until-nothing-ships",
+          "situation": "Adapting until nothing ships",
+          "under": "Ships the original plan long after the customer has moved on.",
+          "justRight": "Ships the adapted slice on the date you reset, and tells the customer what changed.",
+          "over": "Resets the plan every few days, so the team never ships either version.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "good-vibes",
+      "label": "good vibes",
+      "principles": [
+        4004
+      ],
+      "rows": [
+        {
+          "principle": 4004,
+          "id": "bad-quarter-mood"
+        },
+        {
+          "id": "a-bad-week",
+          "situation": "A bad week",
+          "under": "Goes dark, or snaps, and leaves the team to guess how bad it is.",
+          "justRight": "Names the hard part, stays decent to people, and points at the next useful step.",
+          "over": "Insists everyone act upbeat and treats a worried question as bad attitude.",
+          "words": "generated"
+        },
+        {
+          "id": "celebrating-a-real-win",
+          "situation": "Celebrating a real win",
+          "under": "Moves straight to the next problem and the win disappears.",
+          "justRight": "Names who did it and what was hard, briefly, then gets back to work.",
+          "over": "Celebrates so long that the unfinished work becomes someone else's emergency.",
+          "words": "generated"
+        },
+        {
+          "id": "support-for-someone-struggling",
+          "situation": "Support for someone struggling",
+          "under": "Leaves them alone because you do not want to make it awkward.",
+          "justRight": "Offers a specific help, takes a piece if you can, and still expects the work to get done.",
+          "over": "Takes the work away permanently and calls that support.",
+          "words": "generated"
+        },
+        {
+          "id": "staying-positive-about-a-miss",
+          "situation": "Staying positive about a miss",
+          "under": "Pretends the miss did not happen so the mood stays light.",
+          "justRight": "Says the miss plainly and keeps the tone one a person can work in.",
+          "over": "Dwells on the miss until the room cannot function.",
+          "words": "generated"
+        },
+        {
+          "id": "credit-in-the-room",
+          "situation": "Credit in the room",
+          "under": "Lets the win pass with no names, so people feel invisible.",
+          "justRight": "Gives the credit where the work happened, in front of the team.",
+          "over": "Performs gratitude that praises everyone and informs no one.",
+          "words": "generated"
+        },
+        {
+          "id": "positivity-that-hides-the-problem",
+          "situation": "Positivity that hides the problem",
+          "under": "Uses optimism to avoid saying the project is off track.",
+          "justRight": "Stays constructive and still puts the risk on the table the day you know it.",
+          "over": "Polices tone so carefully that bad news arrives late.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "raise-the-bar",
+      "label": "raise the bar",
+      "principles": [
+        4005
+      ],
+      "rows": [
+        {
+          "principle": 4005,
+          "id": "setting-the-target"
+        },
+        {
+          "id": "setting-an-ambitious-target",
+          "situation": "Setting an ambitious target",
+          "under": "Sets a target the team can hit without changing how it works.",
+          "justRight": "Sets a target that requires a real change, and says what support comes with it.",
+          "over": "Sets a target nobody believes, and does not change the plan that would have to hit it.",
+          "words": "generated"
+        },
+        {
+          "id": "feedback-that-helps-someone-grow",
+          "situation": "Feedback that helps someone grow",
+          "under": "Says they are doing fine, or says they need to be better, with no example.",
+          "justRight": "Gives one example, the bar you want, and a chance to try it this week.",
+          "over": "Delivers a pile of feedback so large they cannot tell what to practice.",
+          "words": "generated"
+        },
+        {
+          "id": "a-team-that-is-comfortable",
+          "situation": "A team that is comfortable",
+          "under": "Protects the comfort and calls stability a high bar.",
+          "justRight": "Raises one expectation the customer will feel, and coaches the people who are not there yet.",
+          "over": "Raises every expectation at once and loses the people who were about to get there.",
+          "words": "generated"
+        },
+        {
+          "id": "who-is-on-the-team",
+          "situation": "Who is on the team",
+          "under": "Keeps a person who cannot meet the bar and works around them.",
+          "justRight": "Makes the bar clear, helps them reach it, and moves them if they cannot.",
+          "over": "Cycles people out so quickly that the bar is a threat instead of a standard.",
+          "words": "generated"
+        },
+        {
+          "id": "a-goal-the-team-does-not-believe",
+          "situation": "A goal the team does not believe",
+          "under": "Repeats the goal louder.",
+          "justRight": "Shows the path, cuts scope that does not serve it, and asks what would make the goal credible.",
+          "over": "Lowers the goal at the first doubt and calls the doubt alignment.",
+          "words": "generated"
+        },
+        {
+          "id": "the-bar-without-the-help",
+          "situation": "The bar without the help",
+          "under": "Announces the bar and leaves people to figure it out alone.",
+          "justRight": "Pairs the higher bar with time, an example, or a person who has done it.",
+          "over": "Does the work for them so the result looks raised and they did not grow.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "stay-humble",
+      "label": "stay humble",
+      "principles": [
+        4006
+      ],
+      "rows": [
+        {
+          "principle": 4006,
+          "id": "after-a-win"
+        },
+        {
+          "id": "the-day-after-a-win",
+          "situation": "After a win",
+          "under": "Treats the win as proof you should not be questioned.",
+          "justRight": "Says what worked, what was luck, and what you would change next time.",
+          "over": "Dismisses the win so completely that the team cannot learn what to repeat.",
+          "words": "generated"
+        },
+        {
+          "id": "credit-after-success",
+          "situation": "Credit after success",
+          "under": "Takes the credit, or fails to notice who else made it possible.",
+          "justRight": "Names the other people and keeps the part that was actually yours.",
+          "over": "Refuses any credit, so the people who depend on you cannot tell what you will own next time.",
+          "words": "generated"
+        },
+        {
+          "id": "a-criticism-of-the-win",
+          "situation": "A criticism of the win",
+          "under": "Defends the win and misses the useful part of the note.",
+          "justRight": "Asks what they saw, keeps the part that would make the next one better, and does not grovel.",
+          "over": "Rewrites the win as a failure to show you can take a note.",
+          "words": "generated"
+        },
+        {
+          "id": "grateful-and-specific",
+          "situation": "Grateful and specific",
+          "under": "Says thanks with no content, or says nothing.",
+          "justRight": "Thanks the specific person for the specific thing, and says what it unlocked.",
+          "over": "Performs gratitude in public for work you have not actually looked at.",
+          "words": "generated"
+        },
+        {
+          "id": "open-to-a-better-way",
+          "situation": "Open to a better way",
+          "under": "Closes the method because it just worked.",
+          "justRight": "Asks one person who does it differently what they would change, and tries the part that fits.",
+          "over": "Abandons a working method at the first alternative.",
+          "words": "generated"
+        },
+        {
+          "id": "humility-that-will-not-decide",
+          "situation": "Humility that will not decide",
+          "under": "Confuses confidence with arrogance and still needs a decision.",
+          "justRight": "Decides, and holds the decision lightly enough to update when the evidence changes.",
+          "over": "Refuses to decide because any choice might look proud.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "help-anyway",
+      "label": "help anyway",
+      "principles": [
+        5001
+      ],
+      "rows": [
+        {
+          "principle": 5001,
+          "id": "stuck-on-something"
+        },
+        {
+          "id": "a-teammate-stuck-on-other-work",
+          "situation": "A teammate stuck on other work",
+          "under": "Leaves them stuck because it is not your goal.",
+          "justRight": "Spends a bounded slice of time to unblock them, then returns to your own commitment.",
+          "over": "Takes over their goal and drops the result you owed.",
+          "words": "generated"
+        },
+        {
+          "id": "a-question-in-public",
+          "situation": "A question in public",
+          "under": "Waits for the official owner, who is not around, while the person stays blocked.",
+          "justRight": "Answers what you know, says what you do not, and points at the owner for the rest.",
+          "over": "Answers beyond what you know and sends them down the wrong path with confidence.",
+          "words": "generated"
+        },
+        {
+          "id": "hoarding-a-task",
+          "situation": "Hoarding a task",
+          "under": "Keeps a task that someone else needs to touch, because sharing it would slow you today.",
+          "justRight": "Shares the context and lets them do the part that is theirs, even if you could finish it faster.",
+          "over": "Hands off work you have not explained, and calls the dump collaboration.",
+          "words": "generated"
+        },
+        {
+          "id": "help-that-was-not-asked-for",
+          "situation": "Help that was not asked for",
+          "under": "Watches them struggle because they did not ask in the right way.",
+          "justRight": "Offers once, specifically, and accepts a no.",
+          "over": "Helps over the refusal and rewrites their work.",
+          "words": "generated"
+        },
+        {
+          "id": "your-own-goal-is-late",
+          "situation": "Your own goal is late",
+          "under": "Helps everyone else and surprises your stakeholders when your goal slips.",
+          "justRight": "Helps in a way that still lets you warn early if your own date moves.",
+          "over": "Refuses every request the moment your own date looks tight, including a ten-minute unblock.",
+          "words": "generated"
+        },
+        {
+          "id": "short-toes",
+          "situation": "Work that crosses into your area",
+          "under": "Treats their edit as an intrusion.",
+          "justRight": "Welcomes the useful change, reviews it, and keeps ownership of the outcome.",
+          "over": "Lets anyone edit anything so you never have to say no, and the result has no owner.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "global-efficiency",
+      "label": "global efficiency",
+      "principles": [
+        5003
+      ],
+      "rows": [
+        {
+          "principle": 5003,
+          "id": "novel-or-boring"
+        },
+        {
+          "id": "a-local-shortcut",
+          "situation": "A local shortcut",
+          "under": "Takes the shortcut and leaves the cost with every other team.",
+          "justRight": "Takes it only if the total time and energy go down, and says who pays if they do not.",
+          "over": "Bans the shortcut even when it is cheaper for everyone, because it was not invented centrally.",
+          "words": "generated"
+        },
+        {
+          "id": "a-clever-local-tool",
+          "situation": "A clever local tool",
+          "under": "Builds a tool that saves your team an hour and costs the community a day of exceptions.",
+          "justRight": "Uses the shared path, or fixes the shared path, instead of a private one.",
+          "over": "Forces a global tool that is worse than the local one for every team, including yours.",
+          "words": "generated"
+        },
+        {
+          "id": "optimizing-for-one-person",
+          "situation": "Optimizing for one person",
+          "under": "Special-cases one person's workflow and everyone else routes around it.",
+          "justRight": "Asks whether the change helps the broader group, and declines it when it does not.",
+          "over": "Refuses a one-person fix that would also remove a trap for everyone else.",
+          "words": "generated"
+        },
+        {
+          "id": "materials-time-and-energy",
+          "situation": "Materials, time, and energy",
+          "under": "Saves money and spends a week of people's time to do it, or the reverse, without counting.",
+          "justRight": "Counts the scarce thing, including time and energy, and picks the cheaper total.",
+          "over": "Optimizes a spreadsheet while the actual waste is in the work.",
+          "words": "generated"
+        },
+        {
+          "id": "a-boring-shared-solution",
+          "situation": "A boring shared solution",
+          "under": "Rebuilds a novel version because the shared one is dull.",
+          "justRight": "Uses the boring shared solution and improves it where it fails the broader group.",
+          "over": "Standardizes on a boring solution that does not do the job, and forbids the fix.",
+          "words": "generated"
+        },
+        {
+          "id": "local-efficiency-as-the-goal",
+          "situation": "Local efficiency as the goal",
+          "under": "Celebrates a local saving that moved the cost one team over.",
+          "justRight": "Reports the effect on the whole path, not only on your step.",
+          "over": "Ignores a real local waste because you cannot prove the global number today.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "belonging",
+      "label": "belonging",
+      "principles": [
+        5004
+      ],
+      "rows": [
+        {
+          "principle": 5004,
+          "id": "who-speaks"
+        },
+        {
+          "id": "who-gets-to-speak",
+          "situation": "Who gets to speak",
+          "under": "Lets the usual voices run the meeting and reads silence as comfort.",
+          "justRight": "Notices who has not spoken, asks for that view, and makes it safe to give it.",
+          "over": "Calls on people to represent a category, which puts them on the spot instead of in the work.",
+          "words": "generated"
+        },
+        {
+          "id": "a-norm-that-fits-one-life",
+          "situation": "A norm that fits one kind of life",
+          "under": "Sets the hours, the social plan, or the ritual around the people who already fit it.",
+          "justRight": "Changes the one norm that keeps a teammate from contributing, and keeps the bar on the work.",
+          "over": "Drops the work expectation so the norm never has to be discussed.",
+          "words": "generated"
+        },
+        {
+          "id": "a-room-that-all-looks-the-same",
+          "situation": "A room that all looks the same",
+          "under": "Does not notice, or notices and does nothing about how the next person gets in.",
+          "justRight": "Changes how you source and assess the next seat so the room can include someone the current pattern misses.",
+          "over": "Hires for the appearance of variety and does not give the person real work.",
+          "words": "generated"
+        },
+        {
+          "id": "an-offsite-that-excludes",
+          "situation": "An offsite that excludes",
+          "under": "Plans the event around one kind of body, budget, or family situation.",
+          "justRight": "Asks what would keep people out and changes that part before the invitations go.",
+          "over": "Cancels every gathering so there is no risk of excluding anyone, and the team never meets.",
+          "words": "generated"
+        },
+        {
+          "id": "a-slogan-with-no-change",
+          "situation": "A slogan with no change",
+          "under": "Puts the words on a page and leaves the meeting unchanged.",
+          "justRight": "Picks one behavior in the week's meetings that will be different, and checks whether it was.",
+          "over": "Builds a campaign about belonging while the person being talked about is not in the work.",
+          "words": "generated"
+        },
+        {
+          "id": "inclusion-versus-the-work",
+          "situation": "Inclusion versus the work",
+          "under": "Withholds a hard assignment so a person never has to struggle in public.",
+          "justRight": "Gives the hard assignment with the support to succeed, because contribution is what belonging is for.",
+          "over": "Uses the assignment as a test they are expected to fail.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "smallest-useful-step",
+      "label": "smallest useful step",
+      "principles": [
+        5005
+      ],
+      "rows": [
+        {
+          "principle": 5005,
+          "id": "big-change"
+        },
+        {
+          "id": "a-big-change-that-could-be-a-slice",
+          "situation": "A big change that could be a slice",
+          "under": "Builds the whole thing before anyone uses it.",
+          "justRight": "Ships the smallest slice that a real user can complete, and learns from that.",
+          "over": "Ships a slice so thin that the user cannot do the job, and calls the confusion learning.",
+          "words": "generated"
+        },
+        {
+          "id": "feedback-from-the-people-who-use-it",
+          "situation": "Feedback from the people who use it",
+          "under": "Asks the team what they think and never asks a user.",
+          "justRight": "Puts the slice in front of a user, or uses it yourself as they would, and changes the next slice.",
+          "over": "Rewrites the slice after every comment, including comments that do not bear on the goal.",
+          "words": "generated"
+        },
+        {
+          "id": "the-current-experience",
+          "situation": "The current experience",
+          "under": "Breaks the path people already rely on so the iteration can move faster.",
+          "justRight": "Keeps the current path working and adds the slice beside it until the new one is ready.",
+          "over": "Preserves every old path forever and the iteration never replaces anything.",
+          "words": "generated"
+        },
+        {
+          "id": "validating-the-slice",
+          "situation": "Validating the slice",
+          "under": "Starts the next slice before you know whether this one worked.",
+          "justRight": "Names what would prove the slice worked, checks that, and only then continues.",
+          "over": "Demands statistical certainty from a handful of uses and stalls.",
+          "words": "generated"
+        },
+        {
+          "id": "a-step-that-teaches-nothing",
+          "situation": "A step that teaches nothing",
+          "under": "Polishes an internal detail and calls it an iteration.",
+          "justRight": "Chooses a step that answers a real question about the end goal.",
+          "over": "Makes the step so large that the feedback arrives after the design is frozen.",
+          "words": "generated"
+        },
+        {
+          "id": "dogfooding-the-change",
+          "situation": "Dogfooding the change",
+          "under": "Ships to users a thing the team has not tried to use.",
+          "justRight": "Uses it for a real task first, fixes the break you hit, and then asks others.",
+          "over": "Refuses to show users anything until the team is fully satisfied with it.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "make-it-public",
+      "label": "make it public",
+      "principles": [
+        5006
+      ],
+      "rows": [
+        {
+          "principle": 5006,
+          "id": "writing-it-down"
+        },
+        {
+          "id": "a-decision-in-a-private-chat",
+          "situation": "A decision in a private chat",
+          "under": "Leaves the decision in the private thread and wonders why others redo it.",
+          "justRight": "Moves the decision to a place the people who need it can read, and links the reason.",
+          "over": "Pastes a private conversation, including asides that were never meant to be shared.",
+          "words": "generated"
+        },
+        {
+          "id": "a-project-only-the-team-can-see",
+          "situation": "A project only the team can see",
+          "under": "Defaults to a private project because that is easier.",
+          "justRight": "Makes it public unless there is a concrete reason not to, and writes that reason down.",
+          "over": "Makes public a project that contains customer data or a personnel matter.",
+          "words": "generated"
+        },
+        {
+          "id": "lowering-the-cost-of-helping",
+          "situation": "Lowering the cost of helping",
+          "under": "Asks for contributions and keeps the context in your head.",
+          "justRight": "Publishes the goal, the status, and how to propose a change.",
+          "over": "Publishes so much unfinished noise that contributing is harder than asking you.",
+          "words": "generated"
+        },
+        {
+          "id": "a-real-reason-to-stay-private",
+          "situation": "A real reason to stay private",
+          "under": "Uses privacy as the habit, not as a reason.",
+          "justRight": "Keeps private what would hurt a customer, a person, or an unannounced commitment, and makes the rest public.",
+          "over": "Announces that everything is public and then hides the actual decision anyway.",
+          "words": "generated"
+        },
+        {
+          "id": "an-issue-others-could-fix",
+          "situation": "An issue others could fix",
+          "under": "Files it where only your team will see it.",
+          "justRight": "Files it in the public tracker with enough detail that someone outside the team could help.",
+          "over": "Files a vague public issue and then ignores the people who show up.",
+          "words": "generated"
+        },
+        {
+          "id": "public-and-wrong",
+          "situation": "Public and wrong",
+          "under": "Leaves a public doc you know is stale because correcting it is awkward.",
+          "justRight": "Corrects it in public and says what changed.",
+          "over": "Deletes the history so the mistake is harder to see than the fix.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "break-down-silos",
+      "label": "break down silos",
+      "principles": [
+        6003
+      ],
+      "rows": [
+        {
+          "principle": 6003,
+          "id": "dawns-own-example"
+        },
+        {
+          "id": "us-and-them-language",
+          "situation": "Us and them language",
+          "under": "Talks about the other site, team, or project as the obstacle.",
+          "justRight": "Names the shared goal and the specific handoff, and drops the us-and-them wording.",
+          "over": "Polices other people's wording and never fixes the handoff.",
+          "words": "generated"
+        },
+        {
+          "id": "a-fact-another-group-needs",
+          "situation": "A fact another group needs",
+          "under": "Keeps it inside the team because they did not ask yet.",
+          "justRight": "Sends it to the people who will trip on it, before they trip.",
+          "over": "Broadcasts every detail to every group and the signal disappears.",
+          "words": "generated"
+        },
+        {
+          "id": "asking-when-you-do-not-know",
+          "situation": "Asking when you do not know",
+          "under": "Guesses, or waits, because asking would cross a boundary.",
+          "justRight": "Asks the person who knows, wherever they sit, and shares the answer back.",
+          "over": "Asks so many groups that you create a second project out of the question.",
+          "words": "generated"
+        },
+        {
+          "id": "a-silo-that-formed-on-its-own",
+          "situation": "A silo that formed on its own",
+          "under": "Treats the silo as inevitable and routes around it.",
+          "justRight": "Puts one regular touch in place with the other group and uses it for a real decision.",
+          "over": "Dissolves every working group in the name of unity, and the work loses its owners.",
+          "words": "generated"
+        },
+        {
+          "id": "a-win-told-as-only-yours",
+          "situation": "A win told as only yours",
+          "under": "Reports the win as your team's, and leaves out the group that made it possible.",
+          "justRight": "Reports it as a shared result and says what each side did.",
+          "over": "Refuses to name any team, so nobody knows who to ask next time.",
+          "words": "generated"
+        },
+        {
+          "id": "we-succeed-or-fail-together",
+          "situation": "We succeed or fail together",
+          "under": "Celebrates your date and ignores that the other group will miss theirs because of you.",
+          "justRight": "Moves your date, or your scope, when that is what keeps the joint outcome intact.",
+          "over": "Holds your work until every other group is ready, including groups this release does not need.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "no-surprises",
+      "label": "no surprises",
+      "principles": [
+        6005
+      ],
+      "rows": [
+        {
+          "principle": 6005,
+          "id": "dawns-own-example"
+        },
+        {
+          "id": "a-date-you-gave",
+          "situation": "A date you gave",
+          "under": "Misses it and lets people find out when the work is not there.",
+          "justRight": "Tells them as soon as you know, with the new date you can actually hold.",
+          "over": "Sends daily warnings before you know anything, and they stop reading them.",
+          "words": "generated"
+        },
+        {
+          "id": "a-goal-with-no-date",
+          "situation": "A goal with no date",
+          "under": "Leaves the goal undated because the date would be uncomfortable.",
+          "justRight": "Puts a date on it, or a date for when the date will be set, and writes it where stakeholders look.",
+          "over": "Invents a date you have no plan to hit, so the surprise is merely delayed.",
+          "words": "generated"
+        },
+        {
+          "id": "you-know-it-will-slip",
+          "situation": "You know it will slip",
+          "under": "Waits for the date itself, hoping you will recover.",
+          "justRight": "Says it the day you know, including what will still arrive and what will not.",
+          "over": "Declares a slip at the first hard day, before you know whether the date is actually lost.",
+          "words": "generated"
+        },
+        {
+          "id": "a-surprise-in-the-review",
+          "situation": "A surprise in the review",
+          "under": "Saves the bad news for the meeting so you can explain it live.",
+          "justRight": "Sends the news before the meeting, and uses the meeting to decide what to do.",
+          "over": "Sends a flood of minor updates so the one real surprise is harder to see.",
+          "words": "generated"
+        },
+        {
+          "id": "a-date-for-the-date",
+          "situation": "A date for the date",
+          "under": "Says you will know later and does not say when.",
+          "justRight": "Commits to the day you will either give the date or explain what is still unknown.",
+          "over": "Schedules a meeting to schedule the meeting, and calls that a date.",
+          "words": "generated"
+        },
+        {
+          "id": "delivering-when-you-said",
+          "situation": "Delivering when you said",
+          "under": "Quietly redefines done so the original date looks met.",
+          "justRight": "Delivers what you named, or renegotiates the meaning of done before the date, not after.",
+          "over": "Hits the date by handing over something the other person cannot use, with no warning.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "respect-time",
+      "label": "respect time",
+      "principles": [
+        6012
+      ],
+      "rows": [
+        {
+          "principle": 6012,
+          "id": "dawns-own-example"
+        },
+        {
+          "id": "a-meeting-that-could-be-a-note",
+          "situation": "A meeting that could be a note",
+          "under": "Holds the meeting because it is on the calendar.",
+          "justRight": "Sends the note, asks for the decision in writing, and cancels the meeting.",
+          "over": "Refuses every meeting, including the one where a decision actually requires the room.",
+          "words": "generated"
+        },
+        {
+          "id": "a-message-that-wastes-the-reader",
+          "situation": "A message that wastes the reader",
+          "under": "Sends a brain dump and lets three people hunt for the ask.",
+          "justRight": "Puts the ask, the deadline, and the context they need in the first lines.",
+          "over": "Over-edits a two-line ask for an hour and the decision window closes.",
+          "words": "generated"
+        },
+        {
+          "id": "spending-money-to-save-time",
+          "situation": "Spending money to save time",
+          "under": "Saves the money and spends a week of people on a problem a purchase would remove.",
+          "justRight": "Spends the money when the time it gives back is the scarcer resource, and says why.",
+          "over": "Spends freely and calls every purchase a time saving, including ones that create more work.",
+          "words": "generated"
+        },
+        {
+          "id": "overtime-two-weeks-running",
+          "situation": "Overtime two weeks running",
+          "under": "Schedules the second week as if the first had no cost.",
+          "justRight": "Treats the second week as exceptional, cuts scope, and puts recovery time on the calendar.",
+          "over": "Bans any extra hour even when a one-time push would prevent a larger mess.",
+          "words": "generated"
+        },
+        {
+          "id": "consuming-other-peoples-time",
+          "situation": "Consuming other people's time",
+          "under": "Drops by, calls, and forwards threads before you have made the question clear.",
+          "justRight": "Does the thinking first, then asks for the smallest slice of their time that you still need.",
+          "over": "Will not ask at all, and burns your own week on something they could have answered.",
+          "words": "generated"
+        },
+        {
+          "id": "recovery-as-part-of-the-work",
+          "situation": "Recovery as part of the work",
+          "under": "Praises the person who skipped recovery and quietly expects the same.",
+          "justRight": "Plans the recovery when you plan the overtime, and does not treat it as a favor.",
+          "over": "Protects recovery by slipping a commitment you could have reduced in scope instead.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "scrappy-not-crappy",
+      "label": "scrappy not crappy",
+      "principles": [
+        6013
+      ],
+      "rows": [
+        {
+          "principle": 6013,
+          "id": "dawns-own-example"
+        },
+        {
+          "id": "a-cheap-version-that-does-not-work",
+          "situation": "A cheap version that does not work",
+          "under": "Ships the lean version and leaves the user with a result that is not fit for the job.",
+          "justRight": "Spends what the job actually requires, and nothing past that.",
+          "over": "Rebuilds it lavishly because the first version was embarrassing, past the point of fit.",
+          "words": "generated"
+        },
+        {
+          "id": "gold-plating",
+          "situation": "Gold plating",
+          "under": "Adds finish the job does not need because the lean version feels exposed.",
+          "justRight": "Stops when it is fit for purpose and writes down what you refused to add.",
+          "over": "Calls every finish waste, including the one a user needs to complete the task.",
+          "words": "generated"
+        },
+        {
+          "id": "naming-the-tension",
+          "situation": "Naming the tension",
+          "under": "Picks lean or polished and does not say what you gave up.",
+          "justRight": "Says what fit for purpose requires here, and what you are leaving out on purpose.",
+          "over": "Debates the philosophy and does not decide the scope.",
+          "words": "generated"
+        },
+        {
+          "id": "refining-past-enough",
+          "situation": "Refining past enough",
+          "under": "Keeps refining after it already does the job and nothing more is needed.",
+          "justRight": "Does one more pass only for a gap a real user would hit, then stops.",
+          "over": "Stops at the first draft and calls the gaps a style.",
+          "words": "generated"
+        },
+        {
+          "id": "lean-that-breaks-the-user",
+          "situation": "Lean that breaks the user",
+          "under": "Saves the effort and hands the user the sharp edge.",
+          "justRight": "Spends the effort on the edge the user touches, and stays lean everywhere else.",
+          "over": "Pads every edge and the work is no longer lean or late.",
+          "words": "generated"
+        },
+        {
+          "id": "fit-for-this-purpose",
+          "situation": "Fit for this purpose",
+          "under": "Reuses a scrappy shortcut in a place where the purpose is unforgiving.",
+          "justRight": "Matches the effort to this purpose, which may mean more care than the last job needed.",
+          "over": "Applies the most careful standard from the last job to a throwaway experiment.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "product-not-the-science",
+      "label": "product not the science",
+      "principles": [
+        6014
+      ],
+      "rows": [
+        {
+          "principle": 6014,
+          "id": "dawns-own-example"
+        },
+        {
+          "id": "an-elegant-method",
+          "situation": "An elegant method",
+          "under": "Falls in love with the method and does not check whether the customer can feel the result.",
+          "justRight": "Uses the method only as far as it makes the product better, and stops there.",
+          "over": "Drops a method that is working because it is not interesting anymore.",
+          "words": "generated"
+        },
+        {
+          "id": "the-experiment-becomes-the-point",
+          "situation": "The experiment becomes the point",
+          "under": "Extends the study after it has already answered the product question.",
+          "justRight": "Ends the study when the product decision is clear, and writes down the decision.",
+          "over": "Skips the study and guesses, then calls the guess customer love.",
+          "words": "generated"
+        },
+        {
+          "id": "a-review-of-the-method",
+          "situation": "A review of the method",
+          "under": "Spends the review on the technique and never asks what the user will do.",
+          "justRight": "Starts from the user's job and lets the method defend itself only where it changes that job.",
+          "over": "Bans the method because it looks like research, even where it is the right tool.",
+          "words": "generated"
+        },
+        {
+          "id": "science-in-service-of-the-product",
+          "situation": "Science in service of the product",
+          "under": "Treats rigor as a distraction from shipping.",
+          "justRight": "Uses the rigor to choose a design the customer will love, then ships that design.",
+          "over": "Ships the research notes instead of the product change.",
+          "words": "generated"
+        },
+        {
+          "id": "keeping-the-customer-in-the-room",
+          "situation": "Keeping the customer in the room",
+          "under": "Debates the model after the customer's pain is already obvious.",
+          "justRight": "Names the customer pain, then picks the smallest rigorous step that would address it.",
+          "over": "Quotes the customer and skips the thinking that would turn the quote into a product.",
+          "words": "generated"
+        },
+        {
+          "id": "a-shortcut-that-hurts-the-product",
+          "situation": "A shortcut that hurts the product",
+          "under": "Takes a sloppy shortcut and hopes the customer will not notice.",
+          "justRight": "Takes a shortcut only if the product the customer touches still holds up.",
+          "over": "Refuses every shortcut, including one that would get a better product to them sooner.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "match-the-rigor",
+      "label": "match the rigor",
+      "principles": [
+        6015
+      ],
+      "rows": [
+        {
+          "principle": 6015,
+          "id": "dawns-own-example"
+        },
+        {
+          "id": "early-work-treated-as-certified",
+          "situation": "Early work treated as certified",
+          "under": "Wraps an experiment in the full release process and learns nothing this month.",
+          "justRight": "Uses a light process, labels the work as early, and keeps it away from the certified path.",
+          "over": "Treats the experiment as if a failure would be harmless in the certified system.",
+          "words": "generated"
+        },
+        {
+          "id": "a-certified-change-treated-as-a-sketch",
+          "situation": "A certified change treated as a sketch",
+          "under": "Edits a certified system with the habits of a prototype.",
+          "justRight": "Uses the checks that system requires, and does not borrow speed from the research bench.",
+          "over": "Adds research-grade ceremony on top of the certified checks and misses the real gate.",
+          "words": "generated"
+        },
+        {
+          "id": "two-worlds-in-one-week",
+          "situation": "Two worlds in one week",
+          "under": "Uses whichever habit you used last, regardless of which world this task is in.",
+          "justRight": "Says which world this task is in before you start, and switches habits on purpose.",
+          "over": "Writes a new process for the switch and spends the week on the process.",
+          "words": "generated"
+        },
+        {
+          "id": "a-process-from-the-wrong-world",
+          "situation": "A process from the wrong world",
+          "under": "Copies the certified checklist into the lab, or the lab's shortcuts into the certified line.",
+          "justRight": "Keeps a short list of what differs, and follows the list for this task.",
+          "over": "Maintains two full process empires and makes people serve the process instead of the work.",
+          "words": "generated"
+        },
+        {
+          "id": "rigor-that-matches-the-risk",
+          "situation": "Rigor that matches the risk",
+          "under": "Applies one rigor to every task because it is simpler to remember.",
+          "justRight": "Raises the rigor when the harm of being wrong goes up, and lowers it when you are still learning.",
+          "over": "Argues about the classification for longer than the task would have taken.",
+          "words": "generated"
+        },
+        {
+          "id": "conflating-the-worlds",
+          "situation": "Conflating the worlds",
+          "under": "Reports an experiment and a certified result in the same breath, as if they were the same kind of evidence.",
+          "justRight": "Labels which is which, every time, including in the summary a leader will skim.",
+          "over": "Separates them so aggressively that a lesson from the lab is not allowed to inform the product.",
           "words": "generated"
         }
       ]

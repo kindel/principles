@@ -5,7 +5,8 @@ The `blog` field in data/teaching/<company> renders as Further reading in
 Porridge (kindel/porridge#46). Tig's posts stay, and each list also needs
 one external source: the published principles, a shareholder letter, a book,
 or an essay or talk by someone who shaped the practice. See SCHEMA.md.
-Amazon is the classic 14. Any Company reuses those lists.
+Amazon is the classic 14. Any Company reuses those lists, and authors
+Intentional About Culture because that counterpart is not in this corpus.
 """
 
 import json
@@ -16,9 +17,9 @@ from urllib.parse import urlparse
 TEACH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                      "data", "teaching")
 BLOG_HOST = "blog.kindel.com"
-# 14 principle files plus the set index. Intentional About Culture has no
-# counterpart in this corpus, so the generic directory is the same size.
-EXPECTED = {"amazon": 15, "generic": 15}
+# Amazon: 14 principle files plus the set index. Any Company adds
+# Intentional About Culture, which has no file to copy.
+EXPECTED = {"amazon": 15, "generic": 16}
 
 
 def lists(company=None):

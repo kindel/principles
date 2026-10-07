@@ -500,12 +500,45 @@ def validate_facets(facets, principle_rows, errs):
                 errs.append("%s: row principle %d is not in this facet's principles"
                             % (where, rpid))
 
-        if rows and n_source == 0:
+        # A source ref points at human rows. A principle with no record rows
+        # (unpublished calibration) has nothing to point at. A facet whose
+        # every known member is in that state may be generated rows only.
+        # A member that has record rows still requires a source ref.
+        known = [pid for pid in listed if pid in principle_rows]
+        members_with_rows = [pid for pid in known if principle_rows[pid]]
+        if rows and n_source == 0 and (not known or members_with_rows):
             errs.append("%s: must list at least one source ref" % where)
 
         check_style(f, where, errs)
 
     return principle_to_facets
+
+
+def validate_calibration_coverage(facets, principle_rows, principle_to_facets, names, errs):
+    """Every principle must have generated calibration rows.
+
+    Porridge's table is those rows. A principle with none is an empty page,
+    not an unpublished draft. Record rows may still be empty when the company
+    marks calibration unpublished. That flag does not excuse a missing table.
+    """
+    if not facets:
+        return
+    generated = set()
+    for f in facets.get("facets", []):
+        fid = f.get("id")
+        rows = f.get("rows") or []
+        if any(isinstance(row, dict) and is_inline_generated(row)
+               and row.get("words") == "generated" and row.get("under")
+               for row in rows):
+            generated.add(fid)
+    for pid in sorted(principle_rows):
+        label = names.get(pid, str(pid))
+        facs = principle_to_facets.get(pid) or []
+        if not facs:
+            errs.append("%s has no calibration table" % label)
+        elif not any(fid in generated for fid in facs):
+            errs.append("%s has no calibration table (on %s, which has no generated rows)"
+                        % (label, ", ".join(facs)))
 
 
 def validate_company(company, items, errs):
@@ -864,7 +897,9 @@ def _validate_one_map(data, name, by_company, principle_to_facets, errs):
         for tid in target_ids:
             if tid in target_recs:
                 counterpart.extend(principle_to_facets.get(tid, []))
-        if sorted(set(counterpart)) != actual:
+        # A pair with no target has no facet set to copy. Its facets are
+        # authored, and the check above already matches them to the map.
+        if target_ids and sorted(set(counterpart)) != actual:
             errs.append("%s: facets are not the target's facets" % pw)
         flags = pair.get("rowFlags")
         if not isinstance(flags, list):
@@ -883,7 +918,9 @@ def _validate_one_map(data, name, by_company, principle_to_facets, errs):
             if in_corpus is not False or not _nonempty_str(public):
                 errs.append("%s: a pair with no target id needs publicCounterpart "
                             "and inThisCorpus false" % pw)
-            _reject_unmapped_teaching(data, source_id, rec, pw, errs)
+            # No target to copy. A teaching file here is authored from the
+            # principle's own definition. validate_teaching checks that file.
+            # It is not a reused document and it is not diffed against a target.
             continue
         if len(target_ids) != 1 or target_ids[0] not in target_recs:
             errs.append("%s: teaching reuse needs exactly one target principle" % pw)
@@ -897,13 +934,6 @@ def _validate_one_map(data, name, by_company, principle_to_facets, errs):
         errs.append("%s: %s principle %s has no pair" % (where, source_id, sid))
     _compare_reused_teaching(
         data, source_id, target_id, comparable, renames, edits, where, errs)
-
-
-def _reject_unmapped_teaching(data, source_id, rec, where, errs):
-    path = os.path.join(data, "teaching", source_id, rec["slug"] + ".json")
-    if os.path.exists(path):
-        errs.append("%s: %s has no in-corpus counterpart, so it must not have teaching"
-                    % (where, rec.get("slug")))
 
 
 def _compare_reused_teaching(data, source_id, target_id, comparable, renames, edits, where, errs):
@@ -1008,6 +1038,15 @@ def main():
     # Validate facets.json
     facets = load_facets(errs)
     principle_to_facets = validate_facets(facets, principle_rows, errs)
+    names = {}
+    for company, items in by_company.items():
+        for _, rec in items:
+            pid = rec.get("id")
+            if isinstance(pid, int) and not isinstance(pid, bool):
+                names[pid] = "%s/%s (%d %s)" % (
+                    company, rec.get("slug"), pid, rec.get("name"))
+    validate_calibration_coverage(
+        facets, principle_rows, principle_to_facets, names, errs)
     validate_derivation_maps(by_company, principle_to_facets, errs)
 
     index_path = os.path.join(DATA, "index.json")

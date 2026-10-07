@@ -24,8 +24,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
 
 from companies import COMPANY_META
 from validate import (expected_index, load_facets, load_records, validate_company,
-                      validate_derivation_maps, validate_facets, validate_record,
-                      validate_teaching)
+                      validate_calibration_coverage, validate_derivation_maps,
+                      validate_facets, validate_record, validate_teaching)
 
 
 def row(i, **kw):
@@ -443,6 +443,36 @@ class FacetMapTest(unittest.TestCase):
         }])
         errs = self.check(f)
         self.assertTrue(any("at least one source ref" in e for e in errs), errs)
+
+    def test_a_generated_only_facet_passes_when_no_record_rows_exist(self):
+        # Unpublished calibration keeps rows: []. There is no human row to
+        # reference, so the generated table is the whole facet.
+        f = facet(principles=[8015], rows=[{
+            "id": "a-new-situation",
+            "situation": "A new situation",
+            "under": "Does not own it.",
+            "justRight": "Owns it and finishes it.",
+            "over": "Takes over everyone else's work.",
+            "words": "generated",
+        }])
+        errs = []
+        validate_facets({"version": 1, "facets": [f]}, {8015: set()}, errs)
+        self.assertEqual([], errs)
+
+    def test_coverage_rejects_a_principle_with_no_generated_rows(self):
+        bare = facet()
+        errs = []
+        principle_to_facets = validate_facets(
+            {"version": 1, "facets": [bare]}, self.ROWS, errs)
+        self.assertEqual([], errs)
+        validate_calibration_coverage(
+            {"version": 1, "facets": [bare]},
+            {1001: {"row-0"}, 1002: set()},
+            principle_to_facets,
+            {1001: "amazon/one (1001 One)", 1002: "amazon/two (1002 Two)"},
+            errs)
+        self.assertTrue(any("1002" in e and "no calibration table" in e for e in errs), errs)
+        self.assertTrue(any("1001" in e and "no calibration table" in e for e in errs), errs)
 
     def test_an_inline_row_must_be_marked_generated(self):
         f = facet(rows=[{

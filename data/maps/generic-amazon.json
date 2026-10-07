@@ -101,9 +101,11 @@
       "targetIds": [
         1004
       ],
-      "facets": [],
+      "facets": [
+        "are-right-a-lot"
+      ],
       "rowFlags": [],
-      "note": "Same name. Amazon Are Right, A Lot has no facet, so there is no calibration table and no question bank. Teaching and Further reading are reused."
+      "note": "Same name. Both sit on are-right-a-lot. The table is judgment, other perspectives, and changing your mind when the fact shows up. Teaching and Further reading stay the reused text."
     },
     {
       "sourceId": 8005,
@@ -241,9 +243,11 @@
       "sourceSlug": "intentional-about-culture",
       "sourceName": "Intentional About Culture",
       "targetIds": [],
-      "facets": [],
+      "facets": [
+        "intentional-about-culture"
+      ],
       "rowFlags": [],
-      "note": "The public Amazon counterpart is Strive to be Earth's Best Employer. This repository's Amazon set is the classic 14 and does not include that principle, so there is no facet, teaching, or Further reading to reuse. Nothing was invented. Hire and Develop the Best was not used as a substitute.",
+      "note": "The public counterpart is Strive to be Earth's Best Employer. That principle is not in this corpus, so there is no teaching to copy. The facet, the calibration rows, and the teaching were authored from this principle's definition. Hire and Develop the Best was not used as a substitute.",
       "publicCounterpart": "Strive to be Earth's Best Employer",
       "inThisCorpus": false
     }

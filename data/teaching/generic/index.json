@@ -82,6 +82,11 @@
       "id": 8014,
       "slug": "deliver-results",
       "file": "deliver-results.json"
+    },
+    {
+      "id": 8015,
+      "slug": "intentional-about-culture",
+      "file": "intentional-about-culture.json"
     }
   ],
   "blog": [
