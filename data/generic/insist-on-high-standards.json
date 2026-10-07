@@ -1,0 +1,16 @@
+{
+  "id": 8007,
+  "slug": "insist-on-high-standards",
+  "company": "generic",
+  "name": "Insist on High Standards",
+  "sort": 7,
+  "definition": "Leaders set high standards and intentionally work to improve them. They deliver high-quality products, services, and mechanisms without confusing excellence with unreasonable demands. They build quality upstream, prevent defects from moving downstream, and ensure fixes stay fixed. They automate repetitive work so people have more capacity to improve what comes next.",
+  "terms": [
+    {
+      "id": "insist-on-high-standards",
+      "label": "insist on high standards",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}

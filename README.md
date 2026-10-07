@@ -96,16 +96,20 @@ Unless you know better ones.
 
 ## The sets
 
-An app picks a company and shows only that company's set. The sets today are
-Amazon's Leadership Principles, Arm's 10x Mindset, the Leadership Principles of
-Coupang and Delivery Hero, GitLab's CREDIT values, Dawn Aerospace's Company
-Tenets, and Toyota's The Toyota Way.
+An app picks a company and shows only that company's set. The first company in
+the manifest is the default. That is the generic set, display name Any Company,
+id `generic`. The other sets are Amazon's Leadership Principles, Arm's 10x
+Mindset, the Leadership Principles of Coupang and Delivery Hero, GitLab's
+CREDIT values, Dawn Aerospace's Company Tenets, and Toyota's The Toyota Way.
 
-Every set is the company's own text, published here with the company's
-permission. Usually that is a page the company publishes itself. It can also be
-a first-party document the company has authorized us to publish, an internal
-handbook or wiki page, named in `source` instead of a URL. What it is never is
-somebody else's account of a set, however faithful the reproduction looks.
+The generic set is repository-authored text. Its source is
+https://github.com/kindel/principles/issues/71, and its definitions are
+quotations of that issue. Every other set is the company's own text, published
+here with the company's permission. Usually that is a page the company
+publishes itself. It can also be a first-party document the company has
+authorized us to publish, an internal handbook or wiki page, named in `source`
+instead of a URL. What it is never is somebody else's account of a set, however
+faithful the reproduction looks.
 
 Where a company has written its own calibration, that is transcribed too and
 marked `words: "quoted"`, so the company's words and ours never blur together
@@ -118,6 +122,7 @@ reason.
 data/index.json              manifest, generated, version 5
 data/facets.json             cross-company facet map
 data/teaching/<company>/     teaching prose (Amazon only today)
+data/generic/<slug>.json       one generic principle (display name Any Company)
 data/amazon/<slug>.json        one Amazon principle
 data/arm/<slug>.json           one Arm factor
 data/coupang/<slug>.json       one Coupang principle

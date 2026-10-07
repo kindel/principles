@@ -1,0 +1,16 @@
+{
+  "id": 8002,
+  "slug": "earn-trust",
+  "company": "generic",
+  "name": "Earn Trust",
+  "sort": 2,
+  "definition": "Leaders listen attentively, speak candidly, and treat others respectfully. They demonstrate that others' ideas can change their minds. They are openly self-critical, share bad news promptly, and ask for help before problems become surprises. Exceptional results do not excuse behavior that damages trust.",
+  "terms": [
+    {
+      "id": "earn-trust",
+      "label": "earn trust",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}

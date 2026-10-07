@@ -76,6 +76,11 @@ def load_rows():
 
 class CorpusTest(unittest.TestCase):
 
+    def test_the_first_company_is_the_default_set(self):
+        self.assertEqual("generic", next(iter(COMPANY_META)))
+        self.assertEqual("Any Company", COMPANY_META["generic"]["name"])
+        self.assertEqual("unpublished", COMPANY_META["generic"]["calibration"])
+
     def test_the_corpus_validates(self):
         with redirect_stdout(io.StringIO()) as out:
             code = validate.main()
@@ -224,6 +229,11 @@ class DocumentationTest(unittest.TestCase):
 
     def test_schema_names_the_manifest_version(self):
         self.assertIn("`version` in the manifest is 5", self.schema)
+
+    def test_schema_names_the_repository_authored_set(self):
+        self.assertIn("repository authored", self.schema)
+        self.assertIn("issue 71", self.schema)
+        self.assertIn("non-empty string", self.schema)
 
     def test_schema_does_not_treat_a_source_ref_as_an_app_row(self):
         # A refs-only facet is valid source. It is not the porridge table.

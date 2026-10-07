@@ -1,0 +1,16 @@
+{
+  "id": 8014,
+  "slug": "deliver-results",
+  "company": "generic",
+  "name": "Deliver Results",
+  "sort": 14,
+  "definition": "Leaders focus on the right inputs and deliver the right results, at the right quality, in a timely fashion. They meet commitments, respond to setbacks, and communicate risks early. Results matter, and so does how they are achieved. Hours worked, effort, and tenure are not substitutes for meaningful delivery.",
+  "terms": [
+    {
+      "id": "deliver-results",
+      "label": "deliver results",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}

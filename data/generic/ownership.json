@@ -1,0 +1,16 @@
+{
+  "id": 8003,
+  "slug": "ownership",
+  "company": "generic",
+  "name": "Ownership",
+  "sort": 3,
+  "definition": "Leaders act as owners of the whole company, not just their work or team. They think long-term, seek context before making assumptions, and take responsibility for the systems and conditions that shape outcomes. They help struggling colleagues, drive work forward, and never say, \"That's not my job.\" They put company success ahead of empire building.",
+  "terms": [
+    {
+      "id": "ownership",
+      "label": "ownership",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}

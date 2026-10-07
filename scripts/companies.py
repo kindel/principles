@@ -3,9 +3,10 @@
 
 A record knows its own company id. This adds the public name, the title of
 the set, and where the definitions are transcribed from. `source` is a URL when
-the company publishes the set itself and the name of the first-party document
-when it does not; see Sourcing in SCHEMA.md. It lives here so build_index.py
-and validate.py cannot disagree about it.
+the company publishes the set itself, the name of the first-party document
+when it does not, and the issue URL when this repository authored the set.
+See Sourcing in SCHEMA.md. It lives here so build_index.py and validate.py
+cannot disagree about it.
 
 `block` is the company's reserved range of principle ids, a thousand numbers
 starting at the block. A principle id is globally unique, so an app that looks
@@ -19,6 +20,22 @@ principle keeps the id it was given even if it is renamed or resorted.
 import collections
 
 COMPANY_META = collections.OrderedDict([
+    # First company is the default set. The id stays `generic` if the
+    # display name changes. `name` is the only display name.
+    ("generic", {
+        "block": 8000,
+        "name": "Any Company",
+        "set": "Leadership Principles",
+        "source": "https://github.com/kindel/principles/issues/71",
+        "preamble": (
+            "**Everyone is a leader.** These principles apply to every person, "
+            "not just people managers. They guide judgment rather than replace it. "
+            "They remain open to revision: *unless you know better.*"
+        ),
+        # Definitions only. Calibration is not written. Empty rows are allowed
+        # for this company and nowhere else. Do not invent rows to clear this.
+        "calibration": "unpublished",
+    }),
     ("amazon", {
         "block": 1000,
         "name": "Amazon",

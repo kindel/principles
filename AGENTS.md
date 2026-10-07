@@ -68,7 +68,9 @@ Do all of this, in this repo first:
 1. Claim the next free `block` in `scripts/companies.py`.
 2. Write `data/<company>/<slug>.json` records. Definitions are quotations.
    Calibration rows are authored unless the company published them, in
-   which case mark `words: "quoted"`.
+   which case mark `words: "quoted"`. A set that is definitions only sets
+   `calibration` to `unpublished` in `scripts/companies.py` and ships
+   `rows: []`. Do not invent rows to clear that flag.
 3. If the company publishes lenses, add `group` and an entry in
    `GROUP_BY_COMPANY` in `scripts/validate.py`.
 4. Map facets only where the behavior is the same, including slices.

@@ -1,0 +1,16 @@
+{
+  "id": 8009,
+  "slug": "think-big",
+  "company": "generic",
+  "name": "Think Big",
+  "sort": 9,
+  "definition": "Leaders create and communicate audacious direction that inspires results. They look around corners for better ways to serve customers. They connect ambition with practical execution and recognize the value of colleagues whose strengths are in focused delivery, detail, and disciplined operation.",
+  "terms": [
+    {
+      "id": "think-big",
+      "label": "think big",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 8005,
+  "slug": "learn-and-be-curious",
+  "company": "generic",
+  "name": "Learn and Be Curious",
+  "sort": 5,
+  "definition": "Leaders are never done learning. They ask questions, explore unfamiliar possibilities, and take action to deepen their understanding. They remain curious about other people's perspectives and carry learning into how they work.",
+  "terms": [
+    {
+      "id": "learn-and-be-curious",
+      "label": "learn and be curious",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}

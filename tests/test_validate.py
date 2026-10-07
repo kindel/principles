@@ -131,6 +131,36 @@ class ValidatorTest(unittest.TestCase):
     def test_a_record_with_no_rows_is_rejected(self):
         self.assertCaught(record(rows=[]), "has no rows")
 
+    # Definitions can ship before calibration. Only a company marked
+    # unpublished gets that pass. Amazon still fails above.
+    def test_unpublished_calibration_may_have_no_rows(self):
+        rec = record(company="generic", rows=[])
+        rec["id"] = 8001
+        self.assertClean(rec)
+
+    def test_a_string_preamble_is_projected(self):
+        errs = []
+        index = expected_index({cid: [] for cid in COMPANY_META}, {}, errs)
+        self.assertEqual([], errs)
+        generic = next(c for c in index["companies"] if c["id"] == "generic")
+        self.assertTrue(generic["preamble"].startswith("**Everyone is a leader.**"))
+        amazon = next(c for c in index["companies"] if c["id"] == "amazon")
+        self.assertNotIn("preamble", amazon)
+
+    def test_a_non_string_preamble_is_rejected_and_not_projected(self):
+        saved = COMPANY_META["generic"].get("preamble")
+        COMPANY_META["generic"]["preamble"] = ["not", "a", "paragraph"]
+        try:
+            errs = []
+            index = expected_index({cid: [] for cid in COMPANY_META}, {}, errs)
+            self.assertTrue(
+                any("preamble must be a non-empty string" in e for e in errs),
+                errs)
+            generic = next(c for c in index["companies"] if c["id"] == "generic")
+            self.assertNotIn("preamble", generic)
+        finally:
+            COMPANY_META["generic"]["preamble"] = saved
+
     def test_one_row_is_enough(self):
         self.assertClean(record(rows=[row(0)]))
 

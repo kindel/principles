@@ -1,0 +1,16 @@
+{
+  "id": 8011,
+  "slug": "frugality",
+  "company": "generic",
+  "name": "Frugality",
+  "sort": 11,
+  "definition": "Leaders accomplish more with less. They use constraints to drive resourcefulness, invention, and automation. They invest where it matters and distinguish productive constraints from unreasonable demands. Growing headcount, budget, or fixed expense is not an achievement in itself.",
+  "terms": [
+    {
+      "id": "frugality",
+      "label": "frugality",
+      "kind": "alias"
+    }
+  ],
+  "rows": []
+}

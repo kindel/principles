@@ -124,6 +124,21 @@ def _nonempty_str(value):
     return isinstance(value, str) and bool(value.strip())
 
 
+def take_preamble(cid, meta, errs):
+    """The opening paragraph, or None when the company has none.
+
+    A present value that is not a non-empty string is an error. Callers
+    omit the key rather than copy the bad value into the manifest.
+    """
+    if "preamble" not in meta:
+        return None
+    value = meta["preamble"]
+    if not _nonempty_str(value):
+        errs.append("%s: preamble must be a non-empty string" % cid)
+        return None
+    return value
+
+
 def validate_blog(items, where, errs):
     """Further reading is a non-empty list of title, url, and note."""
     if not isinstance(items, list) or not items:
@@ -300,7 +315,11 @@ def validate_record(company, filename, rec, errs):
     # many rows past one is editorial and belongs in review: a company that
     # published a single triple gets one, and a principle that earns 15
     # situations gets 15.
-    if not rows:
+    # A principle with no rows is not modeled. The one exception is a company
+    # marked calibration "unpublished": the definitions are published and the
+    # calibration is not. Inventing rows to clear the flag is not allowed.
+    unpublished = COMPANY_META.get(company, {}).get("calibration") == "unpublished"
+    if not rows and not unpublished:
         errs.append("%s: has no rows, so nothing about it is observable" % where)
 
     local = set()
@@ -512,7 +531,9 @@ def validate_company(company, items, errs):
             seen[tid] = rec.get("id")
 
 
-def expected_index(by_company, principle_to_facets):
+def expected_index(by_company, principle_to_facets, errs=None):
+    if errs is None:
+        errs = []
     companies = []
     for cid, meta in COMPANY_META.items():
         # A record missing one of these keys has already failed validation;
@@ -535,13 +556,17 @@ def expected_index(by_company, principle_to_facets):
             if facet_ids:
                 p["facets"] = facet_ids
             principles.append(p)
-        companies.append({
+        company = {
             "id": cid,
             "name": meta["name"],
             "set": meta["set"],
             "source": meta["source"],
-            "principles": principles,
-        })
+        }
+        preamble = take_preamble(cid, meta, errs)
+        if preamble is not None:
+            company["preamble"] = preamble
+        company["principles"] = principles
+        companies.append(company)
     return {
         "version": 5,
         "generated": "scripts/build_index.py",
@@ -713,7 +738,7 @@ def main():
             if index.get("version") != 5:
                 errs.append("data/index.json: version must be 5, got %r"
                             % index.get("version"))
-            want = expected_index(by_company, principle_to_facets)
+            want = expected_index(by_company, principle_to_facets, errs)
             # Compare the generated shape, ignoring key order by using the
             # same structure validate just built from the records.
             if (index.get("generated") != want["generated"]
