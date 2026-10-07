@@ -1,0 +1,37 @@
+name: Something is wrong or out of date
+description: A definition, a link, a name, or a fact that is no longer right.
+title: "Correction: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell me what is wrong and where it lives. I, or an agent, will turn this into a pull request.
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong or out of date
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: The principle, the row, or a link to the file.
+      placeholder: Amazon, Dive Deep
+    validations:
+      required: true
+  - type: textarea
+    id: should
+    attributes:
+      label: What it should say
+      description: Optional. Quote a source if you have one.
+    validations:
+      required: false
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: Credit
+      options:
+        - label: Credit me on the pull request.
+          required: false

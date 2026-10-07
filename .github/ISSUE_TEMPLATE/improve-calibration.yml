@@ -1,0 +1,43 @@
+name: Improve an example or calibration row
+description: A situation, or the under, just right, or over text, can be better.
+title: "Calibration: "
+labels: ["calibration"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Quote the current text and suggest better text. A generated row is shared by every principle on that facet, so one edit changes it everywhere that row appears.
+  - type: input
+    id: principle
+    attributes:
+      label: Principle
+      description: The name, or a link to the file.
+      placeholder: Customer Obsession
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text
+      description: Quote the situation, under, just right, or over you want changed.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested
+    attributes:
+      label: Better text
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this is better
+    validations:
+      required: true
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: Credit
+      options:
+        - label: Credit me on the pull request.
+          required: false
