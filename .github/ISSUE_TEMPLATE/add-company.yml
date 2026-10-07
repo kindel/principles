@@ -1,0 +1,38 @@
+name: Add a company's principles
+description: Propose a set the company has published.
+title: "Add a company: "
+labels: ["candidate set"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Name the company and say where the principles were published. A link to the company's own page, or the name of a first-party document they have authorized us to publish. I, or an agent, will turn this into a pull request.
+  - type: input
+    id: company
+    attributes:
+      label: Company name
+      placeholder: Arm
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Where they published the principles
+      description: A link to the company's own page, or the name of a first-party document they have authorized us to publish. A write-up about them is not the source.
+      placeholder: https:// or the document name
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How you know them
+      description: Optional. Useful if the page is easy to miss, or if you worked there.
+    validations:
+      required: false
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: Credit
+      options:
+        - label: Credit me on the pull request.
+          required: false
