@@ -4,7 +4,7 @@
   "companies": [
     {
       "id": "generic",
-      "name": "Any Company",
+      "name": "Principles for any company",
       "set": "Leadership Principles",
       "source": "https://github.com/kindel/principles/issues/71",
       "preamble": "**Everyone is a leader.** These principles apply to every person, not just people managers. They guide judgment rather than replace it. They remain open to revision: *unless you know better.*",

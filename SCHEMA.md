@@ -237,9 +237,9 @@ generated set marked as generated.
   first and Transparency last (one through six), the order that spells CREDIT.
   Dawn is Think big, start small first and Race on the racetrack, walk on ice
   last (one through 15), following the document's numbering. Toyota is Challenge
-  first and Teamwork last (one through five). Generic, shown as Any Company,
-  is Customer Obsession first and Intentional About Culture last (one through
-  15), the order in kindel/principles issue 71.
+  first and Teamwork last (one through five). Generic, shown as Principles
+  for any company, is Customer Obsession first and Intentional About Culture
+  last (one through 15), the order in kindel/principles issue 71.
 - `definition` is the short statement of the principle, transcribed from
   `source` under Sourcing below. For a company set that source is the
   company's own text. For the generic set it is kindel/principles issue 71.

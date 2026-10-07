@@ -29,7 +29,7 @@ that changes the model, schema, or data, study the Tenets section of
 - The schema is `SCHEMA.md`.
 - The data is `data/index.json`, `data/facets.json`,
   `data/<company>/<slug>.json`, `data/teaching/<company>/`, and
-  `data/maps/generic-amazon.json` (which Any Company principle reuses which Amazon principle).
+  `data/maps/generic-amazon.json` (which generic principle reuses which Amazon principle).
 
 Downstream apps consume this and must not fork a private copy.
 
