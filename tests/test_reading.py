@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Every Further reading list carries at least one source beyond the blog.
+"""Every Further reading list carries at least one source beyond tig.log.
 
 The `blog` field in data/teaching/<company> renders as Further reading in
-Porridge (kindel/porridge#46). Tig's posts stay, and each list also needs
-one external source: the published principles, a shareholder letter, a book,
-or an essay or talk by someone who shaped the practice. See SCHEMA.md.
+Porridge (kindel/porridge#46). Essays are linked at
+https://kindel.com/essays/<slug>/. Other tig.log posts stay on
+blog.kindel.com. Each list also needs one external source: the published
+principles, a shareholder letter, a book, or an essay or talk by someone
+who shaped the practice. See SCHEMA.md.
 Amazon is the classic 14. Any Company reuses those lists, and authors
 Intentional About Culture because that counterpart is not in this corpus.
 """
@@ -20,6 +22,20 @@ BLOG_HOST = "blog.kindel.com"
 # Amazon: 14 principle files plus the set index. Any Company adds
 # Intentional About Culture, which has no file to copy.
 EXPECTED = {"amazon": 15, "generic": 16}
+
+
+def is_tig(url):
+    """A tig.log post, whether it still lives on the blog or on /essays/."""
+    parsed = urlparse(url)
+    host = (parsed.hostname or "").lower()
+    if host.startswith("www."):
+        host = host[4:]
+    if host == BLOG_HOST:
+        return True
+    if host != "kindel.com":
+        return False
+    path = parsed.path or ""
+    return path == "/essays" or path.startswith("/essays/")
 
 
 def lists(company=None):
@@ -41,9 +57,8 @@ class FurtherReadingTest(unittest.TestCase):
                 seen += 1
                 with self.subTest(file=name):
                     self.assertTrue(items, "blog list is missing or empty")
-                    hosts = [urlparse(i["url"]).hostname for i in items]
-                    self.assertTrue(any(h and h != BLOG_HOST for h in hosts),
-                                    "needs at least one source beyond " + BLOG_HOST)
+                    self.assertTrue(any(not is_tig(i["url"]) for i in items),
+                                    "needs at least one source beyond tig.log")
             self.assertEqual(seen, want, company)
 
     def test_entries_have_the_same_shape(self):

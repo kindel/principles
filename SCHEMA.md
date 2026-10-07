@@ -407,7 +407,7 @@ Never write raw company names or product names in the prose and notes. Principle
     {"id": "ownership", "note": "Why they connect, one sentence."}
   ],
   "blog": [
-    {"title": "Essay title", "url": "https://blog.kindel.com/...", "note": "Why this essay belongs here."},
+    {"title": "Essay title", "url": "https://kindel.com/essays/<slug>/", "note": "Why this essay belongs here."},
     {"title": "Book or letter title", "url": "https://...", "note": "Why this source belongs here."}
   ]
 }
@@ -422,11 +422,12 @@ Rules:
 - `deepen` 6-12 questions. Each is a full sentence ending with `?`.
 - `related` is the union of every `{lp:slug}` token in the prose fields plus any extra curated links. Each `related` id is a slug in this company. Two is a floor, not a cap.
 - `blog` is the Further reading list. It holds published tig.log essays that amplify this principle, plus at least one external source: the published principles, a shareholder letter, a book, or an essay or talk by someone who shaped the practice. Same shape on every file, including the catalog. Empty is not allowed. A principle with no tig.log essay still gets its external source.
+- A tig.log essay, a post in the WordPress Essays category (slug `essays`, id 448), is linked at `https://kindel.com/essays/<slug>/` with the trailing slash. A blog post outside that category stays at `https://blog.kindel.com/YYYY/MM/DD/<slug>/`. `scripts/essay_catalog.json` is the checked-in list of essay ids and slugs, from `https://blog.kindel.com/wp-json/wp/v2/posts?categories=448`. Refresh it by fetching every page (`per_page=100`, follow `X-WP-TotalPages`), keeping `id` and `slug`, and sorting by slug. `validate.py` rejects a `blog.kindel.com` URL whose dated slug or `?p=` id is in that list, and leaves every other blog URL alone.
 - Every `blog` link is real. Never invent a URL, and check that each URL resolves before it lands. External titles are the cite on the list. Use the published heading when it already names the work. When it is only a year or a short title, name the author or the source, and the work. Titles may name the source company or an executive. Notes follow the rules below.
 - Every string: no em dash, no `---`, Oxford commas, numbers under 10 spelled out.
 - No source-company names, products, executives, internal tools, or wiki chrome in the prose and notes. Further reading titles may name the author, the book, or the source company.
 
-`validate.py` checks that the slug exists, that each `related` id exists, and that every `{lp:...}` token in the prose resolves to a slug in the company and is listed in `related`. A token in the catalog must resolve too. It also checks the counts and object shapes in the rules above, and that `blog` is a non-empty list of title, url, and note. It rejects an em dash and `---`. An en dash is allowed only in a Further reading title. `tests/test_reading.py` checks the Further reading shape and the approved cites.
+`validate.py` checks that the slug exists, that each `related` id exists, and that every `{lp:...}` token in the prose resolves to a slug in the company and is listed in `related`. A token in the catalog must resolve too. It also checks the counts and object shapes in the rules above, and that `blog` is a non-empty list of title, url, and note. It rejects an em dash and `---`. An en dash is allowed only in a Further reading title. It rejects a `blog.kindel.com` link whose post is in `scripts/essay_catalog.json`. `tests/test_reading.py` checks the Further reading shape and the approved cites.
 
 ## Sourcing
 
