@@ -1,48 +1,62 @@
 # principles
 
-I keep one model of leadership principles here. A principle is a behavior, written so you can see it under, just right, and over. The apps read these records. They do not keep a second copy.
+This repo is a central source of leadership principles, the behaviors that relate to them, questions that can be asked to test those behaviors, and the guidance for calibrating each behavior as under, just right, or over.
 
-> **A principle** is one behavior, shown under, just right, and over.
+[BIQ](https://kindel.com/kld/apps/biq/) and [Porridge](https://kindel.com/kld/apps/porridge/) are already built on it.
 
-The default set is Universal Leadership Principles. The id is `generic`. An app shows that set until you pick a company. A company set is an alternate view, in that company's words.
+The repo makes it easy for anyone to add more, or to improve the corpus. A new company, principle, behavior, or question starts in [Contribute without writing code](#contribute-without-writing-code).
 
 ## Inside
 
+kindel/principles defines a set of universal principles that apply to any company. The id is `generic`. Some companies have their own version of these. Amazon, Arm, and the rest are company-specific wordings mapped onto the universal principles, and through them onto facets, calibration rows, questions, BIQ questions, teaching, and further reading. That is how an app like Porridge can be built for one company's employees.
+
 ```mermaid
 flowchart TD
-  companySet["Company set. generic is the default"]
-  principle["Principle"]
+  universal["Universal principles, id generic"]
+  companySet["Company set: Amazon, Arm, and the rest"]
+  wording["Company wording of a principle"]
   facet["Facet"]
-  calRow["Calibration row: situation, under, just right, over"]
-  recordRow["Record row on the principle"]
-  teaching["Teaching"]
-  further["Further reading"]
-  gmap["generic-amazon map"]
-  biqQ["BIQ question"]
+  cal["Calibration rows Porridge shows"]
+  record["Record row the shared rows were written from"]
+  teaching["Teaching prose"]
+  why["Why it matters"]
+  calIntro["Calibration intro"]
+  examples["Examples"]
+  looks["Individual and manager"]
+  deepen["Questions that make the principle concrete, from teaching.deepen"]
+  related["Related notes"]
+  further["Further reading, from teaching.blog"]
+  biq["BIQ questions"]
 
-  companySet -->|contains| principle
-  principle -->|listed on, any company| facet
-  facet -->|shared by every principle on the facet| calRow
-  principle -->|may hold| recordRow
-  facet -.->|source ref| recordRow
-  principle -->|Amazon and generic only| teaching
+  universal -->|company sets are wordings of these| companySet
+  companySet --> wording
+  universal -->|listed on| facet
+  facet -->|shared table| cal
+  facet -.->|source ref| record
+  universal -->|prose| teaching
+  teaching --> why
+  teaching --> calIntro
+  teaching --> examples
+  teaching --> looks
+  teaching -->|deepen| deepen
+  teaching --> related
   teaching -->|blog| further
-  gmap -->|pairs a generic principle with an Amazon principle| principle
-  principle -->|fixed bank stores it on a principle| biqQ
-  facet -.->|empty list inherits through the facet| biqQ
+  facet -->|shared through the facet| biq
 ```
 
-A company set contains principles. `generic` is first in the manifest, so it is the default.
+A company set is that company's words. The words live in `data/<company>/<slug>.json`. Porridge uses that file for the name and the definition.
 
-A facet names one slice of behavior. It lists the principles, from any company, that contain that slice. The calibration table lives on the facet. Each row is a situation, with under, just right, and over. Every principle on that facet shares those rows. Porridge shows those rows.
+A company view gets facets, calibration rows, questions, BIQ questions, teaching, and further reading by mapping its wording onto the universal principle. `data/maps/` is where those maps live. Today the only file is `data/maps/generic-amazon.json`. It pairs each universal principle with the Amazon principle the wording was taken from, and lists the sentences that were edited. Intentional About Culture has no Amazon principle in this corpus. Its teaching was written for the universal principle. Arm, Coupang, Delivery Hero, GitLab, Dawn, and Toyota list their facets on the company record. Maps for those sets will be fixed soon.
 
-A principle can also hold record rows. Those are a person's writing, or a quotation of the company. A source ref on the facet points at a record row. That is the source the shared rows were written from, not the table Porridge shows. Universal Leadership Principles ships definitions with no record rows (`calibration` is `unpublished` in `scripts/companies.py`). The shared table is still required.
+A facet names one slice of behavior. The calibration table lives on the facet. Each row is a situation, with under, just right, and over. Every principle on that facet shares those rows. Porridge shows those rows. `scripts/validate.py` rejects a principle that has none (`validate_calibration_coverage`). CI runs that check from `.github/workflows/ci.yml`.
 
-Every principle has a calibration table. `scripts/validate.py` rejects a principle that has none. The check is `validate_calibration_coverage`. CI runs it from `.github/workflows/ci.yml`.
+A principle can also hold record rows. Those are a person's writing, or a quotation of the company. A source ref on the facet points at a record row, which is where the shared rows were written from. Porridge shows the shared rows. Universal Leadership Principles ships definitions with empty record rows (`calibration` is `unpublished` in `scripts/companies.py`). The shared table is still required.
 
-Teaching prose is in `data/teaching/`. Only Amazon and `generic` have it. Further reading is the `blog` list on a teaching file: a title, a URL, and a note. `data/maps/generic-amazon.json` pairs a generic principle with the Amazon principle it reuses, and lists the sentences that were edited. Intentional About Culture has no Amazon principle in this corpus, so that pair has no target. Its teaching was written for it.
+Teaching prose is in `data/teaching/`. Only Amazon and generic have it today, but that will be fixed soon. A teaching file holds why the principle matters, a calibration intro, examples, what it looks like for an individual and a manager, the deepen questions, and notes on related principles. Porridge's "Questions that make the principle concrete." is the `deepen` list. Further reading is the `blog` list on that same file: a title, a URL, and a note. Only Amazon and generic have further reading today, but that will be fixed soon. Teaching and further reading map through the facets and the universal principles, so any company view gets them, with that company's wording substituted.
 
-BIQ keeps a fixed question bank in kindel/biq. A question is stored on a principle, and a principle with an empty list inherits the questions of another principle that shares a facet. A new company does not get a new list of questions. Mapping its principles onto facets is what makes the existing questions show up.
+BIQ keeps one question bank in [kindel/biq](https://github.com/kindel/biq) `data/questions.json`. A question hangs off a facet, and a company view gets it through the universal principle that wording maps to.
+
+Today the long list is stored on the Amazon principles. Arm, Coupang, Dawn, GitLab, and Delivery Hero each store a shorter list of their own. Generic and Toyota store an empty list. An empty list inherits the questions of another principle on the same facet, which today is Amazon, plus any questions in `facetQuestions` for that facet. The per-company lists will be fixed soon.
 
 Two facets are about the team. Best person for the role is the hire for one seat: the person who will do that work. Team for the outcome is the mix of backgrounds, thinking styles, and skills, chosen because the business result is better.
 
@@ -57,28 +71,30 @@ Open an issue. That is where a change starts. I, or an agent, turn it into a pul
 
 The first three have forms. If you write code, you can open a pull request directly. Read [AGENTS.md](AGENTS.md) first.
 
-Porridge and BIQ have a Give Feedback button. It files a GitHub issue on that app's repo, `kindel/porridge` or `kindel/biq`, with the label `feedback`. It does not open an issue here. Use it for the app. Use an issue here for the principles.
+[Facet](https://github.com/kindel/facet), a web editor for browsing and improving the corpus, is coming soon.
+
+Porridge and BIQ have a Give Feedback button. It files a GitHub issue on that app's repo, `kindel/porridge` or `kindel/biq`, with the label `feedback`. Use it for the app. Use an issue here for the principles.
 
 ## The sets
 
 The name, what that set is called, and the source. This list is `scripts/companies.py`.
 
-- Universal Leadership Principles, id `generic`, is the default. The set is called Leadership Principles. Source: [issue 71](https://github.com/kindel/principles/issues/71).
+- Universal Leadership Principles, id `generic`, is the set this repo defines for any company. The set is called Leadership Principles. I wrote it.
 - Amazon calls them Leadership Principles. Source: [amazon.jobs](https://www.amazon.jobs/content/en/our-workplace/leadership-principles).
 - Arm calls them 10x Mindset. Source: [careers.arm.com](https://careers.arm.com/life-at-arm).
 - Coupang calls them Leadership Principles. Source: [coupang.jobs](https://www.coupang.jobs/en/coupang-leadership-principles/).
 - Delivery Hero calls them Leadership Principles. Source: [the launch post](https://careers.deliveryhero.com/delivery-hero/2025-4/launching-our-leadership-principles).
 - GitLab calls them CREDIT Values. Source: [the handbook](https://handbook.gitlab.com/handbook/values/).
-- Dawn Aerospace calls them Company Tenets. The source is not a public URL. It is Dawn Aerospace Company Tenets, Dawn's internal wiki, published with Dawn's permission.
+- Dawn Aerospace calls them Company Tenets. Source: Dawn Aerospace Company Tenets, Dawn's internal wiki, published with Dawn's permission.
 - Toyota calls them The Toyota Way. Source: [the 2018 annual report](https://www.toyota-global.com/pages/contents/investors/ir_library/annual/pdf/2018/ar18_3_en.pdf).
 
 ## Outside
 
-[Porridge](https://kindel.com/kld/apps/porridge/) is the user's manual. It reads the index, the facets, and the teaching. [BIQ](https://kindel.com/kld/apps/biq/) is the interview question bank. The catalog is [kindel.com/kld/apps](https://kindel.com/kld/apps/).
-
-Facet is the editor. A save opens a pull request on this repo and on [kindel/biq](https://github.com/kindel/biq). That editor is in progress on kindelwww#259. The repo is [kindel/facet](https://github.com/kindel/facet). The route will be `/kld/apps/facet/` when the page is live.
+[Porridge](https://kindel.com/kld/apps/porridge/) is the user's manual. It reads the company wording, the index, the facets, and the teaching. It opens on the universal set. Pick a company and the page shows that company's wording. [BIQ](https://kindel.com/kld/apps/biq/) is the interview question bank. The catalog is [kindel.com/kld/apps](https://kindel.com/kld/apps/).
 
 kindelwww is the host. It mounts this repo's `data/` as a Hugo module, and it mounts Porridge and BIQ the same way.
+
+[Facet](https://github.com/kindel/facet) is the editor for browsing and improving the corpus. It is coming soon. A save will open a pull request on this repo and on [kindel/biq](https://github.com/kindel/biq). The route will be `/kld/apps/facet/` when the page is live.
 
 ```mermaid
 flowchart LR
@@ -87,10 +103,10 @@ flowchart LR
   porridge["Porridge"]
   biq["BIQ"]
   www["kindelwww"]
-  facetApp["Facet"]
+  facetApp["Facet, coming soon"]
 
   issue -->|becomes a pull request| repo
-  porridge -->|reads index, facets, teaching| repo
+  porridge -->|reads wording, index, facets, teaching| repo
   porridge -->|generator writes calibration rows| repo
   biq -->|sync reads index, records, facets| repo
   www -->|mounts data as a Hugo module| repo
@@ -100,7 +116,7 @@ flowchart LR
   facetApp -.->|pull request on save| biq
 ```
 
-Dotted lines are the editor, which is not live yet. The other arrows are what the repos do today.
+The dotted lines are the pull requests Facet will open on save.
 
 ## Tenets
 
@@ -131,9 +147,9 @@ Unless you know better ones.
 ```
 data/index.json                  manifest, generated by scripts/build_index.py
 data/facets.json                 facets and the shared calibration rows
-data/<company>/<slug>.json       one principle
-data/teaching/<company>/         teaching prose; Amazon and generic
-data/maps/generic-amazon.json    which generic principle reuses which Amazon principle
+data/<company>/<slug>.json       one principle, the company wording
+data/teaching/<company>/         teaching prose; Amazon and generic today
+data/maps/generic-amazon.json    a universal principle paired with an Amazon principle
 scripts/validate.py              the build check, including calibration coverage
 scripts/build_index.py           regenerates the manifest
 .github/workflows/ci.yml         validate, tests, and a fresh manifest
