@@ -25,7 +25,7 @@ def load_records():
         path = os.path.join(DATA, name)
         if not os.path.isdir(path) or name.startswith("."):
             continue
-        if name == "teaching":
+        if name in ("teaching", "maps"):
             continue
         if name not in COMPANY_META:
             raise SystemExit("unknown company directory data/%s" % name)

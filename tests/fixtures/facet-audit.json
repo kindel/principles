@@ -404,78 +404,91 @@
     },
     {
       "id": 8001,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["customer-obsession"],
+      "reason": "Same behavior as Amazon Customer Obsession. Generic counts anyone served, inside or outside. The generated rows already include an internal team as the customer. No row contradicted that, so none were dropped."
     },
     {
       "id": 8002,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["earn-trust"],
+      "reason": "Same behavior as Amazon Earn Trust. Generic adds asking for help before a surprise, and that results do not excuse a breach of trust. Generated rows score hiding a slip and taking credit as under. None treat results as an excuse, so none were dropped."
     },
     {
       "id": 8003,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["acts-like-an-owner"],
+      "reason": "Same behavior as Amazon Ownership. Generic adds help for a struggling colleague and company success ahead of empire building. The two-teams over cell is taking over so you can be the owner. No row contradicted that, so none were dropped."
     },
     {
       "id": 8004,
       "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "reason": "Amazon Are Right, A Lot has no facet. There is no calibration table to share. Teaching and Further reading are reused. A new facet would be invented calibration, which this set does not do."
     },
     {
       "id": 8005,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["learn-and-be-curious"],
+      "reason": "Same behavior as Amazon Learn and Be Curious. Generated rows fit the generic wording. None were dropped."
     },
     {
       "id": 8006,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["invent-and-simplify"],
+      "reason": "Same behavior as Amazon Invent and Simplify. Generated rows fit not-invented-here, simpler paths, and ideas that are misunderstood for a time. None were dropped."
     },
     {
       "id": 8007,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["better-every-day", "highest-standards"],
+      "reason": "Same two slices as Amazon Insist on the Highest Standards. Generic says not to confuse excellence with unreasonable demands. The pushback row scores refusing every cut and working late as over, which fits. No row was dropped."
     },
     {
       "id": 8008,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["hire-and-develop-the-best"],
+      "reason": "Same behavior as Amazon Hire and Develop the Best. Generic adds the culture bar and that urgency does not lower it. Interview and referral rows already score filling a seat as under. This facet is not the map for Intentional About Culture. No row was dropped."
     },
     {
       "id": 8009,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["think-big"],
+      "reason": "Same behavior as Amazon Think Big. Generic also credits colleagues whose strength is focused delivery. Generated under cells score missing the larger outcome, and just-right cells still require this week's delivery. No row treats that delivery as the failure by itself, so none were dropped."
     },
     {
       "id": 8010,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["bias-for-action"],
+      "reason": "Same behavior as Amazon Bias for Action. Generic states the reversible and hard-to-undo split in the definition. Every generated row already turns on that split. None were dropped."
     },
     {
       "id": 8011,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["frugality"],
+      "reason": "Same behavior as Amazon Frugality. Generic says headcount growth is not an achievement. The slipping-project under cell is asking for people first, and the over cell is refusing needed help. That still fits. No row was dropped."
     },
     {
       "id": 8012,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["dive-deep"],
+      "reason": "Same behavior as Amazon Dive Deep. Generated rows fit staying in the details and checking a metric against the work. None were dropped."
     },
     {
       "id": 8013,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["have-backbone-disagree-and-commit"],
+      "reason": "Same behavior as Amazon Have Backbone; Disagree and Commit. Generic adds curiosity after the outcome, not I told you so. Rows score relitigating after the decision as over and committing to the chosen path as just right. No row was dropped."
     },
     {
       "id": 8014,
-      "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "decision": "map",
+      "facets": ["deliver-results"],
+      "reason": "Same behavior as Amazon Deliver Results. Generic says hours, effort, and tenure are not the result. Rows score usable delivery and an early risk call, not hours logged. None were dropped."
     },
     {
       "id": 8015,
       "decision": "skip",
-      "reason": "Candidate wording, deliberately different from other sets, with no calibration written. Sharing a facet would be a stretch."
+      "reason": "The public counterpart is Strive to be Earth's Best Employer. That principle is not in this repository's Amazon set, which is the classic 14, so there is no facet to share. Mapping it onto Hire and Develop the Best would put the hiring table on a culture principle. That is a stretch, and a stretch is a skip."
     }
   ]
 }

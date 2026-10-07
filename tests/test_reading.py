@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Every Further reading list carries at least one source beyond the blog.
 
-The `blog` field in data/teaching/amazon renders as Further reading in
+The `blog` field in data/teaching/<company> renders as Further reading in
 Porridge (kindel/porridge#46). Tig's posts stay, and each list also needs
 one external source: the published principles, a shareholder letter, a book,
 or an essay or talk by someone who shaped the practice. See SCHEMA.md.
+Amazon is the classic 14. Any Company reuses those lists.
 """
 
 import json
@@ -12,30 +13,37 @@ import os
 import unittest
 from urllib.parse import urlparse
 
-LPS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                   "data", "teaching", "amazon")
+TEACH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                     "data", "teaching")
 BLOG_HOST = "blog.kindel.com"
+# 14 principle files plus the set index. Intentional About Culture has no
+# counterpart in this corpus, so the generic directory is the same size.
+EXPECTED = {"amazon": 15, "generic": 15}
 
 
-def lists():
-    for name in sorted(os.listdir(LPS)):
-        if name.endswith(".json"):
-            with open(os.path.join(LPS, name), encoding="utf-8") as f:
-                yield name, json.load(f).get("blog")
+def lists(company=None):
+    companies = [company] if company else list(EXPECTED)
+    for company in companies:
+        d = os.path.join(TEACH, company)
+        for name in sorted(os.listdir(d)):
+            if name.endswith(".json"):
+                with open(os.path.join(d, name), encoding="utf-8") as f:
+                    yield "%s/%s" % (company, name), json.load(f).get("blog")
 
 
 class FurtherReadingTest(unittest.TestCase):
 
     def test_every_list_has_an_external_source(self):
-        seen = 0
-        for name, items in lists():
-            seen += 1
-            with self.subTest(file=name):
-                self.assertTrue(items, "blog list is missing or empty")
-                hosts = [urlparse(i["url"]).hostname for i in items]
-                self.assertTrue(any(h and h != BLOG_HOST for h in hosts),
-                                "needs at least one source beyond " + BLOG_HOST)
-        self.assertEqual(seen, 15, "14 principles plus index.json")
+        for company, want in EXPECTED.items():
+            seen = 0
+            for name, items in lists(company):
+                seen += 1
+                with self.subTest(file="%s/%s" % (company, name)):
+                    self.assertTrue(items, "blog list is missing or empty")
+                    hosts = [urlparse(i["url"]).hostname for i in items]
+                    self.assertTrue(any(h and h != BLOG_HOST for h in hosts),
+                                    "needs at least one source beyond " + BLOG_HOST)
+            self.assertEqual(seen, want, company)
 
     def test_entries_have_the_same_shape(self):
         for name, items in lists():
@@ -77,7 +85,7 @@ class FurtherReadingTest(unittest.TestCase):
                 ("Why You Should Develop a Correction of Error (COE), from AWS", 1),
         }
         seen = {url: 0 for url in expected}
-        for name, items in lists():
+        for name, items in lists("amazon"):
             for item in items or []:
                 url = item["url"]
                 if url not in expected:

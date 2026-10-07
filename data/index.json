@@ -14,21 +14,30 @@
           "slug": "customer-obsession",
           "name": "Customer Obsession",
           "sort": 1,
-          "file": "data/generic/customer-obsession.json"
+          "file": "data/generic/customer-obsession.json",
+          "facets": [
+            "customer-obsession"
+          ]
         },
         {
           "id": 8002,
           "slug": "earn-trust",
           "name": "Earn Trust",
           "sort": 2,
-          "file": "data/generic/earn-trust.json"
+          "file": "data/generic/earn-trust.json",
+          "facets": [
+            "earn-trust"
+          ]
         },
         {
           "id": 8003,
           "slug": "ownership",
           "name": "Ownership",
           "sort": 3,
-          "file": "data/generic/ownership.json"
+          "file": "data/generic/ownership.json",
+          "facets": [
+            "acts-like-an-owner"
+          ]
         },
         {
           "id": 8004,
@@ -42,70 +51,101 @@
           "slug": "learn-and-be-curious",
           "name": "Learn and Be Curious",
           "sort": 5,
-          "file": "data/generic/learn-and-be-curious.json"
+          "file": "data/generic/learn-and-be-curious.json",
+          "facets": [
+            "learn-and-be-curious"
+          ]
         },
         {
           "id": 8006,
           "slug": "invent-and-simplify",
           "name": "Invent and Simplify",
           "sort": 6,
-          "file": "data/generic/invent-and-simplify.json"
+          "file": "data/generic/invent-and-simplify.json",
+          "facets": [
+            "invent-and-simplify"
+          ]
         },
         {
           "id": 8007,
           "slug": "insist-on-high-standards",
           "name": "Insist on High Standards",
           "sort": 7,
-          "file": "data/generic/insist-on-high-standards.json"
+          "file": "data/generic/insist-on-high-standards.json",
+          "facets": [
+            "better-every-day",
+            "highest-standards"
+          ]
         },
         {
           "id": 8008,
           "slug": "hire-and-develop-the-best",
           "name": "Hire and Develop the Best",
           "sort": 8,
-          "file": "data/generic/hire-and-develop-the-best.json"
+          "file": "data/generic/hire-and-develop-the-best.json",
+          "facets": [
+            "hire-and-develop-the-best"
+          ]
         },
         {
           "id": 8009,
           "slug": "think-big",
           "name": "Think Big",
           "sort": 9,
-          "file": "data/generic/think-big.json"
+          "file": "data/generic/think-big.json",
+          "facets": [
+            "think-big"
+          ]
         },
         {
           "id": 8010,
           "slug": "bias-for-action",
           "name": "Bias for Action",
           "sort": 10,
-          "file": "data/generic/bias-for-action.json"
+          "file": "data/generic/bias-for-action.json",
+          "facets": [
+            "bias-for-action"
+          ]
         },
         {
           "id": 8011,
           "slug": "frugality",
           "name": "Frugality",
           "sort": 11,
-          "file": "data/generic/frugality.json"
+          "file": "data/generic/frugality.json",
+          "facets": [
+            "frugality"
+          ]
         },
         {
           "id": 8012,
           "slug": "dive-deep",
           "name": "Dive Deep",
           "sort": 12,
-          "file": "data/generic/dive-deep.json"
+          "file": "data/generic/dive-deep.json",
+          "facets": [
+            "dive-deep"
+          ]
         },
         {
           "id": 8013,
           "slug": "have-backbone-disagree-and-commit",
           "name": "Have Backbone; Disagree and Commit",
           "sort": 13,
-          "file": "data/generic/have-backbone-disagree-and-commit.json"
+          "file": "data/generic/have-backbone-disagree-and-commit.json",
+          "facets": [
+            "have-backbone-disagree-and-commit"
+          ]
         },
         {
           "id": 8014,
           "slug": "deliver-results",
           "name": "Deliver Results",
           "sort": 14,
-          "file": "data/generic/deliver-results.json"
+          "file": "data/generic/deliver-results.json",
+          "facets": [
+            "deliver-results"
+          ]
         },
         {
           "id": 8015,
