@@ -2,9 +2,10 @@
 
 PR-only. Never push to main.
 
-This is the core. `SCHEMA.md` is the contract. `README.md` is the model.
-This file is the ops checklist. Prefer it over the README when adding a
-company, changing the schema, or previewing locally.
+This is the core. `SCHEMA.md` is the contract. `README.md` is the short
+explainer. This file is the ops checklist, and the tenets live here.
+Prefer it over the README when adding a company, changing the schema,
+or previewing locally.
 
 No em dashes in repo copy or docs.
 
@@ -22,19 +23,42 @@ On kindel.com, these are Apps (canonical `/apps/`; `/tools/` is an alias).
 ## Principles
 
 This repo owns the tenets. Before any change in this repo, and before any work
-that changes the model, schema, or data, study the Tenets section of
-`README.md`. Do not start from memory of last week's README.
+that changes the model, schema, or data, study the Tenets section below.
+Do not start from memory.
 
-- The model is `README.md`.
+- The explainer is `README.md`.
+- The tenets are in this file.
 - The schema is `SCHEMA.md`.
 - The data is `data/index.json`, `data/facets.json`,
   `data/<company>/<slug>.json`, `data/teaching/<company>/`, and
-  `data/maps/generic-amazon.json` (which generic principle reuses which Amazon principle).
+  `data/maps/generic-amazon.json` (which universal principle an Amazon wording maps onto).
 
 Downstream apps consume this and must not fork a private copy.
 
 No UI lives here. Passing `validate.py` means the records are well formed. It
 does not mean anyone can see them.
+
+## Tenets
+
+1. **A Principle is a Tenet About People.** A leadership principle is a tenet whose endeavor is an organization and whose subject is human behavior, so *we hold it to the tenet bar*: one idea and a trade-off a person can act on. A set that reads as slogans is a set we have not finished modeling.
+
+2. **Behavior is the Unit.** A principle earns its place by decomposing into behavior a person can observe, teach, and live with the appropriate balance. *A behavior we cannot show under indexed, balanced, and over done is a slogan*, and we model it or drop it.
+
+3. **Facets Compose, Wordings Differ.** Companies carve the same behavior into different principles, so their sets rarely line up one to one. *The facet is the granular piece that does line up*, and we compose principles from facets rather than re-authoring one behavior per company.
+
+4. **Level and Role Change What Counts, Not What Good Looks Like.** Over doing it looks the same for a junior and an exec, so calibration does not move with level or role. What moves is which behaviors carry weight and the scope expected, and *the behavior is written once and projected*, because an app that keeps its own copy per level cannot be compared with the app beside it.
+
+5. **The Core Owns the Model, Apps Own the Experience.** The core holds the lexicon, the taxonomy, the composition rules, and the code that enforces them. Apps hold questions, prompts, manuals, and pages, and *an app that reimplements the model has forked it*.
+
+6. **Company is a Parameter, Never a Constant.** No code branches on a company's name, and *every lookup, path, and cache key carries the company*. A bare id fails silently, because `dive-deep` is four different principles.
+
+7. **The Check is the Contract.** *A new rule ships with the check that fails on it*, or it is a suggestion. A rule only a human enforces is already broken somewhere in the tree.
+
+8. **Break in the Open.** The core changes shape when the model demands it, and apps follow. *A breaking change ships with the issues and pull requests that fix each app*, so we accept the breakage and never the silence.
+
+9. **A Copy is Generated and Verified, or It Does Not Exist.** An app that must serve the model from its own origin generates its copy from a pin and fails its build on drift. *A copy a human keeps in step is drift with a delay.*
+
+Unless you know better ones.
 
 ## Consumers
 
@@ -84,7 +108,9 @@ Do all of this, in this repo first:
    is `map`.
 5. Update the company list and block in `SCHEMA.md`. Tests fail if you
    skip this.
-6. Update the sets list and layout in `README.md`.
+6. A new company's name and source belong in `scripts/companies.py` and
+   `SCHEMA.md`. Change the README only when the explainer's picture of
+   the model changes.
 7. `python3 scripts/build_index.py` then `python3 -m unittest discover -s tests`.
 
 Then the apps, before calling it done:
