@@ -78,7 +78,7 @@ class CorpusTest(unittest.TestCase):
 
     def test_the_first_company_is_the_default_set(self):
         self.assertEqual("generic", next(iter(COMPANY_META)))
-        self.assertEqual("Principles for any company", COMPANY_META["generic"]["name"])
+        self.assertEqual("Universal Leadership Principles", COMPANY_META["generic"]["name"])
         self.assertEqual("unpublished", COMPANY_META["generic"]["calibration"])
 
     def test_the_corpus_validates(self):

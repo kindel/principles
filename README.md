@@ -96,9 +96,10 @@ Unless you know better ones.
 
 ## The sets
 
-An app opens on the generic set: principles that work for any company. A
-company set is a view you opt into. The first company in the manifest is that
-default. The display name is Principles for any company. The id is `generic`.
+An app opens on the generic set: universal leadership principles that work
+for any company. A company set is a view you opt into. The first company in
+the manifest is that default. The display name is Universal Leadership
+Principles. The id is `generic`.
 The other sets are Amazon's Leadership Principles, Arm's 10x
 Mindset, the Leadership Principles of Coupang and Delivery Hero, GitLab's
 CREDIT values, Dawn Aerospace's Company Tenets, and Toyota's The Toyota Way.
@@ -124,7 +125,7 @@ data/index.json              manifest, generated, version 5
 data/facets.json             cross-company facet map
 data/maps/                   principle reuse, one <source>-<target>.json
 data/teaching/<company>/     teaching prose, for each set that has it
-data/generic/<slug>.json       one generic principle (display name Principles for any company)
+data/generic/<slug>.json       one generic principle (display name Universal Leadership Principles)
 data/amazon/<slug>.json        one Amazon principle
 data/arm/<slug>.json           one Arm factor
 data/coupang/<slug>.json       one Coupang principle
