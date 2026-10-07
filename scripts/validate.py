@@ -201,7 +201,7 @@ def load_records(errs):
             continue
         if not os.path.isdir(path):
             continue
-        if name == "teaching":
+        if name in ("teaching", "maps"):
             continue
         if name not in COMPANY_META:
             errs.append("data/%s: unknown company directory" % name)
@@ -690,6 +690,190 @@ def validate_teaching(by_company, errs, root=None):
                         errs.append("%s: {lp:%s} is missing from related" % (where, tok))
 
 
+def _record_by_id(by_company, company):
+    out = {}
+    for _, rec in by_company.get(company, []):
+        pid = rec.get("id")
+        if isinstance(pid, int) and not isinstance(pid, bool):
+            out[pid] = rec
+    return out
+
+
+def _blog_identity(items):
+    """Title and url only. Notes may be edited when a set reuses another."""
+    if not isinstance(items, list):
+        return None
+    out = []
+    for item in items:
+        if not isinstance(item, dict):
+            return None
+        out.append((item.get("title"), item.get("url")))
+    return out
+
+
+def validate_generic_amazon_map(by_company, principle_to_facets, errs):
+    """The Any Company set records which Amazon principle it reuses.
+
+    data/maps/generic-amazon.json is the one map. Facets on a generic
+    principle must be the counterpart's facets. Further reading titles and
+    urls are copied. A counterpart that is not in this corpus has no
+    teaching file and no facet.
+    """
+    where = "data/maps/generic-amazon.json"
+    path = os.path.join(DATA, "maps", "generic-amazon.json")
+    if not os.path.isfile(path):
+        errs.append("%s is missing" % where)
+        return
+    maps_dir = os.path.join(DATA, "maps")
+    for name in sorted(os.listdir(maps_dir)):
+        if name.startswith("."):
+            continue
+        if name != "generic-amazon.json":
+            errs.append("data/maps/%s: only generic-amazon.json belongs here" % name)
+    try:
+        with open(path, encoding="utf-8") as fh:
+            doc = json.load(fh)
+    except ValueError as e:
+        errs.append("%s: not valid JSON, %s" % (where, e))
+        return
+    if not isinstance(doc, dict):
+        errs.append("%s: must be an object" % where)
+        return
+    check_style(doc, where, errs)
+    if doc.get("version") != 1:
+        errs.append("%s: version must be 1" % where)
+    if doc.get("generic") != "generic" or doc.get("amazon") != "amazon":
+        errs.append("%s: generic and amazon must name those companies" % where)
+    generic = _record_by_id(by_company, "generic")
+    amazon = _record_by_id(by_company, "amazon")
+    pairs = doc.get("pairs")
+    if not isinstance(pairs, list) or not pairs:
+        errs.append("%s: pairs must be a non-empty list" % where)
+        return
+    seen = set()
+    for i, pair in enumerate(pairs):
+        pw = "%s pairs[%d]" % (where, i)
+        if not isinstance(pair, dict):
+            errs.append("%s: must be an object" % pw)
+            continue
+        gid = pair.get("genericId")
+        if gid not in generic:
+            errs.append("%s: genericId %r is not a generic principle" % (pw, gid))
+            continue
+        if gid in seen:
+            errs.append("%s: duplicate genericId %d" % (pw, gid))
+        seen.add(gid)
+        rec = generic[gid]
+        if pair.get("genericSlug") != rec.get("slug"):
+            errs.append("%s: slug %r does not match %s"
+                        % (pw, pair.get("genericSlug"), rec.get("slug")))
+        if pair.get("genericName") != rec.get("name"):
+            errs.append("%s: name does not match the record" % pw)
+        amazon_ids = pair.get("amazonIds")
+        if not isinstance(amazon_ids, list) or any(
+                not isinstance(x, int) or isinstance(x, bool) for x in amazon_ids):
+            errs.append("%s: amazonIds must be a list of ids" % pw)
+            amazon_ids = []
+        for aid in amazon_ids:
+            if aid not in amazon:
+                errs.append("%s: amazon id %s is not in this corpus" % (pw, aid))
+        facets = pair.get("facets")
+        if not isinstance(facets, list) or any(not isinstance(x, str) for x in facets):
+            errs.append("%s: facets must be a list of facet ids" % pw)
+            facets = []
+        actual = sorted(principle_to_facets.get(gid, []))
+        if sorted(facets) != actual:
+            errs.append("%s: facets %s do not match the facet map %s"
+                        % (pw, sorted(facets), actual))
+        # Same facet map as the counterpart. Several counterparts would
+        # have to share one map; this set uses one each.
+        counterpart = []
+        for aid in amazon_ids:
+            if aid in amazon:
+                counterpart.extend(principle_to_facets.get(aid, []))
+        if sorted(set(counterpart)) != actual:
+            errs.append("%s: facets are not the counterpart's facets" % pw)
+        flags = pair.get("rowFlags")
+        if not isinstance(flags, list):
+            errs.append("%s: rowFlags must be a list" % pw)
+        else:
+            for flag in flags:
+                if (not isinstance(flag, dict) or not _nonempty_str(flag.get("facet"))
+                        or not _nonempty_str(flag.get("row"))
+                        or not _nonempty_str(flag.get("reason"))):
+                    errs.append("%s: a row flag needs facet, row, and reason" % pw)
+        public = pair.get("publicCounterpart")
+        in_corpus = pair.get("inThisCorpus", True)
+        if amazon_ids and in_corpus is False:
+            errs.append("%s: inThisCorpus is false while amazonIds is set" % pw)
+        if not amazon_ids:
+            if in_corpus is not False or not _nonempty_str(public):
+                errs.append("%s: a pair with no amazon id needs publicCounterpart "
+                            "and inThisCorpus false" % pw)
+        _check_reused_teaching(gid, rec, amazon_ids, amazon, pw, errs)
+    missing = sorted(set(generic) - seen)
+    extra = sorted(seen - set(generic))
+    for gid in missing:
+        errs.append("%s: generic principle %d has no pair" % (where, gid))
+    for gid in extra:
+        errs.append("%s: pair %d is not a generic principle" % (where, gid))
+    left = doc.get("leftOut")
+    if not isinstance(left, list) or not left:
+        errs.append("%s: leftOut must name Amazon principles with no generic counterpart" % where)
+    elif not any(isinstance(x, dict) and x.get("name") == "Success and Scale Bring Broad Responsibility"
+                 for x in left):
+        errs.append("%s: leftOut must include Success and Scale Bring Broad Responsibility" % where)
+    amz_index = os.path.join(DATA, "teaching", "amazon", "index.json")
+    gen_index = os.path.join(DATA, "teaching", "generic", "index.json")
+    try:
+        with open(amz_index, encoding="utf-8") as fh:
+            amz_doc = json.load(fh)
+        with open(gen_index, encoding="utf-8") as fh:
+            gen_doc = json.load(fh)
+    except (OSError, ValueError) as e:
+        errs.append("%s: set teaching index, %s" % (where, e))
+        return
+    if _blog_identity(amz_doc.get("blog")) != _blog_identity(gen_doc.get("blog")):
+        errs.append("%s: set-level Further reading titles or urls differ from Amazon" % where)
+    if "insist-on-the-highest-standards" in json.dumps(gen_doc):
+        errs.append("%s: generic teaching index still uses the Amazon highest-standards slug" % where)
+
+
+def _check_reused_teaching(gid, rec, amazon_ids, amazon, where, errs):
+    """Teaching is the counterpart's file, with titles and urls unchanged."""
+    gen_path = os.path.join(DATA, "teaching", "generic", rec["slug"] + ".json")
+    if not amazon_ids:
+        if os.path.exists(gen_path):
+            errs.append("%s: %s has no in-corpus counterpart, so it must not have teaching"
+                        % (where, rec.get("slug")))
+        return
+    if len(amazon_ids) != 1 or amazon_ids[0] not in amazon:
+        return
+    amz = amazon[amazon_ids[0]]
+    amz_path = os.path.join(DATA, "teaching", "amazon", amz["slug"] + ".json")
+    if not os.path.isfile(amz_path):
+        if os.path.exists(gen_path):
+            errs.append("%s: teaching exists without an Amazon teaching file" % where)
+        return
+    if not os.path.isfile(gen_path):
+        errs.append("%s: missing reused teaching %s" % (where, rec["slug"]))
+        return
+    try:
+        with open(amz_path, encoding="utf-8") as fh:
+            src = json.load(fh)
+        with open(gen_path, encoding="utf-8") as fh:
+            dst = json.load(fh)
+    except ValueError as e:
+        errs.append("%s: teaching is not valid JSON, %s" % (where, e))
+        return
+    if _blog_identity(src.get("blog")) != _blog_identity(dst.get("blog")):
+        errs.append("%s: Further reading titles or urls differ from %s"
+                    % (where, amz["slug"]))
+    blob = json.dumps(dst)
+    if "insist-on-the-highest-standards" in blob:
+        errs.append("%s: teaching still points at the Amazon highest-standards slug" % where)
+
+
 def main():
     errs = []
     by_company = load_records(errs)
@@ -723,6 +907,7 @@ def main():
     # Validate facets.json
     facets = load_facets(errs)
     principle_to_facets = validate_facets(facets, principle_rows, errs)
+    validate_generic_amazon_map(by_company, principle_to_facets, errs)
 
     index_path = os.path.join(DATA, "index.json")
     if not os.path.exists(index_path):

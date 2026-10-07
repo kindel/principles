@@ -347,12 +347,21 @@ files already use. `blog` is the Further reading list. It is not renamed.
 
 ### Files
 
-- `data/teaching/<company>/index.json` catalog. Amazon only today.
+- `data/teaching/<company>/index.json` catalog, for each company that has teaching.
 - `data/teaching/<company>/<slug>.json` one principle.
 
+Amazon is the classic 14. Any Company (`generic`) reuses that teaching.
+`data/maps/generic-amazon.json` is the counterpart map. A generic principle
+whose counterpart is not in this corpus has no teaching file. Edits in the
+generic copies are the smallest change that keeps the sentence company-neutral
+and true to the generic wording. Further reading titles and urls stay as they
+are in the Amazon files.
+
 kindelwww mounts this repo's `data/` at `assets/data/principles`, so Hugo
-reads `data/principles/teaching/amazon/<slug>.json`. The standalone app
-fetches `https://cdn.jsdelivr.net/gh/kindel/principles@main/data/teaching/amazon/<slug>.json`.
+reads `data/principles/teaching/<company>/<slug>.json` when that file exists.
+Amazon is required: a missing Amazon file is an error. The standalone app
+fetches `https://cdn.jsdelivr.net/gh/kindel/principles@main/data/teaching/amazon/<slug>.json`
+for Amazon, and the same path with the company directory for a set that has teaching.
 
 Identity is `(company, numeric id)`. The filename is the slug.
 

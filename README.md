@@ -172,7 +172,7 @@ Two apps, plus the site that hosts them. `.kindel/consumers.txt` is the
 list the cascade pings. Adding a company here is not finished until both
 apps can show it.
 
-- `kindel/porridge` mounts this module and renders the calibration. Amazon teaching prose is `data/teaching/amazon/`.
+- `kindel/porridge` mounts this module and renders the calibration. Teaching prose is `data/teaching/<company>/`. Amazon is the classic 14. Any Company reuses it, with the counterpart map in `data/maps/generic-amazon.json`.
 - `kindel/biq` keeps a fixed question set. Each question maps to facets.
   A new company inherits those questions (and their generated examples)
   through the facet map, not by writing a second bank.
