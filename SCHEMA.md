@@ -40,6 +40,10 @@ A consumer picks one company and shows only that company's set.
 }
 ```
 
+The sample shows the object shape for two companies. The live company list,
+and which company is first, is `data/index.json`. The first company in that
+file is the default set.
+
 A company's `id` is its kebab-case directory name. A principle's `id` is its
 number. They are different kinds of thing that share a key name, which is
 worth knowing before reading the file.
@@ -48,8 +52,9 @@ The first company in `companies` is the default set. A consumer opened with no
 company selected shows that set. `name` is the display name, and it is the only
 place that name is stored. The id does not change when the display name does.
 
-`preamble` is optional. It is the set's opening paragraph, markdown emphasis
-allowed, and it is omitted when the company has none.
+`preamble` is optional. When present it is a non-empty string, the set's
+opening paragraph, markdown emphasis allowed. It is omitted when the company
+has none.
 
 `facets` is the list of cross-company facet ids that include this principle,
 projected from `data/facets.json`. A principle that appears on no facet carries
@@ -230,15 +235,17 @@ generated set marked as generated.
   first and Teamwork last (one through five). Generic, shown as Any Company,
   is Customer Obsession first and Intentional About Culture last (one through
   15), the order in kindel/principles issue 71.
-- `definition` is the company's short statement of the principle, transcribed
-  from the company's own text under Sourcing below. It is a quotation, so it is
-  never condensed, reworded, reordered, or merged. Where the statement runs
-  long, take a leading excerpt of whole sentences rather than summarizing.
-  Three normalizations are allowed and nothing else: strip markup, fold
-  punctuation to ASCII, and correct an obvious typographical error.
+- `definition` is the short statement of the principle, transcribed from
+  `source` under Sourcing below. For a company set that source is the
+  company's own text. For the generic set it is kindel/principles issue 71.
+  It is a quotation, so it is never condensed, reworded, reordered, or merged.
+  Where the statement runs long, take a leading excerpt of whole sentences
+  rather than summarizing. Three normalizations are allowed and nothing else:
+  strip markup, fold punctuation to ASCII, and correct an obvious typographical
+  error.
 - `source` is where the set was transcribed from. A URL when the company
-  publishes the set itself, otherwise the name of the first-party document. See
-  Sourcing.
+  publishes the set itself, the name of the first-party document when it does
+  not, or the issue URL when this repository authored the set. See Sourcing.
 - File paths in the manifest are `data/<company>/<slug>.json`.
 - Nothing lives at `data/*.json` except `index.json`.
 
@@ -406,8 +413,7 @@ Rules:
 
 ## Sourcing
 
-Every set is the company's own text, published here with the company's
-permission.
+A set is transcribed from one source, named in `source`.
 
 Usually that is a page the company publishes itself, and permission is not in
 question. `source` is the URL.
@@ -416,6 +422,11 @@ It can also be a first-party document the company has authorized us to publish,
 an internal handbook or wiki page that the company has not put on its marketing
 site. `source` names the document. Dawn Aerospace's Company Tenets arrive this
 way.
+
+The generic set is the other case. This repository authored it, in
+kindel/principles issue 71, as principles that apply to any company. `source`
+is that issue. The definitions are quotations of the issue text, under the
+same transcription rules as a company page.
 
 What it is never is somebody else's account of a set. A set reconstructed from
 a conference talk, a recruiter's summary, or a page the company has taken down

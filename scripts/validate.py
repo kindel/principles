@@ -124,6 +124,21 @@ def _nonempty_str(value):
     return isinstance(value, str) and bool(value.strip())
 
 
+def take_preamble(cid, meta, errs):
+    """The opening paragraph, or None when the company has none.
+
+    A present value that is not a non-empty string is an error. Callers
+    omit the key rather than copy the bad value into the manifest.
+    """
+    if "preamble" not in meta:
+        return None
+    value = meta["preamble"]
+    if not _nonempty_str(value):
+        errs.append("%s: preamble must be a non-empty string" % cid)
+        return None
+    return value
+
+
 def validate_blog(items, where, errs):
     """Further reading is a non-empty list of title, url, and note."""
     if not isinstance(items, list) or not items:
@@ -516,7 +531,9 @@ def validate_company(company, items, errs):
             seen[tid] = rec.get("id")
 
 
-def expected_index(by_company, principle_to_facets):
+def expected_index(by_company, principle_to_facets, errs=None):
+    if errs is None:
+        errs = []
     companies = []
     for cid, meta in COMPANY_META.items():
         # A record missing one of these keys has already failed validation;
@@ -545,8 +562,9 @@ def expected_index(by_company, principle_to_facets):
             "set": meta["set"],
             "source": meta["source"],
         }
-        if meta.get("preamble"):
-            company["preamble"] = meta["preamble"]
+        preamble = take_preamble(cid, meta, errs)
+        if preamble is not None:
+            company["preamble"] = preamble
         company["principles"] = principles
         companies.append(company)
     return {
@@ -720,7 +738,7 @@ def main():
             if index.get("version") != 5:
                 errs.append("data/index.json: version must be 5, got %r"
                             % index.get("version"))
-            want = expected_index(by_company, principle_to_facets)
+            want = expected_index(by_company, principle_to_facets, errs)
             # Compare the generated shape, ignoring key order by using the
             # same structure validate just built from the records.
             if (index.get("generated") != want["generated"]

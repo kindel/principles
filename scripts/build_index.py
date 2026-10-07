@@ -13,6 +13,7 @@ import os
 import sys
 
 from companies import COMPANY_META
+from validate import take_preamble
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
@@ -80,8 +81,12 @@ def main():
             ("set", meta["set"]),
             ("source", meta["source"]),
         ]
-        if meta.get("preamble"):
-            company.append(("preamble", meta["preamble"]))
+        preamble_errs = []
+        preamble = take_preamble(cid, meta, preamble_errs)
+        if preamble_errs:
+            raise SystemExit("\n".join(preamble_errs))
+        if preamble is not None:
+            company.append(("preamble", preamble))
         company.append(("principles", principles))
         companies.append(collections.OrderedDict(company))
 
