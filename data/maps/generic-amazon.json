@@ -1,19 +1,65 @@
 {
   "version": 1,
-  "generic": "generic",
-  "amazon": "amazon",
+  "source": "generic",
+  "target": "amazon",
   "leftOut": [
     {
       "name": "Success and Scale Bring Broad Responsibility",
       "reason": "Published Amazon principle with no counterpart in the Any Company set. It is not in this repository's Amazon corpus either, and it is left out."
     }
   ],
+  "edits": [
+    [
+      "You still work backwards from their need, and you still understand how their work reaches the person who pays.",
+      "You still work backwards from their need, and you still understand how their work reaches the person it is for."
+    ],
+    [
+      "If your customer is internal, how does their work reach the person who pays?",
+      "If your customer is internal, how does their work reach the person it is for?"
+    ],
+    [
+      "A customer pays you for value. A user is someone you force, addict, or sell.",
+      "The essay argues a customer pays you for value, and a user is someone you force, addict, or sell."
+    ],
+    [
+      "If someone only optimizes the process in front of them, they are not thinking big.",
+      "If someone only optimizes the process in front of them, they are not thinking big, and colleagues who deliver with focus and detail are still doing essential work."
+    ],
+    [
+      "Leading with the miss is how you get help.",
+      "Ask for help before the problem becomes a surprise. Leading with the miss is how you get that help."
+    ],
+    [
+      "The hiring bar is the culture.",
+      "The hiring bar shapes the culture."
+    ],
+    [
+      "Highest standards is not a reason to block the business while you polish.",
+      "High standards are not a reason to block the business while you polish."
+    ],
+    [
+      "Highest standards without triage is fear.",
+      "High standards without triage are fear."
+    ],
+    [
+      "Highest standards is not a veto on speed.",
+      "High standards are not a veto on speed."
+    ],
+    [
+      "Kindel leadership principles user's manual. Classic 14. Amazon teaching prose only.",
+      "Kindel leadership principles user's manual for Any Company. Reused from the classic set and edited where the wording differs."
+    ],
+    [
+      "The published source. It lists 16 now; this manual covers the classic 14.",
+      "The published source this set is derived from. It lists 16 now. This manual covers the counterparts of the classic 14."
+    ]
+  ],
   "pairs": [
     {
-      "genericId": 8001,
-      "genericSlug": "customer-obsession",
-      "genericName": "Customer Obsession",
-      "amazonIds": [
+      "sourceId": 8001,
+      "sourceSlug": "customer-obsession",
+      "sourceName": "Customer Obsession",
+      "targetIds": [
         1001
       ],
       "facets": [
@@ -23,10 +69,10 @@
       "note": "Same name. Generic counts anyone served, inside or outside. The generated row for another team waiting already treats an internal team as the customer. No row dropped."
     },
     {
-      "genericId": 8002,
-      "genericSlug": "earn-trust",
-      "genericName": "Earn Trust",
-      "amazonIds": [
+      "sourceId": 8002,
+      "sourceSlug": "earn-trust",
+      "sourceName": "Earn Trust",
+      "targetIds": [
         1011
       ],
       "facets": [
@@ -36,10 +82,10 @@
       "note": "Same name. Generic adds asking for help before a problem becomes a surprise, and that exceptional results do not excuse behavior that damages trust. Rows score hiding a slip, taking the credit, and softening bad news as under. None treat results as an excuse. No row dropped."
     },
     {
-      "genericId": 8003,
-      "genericSlug": "ownership",
-      "genericName": "Ownership",
-      "amazonIds": [
+      "sourceId": 8003,
+      "sourceSlug": "ownership",
+      "sourceName": "Ownership",
+      "targetIds": [
         1002
       ],
       "facets": [
@@ -49,10 +95,10 @@
       "note": "Same name. Generic adds help for a struggling colleague and company success ahead of empire building. The two-teams over cell is taking over both efforts so you can be the owner. No row dropped."
     },
     {
-      "genericId": 8004,
-      "genericSlug": "are-right-a-lot",
-      "genericName": "Are Right, A Lot",
-      "amazonIds": [
+      "sourceId": 8004,
+      "sourceSlug": "are-right-a-lot",
+      "sourceName": "Are Right, A Lot",
+      "targetIds": [
         1004
       ],
       "facets": [],
@@ -60,10 +106,10 @@
       "note": "Same name. Amazon Are Right, A Lot has no facet, so there is no calibration table and no question bank. Teaching and Further reading are reused."
     },
     {
-      "genericId": 8005,
-      "genericSlug": "learn-and-be-curious",
-      "genericName": "Learn and Be Curious",
-      "amazonIds": [
+      "sourceId": 8005,
+      "sourceSlug": "learn-and-be-curious",
+      "sourceName": "Learn and Be Curious",
+      "targetIds": [
         1005
       ],
       "facets": [
@@ -73,10 +119,10 @@
       "note": "Same name. Generated rows fit asking, trying a bounded new path, and carrying the answer back into the work. No row dropped."
     },
     {
-      "genericId": 8006,
-      "genericSlug": "invent-and-simplify",
-      "genericName": "Invent and Simplify",
-      "amazonIds": [
+      "sourceId": 8006,
+      "sourceSlug": "invent-and-simplify",
+      "sourceName": "Invent and Simplify",
+      "targetIds": [
         1003
       ],
       "facets": [
@@ -86,10 +132,10 @@
       "note": "Same name. Generated rows fit looking outside the team, cutting steps, and leaving a new approach in play while people are still unsure. No row dropped."
     },
     {
-      "genericId": 8007,
-      "genericSlug": "insist-on-high-standards",
-      "genericName": "Insist on High Standards",
-      "amazonIds": [
+      "sourceId": 8007,
+      "sourceSlug": "insist-on-high-standards",
+      "sourceName": "Insist on High Standards",
+      "targetIds": [
         1007
       ],
       "facets": [
@@ -100,10 +146,10 @@
       "note": "Amazon name is Insist on the Highest Standards. Generic says not to confuse excellence with unreasonable demands. The pushback row scores refusing every cut and working late as over, which fits. No row dropped."
     },
     {
-      "genericId": 8008,
-      "genericSlug": "hire-and-develop-the-best",
-      "genericName": "Hire and Develop the Best",
-      "amazonIds": [
+      "sourceId": 8008,
+      "sourceSlug": "hire-and-develop-the-best",
+      "sourceName": "Hire and Develop the Best",
+      "targetIds": [
         1006
       ],
       "facets": [
@@ -113,10 +159,10 @@
       "note": "Same name. Generic adds the culture bar and that urgency does not justify lowering it. Interview and referral rows already score filling a seat and softening the standard as under. This is not the map for Intentional About Culture. No row dropped."
     },
     {
-      "genericId": 8009,
-      "genericSlug": "think-big",
-      "genericName": "Think Big",
-      "amazonIds": [
+      "sourceId": 8009,
+      "sourceSlug": "think-big",
+      "sourceName": "Think Big",
+      "targetIds": [
         1008
       ],
       "facets": [
@@ -126,10 +172,10 @@
       "note": "Same name. Generic credits colleagues whose strength is focused delivery, detail, and disciplined operation. Under cells score missing the larger outcome. Just-right cells still require this week's delivery. No row treats that delivery as the failure by itself. No row dropped."
     },
     {
-      "genericId": 8010,
-      "genericSlug": "bias-for-action",
-      "genericName": "Bias for Action",
-      "amazonIds": [
+      "sourceId": 8010,
+      "sourceSlug": "bias-for-action",
+      "sourceName": "Bias for Action",
+      "targetIds": [
         1009
       ],
       "facets": [
@@ -139,10 +185,10 @@
       "note": "Same name. Generic states the reversible versus hard-to-undo split in the definition. Every generated row already turns on that split: act on the reversible choice, keep the review that would catch a hard-to-undo mistake. No row dropped."
     },
     {
-      "genericId": 8011,
-      "genericSlug": "frugality",
-      "genericName": "Frugality",
-      "amazonIds": [
+      "sourceId": 8011,
+      "sourceSlug": "frugality",
+      "sourceName": "Frugality",
+      "targetIds": [
         1010
       ],
       "facets": [
@@ -152,10 +198,10 @@
       "note": "Same name. Generic says growing headcount, budget, or fixed expense is not an achievement. The slipping-project under cell is asking for people before looking at scope. The over cell is turning down help the team actually needs. That still fits. No row dropped."
     },
     {
-      "genericId": 8012,
-      "genericSlug": "dive-deep",
-      "genericName": "Dive Deep",
-      "amazonIds": [
+      "sourceId": 8012,
+      "sourceSlug": "dive-deep",
+      "sourceName": "Dive Deep",
+      "targetIds": [
         1012
       ],
       "facets": [
@@ -165,10 +211,10 @@
       "note": "Same name. Generated rows fit staying in the details, sampling the items that would hurt, and tracing a slip to the real blocker. No row dropped."
     },
     {
-      "genericId": 8013,
-      "genericSlug": "have-backbone-disagree-and-commit",
-      "genericName": "Have Backbone; Disagree and Commit",
-      "amazonIds": [
+      "sourceId": 8013,
+      "sourceSlug": "have-backbone-disagree-and-commit",
+      "sourceName": "Have Backbone; Disagree and Commit",
+      "targetIds": [
         1013
       ],
       "facets": [
@@ -178,10 +224,10 @@
       "note": "Same name. Generic adds curiosity and shared learning after the outcome, not I told you so. Rows score relitigating a settled decision as over and building the chosen path as just right. No row dropped."
     },
     {
-      "genericId": 8014,
-      "genericSlug": "deliver-results",
-      "genericName": "Deliver Results",
-      "amazonIds": [
+      "sourceId": 8014,
+      "sourceSlug": "deliver-results",
+      "sourceName": "Deliver Results",
+      "targetIds": [
         1014
       ],
       "facets": [
@@ -191,10 +237,10 @@
       "note": "Same name. Generic says hours, effort, and tenure are not substitutes for delivery. Rows score a usable result and an early risk call, not hours logged. No row dropped."
     },
     {
-      "genericId": 8015,
-      "genericSlug": "intentional-about-culture",
-      "genericName": "Intentional About Culture",
-      "amazonIds": [],
+      "sourceId": 8015,
+      "sourceSlug": "intentional-about-culture",
+      "sourceName": "Intentional About Culture",
+      "targetIds": [],
       "facets": [],
       "rowFlags": [],
       "note": "The public Amazon counterpart is Strive to be Earth's Best Employer. This repository's Amazon set is the classic 14 and does not include that principle, so there is no facet, teaching, or Further reading to reuse. Nothing was invented. Hire and Develop the Best was not used as a substitute.",

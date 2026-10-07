@@ -38,7 +38,7 @@ class FurtherReadingTest(unittest.TestCase):
             seen = 0
             for name, items in lists(company):
                 seen += 1
-                with self.subTest(file="%s/%s" % (company, name)):
+                with self.subTest(file=name):
                     self.assertTrue(items, "blog list is missing or empty")
                     hosts = [urlparse(i["url"]).hostname for i in items]
                     self.assertTrue(any(h and h != BLOG_HOST for h in hosts),

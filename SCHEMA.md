@@ -341,9 +341,9 @@ the exception and run everywhere, so pick an excerpt that carries neither.
 
 ## Teaching
 
-Amazon teaching prose. Name, definition, and rows stay on the principle
-record. Porridge renders this directory. The field names are the ones the
-files already use. `blog` is the Further reading list. It is not renamed.
+Teaching prose for a set that has it. Name, definition, and rows stay on the
+principle record. Porridge renders this directory. The field names are the ones
+the files already use. `blog` is the Further reading list. It is not renamed.
 
 ### Files
 
@@ -351,11 +351,11 @@ files already use. `blog` is the Further reading list. It is not renamed.
 - `data/teaching/<company>/<slug>.json` one principle.
 
 Amazon is the classic 14. Any Company (`generic`) reuses that teaching.
-`data/maps/generic-amazon.json` is the counterpart map. A generic principle
-whose counterpart is not in this corpus has no teaching file. Edits in the
-generic copies are the smallest change that keeps the sentence company-neutral
-and true to the generic wording. Further reading titles and urls stay as they
-are in the Amazon files.
+`data/maps/<source>-<target>.json` records the reuse. The file names both
+companies, and every lookup uses those ids. `generic-amazon.json` is the Any
+Company map. `edits` is the allowlist of sentences that differ. A slug rename
+is not an edit: the source principle's slug replaces the target slug in the
+copied text. A source principle with no target id has no teaching file.
 
 kindelwww mounts this repo's `data/` at `assets/data/principles`, so Hugo
 reads `data/principles/teaching/<company>/<slug>.json` when that file exists.

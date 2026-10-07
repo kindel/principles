@@ -23,8 +23,9 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
     os.path.abspath(__file__))), "scripts"))
 
 from companies import COMPANY_META
-from validate import (expected_index, validate_company, validate_facets,
-                      validate_record, validate_teaching)
+from validate import (expected_index, load_facets, load_records, validate_company,
+                      validate_derivation_maps, validate_facets, validate_record,
+                      validate_teaching)
 
 
 def row(i, **kw):
@@ -686,6 +687,203 @@ class TeachingValidatorTest(unittest.TestCase):
             self.write(root, "customer-obsession.json", None)
             errs = self.check(root)
             self.assertTrue(any("must be a JSON object" in e for e in errs), errs)
+
+
+class DerivationMapTest(unittest.TestCase):
+    """A reuse map names its companies and allowlists copied teaching."""
+
+    def bank(self):
+        return {
+            "acme": [("one.json", {"id": 11, "slug": "one", "name": "One"})],
+            "other": [("one.json", {"id": 21, "slug": "one", "name": "Other One"})],
+        }
+
+    def facets(self):
+        return {11: ["shared"], 21: ["shared"]}
+
+    def teach(self, pid, slug="one", why="Same prose."):
+        return {
+            "id": pid,
+            "slug": slug,
+            "why": [why],
+            "blog": [{
+                "title": "A source",
+                "url": "https://example.com/a",
+                "note": "The note.",
+            }],
+        }
+
+    def index(self, pid, slug="one"):
+        return {
+            "source": "The manual.",
+            "blog": [{
+                "title": "A source",
+                "url": "https://example.com/a",
+                "note": "The note.",
+            }],
+            "principles": [{"id": pid, "slug": slug, "file": slug + ".json"}],
+        }
+
+    def mapping(self, **kw):
+        pair = {
+            "sourceId": 11,
+            "sourceSlug": "one",
+            "sourceName": "One",
+            "targetIds": [21],
+            "facets": ["shared"],
+            "rowFlags": [],
+            "note": "Same behavior.",
+        }
+        pair.update(kw.pop("pair", {}))
+        doc = {
+            "version": 1,
+            "source": "acme",
+            "target": "other",
+            "leftOut": [{"name": "Not Reused", "reason": "No counterpart."}],
+            "edits": [],
+            "pairs": [pair],
+        }
+        doc.update(kw)
+        return doc
+
+    def plant(self, root, doc=None, source_why="Same prose.", target_why="Same prose.",
+              source_slug="one", target_slug="one", skip_source=False):
+        doc = self.mapping() if doc is None else doc
+        maps = os.path.join(root, "maps")
+        os.makedirs(maps)
+        with open(os.path.join(maps, "acme-other.json"), "w", encoding="utf-8") as f:
+            json.dump(doc, f)
+        for company, pid, slug, why in (
+                ("acme", 11, source_slug, source_why),
+                ("other", 21, target_slug, target_why)):
+            d = os.path.join(root, "teaching", company)
+            os.makedirs(d)
+            with open(os.path.join(d, "index.json"), "w", encoding="utf-8") as f:
+                json.dump(self.index(pid, slug), f)
+            if company == "acme" and skip_source:
+                continue
+            with open(os.path.join(d, slug + ".json"), "w", encoding="utf-8") as f:
+                json.dump(self.teach(pid, slug, why), f)
+
+    def check(self, root, bank=None, facets=None):
+        errs = []
+        validate_derivation_maps(
+            self.bank() if bank is None else bank,
+            self.facets() if facets is None else facets,
+            errs, root=root)
+        return errs
+
+    def test_a_reused_pair_passes(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.plant(root)
+            self.assertEqual([], self.check(root))
+
+    def test_a_pair_must_be_an_object(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.mapping()
+            doc["pairs"] = ["not-an-object"]
+            self.plant(root, doc=doc)
+            errs = self.check(root)
+            self.assertTrue(any("must be an object" in e for e in errs), errs)
+
+    def test_facets_must_match_the_facet_map(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.mapping(pair={"facets": ["nope"]})
+            self.plant(root, doc=doc)
+            errs = self.check(root)
+            self.assertTrue(any("do not match the facet map" in e for e in errs), errs)
+
+    def test_facets_must_match_the_target(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.plant(root)
+            errs = self.check(root, facets={11: ["shared"], 21: ["other"]})
+            self.assertTrue(any("not the target's facets" in e for e in errs), errs)
+
+    def test_missing_reused_teaching_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.plant(root, skip_source=True)
+            errs = self.check(root)
+            self.assertTrue(any("missing reused teaching" in e for e in errs), errs)
+
+    def test_source_copy_drift_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.plant(root, source_why="Changed without an allowlist entry.")
+            errs = self.check(root)
+            self.assertTrue(any("reused teaching differs" in e for e in errs), errs)
+
+    def test_an_allowlisted_sentence_edit_passes(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.mapping(edits=[["Old sentence.", "New sentence."]])
+            self.plant(root, doc=doc, source_why="New sentence.", target_why="Old sentence.")
+            self.assertEqual([], self.check(root))
+
+    def test_an_unused_allowlisted_edit_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.mapping(edits=[["Not in the target.", "Not in the source."]])
+            self.plant(root, doc=doc)
+            errs = self.check(root)
+            self.assertTrue(any("not in the target teaching" in e for e in errs), errs)
+
+    def test_a_slug_rename_needs_no_edit(self):
+        with tempfile.TemporaryDirectory() as root:
+            bank = {
+                "acme": [("short-name.json", {"id": 11, "slug": "short-name", "name": "One"})],
+                "other": [("long-name.json", {"id": 21, "slug": "long-name", "name": "Other One"})],
+            }
+            doc = self.mapping(pair={"sourceSlug": "short-name"})
+            # Plant writes acme-other.json and teaching from the slugs below.
+            self.plant(root, doc=doc, source_slug="short-name", target_slug="long-name",
+                       source_why="See {lp:short-name}.", target_why="See {lp:long-name}.")
+            self.assertEqual([], self.check(root, bank=bank))
+
+    def test_a_pair_with_no_target_needs_a_public_counterpart(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.mapping(pair={"targetIds": []})
+            self.plant(root, doc=doc, skip_source=True)
+            errs = self.check(root)
+            self.assertTrue(any("publicCounterpart" in e for e in errs), errs)
+
+    def test_duplicate_source_id_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.mapping()
+            doc["pairs"] = [doc["pairs"][0], dict(doc["pairs"][0])]
+            self.plant(root, doc=doc)
+            errs = self.check(root)
+            self.assertTrue(any("duplicate sourceId" in e for e in errs), errs)
+
+    def test_version_must_be_1(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.plant(root, doc=self.mapping(version=2))
+            errs = self.check(root)
+            self.assertTrue(any("version must be 1" in e for e in errs), errs)
+
+    def test_a_target_id_must_be_in_the_corpus(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.plant(root, doc=self.mapping(pair={"targetIds": [999]}))
+            errs = self.check(root)
+            self.assertTrue(any("not in this corpus" in e for e in errs), errs)
+
+    def test_the_corpus_map_matches_its_teaching(self):
+        load_errs = []
+        by_company = load_records(load_errs)
+        facets = load_facets(load_errs)
+        rows = {}
+        for items in by_company.values():
+            for _, rec in items:
+                rows[rec["id"]] = {r["id"] for r in rec["rows"]}
+        principle_to_facets = validate_facets(facets, rows, load_errs)
+        self.assertEqual([], load_errs)
+        errs = []
+        validate_derivation_maps(by_company, principle_to_facets, errs)
+        self.assertEqual([], errs)
+
+    def test_success_and_scale_is_left_out(self):
+        path = os.path.join(os.path.dirname(os.path.dirname(
+            os.path.abspath(__file__))), "data", "maps", "generic-amazon.json")
+        with open(path, encoding="utf-8") as f:
+            doc = json.load(f)
+        names = [item["name"] for item in doc["leftOut"]]
+        self.assertIn("Success and Scale Bring Broad Responsibility", names)
 
 
 if __name__ == "__main__":

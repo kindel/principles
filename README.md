@@ -121,7 +121,8 @@ reason.
 ```
 data/index.json              manifest, generated, version 5
 data/facets.json             cross-company facet map
-data/teaching/<company>/     teaching prose (Amazon only today)
+data/maps/                   principle reuse, one <source>-<target>.json
+data/teaching/<company>/     teaching prose, for each set that has it
 data/generic/<slug>.json       one generic principle (display name Any Company)
 data/amazon/<slug>.json        one Amazon principle
 data/arm/<slug>.json           one Arm factor
