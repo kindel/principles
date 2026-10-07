@@ -3895,8 +3895,7 @@
         4005,
         5004,
         6010,
-        8008,
-        8015
+        8008
       ],
       "rows": [
         {
@@ -3926,10 +3925,6 @@
         {
           "principle": 5004,
           "id": "hiring-bias"
-        },
-        {
-          "principle": 6010,
-          "id": "dawns-own-example"
         },
         {
           "id": "two-finalists",
@@ -4004,14 +3999,10 @@
           "id": "team-composition"
         },
         {
-          "principle": 5004,
-          "id": "hiring-bias"
-        },
-        {
           "id": "a-team-like-the-manager",
           "situation": "A team like the manager",
           "under": "Builds a team with the same background, the same thinking style, and the same skills as the manager. The same blind spots show up in every review, and nobody in the room catches them.",
-          "justRight": "Hires the best person for each role, and chooses backgrounds, styles, and skills because that mix makes the business outcome better.",
+          "justRight": "Hires the best person for each role. The set of roles covers more than one background, style, and skill when that is what the outcome needs.",
           "over": "Sets a target for how the team should look and accepts a weaker hire to hit it. The team under-delivers because it was not built for the outcome.",
           "words": "generated"
         },
@@ -4043,7 +4034,7 @@
           "id": "the-next-three-hires",
           "situation": "The next three hires",
           "under": "Plans the next hires as more people the manager already trusts, which means people like the manager.",
-          "justRight": "Plans each seat against the outcome. The mix of backgrounds, styles, and skills is whatever makes those jobs succeed.",
+          "justRight": "Plans each seat against the work the outcome needs. The person who gets the seat is the best one for that work, including when the work needs a background, a style, or a skill the team does not have.",
           "over": "Assigns the next three hires to a quota. Capable people are passed over when they miss the slot, and less capable people are hired when they fill it.",
           "words": "generated"
         },
@@ -4051,7 +4042,7 @@
           "id": "after-the-team-misses",
           "situation": "After the team misses",
           "under": "Blames the miss on not having enough people who already work the manager's way, and hires more of them.",
-          "justRight": "Asks which background, style, or skill was missing, and whether the people in the seats could do the work.",
+          "justRight": "Asks what the outcome needed that the team could not do, and whether the people in the seats could do the work.",
           "over": "Hires again to change how the team looks. The result does not improve, because the new person still cannot do the work.",
           "words": "generated"
         }

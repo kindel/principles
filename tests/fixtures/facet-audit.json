@@ -480,7 +480,7 @@
       "id": 8008,
       "decision": "map",
       "facets": ["best-person-for-the-role", "hire-and-develop-the-best", "team-for-the-outcome"],
-      "reason": "Same behavior as Amazon Hire and Develop the Best. Generic adds the culture bar and that urgency does not lower it. best-person-for-the-role and team-for-the-outcome are the hire and the team. hire-and-develop-the-best is still not the map for Intentional About Culture. No row was dropped."
+      "reason": "Same behavior as Amazon Hire and Develop the Best. Generic adds the culture bar and that urgency does not lower it. best-person-for-the-role is the hiring decision. team-for-the-outcome is the team, and that facet is also on Intentional About Culture. hire-and-develop-the-best is still not the map for Intentional About Culture. No row was dropped."
     },
     {
       "id": 8009,
@@ -521,8 +521,8 @@
     {
       "id": 8015,
       "decision": "map",
-      "facets": ["best-person-for-the-role", "intentional-about-culture", "team-for-the-outcome"],
-      "reason": "The room, the credit, and the hard meeting stay on intentional-about-culture. Who you hire, and whether the team's backgrounds, styles, and skills serve the work or a target for how it looks, is part of this job. hire-and-develop-the-best stays off."
+      "facets": ["intentional-about-culture", "team-for-the-outcome"],
+      "reason": "The room, the credit, and the hard meeting stay on intentional-about-culture. team-for-the-outcome is the team a leader builds: not a copy of the manager, and not a target for how the team looks. best-person-for-the-role is the interview decision, so it stays on the hiring principles. hire-and-develop-the-best stays off."
     }
   ]
 }

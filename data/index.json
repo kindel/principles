@@ -159,7 +159,6 @@
           "sort": 15,
           "file": "data/generic/intentional-about-culture.json",
           "facets": [
-            "best-person-for-the-role",
             "intentional-about-culture",
             "team-for-the-outcome"
           ]
