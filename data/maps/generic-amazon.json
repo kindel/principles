@@ -155,10 +155,12 @@
         1006
       ],
       "facets": [
-        "hire-and-develop-the-best"
+        "best-person-for-the-role",
+        "hire-and-develop-the-best",
+        "team-for-the-outcome"
       ],
       "rowFlags": [],
-      "note": "Same name. Generic adds the culture bar and that urgency does not justify lowering it. Interview and referral rows already score filling a seat and softening the standard as under. This is not the map for Intentional About Culture. No row dropped."
+      "note": "Same name. Generic adds the culture bar and that urgency does not justify lowering it. Interview and referral rows already score filling a seat and softening the standard as under. hire-and-develop-the-best is still not the whole of Intentional About Culture. best-person-for-the-role and team-for-the-outcome are shared with that principle. No row dropped."
     },
     {
       "sourceId": 8009,
@@ -244,10 +246,12 @@
       "sourceName": "Intentional About Culture",
       "targetIds": [],
       "facets": [
-        "intentional-about-culture"
+        "best-person-for-the-role",
+        "intentional-about-culture",
+        "team-for-the-outcome"
       ],
       "rowFlags": [],
-      "note": "The public counterpart is Strive to be Earth's Best Employer. That principle is not in this corpus, so there is no teaching to copy. The facet, the calibration rows, and the teaching were authored from this principle's definition. Hire and Develop the Best was not used as a substitute.",
+      "note": "The public counterpart is Strive to be Earth's Best Employer. That principle is not in this corpus, so there is no teaching to copy. intentional-about-culture, its rows, and the teaching were authored from this principle's definition. best-person-for-the-role and team-for-the-outcome are also mapped here. The hire-and-develop-the-best table was not used as a substitute.",
       "publicCounterpart": "Strive to be Earth's Best Employer",
       "inThisCorpus": false
     }

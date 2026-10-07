@@ -87,7 +87,9 @@
           "sort": 8,
           "file": "data/generic/hire-and-develop-the-best.json",
           "facets": [
-            "hire-and-develop-the-best"
+            "best-person-for-the-role",
+            "hire-and-develop-the-best",
+            "team-for-the-outcome"
           ]
         },
         {
@@ -157,7 +159,9 @@
           "sort": 15,
           "file": "data/generic/intentional-about-culture.json",
           "facets": [
-            "intentional-about-culture"
+            "best-person-for-the-role",
+            "intentional-about-culture",
+            "team-for-the-outcome"
           ]
         }
       ]
@@ -225,7 +229,9 @@
           "sort": 6,
           "file": "data/amazon/hire-and-develop-the-best.json",
           "facets": [
-            "hire-and-develop-the-best"
+            "best-person-for-the-role",
+            "hire-and-develop-the-best",
+            "team-for-the-outcome"
           ]
         },
         {
@@ -344,7 +350,9 @@
           "sort": 3,
           "file": "data/arm/build-extraordinary-teams.json",
           "facets": [
-            "build-extraordinary-teams"
+            "best-person-for-the-role",
+            "build-extraordinary-teams",
+            "team-for-the-outcome"
           ]
         },
         {
@@ -502,7 +510,9 @@
           "sort": 8,
           "file": "data/coupang/hire-and-develop-the-best.json",
           "facets": [
-            "hire-and-develop-the-best"
+            "best-person-for-the-role",
+            "hire-and-develop-the-best",
+            "team-for-the-outcome"
           ]
         },
         {
@@ -630,7 +640,9 @@
           "sort": 5,
           "file": "data/delivery-hero/raise-the-bar.json",
           "facets": [
-            "raise-the-bar"
+            "best-person-for-the-role",
+            "raise-the-bar",
+            "team-for-the-outcome"
           ]
         },
         {
@@ -688,7 +700,9 @@
           "sort": 4,
           "file": "data/gitlab/diversity-inclusion-and-belonging.json",
           "facets": [
-            "belonging"
+            "belonging",
+            "best-person-for-the-role",
+            "team-for-the-outcome"
           ]
         },
         {
@@ -816,7 +830,9 @@
           "sort": 10,
           "file": "data/dawn/hire-and-develop-the-best.json",
           "facets": [
-            "hire-and-develop-the-best"
+            "best-person-for-the-role",
+            "hire-and-develop-the-best",
+            "team-for-the-outcome"
           ]
         },
         {
