@@ -603,6 +603,58 @@ class EssayLinkTest(unittest.TestCase):
             essay_links.essay_slug(
                 "blog.kindel.com/2018/05/27/ownership/", self.catalog))
 
+    def test_an_unquoted_attribute_keeps_the_root_relative_url(self):
+        href = "/essays/ownership/"
+        samples = (
+            "<a href=/essays/ownership/>",
+            "<a href=/essays/ownership/ >",
+            '<a href="/essays/ownership/">',
+            "<img src=/essays/ownership/>",
+        )
+        for text in samples:
+            self.assertEqual(
+                [(href, "ownership")],
+                essay_links.problems_in_text(text, self.catalog),
+                text)
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text("<a href=/about/>", self.catalog))
+        pid = self.ownership_id()
+        blog = "blog.kindel.com/?p=%s" % pid
+        self.assertEqual(
+            [(blog, "ownership")],
+            essay_links.problems_in_text(blog, self.catalog))
+        errs = []
+        essay_links.check_value(
+            {"note": samples[0]}, "note.json", self.catalog, errs)
+        self.assertTrue(any(href in e for e in errs), errs)
+
+    def test_a_bare_url_keeps_balanced_parentheses(self):
+        href = "https://kindel.com/essays/ownership/(extra)"
+        text = "See %s now." % href
+        found = essay_links.problems_in_text(text, self.catalog)
+        self.assertTrue(
+            any("(extra" in href and slug == "ownership" for href, slug in found),
+            found)
+        self.assertFalse(
+            any(href.rstrip(")") == "https://kindel.com/essays/ownership/"
+                for href, _slug in found),
+            found)
+        nested = "https://kindel.com/essays/ownership/(a(b))"
+        found = essay_links.problems_in_text("See %s now." % nested, self.catalog)
+        self.assertTrue(any("(a(b" in href for href, _slug in found), found)
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                "See (https://kindel.com/essays/ownership/).", self.catalog))
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                "See https://kindel.com/essays/ownership/.", self.catalog))
+        errs = []
+        essay_links.check_value({"note": text}, "note.json", self.catalog, errs)
+        self.assertTrue(any("(extra" in e for e in errs), errs)
+
     def test_a_link_field_ignores_other_hosts(self):
         samples = (
             "https://notkindel.com/essays/ownership/",

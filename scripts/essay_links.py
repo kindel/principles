@@ -14,7 +14,9 @@ segment, a doubled slash, a dot segment, or an encoded slash fails the
 same way a blog.kindel.com essay URL does. The path is decoded once and
 dot segments are folded before that check. One terminal DNS dot on
 the host is ignored. A kindel.com or blog.kindel.com link with no
-scheme is judged the same way. A stored field is judged
+scheme is judged the same way. A bare URL keeps balanced
+parentheses. An equals sign before a root-relative path is not part
+of the link. A stored field is judged
 before trailing punctuation is removed. A url or href value is one
 stored link, so extra text in that field fails the same check. Space
 around that value fails too. A note that is only a Markdown link is
@@ -51,16 +53,16 @@ from urllib.parse import parse_qsl, unquote, urljoin, urlparse
 _SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 _DATED = re.compile(r"^/(\d{4})/(\d{2})/(\d{2})/([^/]+)/?$")
 _INDEX_PHP = re.compile(r"^/index\.php$", re.IGNORECASE)
-_CANDIDATE = re.compile(
-    r"(?:https?:)?//[^\s<>\"'`()\[\]]+", re.IGNORECASE)
+_BARE_START = re.compile(r"(?:https?:)?//", re.IGNORECASE)
 # Any path-like token, so a percent-encoded prefix is still found.
-# Brackets and parentheses stay outside the token so Markdown can wrap a URL.
+# '=' before the first slash is an attribute prefix, not part of the path.
 # The encoded-slash alternative is split so this file is not a candidate.
 _PATHY = re.compile(
-    r"(?<![A-Za-z0-9@])((?:\.\./|\./)?[^\s<>\"'`()\[\]]*"
+    r"(?<![A-Za-z0-9@])((?:\.\./|\./)?[^\s<>\"'`()\[\]=]*"
     + r"(?:/|%2" + "f)"
     + r"[^\s<>\"'`()\[\]]+)",
     re.IGNORECASE)
+_TOKEN_STOP = set(" \t\n\r<>\"'`[]")
 _TRAILING = ".,;:)]}>`"
 # CommonMark ASCII punctuation. A backslash escapes only these.
 _ASCII_PUNCT = set("!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~")
@@ -326,11 +328,35 @@ def format_problem(href, slug):
     return "essay link %s is not in scripts/essay_catalog.json" % href
 
 
+def _bare_end(text, start):
+    """End of a bare URL, keeping balanced parentheses.
+
+    An unmatched ')' is prose and stops the token. An unmatched '('
+    stays, so a canonical prefix cannot hide a broken path.
+    """
+    i = start
+    n = len(text)
+    depth = 0
+    while i < n:
+        ch = text[i]
+        if ch in _TOKEN_STOP:
+            break
+        if ch == "(":
+            depth += 1
+        elif ch == ")" and depth == 0:
+            break
+        elif ch == ")":
+            depth -= 1
+        i += 1
+    return i
+
+
 def _tokens(text):
     """(raw href, end index) for absolute URLs and path-like tokens.
 
     The raw href keeps trailing punctuation. The caller judges it before
-    deciding whether that punctuation is prose.
+    deciding whether that punctuation is prose. Balanced parentheses
+    stay inside a bare URL. A root-relative path starts after '='.
     """
     spans = []
     found = []
@@ -342,14 +368,20 @@ def _tokens(text):
         seen.add((raw, end))
         found.append((raw, end))
 
-    for match in _CANDIDATE.finditer(text):
-        spans.append((match.start(), match.end()))
-        add(match.group(0), match.end())
+    for match in _BARE_START.finditer(text):
+        if any(a <= match.start() < b for a, b in spans):
+            continue
+        end = _bare_end(text, match.end())
+        if end <= match.end():
+            continue
+        spans.append((match.start(), end))
+        add(text[match.start():end], end)
     for match in _PATHY.finditer(text):
         start = match.start(1)
         if any(a <= start < b for a, b in spans):
             continue
-        add(match.group(1), match.end(1))
+        end = _bare_end(text, match.end(1))
+        add(text[start:end], end)
     return found
 
 
