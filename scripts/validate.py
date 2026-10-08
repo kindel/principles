@@ -619,13 +619,25 @@ def _strings(obj, out):
             _strings(v, out)
 
 
+def _note_strings(items):
+    """Notes on related entries and Further reading can hold {lp:slug} tokens."""
+    notes = []
+    if not isinstance(items, list):
+        return notes
+    for item in items:
+        if isinstance(item, dict) and isinstance(item.get("note"), str):
+            notes.append(item["note"])
+    return notes
+
+
 def validate_teaching(by_company, errs, root=None):
     """Teaching files point at real principles.
 
     A slug in data/teaching/<company>/ must be a principle of that company.
-    Each related id must be one too. Every {lp:slug} token in the prose
-    must resolve, and it must be listed in related. A token in the catalog
-    must resolve. root is for tests; the corpus uses DATA.
+    Each related id must be one too. Every {lp:slug} token in the prose,
+    in a related note, or in a Further reading note must resolve, and it
+    must be listed in related. A token in the catalog must resolve.
+    root is for tests; the corpus uses DATA.
     """
     catalog, catalog_err = essay_links.load_catalog()
     if catalog_err:
@@ -721,6 +733,8 @@ def validate_teaching(by_company, errs, root=None):
             for key in TEACH_PROSE:
                 if key in doc:
                     _strings(doc[key], texts)
+            texts.extend(_note_strings(doc.get("related")))
+            texts.extend(_note_strings(doc.get("blog")))
             for text in texts:
                 for match in LP_TOKEN.finditer(text):
                     tok = match.group(1)

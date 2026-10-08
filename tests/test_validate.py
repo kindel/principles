@@ -759,6 +759,39 @@ class TeachingValidatorTest(unittest.TestCase):
             errs = self.check(root)
             self.assertTrue(any("{lp:ownership} is missing from related" in e for e in errs), errs)
 
+    def bank_with_deliver_results(self):
+        bank = self.bank()
+        bank["amazon"].append(
+            ("deliver-results.json", {"id": 1003, "slug": "deliver-results"}))
+        return bank
+
+    def test_a_token_in_a_related_note_must_be_listed_in_related(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["related"][0]["note"] = "See {lp:deliver-results}."
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root, self.bank_with_deliver_results())
+            self.assertTrue(
+                any("{lp:deliver-results} is missing from related" in e for e in errs),
+                errs)
+
+    def test_a_listed_token_in_a_related_note_passes(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["related"][0]["note"] = "See {lp:ownership}."
+            self.write(root, "customer-obsession.json", doc)
+            self.assertEqual([], self.check(root))
+
+    def test_a_token_in_a_reading_note_must_be_listed_in_related(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["note"] = "See {lp:deliver-results}."
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root, self.bank_with_deliver_results())
+            self.assertTrue(
+                any("{lp:deliver-results} is missing from related" in e for e in errs),
+                errs)
+
     def test_an_em_dash_is_rejected(self):
         with tempfile.TemporaryDirectory() as root:
             doc = self.good()
