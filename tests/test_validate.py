@@ -699,11 +699,27 @@ class TeachingValidatorTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as root:
             doc = self.good()
             doc["blog"][0]["url"] = (
+                "https://blog.kindel.com/2026/08/20/"
+                "if-every-tool-invents-amazon/"
+            )
+            self.write(root, "customer-obsession.json", doc)
+            self.assertEqual([], self.check(root))
+
+    def test_the_interview_blog_url_is_an_essay(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = (
                 "https://blog.kindel.com/2026/08/18/"
                 "interviews-are-better-with-behavioral-questions/"
             )
             self.write(root, "customer-obsession.json", doc)
-            self.assertEqual([], self.check(root))
+            errs = self.check(root)
+            self.assertTrue(
+                any(
+                    "https://kindel.com/essays/"
+                    "interviews-are-better-with-behavioral-questions/" in e
+                    for e in errs),
+                errs)
 
     def test_an_en_dash_in_a_published_title_is_allowed(self):
         with tempfile.TemporaryDirectory() as root:

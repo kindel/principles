@@ -1,7 +1,7 @@
 {
   "category": 448,
   "source": "https://blog.kindel.com/wp-json/wp/v2/posts?categories=448",
-  "fetched": "2026-10-07",
+  "fetched": "2026-10-08",
   "refresh": "Fetch every page of source with per_page=100. Follow X-WP-TotalPages. Keep id and slug. Sort by slug.",
   "posts": [
     {
@@ -167,6 +167,10 @@
     {
       "id": 2274,
       "slug": "humans-guessing-about-humans"
+    },
+    {
+      "id": 2109,
+      "slug": "interviews-are-better-with-behavioral-questions"
     },
     {
       "id": 1096,

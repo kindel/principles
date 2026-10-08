@@ -17,6 +17,10 @@ import essay_links
 
 OWNERSHIP = "https://blog.kindel.com/2018/05/27/ownership/"
 NOT_AN_ESSAY = (
+    "https://blog.kindel.com/2026/08/20/"
+    "if-every-tool-invents-amazon/"
+)
+INTERVIEW = (
     "https://blog.kindel.com/2026/08/18/"
     "interviews-are-better-with-behavioral-questions/"
 )
@@ -28,8 +32,11 @@ class EssayLinkTest(unittest.TestCase):
         self.catalog, err = essay_links.load_catalog()
         self.assertIsNone(err, err)
         self.assertIn("ownership", self.catalog["by_slug"])
-        self.assertNotIn(
+        self.assertIn(
             "interviews-are-better-with-behavioral-questions",
+            self.catalog["by_slug"])
+        self.assertNotIn(
+            "if-every-tool-invents-amazon",
             self.catalog["by_slug"])
 
     def ownership_id(self):
@@ -222,6 +229,7 @@ class EssayLinkTest(unittest.TestCase):
             ("https://kindel.com/%2565ssays/ownership/", None),
             ("%2565ssays/ownership/", None),
             (NOT_AN_ESSAY, None),
+            (INTERVIEW, "interviews-are-better-with-behavioral-questions"),
             (OWNERSHIP, "ownership"),
             ("https://www.blog.kindel.com/2018/05/27/ownership/", "ownership"),
             ("http://blog.kindel.com/2018/05/27/ownership", "ownership"),
@@ -273,7 +281,9 @@ class EssayLinkTest(unittest.TestCase):
             else:
                 self.assertEqual([(href, slug)], found, href)
                 if slug:
-                    self.assertIn(canonical, essay_links.format_problem(href, slug))
+                    self.assertIn(
+                        essay_links.canonical_essay_url(slug),
+                        essay_links.format_problem(href, slug))
 
     def test_a_quoted_stored_url_keeps_trailing_punctuation(self):
         period = "https://kindel.com/essays/ownership/."
