@@ -402,6 +402,56 @@ class EssayLinkTest(unittest.TestCase):
         self.assertEqual(1, len(problems), problems)
         self.assertIn(period, problems[0])
 
+    def test_wrapped_markdown_destinations_keep_their_period(self):
+        period = "https://kindel.com/essays/ownership/."
+        forms = (
+            "[Ownership](<%s>)" % period,
+            "[Ownership]( %s)" % period,
+            "<%s>" % period,
+        )
+        for text in forms:
+            self.assertEqual(
+                [(period, "ownership")],
+                essay_links.problems_in_text(text, self.catalog),
+                text)
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                "See https://kindel.com/essays/ownership/.", self.catalog))
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                "[Ownership]( https://kindel.com/essays/ownership/)",
+                self.catalog))
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                "<https://kindel.com/essays/ownership/>", self.catalog))
+
+    def test_a_link_field_must_be_exactly_one_link(self):
+        see = "See https://kindel.com/essays/ownership/"
+        errs = []
+        essay_links.check_value(
+            {"url": see}, "note.json", self.catalog, errs)
+        self.assertTrue(any(see in e for e in errs), errs)
+        self.assertTrue(
+            any("https://kindel.com/essays/ownership/" in e for e in errs),
+            errs)
+        prefixed = "prefix https://kindel.com/essays/ownership/"
+        errs = []
+        essay_links.check_value(
+            {"href": prefixed}, "card.json", self.catalog, errs)
+        self.assertTrue(any(prefixed in e for e in errs), errs)
+        errs = []
+        essay_links.check_value(
+            {"url": "https://kindel.com/essays/ownership/"},
+            "note.json", self.catalog, errs)
+        self.assertEqual([], errs)
+        errs = []
+        essay_links.check_value(
+            {"note": see}, "note.json", self.catalog, errs)
+        self.assertEqual([], errs)
+
     def test_json_values_keep_prose_periods_and_stored_parens(self):
         prose = '{"note": "See https://kindel.com/essays/ownership/."}\n'
         paren = "https://kindel.com/essays/ownership/)"

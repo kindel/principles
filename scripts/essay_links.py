@@ -17,7 +17,9 @@ before trailing punctuation is removed. A url or href value is one
 stored link, so extra text in that field fails the same check. Space
 around that value fails too. A note that is only a Markdown link is
 still scanned, and punctuation inside that destination stays part of
-the link. JSON files are read as decoded values. A sentence in
+the link. That includes angle brackets, a space after the opener, and
+a bare angle-bracket link. A url or href value is exactly one link.
+JSON files are read as decoded values. A sentence in
 one of those values may end with a period.
 
 scripts/essay_catalog.json is the offline copy of that category
@@ -328,10 +330,11 @@ def problems_in_text(text, catalog):
     """(href, slug) pairs for essay links that are not canonical.
 
     slug is the catalog slug the link should use, or "" when the path
-    does not name one. A token inside quotes, or immediately after a
-    Markdown "](", is a stored destination, so trailing punctuation
-    stays part of the value. Elsewhere it is prose and is dropped only
-    after the raw token has been judged.
+    does not name one. A token inside quotes, or in a Markdown
+    destination, is stored, so trailing punctuation stays part of the
+    value. A destination may follow "](" directly, after whitespace,
+    or inside angle brackets. Elsewhere punctuation is prose and is
+    dropped only after the raw token has been judged.
     """
     if not text or not catalog:
         return []
@@ -340,8 +343,7 @@ def problems_in_text(text, catalog):
     for href, end in _tokens(text):
         start = end - len(href)
         nxt = text[end:end + 1]
-        prev = text[start - 2:start] if start >= 2 else ""
-        strict = nxt in ('"', "'") or prev == "]("
+        strict = nxt in ('"', "'") or _is_destination(text, start, end)
         issue = _classify(href, catalog, strict)
         if not issue or issue[0] in seen:
             continue
@@ -370,6 +372,24 @@ def _collect(obj, out):
         out.append((obj, False))
 
 
+def _is_destination(text, start, end):
+    """True when the token is a Markdown link destination or an autolink.
+
+    "](url)", "]( url)", "](<url>)", and "<url>" all count. Punctuation
+    in those forms belongs to the link.
+    """
+    if start >= 1 and text[start - 1] == "<" and text[end:end + 1] == ">":
+        return True
+    i = start
+    while i > 0 and text[i - 1].isspace():
+        i -= 1
+    if i >= 1 and text[i - 1] == "<":
+        i -= 1
+        while i > 0 and text[i - 1].isspace():
+            i -= 1
+    return i >= 2 and text[i - 2:i] == "]("
+
+
 def _exact_slug(href, catalog):
     """Slug when href is the canonical essay URL, else ""."""
     for slug in catalog["by_slug"]:
@@ -378,23 +398,46 @@ def _exact_slug(href, catalog):
     return ""
 
 
-def _stored_link_problem(text, catalog):
-    """(href, slug) when a url or href value is a non-exact essay link.
+def _field_essay_hits(text, catalog):
+    """(href, slug) for every essay token in a url or href value.
 
-    Surrounding whitespace is rejected before the stripped text is
-    classified. Padding cannot turn a canonical URL into an exact match.
-    None means the value is not an essay link.
+    Canonical links are included. slug is "" when the path names none.
+    """
+    hits = []
+    seen = set()
+    for href, _end in _tokens(text):
+        verdict = _judge(href, catalog)
+        if verdict == _OK:
+            slug = _exact_slug(href, catalog)
+            verdict = (href, slug) if slug else None
+        if not verdict or verdict[0] in seen:
+            continue
+        seen.add(verdict[0])
+        hits.append(verdict)
+    return hits
+
+
+def _stored_link_problem(text, catalog):
+    """(href, slug) when a url or href value is not exactly one essay link.
+
+    The field holds one link. An essay token with other text around it
+    fails, and so does space around an otherwise exact link. None means
+    the value is not an essay link.
     """
     stripped = text.strip()
-    if stripped != text:
-        verdict = _judge(stripped, catalog)
-        if verdict == _OK:
-            slug = _exact_slug(stripped, catalog)
-            if slug:
-                return (text, slug)
-        elif verdict is not None:
-            return (text, verdict[1])
-    return _classify(stripped, catalog, True)
+    hits = _field_essay_hits(stripped, catalog)
+    if not hits:
+        return None
+    slug = hits[0][1]
+    only = len(hits) == 1 and stripped == hits[0][0]
+    if only and text == stripped:
+        return _classify(stripped, catalog, True)
+    if only:
+        issue = _classify(stripped, catalog, True)
+        if issue:
+            return (text, issue[1])
+        return (text, slug)
+    return (text, slug)
 
 
 def check_value(obj, where, catalog, errs):
@@ -403,8 +446,8 @@ def check_value(obj, where, catalog, errs):
     A string with no whitespace is judged whole first. When that check
     finds nothing, the tokens inside are still scanned, so a Markdown
     link that is the whole note cannot hide an essay URL. A url or href
-    value keeps its surrounding space, and a sentence may end with a
-    period.
+    value is exactly one link: other text in that field fails, and so
+    does space around the link. A sentence may end with a period.
     """
     items = []
     _collect(obj, items)
