@@ -476,6 +476,61 @@ class EssayLinkTest(unittest.TestCase):
                 "[Ownership](https://kindel.com/essays/ownership/)",
                 self.catalog))
 
+    def test_a_markdown_title_is_not_part_of_the_destination(self):
+        canonical = '[Ownership](https://kindel.com/essays/ownership/ "Ownership essay")'
+        self.assertEqual(
+            [], essay_links.problems_in_text(canonical, self.catalog))
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                "[Ownership](https://kindel.com/essays/ownership/ (Ownership essay))",
+                self.catalog))
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                "[Ownership](https://kindel.com/essays/ownership/ 'Ownership essay')",
+                self.catalog))
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                '[Ownership](<https://kindel.com/essays/ownership/> "Ownership essay")',
+                self.catalog))
+        escaped = (
+            '[Ownership](https://kindel.com/essays/ownership/\\(extra\\) "note")'
+        )
+        found = essay_links.problems_in_text(escaped, self.catalog)
+        self.assertTrue(
+            any(href == "https://kindel.com/essays/ownership/(extra)"
+                for href, _slug in found),
+            found)
+        blog = (
+            '[Ownership](%s "Ownership")' % OWNERSHIP
+        )
+        found = essay_links.problems_in_text(blog, self.catalog)
+        self.assertTrue(any(OWNERSHIP in href for href, _slug in found), found)
+        errs = []
+        essay_links.check_value({"note": canonical}, "note.json", self.catalog, errs)
+        self.assertEqual([], errs)
+        errs = []
+        essay_links.check_value({"note": blog}, "note.json", self.catalog, errs)
+        self.assertTrue(any(OWNERSHIP in e for e in errs), errs)
+
+    def test_a_link_field_ignores_other_hosts(self):
+        samples = (
+            "https://notkindel.com/essays/ownership/",
+            "https://web.archive.org/web/2020/https://kindel.com/essays/ownership/",
+            NOT_AN_ESSAY + "?next=https://kindel.com/essays/ownership/",
+        )
+        for url in samples:
+            errs = []
+            essay_links.check_value(
+                {"url": url}, "card.json", self.catalog, errs)
+            self.assertEqual([], errs, url)
+            errs = []
+            essay_links.check_value(
+                {"href": url}, "card.json", self.catalog, errs)
+            self.assertEqual([], errs, url)
+
     def test_a_link_field_is_classified_whole(self):
         samples = (
             "https://kindel.com/essays/(ownership)/",

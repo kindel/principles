@@ -16,10 +16,11 @@ dot segments are folded before that check. A stored field is judged
 before trailing punctuation is removed. A url or href value is one
 stored link, so extra text in that field fails the same check. Space
 around that value fails too. A note that is only a Markdown link is
-still scanned. The destination is read whole, including balanced
-parentheses, angle brackets, and a space after the opener. A url or
-href value is judged whole before it is split, and any value that
-names the essays path has to be the canonical catalog URL. JSON files
+still scanned. The destination is read on its own, including balanced
+parentheses, escaped delimiters, and angle brackets. A title after
+the destination is not part of the link. A url or href value is judged
+whole before it is split. Only a parsed kindel.com host whose path is
+under essays has to be the canonical catalog URL. JSON files
 are read as decoded values. A sentence may end with a period.
 
 scripts/essay_catalog.json is the offline copy of that category
@@ -339,42 +340,104 @@ def _looks_like_destination(raw):
     return lower.startswith("essays/") or "/essays" in lower
 
 
-def _read_destination(text, i):
-    """(destination, end) after a Markdown ']('. end is past the closer.
-
-    Parentheses inside the destination are balanced. An angle-bracket
-    destination runs to its closing bracket. None when the closer is
-    missing.
-    """
+def _skip_spaces(text, i):
+    """Index after spaces and tabs. A newline ends the link."""
     n = len(text)
-    while i < n and text[i].isspace():
+    while i < n and text[i] in " \t":
         i += 1
-    if i >= n:
+    return i
+
+
+def _read_title(text, i):
+    """Index past a CommonMark link title, or None."""
+    if i >= len(text) or text[i] not in "\"'(":
         return None
-    if text[i] == "<":
-        end = text.find(">", i + 1)
-        if end == -1 or "\n" in text[i + 1:end]:
-            return None
-        return (text[i + 1:end].strip(), i, end, end + 1)
-    start = i
-    depth = 0
+    closer = ")" if text[i] == "(" else text[i]
+    i += 1
+    n = len(text)
     while i < n:
         ch = text[i]
         if ch == "\\" and i + 1 < n:
             i += 2
             continue
+        if ch == "\n":
+            return None
+        if ch == closer:
+            return i + 1
+        i += 1
+    return None
+
+
+def _finish_link(text, i, dest, dest_start, dest_end):
+    """(dest, dest_start, dest_end, next) when a ')' closes the link."""
+    i = _skip_spaces(text, i)
+    if i < len(text) and text[i] in "\"'(":
+        title_end = _read_title(text, i)
+        if title_end is None:
+            return None
+        i = _skip_spaces(text, title_end)
+    if i < len(text) and text[i] == ")":
+        return (dest, dest_start, dest_end, i + 1)
+    return None
+
+
+def _read_destination(text, i):
+    """(destination, dest_start, dest_end, next) after a Markdown ']('.
+
+    The destination is separate from an optional title. Escaped
+    delimiters stay in the destination, and parentheses in it are
+    balanced. dest_end is the end of the destination, not the title.
+    None when the link does not close.
+    """
+    n = len(text)
+    i = _skip_spaces(text, i)
+    if i >= n:
+        return None
+    if text[i] == "<":
+        i += 1
+        dest_start = i
+        buf = []
+        while i < n:
+            ch = text[i]
+            if ch == "\n":
+                return None
+            if ch == "\\" and i + 1 < n and text[i + 1] != "\n":
+                buf.append(text[i + 1])
+                i += 2
+                continue
+            if ch == "<":
+                return None
+            if ch == ">":
+                return _finish_link(text, i + 1, "".join(buf), dest_start, i)
+            buf.append(ch)
+            i += 1
+        return None
+    dest_start = i
+    buf = []
+    depth = 0
+    while i < n:
+        ch = text[i]
+        if ch == "\\" and i + 1 < n and text[i + 1] != "\n":
+            buf.append(text[i + 1])
+            i += 2
+            continue
         if ch == "(":
             depth += 1
+            buf.append(ch)
             i += 1
             continue
         if ch == ")":
             if depth == 0:
-                return (text[start:i].strip(), start, i, i + 1)
+                return ("".join(buf), dest_start, i, i + 1)
             depth -= 1
+            buf.append(ch)
             i += 1
             continue
+        if ch in " \t" and depth == 0:
+            return _finish_link(text, i, "".join(buf), dest_start, i)
         if ch == "\n":
             return None
+        buf.append(ch)
         i += 1
     return None
 
@@ -382,8 +445,9 @@ def _read_destination(text, i):
 def _markdown_destinations(text):
     """(destination, start, end) for link targets and autolinks.
 
-    start and end bound the destination text. Balanced parentheses stay
-    inside it. Absolute and relative targets are both returned.
+    start and end bound the destination text, not an optional title.
+    Balanced parentheses and escaped delimiters stay inside it.
+    Absolute and relative targets are both returned.
     """
     found = []
     i = 0
@@ -427,10 +491,12 @@ def problems_in_text(text, catalog):
     """(href, slug) pairs for essay links that are not canonical.
 
     slug is the catalog slug the link should use, or "" when the path
-    does not name one. Markdown destinations are taken whole, so a
-    parenthesis inside the destination stays part of the link. A token
-    inside quotes is stored the same way. Elsewhere punctuation is
-    prose and is dropped only after the raw token has been judged.
+    does not name one. A Markdown destination is classified on its own,
+    so a title after it is neither part of the link nor inside the
+    covered span. Parentheses and escaped delimiters stay in the
+    destination. A token inside quotes is stored the same way.
+    Elsewhere punctuation is prose and is dropped only after the raw
+    token has been judged.
     """
     if not text or not catalog:
         return []
@@ -505,10 +571,23 @@ def _field_essay_hits(text, catalog):
     return hits
 
 
-def _touches_kindel_essays(text):
-    """True when the field names the essays path on kindel.com."""
-    compact = "".join(unquote(text or "").lower().split())
-    return "kindel.com/essays" in compact
+def _field_host_is_kindel_essays(text):
+    """True when the field's own host and path are a kindel.com essays URL.
+
+    The hostname is parsed. www is ignored. An essay URL buried in
+    another host's path or query does not count.
+    """
+    raw = (text or "").strip()
+    try:
+        url = urlparse(raw)
+    except ValueError:
+        return False
+    if url.scheme not in ("http", "https") or not url.hostname:
+        return False
+    if _host(url.hostname) != "kindel.com":
+        return False
+    path = _norm_path(url.path).lower()
+    return path == "/essays" or path.startswith("/essays/")
 
 
 def _stored_link_problem(text, catalog):
@@ -516,14 +595,15 @@ def _stored_link_problem(text, catalog):
 
     The whole field is classified before any token is taken, so a
     parenthesis or a space in the path cannot hide behind the essays
-    index. A value that names that path has to be the canonical catalog
-    URL. None means the value is not an essay link.
+    index. Only a parsed kindel.com host whose path is under essays
+    has to be the canonical catalog URL. None means the value is not
+    an essay link.
     """
     stripped = text.strip()
     issue = _classify(stripped, catalog, True)
     if issue:
         return issue if text == stripped else (text, issue[1])
-    if _touches_kindel_essays(text):
+    if _field_host_is_kindel_essays(text):
         if text == stripped and _exact_slug(stripped, catalog):
             return None
         hits = _field_essay_hits(stripped, catalog)
