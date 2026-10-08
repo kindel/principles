@@ -16,11 +16,11 @@ dot segments are folded before that check. A stored field is judged
 before trailing punctuation is removed. A url or href value is one
 stored link, so extra text in that field fails the same check. Space
 around that value fails too. A note that is only a Markdown link is
-still scanned, and punctuation inside that destination stays part of
-the link. That includes angle brackets, a space after the opener, and
-a bare angle-bracket link. A url or href value is exactly one link.
-JSON files are read as decoded values. A sentence in
-one of those values may end with a period.
+still scanned. The destination is read whole, including balanced
+parentheses, angle brackets, and a space after the opener. A url or
+href value is judged whole before it is split, and any value that
+names the essays path has to be the canonical catalog URL. JSON files
+are read as decoded values. A sentence may end with a period.
 
 scripts/essay_catalog.json is the offline copy of that category
 (WordPress id 448). Refresh it from
@@ -326,24 +326,130 @@ def _tokens(text):
     return found
 
 
+def _looks_like_destination(raw):
+    """True when an angle-bracket span is a link, not a placeholder."""
+    text = (raw or "").strip()
+    if not text or any(ch.isspace() for ch in text):
+        return False
+    lower = text.lower()
+    if lower.startswith("http://") or lower.startswith("https://"):
+        return True
+    if lower.startswith("/") or lower.startswith("./") or lower.startswith("../"):
+        return True
+    return lower.startswith("essays/") or "/essays" in lower
+
+
+def _read_destination(text, i):
+    """(destination, end) after a Markdown ']('. end is past the closer.
+
+    Parentheses inside the destination are balanced. An angle-bracket
+    destination runs to its closing bracket. None when the closer is
+    missing.
+    """
+    n = len(text)
+    while i < n and text[i].isspace():
+        i += 1
+    if i >= n:
+        return None
+    if text[i] == "<":
+        end = text.find(">", i + 1)
+        if end == -1 or "\n" in text[i + 1:end]:
+            return None
+        return (text[i + 1:end].strip(), i, end, end + 1)
+    start = i
+    depth = 0
+    while i < n:
+        ch = text[i]
+        if ch == "\\" and i + 1 < n:
+            i += 2
+            continue
+        if ch == "(":
+            depth += 1
+            i += 1
+            continue
+        if ch == ")":
+            if depth == 0:
+                return (text[start:i].strip(), start, i, i + 1)
+            depth -= 1
+            i += 1
+            continue
+        if ch == "\n":
+            return None
+        i += 1
+    return None
+
+
+def _markdown_destinations(text):
+    """(destination, start, end) for link targets and autolinks.
+
+    start and end bound the destination text. Balanced parentheses stay
+    inside it. Absolute and relative targets are both returned.
+    """
+    found = []
+    i = 0
+    n = len(text)
+    while i < n:
+        paren = text.find("](", i)
+        angle = text.find("<", i)
+        if paren == -1 and angle == -1:
+            break
+        if paren != -1 and (angle == -1 or paren < angle):
+            parsed = _read_destination(text, paren + 2)
+            if parsed:
+                dest, start, end, nxt = parsed
+                if dest:
+                    found.append((dest, start, end))
+                i = nxt
+                continue
+            i = paren + 2
+            continue
+        end = text.find(">", angle + 1)
+        if end == -1 or "\n" in text[angle + 1:end]:
+            i = angle + 1
+            continue
+        inner = text[angle + 1:end]
+        if _looks_like_destination(inner):
+            found.append((inner.strip(), angle + 1, end))
+            i = end + 1
+            continue
+        i = angle + 1
+    return found
+
+
+def _overlaps(start, end, spans):
+    for left, right in spans:
+        if start < right and end > left:
+            return True
+    return False
+
+
 def problems_in_text(text, catalog):
     """(href, slug) pairs for essay links that are not canonical.
 
     slug is the catalog slug the link should use, or "" when the path
-    does not name one. A token inside quotes, or in a Markdown
-    destination, is stored, so trailing punctuation stays part of the
-    value. A destination may follow "](" directly, after whitespace,
-    or inside angle brackets. Elsewhere punctuation is prose and is
-    dropped only after the raw token has been judged.
+    does not name one. Markdown destinations are taken whole, so a
+    parenthesis inside the destination stays part of the link. A token
+    inside quotes is stored the same way. Elsewhere punctuation is
+    prose and is dropped only after the raw token has been judged.
     """
     if not text or not catalog:
         return []
     found = []
     seen = set()
+    covered = []
+    for dest, start, end in _markdown_destinations(text):
+        covered.append((start, end))
+        issue = _classify(dest, catalog, True)
+        if not issue or issue[0] in seen:
+            continue
+        seen.add(issue[0])
+        found.append(issue)
     for href, end in _tokens(text):
         start = end - len(href)
+        if _overlaps(start, end, covered):
+            continue
         nxt = text[end:end + 1]
-        strict = nxt in ('"', "'") or _is_destination(text, start, end)
+        strict = nxt in ('"', "'")
         issue = _classify(href, catalog, strict)
         if not issue or issue[0] in seen:
             continue
@@ -370,24 +476,6 @@ def _collect(obj, out):
             _collect(value, out)
     elif isinstance(obj, str):
         out.append((obj, False))
-
-
-def _is_destination(text, start, end):
-    """True when the token is a Markdown link destination or an autolink.
-
-    "](url)", "]( url)", "](<url>)", and "<url>" all count. Punctuation
-    in those forms belongs to the link.
-    """
-    if start >= 1 and text[start - 1] == "<" and text[end:end + 1] == ">":
-        return True
-    i = start
-    while i > 0 and text[i - 1].isspace():
-        i -= 1
-    if i >= 1 and text[i - 1] == "<":
-        i -= 1
-        while i > 0 and text[i - 1].isspace():
-            i -= 1
-    return i >= 2 and text[i - 2:i] == "]("
 
 
 def _exact_slug(href, catalog):
@@ -417,26 +505,37 @@ def _field_essay_hits(text, catalog):
     return hits
 
 
+def _touches_kindel_essays(text):
+    """True when the field names the essays path on kindel.com."""
+    compact = "".join(unquote(text or "").lower().split())
+    return "kindel.com/essays" in compact
+
+
 def _stored_link_problem(text, catalog):
     """(href, slug) when a url or href value is not exactly one essay link.
 
-    The field holds one link. An essay token with other text around it
-    fails, and so does space around an otherwise exact link. None means
-    the value is not an essay link.
+    The whole field is classified before any token is taken, so a
+    parenthesis or a space in the path cannot hide behind the essays
+    index. A value that names that path has to be the canonical catalog
+    URL. None means the value is not an essay link.
     """
     stripped = text.strip()
+    issue = _classify(stripped, catalog, True)
+    if issue:
+        return issue if text == stripped else (text, issue[1])
+    if _touches_kindel_essays(text):
+        if text == stripped and _exact_slug(stripped, catalog):
+            return None
+        hits = _field_essay_hits(stripped, catalog)
+        slug = hits[0][1] if hits else _exact_slug(stripped, catalog)
+        return (text, slug)
     hits = _field_essay_hits(stripped, catalog)
     if not hits:
         return None
     slug = hits[0][1]
     only = len(hits) == 1 and stripped == hits[0][0]
     if only and text == stripped:
-        return _classify(stripped, catalog, True)
-    if only:
-        issue = _classify(stripped, catalog, True)
-        if issue:
-            return (text, issue[1])
-        return (text, slug)
+        return None
     return (text, slug)
 
 

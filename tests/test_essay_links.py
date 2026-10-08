@@ -452,6 +452,55 @@ class EssayLinkTest(unittest.TestCase):
             {"note": see}, "note.json", self.catalog, errs)
         self.assertEqual([], errs)
 
+    def test_a_markdown_destination_keeps_balanced_parentheses(self):
+        absolute = "https://kindel.com/essays/ownership/(extra)"
+        wrapped = "[Ownership](%s)" % absolute
+        self.assertEqual(
+            [(absolute, "ownership")],
+            essay_links.problems_in_text(wrapped, self.catalog))
+        rel = "/essays/ownership/(extra)"
+        found = essay_links.problems_in_text(
+            "[Ownership](%s)" % rel, self.catalog)
+        self.assertTrue(any(rel in href for href, _slug in found), found)
+        bare = "essays/ownership/(extra)"
+        found = essay_links.problems_in_text(
+            "[Ownership](%s)" % bare, self.catalog)
+        self.assertTrue(any("(extra)" in href for href, _slug in found), found)
+        errs = []
+        essay_links.check_value(
+            {"note": wrapped}, "note.json", self.catalog, errs)
+        self.assertTrue(any("(extra)" in e for e in errs), errs)
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                "[Ownership](https://kindel.com/essays/ownership/)",
+                self.catalog))
+
+    def test_a_link_field_is_classified_whole(self):
+        samples = (
+            "https://kindel.com/essays/(ownership)/",
+            "https://kindel.com/essays/[ownership]/",
+            "https://kindel.com/essays/ ownership/",
+        )
+        for url in samples:
+            for key in ("url", "href"):
+                errs = []
+                essay_links.check_value(
+                    {key: url}, "card.json", self.catalog, errs)
+                self.assertTrue(any(url in e for e in errs), (url, errs))
+        errs = []
+        essay_links.check_value(
+            {"href": "https://kindel.com/essays/ownership/"},
+            "card.json", self.catalog, errs)
+        self.assertEqual([], errs)
+        with tempfile.TemporaryDirectory() as root:
+            with open(os.path.join(root, "card.json"), "w", encoding="utf-8") as fh:
+                fh.write(
+                    '{"href": "https://kindel.com/essays/(ownership)/"}\n')
+            problems = essay_links.repo_problems(root, self.catalog)
+        self.assertEqual(1, len(problems), problems)
+        self.assertIn("(ownership)", problems[0])
+
     def test_json_values_keep_prose_periods_and_stored_parens(self):
         prose = '{"note": "See https://kindel.com/essays/ownership/."}\n'
         paren = "https://kindel.com/essays/ownership/)"
