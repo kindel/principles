@@ -537,6 +537,72 @@ class EssayLinkTest(unittest.TestCase):
             problems = essay_links.repo_problems(root, self.catalog)
         self.assertTrue(any(raw in p for p in problems), problems)
 
+    def test_a_terminal_dns_dot_is_still_an_essay(self):
+        samples = (
+            "https://blog.kindel.com./2018/05/27/ownership/",
+            "https://www.blog.kindel.com./2018/05/27/ownership/",
+            "https://kindel.com./essays/ownership/",
+            "https://www.kindel.com./essays/ownership/",
+        )
+        for href in samples:
+            self.assertEqual(
+                [(href, "ownership")],
+                essay_links.problems_in_text(href, self.catalog),
+                href)
+            errs = []
+            essay_links.check_value(
+                {"url": href}, "card.json", self.catalog, errs)
+            self.assertTrue(any(href in e for e in errs), (href, errs))
+        self.assertEqual(
+            "ownership",
+            essay_links.essay_slug(samples[0], self.catalog))
+
+    def test_a_scheme_less_kindel_host_is_not_canonical(self):
+        samples = (
+            ("kindel.com/essays/ownership/", "ownership"),
+            ("www.kindel.com/essays/ownership/", "ownership"),
+            ("kindel.com./essays/ownership/", "ownership"),
+            ("www.kindel.com./essays/ownership/", "ownership"),
+            ("blog.kindel.com/2018/05/27/ownership/", "ownership"),
+            ("blog.kindel.com./2018/05/27/ownership/", "ownership"),
+            ("www.blog.kindel.com/2018/05/27/ownership/", "ownership"),
+            (
+                "blog.kindel.com/2019/03/21/"
+                "just-right-porridge-and-leadership-principles/",
+                "just-right-porridge-and-leadership-principles",
+            ),
+        )
+        for href, slug in samples:
+            self.assertEqual(
+                [(href, slug)],
+                essay_links.problems_in_text(href, self.catalog),
+                href)
+            errs = []
+            essay_links.check_value(
+                {"href": href}, "card.json", self.catalog, errs)
+            self.assertTrue(any(href in e for e in errs), (href, errs))
+        wrapped = "[Ownership](kindel.com/essays/ownership/)"
+        found = essay_links.problems_in_text(wrapped, self.catalog)
+        self.assertTrue(
+            any(href == "kindel.com/essays/ownership/" for href, _slug in found),
+            found)
+        errs = []
+        essay_links.check_value(
+            {"note": wrapped}, "note.json", self.catalog, errs)
+        self.assertTrue(any("kindel.com/essays/ownership/" in e for e in errs), errs)
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                "notkindel.com/essays/ownership/", self.catalog))
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                "kindel.com.evil.com/essays/ownership/", self.catalog))
+        self.assertEqual(
+            "ownership",
+            essay_links.essay_slug(
+                "blog.kindel.com/2018/05/27/ownership/", self.catalog))
+
     def test_a_link_field_ignores_other_hosts(self):
         samples = (
             "https://notkindel.com/essays/ownership/",

@@ -12,7 +12,9 @@ and the slug has to be in the catalog. A typo, a missing trailing
 slash, a root-relative path, a path with no leading slash, an extra
 segment, a doubled slash, a dot segment, or an encoded slash fails the
 same way a blog.kindel.com essay URL does. The path is decoded once and
-dot segments are folded before that check. A stored field is judged
+dot segments are folded before that check. One terminal DNS dot on
+the host is ignored. A kindel.com or blog.kindel.com link with no
+scheme is judged the same way. A stored field is judged
 before trailing punctuation is removed. A url or href value is one
 stored link, so extra text in that field fails the same check. Space
 around that value fails too. A note that is only a Markdown link is
@@ -63,6 +65,10 @@ _TRAILING = ".,;:)]}>`"
 # CommonMark ASCII punctuation. A backslash escapes only these.
 _ASCII_PUNCT = set("!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~")
 _BASE = "https://kindel.com/"
+# kindel.com, www.kindel.com, blog.kindel.com, and one terminal DNS dot.
+_SCHEMELESS = re.compile(
+    r"^(?:www\.)?(?:blog\.)?kindel\.com\.?(?=/|\?|#|$)",
+    re.IGNORECASE)
 _OK = ("ok",)
 _INDEX_HREF = (
     "https://kindel.com/essays/",
@@ -98,11 +104,28 @@ def _id_key(value):
 
 
 def _host(hostname):
-    """Lowercase host, www stripped, decoded once."""
+    """Lowercase host, one terminal DNS dot removed, www stripped.
+
+    The hostname is decoded once. The dot comes off before www, so
+    www.kindel.com. is still kindel.com.
+    """
     host = unquote(hostname or "").strip().lower()
+    if host.endswith("."):
+        host = host[:-1]
     if host.startswith("www."):
         host = host[4:]
     return host
+
+
+def _parse_href(original):
+    """Parsed URL. A scheme-less Kindel host is given https first.
+
+    urljoin would otherwise treat the hostname as a relative path.
+    """
+    target = original
+    if _SCHEMELESS.match(original):
+        target = "https://" + original
+    return urlparse(urljoin(_BASE, target))
 
 
 def _norm_path(path):
@@ -220,7 +243,7 @@ def _judge(href, catalog):
     if original in _INDEX_HREF:
         return _OK
     try:
-        url = urlparse(urljoin(_BASE, original))
+        url = _parse_href(original)
     except ValueError:
         return None
     if url.scheme not in ("http", "https"):
@@ -253,7 +276,7 @@ def essay_slug(href, catalog):
     if not original or not catalog:
         return ""
     try:
-        url = urlparse(urljoin(_BASE, original))
+        url = _parse_href(original)
     except ValueError:
         return ""
     if url.scheme not in ("http", "https"):
