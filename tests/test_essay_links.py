@@ -209,6 +209,95 @@ class EssayLinkTest(unittest.TestCase):
             [(OWNERSHIP, "ownership")],
             essay_links.problems_in_text(text, self.catalog))
 
+    def test_classifier_table(self):
+        pid = self.ownership_id()
+        canonical = "https://kindel.com/essays/ownership/"
+        cases = (
+            ("https://kindel.com/essays/ownership/", None),
+            ("https://kindel.com/essays/", None),
+            ("https://kindel.com/essays", None),
+            ("https://kindel.com/", None),
+            ("https://example.com/essays/ownership/", None),
+            ("https://example.com/%65ssays/ownership/", None),
+            ("https://kindel.com/%2565ssays/ownership/", None),
+            ("%2565ssays/ownership/", None),
+            (NOT_AN_ESSAY, None),
+            (OWNERSHIP, "ownership"),
+            ("https://www.blog.kindel.com/2018/05/27/ownership/", "ownership"),
+            ("http://blog.kindel.com/2018/05/27/ownership", "ownership"),
+            ("//blog.kindel.com/2018/05/27/ownership/", "ownership"),
+            ("https://blog.kindel.com/2018/05/27/ownership/?utm=1", "ownership"),
+            ("https://blog.kindel.com/?p=%s" % pid, "ownership"),
+            ("https://blog.kindel.com/index.php?p=%s" % pid, "ownership"),
+            ("https://blog.kindel.com/%32%30%31%38/05/27/ownership/", "ownership"),
+            ("https://blog.kindel.com/2018/05/27/ownership%2F", "ownership"),
+            ("https://blog.kindel.com/2018/05/../05/27/ownership/", "ownership"),
+            ("https://blog.kindel.com/2018/05/27/foo/../ownership/", "ownership"),
+            ("https://BLOG.KINDEL.COM/2018/05/27/Ownership/", "ownership"),
+            ("https://kindel.com/essays/ownership", "ownership"),
+            ("http://kindel.com/essays/ownership/", "ownership"),
+            ("https://www.kindel.com/essays/ownership/", "ownership"),
+            ("https://KINDEL.COM/Essays/Ownership/", "ownership"),
+            ("https://kindel.com/essays/ownership/?utm=1", "ownership"),
+            ("https://kindel.com/essays/ownership/#top", "ownership"),
+            ("https://kindel.com/essays/owneship/", ""),
+            ("https://kindel.com/essays/ownership/extra/", "ownership"),
+            ("https://kindel.com//essays/ownership/", "ownership"),
+            ("https://kindel.com/essays//ownership/", "ownership"),
+            ("https://kindel.com/essays/ownership%2Fextra/", "ownership"),
+            ("https://kindel.com/essays/%2F/", ""),
+            ("https://kindel.com/%65ssays/ownership/", "ownership"),
+            ("https://kindel.com/%65ssays/owneship/", ""),
+            ("https://kindel.com/foo/../essays/ownership/", "ownership"),
+            ("https://kindel.com/essays/./ownership/", "ownership"),
+            ("https://kindel.com/essays/ownership/../ownership/", "ownership"),
+            ("/essays/ownership/", "ownership"),
+            ("/essays/ownership", "ownership"),
+            ("/essays/owneship/", ""),
+            ("essays/ownership/", "ownership"),
+            ("essays/ownership", "ownership"),
+            ("essays/owneship/", ""),
+            ("/%65ssays/ownership/", "ownership"),
+            ("%65ssays/ownership/", "ownership"),
+            ("%65ssays%2Fownership/", "ownership"),
+            ("./%65ssays/ownership/", "ownership"),
+            ("../essays/ownership/", "ownership"),
+            ("./essays/ownership/", "ownership"),
+            ("foo/../essays/ownership/", "ownership"),
+            ("//kindel.com/essays/ownership/", "ownership"),
+        )
+        for href, slug in cases:
+            found = essay_links.problems_in_text(href, self.catalog)
+            if slug is None:
+                self.assertEqual([], found, href)
+            else:
+                self.assertEqual([(href, slug)], found, href)
+                if slug:
+                    self.assertIn(canonical, essay_links.format_problem(href, slug))
+
+    def test_a_quoted_stored_url_keeps_trailing_punctuation(self):
+        period = "https://kindel.com/essays/ownership/."
+        paren = "https://kindel.com/essays/ownership/)"
+        self.assertEqual(
+            [(period, "ownership")],
+            essay_links.problems_in_text('"%s"' % period, self.catalog))
+        # A closing parenthesis ends a Markdown link, so the prose scan
+        # stops before it. A stored field is the whole string.
+        self.assertEqual(
+            (paren, "ownership"),
+            essay_links._classify(paren, self.catalog, True))
+
+    def test_prose_punctuation_around_a_canonical_url_is_kept(self):
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                "See https://kindel.com/essays/ownership/.", self.catalog))
+        self.assertEqual(
+            [],
+            essay_links.problems_in_text(
+                "See [Ownership](https://kindel.com/essays/ownership/) today.",
+                self.catalog))
+
     def test_repo_has_no_blog_essay_link(self):
         self.assertEqual([], essay_links.repo_problems(ROOT, self.catalog))
 

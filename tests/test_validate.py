@@ -656,6 +656,45 @@ class TeachingValidatorTest(unittest.TestCase):
                 any("https://kindel.com/essays/ownership/" in e for e in errs),
                 errs)
 
+    def test_a_stored_url_keeps_trailing_punctuation(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/ownership/."
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("ownership/." in e for e in errs), errs)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/ownership/)"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("ownership/)" in e for e in errs), errs)
+
+    def test_an_encoded_blog_permalink_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = (
+                "https://blog.kindel.com/%32%30%31%38/05/27/ownership/"
+            )
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_a_dot_segment_essay_url_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/foo/../essays/ownership/"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
     def test_a_non_essay_blog_url_is_allowed(self):
         with tempfile.TemporaryDirectory() as root:
             doc = self.good()

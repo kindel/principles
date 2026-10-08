@@ -10,8 +10,10 @@ repos are also read off kindel.com, so the link to store is
 https://kindel.com/essays/<slug>/. That string has to match exactly,
 and the slug has to be in the catalog. A typo, a missing trailing
 slash, a root-relative path, a path with no leading slash, an extra
-segment, a doubled slash, or an encoded slash fails the same way a
-blog.kindel.com essay URL does. A percent-encoded path is decoded once.
+segment, a doubled slash, a dot segment, or an encoded slash fails the
+same way a blog.kindel.com essay URL does. The path is decoded once and
+dot segments are folded before that check. A stored field is judged
+before trailing punctuation is removed.
 
 scripts/essay_catalog.json is the offline copy of that category
 (WordPress id 448). Refresh it from
@@ -30,6 +32,7 @@ directly.
 
 import json
 import os
+import posixpath
 import re
 import sys
 from urllib.parse import parse_qsl, unquote, urljoin, urlparse
@@ -37,18 +40,26 @@ from urllib.parse import parse_qsl, unquote, urljoin, urlparse
 _SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 _DATED = re.compile(r"^/(\d{4})/(\d{2})/(\d{2})/([^/]+)/?$")
 _INDEX_PHP = re.compile(r"^/index\.php$", re.IGNORECASE)
-_CANDIDATE = re.compile(r"(?:https?:)?//[^\s<>\"'`]+", re.IGNORECASE)
-# Root-relative /essays/ and a path with no leading slash. An absolute
-# URL has a letter or a slash before the path, so it is not matched twice.
-# The pattern is split so this file does not contain a candidate.
-_RELATIVE = re.compile(
-    "(?<![A-Za-z0-9])(/essays/" + r"[^\s<>\"'`]+)", re.IGNORECASE)
-_DOC_RELATIVE = re.compile(
-    "(?<![A-Za-z0-9/._-])(essays/" + r"[^\s<>\"'`]+)", re.IGNORECASE)
+_CANDIDATE = re.compile(
+    r"(?:https?:)?//[^\s<>\"'`()\[\]]+", re.IGNORECASE)
+# Any path-like token, so a percent-encoded prefix is still found.
+# Brackets and parentheses stay outside the token so Markdown can wrap a URL.
+# The encoded-slash alternative is split so this file is not a candidate.
+_PATHY = re.compile(
+    r"(?<![A-Za-z0-9@])((?:\.\./|\./)?[^\s<>\"'`()\[\]]*"
+    + r"(?:/|%2" + "f)"
+    + r"[^\s<>\"'`()\[\]]+)",
+    re.IGNORECASE)
 _TRAILING = ".,;:)]}>`"
-_ESSAY_INDEX = (
+_BASE = "https://kindel.com/"
+_OK = ("ok",)
+_INDEX_HREF = (
     "https://kindel.com/essays/",
     "https://kindel.com/essays",
+    "/essays/",
+    "/essays",
+    "essays/",
+    "essays",
 )
 
 SKIP_DIRS = {".git", "tests", "__pycache__", "node_modules"}
@@ -75,11 +86,31 @@ def _id_key(value):
     return str(n)
 
 
-def _blog_host(hostname):
-    host = (hostname or "").lower()
+def _host(hostname):
+    """Lowercase host, www stripped, decoded once."""
+    host = unquote(hostname or "").strip().lower()
     if host.startswith("www."):
         host = host[4:]
-    return host == "blog.kindel.com"
+    return host
+
+
+def _norm_path(path):
+    """Decode once, collapse extra slashes, and fold dot segments.
+
+    A trailing slash is preserved. posixpath.normpath would drop it, and
+    it would also keep a leading pair of slashes, so those are fixed here.
+    """
+    decoded = unquote(path or "")
+    if decoded in ("", "/"):
+        return "/"
+    trailing = decoded.endswith("/")
+    collapsed = "/" + decoded.lstrip("/")
+    norm = posixpath.normpath(collapsed)
+    if not norm.startswith("/"):
+        norm = "/" + norm
+    if norm != "/" and trailing:
+        norm += "/"
+    return norm
 
 
 def catalog_path():
@@ -124,32 +155,19 @@ def canonical_essay_url(slug):
     return "https://kindel.com/essays/" + slug + "/"
 
 
-def essay_slug(href, catalog):
-    """Slug when href is a blog.kindel.com essay link, else ""."""
-    if not catalog:
-        return ""
-    original = "" if href is None else str(href).strip()
-    if not original:
-        return ""
-    try:
-        url = urlparse(urljoin("https://kindel.com", original))
-    except ValueError:
-        return ""
-    if url.scheme not in ("http", "https"):
-        return ""
-    if not _blog_host(url.hostname):
-        return ""
-    dated = _DATED.match(url.path)
+def _blog_slug(path, query, catalog):
+    """Catalog slug for a normalized blog path, else ""."""
+    dated = _DATED.match(path or "")
     if dated:
         candidate = safe_slug(dated.group(4))
         found = catalog["by_slug"].get(candidate, "") if candidate else ""
         if isinstance(found, str) and safe_slug(found):
             return found
         return ""
-    if url.path not in ("/", "") and not _INDEX_PHP.match(url.path):
+    if path not in ("/", "") and not _INDEX_PHP.match(path or ""):
         return ""
     pid = ""
-    for key, value in parse_qsl(url.query, keep_blank_values=True):
+    for key, value in parse_qsl(query or "", keep_blank_values=True):
         if key == "p":
             pid = _id_key(value)
             break
@@ -161,11 +179,110 @@ def essay_slug(href, catalog):
     return ""
 
 
-def _kindel_host(hostname):
-    host = (hostname or "").lower()
-    if host.startswith("www."):
-        host = host[4:]
-    return host == "kindel.com"
+def _essay_parts(path):
+    """(kind, segment) for a normalized path. kind is no, index, slug, or bad."""
+    raw = path or ""
+    lower = raw.lower()
+    if lower in ("/essays", "/essays/"):
+        return ("index", "")
+    if not lower.startswith("/essays/"):
+        return ("no", "")
+    parts = raw[len("/essays/"):].split("/")
+    if len(parts) == 1 or (len(parts) == 2 and parts[1] == ""):
+        return ("slug", parts[0])
+    for part in parts:
+        if part:
+            return ("bad", part)
+    return ("bad", "")
+
+
+def _judge(href, catalog):
+    """Classify one href. No punctuation trimming.
+
+    Returns _OK when the href is allowed, None when it is not an essay
+    link, or (href, slug) when it is an essay link that is not the
+    canonical string. slug is "" when the path does not name a catalog slug.
+    """
+    original = "" if href is None else str(href).strip()
+    if not original or not catalog:
+        return None
+    if original in _INDEX_HREF:
+        return _OK
+    try:
+        url = urlparse(urljoin(_BASE, original))
+    except ValueError:
+        return None
+    if url.scheme not in ("http", "https"):
+        return None
+    host = _host(url.hostname)
+    path = _norm_path(url.path)
+    if host == "blog.kindel.com":
+        slug = _blog_slug(path, url.query, catalog)
+        if slug:
+            return (original, slug)
+        return None
+    if host != "kindel.com":
+        return None
+    kind, segment = _essay_parts(path)
+    if kind == "no":
+        return None
+    if kind == "index":
+        return (original, "")
+    slug = safe_slug(segment)
+    if slug and slug in catalog["by_slug"]:
+        if original == canonical_essay_url(slug):
+            return _OK
+        return (original, slug)
+    return (original, "")
+
+
+def essay_slug(href, catalog):
+    """Slug when href is a blog.kindel.com essay link, else ""."""
+    original = "" if href is None else str(href).strip()
+    if not original or not catalog:
+        return ""
+    try:
+        url = urlparse(urljoin(_BASE, original))
+    except ValueError:
+        return ""
+    if url.scheme not in ("http", "https"):
+        return ""
+    if _host(url.hostname) != "blog.kindel.com":
+        return ""
+    verdict = _judge(original, catalog)
+    if not verdict or verdict == _OK:
+        return ""
+    return verdict[1]
+
+
+def _classify(href, catalog, strict):
+    """(href, slug) when href is a non-canonical essay link, else None.
+
+    The raw string is judged first. Trailing punctuation is considered
+    only after that. In prose, punctuation that leaves a clean canonical
+    URL is decoration. A stored field (strict) keeps the punctuation, so
+    the field has to be the canonical string exactly.
+    """
+    verdict = _judge(href, catalog)
+    trimmed = href.rstrip(_TRAILING) if href else href
+    if verdict == _OK:
+        return None
+    if verdict is None:
+        if not trimmed or trimmed == href:
+            return None
+        again = _judge(trimmed, catalog)
+        if not again or again == _OK:
+            return None
+        return again
+    if trimmed and trimmed != href:
+        again = _judge(trimmed, catalog)
+        if not again or again == _OK:
+            if strict:
+                return verdict
+            return None
+        if not strict:
+            return again
+    return verdict
 
 
 def format_problem(href, slug):
@@ -175,110 +292,53 @@ def format_problem(href, slug):
     return "essay link %s is not in scripts/essay_catalog.json" % href
 
 
-def _essay_path_kind(path):
-    """Return (kind, segment) for a URL path.
+def _tokens(text):
+    """(raw href, end index) for absolute URLs and path-like tokens.
 
-    kind is "no", "index", "slug", or "bad". segment is the first
-    non-empty piece after the essays prefix. "slug" is exactly one
-    segment, with or without a trailing slash. "bad" is still an essays
-    path: an extra segment, a doubled slash, or a slash that was
-    percent-encoded. Extra leading slashes still count as essays, and
-    they are not the canonical form.
+    The raw href keeps trailing punctuation. The caller judges it before
+    deciding whether that punctuation is prose.
     """
-    stripped = unquote(path or "").lstrip("/")
-    lower = stripped.lower()
-    if lower != "essays" and not lower.startswith("essays/"):
-        return ("no", "")
-    if lower in ("essays", "essays/"):
-        return ("index", "")
-    parts = stripped[len("essays/"):].split("/")
-    if len(parts) == 1 or (len(parts) == 2 and parts[1] == ""):
-        return ("slug", parts[0])
-    for part in parts:
-        if part:
-            return ("bad", part)
-    return ("bad", "")
-
-
-def _apex_issue(href, catalog):
-    """(href, slug) when an essays URL is not the canonical form.
-
-    Accepts only https://kindel.com/essays/<slug>/ for a catalog slug.
-    A root-relative path and a path with no leading slash are held to
-    that same string. A percent-encoded path is decoded once. slug is
-    the catalog slug the link should use, or "" when it has none. The
-    bare essays index is not an essay post. A placeholder such as
-    <slug> never forms a candidate, because the scan stops at <.
-    """
-    original = href.strip()
-    if original in _ESSAY_INDEX:
-        return None
-    root_relative = original.startswith("/") and not original.startswith("//")
-    try:
-        url = urlparse(urljoin("https://kindel.com", original))
-    except ValueError:
-        return None
-    if url.scheme not in ("http", "https"):
-        return None
-    if not root_relative and not _kindel_host(url.hostname):
-        return None
-    kind, segment = _essay_path_kind(url.path)
-    if kind == "no":
-        return None
-    if kind == "index":
-        return (original, "")
-    slug = safe_slug(segment)
-    if not slug or slug not in catalog["by_slug"]:
-        return (original, "")
-    if kind == "slug" and original == canonical_essay_url(slug):
-        return None
-    return (original, slug)
-
-
-def _hrefs(text):
-    """URL candidates, absolute, root-relative, and document-relative."""
     spans = []
     found = []
     seen = set()
 
-    def add(raw):
-        href = raw.rstrip(_TRAILING)
-        if not href or href in seen:
+    def add(raw, end):
+        if not raw or (raw, end) in seen:
             return
-        seen.add(href)
-        found.append(href)
+        seen.add((raw, end))
+        found.append((raw, end))
 
     for match in _CANDIDATE.finditer(text):
         spans.append((match.start(), match.end()))
-        add(match.group(0))
-    for pattern in (_RELATIVE, _DOC_RELATIVE):
-        for match in pattern.finditer(text):
-            start = match.start(1)
-            if any(a <= start < b for a, b in spans):
-                continue
-            add(match.group(1))
+        add(match.group(0), match.end())
+    for match in _PATHY.finditer(text):
+        start = match.start(1)
+        if any(a <= start < b for a, b in spans):
+            continue
+        add(match.group(1), match.end(1))
     return found
 
 
 def problems_in_text(text, catalog):
     """(href, slug) pairs for essay links that are not canonical.
 
-    slug is the catalog slug for a blog.kindel.com essay, or for an
-    essays URL that names a catalog slug but is not exactly
-    https://kindel.com/essays/<slug>/. slug is "" when the essays path
-    does not name a catalog slug.
+    slug is the catalog slug the link should use, or "" when the path
+    does not name one. A token inside quotes is a stored field, so
+    trailing punctuation stays part of the value. Elsewhere it is prose
+    and is dropped only after the raw token has been judged.
     """
-    if not text:
+    if not text or not catalog:
         return []
     found = []
-    for href in _hrefs(text):
-        slug = essay_slug(href, catalog)
-        if slug:
-            found.append((href, slug))
+    seen = set()
+    for href, end in _tokens(text):
+        nxt = text[end:end + 1]
+        strict = nxt in ('"', "'")
+        issue = _classify(href, catalog, strict)
+        if not issue or issue[0] in seen:
             continue
-        issue = _apex_issue(href, catalog)
-        if issue:
-            found.append(issue)
+        seen.add(issue[0])
+        found.append(issue)
     return found
 
 
@@ -294,11 +354,22 @@ def _strings(obj, out):
 
 
 def check_value(obj, where, catalog, errs):
-    """Append an error for each essay link in obj that is not canonical."""
+    """Append an error for each essay link in obj that is not canonical.
+
+    A string with no whitespace is a stored field. It is judged whole,
+    punctuation included, before any prose scan.
+    """
     texts = []
     _strings(obj, texts)
     seen = set()
     for text in texts:
+        whole = text.strip()
+        if whole and not any(ch.isspace() for ch in whole):
+            issue = _classify(whole, catalog, True)
+            if issue and issue[0] not in seen:
+                seen.add(issue[0])
+                errs.append("%s: %s" % (where, format_problem(issue[0], issue[1])))
+                continue
         for href, slug in problems_in_text(text, catalog):
             if href in seen:
                 continue
