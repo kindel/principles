@@ -23,6 +23,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
     os.path.abspath(__file__))), "scripts"))
 
 from companies import COMPANY_META
+import essay_links
 from validate import (expected_index, load_facets, load_records, validate_company,
                       validate_calibration_coverage, validate_derivation_maps,
                       validate_facets, validate_record, validate_teaching)
@@ -564,6 +565,173 @@ class TeachingValidatorTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as root:
             self.write(root, "customer-obsession.json", self.good())
             self.assertEqual([], self.check(root))
+
+    def test_a_blog_essay_url_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://blog.kindel.com/2018/05/27/ownership/"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_a_blog_post_id_essay_url_is_rejected(self):
+        catalog, err = essay_links.load_catalog()
+        self.assertIsNone(err, err)
+        pid = next(i for i, slug in catalog["by_id"].items() if slug == "ownership")
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://blog.kindel.com/?p=%s" % pid
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_a_canonical_essay_url_passes(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/ownership/"
+            self.write(root, "customer-obsession.json", doc)
+            self.assertEqual([], self.check(root))
+
+    def test_an_apex_essay_url_needs_the_trailing_slash(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/ownership"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_an_unknown_apex_slug_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/owneship/"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("not in scripts/essay_catalog.json" in e for e in errs),
+                errs)
+
+    def test_a_percent_encoded_essay_url_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/%65ssays/ownership/"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_a_document_relative_essay_url_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "essays/ownership/"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_a_root_relative_essay_url_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "/essays/ownership/"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_an_extra_essay_path_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/ownership/extra/"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_a_stored_url_keeps_trailing_punctuation(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/ownership/."
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("ownership/." in e for e in errs), errs)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/ownership/)"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(any("ownership/)" in e for e in errs), errs)
+
+    def test_a_url_with_extra_text_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/ownership/ extra"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("ownership/ extra" in e for e in errs), errs)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_an_encoded_blog_permalink_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = (
+                "https://blog.kindel.com/%32%30%31%38/05/27/ownership/"
+            )
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_a_dot_segment_essay_url_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/foo/../essays/ownership/"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_a_non_essay_blog_url_is_allowed(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = (
+                "https://blog.kindel.com/2026/08/20/"
+                "if-every-tool-invents-amazon/"
+            )
+            self.write(root, "customer-obsession.json", doc)
+            self.assertEqual([], self.check(root))
+
+    def test_the_interview_blog_url_is_an_essay(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = (
+                "https://blog.kindel.com/2026/08/18/"
+                "interviews-are-better-with-behavioral-questions/"
+            )
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any(
+                    "https://kindel.com/essays/"
+                    "interviews-are-better-with-behavioral-questions/" in e
+                    for e in errs),
+                errs)
 
     def test_an_en_dash_in_a_published_title_is_allowed(self):
         with tempfile.TemporaryDirectory() as root:

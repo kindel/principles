@@ -11,6 +11,7 @@ import os
 import re
 import sys
 
+import essay_links
 from companies import COMPANY_META
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -638,6 +639,10 @@ def validate_teaching(by_company, errs, root=None):
     must be listed in related. A token in the catalog must resolve.
     root is for tests; the corpus uses DATA.
     """
+    catalog, catalog_err = essay_links.load_catalog()
+    if catalog_err:
+        errs.append("scripts/essay_catalog.json: %s" % catalog_err)
+        catalog = None
     teaching = os.path.join(root or DATA, "teaching")
     if not os.path.isdir(teaching):
         return
@@ -671,6 +676,8 @@ def validate_teaching(by_company, errs, root=None):
             if not isinstance(doc, dict):
                 errs.append("%s: must be a JSON object" % where)
                 continue
+            if catalog is not None:
+                essay_links.check_value(doc, where, catalog, errs)
             check_teaching_dashes(doc, where, errs)
             if filename == "index.json":
                 principles = doc.get("principles")
