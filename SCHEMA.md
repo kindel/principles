@@ -381,7 +381,7 @@ Example: `That is {lp:ownership}, not heroics.`
 
 Renderers replace the token with a link. Agents treat tokens as hard links.
 
-Every `{lp:slug}` token in `why`, `calibrationIntro`, `examples`, `looksLike`, or `deepen` must also appear in `related`. Navigation built from `related` has to see the same slugs the prose links. `related` may include extra principles that are not tokenized in prose.
+Every `{lp:slug}` token in `why`, `calibrationIntro`, `examples`, `looksLike`, `deepen`, a `related` note, or a Further reading note must also appear in `related`. Navigation built from `related` has to see the same slugs the prose links. `related` may include extra principles that are not tokenized in prose.
 
 Never write raw company names or product names in the prose and notes. Principle names stay. Further reading titles may name the author, the book, or the source company.
 
@@ -420,13 +420,13 @@ Rules:
 - `why` is 3-6 short paragraphs. Each array item is one paragraph.
 - `examples` 2-4 teaching cases. Generalize retail and ops specifics. Drop named-exec anecdotes you cannot restate without the company.
 - `deepen` 6-12 questions. Each is a full sentence ending with `?`.
-- `related` is the union of every `{lp:slug}` token in the prose fields plus any extra curated links. Each `related` id is a slug in this company. Two is a floor, not a cap.
+- `related` is the union of every `{lp:slug}` token in the prose fields and notes plus any extra curated links. Each `related` id is a slug in this company. Two is a floor, not a cap.
 - `blog` is the Further reading list. It holds published tig.log essays that amplify this principle, plus at least one external source: the published principles, a shareholder letter, a book, or an essay or talk by someone who shaped the practice. Same shape on every file, including the catalog. Empty is not allowed. A principle with no tig.log essay still gets its external source.
 - Every `blog` link is real. Never invent a URL, and check that each URL resolves before it lands. External titles are the cite on the list. Use the published heading when it already names the work. When it is only a year or a short title, name the author or the source, and the work. Titles may name the source company or an executive. Notes follow the rules below.
 - Every string: no em dash, no `---`, Oxford commas, numbers under 10 spelled out.
 - No source-company names, products, executives, internal tools, or wiki chrome in the prose and notes. Further reading titles may name the author, the book, or the source company.
 
-`validate.py` checks that the slug exists, that each `related` id exists, and that every `{lp:...}` token in the prose resolves to a slug in the company and is listed in `related`. A token in the catalog must resolve too. It also checks the counts and object shapes in the rules above, and that `blog` is a non-empty list of title, url, and note. It rejects an em dash and `---`. An en dash is allowed only in a Further reading title. `tests/test_reading.py` checks the Further reading shape and the approved cites.
+`validate.py` checks that the slug exists, that each `related` id exists, and that every `{lp:...}` token in the prose and notes resolves to a slug in the company and is listed in `related`. A token in the catalog must resolve too. It also checks the counts and object shapes in the rules above, and that `blog` is a non-empty list of title, url, and note. It rejects an em dash and `---`. An en dash is allowed only in a Further reading title. `tests/test_reading.py` checks the Further reading shape and the approved cites.
 
 ## Sourcing
 
