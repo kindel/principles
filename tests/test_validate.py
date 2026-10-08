@@ -616,6 +616,26 @@ class TeachingValidatorTest(unittest.TestCase):
                 any("not in scripts/essay_catalog.json" in e for e in errs),
                 errs)
 
+    def test_a_percent_encoded_essay_url_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/%65ssays/ownership/"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
+    def test_a_document_relative_essay_url_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "essays/ownership/"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
     def test_a_root_relative_essay_url_is_rejected(self):
         with tempfile.TemporaryDirectory() as root:
             doc = self.good()
