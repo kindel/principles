@@ -17,7 +17,8 @@ before trailing punctuation is removed. A url or href value is one
 stored link, so extra text in that field fails the same check. Space
 around that value fails too. A note that is only a Markdown link is
 still scanned. The destination is read on its own, including balanced
-parentheses, escaped delimiters, and angle brackets. A title after
+parentheses, angle brackets, and a backslash before ASCII punctuation.
+A backslash before any other character stays in the link. A title after
 the destination is not part of the link. A url or href value is judged
 whole before it is split. Only a parsed kindel.com host whose path is
 under essays has to be the canonical catalog URL. JSON files
@@ -59,6 +60,8 @@ _PATHY = re.compile(
     + r"[^\s<>\"'`()\[\]]+)",
     re.IGNORECASE)
 _TRAILING = ".,;:)]}>`"
+# CommonMark ASCII punctuation. A backslash escapes only these.
+_ASCII_PUNCT = set("!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~")
 _BASE = "https://kindel.com/"
 _OK = ("ok",)
 _INDEX_HREF = (
@@ -340,6 +343,13 @@ def _looks_like_destination(raw):
     return lower.startswith("essays/") or "/essays" in lower
 
 
+def _punct_escape(text, i):
+    """The punctuation a backslash escapes, or "" when it stays literal."""
+    if i + 1 < len(text) and text[i] == "\\" and text[i + 1] in _ASCII_PUNCT:
+        return text[i + 1]
+    return ""
+
+
 def _skip_spaces(text, i):
     """Index after spaces and tabs. A newline ends the link."""
     n = len(text)
@@ -384,9 +394,9 @@ def _finish_link(text, i, dest, dest_start, dest_end):
 def _read_destination(text, i):
     """(destination, dest_start, dest_end, next) after a Markdown ']('.
 
-    The destination is separate from an optional title. Escaped
-    delimiters stay in the destination, and parentheses in it are
-    balanced. dest_end is the end of the destination, not the title.
+    The destination is separate from an optional title. A backslash
+    escapes ASCII punctuation only, and parentheses in the destination
+    are balanced. dest_end is the end of the destination, not the title.
     None when the link does not close.
     """
     n = len(text)
@@ -401,8 +411,9 @@ def _read_destination(text, i):
             ch = text[i]
             if ch == "\n":
                 return None
-            if ch == "\\" and i + 1 < n and text[i + 1] != "\n":
-                buf.append(text[i + 1])
+            escaped = _punct_escape(text, i)
+            if escaped:
+                buf.append(escaped)
                 i += 2
                 continue
             if ch == "<":
@@ -417,8 +428,9 @@ def _read_destination(text, i):
     depth = 0
     while i < n:
         ch = text[i]
-        if ch == "\\" and i + 1 < n and text[i + 1] != "\n":
-            buf.append(text[i + 1])
+        escaped = _punct_escape(text, i)
+        if escaped:
+            buf.append(escaped)
             i += 2
             continue
         if ch == "(":
@@ -446,7 +458,8 @@ def _markdown_destinations(text):
     """(destination, start, end) for link targets and autolinks.
 
     start and end bound the destination text, not an optional title.
-    Balanced parentheses and escaped delimiters stay inside it.
+    Balanced parentheses stay inside it. A backslash escapes ASCII
+    punctuation only.
     Absolute and relative targets are both returned.
     """
     found = []
@@ -493,8 +506,9 @@ def problems_in_text(text, catalog):
     slug is the catalog slug the link should use, or "" when the path
     does not name one. A Markdown destination is classified on its own,
     so a title after it is neither part of the link nor inside the
-    covered span. Parentheses and escaped delimiters stay in the
-    destination. A token inside quotes is stored the same way.
+    covered span. Parentheses stay in the destination. A backslash
+    escapes ASCII punctuation only. A token inside quotes is stored
+    the same way.
     Elsewhere punctuation is prose and is dropped only after the raw
     token has been judged.
     """

@@ -515,6 +515,28 @@ class EssayLinkTest(unittest.TestCase):
         essay_links.check_value({"note": blog}, "note.json", self.catalog, errs)
         self.assertTrue(any(OWNERSHIP in e for e in errs), errs)
 
+    def test_a_backslash_before_a_letter_stays_in_the_destination(self):
+        raw = "https://kindel.com/essays/owner\\ship/"
+        forms = (
+            "[Ownership](%s)" % raw,
+            "[Ownership](<%s>)" % raw,
+        )
+        for text in forms:
+            found = essay_links.problems_in_text(text, self.catalog)
+            self.assertTrue(any(href == raw for href, _slug in found), (text, found))
+            self.assertFalse(
+                any("/ownership/" in href for href, _slug in found), found)
+            errs = []
+            essay_links.check_value(
+                {"note": text}, "note.json", self.catalog, errs)
+            self.assertTrue(any(raw in e for e in errs), (text, errs))
+        with tempfile.TemporaryDirectory() as root:
+            with open(os.path.join(root, "note.json"), "w", encoding="utf-8") as fh:
+                fh.write(
+                    '{"note": "[Ownership](https://kindel.com/essays/owner\\\\ship/)"}\n')
+            problems = essay_links.repo_problems(root, self.catalog)
+        self.assertTrue(any(raw in p for p in problems), problems)
+
     def test_a_link_field_ignores_other_hosts(self):
         samples = (
             "https://notkindel.com/essays/ownership/",
