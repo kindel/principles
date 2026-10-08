@@ -673,6 +673,18 @@ class TeachingValidatorTest(unittest.TestCase):
             errs = self.check(root)
             self.assertTrue(any("ownership/)" in e for e in errs), errs)
 
+    def test_a_url_with_extra_text_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            doc = self.good()
+            doc["blog"][0]["url"] = "https://kindel.com/essays/ownership/ extra"
+            self.write(root, "customer-obsession.json", doc)
+            errs = self.check(root)
+            self.assertTrue(
+                any("ownership/ extra" in e for e in errs), errs)
+            self.assertTrue(
+                any("https://kindel.com/essays/ownership/" in e for e in errs),
+                errs)
+
     def test_an_encoded_blog_permalink_is_rejected(self):
         with tempfile.TemporaryDirectory() as root:
             doc = self.good()
