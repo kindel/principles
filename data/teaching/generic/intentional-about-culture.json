@@ -2,12 +2,12 @@
   "id": 8015,
   "slug": "intentional-about-culture",
   "why": [
-    "A team can hit every date and still be a place people endure. Safety, respect, and support are how the work stays honest. If people are managing the room instead of the problem, the other principles are theater.",
+    "A team can hit every date and still be a place people don't love. Safety, respect, and support make the work enjoyable. If people are managing the room instead of the problem, the other principles are just wall art.",
     "Empathy is not a lower bar. It is understanding what the person is carrying, then still telling the truth about the work. Enjoyment is not a party budget. It is leaving room for the work to be something people are glad to do. Both are part of the job, the same way a date is.",
-    "Excellent work does not get more real because a senior person did it. The person closest to the work, at any title, gets the same respect for a good result and the same straight feedback for a bad one. A culture that only celebrates rank teaches everyone else to hide.",
-    "This is not a program another team runs. {lp:ownership} includes the room you work in. {lp:earn-trust} is how people learn they can speak. {lp:hire-and-develop-the-best} is who walks in the door. If you treat culture as leftover time, you are under."
+    "Excellent work does not get more important because a senior person did it. The person closest to the work, at any title, gets the same encouragement for a good result and the same direct feedback for a bad one. A culture that only celebrates rank teaches everyone else to hide.",
+    "Culture is not a program some other team runs. {lp:ownership} means keeping your own house in order so living the culture within your own team is both showing {lp:ownership} and culture building. {lp:earn-trust} is how people learn they can speak to truth. {lp:hire-and-develop-the-best} is who you let in; so hold a high bar on culture fit as well as capability."
   ],
-  "calibrationIntro": "Look for what the leader does in the week the pressure is high. A calm offsite and a sharp review are not the evidence. The evidence is a hard meeting that stays respectful, credit that finds the person who did the work, and a standard that does not depend on title.",
+  "calibrationIntro": "Look for what the leader does in the week when the pressure is high. The evidence is a hard meeting that stays respectful ({lp:earn-trust}), credit that finds the person who did the work, and a standard that does not depend on title.",
   "examples": [
     {
       "title": "The hard meeting stays safe",
@@ -15,16 +15,16 @@
     },
     {
       "title": "Credit without the title",
-      "body": "A junior person fixed the thing everyone was stuck on. Under is telling the story as your own. Over is a public ceremony that embarrasses them and skips the work. Just right is saying who did it, what was hard about it, and what the team should copy."
+      "body": "A junior person fixed the thing everyone was stuck on. Under is telling the story as your own. Over is a public ceremony that embarrasses them and skips the work. Just right is saying who did it, what was hard about it, and what the team should emulate."
     },
     {
       "title": "Enjoyment on a hard week",
-      "body": "The week was long. Under is pretending morale is a private matter. Over is a forced celebration while the broken thing is still broken. Just right is a real pause, thanks that name the work, and a plan that does not require the same hours again next week."
+      "body": "The week was grueling. Under is pretending morale is a private matter. Over is a forced celebration while the broken thing is still broken. Just right is a real pause, celebrating the small victories, and focusing on solving the problems so the same hours are not required next week."
     }
   ],
   "looksLike": {
     "individual": "You make it easy for someone to disagree with you. You give credit in the room, including to people who do not have your title. You do not confuse being nice with being clear. You treat a mean joke as a problem, even when the work is late.",
-    "manager": "You do not delegate the culture to a program. You intervene when a meeting gets personal. You staff hard problems to the people who can do them, not only to the people with the senior title. You leave room for the team to enjoy the work, and you do not buy that with a lower bar."
+    "manager": "You do not delegate the culture to a program. You intervene when a meeting gets personal. You staff hard problems to the people who solve them, not only to the people with the senior title or tenure."
   },
   "deepen": [
     "Who in the room would hesitate to tell you that you are wrong, and why?",
@@ -39,19 +39,19 @@
   "related": [
     {
       "id": "ownership",
-      "note": "The environment is part of the outcome you own, not a side task."
+      "note": "The environment is part of the outcome you own, not a side task. ({lp:ownership})"
     },
     {
       "id": "earn-trust",
-      "note": "People tell you the truth about the room only after they trust you with it."
+      "note": "People tell you the truth about situations only after they trust you with it. ({lp:earn-trust})"
     },
     {
       "id": "hire-and-develop-the-best",
-      "note": "Who you bring in, and who you keep, is the culture, week after week."
+      "note": "Who you bring in, and who you keep, is the culture, week after week. You hire for both capability and culture-fit. You coach behaviors that are unacceptable, and if the behavior does not change, you help them move on."
     },
     {
       "id": "have-backbone-disagree-and-commit",
-      "note": "A safe room is one where a real disagreement can happen, and then end."
+      "note": "A safe room is one where a real disagreement can happen, and then end. ({lp:earn-trust} and {lp:have-backbone-disagree-and-commit})."
     }
   ],
   "blog": [
