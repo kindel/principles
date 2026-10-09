@@ -1018,7 +1018,8 @@
           "sort": 7,
           "file": "data/blue-origin/ownership.json",
           "facets": [
-            "acts-like-an-owner"
+            "acts-like-an-owner",
+            "safety"
           ]
         },
         {
@@ -1028,6 +1029,7 @@
           "sort": 8,
           "file": "data/blue-origin/operational-excellence.json",
           "facets": [
+            "dive-deep",
             "prevent-the-next-one"
           ]
         },
@@ -1060,7 +1062,8 @@
           "sort": 11,
           "file": "data/blue-origin/insist-on-the-highest-standards.json",
           "facets": [
-            "highest-standards"
+            "highest-standards",
+            "safety"
           ]
         },
         {

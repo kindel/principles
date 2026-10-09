@@ -756,7 +756,8 @@
         3004,
         4002,
         7003,
-        8012
+        8012,
+        9008
       ],
       "rows": [
         {
@@ -870,6 +871,10 @@
         {
           "principle": 7003,
           "id": "a-secondhand-report"
+        },
+        {
+          "principle": 9008,
+          "id": "attention-to-detail"
         },
         {
           "id": "weekly-status-all-green",
@@ -4404,6 +4409,88 @@
           "under": "Asks only the people who already see the problem the same way.",
           "justRight": "Brings in a different viewpoint, because that friction is where a novel idea shows up.",
           "over": "Invites every viewpoint and will not rank them, so the discussion never becomes a decision.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "label": "safety",
+      "principles": [
+        9007,
+        9011
+      ],
+      "rows": [
+        {
+          "principle": 9007,
+          "id": "safety-is-not-negotiable"
+        },
+        {
+          "principle": 9011,
+          "id": "safety-front-and-center"
+        },
+        {
+          "id": "a-shortcut-that-touches-a-hazard",
+          "situation": "A shortcut that touches a hazard",
+          "under": "Takes the shortcut and leaves the hazard on someone else's checklist.",
+          "justRight": "Names the hazard, refuses the shortcut, and escalates until a real owner has the risk.",
+          "over": "Blocks every shortcut nearby, including ones that do not touch the hazard, and the work stops for no safety gain.",
+          "words": "generated"
+        },
+        {
+          "id": "schedule-pressure-on-a-safety-check",
+          "situation": "Schedule pressure on a safety check",
+          "under": "Moves the check to after the date so the milestone still holds.",
+          "justRight": "Keeps the check in front of the date, and holds the work if the check is not done.",
+          "over": "Adds extra checks that do not cover the hazard, and the date slips with no safety gain.",
+          "words": "generated"
+        },
+        {
+          "id": "a-known-risk-about-to-go-forward",
+          "situation": "A known risk about to go forward",
+          "under": "Sends the work and plans to catch the risk later.",
+          "justRight": "Holds that work until the risk is mitigated or explicitly accepted by the person who can accept it.",
+          "over": "Holds unrelated work that has no named hazard, and calls the hold safety.",
+          "words": "generated"
+        },
+        {
+          "id": "cost-pressure-on-a-safety-step",
+          "situation": "Cost pressure on a safety step",
+          "under": "Cuts the step to save the cost and does not say what hazard that step covered.",
+          "justRight": "Keeps the step when it is what makes the work safe, and looks for a cheaper way that still covers the same hazard.",
+          "over": "Refuses every cheaper option, even one that covers the same hazard, and the cost becomes the reason nothing ships.",
+          "words": "generated"
+        },
+        {
+          "id": "someone-elses-checklist",
+          "situation": "Someone else's checklist",
+          "under": "Assumes the checklist owner will catch it, and does not look at the item their own work can make unsafe.",
+          "justRight": "Checks the items their work can make unsafe, and leaves the rest with the owner.",
+          "over": "Takes over the whole checklist and becomes the bottleneck for work they do not understand.",
+          "words": "generated"
+        },
+        {
+          "id": "a-hazard-with-no-name",
+          "situation": "A hazard with no name",
+          "under": "Says it feels unsafe and stops, without saying what could hurt someone.",
+          "justRight": "Names the hazard, the consequence, and the smallest hold that covers it.",
+          "over": "Keeps the hold after the hazard is named and covered, because stopping felt safer than deciding.",
+          "words": "generated"
+        },
+        {
+          "id": "skipping-a-safety-step-for-convenience",
+          "situation": "Skipping a safety step for convenience",
+          "under": "Skips the step because it is inconvenient and the last few times were fine.",
+          "justRight": "Does the step when skipping it would put a person or the hardware at risk, and drops a step that no longer covers a real hazard.",
+          "over": "Keeps every old step, including ones that no longer match the hardware, and the team works around them.",
+          "words": "generated"
+        },
+        {
+          "id": "escalating-a-real-risk",
+          "situation": "Escalating a real risk",
+          "under": "Mentions the risk once and goes back to the schedule.",
+          "justRight": "Escalates until the risk has an owner and a next step, then returns to the work that is still safe to do.",
+          "over": "Escalates every discomfort as a stop, and the people who own the real risks stop listening.",
           "words": "generated"
         }
       ]

@@ -563,14 +563,14 @@
     {
       "id": 9007,
       "decision": "map",
-      "facets": ["acts-like-an-owner"],
-      "reason": "Owners, long-term value, whole company, never not-my-job. Same owner behavior as Amazon Ownership. Safety is a constraint on that behavior, not a different table."
+      "facets": ["acts-like-an-owner", "safety"],
+      "reason": "Same owner behavior as Amazon Ownership: long-term value, the whole company, and never not-my-job. Those rows stay on acts-like-an-owner. Safety is the same behavior as Insist on the Highest Standards, so both principles share the safety facet and its table."
     },
     {
       "id": 9008,
       "decision": "map",
-      "facets": ["prevent-the-next-one"],
-      "reason": "Root cause, no defects down the line, stay fixed, mechanisms instead of good intentions. Same pair as Coupang Think Systematically. Dive-deep is attention to detail without the mechanism."
+      "facets": ["dive-deep", "prevent-the-next-one"],
+      "reason": "Root cause, defects down the line, stay fixed, and mechanisms instead of good intentions stay on prevent-the-next-one, the same pair as Coupang Think Systematically. Attention to detail is the dive-deep slice. The existing dive-deep table already checks the details that would catch a miss, so both facets are on the map."
     },
     {
       "id": 9009,
@@ -587,8 +587,8 @@
     {
       "id": 9011,
       "decision": "map",
-      "facets": ["highest-standards"],
-      "reason": "Relentlessly high standards, raising the bar, high-quality products and processes. Same raise-the-bar behavior as Amazon Insist on the Highest Standards. Defects-down-the-line lives on Operational Excellence, so better-every-day stays off."
+      "facets": ["highest-standards", "safety"],
+      "reason": "Relentlessly high standards, raising the bar, and high-quality products and processes stay on highest-standards, the same raise-the-bar behavior as Amazon Insist on the Highest Standards. Defects down the line live on Operational Excellence, so better-every-day stays off. Safety front and center is the same safety behavior as Ownership, so both share the safety facet."
     },
     {
       "id": 9012,
