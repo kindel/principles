@@ -1,0 +1,82 @@
+{
+  "id": 9006,
+  "slug": "bias-for-action",
+  "company": "blue-origin",
+  "name": "Bias for Action",
+  "sort": 6,
+  "definition": "Speed matters in business. Many decisions and actions are reversible and do not need extensive study. We value calculated risk-taking.",
+  "terms": [
+    {
+      "id": "bias-for-action",
+      "label": "bias for action",
+      "kind": "alias"
+    },
+    {
+      "id": "speed",
+      "label": "speed",
+      "kind": "alias"
+    },
+    {
+      "id": "calculated-risk",
+      "label": "calculated risk",
+      "kind": "alias"
+    },
+    {
+      "id": "reversible",
+      "label": "reversible",
+      "kind": "alias"
+    },
+    {
+      "id": "move-fast",
+      "label": "move fast",
+      "kind": "equivalent"
+    },
+    {
+      "id": "calculated-risk-taking",
+      "label": "calculated risk taking",
+      "kind": "facet",
+      "rows": [
+        "reversible-decisions",
+        "irreversible-decisions",
+        "calculated-risk"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "reversible-decisions",
+      "situation": "When the decision can be undone",
+      "under": "Studies it as if it were permanent. The window closes.",
+      "justRight": "Takes a calculated risk and moves. Checks whether it worked.",
+      "over": "Moves so fast that nobody can say what was decided, and undoing it costs more than deciding slowly would have."
+    },
+    {
+      "id": "irreversible-decisions",
+      "situation": "When the decision is hard to undo",
+      "under": "Uses \"one-way door\" as a reason never to decide.",
+      "justRight": "Slows down for the study the one-way door actually needs, then decides.",
+      "over": "Treats a one-way door like any other decision and rushes it."
+    },
+    {
+      "id": "speed-that-serves-the-work",
+      "situation": "When the calendar is full of analysis",
+      "under": "Waits for a complete picture that will not arrive.",
+      "justRight": "Uses the data they have, picks the next reversible step, and goes.",
+      "over": "Equates motion with progress and starts three paths that nobody finishes."
+    },
+    {
+      "id": "calculated-risk",
+      "situation": "When the next step has real downside",
+      "under": "Avoids the risk and the work stalls.",
+      "justRight": "Names the downside, takes the risk that is worth it, and watches the result.",
+      "over": "Takes the risk for the feeling of speed and skips the check that would have caught a bad call."
+    },
+    {
+      "id": "study-as-delay",
+      "situation": "When someone asks for another round of study",
+      "under": "Agrees every time. Study becomes the product.",
+      "justRight": "Asks whether the study would change the next reversible step. If not, they move.",
+      "over": "Mocks the request for study even when the decision is a one-way door."
+    }
+  ]
+}

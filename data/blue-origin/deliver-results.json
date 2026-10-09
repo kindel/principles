@@ -1,0 +1,95 @@
+{
+  "id": 9003,
+  "slug": "deliver-results",
+  "company": "blue-origin",
+  "name": "Deliver Results",
+  "sort": 3,
+  "definition": "Leaders focus on the key inputs for their business and deliver on their customer commitments with the right quality in a timely fashion. Despite setbacks, they rise to the occasion and never settle. Leaders convey optimism without naiveté. They say, \"let's figure it out.\" They take setbacks in stride and know it's not about how they start, but how they finish. They display grit by refusing to stop at the first barrier and constantly looking for ways to move forward.",
+  "terms": [
+    {
+      "id": "deliver-results",
+      "label": "deliver results",
+      "kind": "alias"
+    },
+    {
+      "id": "results",
+      "label": "results",
+      "kind": "alias"
+    },
+    {
+      "id": "grit",
+      "label": "grit",
+      "kind": "alias"
+    },
+    {
+      "id": "let-s-figure-it-out",
+      "label": "let's figure it out",
+      "kind": "alias"
+    },
+    {
+      "id": "customer-commitments",
+      "label": "customer commitments",
+      "kind": "alias"
+    },
+    {
+      "id": "get-it-done",
+      "label": "get it done",
+      "kind": "equivalent"
+    },
+    {
+      "id": "rise-to-the-occasion",
+      "label": "rise to the occasion",
+      "kind": "facet",
+      "rows": [
+        "setbacks",
+        "first-barrier",
+        "how-you-finish",
+        "never-settle"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "quality-and-date",
+      "situation": "When a customer commitment has a date",
+      "under": "Misses the date, or ships work that is not actually good enough to use.",
+      "justRight": "Hits the date with the quality that was promised. If that is at risk, says so early and offers a real plan.",
+      "over": "Hits the date by cutting the thing the customer actually needed, and calls it done."
+    },
+    {
+      "id": "key-inputs",
+      "situation": "When choosing what to watch",
+      "under": "Watches activity. Cannot say which inputs actually move the result.",
+      "justRight": "Names the few inputs that matter, reviews them on a cadence, and acts when they slip.",
+      "over": "Tracks so many numbers that nobody can tell which one to move this week."
+    },
+    {
+      "id": "setbacks",
+      "situation": "When a setback hits a commitment",
+      "under": "Settles. Treats the setback as the new plan.",
+      "justRight": "Takes it in stride, says \"let's figure it out,\" and finds a path that still serves the commitment.",
+      "over": "Performs optimism and will not hear the constraint, so the team walks into a second miss."
+    },
+    {
+      "id": "first-barrier",
+      "situation": "When the first path is blocked",
+      "under": "Stops at the first barrier and waits to be told what to do.",
+      "justRight": "Looks for another way forward the same day. Changes the method, not the commitment.",
+      "over": "Burns every relationship to force the original path through."
+    },
+    {
+      "id": "how-you-finish",
+      "situation": "When the start was messy",
+      "under": "Uses a bad start as the reason the result will be bad.",
+      "justRight": "Owns the finish. Recovers the quality and the date from wherever you actually are.",
+      "over": "Works people into the ground to make the finish look clean, and the next commitment is already at risk."
+    },
+    {
+      "id": "never-settle",
+      "situation": "When a good-enough result is on the table",
+      "under": "Takes the first acceptable version and stops looking.",
+      "justRight": "Ships the version that meets the commitment, then keeps the next improvement on a real list.",
+      "over": "Refuses to ship because a better version might exist, and the customer waits."
+    }
+  ]
+}

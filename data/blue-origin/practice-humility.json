@@ -1,0 +1,84 @@
+{
+  "id": 9013,
+  "slug": "practice-humility",
+  "company": "blue-origin",
+  "name": "Practice Humility",
+  "sort": 13,
+  "definition": "Leaders are bold in their mission and humble in their execution. They look to the past for inspiration and knowledge. They know that there are many future lessons to be discovered and - more importantly - lessons to be truly learned. They know when to ask for help and embrace that help when given. Leaders are slow to take credit for their own contributions but are quick to point out the value of others.",
+  "terms": [
+    {
+      "id": "practice-humility",
+      "label": "practice humility",
+      "kind": "alias"
+    },
+    {
+      "id": "humility",
+      "label": "humility",
+      "kind": "alias"
+    },
+    {
+      "id": "ask-for-help",
+      "label": "ask for help",
+      "kind": "alias"
+    },
+    {
+      "id": "credit",
+      "label": "credit",
+      "kind": "alias"
+    },
+    {
+      "id": "humble-in-execution",
+      "label": "humble in execution",
+      "kind": "alias"
+    },
+    {
+      "id": "stay-humble",
+      "label": "stay humble",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "bold-and-humble",
+      "situation": "When the mission is ambitious and the work is in progress",
+      "under": "Shrinks the mission so the execution never has to be humble.",
+      "justRight": "Keeps the bold mission and stays humble about how you will get there. Asks, checks, and updates.",
+      "over": "Performs humility so hard that nobody will follow the mission."
+    },
+    {
+      "id": "look-to-the-past",
+      "situation": "When a similar problem has been solved before",
+      "under": "Starts from zero because this time is different.",
+      "justRight": "Looks at what was tried, takes the knowledge, and still owns today's call.",
+      "over": "Copies the past method into a situation it does not fit."
+    },
+    {
+      "id": "ask-for-help",
+      "situation": "When you are stuck",
+      "under": "Waits too long. Pride costs the team a week.",
+      "justRight": "Asks for help when you need it, and uses the help when it arrives.",
+      "over": "Asks so early and so often that you never have to think, and helpers are exhausted."
+    },
+    {
+      "id": "embrace-the-help",
+      "situation": "When help is offered",
+      "under": "Deflects it to look self-sufficient.",
+      "justRight": "Takes the useful part, says so, and keeps ownership of the result.",
+      "over": "Hands the whole problem to the helper and disappears."
+    },
+    {
+      "id": "slow-to-take-credit",
+      "situation": "When the outcome is being attributed",
+      "under": "Tells the story as if the call was mostly yours.",
+      "justRight": "Is slow to take credit. Names the people who did the hard parts, and still owns the result if it breaks.",
+      "over": "Refuses any credit so thoroughly that nobody can tell what you will own next time."
+    },
+    {
+      "id": "point-out-the-value-of-others",
+      "situation": "When you see work that is easy to skip in the story",
+      "under": "Skips it. The visible people get the credit.",
+      "justRight": "Points out the value of others, including the unglamorous work, while it still matters.",
+      "over": "Turns every recap into a round of thanks and never says who decided what."
+    }
+  ]
+}

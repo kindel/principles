@@ -1,0 +1,84 @@
+{
+  "id": 9011,
+  "slug": "insist-on-the-highest-standards",
+  "company": "blue-origin",
+  "name": "Insist on the Highest Standards",
+  "sort": 11,
+  "definition": "Leaders have relentlessly high standards and always keep safety front and center. Many people may think these standards are unreasonably high. Leaders are continually raising the bar and driving their teams to hire great people and produce high-quality products, services, and processes.",
+  "terms": [
+    {
+      "id": "insist-on-the-highest-standards",
+      "label": "insist on the highest standards",
+      "kind": "alias"
+    },
+    {
+      "id": "highest-standards",
+      "label": "highest standards",
+      "kind": "alias"
+    },
+    {
+      "id": "high-standards",
+      "label": "high standards",
+      "kind": "alias"
+    },
+    {
+      "id": "safety-front-and-center",
+      "label": "safety front and center",
+      "kind": "alias"
+    },
+    {
+      "id": "raising-the-bar",
+      "label": "raising the bar",
+      "kind": "alias"
+    },
+    {
+      "id": "relentlessly-high-standards",
+      "label": "relentlessly high standards",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "unreasonably-high",
+      "situation": "When people say the bar is too high",
+      "under": "Lowers it so the room is comfortable.",
+      "justRight": "Keeps the standard, shows what good looks like, and helps people reach it.",
+      "over": "Raises the bar to a point nobody believes, and quality theater replaces real work."
+    },
+    {
+      "id": "safety-front-and-center",
+      "situation": "When schedule pressure meets a safety standard",
+      "under": "Treats safety as a later check.",
+      "justRight": "Keeps safety in front of the schedule. Will hold the work rather than send a known risk forward.",
+      "over": "Uses safety as a veto on ordinary progress without naming a real hazard."
+    },
+    {
+      "id": "raising-the-bar-continually",
+      "situation": "When the team is hitting the current standard",
+      "under": "Stops pushing. Today's good becomes the ceiling.",
+      "justRight": "Raises the bar on the next cycle in a way the team can actually reach.",
+      "over": "Moves the target every week so hitting it is never an accomplishment."
+    },
+    {
+      "id": "quality-of-what-leaves",
+      "situation": "When work is about to leave your hands",
+      "under": "Sends it with known gaps and lets the next person deal with them.",
+      "justRight": "Holds the quality of the product, the service, and the process. Fixes what would become someone else's defect.",
+      "over": "Polishes past the point of customer value, and the date moves."
+    },
+    {
+      "id": "hiring-to-the-standard",
+      "situation": "When a hire would lower the standard",
+      "under": "Makes the hire to fill a chair.",
+      "justRight": "Does not hire below the bar, and is willing to keep looking.",
+      "over": "Rejects strong people for a missing polish item that the team could teach."
+    },
+    {
+      "id": "mediocrity",
+      "situation": "When the work is fine and not good",
+      "under": "Accepts fine. The standard drifts.",
+      "justRight": "Names the gap to high quality and stays on it until the work meets the bar.",
+      "over": "Holds the work for a higher bar than the use requires, and it never ships."
+    }
+  ]
+}

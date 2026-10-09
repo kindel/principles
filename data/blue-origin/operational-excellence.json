@@ -1,0 +1,98 @@
+{
+  "id": 9008,
+  "slug": "operational-excellence",
+  "company": "blue-origin",
+  "name": "Operational Excellence",
+  "sort": 8,
+  "definition": "Leaders have a habitual drive to quickly correct errors at the root. Leaders ensure that defects do not get sent down the line and that problems are fixed so they stay fixed. They have incredible attention to detail. They replace good intentions with mechanisms and never rely on \"we'll do better next time.\" They demand that processes exist to serve them; they don't exist to serve processes.",
+  "terms": [
+    {
+      "id": "operational-excellence",
+      "label": "operational excellence",
+      "kind": "alias"
+    },
+    {
+      "id": "root-cause",
+      "label": "root cause",
+      "kind": "alias"
+    },
+    {
+      "id": "mechanisms",
+      "label": "mechanisms",
+      "kind": "alias"
+    },
+    {
+      "id": "defects",
+      "label": "defects",
+      "kind": "alias"
+    },
+    {
+      "id": "stay-fixed",
+      "label": "stay fixed",
+      "kind": "alias"
+    },
+    {
+      "id": "prevent-the-next-one",
+      "label": "prevent the next one",
+      "kind": "facet",
+      "rows": [
+        "root-cause",
+        "defects-down-the-line",
+        "stay-fixed",
+        "mechanisms-not-intentions"
+      ]
+    },
+    {
+      "id": "attention-to-detail",
+      "label": "attention to detail",
+      "kind": "facet",
+      "rows": [
+        "attention-to-detail"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "root-cause",
+      "situation": "When an error shows up",
+      "under": "Patches the symptom and moves on.",
+      "justRight": "Corrects it at the root quickly, and checks that the same cause cannot silently return.",
+      "over": "Opens a program to study every related class of error while this one is still open."
+    },
+    {
+      "id": "defects-down-the-line",
+      "situation": "When handing work to the next person",
+      "under": "Sends known defects downstream and lets them find them.",
+      "justRight": "Does not send a defect you already see. Names anything still open.",
+      "over": "Holds the work until it is perfect, and the next person is idle."
+    },
+    {
+      "id": "stay-fixed",
+      "situation": "When the same problem returns",
+      "under": "Fixes it the same way again and hopes.",
+      "justRight": "Fixes it so it stays fixed: a check, a test, or a step that runs without heroics.",
+      "over": "Adds so many steps that the process is now the delay, and the original defect is still possible."
+    },
+    {
+      "id": "mechanisms-not-intentions",
+      "situation": "When someone says they will do better next time",
+      "under": "Accepts the promise. Nothing in the system changes.",
+      "justRight": "Replaces the good intention with a mechanism that would have caught this without a speech.",
+      "over": "Adds a committee where a small automatic check would have been enough."
+    },
+    {
+      "id": "attention-to-detail",
+      "situation": "When the details would catch a miss",
+      "under": "Skims. Trusts that someone else looked.",
+      "justRight": "Looks at the details that would actually hurt, and leaves the rest alone.",
+      "over": "Nits every comma and misses the detail that would have stopped the defect."
+    },
+    {
+      "id": "process-serves-people",
+      "situation": "When a process is slowing the work",
+      "under": "Follows it even when it no longer serves the outcome.",
+      "justRight": "Changes or drops the process so it serves the people doing the work.",
+      "over": "Deletes process that was the only check on a real risk, and calls the deletion excellence."
+    }
+  ]
+}

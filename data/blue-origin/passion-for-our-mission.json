@@ -1,0 +1,72 @@
+{
+  "id": 9001,
+  "slug": "passion-for-our-mission",
+  "company": "blue-origin",
+  "name": "Passion for our Mission",
+  "sort": 1,
+  "definition": "Our mission is bold - to radically reduce the cost of access to space, harness in space resources, and inspire the next generation to enable millions of people to live and work in space for the benefit of Earth. Blue leaders are, above all else, mission-driven. Mission-driven leaders create and communicate a direction that inspires results, and their actions and attitudes are guided by \"mission first.\"",
+  "terms": [
+    {
+      "id": "passion-for-our-mission",
+      "label": "passion for our mission",
+      "kind": "alias"
+    },
+    {
+      "id": "the-mission",
+      "label": "the mission",
+      "kind": "alias"
+    },
+    {
+      "id": "mission-first",
+      "label": "mission first",
+      "kind": "alias"
+    },
+    {
+      "id": "mission-driven",
+      "label": "mission-driven",
+      "kind": "alias"
+    },
+    {
+      "id": "care-about-the-mission",
+      "label": "care about the mission",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "mission-first-choices",
+      "situation": "When the work could go several ways",
+      "under": "Picks the path that is easiest for the team and cannot say how it serves the mission.",
+      "justRight": "Uses the mission as the filter. Chooses the path that moves the stated direction, even when it is harder this week.",
+      "over": "Invokes the mission to justify every preference, including the ones that do not move it."
+    },
+    {
+      "id": "communicating-direction",
+      "situation": "When people need to know where the work is going",
+      "under": "Assumes the direction is obvious. People fill the gap with their own version of the mission.",
+      "justRight": "States a direction people can act on, and checks that they can repeat it in their own words.",
+      "over": "Repeats the slogan in every meeting and never translates it into this week's choices."
+    },
+    {
+      "id": "inspiring-results",
+      "situation": "When the team is tired of the current grind",
+      "under": "Lets the work become a list of tasks with no reason attached.",
+      "justRight": "Connects the grind to a result that matters, and keeps the next step concrete.",
+      "over": "Gives a speech about the future and leaves the current work unowned."
+    },
+    {
+      "id": "actions-match-the-talk",
+      "situation": "When a personal win conflicts with the mission",
+      "under": "Protects the local win and treats the mission as someone else's speech.",
+      "justRight": "Drops or reshapes the local win when it would slow the mission, and says so out loud.",
+      "over": "Sacrifices the team's real commitments to look more mission-driven than the people doing the work."
+    },
+    {
+      "id": "attitudes-under-setbacks",
+      "situation": "When a setback makes the mission feel far away",
+      "under": "Goes lukewarm. Waits for someone else to restore the energy.",
+      "justRight": "Keeps a mission-first attitude without pretending the setback did not happen. Names the next useful step.",
+      "over": "Performs passion so loudly that people cannot raise a real risk."
+    }
+  ]
+}
