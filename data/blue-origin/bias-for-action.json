@@ -48,9 +48,9 @@
     {
       "id": "irreversible-decisions",
       "situation": "When the decision is hard to undo",
-      "under": "Treats it like any other decision and rushes it.",
+      "under": "Uses \"one-way door\" as a reason never to decide.",
       "justRight": "Slows down for the study the one-way door actually needs, then decides.",
-      "over": "Uses \"one-way door\" as a reason never to decide."
+      "over": "Treats a one-way door like any other decision and rushes it."
     },
     {
       "id": "speed-that-serves-the-work",

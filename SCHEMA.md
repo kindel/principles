@@ -206,7 +206,8 @@ generated set marked as generated.
   addresses a principle by `id` alone and cannot land on the wrong record.
 - Each company owns a block of a thousand ids: Amazon 1000, Arm 2000, Coupang
   3000, Delivery Hero 4000, GitLab 5000, Dawn 6000, Toyota 7000, Generic 8000,
-  Blue Origin 9000.
+  Blue Origin 9000. The published source is
+  https://www.blueorigin.com/careers/work-culture.
   `block` in
   `scripts/companies.py` is the registry, and claiming the next free block is
   the whole of adding a company. A new principle takes the next free number in

@@ -44,7 +44,7 @@ flowchart TD
 
 Teaching prose is in `data/teaching/`. Only Amazon and generic have it today, but that will be fixed soon. Porridge's "Questions that make the principle concrete." is the `deepen` list on that teaching file.
 
-The other companies in the corpus are Amazon, Arm, Coupang, Delivery Hero, GitLab, Dawn Aerospace, Toyota, and Blue Origin. What each calls the set, and where the wording came from, is in `scripts/companies.py`. The record shape is [SCHEMA.md](SCHEMA.md).
+The other companies in the corpus are Amazon, Arm, Coupang, Delivery Hero, GitLab, Dawn Aerospace, and Toyota. What each calls the set, and where the wording came from, is in `scripts/companies.py`. The record shape is [SCHEMA.md](SCHEMA.md).
 
 ## Outside
 

@@ -34,7 +34,12 @@
     {
       "id": "prevent-the-next-one",
       "label": "prevent the next one",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "root-cause",
+        "stay-fixed",
+        "mechanisms-not-intentions"
+      ]
     },
     {
       "id": "attention-to-detail",

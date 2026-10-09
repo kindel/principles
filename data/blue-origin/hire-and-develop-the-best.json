@@ -34,7 +34,11 @@
     {
       "id": "best-person-for-the-role",
       "label": "best person for the role",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "raising-the-bar",
+        "promotion-bar"
+      ]
     }
   ],
   "rows": [

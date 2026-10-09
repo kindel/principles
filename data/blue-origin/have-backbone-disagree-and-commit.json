@@ -34,7 +34,13 @@
     {
       "id": "respectfully-challenge",
       "label": "respectfully challenge",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "challenge-when-you-disagree",
+        "no-compromise-for-cohesion",
+        "conviction-and-tenacity",
+        "respect-in-the-challenge"
+      ]
     }
   ],
   "rows": [
@@ -57,7 +63,7 @@
       "situation": "When the decision did not go your way",
       "under": "Sandbags, or relitigates in the hallway.",
       "justRight": "Commits wholly. Builds the chosen path as if it had been yours.",
-      "over": "Commits in the room and keeps a private plan to prove they were right."
+      "over": "Stays on the chosen path after new evidence shows it is wrong, and will not take those facts back to the owner."
     },
     {
       "id": "conviction-and-tenacity",
