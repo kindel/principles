@@ -4259,6 +4259,14 @@
           "id": "timely-feedback"
         },
         {
+          "principle": 9004,
+          "id": "feedback-that-helps"
+        },
+        {
+          "principle": 9004,
+          "id": "energy-from-the-group"
+        },
+        {
           "id": "work-that-needs-a-group",
           "situation": "Work that needs a group",
           "under": "Keeps the work to themselves, or leaves people nearby but unsynchronized.",
