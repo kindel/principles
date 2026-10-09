@@ -19,7 +19,12 @@
     {
       "id": "highly-aligned-and-loosely-coupled",
       "label": "highly aligned and loosely coupled",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "other-captains-implement",
+        "aligned-and-independent",
+        "responsibility-for-the-outcome"
+      ]
     }
   ],
   "rows": [

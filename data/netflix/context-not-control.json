@@ -14,12 +14,20 @@
     {
       "id": "not-hands-off",
       "label": "not hands-off",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "coaching-while-involved",
+        "when-you-step-in",
+        "a-crisis"
+      ]
     },
     {
       "id": "coach-the-team",
       "label": "coach the team",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "coaching-while-involved"
+      ]
     }
   ],
   "rows": [
