@@ -781,6 +781,7 @@ def _with_copied_blog(src, mapped_dst):
     src_blog = src.get("blog")
     dst_blog = mapped_dst.get("blog")
     if (isinstance(src_blog, list) and isinstance(dst_blog, list)
+            and dst_blog
             and len(src_blog) >= len(dst_blog)
             and src_blog[:len(dst_blog)] == dst_blog):
         out = dict(src)

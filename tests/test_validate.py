@@ -1059,6 +1059,18 @@ class DerivationMapTest(unittest.TestCase):
                     json.dump(doc, f)
             self.assertEqual([], self.check(root))
 
+    def test_an_empty_target_reading_list_is_not_a_copied_prefix(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.plant(root)
+            path = os.path.join(root, "teaching", "other", "one.json")
+            with open(path, encoding="utf-8") as f:
+                doc = json.load(f)
+            doc["blog"] = []
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(doc, f)
+            errs = self.check(root)
+            self.assertTrue(any("reused teaching differs" in e for e in errs), errs)
+
     def test_a_missing_copied_reading_item_is_rejected(self):
         with tempfile.TemporaryDirectory() as root:
             self.plant(root)
