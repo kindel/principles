@@ -1,0 +1,77 @@
+{
+  "id": 9009,
+  "slug": "earn-the-trust-of-others",
+  "company": "blue-origin",
+  "name": "Earn the Trust of Others",
+  "sort": 9,
+  "definition": "Leaders are sincerely open-minded, genuinely listen, and examine their own strongest convictions with humility. They value diversity in all its forms because different viewpoints result in novel ideas.",
+  "terms": [
+    {
+      "id": "earn-the-trust-of-others",
+      "label": "earn the trust of others",
+      "kind": "alias"
+    },
+    {
+      "id": "earn-trust",
+      "label": "earn trust",
+      "kind": "alias"
+    },
+    {
+      "id": "open-minded",
+      "label": "open-minded",
+      "kind": "alias"
+    },
+    {
+      "id": "listen",
+      "label": "listen",
+      "kind": "alias"
+    },
+    {
+      "id": "different-viewpoints",
+      "label": "different viewpoints",
+      "kind": "alias"
+    },
+    {
+      "id": "listens-openly",
+      "label": "listens openly",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "genuinely-listen",
+      "situation": "When someone disagrees with you",
+      "under": "Waits for their turn to talk. The other person can tell they were not heard.",
+      "justRight": "Listens all the way through, and changes the plan when they are right.",
+      "over": "Agrees with everyone so nobody is upset, and the decision is mush."
+    },
+    {
+      "id": "examine-convictions",
+      "situation": "When a fact challenges a view you hold strongly",
+      "under": "Defends the view because it is yours.",
+      "justRight": "Examines the conviction with humility. Keeps it only if it still holds.",
+      "over": "Abandons a sound view at the first challenge so they can look open-minded."
+    },
+    {
+      "id": "different-viewpoints",
+      "situation": "When the room is of one mind",
+      "under": "Treats that as proof the idea is right.",
+      "justRight": "Seeks a viewpoint the room does not already have, because novel ideas come from that friction.",
+      "over": "Collects viewpoints as a ritual and never lets them change the work."
+    },
+    {
+      "id": "open-minded-without-being-vague",
+      "situation": "When you still have to decide",
+      "under": "Closes the question before anyone else has been heard.",
+      "justRight": "Stays open long enough to learn, then takes a position people can trust.",
+      "over": "Stays so open that nobody can tell what you believe, and trust erodes."
+    },
+    {
+      "id": "trust-through-openness",
+      "situation": "When people are deciding whether to bring you the real news",
+      "under": "Punishes the messenger. The next miss arrives late.",
+      "justRight": "Makes it safe to bring a hard fact, including one that contradicts you. That is how trust is earned.",
+      "over": "Asks for candor, then uses the note against the person later."
+    }
+  ]
+}

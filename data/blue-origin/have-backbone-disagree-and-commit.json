@@ -1,0 +1,77 @@
+{
+  "id": 9014,
+  "slug": "have-backbone-disagree-and-commit",
+  "company": "blue-origin",
+  "name": "Have Backbone; Disagree and Commit",
+  "sort": 14,
+  "definition": "Leaders are obligated to challenge decisions respectfully when they disagree, even when doing so is uncomfortable or exhausting. Leaders have conviction and are tenacious. They do not compromise for the sake of social cohesion. Once a decision is determined, they commit wholly.",
+  "terms": [
+    {
+      "id": "have-backbone-disagree-and-commit",
+      "label": "have backbone; disagree and commit",
+      "kind": "alias"
+    },
+    {
+      "id": "disagree-and-commit",
+      "label": "disagree and commit",
+      "kind": "alias"
+    },
+    {
+      "id": "backbone",
+      "label": "backbone",
+      "kind": "alias"
+    },
+    {
+      "id": "commit-wholly",
+      "label": "commit wholly",
+      "kind": "alias"
+    },
+    {
+      "id": "social-cohesion",
+      "label": "social cohesion",
+      "kind": "alias"
+    },
+    {
+      "id": "respectfully-challenge",
+      "label": "respectfully challenge",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "challenge-when-you-disagree",
+      "situation": "When you think the decision is wrong",
+      "under": "Stays quiet to keep the room comfortable.",
+      "justRight": "Challenges it respectfully, with an alternative, even when it is exhausting.",
+      "over": "Challenges every decision so the team cannot tell which objections are real."
+    },
+    {
+      "id": "no-compromise-for-cohesion",
+      "situation": "When the group wants a mushy middle",
+      "under": "Agrees so everyone can leave friends.",
+      "justRight": "Will not compromise the right call for social cohesion. Says the disagreement plainly.",
+      "over": "Turns every meeting into a fight, including the ones where the difference does not matter."
+    },
+    {
+      "id": "commit-wholly",
+      "situation": "When the decision did not go your way",
+      "under": "Sandbags, or relitigates in the hallway.",
+      "justRight": "Commits wholly. Builds the chosen path as if it had been yours.",
+      "over": "Commits in the room and keeps a private plan to prove they were right."
+    },
+    {
+      "id": "conviction-and-tenacity",
+      "situation": "When the first challenge is waved off",
+      "under": "Drops it after one try.",
+      "justRight": "Stays tenacious while the decision is still open. Brings the evidence again, then stops when it is closed.",
+      "over": "Keeps pushing after the decision is determined, and the work cannot start."
+    },
+    {
+      "id": "respect-in-the-challenge",
+      "situation": "When the disagreement is personal in the room",
+      "under": "Attacks the person, or hints at motives.",
+      "justRight": "Challenges the decision, not the person. Leaves the relationship intact enough to commit afterward.",
+      "over": "Is so careful with tone that the actual objection never gets said."
+    }
+  ]
+}

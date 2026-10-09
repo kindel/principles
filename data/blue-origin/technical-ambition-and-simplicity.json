@@ -1,0 +1,84 @@
+{
+  "id": 9012,
+  "slug": "technical-ambition-and-simplicity",
+  "company": "blue-origin",
+  "name": "Technical Ambition and Simplicity",
+  "sort": 12,
+  "definition": "Leaders push for high-performance architectures and are willing to break new ground with novel inventions. They look everywhere for new ideas and are not limited by \"not invented here.\" They always find ways to simplify. They do not accept requirements at face value and are willing to push back. They understand that medium-performing variants of high-performance architectures can meet mission needs and provide a path to higher-performing upgrades.",
+  "terms": [
+    {
+      "id": "technical-ambition-and-simplicity",
+      "label": "technical ambition and simplicity",
+      "kind": "alias"
+    },
+    {
+      "id": "technical-ambition",
+      "label": "technical ambition",
+      "kind": "alias"
+    },
+    {
+      "id": "simplify",
+      "label": "simplify",
+      "kind": "alias"
+    },
+    {
+      "id": "not-invented-here",
+      "label": "not invented here",
+      "kind": "alias"
+    },
+    {
+      "id": "high-performance-architectures",
+      "label": "high-performance architectures",
+      "kind": "alias"
+    },
+    {
+      "id": "invent-and-simplify",
+      "label": "invent and simplify",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "not-invented-here",
+      "situation": "When a good idea comes from outside the team",
+      "under": "Rejects it because it was not invented here.",
+      "justRight": "Looks everywhere, takes the idea that works, and gives credit.",
+      "over": "Imports every novelty and the architecture becomes a pile of other people's parts."
+    },
+    {
+      "id": "always-simplify",
+      "situation": "When the design is getting heavier",
+      "under": "Adds another path instead of removing one.",
+      "justRight": "Finds a simpler way that still meets the need, and deletes the extra.",
+      "over": "Simplifies past the point where the mission need is met."
+    },
+    {
+      "id": "requirements-at-face-value",
+      "situation": "When a requirement shows up in the document",
+      "under": "Implements it as written and never asks why.",
+      "justRight": "Pushes back. Asks what job the requirement is doing, and drops or reshapes it when it does not serve the mission.",
+      "over": "Pushes back on every requirement, including the ones that are load-bearing, and the work cannot start."
+    },
+    {
+      "id": "break-new-ground",
+      "situation": "When the known design will not reach the need",
+      "under": "Stays inside the known method and shrinks the need.",
+      "justRight": "Is willing to invent. Bounds the novelty so you can tell whether it worked.",
+      "over": "Inventing becomes the point, and a simpler path that would have shipped is ignored."
+    },
+    {
+      "id": "path-to-higher-performance",
+      "situation": "When you cannot ship the high-performance version yet",
+      "under": "Ships a one-off that cannot grow, or waits for the perfect architecture.",
+      "justRight": "Ships a medium-performing variant of a high-performance architecture, so the upgrade path is real.",
+      "over": "Designs for a future scale you will not reach this year, and this year's mission waits."
+    },
+    {
+      "id": "high-performance-without-theater",
+      "situation": "When the architecture review rewards ambition",
+      "under": "Picks a modest design because it will not be questioned.",
+      "justRight": "Pushes for the high-performance architecture the mission actually needs, and can explain the cost.",
+      "over": "Picks the most impressive architecture in the room, and operations cannot run it."
+    }
+  ]
+}

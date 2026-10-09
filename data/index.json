@@ -943,6 +943,157 @@
           ]
         }
       ]
+    },
+    {
+      "id": "blue-origin",
+      "name": "Blue Origin",
+      "set": "Leadership Principles",
+      "source": "https://www.blueorigin.com/careers/work-culture",
+      "preamble": "Blue Origin's 14 Leadership Principles exemplify the company's culture and unyielding dedication to mission success.",
+      "principles": [
+        {
+          "id": 9001,
+          "slug": "passion-for-our-mission",
+          "name": "Passion for our Mission",
+          "sort": 1,
+          "file": "data/blue-origin/passion-for-our-mission.json",
+          "facets": [
+            "care-about-the-mission"
+          ]
+        },
+        {
+          "id": 9002,
+          "slug": "customer-focus",
+          "name": "Customer Focus",
+          "sort": 2,
+          "file": "data/blue-origin/customer-focus.json",
+          "facets": [
+            "customer-obsession"
+          ]
+        },
+        {
+          "id": 9003,
+          "slug": "deliver-results",
+          "name": "Deliver Results",
+          "sort": 3,
+          "file": "data/blue-origin/deliver-results.json",
+          "facets": [
+            "deliver-results"
+          ]
+        },
+        {
+          "id": 9004,
+          "slug": "embrace-team-blue",
+          "name": "Embrace Team Blue",
+          "sort": 4,
+          "file": "data/blue-origin/embrace-team-blue.json",
+          "facets": [
+            "pull-people-together"
+          ]
+        },
+        {
+          "id": 9005,
+          "slug": "resourceful",
+          "name": "Resourceful",
+          "sort": 5,
+          "file": "data/blue-origin/resourceful.json",
+          "facets": [
+            "frugality"
+          ]
+        },
+        {
+          "id": 9006,
+          "slug": "bias-for-action",
+          "name": "Bias for Action",
+          "sort": 6,
+          "file": "data/blue-origin/bias-for-action.json",
+          "facets": [
+            "bias-for-action"
+          ]
+        },
+        {
+          "id": 9007,
+          "slug": "ownership",
+          "name": "Ownership",
+          "sort": 7,
+          "file": "data/blue-origin/ownership.json",
+          "facets": [
+            "acts-like-an-owner"
+          ]
+        },
+        {
+          "id": 9008,
+          "slug": "operational-excellence",
+          "name": "Operational Excellence",
+          "sort": 8,
+          "file": "data/blue-origin/operational-excellence.json",
+          "facets": [
+            "prevent-the-next-one"
+          ]
+        },
+        {
+          "id": 9009,
+          "slug": "earn-the-trust-of-others",
+          "name": "Earn the Trust of Others",
+          "sort": 9,
+          "file": "data/blue-origin/earn-the-trust-of-others.json",
+          "facets": [
+            "earn-trust"
+          ]
+        },
+        {
+          "id": 9010,
+          "slug": "hire-and-develop-the-best",
+          "name": "Hire and Develop the Best",
+          "sort": 10,
+          "file": "data/blue-origin/hire-and-develop-the-best.json",
+          "facets": [
+            "best-person-for-the-role",
+            "hire-and-develop-the-best",
+            "team-for-the-outcome"
+          ]
+        },
+        {
+          "id": 9011,
+          "slug": "insist-on-the-highest-standards",
+          "name": "Insist on the Highest Standards",
+          "sort": 11,
+          "file": "data/blue-origin/insist-on-the-highest-standards.json",
+          "facets": [
+            "highest-standards"
+          ]
+        },
+        {
+          "id": 9012,
+          "slug": "technical-ambition-and-simplicity",
+          "name": "Technical Ambition and Simplicity",
+          "sort": 12,
+          "file": "data/blue-origin/technical-ambition-and-simplicity.json",
+          "facets": [
+            "invent-and-simplify"
+          ]
+        },
+        {
+          "id": 9013,
+          "slug": "practice-humility",
+          "name": "Practice Humility",
+          "sort": 13,
+          "file": "data/blue-origin/practice-humility.json",
+          "facets": [
+            "stay-humble"
+          ]
+        },
+        {
+          "id": 9014,
+          "slug": "have-backbone-disagree-and-commit",
+          "name": "Have Backbone; Disagree and Commit",
+          "sort": 14,
+          "file": "data/blue-origin/have-backbone-disagree-and-commit.json",
+          "facets": [
+            "have-backbone-disagree-and-commit"
+          ]
+        }
+      ]
     }
   ]
 }

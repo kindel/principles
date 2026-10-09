@@ -1,0 +1,77 @@
+{
+  "id": 9005,
+  "slug": "resourceful",
+  "company": "blue-origin",
+  "name": "Resourceful",
+  "sort": 5,
+  "definition": "Leaders are frugal and accomplish more with less, recognizing that constraints breed self-sufficiency, invention, and innovation.",
+  "terms": [
+    {
+      "id": "resourceful",
+      "label": "resourceful",
+      "kind": "alias"
+    },
+    {
+      "id": "frugal",
+      "label": "frugal",
+      "kind": "alias"
+    },
+    {
+      "id": "constraints",
+      "label": "constraints",
+      "kind": "alias"
+    },
+    {
+      "id": "more-with-less",
+      "label": "more with less",
+      "kind": "alias"
+    },
+    {
+      "id": "do-more-with-less",
+      "label": "do more with less",
+      "kind": "equivalent"
+    },
+    {
+      "id": "frugality",
+      "label": "frugality",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "accomplish-more-with-less",
+      "situation": "When the obvious path is to add spend or headcount",
+      "under": "Asks for more people or more money before looking at the work.",
+      "justRight": "Gets the outcome with less, or with a different method, and only then asks for what is still required.",
+      "over": "Refuses every spend, including the one that would unlock the result."
+    },
+    {
+      "id": "constraints-as-fuel",
+      "situation": "When a constraint shows up",
+      "under": "Treats the constraint as a reason the work cannot be done.",
+      "justRight": "Uses the constraint to invent a simpler path.",
+      "over": "Romanticizes the constraint and will not remove one that is actually blocking customers."
+    },
+    {
+      "id": "self-sufficiency",
+      "situation": "When a tool or a vendor is the default answer",
+      "under": "Buys the tool because buying is faster than thinking.",
+      "justRight": "Asks whether the team can do it with what it has, then buys only what still earns its keep.",
+      "over": "Rebuilds a commodity in-house to prove self-sufficiency, and the real work waits."
+    },
+    {
+      "id": "invention-under-a-budget",
+      "situation": "When the budget will not cover the first design",
+      "under": "Drops the goal to match the budget.",
+      "justRight": "Redesigns so the goal still holds at the cost you can actually pay.",
+      "over": "Hides extra spend in another budget so the constraint never has to teach anything."
+    },
+    {
+      "id": "time-as-a-resource",
+      "situation": "When the scarce thing is time, not money",
+      "under": "Spends people's time as if it were free.",
+      "justRight": "Treats hours like a budget. Cuts low-value work so the important work can finish.",
+      "over": "Cuts so hard that people have no slack to invent, and the week is only firefighting."
+    }
+  ]
+}

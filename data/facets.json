@@ -9,7 +9,8 @@
         2008,
         4001,
         6004,
-        8003
+        8003,
+        9007
       ],
       "rows": [
         {
@@ -91,6 +92,22 @@
         {
           "principle": 6004,
           "id": "dawns-own-example"
+        },
+        {
+          "principle": 9007,
+          "id": "not-my-job"
+        },
+        {
+          "principle": 9007,
+          "id": "beyond-your-team"
+        },
+        {
+          "principle": 9007,
+          "id": "long-term-value"
+        },
+        {
+          "principle": 9007,
+          "id": "unowned-gap"
         },
         {
           "id": "covering-before-time-off",
@@ -423,7 +440,8 @@
         2007,
         3014,
         6007,
-        8010
+        8010,
+        9006
       ],
       "rows": [
         {
@@ -507,6 +525,18 @@
           "id": "dawns-own-example"
         },
         {
+          "principle": 9006,
+          "id": "reversible-decisions"
+        },
+        {
+          "principle": 9006,
+          "id": "calculated-risk"
+        },
+        {
+          "principle": 9006,
+          "id": "study-as-delay"
+        },
+        {
           "id": "a-thread-that-needs-a-decision",
           "situation": "A thread that needs a decision",
           "under": "Lets the thread sit. People keep adding comments instead of making a call.",
@@ -580,7 +610,8 @@
         3001,
         6002,
         8001,
-        5002
+        5002,
+        9002
       ],
       "rows": [
         {
@@ -638,6 +669,18 @@
         {
           "principle": 6002,
           "id": "dawns-own-example"
+        },
+        {
+          "principle": 9002,
+          "id": "starting-with-the-customer"
+        },
+        {
+          "principle": 9002,
+          "id": "earning-trust"
+        },
+        {
+          "principle": 9002,
+          "id": "keeping-trust"
         },
         {
           "id": "customer-blocked-this-week",
@@ -900,7 +943,8 @@
       "principles": [
         1011,
         6008,
-        8002
+        8002,
+        9009
       ],
       "rows": [
         {
@@ -946,6 +990,18 @@
         {
           "principle": 6008,
           "id": "dawns-own-example"
+        },
+        {
+          "principle": 9009,
+          "id": "genuinely-listen"
+        },
+        {
+          "principle": 9009,
+          "id": "examine-convictions"
+        },
+        {
+          "principle": 9009,
+          "id": "trust-through-openness"
         },
         {
           "id": "a-date-you-gave-slips",
@@ -1020,7 +1076,8 @@
         1013,
         3007,
         6011,
-        8013
+        8013,
+        9014
       ],
       "rows": [
         {
@@ -1090,6 +1147,18 @@
         {
           "principle": 6011,
           "id": "dawns-own-example"
+        },
+        {
+          "principle": 9014,
+          "id": "challenge-when-you-disagree"
+        },
+        {
+          "principle": 9014,
+          "id": "no-compromise-for-cohesion"
+        },
+        {
+          "principle": 9014,
+          "id": "commit-wholly"
         },
         {
           "id": "design-review-challenge",
@@ -1164,7 +1233,8 @@
         1006,
         3008,
         6010,
-        8008
+        8008,
+        9010
       ],
       "rows": [
         {
@@ -1234,6 +1304,18 @@
         {
           "principle": 6010,
           "id": "dawns-own-example"
+        },
+        {
+          "principle": 9010,
+          "id": "recognizing-talent"
+        },
+        {
+          "principle": 9010,
+          "id": "coaching-seriously"
+        },
+        {
+          "principle": 9010,
+          "id": "mechanisms-for-development"
         },
         {
           "id": "interview-debrief",
@@ -1307,7 +1389,8 @@
       "principles": [
         1003,
         6006,
-        8006
+        8006,
+        9012
       ],
       "rows": [
         {
@@ -1349,6 +1432,22 @@
         {
           "principle": 6006,
           "id": "dawns-own-example"
+        },
+        {
+          "principle": 9012,
+          "id": "not-invented-here"
+        },
+        {
+          "principle": 9012,
+          "id": "always-simplify"
+        },
+        {
+          "principle": 9012,
+          "id": "break-new-ground"
+        },
+        {
+          "principle": 9012,
+          "id": "path-to-higher-performance"
         },
         {
           "id": "idea-from-another-team",
@@ -1541,7 +1640,8 @@
       "principles": [
         1014,
         3009,
-        8014
+        8014,
+        9003
       ],
       "rows": [
         {
@@ -1607,6 +1707,18 @@
         {
           "principle": 3009,
           "id": "unglamorous-finish"
+        },
+        {
+          "principle": 9003,
+          "id": "quality-and-date"
+        },
+        {
+          "principle": 9003,
+          "id": "setbacks"
+        },
+        {
+          "principle": 9003,
+          "id": "first-barrier"
         },
         {
           "id": "open-commitment",
@@ -1680,7 +1792,8 @@
       "principles": [
         1010,
         3015,
-        8011
+        8011,
+        9005
       ],
       "rows": [
         {
@@ -1738,6 +1851,18 @@
         {
           "principle": 3015,
           "id": "growth-and-cost"
+        },
+        {
+          "principle": 9005,
+          "id": "accomplish-more-with-less"
+        },
+        {
+          "principle": 9005,
+          "id": "constraints-as-fuel"
+        },
+        {
+          "principle": 9005,
+          "id": "self-sufficiency"
         },
         {
           "id": "project-slipping",
@@ -1811,7 +1936,8 @@
       "principles": [
         1007,
         3013,
-        8007
+        8007,
+        9011
       ],
       "rows": [
         {
@@ -1869,6 +1995,18 @@
         {
           "principle": 3013,
           "id": "tolerating-a-known-problem"
+        },
+        {
+          "principle": 9011,
+          "id": "unreasonably-high"
+        },
+        {
+          "principle": 9011,
+          "id": "quality-of-what-leaves"
+        },
+        {
+          "principle": 9011,
+          "id": "mediocrity"
         },
         {
           "id": "handing-work-downstream",
@@ -2181,12 +2319,25 @@
       "id": "care-about-the-mission",
       "label": "care about the mission",
       "principles": [
-        2001
+        2001,
+        9001
       ],
       "rows": [
         {
           "principle": 2001,
           "id": "internalizing-the-strategy"
+        },
+        {
+          "principle": 9001,
+          "id": "mission-first-choices"
+        },
+        {
+          "principle": 9001,
+          "id": "communicating-direction"
+        },
+        {
+          "principle": 9001,
+          "id": "actions-match-the-talk"
         },
         {
           "id": "explaining-the-strategy",
@@ -2791,12 +2942,25 @@
       "id": "prevent-the-next-one",
       "label": "prevent the next one",
       "principles": [
-        3005
+        3005,
+        9008
       ],
       "rows": [
         {
           "principle": 3005,
           "id": "same-defect-twice"
+        },
+        {
+          "principle": 9008,
+          "id": "root-cause"
+        },
+        {
+          "principle": 9008,
+          "id": "stay-fixed"
+        },
+        {
+          "principle": 9008,
+          "id": "mechanisms-not-intentions"
         },
         {
           "id": "the-same-defect-twice",
@@ -3157,12 +3321,25 @@
       "id": "stay-humble",
       "label": "stay humble",
       "principles": [
-        4006
+        4006,
+        9013
       ],
       "rows": [
         {
           "principle": 4006,
           "id": "after-a-win"
+        },
+        {
+          "principle": 9013,
+          "id": "ask-for-help"
+        },
+        {
+          "principle": 9013,
+          "id": "slow-to-take-credit"
+        },
+        {
+          "principle": 9013,
+          "id": "point-out-the-value-of-others"
         },
         {
           "id": "the-day-after-a-win",
@@ -3895,7 +4072,8 @@
         4005,
         5004,
         6010,
-        8008
+        8008,
+        9010
       ],
       "rows": [
         {
@@ -3925,6 +4103,14 @@
         {
           "principle": 5004,
           "id": "hiring-bias"
+        },
+        {
+          "principle": 9010,
+          "id": "raising-the-bar"
+        },
+        {
+          "principle": 9010,
+          "id": "promotion-bar"
         },
         {
           "id": "two-finalists",
@@ -3987,7 +4173,8 @@
         5004,
         6010,
         8008,
-        8015
+        8015,
+        9010
       ],
       "rows": [
         {
@@ -3997,6 +4184,10 @@
         {
           "principle": 4005,
           "id": "team-composition"
+        },
+        {
+          "principle": 9010,
+          "id": "team-for-the-work"
         },
         {
           "id": "a-team-like-the-manager",
@@ -4044,6 +4235,95 @@
           "under": "Blames the miss on not having enough people who already work the manager's way, and hires more of them.",
           "justRight": "Asks what the outcome needed that the team could not do, and whether the people in the seats could do the work.",
           "over": "Hires again to change how the team looks. The result does not improve, because the new person still cannot do the work.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "pull-people-together",
+      "label": "pull people together",
+      "principles": [
+        9004
+      ],
+      "rows": [
+        {
+          "principle": 9004,
+          "id": "pulling-people-together"
+        },
+        {
+          "principle": 9004,
+          "id": "same-direction"
+        },
+        {
+          "principle": 9004,
+          "id": "healthy-tension"
+        },
+        {
+          "principle": 9004,
+          "id": "timely-feedback"
+        },
+        {
+          "id": "work-that-needs-a-group",
+          "situation": "Work that needs a group",
+          "under": "Keeps the work to themselves, or leaves people nearby but unsynchronized.",
+          "justRight": "Pulls the people who are needed, names the shared direction, and keeps them moving together.",
+          "over": "Invites the whole org so nobody feels left out, and the work has no owner.",
+          "words": "generated"
+        },
+        {
+          "id": "two-plans-for-one-problem",
+          "situation": "Two plans for one problem",
+          "under": "Lets both run until the join-up fails.",
+          "justRight": "Gets them onto one direction after the useful disagreement has been heard.",
+          "over": "Kills the second plan before anyone can say what it knew.",
+          "words": "generated"
+        },
+        {
+          "id": "dissent-in-the-room",
+          "situation": "Dissent in the room",
+          "under": "Treats the disagreement as a problem to shut down.",
+          "justRight": "Uses the useful part, then lands a direction the team can run.",
+          "over": "Keeps the argument open after the call so nobody can start.",
+          "words": "generated"
+        },
+        {
+          "id": "a-note-while-the-work-can-change",
+          "situation": "A note while the work can still change",
+          "under": "Saves the critique for the review, when it is expensive.",
+          "justRight": "Gives the specific gap now, in the spirit of helping the person and the team.",
+          "over": "Critiques in real time so constantly that people stop showing unfinished work.",
+          "words": "generated"
+        },
+        {
+          "id": "feedback-that-lands-as-an-attack",
+          "situation": "Feedback that could land as an attack",
+          "under": "Softens it until the person cannot tell what to change.",
+          "justRight": "Is direct about the work, not the person, and stays until the next step is clear.",
+          "over": "Uses helping the team as cover for a public dressing-down.",
+          "words": "generated"
+        },
+        {
+          "id": "a-heavy-week",
+          "situation": "A heavy week",
+          "under": "Withdraws and lets the group guess the plan.",
+          "justRight": "Shows up, names the load, and keeps the shared direction visible.",
+          "over": "Needs a huddle before every small call, and the week is only meetings.",
+          "words": "generated"
+        },
+        {
+          "id": "a-teammate-going-another-way",
+          "situation": "A teammate going another way",
+          "under": "Ignores it until the two paths collide.",
+          "justRight": "Pulls them back to the shared direction, or changes the direction if they are right.",
+          "over": "Polices small differences of method that do not change the outcome.",
+          "words": "generated"
+        },
+        {
+          "id": "a-team-that-is-only-jobs",
+          "situation": "A team that is only a set of jobs",
+          "under": "Staffs the seats and hopes a team appears.",
+          "justRight": "Makes the work require more than one person, and judges the result as a group.",
+          "over": "Blends every role so thoroughly that nobody is accountable for a piece.",
           "words": "generated"
         }
       ]

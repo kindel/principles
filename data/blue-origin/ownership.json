@@ -1,0 +1,92 @@
+{
+  "id": 9007,
+  "slug": "ownership",
+  "company": "blue-origin",
+  "name": "Ownership",
+  "sort": 7,
+  "definition": "Leaders are owners. They think long-term and don't sacrifice long-term value for short-term results. They act on behalf of the entire company, beyond just their own team, and never compromise safety. They never say, \"that's not my job.\"",
+  "terms": [
+    {
+      "id": "ownership",
+      "label": "ownership",
+      "kind": "alias"
+    },
+    {
+      "id": "owners",
+      "label": "owners",
+      "kind": "alias"
+    },
+    {
+      "id": "not-my-job",
+      "label": "not my job",
+      "kind": "alias"
+    },
+    {
+      "id": "long-term",
+      "label": "long-term",
+      "kind": "alias"
+    },
+    {
+      "id": "safety",
+      "label": "safety",
+      "kind": "alias"
+    },
+    {
+      "id": "acts-like-an-owner",
+      "label": "acts like an owner",
+      "kind": "equivalent"
+    },
+    {
+      "id": "never-compromise-safety",
+      "label": "never compromise safety",
+      "kind": "facet",
+      "rows": [
+        "safety-is-not-negotiable"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "not-my-job",
+      "situation": "When the work sits outside your job description",
+      "under": "Says it is not their job and walks past it.",
+      "justRight": "Picks it up, or stays until a real owner has it. Never leaves it sitting.",
+      "over": "Takes over work that already has an owner so they can be the hero."
+    },
+    {
+      "id": "beyond-your-team",
+      "situation": "When the right call hurts your team and helps the company",
+      "under": "Protects the local scoreboard.",
+      "justRight": "Makes the call for the whole company and explains the cost to your team.",
+      "over": "Gives away your team's commitments so often that they cannot deliver what they own."
+    },
+    {
+      "id": "long-term-value",
+      "situation": "When a short-term result would cost next year",
+      "under": "Takes the short-term win and leaves the bill for later.",
+      "justRight": "Protects the long-term value, including when it makes this month look worse.",
+      "over": "Invokes the long term to avoid a result that is actually due now."
+    },
+    {
+      "id": "safety-is-not-negotiable",
+      "situation": "When a shortcut would touch safety",
+      "under": "Treats safety as someone else's checklist.",
+      "justRight": "Will not trade safety for schedule, cost, or convenience. Escalates until the risk is real and owned.",
+      "over": "Stops all progress in the name of safety without naming the actual risk."
+    },
+    {
+      "id": "unowned-gap",
+      "situation": "When a problem has no owner",
+      "under": "Assumes someone else will notice.",
+      "justRight": "Takes it far enough that it has an owner and a next step.",
+      "over": "Collects unowned work until nothing they already owned can finish."
+    },
+    {
+      "id": "staying-until-it-is-fixed",
+      "situation": "When you raised a problem outside your area",
+      "under": "Flags it once and lets go.",
+      "justRight": "Stays until a capable owner is on it and the fix is in motion.",
+      "over": "Hovers over the other team after they have taken it, and becomes the bottleneck."
+    }
+  ]
+}

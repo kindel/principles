@@ -1,0 +1,88 @@
+{
+  "id": 9004,
+  "slug": "embrace-team-blue",
+  "company": "blue-origin",
+  "name": "Embrace Team Blue",
+  "sort": 4,
+  "definition": "Going to space requires a team, and leaders know this. Leaders derive energy from pulling people together and moving in the same direction while leaving room for healthy tension and dissent. Leaders develop their teams by giving timely, critical feedback in the spirit of helping others and strengthening Blue.",
+  "terms": [
+    {
+      "id": "embrace-team-blue",
+      "label": "embrace team blue",
+      "kind": "alias"
+    },
+    {
+      "id": "team-blue",
+      "label": "team blue",
+      "kind": "alias"
+    },
+    {
+      "id": "one-team",
+      "label": "one team",
+      "kind": "alias"
+    },
+    {
+      "id": "healthy-tension",
+      "label": "healthy tension",
+      "kind": "alias"
+    },
+    {
+      "id": "pull-people-together",
+      "label": "pull people together",
+      "kind": "equivalent"
+    },
+    {
+      "id": "critical-feedback",
+      "label": "critical feedback",
+      "kind": "facet",
+      "rows": [
+        "timely-feedback",
+        "feedback-that-helps"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "pulling-people-together",
+      "situation": "When the work needs more than one person",
+      "under": "Goes alone, or leaves people adjacent but uncoordinated.",
+      "justRight": "Pulls the right people in, names the shared direction, and keeps them moving together.",
+      "over": "Invites everyone so nobody feels left out, and the work has no owner."
+    },
+    {
+      "id": "same-direction",
+      "situation": "When two groups are solving the same problem differently",
+      "under": "Lets them diverge until the join-up fails.",
+      "justRight": "Gets them on one direction without pretending the tension was never useful.",
+      "over": "Forces sameness so early that the better approach never gets heard."
+    },
+    {
+      "id": "healthy-tension",
+      "situation": "When someone on the team disagrees",
+      "under": "Shuts it down to keep the peace, or treats dissent as disloyalty.",
+      "justRight": "Leaves room for the disagreement, uses the useful part, and still lands a direction people can run.",
+      "over": "Keeps the tension open after the decision so the team cannot move."
+    },
+    {
+      "id": "timely-feedback",
+      "situation": "When someone on the team is off the mark",
+      "under": "Waits for the review cycle. The miss gets more expensive.",
+      "justRight": "Gives the note while the work can still change, specifically, and in the spirit of helping them.",
+      "over": "Critiques in the moment so often that people stop taking risks."
+    },
+    {
+      "id": "feedback-that-helps",
+      "situation": "When the feedback could land as an attack",
+      "under": "Softens it until the person cannot tell what to change.",
+      "justRight": "Is direct about the work, not the person, and stays until they know the next step.",
+      "over": "Uses \"helping the team\" as cover for a public dressing-down."
+    },
+    {
+      "id": "energy-from-the-group",
+      "situation": "When the week is heavy",
+      "under": "Withdraws. The group has to guess the plan.",
+      "justRight": "Gets energy from pulling people together. Shows up, names the load, and keeps the direction visible.",
+      "over": "Needs the group for energy and will not make a call until everyone has cheered it."
+    }
+  ]
+}

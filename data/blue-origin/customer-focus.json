@@ -1,0 +1,82 @@
+{
+  "id": 9002,
+  "slug": "customer-focus",
+  "company": "blue-origin",
+  "name": "Customer Focus",
+  "sort": 2,
+  "definition": "Leaders start with their customers and work backward. They work vigorously to earn and keep customer trust.",
+  "terms": [
+    {
+      "id": "customer-focus",
+      "label": "customer focus",
+      "kind": "alias"
+    },
+    {
+      "id": "customers",
+      "label": "customers",
+      "kind": "alias"
+    },
+    {
+      "id": "customer",
+      "label": "customer",
+      "kind": "alias"
+    },
+    {
+      "id": "work-backward",
+      "label": "work backward",
+      "kind": "alias"
+    },
+    {
+      "id": "customer-trust",
+      "label": "customer trust",
+      "kind": "alias"
+    },
+    {
+      "id": "customer-obsession",
+      "label": "customer obsession",
+      "kind": "equivalent"
+    },
+    {
+      "id": "working-backwards-from-the-customer",
+      "label": "working backwards from the customer",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "starting-with-the-customer",
+      "situation": "When a new piece of work is being scoped",
+      "under": "Starts with what is convenient to build, and hopes the customer will adapt.",
+      "justRight": "Starts with the customer need and works backward to the smallest thing that would serve it.",
+      "over": "Treats every customer request as a mandate and never ranks them."
+    },
+    {
+      "id": "earning-trust",
+      "situation": "When the customer has a reason to doubt you",
+      "under": "Hides the miss or delays the news until they ask.",
+      "justRight": "Tells them what happened, what you will do, and when. Then does that.",
+      "over": "Over-promises to restore the feeling of trust, and breaks it again."
+    },
+    {
+      "id": "keeping-trust",
+      "situation": "When the product or the process has a defect the customer will feel",
+      "under": "Ships it and waits for the ticket.",
+      "justRight": "Fixes it before it reaches them when you can, and tells them when you cannot.",
+      "over": "Stops all other work for a cosmetic issue one customer mentioned once."
+    },
+    {
+      "id": "internal-convenience",
+      "situation": "When the internal process and the customer need conflict",
+      "under": "Protects the process. The customer waits.",
+      "justRight": "Changes the process, or names the real constraint, so the customer is not paying for internal convenience.",
+      "over": "Breaks a sound process for one loud request and creates a worse experience for everyone else."
+    },
+    {
+      "id": "feedback-before-the-plan-freezes",
+      "situation": "When you still have time to change the plan",
+      "under": "Asks the customer after the design is frozen.",
+      "justRight": "Gets a real signal from the people who will use it, then decides.",
+      "over": "Rewrites the plan with every comment and never ships."
+    }
+  ]
+}

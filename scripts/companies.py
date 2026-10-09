@@ -86,4 +86,14 @@ COMPANY_META = collections.OrderedDict([
         # 2020 is a later set and is not this one.
         "source": "https://www.toyota-global.com/pages/contents/investors/ir_library/annual/pdf/2018/ar18_3_en.pdf",
     }),
+    ("blue-origin", {
+        "block": 9000,
+        "name": "Blue Origin",
+        "set": "Leadership Principles",
+        "source": "https://www.blueorigin.com/careers/work-culture",
+        "preamble": (
+            "Blue Origin's 14 Leadership Principles exemplify the company's "
+            "culture and unyielding dedication to mission success."
+        ),
+    }),
 ])

@@ -523,6 +523,90 @@
       "decision": "map",
       "facets": ["intentional-about-culture", "team-for-the-outcome"],
       "reason": "The room, the credit, and the hard meeting stay on intentional-about-culture. team-for-the-outcome is the team a leader builds: not a copy of the manager, and not a target for how the team looks. best-person-for-the-role is the interview decision, so it stays on the hiring principles. hire-and-develop-the-best stays off."
+    },
+    {
+      "id": 9001,
+      "decision": "map",
+      "facets": ["care-about-the-mission"],
+      "reason": "Mission-driven, mission first, and a direction that inspires results. Same care-about-the-mission behavior as Arm Passion for the mission. The think-big table is a different slice."
+    },
+    {
+      "id": 9002,
+      "decision": "map",
+      "facets": ["customer-obsession"],
+      "reason": "Start with customers and work backward. Earn and keep customer trust. Same behavior as Amazon Customer Obsession."
+    },
+    {
+      "id": 9003,
+      "decision": "map",
+      "facets": ["deliver-results"],
+      "reason": "Key inputs, customer commitments, quality on time, grit after setbacks. Same finish-the-work behavior as Amazon Deliver Results."
+    },
+    {
+      "id": 9004,
+      "decision": "map",
+      "facets": ["pull-people-together"],
+      "reason": "Pull people together, same direction, healthy tension, and timely critical feedback. The hiring-bar table and the development table each drop part of that. pull-people-together is the table."
+    },
+    {
+      "id": 9005,
+      "decision": "map",
+      "facets": ["frugality"],
+      "reason": "Frugal, more with less, constraints breed invention. Same do-more-with-less behavior as Amazon Frugality."
+    },
+    {
+      "id": 9006,
+      "decision": "map",
+      "facets": ["bias-for-action"],
+      "reason": "Speed, reversible decisions, calculated risk-taking. Same behavior as Amazon Bias for Action."
+    },
+    {
+      "id": 9007,
+      "decision": "map",
+      "facets": ["acts-like-an-owner"],
+      "reason": "Owners, long-term value, whole company, never not-my-job. Same owner behavior as Amazon Ownership. Safety is a constraint on that behavior, not a different table."
+    },
+    {
+      "id": 9008,
+      "decision": "map",
+      "facets": ["prevent-the-next-one"],
+      "reason": "Root cause, no defects down the line, stay fixed, mechanisms instead of good intentions. Same pair as Coupang Think Systematically. Dive-deep is attention to detail without the mechanism."
+    },
+    {
+      "id": 9009,
+      "decision": "map",
+      "facets": ["earn-trust"],
+      "reason": "Listen, examine convictions with humility, earn trust through openness. Same trust behavior as Amazon Earn Trust. Generated rows already score listening, credit, and bringing hard news. None were dropped."
+    },
+    {
+      "id": 9010,
+      "decision": "map",
+      "facets": ["best-person-for-the-role", "hire-and-develop-the-best", "team-for-the-outcome"],
+      "reason": "Same hiring and development bar as Amazon Hire and Develop the Best. best-person-for-the-role is the hire and the promotion. hire-and-develop-the-best is coaching, mechanisms, and moving talent. team-for-the-outcome is the mix of skills the work needs."
+    },
+    {
+      "id": 9011,
+      "decision": "map",
+      "facets": ["highest-standards"],
+      "reason": "Relentlessly high standards, raising the bar, high-quality products and processes. Same raise-the-bar behavior as Amazon Insist on the Highest Standards. Defects-down-the-line lives on Operational Excellence, so better-every-day stays off."
+    },
+    {
+      "id": 9012,
+      "decision": "map",
+      "facets": ["invent-and-simplify"],
+      "reason": "Novel invention, not invented here, always simplify, push back on requirements. Same invent-and-simplify behavior as Amazon Invent and Simplify. Medium-performing variants are a path, not a different table."
+    },
+    {
+      "id": 9013,
+      "decision": "map",
+      "facets": ["stay-humble"],
+      "reason": "Humble in execution, ask for help, slow to take credit, point out the value of others. Same humility behavior as Delivery Hero Stay Humble."
+    },
+    {
+      "id": 9014,
+      "decision": "map",
+      "facets": ["have-backbone-disagree-and-commit"],
+      "reason": "Challenge respectfully, no compromise for social cohesion, commit wholly. Same challenge-then-commit behavior as Amazon Have Backbone; Disagree and Commit."
     }
   ]
 }

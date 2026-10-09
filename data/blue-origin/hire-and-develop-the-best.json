@@ -1,0 +1,84 @@
+{
+  "id": 9010,
+  "slug": "hire-and-develop-the-best",
+  "company": "blue-origin",
+  "name": "Hire and Develop the Best",
+  "sort": 10,
+  "definition": "Leaders raise the performance bar with every hire and promotion. They value diversity, recognize exceptional talent, and willingly move them throughout the organization. Leaders develop leaders, invent mechanisms for people development, and take seriously their role in coaching others.",
+  "terms": [
+    {
+      "id": "hire-and-develop-the-best",
+      "label": "hire and develop the best",
+      "kind": "alias"
+    },
+    {
+      "id": "raise-the-bar",
+      "label": "raise the bar",
+      "kind": "alias"
+    },
+    {
+      "id": "coaching",
+      "label": "coaching",
+      "kind": "alias"
+    },
+    {
+      "id": "exceptional-talent",
+      "label": "exceptional talent",
+      "kind": "alias"
+    },
+    {
+      "id": "people-development",
+      "label": "people development",
+      "kind": "alias"
+    },
+    {
+      "id": "best-person-for-the-role",
+      "label": "best person for the role",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "raising-the-bar",
+      "situation": "When you are filling a seat",
+      "under": "Hires someone who will not raise the bar, because the seat has been open too long.",
+      "justRight": "Hires only if this person raises the bar for the team. Keeps looking when they would not.",
+      "over": "Waits for a perfect combination that does not exist while the team covers the gap."
+    },
+    {
+      "id": "promotion-bar",
+      "situation": "When it is time to promote",
+      "under": "Promotes for tenure, loyalty, or effort.",
+      "justRight": "Promotes only when the person is already doing the next job, so the bar rises.",
+      "over": "Sets a bar nobody can clear, and the people who would have grown leave."
+    },
+    {
+      "id": "recognizing-talent",
+      "situation": "When someone is clearly better than the work they have",
+      "under": "Leaves them in place because they are useful there.",
+      "justRight": "Moves them to where they will raise the bar, including off your team.",
+      "over": "Moves people so often that no team keeps a senior core to learn from."
+    },
+    {
+      "id": "coaching-seriously",
+      "situation": "When you are responsible for someone's growth",
+      "under": "Has no shared goals and no follow-up.",
+      "justRight": "Sets a real development goal, checks in on a cadence, and gives specific coaching.",
+      "over": "Spoons out every step so the person never has to think."
+    },
+    {
+      "id": "mechanisms-for-development",
+      "situation": "When development depends on you remembering",
+      "under": "Coaches when you have a spare hour. Some people never get it.",
+      "justRight": "Puts a mechanism in place: a cadence, a rotation, a review that actually happens.",
+      "over": "Builds a development program so heavy that doing the job becomes the side work."
+    },
+    {
+      "id": "team-for-the-work",
+      "situation": "When the team keeps missing the same kind of problem",
+      "under": "Hires another person like the ones you already have.",
+      "justRight": "Names the skill or the judgment the outcome needs, then hires the best person who can close that gap.",
+      "over": "Adds people to change how the team looks on paper, and the missing skill is still missing."
+    }
+  ]
+}
