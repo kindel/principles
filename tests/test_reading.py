@@ -9,6 +9,8 @@ principles, a shareholder letter, a book, or an essay or talk by someone
 who shaped the practice. See SCHEMA.md.
 Amazon is the classic 14. Any Company reuses those lists, and authors
 Intentional About Culture because that counterpart is not in this corpus.
+The generic catalog and Intentional About Culture also append culture
+reading that is not on the Amazon copies.
 """
 
 import json
@@ -113,6 +115,34 @@ class FurtherReadingTest(unittest.TestCase):
                 seen[url] += 1
         for url, (want, n) in expected.items():
             self.assertEqual(seen[url], n, want)
+
+    def test_generic_culture_cites(self):
+        expected = {
+            "https://hbr.org/2002/07/make-your-values-mean-something":
+                "Make Your Values Mean Something, Patrick M. Lencioni",
+            "https://www.jimcollins.com/article_topics/articles/aligning-action.html":
+                "Aligning Action and Values, Jim Collins",
+            "https://www.jobs.netflix.com/culture":
+                "Netflix Culture Memo",
+            "https://review.firstround.com/run-this-diagnostic-to-thoughtfully-build-and-evaluate-your-startups-culture/":
+                "Run This Diagnostic to Thoughtfully Build (and Evaluate) Your Startup's Culture",
+            "https://sloanreview.mit.edu/article/10-things-your-corporate-culture-needs-to-get-right/":
+                "10 Things Your Corporate Culture Needs to Get Right, Donald Sull and Charles Sull",
+        }
+        seen = {url: 0 for url in expected}
+        for name, items in lists("generic"):
+            for item in items or []:
+                url = item["url"]
+                if url not in expected:
+                    continue
+                with self.subTest(file=name, url=url):
+                    self.assertEqual(item["title"], expected[url])
+                    self.assertNotIn("\u2014", item["note"])
+                    self.assertNotIn("DEI", item["note"])
+                    self.assertNotIn("DEI", item["title"])
+                seen[url] += 1
+        for url, title in expected.items():
+            self.assertEqual(seen[url], 2, title)
 
     def test_no_duplicate_urls_in_a_list(self):
         for name, items in lists():
