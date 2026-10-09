@@ -774,6 +774,22 @@ def _collect_strings(obj, out):
         out.append(obj)
 
 
+def _with_copied_blog(src, mapped_dst):
+    """Source may append Further reading after the copied list."""
+    if not isinstance(src, dict) or not isinstance(mapped_dst, dict):
+        return src
+    src_blog = src.get("blog")
+    dst_blog = mapped_dst.get("blog")
+    if (isinstance(src_blog, list) and isinstance(dst_blog, list)
+            and dst_blog
+            and len(src_blog) >= len(dst_blog)
+            and src_blog[:len(dst_blog)] == dst_blog):
+        out = dict(src)
+        out["blog"] = src_blog[:len(dst_blog)]
+        return out
+    return src
+
+
 def _first_diff(a, b, path):
     if type(a) != type(b):
         return "%s: type" % path
@@ -817,7 +833,8 @@ def validate_derivation_maps(by_company, principle_to_facets, errs, root=None):
     data/maps/<source>-<target>.json names both companies. Lookups and
     teaching paths use those ids. Sentence changes are an allowlist on the
     map. Everything else in the reused teaching must match the target,
-    aside from the source principle's id and slug.
+    aside from the source principle's id and slug. The source may append
+    Further reading after the copied list.
     """
     data = root or DATA
     maps_dir = os.path.join(data, "maps")
@@ -992,7 +1009,7 @@ def _compare_reused_teaching(data, source_id, target_id, comparable, renames, ed
         _collect_strings(src, source_blobs)
         got = _map_strings(dst, apply_text)
         got["id"] = rec["id"]
-        diff = _first_diff(got, src, rec["slug"])
+        diff = _first_diff(got, _with_copied_blog(src, got), rec["slug"])
         if diff:
             errs.append("%s: reused teaching differs from %s at %s"
                         % (pw, target_rec["slug"], diff))
@@ -1009,7 +1026,7 @@ def _compare_reused_teaching(data, source_id, target_id, comparable, renames, ed
         _collect_strings(dst_index, target_blobs)
         _collect_strings(src_index, source_blobs)
         got = _map_strings(dst_index, apply_text)
-        diff = _first_diff(got, src_index, "index")
+        diff = _first_diff(got, _with_copied_blog(src_index, got), "index")
         if diff:
             errs.append("%s: set teaching index differs from the target at %s" % (where, diff))
     elif os.path.isfile(dst_index_path) and not os.path.isfile(src_index_path):
