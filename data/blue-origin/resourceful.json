@@ -64,7 +64,7 @@
       "situation": "When the budget will not cover the first design",
       "under": "Drops the goal to match the budget.",
       "justRight": "Redesigns so the goal still holds at the cost you can actually pay.",
-      "over": "Hides extra spend in another budget so the constraint never has to teach anything."
+      "over": "Spends the week inventing around a small gap the budget could have closed, and the simpler path never ships."
     },
     {
       "id": "time-as-a-resource",

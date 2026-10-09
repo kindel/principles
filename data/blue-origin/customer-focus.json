@@ -39,7 +39,12 @@
     {
       "id": "working-backwards-from-the-customer",
       "label": "working backwards from the customer",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "starting-with-the-customer",
+        "internal-convenience",
+        "feedback-before-the-plan-freezes"
+      ]
     }
   ],
   "rows": [

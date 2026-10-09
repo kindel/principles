@@ -34,7 +34,12 @@
     {
       "id": "calculated-risk-taking",
       "label": "calculated risk taking",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "reversible-decisions",
+        "irreversible-decisions",
+        "calculated-risk"
+      ]
     }
   ],
   "rows": [

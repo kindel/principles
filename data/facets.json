@@ -943,8 +943,7 @@
       "principles": [
         1011,
         6008,
-        8002,
-        9009
+        8002
       ],
       "rows": [
         {
@@ -990,18 +989,6 @@
         {
           "principle": 6008,
           "id": "dawns-own-example"
-        },
-        {
-          "principle": 9009,
-          "id": "genuinely-listen"
-        },
-        {
-          "principle": 9009,
-          "id": "examine-convictions"
-        },
-        {
-          "principle": 9009,
-          "id": "trust-through-openness"
         },
         {
           "id": "a-date-you-gave-slips",
@@ -4324,6 +4311,99 @@
           "under": "Staffs the seats and hopes a team appears.",
           "justRight": "Makes the work require more than one person, and judges the result as a group.",
           "over": "Blends every role so thoroughly that nobody is accountable for a piece.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "listens-with-an-open-mind",
+      "label": "listens with an open mind",
+      "principles": [
+        9009
+      ],
+      "rows": [
+        {
+          "principle": 9009,
+          "id": "genuinely-listen"
+        },
+        {
+          "principle": 9009,
+          "id": "examine-convictions"
+        },
+        {
+          "principle": 9009,
+          "id": "different-viewpoints"
+        },
+        {
+          "principle": 9009,
+          "id": "open-minded-without-being-vague"
+        },
+        {
+          "principle": 9009,
+          "id": "trust-through-openness"
+        },
+        {
+          "id": "someone-disagrees-with-your-plan",
+          "situation": "Someone disagrees with your plan",
+          "under": "Waits them out and restates the plan. They can tell they were not heard.",
+          "justRight": "Listens all the way through, and changes the plan when they are right.",
+          "over": "Agrees so the meeting stays pleasant, and the decision is mush.",
+          "words": "generated"
+        },
+        {
+          "id": "a-fact-challenges-a-strong-view",
+          "situation": "A fact challenges a strong view",
+          "under": "Defends the view because it is theirs. The fact sits unused.",
+          "justRight": "Examines the conviction. Keeps it only if it still holds after the fact.",
+          "over": "Drops a sound view at the first challenge so they look open-minded.",
+          "words": "generated"
+        },
+        {
+          "id": "a-room-that-already-agrees",
+          "situation": "A room that already agrees",
+          "under": "Treats the agreement as proof. Nobody goes looking for a missing view.",
+          "justRight": "Asks for a viewpoint the room does not already have, and uses it if it changes the work.",
+          "over": "Collects extra views as a ritual and never lets them change the decision.",
+          "words": "generated"
+        },
+        {
+          "id": "an-idea-from-outside-the-usual-group",
+          "situation": "An idea from outside the usual group",
+          "under": "Dismisses it because of who brought it. The idea is never tested.",
+          "justRight": "Hears the idea on its merits. Keeps the part that is new and useful.",
+          "over": "Adopts it because it is different, without checking whether it is better.",
+          "words": "generated"
+        },
+        {
+          "id": "you-still-have-to-decide",
+          "situation": "You still have to decide",
+          "under": "Closes the question before the other views have been heard.",
+          "justRight": "Stays open long enough to learn, then takes a position people can follow.",
+          "over": "Stays open so long that nobody can tell what they believe.",
+          "words": "generated"
+        },
+        {
+          "id": "news-that-contradicts-you",
+          "situation": "News that contradicts you",
+          "under": "Pushes back on the messenger. The next hard fact arrives late.",
+          "justRight": "Makes it safe to bring the fact, checks it, and changes course if it holds.",
+          "over": "Treats the first contrary account as settled, and an unchecked claim becomes the plan.",
+          "words": "generated"
+        },
+        {
+          "id": "a-conviction-held-for-years",
+          "situation": "A conviction held for years",
+          "under": "Will not reopen it. Newer people stop bringing evidence.",
+          "justRight": "Reopens it when the evidence is real, with enough humility to be wrong in public.",
+          "over": "Reopens every old call so often that the team cannot rely on a decision.",
+          "words": "generated"
+        },
+        {
+          "id": "one-background-in-the-discussion",
+          "situation": "One background in the discussion",
+          "under": "Asks only the people who already see the problem the same way.",
+          "justRight": "Brings in a different viewpoint, because that friction is where a novel idea shows up.",
+          "over": "Invites every viewpoint and will not rank them, so the discussion never becomes a decision.",
           "words": "generated"
         }
       ]

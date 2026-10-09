@@ -39,7 +39,13 @@
     {
       "id": "rise-to-the-occasion",
       "label": "rise to the occasion",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "setbacks",
+        "first-barrier",
+        "how-you-finish",
+        "never-settle"
+      ]
     }
   ],
   "rows": [
