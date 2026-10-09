@@ -1,0 +1,62 @@
+{
+  "id": 10014,
+  "slug": "informed-captain",
+  "company": "netflix",
+  "name": "Informed Captain",
+  "sort": 14,
+  "definition": "For every significant decision, we identify an informed captain who's responsible for making a judgment call on the right way ahead. Then different teams, each led by their own informed captain, implement the decision. This highly aligned and loosely coupled approach gives teams the freedom to move quickly and operate independently, while ensuring responsibility for the outcome.",
+  "terms": [
+    {
+      "id": "informed-captain",
+      "label": "informed captain",
+      "kind": "alias"
+    },
+    {
+      "id": "informed-captains",
+      "label": "informed captains",
+      "kind": "alias"
+    },
+    {
+      "id": "highly-aligned-and-loosely-coupled",
+      "label": "highly aligned and loosely coupled",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "one-captain-for-the-call",
+      "situation": "A significant decision with several stakeholders",
+      "under": "Lets a committee blur who is deciding, or lets the loudest person decide by default.",
+      "justRight": "Names one informed captain for the call, and that person makes it.",
+      "over": "Names a captain who is not informed, so the title is a shortcut around the people who know."
+    },
+    {
+      "id": "other-captains-implement",
+      "situation": "Several teams have to carry out a decision they did not all make",
+      "under": "Lets each team reopen the decision as they implement it.",
+      "justRight": "Each team has its own captain for implementation, with freedom on how, and no freedom to ignore the call.",
+      "over": "Dictates the how for every team and calls that alignment."
+    },
+    {
+      "id": "aligned-and-independent",
+      "situation": "Teams that need to move without waiting on each other",
+      "under": "Either couples every step to a joint meeting, or lets teams drift until the pieces do not fit.",
+      "justRight": "Keeps the shared aim clear, and lets each team operate once that aim is set.",
+      "over": "Calls silence alignment, and the teams discover the conflict in front of the audience."
+    },
+    {
+      "id": "responsibility-for-the-outcome",
+      "situation": "The outcome of a captain's call",
+      "under": "The captain spreads the miss across everyone who was consulted.",
+      "justRight": "The captain owns the outcome, including when they took advice they later regret.",
+      "over": "The captain owns it so privately that the implementing teams never hear what was decided."
+    },
+    {
+      "id": "committee-as-safety",
+      "situation": "A decision people are afraid to hang on one person",
+      "under": "Builds a committee so nobody is blamed.",
+      "justRight": "Uses a captain anyway, and makes the input to that captain real.",
+      "over": "Makes one person the captain and then refuses them the information they need."
+    }
+  ]
+}

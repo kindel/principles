@@ -206,8 +206,9 @@ generated set marked as generated.
   addresses a principle by `id` alone and cannot land on the wrong record.
 - Each company owns a block of a thousand ids: Amazon 1000, Arm 2000, Coupang
   3000, Delivery Hero 4000, GitLab 5000, Dawn 6000, Toyota 7000, Generic 8000,
-  Blue Origin 9000. The published source is
-  https://www.blueorigin.com/careers/work-culture.
+  Blue Origin 9000, Netflix 10000. The published sources are
+  https://www.blueorigin.com/careers/work-culture and
+  https://www.jobs.netflix.com/culture.
   `block` in
   `scripts/companies.py` is the registry, and claiming the next free block is
   the whole of adding a company. A new principle takes the next free number in
@@ -222,7 +223,7 @@ generated set marked as generated.
   signal that they may be describing the same behavior, so `validate.py` prints
   the list rather than hiding it.
 - `company` is kebab-case and matches the parent directory. Current companies
-  are `generic`, `amazon`, `arm`, `coupang`, `delivery-hero`, `gitlab`, `dawn`, `toyota`, and `blue-origin`.
+  are `generic`, `amazon`, `arm`, `coupang`, `delivery-hero`, `gitlab`, `dawn`, `toyota`, `blue-origin`, and `netflix`.
 - `group` is optional, and a record carries it when the company publishes its
   set under lenses. Arm has two, `one-arm` and `accelerate-impact`, five
   principles each. Toyota has two, `continuous-improvement` and
@@ -241,6 +242,8 @@ generated set marked as generated.
   last (one through 15), following the document's numbering. Toyota is Challenge
   first and Teamwork last (one through five). Blue Origin is Passion for our
   Mission first and Have Backbone; Disagree and Commit last (one through 14).
+  Netflix, from its culture memo, is The Dream Team first and Great and Always
+  Better last (one through 20).
   Generic, shown as Universal Leadership Principles, is Customer Obsession first
   and Intentional About Culture last (one through 15), the order in
   kindel/principles issue 71.

@@ -1097,6 +1097,215 @@
           ]
         }
       ]
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "set": "Culture Memo",
+      "source": "https://www.jobs.netflix.com/culture",
+      "preamble": "At Netflix, we aspire to entertain the world, thrilling audiences everywhere.",
+      "principles": [
+        {
+          "id": 10001,
+          "slug": "the-dream-team",
+          "name": "The Dream Team",
+          "sort": 1,
+          "file": "data/netflix/the-dream-team.json",
+          "facets": [
+            "dream-team"
+          ]
+        },
+        {
+          "id": 10002,
+          "slug": "selflessness",
+          "name": "Selflessness",
+          "sort": 2,
+          "file": "data/netflix/selflessness.json",
+          "facets": [
+            "selflessness"
+          ]
+        },
+        {
+          "id": 10003,
+          "slug": "judgment",
+          "name": "Judgment",
+          "sort": 3,
+          "file": "data/netflix/judgment.json",
+          "facets": [
+            "are-right-a-lot"
+          ]
+        },
+        {
+          "id": 10004,
+          "slug": "candor",
+          "name": "Candor",
+          "sort": 4,
+          "file": "data/netflix/candor.json",
+          "facets": [
+            "earn-trust"
+          ]
+        },
+        {
+          "id": 10005,
+          "slug": "creativity",
+          "name": "Creativity",
+          "sort": 5,
+          "file": "data/netflix/creativity.json",
+          "facets": [
+            "creativity"
+          ]
+        },
+        {
+          "id": 10006,
+          "slug": "courage",
+          "name": "Courage",
+          "sort": 6,
+          "file": "data/netflix/courage.json",
+          "facets": [
+            "courage"
+          ]
+        },
+        {
+          "id": 10007,
+          "slug": "inclusion",
+          "name": "Inclusion",
+          "sort": 7,
+          "file": "data/netflix/inclusion.json",
+          "facets": [
+            "belonging"
+          ]
+        },
+        {
+          "id": 10008,
+          "slug": "curiosity",
+          "name": "Curiosity",
+          "sort": 8,
+          "file": "data/netflix/curiosity.json",
+          "facets": [
+            "learn-and-be-curious"
+          ]
+        },
+        {
+          "id": 10009,
+          "slug": "resilience",
+          "name": "Resilience",
+          "sort": 9,
+          "file": "data/netflix/resilience.json",
+          "facets": [
+            "resilience"
+          ]
+        },
+        {
+          "id": 10010,
+          "slug": "decency-and-respect",
+          "name": "Decency and Respect",
+          "sort": 10,
+          "file": "data/netflix/decency-and-respect.json",
+          "facets": [
+            "mutual-respect"
+          ]
+        },
+        {
+          "id": 10011,
+          "slug": "the-keeper-test",
+          "name": "The Keeper Test",
+          "sort": 11,
+          "file": "data/netflix/the-keeper-test.json",
+          "facets": [
+            "keeper-test"
+          ]
+        },
+        {
+          "id": 10012,
+          "slug": "people-over-process",
+          "name": "People Over Process",
+          "sort": 12,
+          "file": "data/netflix/people-over-process.json",
+          "facets": [
+            "people-over-process"
+          ]
+        },
+        {
+          "id": 10013,
+          "slug": "context-not-control",
+          "name": "Context Not Control",
+          "sort": 13,
+          "file": "data/netflix/context-not-control.json",
+          "facets": [
+            "context-not-control"
+          ]
+        },
+        {
+          "id": 10014,
+          "slug": "informed-captain",
+          "name": "Informed Captain",
+          "sort": 14,
+          "file": "data/netflix/informed-captain.json",
+          "facets": [
+            "informed-captain"
+          ]
+        },
+        {
+          "id": 10015,
+          "slug": "farming-for-dissent",
+          "name": "Farming for Dissent",
+          "sort": 15,
+          "file": "data/netflix/farming-for-dissent.json",
+          "facets": [
+            "farming-for-dissent"
+          ]
+        },
+        {
+          "id": 10016,
+          "slug": "disagree-then-commit",
+          "name": "Disagree Then Commit",
+          "sort": 16,
+          "file": "data/netflix/disagree-then-commit.json",
+          "facets": [
+            "have-backbone-disagree-and-commit"
+          ]
+        },
+        {
+          "id": 10017,
+          "slug": "almost-no-rules",
+          "name": "Almost No Rules",
+          "sort": 17,
+          "file": "data/netflix/almost-no-rules.json",
+          "facets": [
+            "almost-no-rules"
+          ]
+        },
+        {
+          "id": 10018,
+          "slug": "uncomfortably-exciting",
+          "name": "Uncomfortably Exciting",
+          "sort": 18,
+          "file": "data/netflix/uncomfortably-exciting.json",
+          "facets": [
+            "uncomfortably-exciting"
+          ]
+        },
+        {
+          "id": 10019,
+          "slug": "artistic-expression",
+          "name": "Artistic Expression",
+          "sort": 19,
+          "file": "data/netflix/artistic-expression.json",
+          "facets": [
+            "artistic-expression"
+          ]
+        },
+        {
+          "id": 10020,
+          "slug": "great-and-always-better",
+          "name": "Great and Always Better",
+          "sort": 20,
+          "file": "data/netflix/great-and-always-better.json",
+          "facets": [
+            "better-every-day"
+          ]
+        }
+      ]
     }
   ]
 }

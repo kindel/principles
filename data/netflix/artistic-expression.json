@@ -1,0 +1,62 @@
+{
+  "id": 10019,
+  "slug": "artistic-expression",
+  "company": "netflix",
+  "name": "Artistic Expression",
+  "sort": 19,
+  "definition": "While every show, film or game is different, we approach them with the same set of principles: we support the artistic expression of the creators we choose to work with; we program for a wide variety of audiences, cultures and tastes; and we provide ratings, content advisories and parental controls in multiple languages to help members choose what to watch or play. As employees, we support these principles, even if some stories run counter to our personal values. And we understand that, depending on our roles, we may need to work on TV shows, films or games we perceive to be harmful. If you'd find it hard to support the breadth of our slate, Netflix is probably not the best place for you.",
+  "terms": [
+    {
+      "id": "artistic-expression",
+      "label": "artistic expression",
+      "kind": "alias"
+    },
+    {
+      "id": "the-slate",
+      "label": "the slate",
+      "kind": "alias"
+    },
+    {
+      "id": "support-the-creators",
+      "label": "support the creators",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "a-story-against-your-values",
+      "situation": "A show, film, or game that cuts against what you personally believe",
+      "under": "Tries to block it, or quietly stalls the work.",
+      "justRight": "Supports the creator's expression and does your part of the work, including when you would not choose it yourself.",
+      "over": "Attacks colleagues who dislike it, and calls their discomfort a failure of loyalty."
+    },
+    {
+      "id": "work-you-perceive-as-harmful",
+      "situation": "A title you believe is harmful, and your role touches it",
+      "under": "Refuses the role and stays, or sabotages the title.",
+      "justRight": "Does the role you have, or decides this is the wrong place for you and says so directly.",
+      "over": "Demands that everyone else enjoy the title."
+    },
+    {
+      "id": "breadth-of-the-slate",
+      "situation": "A slate that includes tastes far from yours",
+      "under": "Tries to narrow it to what you consider acceptable.",
+      "justRight": "Programs for a wide variety of audiences, and judges a title by the audience it is for.",
+      "over": "Adds titles only to provoke, with no audience you can name."
+    },
+    {
+      "id": "helping-members-choose",
+      "situation": "A member deciding what to watch or play",
+      "under": "Hides the advisory, or uses the advisory as a reason to scold the member.",
+      "justRight": "Gives clear ratings, advisories, and parental controls, in the languages members use, and lets them choose.",
+      "over": "Dumps every warning on every title until the controls stop meaning anything."
+    },
+    {
+      "id": "the-place-for-you",
+      "situation": "You realize you cannot support the breadth of the slate",
+      "under": "Stays and fights the slate from the inside.",
+      "justRight": "Says this is the wrong place, and leaves the work in a state other people can carry.",
+      "over": "Makes a public case that the company should become the slate you want."
+    }
+  ]
+}

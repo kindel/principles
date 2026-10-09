@@ -1,0 +1,62 @@
+{
+  "id": 10007,
+  "slug": "inclusion",
+  "company": "netflix",
+  "name": "Inclusion",
+  "sort": 7,
+  "definition": "You recognize your biases and work to counteract them; you work to ensure everyone at Netflix can do their best work, whatever their culture, identity or background.",
+  "terms": [
+    {
+      "id": "inclusion",
+      "label": "inclusion",
+      "kind": "alias"
+    },
+    {
+      "id": "counteract-bias",
+      "label": "counteract bias",
+      "kind": "equivalent"
+    },
+    {
+      "id": "best-work-for-everyone",
+      "label": "best work for everyone",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "who-gets-the-hard-work",
+      "situation": "Handing out the stretch assignment",
+      "under": "Gives it to the person who already looks like the last person who had it.",
+      "justRight": "Notices the pattern, and gives the work to the person who is ready, including when they are not the familiar choice.",
+      "over": "Assigns the stretch to make a point about the pattern, and the person is not set up to succeed."
+    },
+    {
+      "id": "a-room-that-hears-one-kind-of-voice",
+      "situation": "A meeting where the same people always speak",
+      "under": "Lets the pattern stand and calls it merit.",
+      "justRight": "Asks the people who have not spoken, and weighs what they say by the work, not by how familiar it sounds.",
+      "over": "Polices airtime so tightly that the people with the facts cannot finish a thought."
+    },
+    {
+      "id": "a-habit-built-for-one-life",
+      "situation": "A team habit that only works for one kind of schedule or background",
+      "under": "Treats the habit as neutral and tells people to adapt.",
+      "justRight": "Changes the habit when it keeps someone from doing their best work, and keeps the part that the work actually needs.",
+      "over": "Drops every shared norm, including the ones that make the work coherent."
+    },
+    {
+      "id": "bias-in-your-own-read",
+      "situation": "Your first read on a person you do not know well",
+      "under": "Trusts the first read and builds the next decision on it.",
+      "justRight": "Names the bias you are likely to have, checks it against the work, and changes the read when the work disagrees.",
+      "over": "Refuses to form any judgment about performance, because every judgment might be bias."
+    },
+    {
+      "id": "best-work-is-the-test",
+      "situation": "A program, event, or slogan about belonging",
+      "under": "Counts the program as the result.",
+      "justRight": "Judges it by whether people can do their best work here, and stops the parts that are only a slogan.",
+      "over": "Treats any talk about the work itself as a distraction from the program."
+    }
+  ]
+}

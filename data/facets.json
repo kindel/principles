@@ -182,7 +182,8 @@
         1007,
         6009,
         7002,
-        8007
+        8007,
+        10020
       ],
       "rows": [
         {
@@ -212,6 +213,26 @@
         {
           "principle": 7002,
           "id": "the-standard"
+        },
+        {
+          "principle": 10020,
+          "id": "today-versus-tomorrow"
+        },
+        {
+          "principle": 10020,
+          "id": "self-awareness"
+        },
+        {
+          "principle": 10020,
+          "id": "discipline-to-get-there"
+        },
+        {
+          "principle": 10020,
+          "id": "resilience-after-the-gap"
+        },
+        {
+          "principle": 10020,
+          "id": "not-preserving-the-old-way"
         },
         {
           "id": "standing-meeting-that-drags",
@@ -948,7 +969,8 @@
       "principles": [
         1011,
         6008,
-        8002
+        8002,
+        10004
       ],
       "rows": [
         {
@@ -994,6 +1016,26 @@
         {
           "principle": 6008,
           "id": "dawns-own-example"
+        },
+        {
+          "principle": 10004,
+          "id": "feedback-you-did-not-ask-for"
+        },
+        {
+          "principle": 10004,
+          "id": "saying-the-hard-thing"
+        },
+        {
+          "principle": 10004,
+          "id": "admitting-the-miss"
+        },
+        {
+          "principle": 10004,
+          "id": "only-what-you-would-say-to-them"
+        },
+        {
+          "principle": 10004,
+          "id": "candor-across-level"
         },
         {
           "id": "a-date-you-gave-slips",
@@ -1069,7 +1111,8 @@
         3007,
         6011,
         8013,
-        9014
+        9014,
+        10016
       ],
       "rows": [
         {
@@ -1151,6 +1194,26 @@
         {
           "principle": 9014,
           "id": "commit-wholly"
+        },
+        {
+          "principle": 10016,
+          "id": "after-you-lost"
+        },
+        {
+          "principle": 10016,
+          "id": "committing-in-public"
+        },
+        {
+          "principle": 10016,
+          "id": "the-people-who-were-not-the-captain"
+        },
+        {
+          "principle": 10016,
+          "id": "when-commitment-is-due"
+        },
+        {
+          "principle": 10016,
+          "id": "helping-it-succeed"
         },
         {
           "id": "design-review-challenge",
@@ -1513,7 +1576,8 @@
       "principles": [
         1005,
         3012,
-        8005
+        8005,
+        10008
       ],
       "rows": [
         {
@@ -1559,6 +1623,26 @@
         {
           "principle": 3012,
           "id": "postmortem"
+        },
+        {
+          "principle": 10008,
+          "id": "a-gap-in-what-you-know"
+        },
+        {
+          "principle": 10008,
+          "id": "someone-elses-idea"
+        },
+        {
+          "principle": 10008,
+          "id": "humility-about-the-unknown"
+        },
+        {
+          "principle": 10008,
+          "id": "learning-from-a-miss"
+        },
+        {
+          "principle": 10008,
+          "id": "curiosity-with-a-deadline"
         },
         {
           "id": "unfamiliar-term-in-a-meeting",
@@ -2071,12 +2155,33 @@
       "label": "are right a lot",
       "principles": [
         1004,
-        8004
+        8004,
+        10003
       ],
       "rows": [
         {
           "principle": 1004,
           "id": "using-data"
+        },
+        {
+          "principle": 10003,
+          "id": "short-fix-or-long-fix"
+        },
+        {
+          "principle": 10003,
+          "id": "deciding-in-ambiguity"
+        },
+        {
+          "principle": 10003,
+          "id": "data-and-a-hunch"
+        },
+        {
+          "principle": 10003,
+          "id": "testing-a-call-you-like"
+        },
+        {
+          "principle": 10003,
+          "id": "whose-judgment"
         },
         {
           "id": "someone-junior-has-the-fact",
@@ -2189,12 +2294,33 @@
       "id": "mutual-respect",
       "label": "mutual respect",
       "principles": [
-        7004
+        7004,
+        10010
       ],
       "rows": [
         {
           "principle": 7004,
           "id": "before-judging"
+        },
+        {
+          "principle": 10010,
+          "id": "brilliant-and-unkind"
+        },
+        {
+          "principle": 10010,
+          "id": "respect-in-disagreement"
+        },
+        {
+          "principle": 10010,
+          "id": "respecting-a-difference"
+        },
+        {
+          "principle": 10010,
+          "id": "trusting-intent"
+        },
+        {
+          "principle": 10010,
+          "id": "decency-when-you-are-winning"
         },
         {
           "id": "before-you-judge-a-miss",
@@ -3513,12 +3639,33 @@
       "id": "belonging",
       "label": "belonging",
       "principles": [
-        5004
+        5004,
+        10007
       ],
       "rows": [
         {
           "principle": 5004,
           "id": "who-speaks"
+        },
+        {
+          "principle": 10007,
+          "id": "who-gets-the-hard-work"
+        },
+        {
+          "principle": 10007,
+          "id": "a-room-that-hears-one-kind-of-voice"
+        },
+        {
+          "principle": 10007,
+          "id": "a-habit-built-for-one-life"
+        },
+        {
+          "principle": 10007,
+          "id": "bias-in-your-own-read"
+        },
+        {
+          "principle": 10007,
+          "id": "best-work-is-the-test"
         },
         {
           "id": "who-gets-to-speak",
@@ -4503,6 +4650,1007 @@
           "under": "Mentions the risk once and goes back to the schedule.",
           "justRight": "Escalates until the risk has an owner and a next step, then returns to the work that is still safe to do.",
           "over": "Escalates every discomfort as a stop, and the people who own the real risks stop listening.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "dream-team",
+      "label": "dream team",
+      "principles": [
+        10001
+      ],
+      "rows": [
+        {
+          "principle": 10001,
+          "id": "right-person-in-the-role"
+        },
+        {
+          "principle": 10001,
+          "id": "replacing-someone-loved"
+        },
+        {
+          "principle": 10001,
+          "id": "better-together"
+        },
+        {
+          "principle": 10001,
+          "id": "average-and-pleasant"
+        },
+        {
+          "principle": 10001,
+          "id": "perks-instead-of-people"
+        },
+        {
+          "id": "the-open-seat",
+          "situation": "The open seat",
+          "under": "Fills it with someone available who will not raise the work.",
+          "justRight": "Waits for someone who is great at the work and makes colleagues better, and says what great means for this seat.",
+          "over": "Leaves the seat empty so long that the people carrying the load start to leave.",
+          "words": "generated"
+        },
+        {
+          "id": "pleasant-and-average",
+          "situation": "A pleasant team shipping average work",
+          "under": "Protects the mood and leaves the bar alone.",
+          "justRight": "Treats the average result as the problem, and keeps the team kind while the bar moves.",
+          "over": "Turns kindness into a suspicion and scores every friendly week as a miss.",
+          "words": "generated"
+        },
+        {
+          "id": "loved-and-wrong-for-the-seat",
+          "situation": "Someone loved who is wrong for the seat",
+          "under": "Keeps them because the relationship is good.",
+          "justRight": "Moves them when the seat needs someone else, and does it with a straight explanation.",
+          "over": "Cycles people out to look rigorous, including the person who is still right.",
+          "words": "generated"
+        },
+        {
+          "id": "strong-and-alone",
+          "situation": "Strong people who do not help each other",
+          "under": "Accepts the solo output and ignores the handoffs.",
+          "justRight": "Expects them to make the joint work better, and coaches the specific handoff that is failing.",
+          "over": "Adds so much joint ceremony that the strong people stop doing the work.",
+          "words": "generated"
+        },
+        {
+          "id": "perks-as-the-pitch",
+          "situation": "Selling the workplace",
+          "under": "Leads with perks and does not talk about who is here.",
+          "justRight": "Leads with the people. Mentions perks only as a side fact.",
+          "over": "Refuses a basic tool because talking about anything but the roster feels impure.",
+          "words": "generated"
+        },
+        {
+          "id": "the-family-story",
+          "situation": "Someone describes the team as a family",
+          "under": "Agrees, and then cannot explain what happens when the work needs a different person.",
+          "justRight": "Says the team is here to do excellent work together, and that belonging is not the same as unconditional tenure.",
+          "over": "Uses the sports metaphor to skip ordinary loyalty to people who are still excellent.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "selflessness",
+      "label": "selflessness",
+      "principles": [
+        10002
+      ],
+      "rows": [
+        {
+          "principle": 10002,
+          "id": "whose-idea-wins"
+        },
+        {
+          "principle": 10002,
+          "id": "your-team-or-the-company"
+        },
+        {
+          "principle": 10002,
+          "id": "time-to-help"
+        },
+        {
+          "principle": 10002,
+          "id": "credit-for-the-idea"
+        },
+        {
+          "principle": 10002,
+          "id": "humility-as-silence"
+        },
+        {
+          "id": "the-better-idea",
+          "situation": "A better idea that is not yours",
+          "under": "Argues yours back into the plan.",
+          "justRight": "Switches to the better idea and names the person who had it.",
+          "over": "Drops a good idea of your own so you cannot be accused of self-interest.",
+          "words": "generated"
+        },
+        {
+          "id": "company-over-team",
+          "situation": "Your team's goal against a company outcome",
+          "under": "Optimizes the team score.",
+          "justRight": "Takes the company outcome when it is real, and tells the team what changed.",
+          "over": "Invokes the company to take work your team was not the right group to do.",
+          "words": "generated"
+        },
+        {
+          "id": "helping-someone-succeed",
+          "situation": "A colleague stuck on something you can unblock",
+          "under": "Stays heads-down.",
+          "justRight": "Unblocks them, then returns to your own commitment.",
+          "over": "Becomes the permanent helper and your commitment slips.",
+          "words": "generated"
+        },
+        {
+          "id": "credit",
+          "situation": "Credit for a shared result",
+          "under": "Lets the story center on you.",
+          "justRight": "Puts the credit where the work happened.",
+          "over": "Hides your own contribution so completely that the next staffing decision is blind.",
+          "words": "generated"
+        },
+        {
+          "id": "speaking-up-humbly",
+          "situation": "You know something the room needs",
+          "under": "Stays quiet to look humble.",
+          "justRight": "Says it, and updates it if a better fact shows up.",
+          "over": "Agrees with each speaker in turn and never states a view.",
+          "words": "generated"
+        },
+        {
+          "id": "help-with-a-cost",
+          "situation": "Help that will miss your own date",
+          "under": "Either refuses all help, or helps and misses the date in silence.",
+          "justRight": "Helps when the company is better for it, and renegotiates your date out loud.",
+          "over": "Renegotiates every date into someone else's problem.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "creativity",
+      "label": "creativity",
+      "principles": [
+        10005
+      ],
+      "rows": [
+        {
+          "principle": 10005,
+          "id": "a-new-idea-in-the-room"
+        },
+        {
+          "principle": 10005,
+          "id": "staying-after-a-better-way"
+        },
+        {
+          "principle": 10005,
+          "id": "persistence-without-a-result"
+        },
+        {
+          "principle": 10005,
+          "id": "ideas-from-outside-the-craft"
+        },
+        {
+          "principle": 10005,
+          "id": "artistic-work-you-dislike"
+        },
+        {
+          "id": "an-unfamiliar-idea",
+          "situation": "An unfamiliar idea",
+          "under": "Kills it for being unfamiliar.",
+          "justRight": "Tests the part that might be better, and keeps the current approach until the new one earns the switch.",
+          "over": "Switches to it because it is new.",
+          "words": "generated"
+        },
+        {
+          "id": "adequate-and-not-enough",
+          "situation": "A solution that works and is not very good",
+          "under": "Stops.",
+          "justRight": "Keeps pushing for a more innovative one without withholding the working version from the people who need it.",
+          "over": "Withholds the working version for a cleverer one nobody asked for.",
+          "words": "generated"
+        },
+        {
+          "id": "persistence",
+          "situation": "An original attempt that is failing",
+          "under": "Abandons it at the first critique.",
+          "justRight": "Persists while the evidence is mixed, and stops when it is not.",
+          "over": "Persists after the evidence is clear, because the idea was original.",
+          "words": "generated"
+        },
+        {
+          "id": "outside-the-craft",
+          "situation": "An idea from outside the craft",
+          "under": "Ignores the speaker.",
+          "justRight": "Judges the idea on the work, and says when the craft still knows better.",
+          "over": "Prefers the outside idea because it is outside.",
+          "words": "generated"
+        },
+        {
+          "id": "taste",
+          "situation": "Creative work that is not your taste",
+          "under": "Blocks it.",
+          "justRight": "Asks whether it is good for the audience it is for.",
+          "over": "Refuses every quality bar so that taste cannot be challenged.",
+          "words": "generated"
+        },
+        {
+          "id": "novelty-budget",
+          "situation": "A week with room for one experiment",
+          "under": "Spends it on the safe increment, or on three experiments that cannot finish.",
+          "justRight": "Spends it on the experiment most likely to change the result, and finishes it.",
+          "over": "Spends it on the most unusual idea with no path to a result.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "courage",
+      "label": "courage",
+      "principles": [
+        10006
+      ],
+      "rows": [
+        {
+          "principle": 10006,
+          "id": "saying-you-do-not-know"
+        },
+        {
+          "principle": 10006,
+          "id": "a-bet-that-might-fail"
+        },
+        {
+          "principle": 10006,
+          "id": "challenging-the-usual-way"
+        },
+        {
+          "principle": 10006,
+          "id": "vulnerability-with-a-point"
+        },
+        {
+          "principle": 10006,
+          "id": "courage-up-and-down"
+        },
+        {
+          "id": "i-do-not-know",
+          "situation": "You do not know",
+          "under": "You bluff.",
+          "justRight": "You say so, and you name the next step that would inform you.",
+          "over": "You announce uncertainty about things you do know, so nobody can rely on you.",
+          "words": "generated"
+        },
+        {
+          "id": "a-public-bet",
+          "situation": "A bet that might fail in public",
+          "under": "You sand it down until it cannot fail or matter.",
+          "justRight": "You take it when excellence requires it, and you name how you will know it failed.",
+          "over": "You take it so you can be seen taking it.",
+          "words": "generated"
+        },
+        {
+          "id": "the-usual-way",
+          "situation": "The usual way is blocking excellent work",
+          "under": "You leave it.",
+          "justRight": "You challenge the specific part that is in the way, with a better proposal.",
+          "over": "You challenge the usual way as a personality.",
+          "words": "generated"
+        },
+        {
+          "id": "looking-bad-first",
+          "situation": "The truth makes you look bad",
+          "under": "You bury it.",
+          "justRight": "You put it on the table so the decision can use it.",
+          "over": "You confess something that does not change the decision.",
+          "words": "generated"
+        },
+        {
+          "id": "disagreeing-up",
+          "situation": "You disagree with someone senior",
+          "under": "You agree in the room.",
+          "justRight": "You say it in the room, about the work.",
+          "over": "You pick the disagreement that will be most visible.",
+          "words": "generated"
+        },
+        {
+          "id": "risk-and-excellence",
+          "situation": "Risk that does not serve the result",
+          "under": "You take it because risk feels brave.",
+          "justRight": "You skip it. Courage here is in pursuit of excellence, not of danger.",
+          "over": "You build a case that every cautious path is cowardice.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "resilience",
+      "label": "resilience",
+      "principles": [
+        10009
+      ],
+      "rows": [
+        {
+          "principle": 10009,
+          "id": "the-plan-breaks"
+        },
+        {
+          "principle": 10009,
+          "id": "a-tough-call-on-a-timer"
+        },
+        {
+          "principle": 10009,
+          "id": "a-hard-challenge"
+        },
+        {
+          "principle": 10009,
+          "id": "a-setback"
+        },
+        {
+          "principle": 10009,
+          "id": "sticking-through-a-bump"
+        },
+        {
+          "id": "circumstances-change",
+          "situation": "Circumstances change",
+          "under": "You keep the old plan.",
+          "justRight": "You adapt the plan and tell the people who were counting on the old one.",
+          "over": "You adapt before the change is real.",
+          "words": "generated"
+        },
+        {
+          "id": "the-tough-decision",
+          "situation": "A tough decision",
+          "under": "You wait until it is made for you.",
+          "justRight": "You decide without a long delay, on the facts you have.",
+          "over": "You decide before you have looked at the facts already on the table.",
+          "words": "generated"
+        },
+        {
+          "id": "embrace-the-hard-one",
+          "situation": "A hard challenge worth doing",
+          "under": "You look for an easier substitute.",
+          "justRight": "You take it and name the first step.",
+          "over": "You choose a harder version that does not improve the result.",
+          "words": "generated"
+        },
+        {
+          "id": "after-the-miss",
+          "situation": "A miss",
+          "under": "You stop, or you pretend it was nothing.",
+          "justRight": "You say what broke and take the next useful step the same week.",
+          "over": "You perform a recovery and skip the repair.",
+          "words": "generated"
+        },
+        {
+          "id": "a-bump-or-a-wall",
+          "situation": "A bad week on a good bet",
+          "under": "You abandon the bet.",
+          "justRight": "You stay through the bump, with a date to reconsider if it is a wall.",
+          "over": "You stay after you know it is a wall.",
+          "words": "generated"
+        },
+        {
+          "id": "adapting-in-public",
+          "situation": "People already heard the old plan",
+          "under": "You switch quietly and let them find out.",
+          "justRight": "You say what changed and what did not.",
+          "over": "You re-announce a new plan every day.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "keeper-test",
+      "label": "keeper test",
+      "principles": [
+        10011
+      ],
+      "rows": [
+        {
+          "principle": 10011,
+          "id": "would-you-keep-them"
+        },
+        {
+          "principle": 10011,
+          "id": "would-you-hire-them-again"
+        },
+        {
+          "principle": 10011,
+          "id": "no-surprises"
+        },
+        {
+          "principle": 10011,
+          "id": "the-whole-record"
+        },
+        {
+          "principle": 10011,
+          "id": "short-term-bumps"
+        },
+        {
+          "id": "fight-to-keep",
+          "situation": "Would you fight to keep them",
+          "under": "You do not ask until they quit.",
+          "justRight": "You ask while they are here, and you act on the answer.",
+          "over": "You ask it as a threat.",
+          "words": "generated"
+        },
+        {
+          "id": "hire-again",
+          "situation": "Would you hire them again",
+          "under": "You answer from how hard the seat is to fill this month.",
+          "justRight": "You answer from the role as it is now, and the whole record.",
+          "over": "You answer from one bad month.",
+          "words": "generated"
+        },
+        {
+          "id": "no-surprise",
+          "situation": "They do not know where they stand",
+          "under": "You save it for a formal cycle.",
+          "justRight": "You talk about what is going well and what is not, regularly.",
+          "over": "You deliver a weekly verdict and they cannot hear a real signal.",
+          "words": "generated"
+        },
+        {
+          "id": "whole-record",
+          "situation": "A bet that did not pay off",
+          "under": "You let that bet decide.",
+          "justRight": "You weigh it with the rest of the record, including bets that were worth making.",
+          "over": "You ignore a pattern because an old win is still listed.",
+          "words": "generated"
+        },
+        {
+          "id": "the-bump",
+          "situation": "A short-term bump",
+          "under": "You treat the bump as the keeper-test answer.",
+          "justRight": "You stick with them when you would still fight to keep them, and you say what has to change.",
+          "over": "You cite the bump rule to avoid an answer you already have.",
+          "words": "generated"
+        },
+        {
+          "id": "parting",
+          "situation": "The answer is no",
+          "under": "You delay the conversation for another quarter.",
+          "justRight": "You part quickly and fairly, with a clear reason.",
+          "over": "You part in a way that punishes them for a bet you had asked them to take.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "people-over-process",
+      "label": "people over process",
+      "principles": [
+        10012
+      ],
+      "rows": [
+        {
+          "principle": 10012,
+          "id": "who-makes-the-call"
+        },
+        {
+          "principle": 10012,
+          "id": "information-they-need"
+        },
+        {
+          "principle": 10012,
+          "id": "a-process-that-outlived-its-reason"
+        },
+        {
+          "principle": 10012,
+          "id": "responsible-with-freedom"
+        },
+        {
+          "principle": 10012,
+          "id": "senior-decisions"
+        },
+        {
+          "id": "the-person-closest",
+          "situation": "A decision the closest person can make",
+          "under": "You pull it upward.",
+          "justRight": "You leave it with them, and you make sure they have the information.",
+          "over": "You leave them a decision they cannot make, and you are gone.",
+          "words": "generated"
+        },
+        {
+          "id": "sharing-the-information",
+          "situation": "Information that would change the call",
+          "under": "You keep it.",
+          "justRight": "You share it in time, including the uncomfortable part.",
+          "over": "You forward a pile of documents and call that context.",
+          "words": "generated"
+        },
+        {
+          "id": "a-process-past-its-reason",
+          "situation": "A process whose original miss is gone",
+          "under": "You keep it.",
+          "justRight": "You remove it, unless it still prevents a serious harm.",
+          "over": "You remove the rule that prevents a serious harm.",
+          "words": "generated"
+        },
+        {
+          "id": "responsible-freedom",
+          "situation": "Freedom on the small stuff",
+          "under": "You wait to be told, or you skip the unglamorous part.",
+          "justRight": "You act, including the unglamorous part, without a checklist.",
+          "over": "You invent a checklist for how other people use their freedom.",
+          "words": "generated"
+        },
+        {
+          "id": "few-senior-decisions",
+          "situation": "A leader's list of decisions",
+          "under": "You pride yourself on how many you make.",
+          "justRight": "You pride yourself on how few you make, and the few are the ones that are actually yours.",
+          "over": "You make none, including the one only you can make.",
+          "words": "generated"
+        },
+        {
+          "id": "openness",
+          "situation": "A new teammate in an open system",
+          "under": "You assume they will absorb it.",
+          "justRight": "You give them the information and the room to decide, and you coach the first calls.",
+          "over": "You close the system back up because one new person was confused.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "context-not-control",
+      "label": "context not control",
+      "principles": [
+        10013
+      ],
+      "rows": [
+        {
+          "principle": 10013,
+          "id": "giving-the-context"
+        },
+        {
+          "principle": 10013,
+          "id": "coaching-while-involved"
+        },
+        {
+          "principle": 10013,
+          "id": "when-you-step-in"
+        },
+        {
+          "principle": 10013,
+          "id": "a-crisis"
+        },
+        {
+          "principle": 10013,
+          "id": "control-by-approval"
+        },
+        {
+          "id": "context-before-the-call",
+          "situation": "The team is about to decide",
+          "under": "You decide for them, or you vanish.",
+          "justRight": "You give the context and let them decide.",
+          "over": "You hint until your preferred answer is the only safe one.",
+          "words": "generated"
+        },
+        {
+          "id": "involved-not-holding-the-pen",
+          "situation": "Work in motion around you",
+          "under": "You disengage.",
+          "justRight": "You stay close enough to coach and you do not take the pen.",
+          "over": "You coach by rewriting.",
+          "words": "generated"
+        },
+        {
+          "id": "the-step-in",
+          "situation": "A decision that is unethical or could materially harm the company",
+          "under": "You let it go because stepping in feels like control.",
+          "justRight": "You step in, say why this one is different, and hand the next ordinary call back.",
+          "over": "You step in whenever you disagree.",
+          "words": "generated"
+        },
+        {
+          "id": "crisis-or-newcomer",
+          "situation": "A crisis, or a new person without the context",
+          "under": "You use the same distance you use with a seasoned team on a calm day.",
+          "justRight": "You step in for the crisis, or until they have the context, and then you step back.",
+          "over": "You keep the controls for the rest of the quarter.",
+          "words": "generated"
+        },
+        {
+          "id": "the-approval-queue",
+          "situation": "People bring you every choice",
+          "under": "You work the queue.",
+          "justRight": "You find the context they were missing and stop requiring the approval.",
+          "over": "You refuse to hear a question even when the context is what they lack.",
+          "words": "generated"
+        },
+        {
+          "id": "clarity",
+          "situation": "The team has information and no priority",
+          "under": "You call the pile context.",
+          "justRight": "You say what matters and what does not, and you still let them choose the path.",
+          "over": "You name the priority and then specify every step.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "informed-captain",
+      "label": "informed captain",
+      "principles": [
+        10014
+      ],
+      "rows": [
+        {
+          "principle": 10014,
+          "id": "one-captain-for-the-call"
+        },
+        {
+          "principle": 10014,
+          "id": "other-captains-implement"
+        },
+        {
+          "principle": 10014,
+          "id": "aligned-and-independent"
+        },
+        {
+          "principle": 10014,
+          "id": "responsibility-for-the-outcome"
+        },
+        {
+          "principle": 10014,
+          "id": "committee-as-safety"
+        },
+        {
+          "id": "name-the-captain",
+          "situation": "A significant decision",
+          "under": "A committee owns it, which means nobody does.",
+          "justRight": "One informed captain owns the judgment call.",
+          "over": "A captain is named who does not know the work.",
+          "words": "generated"
+        },
+        {
+          "id": "implementation-captains",
+          "situation": "Other teams have to carry the decision out",
+          "under": "Each team reopens the call.",
+          "justRight": "Each team has a captain for the how, and the what stays decided.",
+          "over": "You script the how for every team.",
+          "words": "generated"
+        },
+        {
+          "id": "loosely-coupled",
+          "situation": "Teams that should move without a joint meeting",
+          "under": "You couple every step, or you let them diverge.",
+          "justRight": "You keep the aim shared and let the teams operate.",
+          "over": "You call a lack of communication alignment.",
+          "words": "generated"
+        },
+        {
+          "id": "owning-the-outcome",
+          "situation": "The outcome",
+          "under": "The captain shares the blame across everyone who was consulted.",
+          "justRight": "The captain owns the outcome.",
+          "over": "The captain owns it so quietly that the other teams never hear the call.",
+          "words": "generated"
+        },
+        {
+          "id": "informed-before-the-title",
+          "situation": "Naming a captain",
+          "under": "You pick the most senior person in the room.",
+          "justRight": "You pick the person informed enough to make the call, wherever they sit.",
+          "over": "You pick someone uninformed so the decision will be fast.",
+          "words": "generated"
+        },
+        {
+          "id": "input-is-not-a-vote",
+          "situation": "Input to the captain",
+          "under": "You treat input as a vote, or you skip it.",
+          "justRight": "You gather input and the captain still decides.",
+          "over": "You gather input and then hide the decision.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "farming-for-dissent",
+      "label": "farming for dissent",
+      "principles": [
+        10015
+      ],
+      "rows": [
+        {
+          "principle": 10015,
+          "id": "before-the-call"
+        },
+        {
+          "principle": 10015,
+          "id": "whose-opinion-weighs-more"
+        },
+        {
+          "principle": 10015,
+          "id": "a-quiet-room"
+        },
+        {
+          "principle": 10015,
+          "id": "dissent-is-not-a-veto"
+        },
+        {
+          "principle": 10015,
+          "id": "ideas-from-anywhere"
+        },
+        {
+          "id": "seeking-the-disagreement",
+          "situation": "Before a significant call",
+          "under": "You ask the people who already agree.",
+          "justRight": "You go find a real disagreement, including one level or team away.",
+          "over": "You poll so widely that the call never happens.",
+          "words": "generated"
+        },
+        {
+          "id": "weight-by-craft",
+          "situation": "Opinions of different weights",
+          "under": "You count heads, or you only hear seniority.",
+          "justRight": "You give more weight to the craft the decision sits in, and you still hear a sharp outside dissent.",
+          "over": "You refuse to hear anyone outside the craft.",
+          "words": "generated"
+        },
+        {
+          "id": "the-quiet-room",
+          "situation": "A room that agrees immediately",
+          "under": "You take the quiet as a yes.",
+          "justRight": "You ask who disagrees and you wait.",
+          "over": "You keep asking until someone invents a dissent.",
+          "words": "generated"
+        },
+        {
+          "id": "dissent-you-do-not-take",
+          "situation": "A dissent you will not follow",
+          "under": "You adopt it to look open, or you punish it.",
+          "justRight": "You say what you decided and why their point did not carry it.",
+          "over": "You collect it and never show that you heard it.",
+          "words": "generated"
+        },
+        {
+          "id": "an-idea-from-anywhere",
+          "situation": "A good idea from an unexpected person",
+          "under": "You skip it because of their level.",
+          "justRight": "You use it and you name them.",
+          "over": "You restart the decision for every unexpected comment.",
+          "words": "generated"
+        },
+        {
+          "id": "dissent-after-the-call",
+          "situation": "Dissent that arrives after the decision",
+          "under": "You reopen the call for it, or you scold them for being late.",
+          "justRight": "You hear whether it is a new fact. If it is not, you hold the decision and thank them.",
+          "over": "You ban any comment after the decision, including a new fact.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "almost-no-rules",
+      "label": "almost no rules",
+      "principles": [
+        10017
+      ],
+      "rows": [
+        {
+          "principle": 10017,
+          "id": "a-new-rule-after-one-miss"
+        },
+        {
+          "principle": 10017,
+          "id": "is-this-process-good"
+        },
+        {
+          "principle": 10017,
+          "id": "vacation"
+        },
+        {
+          "principle": 10017,
+          "id": "an-expense"
+        },
+        {
+          "principle": 10017,
+          "id": "rules-that-stay"
+        },
+        {
+          "id": "one-misuse",
+          "situation": "One person misuses freedom",
+          "under": "You write a rule for everyone.",
+          "justRight": "You deal with that person. You add a rule only for a harm judgment will not reliably prevent.",
+          "over": "You refuse a rule against a serious harm.",
+          "words": "generated"
+        },
+        {
+          "id": "is-the-process-good",
+          "situation": "A proposed process",
+          "under": "You add it because another company has it.",
+          "justRight": "You keep it only when it is simple, efficient, and impactful.",
+          "over": "You reject one that is all three, because the slogan said no rules.",
+          "words": "generated"
+        },
+        {
+          "id": "taking-vacation",
+          "situation": "Time away",
+          "under": "You wait for permission, or you vanish.",
+          "justRight": "You take the vacation and you leave the work covered.",
+          "over": "You treat people who take vacation as less committed.",
+          "words": "generated"
+        },
+        {
+          "id": "spending",
+          "situation": "An expense",
+          "under": "You expense whatever a form will allow, or you refuse a cost the work needs.",
+          "justRight": "You spend when it is in the company's interest, and you can say why.",
+          "over": "You become a private approver for everyone else's judgment.",
+          "words": "generated"
+        },
+        {
+          "id": "the-rules-that-remain",
+          "situation": "A rule against harassment, leaking, or insider trading",
+          "under": "You loosen it in the name of freedom.",
+          "justRight": "You keep it strict.",
+          "over": "You wrap it in procedure that catches nobody.",
+          "words": "generated"
+        },
+        {
+          "id": "dummy-proofing",
+          "situation": "A growing team and a fear of mistakes",
+          "under": "You add rules to dummy-proof the work.",
+          "justRight": "You accept some mistakes as the price of judgment, and you do not accept the serious harms.",
+          "over": "You celebrate mistakes that were just carelessness.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "uncomfortably-exciting",
+      "label": "uncomfortably exciting",
+      "principles": [
+        10018
+      ],
+      "rows": [
+        {
+          "principle": 10018,
+          "id": "a-safer-version"
+        },
+        {
+          "principle": 10018,
+          "id": "experiment-on-live-work"
+        },
+        {
+          "principle": 10018,
+          "id": "adapting-quickly"
+        },
+        {
+          "principle": 10018,
+          "id": "who-thrives-here"
+        },
+        {
+          "principle": 10018,
+          "id": "discomfort-with-a-purpose"
+        },
+        {
+          "id": "bold-or-safe",
+          "situation": "A bold path and a safe path",
+          "under": "You take the safe path by default.",
+          "justRight": "You take the bold path when the ambition is real, and you design it so a failure teaches you something.",
+          "over": "You take the bold path with no way to learn and no owner for the downside.",
+          "words": "generated"
+        },
+        {
+          "id": "the-experiment",
+          "situation": "An experiment people will actually meet",
+          "under": "You never run it, or you run it without reading the result.",
+          "justRight": "You run it, read it, and adapt.",
+          "over": "You run so many that the result cannot be attributed.",
+          "words": "generated"
+        },
+        {
+          "id": "adapt-the-method",
+          "situation": "The experiment is failing",
+          "under": "You let it run to avoid looking uncomfortable.",
+          "justRight": "You change the method and keep the ambition.",
+          "over": "You drop the ambition at the first bad week.",
+          "words": "generated"
+        },
+        {
+          "id": "stability",
+          "situation": "Someone who wants stable work",
+          "under": "You pretend the job will calm down.",
+          "justRight": "You tell them the truth about the pace of bets.",
+          "over": "You mock the preference.",
+          "words": "generated"
+        },
+        {
+          "id": "discomfort-for-its-own-sake",
+          "situation": "Discomfort in the work",
+          "under": "You remove all of it, or you add it for drama.",
+          "justRight": "You keep the discomfort that is the price of a better result.",
+          "over": "You add chaos so the work feels important.",
+          "words": "generated"
+        },
+        {
+          "id": "think-differently",
+          "situation": "The usual approach would be fine and small",
+          "under": "You repeat it forever, or you discard it because it is usual.",
+          "justRight": "You look for a different approach when the usual one will not get you to the ambition.",
+          "over": "You discard a working approach because it is not exciting.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "artistic-expression",
+      "label": "artistic expression",
+      "principles": [
+        10019
+      ],
+      "rows": [
+        {
+          "principle": 10019,
+          "id": "a-story-against-your-values"
+        },
+        {
+          "principle": 10019,
+          "id": "work-you-perceive-as-harmful"
+        },
+        {
+          "principle": 10019,
+          "id": "breadth-of-the-slate"
+        },
+        {
+          "principle": 10019,
+          "id": "helping-members-choose"
+        },
+        {
+          "principle": 10019,
+          "id": "the-place-for-you"
+        },
+        {
+          "id": "against-your-values",
+          "situation": "A story that cuts against your values",
+          "under": "You block it or stall it.",
+          "justRight": "You support the creator's expression and you do your part of the work.",
+          "over": "You attack colleagues who are uncomfortable.",
+          "words": "generated"
+        },
+        {
+          "id": "perceived-harm",
+          "situation": "Work you perceive as harmful, in a role that touches it",
+          "under": "You sabotage it, or you refuse the role and stay.",
+          "justRight": "You do the role, or you say this is the wrong place and you leave the work handable.",
+          "over": "You require everyone else to enjoy it.",
+          "words": "generated"
+        },
+        {
+          "id": "breadth",
+          "situation": "A slate far from your taste",
+          "under": "You try to narrow it to what you find acceptable.",
+          "justRight": "You judge a title by the audience it is for.",
+          "over": "You add titles only to provoke.",
+          "words": "generated"
+        },
+        {
+          "id": "member-choice",
+          "situation": "A member choosing what to watch or play",
+          "under": "You hide the advisory, or you scold the choice.",
+          "justRight": "You give ratings, advisories, and parental controls in the languages they use, and you let them choose.",
+          "over": "You put every warning on every title until the controls mean nothing.",
+          "words": "generated"
+        },
+        {
+          "id": "wrong-place",
+          "situation": "You cannot support the breadth",
+          "under": "You stay and fight the slate from inside.",
+          "justRight": "You say so and you leave the work in a state others can carry.",
+          "over": "You campaign to make the slate match you.",
+          "words": "generated"
+        },
+        {
+          "id": "creators-you-chose",
+          "situation": "A creator you chose, doing something you would not",
+          "under": "You try to steer their expression to your taste.",
+          "justRight": "You support the expression you chose them for.",
+          "over": "You treat every title as your personal statement.",
           "words": "generated"
         }
       ]

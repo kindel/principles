@@ -1,0 +1,62 @@
+{
+  "id": 10018,
+  "slug": "uncomfortably-exciting",
+  "company": "netflix",
+  "name": "Uncomfortably Exciting",
+  "sort": 18,
+  "definition": "Success requires us to be bold and ambitious, to think differently, experiment and adapt (often quickly). This is true whether we're designing a new product feature, working to improve our recommendations, developing a marketing campaign or creating a TV show or game. Many people will be happier at companies that are more stable or take fewer risks. Netflix works best if you value experimentation, enjoy the uncomfortable excitement of a new or challenging project and have the resilience to thrive in this environment.",
+  "terms": [
+    {
+      "id": "uncomfortably-exciting",
+      "label": "uncomfortably exciting",
+      "kind": "alias"
+    },
+    {
+      "id": "experiment",
+      "label": "experiment",
+      "kind": "equivalent"
+    },
+    {
+      "id": "bold-and-ambitious",
+      "label": "bold and ambitious",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "a-safer-version",
+      "situation": "A bold version and a version that cannot fail visibly",
+      "under": "Picks the safe one by default.",
+      "justRight": "Picks the bold one when the ambition is real, and designs the experiment so a failure teaches you something.",
+      "over": "Picks the bold one with no way to learn, and no owner for the downside."
+    },
+    {
+      "id": "experiment-on-live-work",
+      "situation": "Trying something members, viewers, or players will actually meet",
+      "under": "Either never experiments, or experiments casually with no read on what happened.",
+      "justRight": "Tries it, watches the result, and adapts quickly.",
+      "over": "Runs so many experiments that nobody can tell which change did what."
+    },
+    {
+      "id": "adapting-quickly",
+      "situation": "An experiment that is not working",
+      "under": "Lets it run because changing course admits the bet was uncomfortable.",
+      "justRight": "Adapts as soon as the result is clear, and keeps the ambition even when you drop the method.",
+      "over": "Kills the ambition at the first uncomfortable week."
+    },
+    {
+      "id": "who-thrives-here",
+      "situation": "A person who wants stable work and few risks",
+      "under": "Talks them into staying by pretending the work will calm down.",
+      "justRight": "Tells them the truth about the place. Helps them succeed if they want this, and does not pretend it will become a calm job.",
+      "over": "Treats a preference for stability as a character flaw and says so in public."
+    },
+    {
+      "id": "discomfort-with-a-purpose",
+      "situation": "A project that feels uncomfortable",
+      "under": "Avoids it, or seeks the feeling and forgets the aim.",
+      "justRight": "Stays with the discomfort when it is the price of a better result, and drops it when it is only drama.",
+      "over": "Adds stress, secrecy, or chaos so the work feels important."
+    }
+  ]
+}

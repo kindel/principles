@@ -1,0 +1,62 @@
+{
+  "id": 10012,
+  "slug": "people-over-process",
+  "company": "netflix",
+  "name": "People Over Process",
+  "sort": 12,
+  "definition": "You get better outcomes when employees have the information and freedom to make decisions for themselves. We hire unusually responsible people who thrive on this openness and freedom.",
+  "terms": [
+    {
+      "id": "people-over-process",
+      "label": "people over process",
+      "kind": "alias"
+    },
+    {
+      "id": "freedom-to-decide",
+      "label": "freedom to decide",
+      "kind": "equivalent"
+    },
+    {
+      "id": "unusually-responsible",
+      "label": "unusually responsible",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "who-makes-the-call",
+      "situation": "A decision the person doing the work is close enough to make",
+      "under": "Pulls it up to a senior leader out of habit.",
+      "justRight": "Leaves it with the person who has the information, and checks that they know they own it.",
+      "over": "Refuses to decide even the calls that are actually yours, and the team waits."
+    },
+    {
+      "id": "information-they-need",
+      "situation": "Context that would change a team's decision",
+      "under": "Keeps it with the leaders and hopes the team guesses well.",
+      "justRight": "Shares the information, including the parts that are uncomfortable, in time for them to use it.",
+      "over": "Dumps every document on them with no framing, and calls the pile freedom."
+    },
+    {
+      "id": "a-process-that-outlived-its-reason",
+      "situation": "A step that once prevented a real miss",
+      "under": "Keeps it because it is the process.",
+      "justRight": "Removes it when people with judgment will do better without it, and keeps a step that still prevents a serious harm.",
+      "over": "Tears out the step that stops harassment, a leak, or a material harm, and calls that freedom."
+    },
+    {
+      "id": "responsible-with-freedom",
+      "situation": "Freedom with nobody checking the small stuff",
+      "under": "Waits to be told, or treats freedom as permission to ignore the boring parts.",
+      "justRight": "Acts without being told, including the unglamorous work that keeps the place sound.",
+      "over": "Polices how other people use their freedom and recreates the process you just removed."
+    },
+    {
+      "id": "senior-decisions",
+      "situation": "A leader's calendar full of decisions",
+      "under": "Treats a full decision list as proof of leadership.",
+      "justRight": "Counts it as a problem. Pushes decisions down to people who have the context, and keeps the few that are actually yours.",
+      "over": "Pushes down a decision the team cannot make because you never gave them the context."
+    }
+  ]
+}

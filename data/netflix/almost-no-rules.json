@@ -1,0 +1,62 @@
+{
+  "id": 10017,
+  "slug": "almost-no-rules",
+  "company": "netflix",
+  "name": "Almost No Rules",
+  "sort": 17,
+  "definition": "Launching a game, TV show or film, running a marketing campaign, managing compensation and closing a quarter all take process. And companies need strict rules against things like harassment, marginalizing colleagues, leaking company information, or insider trading. But we work hard to keep rules at Netflix to a minimum and ensure any process is good (simple, efficient, impactful). Our vacation policy, for example, is two words: \"Take vacation.\" And our expenses policy is just five words: \"Act in Netflix's best interests.\" This (almost) no rules rule gives employees the freedom to exercise their judgment.",
+  "terms": [
+    {
+      "id": "almost-no-rules",
+      "label": "almost no rules",
+      "kind": "alias"
+    },
+    {
+      "id": "no-rules-rule",
+      "label": "no rules rule",
+      "kind": "alias"
+    },
+    {
+      "id": "act-in-netflix-s-best-interests",
+      "label": "act in Netflix's best interests",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "a-new-rule-after-one-miss",
+      "situation": "One person misuses freedom",
+      "under": "Writes a rule for everyone.",
+      "justRight": "Deals with that person, and adds a rule only if the harm is the kind that judgment will not reliably prevent.",
+      "over": "Refuses a rule against a serious harm because any rule feels like a betrayal."
+    },
+    {
+      "id": "is-this-process-good",
+      "situation": "A process someone wants to add",
+      "under": "Adds it because a peer company has it.",
+      "justRight": "Keeps it only if it is simple, efficient, and impactful. Otherwise you do not add it.",
+      "over": "Rejects a process that is all three of those, because the slogan was no rules."
+    },
+    {
+      "id": "vacation",
+      "situation": "Time away",
+      "under": "Waits for a policy to say whether you may go, or disappears and leaves a mess.",
+      "justRight": "Takes vacation, and arranges the work so other people are not stuck.",
+      "over": "Treats unlimited vacation as a reason to never take it, and judges people who do."
+    },
+    {
+      "id": "an-expense",
+      "situation": "Spending the company's money",
+      "under": "Either expenses whatever you can justify on a form, or refuses a cost the work needs.",
+      "justRight": "Spends it when it is in the company's interest, and you can say why.",
+      "over": "Builds a private standard stricter than the work requires, and makes everyone check with you."
+    },
+    {
+      "id": "rules-that-stay",
+      "situation": "A proposal to relax a rule against harassment, leaking, or insider trading",
+      "under": "Relaxes it in the name of freedom.",
+      "justRight": "Keeps the strict rule. Freedom is not the value that governs that harm.",
+      "over": "Adds a thick procedure around the rule that catches nobody and slows everyone."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": 10015,
+  "slug": "farming-for-dissent",
+  "company": "netflix",
+  "name": "Farming for Dissent",
+  "sort": 15,
+  "definition": "We've learned that the best ideas can come from anywhere, which is why we expect informed captains to seek out different opinions and listen to people at every level. We call this farming for dissent.",
+  "terms": [
+    {
+      "id": "farming-for-dissent",
+      "label": "farming for dissent",
+      "kind": "alias"
+    },
+    {
+      "id": "farm-for-dissent",
+      "label": "farm for dissent",
+      "kind": "alias"
+    },
+    {
+      "id": "seek-different-opinions",
+      "label": "seek different opinions",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "before-the-call",
+      "situation": "A significant decision you are about to make",
+      "under": "Asks only the people who already agree, or asks nobody.",
+      "justRight": "Goes looking for a real disagreement, including from people at levels that do not usually get asked.",
+      "over": "Surveys so many people that the decision misses its moment."
+    },
+    {
+      "id": "whose-opinion-weighs-more",
+      "situation": "Opinions from people close to the work and people far from it",
+      "under": "Treats every opinion as equal, or only hears the senior ones.",
+      "justRight": "Weighs the people whose craft this decision is, and still listens to a sharp dissent from outside that craft.",
+      "over": "Dismisses anyone outside the craft before you have heard the point."
+    },
+    {
+      "id": "a-quiet-room",
+      "situation": "A room that agrees too fast",
+      "under": "Takes the quiet as consent.",
+      "justRight": "Asks who sees it differently, and waits long enough for an honest answer.",
+      "over": "Keeps poking until someone invents an objection to end the meeting."
+    },
+    {
+      "id": "dissent-is-not-a-veto",
+      "situation": "A dissent you understand and do not agree with",
+      "under": "Either adopts it to look open, or punishes the person for offering it.",
+      "justRight": "Thanks the dissent, says what you decided, and why their point did not carry it.",
+      "over": "Collects dissent and then never shows that you heard it."
+    },
+    {
+      "id": "ideas-from-anywhere",
+      "situation": "A good idea from an unexpected place",
+      "under": "Ignores it because of the person's level or team.",
+      "justRight": "Uses it if it is good, and says where it came from.",
+      "over": "Treats every unexpected idea as a reason to restart the decision."
+    }
+  ]
+}

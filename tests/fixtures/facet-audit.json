@@ -607,6 +607,126 @@
       "decision": "map",
       "facets": ["have-backbone-disagree-and-commit"],
       "reason": "Challenge respectfully, no compromise for social cohesion, commit wholly. Same challenge-then-commit behavior as Amazon Have Backbone; Disagree and Commit."
+    },
+    {
+      "id": 10001,
+      "decision": "map",
+      "facets": ["dream-team"],
+      "reason": "High performers who are great at the work and better at working together, and the right person in every position. hire-and-develop-the-best is the manager's hiring practice. best-person-for-the-role is one seat. dream-team is the table."
+    },
+    {
+      "id": 10002,
+      "decision": "map",
+      "facets": ["selflessness"],
+      "reason": "Humble about the best idea, the company ahead of your own team, and time spent helping someone else succeed. acts-like-an-owner covers only the company-over-team clause. help-anyway covers only the help. selflessness is the table."
+    },
+    {
+      "id": 10003,
+      "decision": "map",
+      "facets": ["are-right-a-lot"],
+      "reason": "Wise decisions despite ambiguity, with data informing intuition. Same judgment behavior as Amazon Are Right, A Lot."
+    },
+    {
+      "id": 10004,
+      "decision": "map",
+      "facets": ["earn-trust"],
+      "reason": "Give and receive feedback, say what needs to improve, and admit mistakes. Same candid behavior as the earn-trust rows on a peer's draft and on being wrong in a review."
+    },
+    {
+      "id": 10005,
+      "decision": "map",
+      "facets": ["creativity"],
+      "reason": "Welcome new ideas and stay after a more innovative solution, including artistic work that is not your taste. invent-and-simplify's table is mostly removing steps. creativity is the table."
+    },
+    {
+      "id": 10006,
+      "decision": "map",
+      "facets": ["courage"],
+      "reason": "Vulnerable in search of the truth, willing to risk failure, and willing to challenge the status quo in pursuit of excellence. have-backbone-disagree-and-commit is the disagree-then-commit sequence, which is a separate record. courage is the table."
+    },
+    {
+      "id": 10007,
+      "decision": "map",
+      "facets": ["belonging"],
+      "reason": "Everyone can do their best work whatever their culture, identity, or background. Same behavior as the belonging table."
+    },
+    {
+      "id": 10008,
+      "decision": "map",
+      "facets": ["learn-and-be-curious"],
+      "reason": "Learn rapidly, take an interest in other people's ideas, and stay humble about what you do not know yet. Same behavior as Amazon Learn and Be Curious."
+    },
+    {
+      "id": 10009,
+      "decision": "map",
+      "facets": ["resilience"],
+      "reason": "Adapt when circumstances change, decide without a long delay, and take a hard challenge. bias-for-action is speed on reversible decisions. sustain-the-pace is managing energy over a long effort. resilience is the table."
+    },
+    {
+      "id": 10010,
+      "decision": "map",
+      "facets": ["mutual-respect"],
+      "reason": "No place for someone who does not treat colleagues with decency and respect, however brilliant the work. Same respect behavior as mutual-respect."
+    },
+    {
+      "id": 10011,
+      "decision": "map",
+      "facets": ["keeper-test"],
+      "reason": "Would you fight to keep them, and would you hire them again, said out loud before it is a surprise, on the whole record. No existing table is that test. keeper-test is the table."
+    },
+    {
+      "id": 10012,
+      "decision": "map",
+      "facets": ["people-over-process"],
+      "reason": "Information and freedom for the person doing the work. No existing table is freedom over process. people-over-process is the table."
+    },
+    {
+      "id": 10013,
+      "decision": "map",
+      "facets": ["context-not-control"],
+      "reason": "Give the team the context and let them decide, stay close enough to coach, and step in only for harm, a crisis, or missing context. No existing table is that management practice. context-not-control is the table."
+    },
+    {
+      "id": 10014,
+      "decision": "map",
+      "facets": ["informed-captain"],
+      "reason": "One informed person makes the significant call, and other captains implement it, highly aligned and loosely coupled. acts-like-an-owner is personal accountability, not this decision role. informed-captain is the table."
+    },
+    {
+      "id": 10015,
+      "decision": "map",
+      "facets": ["farming-for-dissent"],
+      "reason": "The captain seeks different opinions, including from people at every level, and weighs the craft the decision sits in. are-right-a-lot seeks disconfirming views so you will be right. farming-for-dissent is the table."
+    },
+    {
+      "id": 10016,
+      "decision": "map",
+      "facets": ["have-backbone-disagree-and-commit"],
+      "reason": "After the decision, the people who argued for another approach commit so the outcome can succeed. Same behavior as Amazon Have Backbone; Disagree and Commit."
+    },
+    {
+      "id": 10017,
+      "decision": "map",
+      "facets": ["almost-no-rules"],
+      "reason": "Few rules, and a rule that remains has to be simple, efficient, and impactful. Judgment for vacation and expenses. frugality is spending less. almost-no-rules is the table."
+    },
+    {
+      "id": 10018,
+      "decision": "map",
+      "facets": ["uncomfortably-exciting"],
+      "reason": "Bold work, experimentation, fast adaptation, and a place that is uncomfortable on purpose. think-big is the size of the idea. uncomfortably-exciting is the table."
+    },
+    {
+      "id": 10019,
+      "decision": "map",
+      "facets": ["artistic-expression"],
+      "reason": "Support the expression of the creators you chose, including stories that cut against your own values, and give the audience a way to choose. No existing table is that. artistic-expression is the table."
+    },
+    {
+      "id": 10020,
+      "decision": "map",
+      "facets": ["better-every-day"],
+      "reason": "What is good today should be better tomorrow, with the self-awareness to see the gap and the discipline to close it. Same continuous-improvement behavior as better-every-day."
     }
   ]
 }
