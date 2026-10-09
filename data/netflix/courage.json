@@ -14,12 +14,18 @@
     {
       "id": "risk-failure",
       "label": "risk failure",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "a-bet-that-might-fail"
+      ]
     },
     {
       "id": "challenge-the-status-quo",
       "label": "challenge the status quo",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "challenging-the-usual-way"
+      ]
     }
   ],
   "rows": [

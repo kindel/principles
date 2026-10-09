@@ -19,7 +19,11 @@
     {
       "id": "support-the-creators",
       "label": "support the creators",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "a-story-against-your-values",
+        "work-you-perceive-as-harmful"
+      ]
     }
   ],
   "rows": [

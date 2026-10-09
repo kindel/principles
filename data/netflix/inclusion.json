@@ -14,12 +14,19 @@
     {
       "id": "counteract-bias",
       "label": "counteract bias",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "bias-in-your-own-read"
+      ]
     },
     {
       "id": "best-work-for-everyone",
       "label": "best work for everyone",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "best-work-is-the-test",
+        "who-gets-the-hard-work"
+      ]
     }
   ],
   "rows": [

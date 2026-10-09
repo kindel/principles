@@ -14,12 +14,18 @@
     {
       "id": "adapt-quickly",
       "label": "adapt quickly",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "the-plan-breaks"
+      ]
     },
     {
       "id": "hard-challenge",
       "label": "hard challenge",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "a-hard-challenge"
+      ]
     }
   ],
   "rows": [

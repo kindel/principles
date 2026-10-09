@@ -14,7 +14,10 @@
     {
       "id": "experiment",
       "label": "experiment",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "experiment-on-live-work"
+      ]
     },
     {
       "id": "bold-and-ambitious",

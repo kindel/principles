@@ -19,7 +19,10 @@
     {
       "id": "act-in-netflix-s-best-interests",
       "label": "act in Netflix's best interests",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "an-expense"
+      ]
     }
   ],
   "rows": [

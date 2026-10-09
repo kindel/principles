@@ -14,12 +14,18 @@
     {
       "id": "wise-decisions",
       "label": "wise decisions",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "deciding-in-ambiguity"
+      ]
     },
     {
       "id": "data-and-intuition",
       "label": "data and intuition",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "data-and-a-hunch"
+      ]
     }
   ],
   "rows": [

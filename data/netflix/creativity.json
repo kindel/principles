@@ -14,12 +14,20 @@
     {
       "id": "new-ideas",
       "label": "new ideas",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "a-new-idea-in-the-room",
+        "ideas-from-outside-the-craft"
+      ]
     },
     {
       "id": "innovative-solutions",
       "label": "innovative solutions",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "staying-after-a-better-way",
+        "persistence-without-a-result"
+      ]
     }
   ],
   "rows": [

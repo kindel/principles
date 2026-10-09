@@ -19,7 +19,10 @@
     {
       "id": "help-others-succeed",
       "label": "help others succeed",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "time-to-help"
+      ]
     }
   ],
   "rows": [

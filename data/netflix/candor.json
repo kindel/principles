@@ -19,7 +19,13 @@
     {
       "id": "give-and-receive-feedback",
       "label": "give and receive feedback",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "feedback-you-did-not-ask-for",
+        "saying-the-hard-thing",
+        "only-what-you-would-say-to-them",
+        "candor-across-level"
+      ]
     }
   ],
   "rows": [

@@ -19,7 +19,10 @@
     {
       "id": "unusually-responsible",
       "label": "unusually responsible",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "responsible-with-freedom"
+      ]
     }
   ],
   "rows": [

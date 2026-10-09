@@ -14,12 +14,18 @@
     {
       "id": "learn-rapidly",
       "label": "learn rapidly",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "a-gap-in-what-you-know"
+      ]
     },
     {
       "id": "other-people-s-ideas",
       "label": "other people's ideas",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "someone-elses-idea"
+      ]
     }
   ],
   "rows": [
