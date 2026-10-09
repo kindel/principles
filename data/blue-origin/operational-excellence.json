@@ -37,6 +37,7 @@
       "kind": "facet",
       "rows": [
         "root-cause",
+        "defects-down-the-line",
         "stay-fixed",
         "mechanisms-not-intentions"
       ]
