@@ -4518,10 +4518,6 @@
         },
         {
           "principle": 9009,
-          "id": "different-viewpoints"
-        },
-        {
-          "principle": 9009,
           "id": "open-minded-without-being-vague"
         },
         {
@@ -4550,14 +4546,6 @@
           "under": "Defends the view because it is theirs. The fact sits unused.",
           "justRight": "Examines the conviction. Keeps it only if it still holds after the fact.",
           "over": "Drops a sound view at the first challenge so they look open-minded.",
-          "words": "generated"
-        },
-        {
-          "id": "a-room-that-already-agrees",
-          "situation": "A room that already agrees",
-          "under": "Treats the agreement as proof. Nobody goes looking for a missing view.",
-          "justRight": "Asks for a viewpoint the room does not already have, and uses it if it changes the work.",
-          "over": "Collects extra views as a ritual and never lets them change the decision.",
           "words": "generated"
         },
         {
@@ -5529,10 +5517,15 @@
       "principles": [
         1004,
         8004,
+        9009,
         10003,
         10015
       ],
       "rows": [
+        {
+          "principle": 9009,
+          "id": "different-viewpoints"
+        },
         {
           "principle": 10003,
           "id": "testing-a-call-you-like"

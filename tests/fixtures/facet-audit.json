@@ -25,7 +25,7 @@
       "id": 1004,
       "decision": "map",
       "facets": ["are-right-a-lot", "ask-who-disagrees"],
-      "reason": "Judgment, diverse perspectives, and disconfirming your own beliefs. are-right-a-lot is that behavior, shared with the principle of the same name. A room that already agrees is ask-who-disagrees, shared with the generic principle, Netflix Judgment, and Farming for Dissent."
+      "reason": "Judgment, diverse perspectives, and disconfirming your own beliefs. are-right-a-lot is that behavior, shared with the principle of the same name. A room that already agrees is ask-who-disagrees, shared with the generic principle, Blue Origin Earn the Trust of Others, Netflix Judgment, and Farming for Dissent."
     },
     {
       "id": 1005,
@@ -456,7 +456,7 @@
       "id": 8004,
       "decision": "map",
       "facets": ["are-right-a-lot", "ask-who-disagrees"],
-      "reason": "Same judgment, diverse perspectives, and disconfirming your beliefs as the principle of the same name. The table is shared. A room that already agrees is ask-who-disagrees, the same slice as Amazon. Teaching stays the reused text."
+      "reason": "Same judgment, diverse perspectives, and disconfirming your beliefs as the principle of the same name. The table is shared. A room that already agrees is ask-who-disagrees, the same slice as Amazon and Blue Origin Earn the Trust of Others. Teaching stays the reused text."
     },
     {
       "id": 8005,
@@ -575,8 +575,8 @@
     {
       "id": 9009,
       "decision": "map",
-      "facets": ["listens-with-an-open-mind"],
-      "reason": "Open-minded listening, examining convictions, and diverse viewpoints. The earn-trust table is slipped dates, credit, and stakeholder bad news, which this text does not cover. listens-with-an-open-mind is the table."
+      "facets": ["ask-who-disagrees", "listens-with-an-open-mind"],
+      "reason": "Open-minded listening, examining convictions, and still having to decide stay on listens-with-an-open-mind. A room of one mind is ask-who-disagrees, the same slice as Are Right, A Lot, so this record does not keep a second table for it. The earn-trust table is slipped dates, credit, and stakeholder bad news, which this text does not cover."
     },
     {
       "id": 9010,
@@ -624,7 +624,7 @@
       "id": 10003,
       "decision": "map",
       "facets": ["are-right-a-lot", "ask-who-disagrees"],
-      "reason": "Wise decisions despite ambiguity, with data informing intuition, stay on are-right-a-lot. Asking who would bet against a call you already like is ask-who-disagrees, shared with Farming for Dissent."
+      "reason": "Wise decisions despite ambiguity, with data informing intuition, stay on are-right-a-lot. Asking who would bet against a call you already like is ask-who-disagrees, shared with Farming for Dissent and Blue Origin Earn the Trust of Others."
     },
     {
       "id": 10004,
@@ -696,7 +696,7 @@
       "id": 10015,
       "decision": "map",
       "facets": ["ask-who-disagrees", "farming-for-dissent"],
-      "reason": "Seeking a real disagreement, weighing the craft, and a dissent you do not take stay on farming-for-dissent. A room that agrees too fast is ask-who-disagrees, shared with Are Right, A Lot."
+      "reason": "Seeking a real disagreement, weighing the craft, and a dissent you do not take stay on farming-for-dissent. A room that agrees too fast is ask-who-disagrees, shared with Are Right, A Lot and Blue Origin Earn the Trust of Others."
     },
     {
       "id": 10016,
