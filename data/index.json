@@ -1112,7 +1112,9 @@
           "sort": 1,
           "file": "data/netflix/the-dream-team.json",
           "facets": [
-            "dream-team"
+            "build-extraordinary-teams",
+            "dream-team",
+            "raise-the-bar"
           ]
         },
         {
@@ -1123,7 +1125,8 @@
           "file": "data/netflix/selflessness.json",
           "facets": [
             "help-anyway",
-            "selflessness"
+            "selflessness",
+            "stay-humble"
           ]
         },
         {
@@ -1153,7 +1156,8 @@
           "sort": 5,
           "file": "data/netflix/creativity.json",
           "facets": [
-            "creativity"
+            "creativity",
+            "listens-with-an-open-mind"
           ]
         },
         {
@@ -1163,7 +1167,8 @@
           "sort": 6,
           "file": "data/netflix/courage.json",
           "facets": [
-            "courage"
+            "courage",
+            "earn-trust"
           ]
         },
         {
@@ -1283,6 +1288,7 @@
           "sort": 18,
           "file": "data/netflix/uncomfortably-exciting.json",
           "facets": [
+            "courage",
             "uncomfortably-exciting"
           ]
         },

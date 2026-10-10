@@ -970,7 +970,8 @@
         1011,
         6008,
         8002,
-        10004
+        10004,
+        10006
       ],
       "rows": [
         {
@@ -1036,6 +1037,10 @@
         {
           "principle": 10004,
           "id": "candor-across-level"
+        },
+        {
+          "principle": 10006,
+          "id": "saying-you-do-not-know"
         },
         {
           "id": "a-date-you-gave-slips",
@@ -2572,12 +2577,21 @@
       "id": "build-extraordinary-teams",
       "label": "build extraordinary teams",
       "principles": [
-        2003
+        2003,
+        10001
       ],
       "rows": [
         {
           "principle": 2003,
           "id": "holding-a-high-bar"
+        },
+        {
+          "principle": 10001,
+          "id": "right-person-in-the-role"
+        },
+        {
+          "principle": 10001,
+          "id": "better-together"
         },
         {
           "id": "filling-an-open-seat",
@@ -3382,12 +3396,21 @@
       "id": "raise-the-bar",
       "label": "raise the bar",
       "principles": [
-        4005
+        4005,
+        10001
       ],
       "rows": [
         {
           "principle": 4005,
           "id": "setting-the-target"
+        },
+        {
+          "principle": 10001,
+          "id": "replacing-someone-loved"
+        },
+        {
+          "principle": 10001,
+          "id": "average-and-pleasant"
         },
         {
           "id": "setting-an-ambitious-target",
@@ -3444,7 +3467,8 @@
       "label": "stay humble",
       "principles": [
         4006,
-        9013
+        9013,
+        10002
       ],
       "rows": [
         {
@@ -3462,6 +3486,14 @@
         {
           "principle": 9013,
           "id": "point-out-the-value-of-others"
+        },
+        {
+          "principle": 10002,
+          "id": "whose-idea-wins"
+        },
+        {
+          "principle": 10002,
+          "id": "credit-for-the-idea"
         },
         {
           "id": "the-day-after-a-win",
@@ -4488,7 +4520,8 @@
       "id": "listens-with-an-open-mind",
       "label": "listens with an open mind",
       "principles": [
-        9009
+        9009,
+        10005
       ],
       "rows": [
         {
@@ -4510,6 +4543,14 @@
         {
           "principle": 9009,
           "id": "trust-through-openness"
+        },
+        {
+          "principle": 10005,
+          "id": "a-new-idea-in-the-room"
+        },
+        {
+          "principle": 10005,
+          "id": "ideas-from-outside-the-craft"
         },
         {
           "id": "someone-disagrees-with-your-plan",
@@ -4668,55 +4709,7 @@
       "rows": [
         {
           "principle": 10001,
-          "id": "right-person-in-the-role"
-        },
-        {
-          "principle": 10001,
-          "id": "replacing-someone-loved"
-        },
-        {
-          "principle": 10001,
-          "id": "better-together"
-        },
-        {
-          "principle": 10001,
-          "id": "average-and-pleasant"
-        },
-        {
-          "principle": 10001,
           "id": "perks-instead-of-people"
-        },
-        {
-          "id": "the-open-seat",
-          "situation": "The open seat",
-          "under": "Fills it with someone available who will not raise the work.",
-          "justRight": "Waits for someone who is great at the work and makes colleagues better, and says what great means for this seat.",
-          "over": "Leaves the seat empty so long that the people carrying the load start to leave.",
-          "words": "generated"
-        },
-        {
-          "id": "pleasant-and-average",
-          "situation": "A pleasant team shipping average work",
-          "under": "Protects the mood and leaves the bar alone.",
-          "justRight": "Treats the average result as the problem, and keeps the team kind while the bar moves.",
-          "over": "Turns kindness into a suspicion and scores every friendly week as a miss.",
-          "words": "generated"
-        },
-        {
-          "id": "loved-and-wrong-for-the-seat",
-          "situation": "Someone loved who is wrong for the seat",
-          "under": "Keeps them because the relationship is good.",
-          "justRight": "Moves them when the seat needs someone else, and does it with a straight explanation.",
-          "over": "Cycles people out to look rigorous, including the person who is still right.",
-          "words": "generated"
-        },
-        {
-          "id": "strong-and-alone",
-          "situation": "Strong people who do not help each other",
-          "under": "Accepts the solo output and ignores the handoffs.",
-          "justRight": "Expects them to make the joint work better, and coaches the specific handoff that is failing.",
-          "over": "Adds so much joint ceremony that the strong people stop doing the work.",
-          "words": "generated"
         },
         {
           "id": "perks-as-the-pitch",
@@ -4745,27 +4738,11 @@
       "rows": [
         {
           "principle": 10002,
-          "id": "whose-idea-wins"
-        },
-        {
-          "principle": 10002,
           "id": "your-team-or-the-company"
         },
         {
           "principle": 10002,
-          "id": "credit-for-the-idea"
-        },
-        {
-          "principle": 10002,
           "id": "humility-as-silence"
-        },
-        {
-          "id": "the-better-idea",
-          "situation": "A better idea that is not yours",
-          "under": "Argues yours back into the plan.",
-          "justRight": "Switches to the better idea and names the person who had it.",
-          "over": "Drops a good idea of your own so you cannot be accused of self-interest.",
-          "words": "generated"
         },
         {
           "id": "company-over-team",
@@ -4773,14 +4750,6 @@
           "under": "Optimizes the team score.",
           "justRight": "Takes the company outcome when it is real, and tells the team what changed.",
           "over": "Invokes the company to take work your team was not the right group to do.",
-          "words": "generated"
-        },
-        {
-          "id": "credit",
-          "situation": "Credit for a shared result",
-          "under": "Lets the story center on you.",
-          "justRight": "Puts the credit where the work happened.",
-          "over": "Hides your own contribution so completely that the next staffing decision is blind.",
           "words": "generated"
         },
         {
@@ -4802,10 +4771,6 @@
       "rows": [
         {
           "principle": 10005,
-          "id": "a-new-idea-in-the-room"
-        },
-        {
-          "principle": 10005,
           "id": "staying-after-a-better-way"
         },
         {
@@ -4814,19 +4779,7 @@
         },
         {
           "principle": 10005,
-          "id": "ideas-from-outside-the-craft"
-        },
-        {
-          "principle": 10005,
           "id": "artistic-work-you-dislike"
-        },
-        {
-          "id": "an-unfamiliar-idea",
-          "situation": "An unfamiliar idea",
-          "under": "Kills it for being unfamiliar.",
-          "justRight": "Tests the part that might be better, and keeps the current approach until the new one earns the switch.",
-          "over": "Switches to it because it is new.",
-          "words": "generated"
         },
         {
           "id": "adequate-and-not-enough",
@@ -4842,14 +4795,6 @@
           "under": "Abandons it at the first critique.",
           "justRight": "Persists while the evidence is mixed, and stops when it is not.",
           "over": "Persists after the evidence is clear, because the idea was original.",
-          "words": "generated"
-        },
-        {
-          "id": "outside-the-craft",
-          "situation": "An idea from outside the craft",
-          "under": "Ignores the speaker.",
-          "justRight": "Judges the idea on the work, and says when the craft still knows better.",
-          "over": "Prefers the outside idea because it is outside.",
           "words": "generated"
         },
         {
@@ -4874,16 +4819,17 @@
       "id": "courage",
       "label": "courage",
       "principles": [
-        10006
+        10006,
+        10018
       ],
       "rows": [
         {
           "principle": 10006,
-          "id": "saying-you-do-not-know"
+          "id": "a-bet-that-might-fail"
         },
         {
-          "principle": 10006,
-          "id": "a-bet-that-might-fail"
+          "principle": 10018,
+          "id": "a-safer-version"
         },
         {
           "principle": 10006,
@@ -4896,14 +4842,6 @@
         {
           "principle": 10006,
           "id": "courage-up-and-down"
-        },
-        {
-          "id": "i-do-not-know",
-          "situation": "You do not know",
-          "under": "You bluff.",
-          "justRight": "You say so, and you name the next step that would inform you.",
-          "over": "You announce uncertainty about things you do know, so nobody can rely on you.",
-          "words": "generated"
         },
         {
           "id": "a-public-bet",
@@ -5487,10 +5425,6 @@
       "rows": [
         {
           "principle": 10018,
-          "id": "a-safer-version"
-        },
-        {
-          "principle": 10018,
           "id": "experiment-on-live-work"
         },
         {
@@ -5504,14 +5438,6 @@
         {
           "principle": 10018,
           "id": "discomfort-with-a-purpose"
-        },
-        {
-          "id": "bold-or-safe",
-          "situation": "A bold path and a safe path",
-          "under": "You take the safe path by default.",
-          "justRight": "You take the bold path when the ambition is real, and you design it so a failure teaches you something.",
-          "over": "You take the bold path with no way to learn and no owner for the downside.",
-          "words": "generated"
         },
         {
           "id": "the-experiment",

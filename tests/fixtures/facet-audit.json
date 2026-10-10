@@ -611,14 +611,14 @@
     {
       "id": 10001,
       "decision": "map",
-      "facets": ["dream-team"],
-      "reason": "High performers who are great at the work and better at working together, and the right person in every position. hire-and-develop-the-best is the manager's hiring practice. best-person-for-the-role is one seat. dream-team is the table."
+      "facets": ["build-extraordinary-teams", "dream-team", "raise-the-bar"],
+      "reason": "The open seat and strong people who do not help each other are build-extraordinary-teams. A pleasant average team, and someone loved who is wrong for the seat, are raise-the-bar. Perks, and a team described as a family, stay on dream-team."
     },
     {
       "id": 10002,
       "decision": "map",
-      "facets": ["help-anyway", "selflessness"],
-      "reason": "Humble about the best idea, and the company ahead of your own team. The help clause is the same behavior as help-anyway, so time-to-help sits on that table. The rest of the value is selflessness."
+      "facets": ["help-anyway", "selflessness", "stay-humble"],
+      "reason": "Credit and the better idea are stay-humble. time-to-help is help-anyway. The company ahead of your team, and speaking up without performing humility, stay on selflessness."
     },
     {
       "id": 10003,
@@ -635,14 +635,14 @@
     {
       "id": 10005,
       "decision": "map",
-      "facets": ["creativity"],
-      "reason": "Welcome new ideas and stay after a more innovative solution, including artistic work that is not your taste. invent-and-simplify's table is mostly removing steps. creativity is the table."
+      "facets": ["creativity", "listens-with-an-open-mind"],
+      "reason": "An unfamiliar idea, including one from outside the craft, is listens-with-an-open-mind. Persistence, taste, and the experiment budget stay on creativity."
     },
     {
       "id": 10006,
       "decision": "map",
-      "facets": ["courage"],
-      "reason": "Vulnerable in search of the truth, willing to risk failure, and willing to challenge the status quo in pursuit of excellence. have-backbone-disagree-and-commit is the disagree-then-commit sequence, which is a separate record. courage is the table."
+      "facets": ["courage", "earn-trust"],
+      "reason": "Saying what you do not know is earn-trust. Risking failure and challenging the usual way stay on courage. The bold bet on uncomfortably-exciting is the same public bet, so that record sits here too."
     },
     {
       "id": 10007,
@@ -713,8 +713,8 @@
     {
       "id": 10018,
       "decision": "map",
-      "facets": ["uncomfortably-exciting"],
-      "reason": "Bold work, experimentation, fast adaptation, and a place that is uncomfortable on purpose. think-big is the size of the idea. uncomfortably-exciting is the table."
+      "facets": ["courage", "uncomfortably-exciting"],
+      "reason": "The bold bet with a way to learn is courage, the same behavior as a public bet. Experimentation, adaptation, and discomfort stay on uncomfortably-exciting."
     },
     {
       "id": 10019,
