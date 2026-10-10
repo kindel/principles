@@ -4786,7 +4786,7 @@
         {
           "id": "speaking-up-humbly",
           "situation": "You know something the room needs",
-          "under": "Stays quiet to look humble.",
+          "under": "States a partial answer as if it were the whole one.",
           "justRight": "Says it, and updates it if a better fact shows up.",
           "over": "Agrees with each speaker in turn and never states a view.",
           "words": "generated"
@@ -4935,14 +4935,6 @@
           "under": "You agree in the room.",
           "justRight": "You say it in the room, about the work.",
           "over": "You pick the disagreement that will be most visible.",
-          "words": "generated"
-        },
-        {
-          "id": "risk-and-excellence",
-          "situation": "Risk that does not serve the result",
-          "under": "You take it because risk feels brave.",
-          "justRight": "You skip it. Courage here is in pursuit of excellence, not of danger.",
-          "over": "You build a case that every cautious path is cowardice.",
           "words": "generated"
         }
       ]
@@ -5171,9 +5163,9 @@
         {
           "id": "openness",
           "situation": "A new teammate in an open system",
-          "under": "You assume they will absorb it.",
+          "under": "You keep the decisions, and they do not get the room.",
           "justRight": "You give them the information and the room to decide, and you coach the first calls.",
-          "over": "You close the system back up because one new person was confused.",
+          "over": "You give them the room before they have the context.",
           "words": "generated"
         }
       ]
@@ -5325,9 +5317,9 @@
         {
           "id": "input-is-not-a-vote",
           "situation": "Input to the captain",
-          "under": "You treat input as a vote, or you skip it.",
+          "under": "You skip the input.",
           "justRight": "You gather input and the captain still decides.",
-          "over": "You gather input and then hide the decision.",
+          "over": "You treat the input as a vote and give away the captain's decision.",
           "words": "generated"
         }
       ]
@@ -5556,7 +5548,7 @@
         {
           "id": "think-differently",
           "situation": "The usual approach would be fine and small",
-          "under": "You repeat it forever, or you discard it because it is usual.",
+          "under": "You repeat it forever.",
           "justRight": "You look for a different approach when the usual one will not get you to the ambition.",
           "over": "You discard a working approach because it is not exciting.",
           "words": "generated"
@@ -5627,7 +5619,7 @@
           "situation": "You cannot support the breadth",
           "under": "You stay and fight the slate from inside.",
           "justRight": "You say so and you leave the work in a state others can carry.",
-          "over": "You campaign to make the slate match you.",
+          "over": "You leave at the first title you dislike, before you have tested whether you can support the rest of the slate.",
           "words": "generated"
         },
         {
