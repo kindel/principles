@@ -34,7 +34,7 @@
     {
       "id": "giving-the-context",
       "situation": "A team about to make a call you understand better than they do",
-      "under": "Either makes the call yourself, or stays silent and hopes.",
+      "under": "Stays silent and hopes.",
       "justRight": "Gives them the context and the clarity, then lets them decide.",
       "over": "Gives so much context, and so many hints, that you have made the decision while pretending they did."
     },

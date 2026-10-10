@@ -4790,14 +4790,6 @@
           "justRight": "Says it, and updates it if a better fact shows up.",
           "over": "Agrees with each speaker in turn and never states a view.",
           "words": "generated"
-        },
-        {
-          "id": "help-with-a-cost",
-          "situation": "Help that will miss your own date",
-          "under": "Either refuses all help, or helps and misses the date in silence.",
-          "justRight": "Helps when the company is better for it, and renegotiates your date out loud.",
-          "over": "Renegotiates every date into someone else's problem.",
-          "words": "generated"
         }
       ]
     },
@@ -4871,7 +4863,7 @@
         {
           "id": "novelty-budget",
           "situation": "A week with room for one experiment",
-          "under": "Spends it on the safe increment, or on three experiments that cannot finish.",
+          "under": "Spends it on the safe increment.",
           "justRight": "Spends it on the experiment most likely to change the result, and finishes it.",
           "over": "Spends it on the most unusual idea with no path to a result.",
           "words": "generated"
@@ -5216,7 +5208,7 @@
         {
           "id": "context-before-the-call",
           "situation": "The team is about to decide",
-          "under": "You decide for them, or you vanish.",
+          "under": "You vanish.",
           "justRight": "You give the context and let them decide.",
           "over": "You hint until your preferred answer is the only safe one.",
           "words": "generated"
@@ -5410,9 +5402,9 @@
         {
           "id": "dissent-after-the-call",
           "situation": "Dissent that arrives after the decision",
-          "under": "You reopen the call for it, or you scold them for being late.",
+          "under": "You scold them for being late, or you ban any comment after the decision, including a new fact.",
           "justRight": "You hear whether it is a new fact. If it is not, you hold the decision and thank them.",
-          "over": "You ban any comment after the decision, including a new fact.",
+          "over": "You reopen the call for it.",
           "words": "generated"
         }
       ]
@@ -5556,7 +5548,7 @@
         {
           "id": "discomfort-for-its-own-sake",
           "situation": "Discomfort in the work",
-          "under": "You remove all of it, or you add it for drama.",
+          "under": "You remove all of it.",
           "justRight": "You keep the discomfort that is the price of a better result.",
           "over": "You add chaos so the work feels important.",
           "words": "generated"
