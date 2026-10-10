@@ -45,9 +45,9 @@
     {
       "id": "aligned-and-independent",
       "situation": "Teams that need to move without waiting on each other",
-      "under": "Either couples every step to a joint meeting, or lets teams drift until the pieces do not fit.",
+      "under": "Couples every step to a joint meeting.",
       "justRight": "Keeps the shared aim clear, and lets each team operate once that aim is set.",
-      "over": "Calls silence alignment, and the teams discover the conflict in front of the audience."
+      "over": "Lets teams drift until the pieces do not fit, and calls the silence alignment."
     },
     {
       "id": "responsibility-for-the-outcome",

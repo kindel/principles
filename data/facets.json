@@ -2170,10 +2170,6 @@
         },
         {
           "principle": 10003,
-          "id": "short-fix-or-long-fix"
-        },
-        {
-          "principle": 10003,
           "id": "deciding-in-ambiguity"
         },
         {
@@ -2183,10 +2179,6 @@
         {
           "principle": 10003,
           "id": "testing-a-call-you-like"
-        },
-        {
-          "principle": 10003,
-          "id": "whose-judgment"
         },
         {
           "id": "someone-junior-has-the-fact",
@@ -5231,9 +5223,9 @@
         {
           "id": "loosely-coupled",
           "situation": "Teams that should move without a joint meeting",
-          "under": "You couple every step, or you let them diverge.",
+          "under": "You couple every step.",
           "justRight": "You keep the aim shared and let the teams operate.",
-          "over": "You call a lack of communication alignment.",
+          "over": "You let them diverge, and you call the silence alignment.",
           "words": "generated"
         },
         {
@@ -5316,9 +5308,9 @@
         {
           "id": "dissent-you-do-not-take",
           "situation": "A dissent you will not follow",
-          "under": "You adopt it to look open, or you punish it.",
+          "under": "You punish it, or you collect it and never show that you heard it.",
           "justRight": "You say what you decided and why their point did not carry it.",
-          "over": "You collect it and never show that you heard it.",
+          "over": "You adopt it to look open.",
           "words": "generated"
         },
         {

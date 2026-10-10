@@ -47,9 +47,9 @@
     {
       "id": "dissent-is-not-a-veto",
       "situation": "A dissent you understand and do not agree with",
-      "under": "Either adopts it to look open, or punishes the person for offering it.",
+      "under": "Punishes the person for offering it, or collects it and never shows that you heard it.",
       "justRight": "Thanks the dissent, says what you decided, and why their point did not carry it.",
-      "over": "Collects dissent and then never shows that you heard it."
+      "over": "Adopts it to look open."
     },
     {
       "id": "ideas-from-anywhere",
