@@ -1,0 +1,68 @@
+{
+  "id": 10008,
+  "slug": "curiosity",
+  "company": "netflix",
+  "name": "Curiosity",
+  "sort": 8,
+  "definition": "You learn rapidly and eagerly; you are as interested in other people's ideas as your own; you're humble about what you don't yet know.",
+  "terms": [
+    {
+      "id": "curiosity",
+      "label": "curiosity",
+      "kind": "alias"
+    },
+    {
+      "id": "learn-rapidly",
+      "label": "learn rapidly",
+      "kind": "facet",
+      "rows": [
+        "a-gap-in-what-you-know"
+      ]
+    },
+    {
+      "id": "other-people-s-ideas",
+      "label": "other people's ideas",
+      "kind": "facet",
+      "rows": [
+        "someone-elses-idea"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "a-gap-in-what-you-know",
+      "situation": "Work that needs something you do not know yet",
+      "under": "Fakes fluency, or waits for someone else to learn it.",
+      "justRight": "Learns the missing piece fast enough to use it, and says what you still do not know.",
+      "over": "Goes deep on the interesting adjacent topic and does not come back to the work."
+    },
+    {
+      "id": "someone-elses-idea",
+      "situation": "A colleague's idea that competes with yours",
+      "under": "Listens only long enough to answer it.",
+      "justRight": "Gets interested in it. Asks the question that would make it better, whether or not you adopt it.",
+      "over": "Abandons your own prepared view at the first interesting alternative."
+    },
+    {
+      "id": "humility-about-the-unknown",
+      "situation": "A domain you are new to",
+      "under": "Speaks as if tenure elsewhere transfers.",
+      "justRight": "Asks the basic questions early, and uses the answers.",
+      "over": "Stays in student mode after you know enough to decide, and the team carries you."
+    },
+    {
+      "id": "learning-from-a-miss",
+      "situation": "A result that surprised you",
+      "under": "Files it as bad luck and moves on.",
+      "justRight": "Finds out why you were surprised and changes the next attempt.",
+      "over": "Turns the postmortem into a seminar and the next attempt never starts."
+    },
+    {
+      "id": "curiosity-with-a-deadline",
+      "situation": "A question you would love to chase while a commitment is open",
+      "under": "Refuses every question that was not on Monday's list, including the one that would have saved the work.",
+      "justRight": "Writes the question down, finishes the commitment, and comes back if the question still matters.",
+      "over": "Chases it and lets the commitment slip without a word."
+    }
+  ]
+}

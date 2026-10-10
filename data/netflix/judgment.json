@@ -1,0 +1,68 @@
+{
+  "id": 10003,
+  "slug": "judgment",
+  "company": "netflix",
+  "name": "Judgment",
+  "sort": 3,
+  "definition": "You look beyond short term fixes in favor of long term solutions; you make wise decisions despite ambiguity; you use data to inform your intuition.",
+  "terms": [
+    {
+      "id": "judgment",
+      "label": "judgment",
+      "kind": "alias"
+    },
+    {
+      "id": "wise-decisions",
+      "label": "wise decisions",
+      "kind": "facet",
+      "rows": [
+        "deciding-in-ambiguity"
+      ]
+    },
+    {
+      "id": "data-and-intuition",
+      "label": "data and intuition",
+      "kind": "facet",
+      "rows": [
+        "data-and-a-hunch"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "short-fix-or-long-fix",
+      "situation": "A problem with a fast patch and a slower fix",
+      "under": "Ships the patch, closes the ticket, and leaves the same problem for next month.",
+      "justRight": "Uses the patch only to stop the bleeding, and schedules the fix that removes the cause.",
+      "over": "Refuses every short patch, including the one that keeps customers working while the long fix is built."
+    },
+    {
+      "id": "deciding-in-ambiguity",
+      "situation": "A decision the data will not settle this week",
+      "under": "Waits for certainty the calendar will not give you.",
+      "justRight": "Names what you know, what you are guessing, and decides. Writes down what would change your mind.",
+      "over": "Decides in the first ten minutes and treats later facts as a nuisance."
+    },
+    {
+      "id": "data-and-a-hunch",
+      "situation": "A hunch that the numbers can test",
+      "under": "Goes with the hunch and does not look at the numbers you already have.",
+      "justRight": "Lets the data inform the hunch. If the numbers disagree, you can say why you are still going, or you change the call.",
+      "over": "Will not move until a dashboard says yes, including when the dashboard does not measure the thing you are deciding."
+    },
+    {
+      "id": "testing-a-call-you-like",
+      "situation": "A call you already like",
+      "under": "Looks only for evidence that supports it.",
+      "justRight": "Asks what would show the call is wrong, and gives that a real chance before you commit.",
+      "over": "Talks yourself out of every call by collecting objections until the window closes."
+    },
+    {
+      "id": "whose-judgment",
+      "situation": "A decision in someone else's craft",
+      "under": "Overrules the person closest to the work because you are senior.",
+      "justRight": "Weighs the judgment of the people whose craft this is, and says whose view carried the call.",
+      "over": "Defers every call to the nearest specialist and will not make one when the specialists disagree."
+    }
+  ]
+}

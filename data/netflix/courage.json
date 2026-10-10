@@ -1,0 +1,68 @@
+{
+  "id": 10006,
+  "slug": "courage",
+  "company": "netflix",
+  "name": "Courage",
+  "sort": 6,
+  "definition": "You are vulnerable in search for the truth; you are willing to risk failure, or challenge the status quo, in the pursuit of excellence.",
+  "terms": [
+    {
+      "id": "courage",
+      "label": "courage",
+      "kind": "alias"
+    },
+    {
+      "id": "risk-failure",
+      "label": "risk failure",
+      "kind": "facet",
+      "rows": [
+        "a-bet-that-might-fail"
+      ]
+    },
+    {
+      "id": "challenge-the-status-quo",
+      "label": "challenge the status quo",
+      "kind": "facet",
+      "rows": [
+        "challenging-the-usual-way"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "saying-you-do-not-know",
+      "situation": "A question you cannot answer yet",
+      "under": "Bluffs, or changes the subject.",
+      "justRight": "Says what you do not know and what you will do to find out.",
+      "over": "Announces your uncertainty so often that people cannot tell when you actually have a view."
+    },
+    {
+      "id": "a-bet-that-might-fail",
+      "situation": "A course that could fail in public and might be excellent",
+      "under": "Picks the safe version so a failure cannot be tied to you.",
+      "justRight": "Takes the bet when the upside is real, names the failure mode, and learns from it if it misses.",
+      "over": "Seeks public risk for its own sake, including bets that were never aimed at a better result."
+    },
+    {
+      "id": "challenging-the-usual-way",
+      "situation": "A settled practice that is getting in the way of excellent work",
+      "under": "Leaves it alone because it is how things are done.",
+      "justRight": "Challenges it with a specific case, and stays to help replace it if you were right.",
+      "over": "Attacks every settled practice, including the ones that are why the work is good."
+    },
+    {
+      "id": "vulnerability-with-a-point",
+      "situation": "A hard truth about the work that requires you to look bad first",
+      "under": "Protects your image and lets the team keep the wrong story.",
+      "justRight": "Puts the unflattering fact on the table so the team can decide from it.",
+      "over": "Shares personal discomfort that does not help the decision, and calls that courage."
+    },
+    {
+      "id": "courage-up-and-down",
+      "situation": "Disagreeing with someone who can affect your job",
+      "under": "Agrees in the room and complains later.",
+      "justRight": "Says the disagreement in the room, about the work, and accepts the decision once it is made.",
+      "over": "Picks fights with senior people to be seen as brave, including on things that do not matter."
+    }
+  ]
+}

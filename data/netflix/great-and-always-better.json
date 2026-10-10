@@ -1,0 +1,62 @@
+{
+  "id": 10020,
+  "slug": "great-and-always-better",
+  "company": "netflix",
+  "name": "Great and Always Better",
+  "sort": 20,
+  "definition": "We often say Netflix sucks today compared to where we can be tomorrow. We need the self-awareness to understand what should be better, and the discipline and resilience to get there.",
+  "terms": [
+    {
+      "id": "great-and-always-better",
+      "label": "great and always better",
+      "kind": "alias"
+    },
+    {
+      "id": "always-better",
+      "label": "always better",
+      "kind": "alias"
+    },
+    {
+      "id": "sucks-today",
+      "label": "sucks today",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "today-versus-tomorrow",
+      "situation": "Work that is good enough to ship and not as good as it could be",
+      "under": "Declares victory and stops looking.",
+      "justRight": "Ships what members need now, and names the specific thing that should be better next.",
+      "over": "Refuses to ship because tomorrow's version is always more deserving."
+    },
+    {
+      "id": "self-awareness",
+      "situation": "A weakness in your own work or in the team's",
+      "under": "Needs someone else to point at it, and even then you argue.",
+      "justRight": "You can see the gap yourself, and you say it before the postmortem does.",
+      "over": "Catalogs flaws so eagerly that the team cannot tell a real gap from taste."
+    },
+    {
+      "id": "discipline-to-get-there",
+      "situation": "A gap you have already named",
+      "under": "Names it and does not change the next cycle.",
+      "justRight": "Puts the improvement on the calendar and does the unglamorous work to get there.",
+      "over": "Opens five improvement efforts and finishes none."
+    },
+    {
+      "id": "resilience-after-the-gap",
+      "situation": "The improvement is harder than the speech about it",
+      "under": "Drops it when it gets dull.",
+      "justRight": "Stays with it. Adjusts the method. Does not pretend the gap closed.",
+      "over": "Keeps the effort alive after the gap has closed, because the program has a team now."
+    },
+    {
+      "id": "not-preserving-the-old-way",
+      "situation": "A habit that used to be why you were good",
+      "under": "Defends it because it is the culture.",
+      "justRight": "Keeps it only if it still makes the work better, and retires it when it does not.",
+      "over": "Tears out a working habit because it is old."
+    }
+  ]
+}

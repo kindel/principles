@@ -1,0 +1,57 @@
+{
+  "id": 10016,
+  "slug": "disagree-then-commit",
+  "company": "netflix",
+  "name": "Disagree Then Commit",
+  "sort": 16,
+  "definition": "After a decision is made, we expect everyone, including the people who argued for a different approach, to disagree then commit. This helps ensure the outcome is as successful as possible.",
+  "terms": [
+    {
+      "id": "disagree-then-commit",
+      "label": "disagree then commit",
+      "kind": "alias"
+    },
+    {
+      "id": "disagree-and-commit",
+      "label": "disagree and commit",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "after-you-lost",
+      "situation": "A decision that went against the approach you argued for",
+      "under": "Relitigates it in side conversations, or complies so slowly that it fails.",
+      "justRight": "Commits. You carry the decision as if you wanted the outcome to work, because you do.",
+      "over": "Pretends you agreed all along, so the next decision never hears the dissent you actually had."
+    },
+    {
+      "id": "committing-in-public",
+      "situation": "Explaining the decision to people who know you disagreed",
+      "under": "Signals that you are only going along, and invites them to drag their feet.",
+      "justRight": "Explains the decision cleanly, including that you had argued the other way, and asks for the same commitment.",
+      "over": "Gives a speech about your loyalty and does not do the work the decision requires."
+    },
+    {
+      "id": "the-people-who-were-not-the-captain",
+      "situation": "Your team preferred a path the captain did not pick",
+      "under": "Lets the team keep building the path that lost.",
+      "justRight": "Switches the team to the chosen path and removes the ambiguity about which one is real.",
+      "over": "Shuts down every question about how to implement, and calls that commitment."
+    },
+    {
+      "id": "when-commitment-is-due",
+      "situation": "The hour the decision is actually made",
+      "under": "Keeps a private veto for a few more days.",
+      "justRight": "The disagreeing stops when the decision is made, unless a genuinely new fact appears.",
+      "over": "Treats the decision as sacred even after a new fact makes it harmful."
+    },
+    {
+      "id": "helping-it-succeed",
+      "situation": "Work you still think is the second-best path",
+      "under": "Does the minimum and waits to be proved right.",
+      "justRight": "Puts real effort into making the chosen path succeed.",
+      "over": "Over-invests in proving the decision was wise, and hides the early signs it was not."
+    }
+  ]
+}

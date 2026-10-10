@@ -1,0 +1,65 @@
+{
+  "id": 10002,
+  "slug": "selflessness",
+  "company": "netflix",
+  "name": "Selflessness",
+  "sort": 2,
+  "definition": "You are humble when searching for the best ideas; you seek what's best for Netflix, not yourself or your team; you take time to help others succeed.",
+  "terms": [
+    {
+      "id": "selflessness",
+      "label": "selflessness",
+      "kind": "alias"
+    },
+    {
+      "id": "best-for-netflix",
+      "label": "best for Netflix",
+      "kind": "alias"
+    },
+    {
+      "id": "help-others-succeed",
+      "label": "help others succeed",
+      "kind": "facet",
+      "rows": [
+        "time-to-help"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "whose-idea-wins",
+      "situation": "Choosing among ideas, including your own",
+      "under": "Pushes your idea because it is yours, and treats a better one as a loss.",
+      "justRight": "Drops your idea when another one is better for the company, and says whose idea it was.",
+      "over": "Refuses to advance any idea you thought of, so the team loses work you were actually the right person to do."
+    },
+    {
+      "id": "your-team-or-the-company",
+      "situation": "A choice that helps the company and slows your team",
+      "under": "Protects your team's numbers and leaves the company-level problem to someone else.",
+      "justRight": "Takes the company outcome when it is actually better, tells your team what you gave up, and helps them absorb it.",
+      "over": "Sacrifices your team's real commitments for a company story that does not change the outcome."
+    },
+    {
+      "id": "time-to-help",
+      "situation": "A colleague who is stuck on something you know",
+      "under": "Stays on your own list and lets them stay stuck.",
+      "justRight": "Takes the time to help them succeed, then goes back to your own work.",
+      "over": "Becomes the person everyone waits on, and your own work stops moving."
+    },
+    {
+      "id": "credit-for-the-idea",
+      "situation": "A win that started with someone else's idea",
+      "under": "Tells the story so the win sounds like yours.",
+      "justRight": "Names the person who had the idea and the people who made it real.",
+      "over": "Erases your own real contribution so thoroughly that nobody can see who did the work."
+    },
+    {
+      "id": "humility-as-silence",
+      "situation": "A meeting where you have part of the answer",
+      "under": "Presents a partial answer as if it were complete, and the room treats the gap as settled.",
+      "justRight": "Offers what you know, then changes your mind in public if someone else has the better answer.",
+      "over": "Performs humility by agreeing with every speaker, and the decision never gets a real point of view."
+    }
+  ]
+}

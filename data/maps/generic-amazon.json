@@ -102,10 +102,11 @@
         1004
       ],
       "facets": [
-        "are-right-a-lot"
+        "are-right-a-lot",
+        "ask-who-disagrees"
       ],
       "rowFlags": [],
-      "note": "Same name. Both sit on are-right-a-lot. The table is judgment, other perspectives, and changing your mind when the fact shows up. Teaching and Further reading stay the reused text."
+      "note": "Same name. Both sit on are-right-a-lot and ask-who-disagrees. The quiet room is the shared slice. The rest of the table is judgment, other perspectives, and changing your mind when the fact shows up. Teaching and Further reading stay the reused text."
     },
     {
       "sourceId": 8005,
@@ -128,10 +129,11 @@
         1003
       ],
       "facets": [
+        "cut-the-extra-step",
         "invent-and-simplify"
       ],
       "rowFlags": [],
-      "note": "Same name. Generated rows fit looking outside the team, cutting steps, and leaving a new approach in play while people are still unsure. No row dropped."
+      "note": "Same name. Looking outside the team, and a new approach that people are still unsure about, stay on invent-and-simplify. Cutting steps that never change a decision is cut-the-extra-step, the same slice as Amazon."
     },
     {
       "sourceId": 8007,

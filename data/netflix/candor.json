@@ -1,0 +1,68 @@
+{
+  "id": 10004,
+  "slug": "candor",
+  "company": "netflix",
+  "name": "Candor",
+  "sort": 4,
+  "definition": "You willingly receive and give feedback; you are open about what's working and what needs to improve; you admit mistakes openly and share learnings widely.",
+  "terms": [
+    {
+      "id": "candor",
+      "label": "candor",
+      "kind": "alias"
+    },
+    {
+      "id": "extraordinary-candor",
+      "label": "extraordinary candor",
+      "kind": "alias"
+    },
+    {
+      "id": "give-and-receive-feedback",
+      "label": "give and receive feedback",
+      "kind": "facet",
+      "rows": [
+        "feedback-you-did-not-ask-for",
+        "saying-the-hard-thing",
+        "only-what-you-would-say-to-them",
+        "candor-across-level"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "feedback-you-did-not-ask-for",
+      "situation": "Hearing something unflattering about your work",
+      "under": "Explains it away, or avoids the person who said it.",
+      "justRight": "Takes the feedback, asks one clarifying question, and changes the work where they are right.",
+      "over": "Treats every comment as an order and abandons your own judgment about the work."
+    },
+    {
+      "id": "saying-the-hard-thing",
+      "situation": "A colleague's work that needs to improve",
+      "under": "Says it is fine, and the problem shows up later for someone else.",
+      "justRight": "Says what is working and what needs to change, to them, in time for them to use it.",
+      "over": "Delivers a running critique of the person, not the work, and calls that honesty."
+    },
+    {
+      "id": "admitting-the-miss",
+      "situation": "A mistake you made that other people are still steering around",
+      "under": "Hopes it stays quiet, or mentions it only after someone else finds it.",
+      "justRight": "Says what you got wrong, what you learned, and what you are doing differently. Shares that beyond the people who already know.",
+      "over": "Turns the confession into the main event and never gets to the fix."
+    },
+    {
+      "id": "only-what-you-would-say-to-them",
+      "situation": "Talking about a colleague who is not in the room",
+      "under": "Says the sharp version to everyone except them.",
+      "justRight": "Says nothing about them that you have not said, or are not willing to say, to them.",
+      "over": "Refuses to brief your own manager on a real performance problem because the person is not in that meeting."
+    },
+    {
+      "id": "candor-across-level",
+      "situation": "Feedback for someone more senior, or from a different background than yours",
+      "under": "Softens it into nothing because of the level or the distance.",
+      "justRight": "Says the same clear thing you would say to a peer, with enough care that they can hear it.",
+      "over": "Uses bluntness as a badge and ignores the effect on whether they can act on it."
+    }
+  ]
+}

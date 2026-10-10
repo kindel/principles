@@ -1,0 +1,62 @@
+{
+  "id": 10010,
+  "slug": "decency-and-respect",
+  "company": "netflix",
+  "name": "Decency and Respect",
+  "sort": 10,
+  "definition": "No matter how brilliant someone may be, there's no place in our Dream Team for people who don't treat their colleagues with decency and respect.",
+  "terms": [
+    {
+      "id": "decency-and-respect",
+      "label": "decency and respect",
+      "kind": "alias"
+    },
+    {
+      "id": "decency",
+      "label": "decency",
+      "kind": "alias"
+    },
+    {
+      "id": "treat-colleagues-with-respect",
+      "label": "treat colleagues with respect",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "brilliant-and-unkind",
+      "situation": "A brilliant person who treats colleagues badly",
+      "under": "Protects them because the output is strong.",
+      "justRight": "Says the treatment is the problem, gives them a real chance to change, and parts ways if they will not.",
+      "over": "Removes them on a rumor, or for a style that is merely different, and calls it decency."
+    },
+    {
+      "id": "respect-in-disagreement",
+      "situation": "A hard disagreement about the work",
+      "under": "Goes after the person.",
+      "justRight": "Stays on the work, assumes good intent, and still says the disagreement clearly.",
+      "over": "Avoids the disagreement so nobody feels disrespected, and the wrong call stands."
+    },
+    {
+      "id": "respecting-a-difference",
+      "situation": "A colleague whose background or manner is not yours",
+      "under": "Treats the difference as a reason to discount them.",
+      "justRight": "Respects the difference and still holds the same bar for the work.",
+      "over": "Refuses to give them direct feedback, and calls the silence respect."
+    },
+    {
+      "id": "trusting-intent",
+      "situation": "A tense moment where you do not yet know why someone did something",
+      "under": "Assigns the worst motive and acts on it.",
+      "justRight": "Assumes good intent, asks, and changes your view if the facts say otherwise.",
+      "over": "Assumes good intent so thoroughly that you ignore a pattern of harm."
+    },
+    {
+      "id": "decency-when-you-are-winning",
+      "situation": "You have the stronger argument and the room knows it",
+      "under": "Uses the win to humiliate the person who lost.",
+      "justRight": "Makes the point, leaves them a way to commit, and does not make them pay socially.",
+      "over": "Softens a true point so far that the room thinks you changed your mind."
+    }
+  ]
+}

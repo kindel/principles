@@ -96,4 +96,16 @@ COMPANY_META = collections.OrderedDict([
             "culture and unyielding dedication to mission success."
         ),
     }),
+    ("netflix", {
+        "block": 10000,
+        "name": "Netflix",
+        "set": "Culture Memo",
+        # The second sentence contains an em dash. The sentence after it
+        # is not contiguous without that sentence, so the preamble stops here.
+        "source": "https://www.jobs.netflix.com/culture",
+        "preamble": (
+            "At Netflix, we aspire to entertain the world, thrilling audiences "
+            "everywhere."
+        ),
+    }),
 ])

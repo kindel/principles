@@ -1,0 +1,67 @@
+{
+  "id": 10001,
+  "slug": "the-dream-team",
+  "company": "netflix",
+  "name": "The Dream Team",
+  "sort": 1,
+  "definition": "It's the people. Imagine working alongside stunning colleagues who are great at what they do, and even better at working together.",
+  "terms": [
+    {
+      "id": "dream-team",
+      "label": "dream team",
+      "kind": "alias"
+    },
+    {
+      "id": "the-dream-team",
+      "label": "the dream team",
+      "kind": "alias"
+    },
+    {
+      "id": "high-performers",
+      "label": "high performers",
+      "kind": "equivalent"
+    },
+    {
+      "id": "stunning-colleagues",
+      "label": "stunning colleagues",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "right-person-in-the-role",
+      "situation": "An open role on the team",
+      "under": "Fills the seat with someone pleasant and available, and does not ask whether they are great at the work.",
+      "justRight": "Holds the seat for someone who is great at the work and makes the people around them better.",
+      "over": "Keeps the seat empty through a long search for a mythical hire while the work piles up on everyone else."
+    },
+    {
+      "id": "replacing-someone-loved",
+      "situation": "A loved teammate who is no longer the right person",
+      "under": "Leaves them in the role because the relationship is good, and the work keeps missing.",
+      "justRight": "Says what the role needs now, helps them move if there is a real fit elsewhere, and changes the seat when there is not.",
+      "over": "Swaps people out to look decisive, including people who are still the right ones for the work."
+    },
+    {
+      "id": "better-together",
+      "situation": "A team of strong individuals",
+      "under": "Treats each person's output as the whole job and lets handoffs stay rough.",
+      "justRight": "Expects people who are great at the work to make the joint work better, and says so when they do not.",
+      "over": "Demands so much joint process that the strong people spend the week coordinating instead of doing the work."
+    },
+    {
+      "id": "average-and-pleasant",
+      "situation": "A team that gets along and ships average work",
+      "under": "Calls the harmony a success and leaves the bar where it is.",
+      "justRight": "Treats average work as a problem even when the team is kind, and raises the bar without making kindness optional.",
+      "over": "Turns every friendly week into a performance review and people stop telling each other the truth."
+    },
+    {
+      "id": "perks-instead-of-people",
+      "situation": "Trying to make the workplace attractive",
+      "under": "Adds perks and leaves the roster as it is.",
+      "justRight": "Spends the effort on who is in the room. Perks are fine. They are not the point.",
+      "over": "Refuses ordinary help, tools, or a decent workspace because only the roster is allowed to matter."
+    }
+  ]
+}

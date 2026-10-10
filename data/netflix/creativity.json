@@ -1,0 +1,70 @@
+{
+  "id": 10005,
+  "slug": "creativity",
+  "company": "netflix",
+  "name": "Creativity",
+  "sort": 5,
+  "definition": "You welcome new ideas; you are passionate and persistent in pursuit of more innovative solutions; you value artistic expression.",
+  "terms": [
+    {
+      "id": "creativity",
+      "label": "creativity",
+      "kind": "alias"
+    },
+    {
+      "id": "new-ideas",
+      "label": "new ideas",
+      "kind": "facet",
+      "rows": [
+        "a-new-idea-in-the-room",
+        "ideas-from-outside-the-craft"
+      ]
+    },
+    {
+      "id": "innovative-solutions",
+      "label": "innovative solutions",
+      "kind": "facet",
+      "rows": [
+        "staying-after-a-better-way",
+        "persistence-without-a-result"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "a-new-idea-in-the-room",
+      "situation": "Someone offers an approach you did not think of",
+      "under": "Shoots it down because it is unfamiliar, or ignores it.",
+      "justRight": "Gives it a real hearing, keeps the part that is better, and says why you are dropping the rest.",
+      "over": "Adopts every new idea on contact, and the work never settles long enough to ship."
+    },
+    {
+      "id": "staying-after-a-better-way",
+      "situation": "A working solution that is only adequate",
+      "under": "Stops at the first thing that functions.",
+      "justRight": "Keeps looking for a more innovative solution while the current one still serves people, and ships when the better one is real.",
+      "over": "Holds the release for a cleverer version that the audience did not need."
+    },
+    {
+      "id": "persistence-without-a-result",
+      "situation": "An original approach that is not working",
+      "under": "Drops it at the first objection.",
+      "justRight": "Stays with it while there is a reason to believe it will work, and stops when the evidence says it will not.",
+      "over": "Keeps a failed original idea alive because giving it up would feel uncreative."
+    },
+    {
+      "id": "ideas-from-outside-the-craft",
+      "situation": "An idea from someone who does not do this job",
+      "under": "Dismisses it because of who said it.",
+      "justRight": "Judges the idea. Uses it when it is good. Does not pretend every outside idea is equally informed.",
+      "over": "Treats outside novelty as automatically better than the craft of the people who do the work."
+    },
+    {
+      "id": "artistic-work-you-dislike",
+      "situation": "Creative work that is not to your taste",
+      "under": "Blocks it because you would not watch it, read it, or play it.",
+      "justRight": "Judges whether it is good of its kind, not whether it is for you.",
+      "over": "Refuses to have a standard at all, and calls every preference censorship."
+    }
+  ]
+}

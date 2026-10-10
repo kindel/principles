@@ -1,0 +1,65 @@
+{
+  "id": 10011,
+  "slug": "the-keeper-test",
+  "company": "netflix",
+  "name": "The Keeper Test",
+  "sort": 11,
+  "definition": "In reality, we encourage everyone to speak to their managers about what's going well and what's not on a regular basis. This helps avoid surprises. Managers also evaluate team members on their whole record, rather than focusing on the mistakes or bets that didn't pay off. On the Dream Team, you need people who challenge the status quo and try new things. So we stick with employees through short-term bumps.",
+  "terms": [
+    {
+      "id": "keeper-test",
+      "label": "keeper test",
+      "kind": "alias"
+    },
+    {
+      "id": "the-keeper-test",
+      "label": "the keeper test",
+      "kind": "alias"
+    },
+    {
+      "id": "fight-to-keep-them",
+      "label": "fight to keep them",
+      "kind": "facet",
+      "rows": [
+        "would-you-keep-them"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "would-you-keep-them",
+      "situation": "Asking whether you would fight to keep someone",
+      "under": "Avoids the question, or answers it only when they resign.",
+      "justRight": "Asks it while they are still here. If the answer is no, you say so and part cleanly. If the answer is yes, you tell them what you are fighting for.",
+      "over": "Runs the question as a weekly threat, and people stop taking risks."
+    },
+    {
+      "id": "would-you-hire-them-again",
+      "situation": "Knowing everything you know today",
+      "under": "Judges them on how hard it would be to replace them this month.",
+      "justRight": "Asks whether you would hire them again for the role as it is now, and acts on that answer.",
+      "over": "Re-litigates their whole career every month and never lets a good year count."
+    },
+    {
+      "id": "no-surprises",
+      "situation": "A gap between how someone is doing and what they have heard",
+      "under": "Saves the hard part for a formal review.",
+      "justRight": "Talks about what is going well and what is not, on a regular basis, so the keeper test is not a surprise.",
+      "over": "Delivers a constant stream of worry and the person cannot tell a real problem from noise."
+    },
+    {
+      "id": "the-whole-record",
+      "situation": "A miss, or a bet that did not pay off",
+      "under": "Lets that one episode decide whether they stay.",
+      "justRight": "Weighs it inside the whole record, including the bets that were worth taking.",
+      "over": "Ignores a real pattern because one old win is still on the page."
+    },
+    {
+      "id": "short-term-bumps",
+      "situation": "A rough patch for someone who challenges the usual way",
+      "under": "Treats the bump as the answer to the keeper test.",
+      "justRight": "Sticks with them through a short-term bump when the underlying bet is still one you want, and names what has to change.",
+      "over": "Uses the bump rule to avoid a keeper-test answer you already know."
+    }
+  ]
+}

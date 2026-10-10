@@ -1,0 +1,70 @@
+{
+  "id": 10013,
+  "slug": "context-not-control",
+  "company": "netflix",
+  "name": "Context Not Control",
+  "sort": 13,
+  "definition": "That said, context not control should not be confused with hands-off management. Managers need to be involved in the work being done around them, and actively coach their teams. They may also have to step in when someone is about to make a decision that is unethical or could materially harm Netflix, during a crisis or if a new team member lacks the full context.",
+  "terms": [
+    {
+      "id": "context-not-control",
+      "label": "context not control",
+      "kind": "alias"
+    },
+    {
+      "id": "not-hands-off",
+      "label": "not hands-off",
+      "kind": "facet",
+      "rows": [
+        "coaching-while-involved",
+        "when-you-step-in",
+        "a-crisis"
+      ]
+    },
+    {
+      "id": "coach-the-team",
+      "label": "coach the team",
+      "kind": "facet",
+      "rows": [
+        "coaching-while-involved"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "giving-the-context",
+      "situation": "A team about to make a call you understand better than they do",
+      "under": "Stays silent and hopes.",
+      "justRight": "Gives them the context and the clarity, then lets them decide.",
+      "over": "Gives so much context, and so many hints, that you have made the decision while pretending they did."
+    },
+    {
+      "id": "coaching-while-involved",
+      "situation": "Work happening around you",
+      "under": "Checks out because you did not want to control it.",
+      "justRight": "Stays close enough to coach, and does not take the pen.",
+      "over": "Coaches by rewriting the work."
+    },
+    {
+      "id": "when-you-step-in",
+      "situation": "A decision that is unethical, or that could materially harm the company",
+      "under": "Lets it proceed because stepping in would look like control.",
+      "justRight": "Steps in, says why this one is different, and hands the next ordinary decision back.",
+      "over": "Steps in on any decision you would have made differently."
+    },
+    {
+      "id": "a-crisis",
+      "situation": "A crisis, or a new person who does not have the context yet",
+      "under": "Applies the same hands-off stance you use with a seasoned team.",
+      "justRight": "Steps in for the crisis, or until the new person has the context, and then steps back.",
+      "over": "Uses one crisis as a reason to take the team's decisions for the rest of the quarter."
+    },
+    {
+      "id": "control-by-approval",
+      "situation": "A team that brings you every choice for a yes",
+      "under": "Enjoys the queue.",
+      "justRight": "Asks what context they were missing, gives that, and stops requiring the yes.",
+      "over": "Refuses to hear about a decision even when they are asking because the context is missing."
+    }
+  ]
+}

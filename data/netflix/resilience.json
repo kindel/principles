@@ -1,0 +1,68 @@
+{
+  "id": 10009,
+  "slug": "resilience",
+  "company": "netflix",
+  "name": "Resilience",
+  "sort": 9,
+  "definition": "You quickly adapt to changing circumstances; you make tough decisions without agonizing or long delay; you embrace a hard challenge.",
+  "terms": [
+    {
+      "id": "resilience",
+      "label": "resilience",
+      "kind": "alias"
+    },
+    {
+      "id": "adapt-quickly",
+      "label": "adapt quickly",
+      "kind": "facet",
+      "rows": [
+        "the-plan-breaks"
+      ]
+    },
+    {
+      "id": "hard-challenge",
+      "label": "hard challenge",
+      "kind": "facet",
+      "rows": [
+        "a-hard-challenge"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "the-plan-breaks",
+      "situation": "Circumstances change in the middle of the work",
+      "under": "Keeps executing the old plan, or freezes until someone else redraws it.",
+      "justRight": "Changes the plan to fit what is true now, tells the people affected, and keeps moving.",
+      "over": "Changes direction every time a new fact appears, and nobody can build on yesterday's decision."
+    },
+    {
+      "id": "a-tough-call-on-a-timer",
+      "situation": "A decision that will not get more comfortable by waiting",
+      "under": "Agonizes in meetings until the choice is made for you.",
+      "justRight": "Makes the call, says what you are giving up, and moves.",
+      "over": "Decides before you have the facts that were already available, and calls the rush resilience."
+    },
+    {
+      "id": "a-hard-challenge",
+      "situation": "Work that is genuinely hard and worth doing",
+      "under": "Looks for a version that will not stretch anyone.",
+      "justRight": "Takes the hard version, breaks it into the next step, and stays with it.",
+      "over": "Chooses the hardest framing even when a simpler one would produce the same result."
+    },
+    {
+      "id": "a-setback",
+      "situation": "A miss that stings",
+      "under": "Drops the effort, or pretends it did not happen.",
+      "justRight": "Names what failed, keeps what still works, and takes the next step the same week.",
+      "over": "Treats recovery as a performance and will not let the team sit with what actually broke."
+    },
+    {
+      "id": "sticking-through-a-bump",
+      "situation": "A short-term bump in an approach that is still right",
+      "under": "Abandons it at the first bad week.",
+      "justRight": "Stays with it through the bump, and sets a point where you will reconsider if the bump is actually a wall.",
+      "over": "Calls every wall a bump and will not reconsider."
+    }
+  ]
+}
