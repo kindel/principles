@@ -4808,8 +4808,8 @@
       ]
     },
     {
-      "id": "courage",
-      "label": "courage",
+      "id": "bold-bet",
+      "label": "bold bet",
       "principles": [
         10006,
         10018
@@ -4824,6 +4824,23 @@
           "id": "a-safer-version"
         },
         {
+          "id": "a-public-bet",
+          "situation": "A bet that might fail in public",
+          "under": "You sand it down until it cannot fail or matter.",
+          "justRight": "You take it when excellence requires it, and you name how you will know it failed.",
+          "over": "You take it so you can be seen taking it.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "courage",
+      "label": "courage",
+      "principles": [
+        10006
+      ],
+      "rows": [
+        {
           "principle": 10006,
           "id": "challenging-the-usual-way"
         },
@@ -4834,14 +4851,6 @@
         {
           "principle": 10006,
           "id": "courage-up-and-down"
-        },
-        {
-          "id": "a-public-bet",
-          "situation": "A bet that might fail in public",
-          "under": "You sand it down until it cannot fail or matter.",
-          "justRight": "You take it when excellence requires it, and you name how you will know it failed.",
-          "over": "You take it so you can be seen taking it.",
-          "words": "generated"
         },
         {
           "id": "the-usual-way",

@@ -1167,6 +1167,7 @@
           "sort": 6,
           "file": "data/netflix/courage.json",
           "facets": [
+            "bold-bet",
             "courage",
             "earn-trust"
           ]
@@ -1288,7 +1289,7 @@
           "sort": 18,
           "file": "data/netflix/uncomfortably-exciting.json",
           "facets": [
-            "courage",
+            "bold-bet",
             "uncomfortably-exciting"
           ]
         },

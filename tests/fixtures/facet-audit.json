@@ -641,8 +641,8 @@
     {
       "id": 10006,
       "decision": "map",
-      "facets": ["courage", "earn-trust"],
-      "reason": "Saying what you do not know is earn-trust. Risking failure and challenging the usual way stay on courage. The bold bet on uncomfortably-exciting is the same public bet, so that record sits here too."
+      "facets": ["bold-bet", "courage", "earn-trust"],
+      "reason": "Saying what you do not know is earn-trust. The public bet is bold-bet, shared with uncomfortably exciting, so courage does not inherit that table's other rows. Challenging the usual way stays on courage."
     },
     {
       "id": 10007,
@@ -713,8 +713,8 @@
     {
       "id": 10018,
       "decision": "map",
-      "facets": ["courage", "uncomfortably-exciting"],
-      "reason": "The bold bet with a way to learn is courage, the same behavior as a public bet. Experimentation, adaptation, and discomfort stay on uncomfortably-exciting."
+      "facets": ["bold-bet", "uncomfortably-exciting"],
+      "reason": "The bold bet with a way to learn is bold-bet, shared with courage, so this record does not inherit courage's other rows. Experimentation, adaptation, and discomfort stay on uncomfortably-exciting."
     },
     {
       "id": 10019,
