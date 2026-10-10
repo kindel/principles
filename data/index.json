@@ -67,6 +67,7 @@
           "sort": 6,
           "file": "data/generic/invent-and-simplify.json",
           "facets": [
+            "cut-the-extra-step",
             "invent-and-simplify"
           ]
         },
@@ -199,6 +200,7 @@
           "sort": 3,
           "file": "data/amazon/invent-and-simplify.json",
           "facets": [
+            "cut-the-extra-step",
             "invent-and-simplify"
           ]
         },
@@ -791,6 +793,7 @@
           "sort": 6,
           "file": "data/dawn/invent-and-simplify.json",
           "facets": [
+            "cut-the-extra-step",
             "invent-and-simplify"
           ]
         },
@@ -980,6 +983,7 @@
           "sort": 3,
           "file": "data/blue-origin/deliver-results.json",
           "facets": [
+            "after-a-setback",
             "deliver-results"
           ]
         },
@@ -1076,6 +1080,7 @@
           "sort": 12,
           "file": "data/blue-origin/technical-ambition-and-simplicity.json",
           "facets": [
+            "cut-the-extra-step",
             "invent-and-simplify"
           ]
         },
@@ -1204,6 +1209,7 @@
           "sort": 9,
           "file": "data/netflix/resilience.json",
           "facets": [
+            "after-a-setback",
             "resilience"
           ]
         },
@@ -1234,6 +1240,7 @@
           "sort": 12,
           "file": "data/netflix/people-over-process.json",
           "facets": [
+            "cut-the-extra-step",
             "let-them-decide",
             "people-over-process"
           ]

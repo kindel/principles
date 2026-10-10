@@ -1479,10 +1479,6 @@
         },
         {
           "principle": 1003,
-          "id": "simplifying-a-process"
-        },
-        {
-          "principle": 1003,
           "id": "bureaucracy-vs-novelty"
         },
         {
@@ -1515,14 +1511,6 @@
           "under": "Waves it off because it did not start here. The team keeps building its own copy of something that already works next door.",
           "justRight": "Gives the idea a real look even when the source is unexpected. Takes what fits this problem and invents only the part that is still missing.",
           "over": "Copies the other team's whole approach without checking the fit. People spend the week bending a solution that was built for a different job.",
-          "words": "generated"
-        },
-        {
-          "id": "extra-steps-on-a-request-form",
-          "situation": "Extra steps on a request form",
-          "under": "Leaves every field and approval in place. Requesters keep filling out details nobody reads.",
-          "justRight": "Sits with a few recent requests and removes the fields that never change a decision. Keeps the two or three questions that still catch a real miss.",
-          "over": "Cuts the form to almost nothing. Reviewers have to chase people for context, and the queue slows down for everyone.",
           "words": "generated"
         },
         {
@@ -1795,10 +1783,6 @@
         },
         {
           "principle": 9003,
-          "id": "setbacks"
-        },
-        {
-          "principle": 9003,
           "id": "first-barrier"
         },
         {
@@ -1807,14 +1791,6 @@
           "under": "Starts new work and leaves the Monday item sitting. The person waiting finds out only when they ask.",
           "justRight": "Finishes it or names a new date before picking up the next thing. Says what will wait and who needs to know.",
           "over": "Keeps reworking every old item until each one is perfect. Time-sensitive work waits.",
-          "words": "generated"
-        },
-        {
-          "id": "first-approach-fails",
-          "situation": "The first approach fails midweek",
-          "under": "Stops and waits for a cleaner plan or a new owner. The original date stays on the calendar.",
-          "justRight": "Tries another path the same day and tells the people waiting what changed. Keeps the outcome and drops the method that failed.",
-          "over": "Spends the rest of the week forcing the first approach. Neighboring work sits, and the date still moves.",
           "words": "generated"
         },
         {
@@ -4855,10 +4831,6 @@
         },
         {
           "principle": 10009,
-          "id": "a-setback"
-        },
-        {
-          "principle": 10009,
           "id": "sticking-through-a-bump"
         },
         {
@@ -4883,14 +4855,6 @@
           "under": "You look for an easier substitute.",
           "justRight": "You take it and name the first step.",
           "over": "You choose a harder version that does not improve the result.",
-          "words": "generated"
-        },
-        {
-          "id": "after-the-miss",
-          "situation": "A miss",
-          "under": "You stop, or you pretend it was nothing.",
-          "justRight": "You say what broke and take the next useful step the same week.",
-          "over": "You perform a recovery and skip the repair.",
           "words": "generated"
         },
         {
@@ -5001,10 +4965,6 @@
         },
         {
           "principle": 10012,
-          "id": "a-process-that-outlived-its-reason"
-        },
-        {
-          "principle": 10012,
           "id": "responsible-with-freedom"
         },
         {
@@ -5017,14 +4977,6 @@
           "under": "You keep it.",
           "justRight": "You share it in time, including the uncomfortable part.",
           "over": "You forward a pile of documents and call that context.",
-          "words": "generated"
-        },
-        {
-          "id": "a-process-past-its-reason",
-          "situation": "A process whose original miss is gone",
-          "under": "You keep it.",
-          "justRight": "You remove it, unless it still prevents a serious harm.",
-          "over": "You remove the rule that prevents a serious harm.",
           "words": "generated"
         },
         {
@@ -5540,6 +5492,61 @@
           "under": "Takes the agreement as proof and locks the path.",
           "justRight": "Asks who would bet against it, and what evidence would change the call, before locking it.",
           "over": "Keeps hunting dissent after a real objection has been answered, and the work waits.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "after-a-setback",
+      "label": "after a setback",
+      "principles": [
+        9003,
+        10009
+      ],
+      "rows": [
+        {
+          "principle": 9003,
+          "id": "setbacks"
+        },
+        {
+          "principle": 10009,
+          "id": "a-setback"
+        },
+        {
+          "id": "first-approach-fails",
+          "situation": "The first approach fails midweek",
+          "under": "Stops and waits for a cleaner plan or a new owner. The original date stays on the calendar.",
+          "justRight": "Tries another path the same day and tells the people waiting what changed. Keeps the outcome and drops the method that failed.",
+          "over": "Spends the rest of the week forcing the first approach. Neighboring work sits, and the date still moves.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "cut-the-extra-step",
+      "label": "cut the extra step",
+      "principles": [
+        1003,
+        6006,
+        8006,
+        9012,
+        10012
+      ],
+      "rows": [
+        {
+          "principle": 1003,
+          "id": "simplifying-a-process"
+        },
+        {
+          "principle": 10012,
+          "id": "a-process-that-outlived-its-reason"
+        },
+        {
+          "id": "extra-steps-on-a-request-form",
+          "situation": "Extra steps on a request form",
+          "under": "Leaves every field and approval in place. Requesters keep filling out details nobody reads.",
+          "justRight": "Sits with a few recent requests and removes the fields that never change a decision. Keeps the two or three questions that still catch a real miss.",
+          "over": "Cuts the form to almost nothing. Reviewers have to chase people for context, and the queue slows down for everyone.",
           "words": "generated"
         }
       ]

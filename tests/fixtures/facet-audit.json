@@ -18,8 +18,8 @@
     {
       "id": 1003,
       "decision": "map",
-      "facets": ["invent-and-simplify"],
-      "reason": "Source principle for the invent-and-simplify facet."
+      "facets": ["cut-the-extra-step", "invent-and-simplify"],
+      "reason": "Source principle for invent-and-simplify. A process that has become a maze is cut-the-extra-step, shared with Dawn, the generic principle, Blue Origin Technical Ambition and Simplicity, and Netflix People Over Process."
     },
     {
       "id": 1004,
@@ -342,8 +342,8 @@
     {
       "id": 6006,
       "decision": "map",
-      "facets": ["invent-and-simplify"],
-      "reason": "Already mapped. Shared slug."
+      "facets": ["cut-the-extra-step", "invent-and-simplify"],
+      "reason": "Already mapped. Shared slug. Cutting a step that no longer changes the decision is cut-the-extra-step, the same slice as Amazon Invent and Simplify."
     },
     {
       "id": 6007,
@@ -467,8 +467,8 @@
     {
       "id": 8006,
       "decision": "map",
-      "facets": ["invent-and-simplify"],
-      "reason": "Same behavior as Amazon Invent and Simplify. Generated rows fit not-invented-here, simpler paths, and ideas that are misunderstood for a time. None were dropped."
+      "facets": ["cut-the-extra-step", "invent-and-simplify"],
+      "reason": "Same behavior as Amazon Invent and Simplify. A process that has become a maze is cut-the-extra-step, the same slice as Amazon. The other generated rows stay on invent-and-simplify."
     },
     {
       "id": 8007,
@@ -539,8 +539,8 @@
     {
       "id": 9003,
       "decision": "map",
-      "facets": ["deliver-results"],
-      "reason": "Key inputs, customer commitments, quality on time, grit after setbacks. Same finish-the-work behavior as Amazon Deliver Results."
+      "facets": ["after-a-setback", "deliver-results"],
+      "reason": "Key inputs, customer commitments, and quality on time stay on deliver-results. A setback on a commitment is after-a-setback, shared with Netflix Resilience, so this record does not keep a second table for it."
     },
     {
       "id": 9004,
@@ -593,8 +593,8 @@
     {
       "id": 9012,
       "decision": "map",
-      "facets": ["invent-and-simplify"],
-      "reason": "Novel invention, not invented here, always simplify, push back on requirements. Same invent-and-simplify behavior as Amazon Invent and Simplify. Medium-performing variants are a path, not a different table."
+      "facets": ["cut-the-extra-step", "invent-and-simplify"],
+      "reason": "Novel invention, not invented here, always simplify, and push back on requirements stay on invent-and-simplify. Cutting an extra step that no longer catches a miss is cut-the-extra-step, shared with Amazon Invent and Simplify. Medium-performing variants are a path, not a different table."
     },
     {
       "id": 9013,
@@ -659,8 +659,8 @@
     {
       "id": 10009,
       "decision": "map",
-      "facets": ["resilience"],
-      "reason": "Adapt when circumstances change, decide without a long delay, and take a hard challenge. bias-for-action is speed on reversible decisions. sustain-the-pace is managing energy over a long effort. resilience is the table."
+      "facets": ["after-a-setback", "resilience"],
+      "reason": "Adapt when circumstances change, decide without a long delay, and take a hard challenge stay on resilience. A miss that stings is after-a-setback, shared with Blue Origin Deliver Results. bias-for-action is speed on reversible decisions. sustain-the-pace is managing energy over a long effort."
     },
     {
       "id": 10010,
@@ -677,8 +677,8 @@
     {
       "id": 10012,
       "decision": "map",
-      "facets": ["let-them-decide", "people-over-process"],
-      "reason": "Removing a process that has outlived its reason, sharing information, and freedom with responsibility stay on people-over-process. Giving the context and letting the closest person decide is let-them-decide, shared with Context Not Control."
+      "facets": ["cut-the-extra-step", "let-them-decide", "people-over-process"],
+      "reason": "Sharing information and freedom with responsibility stay on people-over-process. Giving the context and letting the closest person decide is let-them-decide. Removing a step that has outlived its reason is cut-the-extra-step, shared with Invent and Simplify."
     },
     {
       "id": 10013,
