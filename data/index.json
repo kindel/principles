@@ -46,7 +46,8 @@
           "sort": 4,
           "file": "data/generic/are-right-a-lot.json",
           "facets": [
-            "are-right-a-lot"
+            "are-right-a-lot",
+            "ask-who-disagrees"
           ]
         },
         {
@@ -208,7 +209,8 @@
           "sort": 4,
           "file": "data/amazon/are-right-a-lot.json",
           "facets": [
-            "are-right-a-lot"
+            "are-right-a-lot",
+            "ask-who-disagrees"
           ]
         },
         {
@@ -1136,7 +1138,8 @@
           "sort": 3,
           "file": "data/netflix/judgment.json",
           "facets": [
-            "are-right-a-lot"
+            "are-right-a-lot",
+            "ask-who-disagrees"
           ]
         },
         {
@@ -1157,6 +1160,7 @@
           "file": "data/netflix/creativity.json",
           "facets": [
             "creativity",
+            "for-its-audience",
             "listens-with-an-open-mind"
           ]
         },
@@ -1229,6 +1233,7 @@
           "sort": 12,
           "file": "data/netflix/people-over-process.json",
           "facets": [
+            "let-them-decide",
             "people-over-process"
           ]
         },
@@ -1239,7 +1244,8 @@
           "sort": 13,
           "file": "data/netflix/context-not-control.json",
           "facets": [
-            "context-not-control"
+            "context-not-control",
+            "let-them-decide"
           ]
         },
         {
@@ -1259,6 +1265,7 @@
           "sort": 15,
           "file": "data/netflix/farming-for-dissent.json",
           "facets": [
+            "ask-who-disagrees",
             "farming-for-dissent"
           ]
         },
@@ -1300,7 +1307,8 @@
           "sort": 19,
           "file": "data/netflix/artistic-expression.json",
           "facets": [
-            "artistic-expression"
+            "artistic-expression",
+            "for-its-audience"
           ]
         },
         {

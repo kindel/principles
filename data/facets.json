@@ -2177,23 +2177,11 @@
           "id": "data-and-a-hunch"
         },
         {
-          "principle": 10003,
-          "id": "testing-a-call-you-like"
-        },
-        {
           "id": "someone-junior-has-the-fact",
           "situation": "Someone junior has the fact",
           "under": "Treats rank as the argument and keeps the original call.",
           "justRight": "Lets the fact win in the room, says what changed, and moves the decision.",
           "over": "Opens a second debate after the fact is already in, so the team leaves with no call.",
-          "words": "generated"
-        },
-        {
-          "id": "a-room-that-already-agrees",
-          "situation": "A room that already agrees",
-          "under": "Takes the agreement as proof and locks the path.",
-          "justRight": "Asks who would bet against it, and what evidence would change the call, before locking it.",
-          "over": "Keeps hunting dissent after a real objection has been answered, and the work waits.",
           "words": "generated"
         },
         {
@@ -3488,6 +3476,10 @@
           "id": "credit-for-the-idea"
         },
         {
+          "principle": 10002,
+          "id": "humility-as-silence"
+        },
+        {
           "id": "the-day-after-a-win",
           "situation": "After a win",
           "under": "Treats the win as proof you should not be questioned.",
@@ -4733,23 +4725,11 @@
           "id": "your-team-or-the-company"
         },
         {
-          "principle": 10002,
-          "id": "humility-as-silence"
-        },
-        {
           "id": "company-over-team",
           "situation": "Your team's goal against a company outcome",
           "under": "Optimizes the team score.",
           "justRight": "Takes the company outcome when it is real, and tells the team what changed.",
           "over": "Invokes the company to take work your team was not the right group to do.",
-          "words": "generated"
-        },
-        {
-          "id": "speaking-up-humbly",
-          "situation": "You know something the room needs",
-          "under": "States a partial answer as if it were the whole one.",
-          "justRight": "Says it, and updates it if a better fact shows up.",
-          "over": "Agrees with each speaker in turn and never states a view.",
           "words": "generated"
         }
       ]
@@ -4770,10 +4750,6 @@
           "id": "persistence-without-a-result"
         },
         {
-          "principle": 10005,
-          "id": "artistic-work-you-dislike"
-        },
-        {
           "id": "adequate-and-not-enough",
           "situation": "A solution that works and is not very good",
           "under": "Stops.",
@@ -4787,14 +4763,6 @@
           "under": "Abandons it at the first critique.",
           "justRight": "Persists while the evidence is mixed, and stops when it is not.",
           "over": "Persists after the evidence is clear, because the idea was original.",
-          "words": "generated"
-        },
-        {
-          "id": "taste",
-          "situation": "Creative work that is not your taste",
-          "under": "Blocks it.",
-          "justRight": "Asks whether it is good for the audience it is for.",
-          "over": "Refuses every quality bar so that taste cannot be challenged.",
           "words": "generated"
         },
         {
@@ -5041,10 +5009,6 @@
       "rows": [
         {
           "principle": 10012,
-          "id": "who-makes-the-call"
-        },
-        {
-          "principle": 10012,
           "id": "information-they-need"
         },
         {
@@ -5058,14 +5022,6 @@
         {
           "principle": 10012,
           "id": "senior-decisions"
-        },
-        {
-          "id": "the-person-closest",
-          "situation": "A decision the closest person can make",
-          "under": "You pull it upward.",
-          "justRight": "You leave it with them, and you make sure they have the information.",
-          "over": "You leave them a decision they cannot make, and you are gone.",
-          "words": "generated"
         },
         {
           "id": "sharing-the-information",
@@ -5098,14 +5054,6 @@
           "justRight": "You pride yourself on how few you make, and the few are the ones that are actually yours.",
           "over": "You make none, including the one only you can make.",
           "words": "generated"
-        },
-        {
-          "id": "openness",
-          "situation": "A new teammate in an open system",
-          "under": "You keep the decisions, and they do not get the room.",
-          "justRight": "You give them the information and the room to decide, and you coach the first calls.",
-          "over": "You give them the room before they have the context.",
-          "words": "generated"
         }
       ]
     },
@@ -5116,10 +5064,6 @@
         10013
       ],
       "rows": [
-        {
-          "principle": 10013,
-          "id": "giving-the-context"
-        },
         {
           "principle": 10013,
           "id": "coaching-while-involved"
@@ -5135,14 +5079,6 @@
         {
           "principle": 10013,
           "id": "control-by-approval"
-        },
-        {
-          "id": "context-before-the-call",
-          "situation": "The team is about to decide",
-          "under": "You vanish.",
-          "justRight": "You give the context and let them decide.",
-          "over": "You hint until your preferred answer is the only safe one.",
-          "words": "generated"
         },
         {
           "id": "involved-not-holding-the-pen",
@@ -5280,10 +5216,6 @@
         },
         {
           "principle": 10015,
-          "id": "a-quiet-room"
-        },
-        {
-          "principle": 10015,
           "id": "dissent-is-not-a-veto"
         },
         {
@@ -5304,14 +5236,6 @@
           "under": "You count heads, or you only hear seniority.",
           "justRight": "You give more weight to the craft the decision sits in, and you still hear a sharp outside dissent.",
           "over": "You refuse to hear anyone outside the craft.",
-          "words": "generated"
-        },
-        {
-          "id": "the-quiet-room",
-          "situation": "A room that agrees immediately",
-          "under": "You take the quiet as a yes.",
-          "justRight": "You ask who disagrees and you wait.",
-          "over": "You keep asking until someone invents a dissent.",
           "words": "generated"
         },
         {
@@ -5499,10 +5423,6 @@
         },
         {
           "principle": 10019,
-          "id": "breadth-of-the-slate"
-        },
-        {
-          "principle": 10019,
           "id": "helping-members-choose"
         },
         {
@@ -5523,14 +5443,6 @@
           "under": "You sabotage it, or you refuse the role and stay.",
           "justRight": "You do the role, or you say this is the wrong place and you leave the work handable.",
           "over": "You require everyone else to enjoy it.",
-          "words": "generated"
-        },
-        {
-          "id": "breadth",
-          "situation": "A slate far from your taste",
-          "under": "You try to narrow it to what you find acceptable.",
-          "justRight": "You judge a title by the audience it is for.",
-          "over": "You add titles only to provoke.",
           "words": "generated"
         },
         {
@@ -5555,6 +5467,86 @@
           "under": "You try to steer their expression to your taste.",
           "justRight": "You support the expression you chose them for.",
           "over": "You treat every title as your personal statement.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "for-its-audience",
+      "label": "for its audience",
+      "principles": [
+        10005,
+        10019
+      ],
+      "rows": [
+        {
+          "principle": 10005,
+          "id": "artistic-work-you-dislike"
+        },
+        {
+          "principle": 10019,
+          "id": "breadth-of-the-slate"
+        },
+        {
+          "id": "good-for-its-audience",
+          "situation": "Work that is not your taste",
+          "under": "You block it, or you narrow it to what you find acceptable.",
+          "justRight": "You judge it by the audience it is for.",
+          "over": "You drop the quality bar so taste cannot be challenged.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "let-them-decide",
+      "label": "let them decide",
+      "principles": [
+        10012,
+        10013
+      ],
+      "rows": [
+        {
+          "principle": 10012,
+          "id": "who-makes-the-call"
+        },
+        {
+          "principle": 10013,
+          "id": "giving-the-context"
+        },
+        {
+          "id": "context-before-the-call",
+          "situation": "The team is about to decide",
+          "under": "You vanish.",
+          "justRight": "You give the context and let them decide.",
+          "over": "You hint until your preferred answer is the only safe one.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "ask-who-disagrees",
+      "label": "ask who disagrees",
+      "principles": [
+        1004,
+        8004,
+        10003,
+        10015
+      ],
+      "rows": [
+        {
+          "principle": 10003,
+          "id": "testing-a-call-you-like"
+        },
+        {
+          "principle": 10015,
+          "id": "a-quiet-room"
+        },
+        {
+          "id": "a-room-that-already-agrees",
+          "situation": "A room that already agrees",
+          "under": "Takes the agreement as proof and locks the path.",
+          "justRight": "Asks who would bet against it, and what evidence would change the call, before locking it.",
+          "over": "Keeps hunting dissent after a real objection has been answered, and the work waits.",
           "words": "generated"
         }
       ]

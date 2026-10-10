@@ -24,8 +24,8 @@
     {
       "id": 1004,
       "decision": "map",
-      "facets": ["are-right-a-lot"],
-      "reason": "Judgment, diverse perspectives, and disconfirming your own beliefs. are-right-a-lot is that behavior, shared with the principle of the same name."
+      "facets": ["are-right-a-lot", "ask-who-disagrees"],
+      "reason": "Judgment, diverse perspectives, and disconfirming your own beliefs. are-right-a-lot is that behavior, shared with the principle of the same name. A room that already agrees is ask-who-disagrees, shared with the generic principle, Netflix Judgment, and Farming for Dissent."
     },
     {
       "id": 1005,
@@ -455,8 +455,8 @@
     {
       "id": 8004,
       "decision": "map",
-      "facets": ["are-right-a-lot"],
-      "reason": "Same judgment, diverse perspectives, and disconfirming your beliefs as the principle of the same name. The table is shared. Teaching stays the reused text."
+      "facets": ["are-right-a-lot", "ask-who-disagrees"],
+      "reason": "Same judgment, diverse perspectives, and disconfirming your beliefs as the principle of the same name. The table is shared. A room that already agrees is ask-who-disagrees, the same slice as Amazon. Teaching stays the reused text."
     },
     {
       "id": 8005,
@@ -618,13 +618,13 @@
       "id": 10002,
       "decision": "map",
       "facets": ["help-anyway", "selflessness", "stay-humble"],
-      "reason": "Credit and the better idea are stay-humble. time-to-help is help-anyway. The company ahead of your team, and speaking up without performing humility, stay on selflessness."
+      "reason": "Credit, the better idea, and speaking up without performing humility are stay-humble. time-to-help is help-anyway. The company ahead of your team stays on selflessness."
     },
     {
       "id": 10003,
       "decision": "map",
-      "facets": ["are-right-a-lot"],
-      "reason": "Wise decisions despite ambiguity, with data informing intuition. Same judgment behavior as Amazon Are Right, A Lot."
+      "facets": ["are-right-a-lot", "ask-who-disagrees"],
+      "reason": "Wise decisions despite ambiguity, with data informing intuition, stay on are-right-a-lot. Asking who would bet against a call you already like is ask-who-disagrees, shared with Farming for Dissent."
     },
     {
       "id": 10004,
@@ -635,8 +635,8 @@
     {
       "id": 10005,
       "decision": "map",
-      "facets": ["creativity", "listens-with-an-open-mind"],
-      "reason": "An unfamiliar idea, including one from outside the craft, is listens-with-an-open-mind. Persistence, taste, and the experiment budget stay on creativity."
+      "facets": ["creativity", "for-its-audience", "listens-with-an-open-mind"],
+      "reason": "An unfamiliar idea, including one from outside the craft, is listens-with-an-open-mind. Persistence and the experiment budget stay on creativity. Judging work that is not your taste by the audience it is for is for-its-audience, shared with Artistic Expression."
     },
     {
       "id": 10006,
@@ -677,14 +677,14 @@
     {
       "id": 10012,
       "decision": "map",
-      "facets": ["people-over-process"],
-      "reason": "Information and freedom for the person doing the work. No existing table is freedom over process. people-over-process is the table."
+      "facets": ["let-them-decide", "people-over-process"],
+      "reason": "Removing a process that has outlived its reason, sharing information, and freedom with responsibility stay on people-over-process. Giving the context and letting the closest person decide is let-them-decide, shared with Context Not Control."
     },
     {
       "id": 10013,
       "decision": "map",
-      "facets": ["context-not-control"],
-      "reason": "Give the team the context and let them decide, stay close enough to coach, and step in only for harm, a crisis, or missing context. No existing table is that management practice. context-not-control is the table."
+      "facets": ["context-not-control", "let-them-decide"],
+      "reason": "Staying close enough to coach, and stepping in for harm, a crisis, or missing context, stay on context-not-control. Giving the context and letting them decide is let-them-decide, shared with People Over Process."
     },
     {
       "id": 10014,
@@ -695,8 +695,8 @@
     {
       "id": 10015,
       "decision": "map",
-      "facets": ["farming-for-dissent"],
-      "reason": "The captain seeks different opinions, including from people at every level, and weighs the craft the decision sits in. are-right-a-lot seeks disconfirming views so you will be right. farming-for-dissent is the table."
+      "facets": ["ask-who-disagrees", "farming-for-dissent"],
+      "reason": "Seeking a real disagreement, weighing the craft, and a dissent you do not take stay on farming-for-dissent. A room that agrees too fast is ask-who-disagrees, shared with Are Right, A Lot."
     },
     {
       "id": 10016,
@@ -719,8 +719,8 @@
     {
       "id": 10019,
       "decision": "map",
-      "facets": ["artistic-expression"],
-      "reason": "Support the expression of the creators you chose, including stories that cut against your own values, and give the audience a way to choose. No existing table is that. artistic-expression is the table."
+      "facets": ["artistic-expression", "for-its-audience"],
+      "reason": "Support for a story that cuts against your values, member choice, and leaving when you cannot support the slate stay on artistic-expression. Judging a title by the audience it is for is for-its-audience, shared with Creativity."
     },
     {
       "id": 10020,
