@@ -1122,6 +1122,7 @@
           "sort": 2,
           "file": "data/netflix/selflessness.json",
           "facets": [
+            "help-anyway",
             "selflessness"
           ]
         },

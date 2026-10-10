@@ -3517,12 +3517,17 @@
       "id": "help-anyway",
       "label": "help anyway",
       "principles": [
-        5001
+        5001,
+        10002
       ],
       "rows": [
         {
           "principle": 5001,
           "id": "stuck-on-something"
+        },
+        {
+          "principle": 10002,
+          "id": "time-to-help"
         },
         {
           "id": "a-teammate-stuck-on-other-work",
@@ -4748,10 +4753,6 @@
         },
         {
           "principle": 10002,
-          "id": "time-to-help"
-        },
-        {
-          "principle": 10002,
           "id": "credit-for-the-idea"
         },
         {
@@ -4772,14 +4773,6 @@
           "under": "Optimizes the team score.",
           "justRight": "Takes the company outcome when it is real, and tells the team what changed.",
           "over": "Invokes the company to take work your team was not the right group to do.",
-          "words": "generated"
-        },
-        {
-          "id": "helping-someone-succeed",
-          "situation": "A colleague stuck on something you can unblock",
-          "under": "Stays heads-down.",
-          "justRight": "Unblocks them, then returns to your own commitment.",
-          "over": "Becomes the permanent helper and your commitment slips.",
           "words": "generated"
         },
         {

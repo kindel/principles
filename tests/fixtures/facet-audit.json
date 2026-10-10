@@ -617,8 +617,8 @@
     {
       "id": 10002,
       "decision": "map",
-      "facets": ["selflessness"],
-      "reason": "Humble about the best idea, the company ahead of your own team, and time spent helping someone else succeed. acts-like-an-owner covers only the company-over-team clause. help-anyway covers only the help. selflessness is the table."
+      "facets": ["help-anyway", "selflessness"],
+      "reason": "Humble about the best idea, and the company ahead of your own team. The help clause is the same behavior as help-anyway, so time-to-help sits on that table. The rest of the value is selflessness."
     },
     {
       "id": 10003,
