@@ -22,7 +22,10 @@
     {
       "id": "bold-and-ambitious",
       "label": "bold and ambitious",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "a-safer-version"
+      ]
     }
   ],
   "rows": [

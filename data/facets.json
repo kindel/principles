@@ -5463,9 +5463,9 @@
         {
           "id": "taking-vacation",
           "situation": "Time away",
-          "under": "You wait for permission, or you vanish.",
+          "under": "You wait for permission, or you treat people who take vacation as less committed.",
           "justRight": "You take the vacation and you leave the work covered.",
-          "over": "You treat people who take vacation as less committed.",
+          "over": "You vanish and leave the work uncovered.",
           "words": "generated"
         },
         {

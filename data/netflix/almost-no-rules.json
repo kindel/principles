@@ -43,9 +43,9 @@
     {
       "id": "vacation",
       "situation": "Time away",
-      "under": "Waits for a policy to say whether you may go, or disappears and leaves a mess.",
+      "under": "Waits for a policy to say whether you may go, or treats people who take time away as less committed.",
       "justRight": "Takes vacation, and arranges the work so other people are not stuck.",
-      "over": "Treats unlimited vacation as a reason to never take it, and judges people who do."
+      "over": "Disappears and leaves the work uncovered."
     },
     {
       "id": "an-expense",

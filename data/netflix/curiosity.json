@@ -60,9 +60,9 @@
     {
       "id": "curiosity-with-a-deadline",
       "situation": "A question you would love to chase while a commitment is open",
-      "under": "Chases it and lets the commitment slip without a word.",
+      "under": "Refuses every question that was not on Monday's list, including the one that would have saved the work.",
       "justRight": "Writes the question down, finishes the commitment, and comes back if the question still matters.",
-      "over": "Refuses every question that was not on Monday's list, including the one that would have saved the work."
+      "over": "Chases it and lets the commitment slip without a word."
     }
   ]
 }
