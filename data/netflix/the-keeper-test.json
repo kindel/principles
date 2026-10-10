@@ -19,7 +19,10 @@
     {
       "id": "fight-to-keep-them",
       "label": "fight to keep them",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "would-you-keep-them"
+      ]
     }
   ],
   "rows": [
