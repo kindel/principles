@@ -1,0 +1,48 @@
+{
+  "title": "Delivery Hero Leadership Principles",
+  "source": "https://careers.deliveryhero.com/delivery-hero/2025-4/launching-our-leadership-principles",
+  "principles": [
+    {
+      "id": 4001,
+      "slug": "own-it",
+      "file": "own-it.json"
+    },
+    {
+      "id": 4002,
+      "slug": "dive-deep",
+      "file": "dive-deep.json"
+    },
+    {
+      "id": 4003,
+      "slug": "deliver-value-fast",
+      "file": "deliver-value-fast.json"
+    },
+    {
+      "id": 4004,
+      "slug": "bring-good-vibes",
+      "file": "bring-good-vibes.json"
+    },
+    {
+      "id": 4005,
+      "slug": "raise-the-bar",
+      "file": "raise-the-bar.json"
+    },
+    {
+      "id": 4006,
+      "slug": "stay-humble",
+      "file": "stay-humble.json"
+    }
+  ],
+  "blog": [
+    {
+      "title": "Launching Our Leadership Principles, Delivery Hero",
+      "url": "https://careers.deliveryhero.com/delivery-hero/2025-4/launching-our-leadership-principles",
+      "note": "The published announcement of the six principles."
+    },
+    {
+      "title": "Delivery Hero Careers",
+      "url": "https://careers.deliveryhero.com/",
+      "note": "The careers home for the culture those principles describe."
+    }
+  ]
+}

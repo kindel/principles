@@ -42,9 +42,9 @@ flowchart TD
   facet -->|shared through the facet| biq
 ```
 
-Teaching prose is in `data/teaching/`. Only Amazon and generic have it today, but that will be fixed soon. Porridge's "Questions that make the principle concrete." is the `deepen` list on that teaching file.
+Teaching prose is in `data/teaching/`. Every company has a catalog and a teaching file per principle. Amazon and the universal set have the full prose. The other companies ship Further reading on those files, from official sources, until full teaching is written. Porridge's "Questions that make the principle concrete." is the `deepen` list on that teaching file.
 
-The other companies in the corpus are Amazon, Arm, Coupang, Delivery Hero, GitLab, Dawn Aerospace, and Toyota. What each calls the set, and where the wording came from, is in `scripts/companies.py`. The record shape is [SCHEMA.md](SCHEMA.md).
+The other companies in the corpus are Amazon, Arm, Coupang, Delivery Hero, GitLab, Dawn Aerospace, Toyota, Blue Origin, and the U.S. Marine Corps. What each calls the set, and where the wording came from, is in `scripts/companies.py`. The record shape is [SCHEMA.md](SCHEMA.md).
 
 ## Outside
 

@@ -1,0 +1,16 @@
+{
+  "id": 5004,
+  "slug": "diversity-inclusion-and-belonging",
+  "blog": [
+    {
+      "title": "GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/",
+      "note": "The published CREDIT values this principle belongs to."
+    },
+    {
+      "title": "Diversity, Inclusion & Belonging, GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/#diversity-inclusion",
+      "note": "The Diversity, Inclusion, and Belonging value, fourth in CREDIT."
+    }
+  ]
+}

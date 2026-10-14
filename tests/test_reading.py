@@ -10,7 +10,8 @@ who shaped the practice. See SCHEMA.md.
 Amazon is the classic 14. Any Company reuses those lists, and authors
 Intentional About Culture because that counterpart is not in this corpus.
 The generic catalog and Intentional About Culture also append culture
-reading that is not on the Amazon copies.
+reading that is not on the Amazon copies. Every other company ships a
+catalog and one reading-only file per principle.
 """
 
 import json
@@ -18,13 +19,17 @@ import os
 import unittest
 from urllib.parse import urlparse
 
-TEACH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                     "data", "teaching")
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TEACH = os.path.join(ROOT, "data", "teaching")
+INDEX = os.path.join(ROOT, "data", "index.json")
 BLOG_HOST = "blog.kindel.com"
-# Amazon: 14 principle files plus the set index. Any Company adds
-# Intentional About Culture, which has no file to copy. USMC is the
-# set catalog only: Further reading for the 14 traits, no principle files.
-EXPECTED = {"amazon": 15, "generic": 16, "usmc": 1}
+
+
+def expected_counts():
+    """One catalog plus one teaching file per principle, for every company."""
+    with open(INDEX, encoding="utf-8") as f:
+        idx = json.load(f)
+    return {co["id"]: 1 + len(co["principles"]) for co in idx["companies"]}
 
 
 def is_tig(url):
@@ -42,7 +47,7 @@ def is_tig(url):
 
 
 def lists(company=None):
-    companies = [company] if company else list(EXPECTED)
+    companies = [company] if company else list(expected_counts())
     for company in companies:
         d = os.path.join(TEACH, company)
         for name in sorted(os.listdir(d)):
@@ -54,7 +59,7 @@ def lists(company=None):
 class FurtherReadingTest(unittest.TestCase):
 
     def test_every_list_has_an_external_source(self):
-        for company, want in EXPECTED.items():
+        for company, want in expected_counts().items():
             seen = 0
             for name, items in lists(company):
                 seen += 1
@@ -144,6 +149,52 @@ class FurtherReadingTest(unittest.TestCase):
                 seen[url] += 1
         for url, title in expected.items():
             self.assertEqual(seen[url], 2, title)
+
+    def test_company_set_cites(self):
+        # Official set pages. Titles name the work, and the source when the
+        # heading is only a short label.
+        expected = {
+            "https://careers.arm.com/life-at-arm":
+                "Life at Arm",
+            "https://www.coupang.jobs/en/coupang-leadership-principles/":
+                "Coupang Leadership Principles",
+            "https://careers.deliveryhero.com/delivery-hero/2025-4/launching-our-leadership-principles":
+                "Launching Our Leadership Principles, Delivery Hero",
+            "https://handbook.gitlab.com/handbook/values/":
+                "GitLab Values",
+            "https://www.dawnaerospace.com/about":
+                "About Dawn Aerospace",
+            "https://www.toyota-global.com/company/history_of_toyota/75years/data/conditions/philosophy/toyotaway2001.html":
+                "Toyota Way 2001",
+            "https://www.blueorigin.com/careers/work-culture":
+                "Blue Origin Work Culture",
+            "https://www.marines.mil/News/Publications/MCPEL/Electronic-Library-Display/Article/899578/mcwp-6-10/":
+                "MCWP 6-10 Leading Marines",
+            "https://www.marines.mil/News/Publications/MCPEL/Electronic-Library-Display/Article/898678/mcdp-6/":
+                "MCDP 6 Command and Control",
+            "https://www.smmc.marines.mil/Leading-Marines/":
+                "Leading Marines, Sergeant Major of the Marine Corps",
+            "https://www.usmcu.edu/LLI":
+                "Lejeune Leadership Institute, Marine Corps University",
+            "https://www.usmcu.edu/Academic-Programs/Lejeune-Leadership-Institute/Marine-Leader-Development/":
+                "Marine Leader Development, Marine Corps University",
+            "https://grc-usmcu.libguides.com/CMCPRP":
+                "Commandant's Professional Reading List",
+        }
+        seen = {url: 0 for url in expected}
+        for name, items in lists():
+            if name.split("/", 1)[0] in ("amazon", "generic"):
+                continue
+            for item in items or []:
+                url = item["url"]
+                if url not in expected:
+                    continue
+                with self.subTest(file=name, url=url):
+                    self.assertEqual(item["title"], expected[url])
+                    self.assertNotIn("\u2014", item["note"])
+                seen[url] += 1
+        for url, title in expected.items():
+            self.assertGreater(seen[url], 0, title)
 
     def test_no_duplicate_urls_in_a_list(self):
         for name, items in lists():

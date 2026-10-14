@@ -642,8 +642,12 @@ def validate_teaching(by_company, errs, root=None):
     A catalog principles list may be empty. A listed file has to exist
     in that directory, and a slug is listed once. index is reserved for
     the catalog. When the catalog exists, a teaching file other than
-    the catalog has to be listed.
-    root is for tests; the corpus uses DATA.
+    the catalog has to be listed. A principle file with only id, slug,
+    and blog is Further reading without teaching prose. Any other
+    teaching field requires the full prose shape.
+    root is for tests; the corpus uses DATA. When root is omitted the
+    live tree must have a catalog and a teaching file for every
+    principle, or the apps render no Further reading for that set.
     """
     catalog, catalog_err = essay_links.load_catalog()
     if catalog_err:
@@ -731,7 +735,9 @@ def validate_teaching(by_company, errs, root=None):
                             errs.append("%s: {lp:%s} does not resolve" % (where, tok))
                 continue
             teaching_stems.append(filename[:-5])
-            validate_teaching_shape(doc, where, errs)
+            extra = set(doc.keys()) - {"id", "slug", "blog"}
+            if extra:
+                validate_teaching_shape(doc, where, errs)
             validate_blog(doc.get("blog"), where, errs)
             stem = filename[:-5]
             if doc.get("slug") != stem:
@@ -773,6 +779,30 @@ def validate_teaching(by_company, errs, root=None):
                 if stem not in listed_slugs:
                     errs.append("data/teaching/%s/%s.json: not listed in the catalog"
                                 % (company, stem))
+    if root is None:
+        require_teaching_coverage(by_company, teaching, errs)
+
+
+def require_teaching_coverage(by_company, teaching_root, errs):
+    """The live corpus needs a catalog and a teaching file for every principle.
+
+    A fixture may omit files. The apps only render Further reading from a
+    file that exists, so a missing catalog is a silent empty section.
+    """
+    for company, items in by_company.items():
+        cdir = os.path.join(teaching_root, company)
+        idx = os.path.join(cdir, "index.json")
+        if not os.path.isfile(idx):
+            errs.append("data/teaching/%s/index.json: missing" % company)
+            continue
+        have = set()
+        for name in os.listdir(cdir):
+            if name.endswith(".json") and name != "index.json":
+                have.add(name[:-5])
+        for _, rec in items:
+            slug = rec.get("slug")
+            if isinstance(slug, str) and slug not in have:
+                errs.append("data/teaching/%s/%s.json: missing" % (company, slug))
 
 
 def _record_by_id(by_company, company):

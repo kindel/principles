@@ -105,7 +105,10 @@ Do all of this, in this repo first:
    Record rows stay empty when calibration is `unpublished`. Do not invent
    record rows to clear that flag. Classify every principle in
    `tests/fixtures/facet-audit.json`. The decision for a facet that exists
-   is `map`.
+   is `map`. Every company needs `data/teaching/<company>/index.json` and
+   a teaching file per principle. Reading-only files (`id`, `slug`, `blog`)
+   are enough when full prose is not written. Further reading must be
+   official sources that resolve.
 5. Update the company list and block in `SCHEMA.md`. Tests fail if you
    skip this.
 6. A new company's name and source belong in `scripts/companies.py` and

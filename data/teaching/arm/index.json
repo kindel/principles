@@ -1,0 +1,68 @@
+{
+  "title": "Arm 10x Mindset",
+  "source": "https://careers.arm.com/life-at-arm",
+  "principles": [
+    {
+      "id": 2001,
+      "slug": "passion-for-the-mission",
+      "file": "passion-for-the-mission.json"
+    },
+    {
+      "id": 2002,
+      "slug": "deliver-as-one-arm",
+      "file": "deliver-as-one-arm.json"
+    },
+    {
+      "id": 2003,
+      "slug": "build-extraordinary-teams",
+      "file": "build-extraordinary-teams.json"
+    },
+    {
+      "id": 2004,
+      "slug": "challenge-skillfully",
+      "file": "challenge-skillfully.json"
+    },
+    {
+      "id": 2005,
+      "slug": "root-out-inefficiencies",
+      "file": "root-out-inefficiencies.json"
+    },
+    {
+      "id": 2006,
+      "slug": "relentlessly-push-boundaries",
+      "file": "relentlessly-push-boundaries.json"
+    },
+    {
+      "id": 2007,
+      "slug": "move-with-urgency-and-find-a-way",
+      "file": "move-with-urgency-and-find-a-way.json"
+    },
+    {
+      "id": 2008,
+      "slug": "own-it",
+      "file": "own-it.json"
+    },
+    {
+      "id": 2009,
+      "slug": "be-decisive-in-ambiguity-and-change",
+      "file": "be-decisive-in-ambiguity-and-change.json"
+    },
+    {
+      "id": 2010,
+      "slug": "optimize-for-endurance-and-resilience",
+      "file": "optimize-for-endurance-and-resilience.json"
+    }
+  ],
+  "blog": [
+    {
+      "title": "Life at Arm",
+      "url": "https://careers.arm.com/life-at-arm",
+      "note": "The published 10x Mindset. Two lenses, 10 principles."
+    },
+    {
+      "title": "Arm Company",
+      "url": "https://www.arm.com/company",
+      "note": "The company page that states the mission those principles serve."
+    }
+  ]
+}

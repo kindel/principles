@@ -1,0 +1,43 @@
+{
+  "title": "GitLab CREDIT Values",
+  "source": "https://handbook.gitlab.com/handbook/values/",
+  "principles": [
+    {
+      "id": 5001,
+      "slug": "collaboration",
+      "file": "collaboration.json"
+    },
+    {
+      "id": 5002,
+      "slug": "results-for-customers",
+      "file": "results-for-customers.json"
+    },
+    {
+      "id": 5003,
+      "slug": "efficiency",
+      "file": "efficiency.json"
+    },
+    {
+      "id": 5004,
+      "slug": "diversity-inclusion-and-belonging",
+      "file": "diversity-inclusion-and-belonging.json"
+    },
+    {
+      "id": 5005,
+      "slug": "iteration",
+      "file": "iteration.json"
+    },
+    {
+      "id": 5006,
+      "slug": "transparency",
+      "file": "transparency.json"
+    }
+  ],
+  "blog": [
+    {
+      "title": "GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/",
+      "note": "The published CREDIT values. Six values, in the order that spells CREDIT."
+    }
+  ]
+}

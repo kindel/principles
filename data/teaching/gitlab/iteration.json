@@ -1,0 +1,16 @@
+{
+  "id": 5005,
+  "slug": "iteration",
+  "blog": [
+    {
+      "title": "GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/",
+      "note": "The published CREDIT values this principle belongs to."
+    },
+    {
+      "title": "Iteration, GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/#iteration",
+      "note": "The Iteration value, fifth in CREDIT."
+    }
+  ]
+}

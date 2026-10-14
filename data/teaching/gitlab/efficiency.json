@@ -1,0 +1,16 @@
+{
+  "id": 5003,
+  "slug": "efficiency",
+  "blog": [
+    {
+      "title": "GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/",
+      "note": "The published CREDIT values this principle belongs to."
+    },
+    {
+      "title": "Efficiency, GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/#efficiency",
+      "note": "The Efficiency value, third in CREDIT."
+    }
+  ]
+}

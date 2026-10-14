@@ -1,0 +1,16 @@
+{
+  "id": 2008,
+  "slug": "own-it",
+  "blog": [
+    {
+      "title": "Life at Arm",
+      "url": "https://careers.arm.com/life-at-arm",
+      "note": "The published wording of this principle, under the 10x Mindset."
+    },
+    {
+      "title": "Arm Company",
+      "url": "https://www.arm.com/company",
+      "note": "The mission and company context this principle is meant to serve."
+    }
+  ]
+}

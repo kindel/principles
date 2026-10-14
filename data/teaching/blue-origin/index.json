@@ -1,0 +1,88 @@
+{
+  "title": "Blue Origin Leadership Principles",
+  "source": "https://www.blueorigin.com/careers/work-culture",
+  "principles": [
+    {
+      "id": 9001,
+      "slug": "passion-for-our-mission",
+      "file": "passion-for-our-mission.json"
+    },
+    {
+      "id": 9002,
+      "slug": "customer-focus",
+      "file": "customer-focus.json"
+    },
+    {
+      "id": 9003,
+      "slug": "deliver-results",
+      "file": "deliver-results.json"
+    },
+    {
+      "id": 9004,
+      "slug": "embrace-team-blue",
+      "file": "embrace-team-blue.json"
+    },
+    {
+      "id": 9005,
+      "slug": "resourceful",
+      "file": "resourceful.json"
+    },
+    {
+      "id": 9006,
+      "slug": "bias-for-action",
+      "file": "bias-for-action.json"
+    },
+    {
+      "id": 9007,
+      "slug": "ownership",
+      "file": "ownership.json"
+    },
+    {
+      "id": 9008,
+      "slug": "operational-excellence",
+      "file": "operational-excellence.json"
+    },
+    {
+      "id": 9009,
+      "slug": "earn-the-trust-of-others",
+      "file": "earn-the-trust-of-others.json"
+    },
+    {
+      "id": 9010,
+      "slug": "hire-and-develop-the-best",
+      "file": "hire-and-develop-the-best.json"
+    },
+    {
+      "id": 9011,
+      "slug": "insist-on-the-highest-standards",
+      "file": "insist-on-the-highest-standards.json"
+    },
+    {
+      "id": 9012,
+      "slug": "technical-ambition-and-simplicity",
+      "file": "technical-ambition-and-simplicity.json"
+    },
+    {
+      "id": 9013,
+      "slug": "practice-humility",
+      "file": "practice-humility.json"
+    },
+    {
+      "id": 9014,
+      "slug": "have-backbone-disagree-and-commit",
+      "file": "have-backbone-disagree-and-commit.json"
+    }
+  ],
+  "blog": [
+    {
+      "title": "Blue Origin Work Culture",
+      "url": "https://www.blueorigin.com/careers/work-culture",
+      "note": "The published 14 Leadership Principles."
+    },
+    {
+      "title": "About Blue Origin",
+      "url": "https://www.blueorigin.com/about-blue",
+      "note": "The mission those principles are written to serve."
+    }
+  ]
+}

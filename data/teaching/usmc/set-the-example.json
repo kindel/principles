@@ -1,0 +1,21 @@
+{
+  "id": 10005,
+  "slug": "set-the-example",
+  "blog": [
+    {
+      "title": "Officership Foundations, The Basic School",
+      "url": "https://www.trngcmd.marines.mil/Portals/207/Site%20Images/TBS/B1X0099XQ%20Officership%20Foundations.pdf",
+      "note": "The published wording of this principle, in numbered doctrine order."
+    },
+    {
+      "title": "MCWP 6-10 Leading Marines",
+      "url": "https://www.marines.mil/News/Publications/MCPEL/Electronic-Library-Display/Article/899578/mcwp-6-10/",
+      "note": "Doctrine that covers the leadership principles and the traits they rest on."
+    },
+    {
+      "title": "Leading Marines, Sergeant Major of the Marine Corps",
+      "url": "https://www.smmc.marines.mil/Leading-Marines/",
+      "note": "Setting the example is in the foundations chapter of that publication."
+    }
+  ]
+}

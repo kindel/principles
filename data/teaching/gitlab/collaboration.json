@@ -1,0 +1,16 @@
+{
+  "id": 5001,
+  "slug": "collaboration",
+  "blog": [
+    {
+      "title": "GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/",
+      "note": "The published CREDIT values this principle belongs to."
+    },
+    {
+      "title": "Collaboration, GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/#collaboration",
+      "note": "The Collaboration value, first in CREDIT."
+    }
+  ]
+}

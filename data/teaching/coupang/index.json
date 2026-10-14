@@ -1,0 +1,88 @@
+{
+  "title": "Coupang Leadership Principles",
+  "source": "https://www.coupang.jobs/en/coupang-leadership-principles/",
+  "principles": [
+    {
+      "id": 3001,
+      "slug": "wow-the-customer",
+      "file": "wow-the-customer.json"
+    },
+    {
+      "id": 3002,
+      "slug": "ruthless-prioritization",
+      "file": "ruthless-prioritization.json"
+    },
+    {
+      "id": 3003,
+      "slug": "company-wide-perspective",
+      "file": "company-wide-perspective.json"
+    },
+    {
+      "id": 3004,
+      "slug": "dive-deep",
+      "file": "dive-deep.json"
+    },
+    {
+      "id": 3005,
+      "slug": "think-systematically",
+      "file": "think-systematically.json"
+    },
+    {
+      "id": 3006,
+      "slug": "simplify",
+      "file": "simplify.json"
+    },
+    {
+      "id": 3007,
+      "slug": "disagree-and-commit",
+      "file": "disagree-and-commit.json"
+    },
+    {
+      "id": 3008,
+      "slug": "hire-and-develop-the-best",
+      "file": "hire-and-develop-the-best.json"
+    },
+    {
+      "id": 3009,
+      "slug": "deliver-results-with-grit",
+      "file": "deliver-results-with-grit.json"
+    },
+    {
+      "id": 3010,
+      "slug": "influence-without-authority",
+      "file": "influence-without-authority.json"
+    },
+    {
+      "id": 3011,
+      "slug": "aim-high-and-find-a-way",
+      "file": "aim-high-and-find-a-way.json"
+    },
+    {
+      "id": 3012,
+      "slug": "learn-voraciously",
+      "file": "learn-voraciously.json"
+    },
+    {
+      "id": 3013,
+      "slug": "demand-excellence",
+      "file": "demand-excellence.json"
+    },
+    {
+      "id": 3014,
+      "slug": "move-with-urgency",
+      "file": "move-with-urgency.json"
+    },
+    {
+      "id": 3015,
+      "slug": "hate-waste",
+      "file": "hate-waste.json"
+    }
+  ],
+  "blog": [
+    {
+      "title": "Coupang Leadership Principles",
+      "url": "https://www.coupang.jobs/en/coupang-leadership-principles/",
+      "note": "The published set. Fifteen principles, in the company's order."
+    }
+  ]
+}
