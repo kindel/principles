@@ -24,6 +24,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
 
 from companies import COMPANY_META
 import essay_links
+import validate
 from validate import (expected_index, load_facets, load_records, validate_company,
                       validate_calibration_coverage, validate_derivation_maps,
                       validate_facets, validate_record, validate_teaching,
@@ -626,6 +627,20 @@ class TeachingValidatorTest(unittest.TestCase):
                 errs)
             self.assertFalse(
                 any("customer-obsession.json: missing" in e for e in errs),
+                errs)
+
+    def test_live_coverage_runs_when_the_teaching_root_is_absent(self):
+        with tempfile.TemporaryDirectory() as empty:
+            old = validate.DATA
+            validate.DATA = empty
+            try:
+                errs = []
+                validate_teaching(self.bank(), errs)
+            finally:
+                validate.DATA = old
+            self.assertTrue(any("data/teaching: missing" in e for e in errs), errs)
+            self.assertTrue(
+                any("data/teaching/amazon/index.json: missing" in e for e in errs),
                 errs)
 
     def test_a_blog_essay_url_is_rejected(self):

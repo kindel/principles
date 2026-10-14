@@ -152,22 +152,51 @@ class FurtherReadingTest(unittest.TestCase):
 
     def test_company_set_cites(self):
         # Official set pages. Titles name the work, and the source when the
-        # heading is only a short label.
+        # heading is only a short label. Every URL on a company set other
+        # than Amazon and the universal set must be in this list.
         expected = {
             "https://careers.arm.com/life-at-arm":
                 "Life at Arm",
+            "https://www.arm.com/company":
+                "Arm Company",
             "https://www.coupang.jobs/en/coupang-leadership-principles/":
                 "Coupang Leadership Principles",
             "https://careers.deliveryhero.com/delivery-hero/2025-4/launching-our-leadership-principles":
                 "Launching Our Leadership Principles, Delivery Hero",
+            "https://careers.deliveryhero.com/":
+                "Delivery Hero Careers",
             "https://handbook.gitlab.com/handbook/values/":
                 "GitLab Values",
+            "https://handbook.gitlab.com/handbook/values/#collaboration":
+                "Collaboration, GitLab Values",
+            "https://handbook.gitlab.com/handbook/values/#results":
+                "Results for Customers, GitLab Values",
+            "https://handbook.gitlab.com/handbook/values/#efficiency":
+                "Efficiency, GitLab Values",
+            "https://handbook.gitlab.com/handbook/values/#diversity-inclusion":
+                "Diversity, Inclusion & Belonging, GitLab Values",
+            "https://handbook.gitlab.com/handbook/values/#iteration":
+                "Iteration, GitLab Values",
+            "https://handbook.gitlab.com/handbook/values/#transparency":
+                "Transparency, GitLab Values",
             "https://www.dawnaerospace.com/about":
                 "About Dawn Aerospace",
+            "https://www.dawnaerospace.com/careers":
+                "Careers at Dawn Aerospace",
             "https://www.toyota-global.com/company/history_of_toyota/75years/data/conditions/philosophy/toyotaway2001.html":
                 "Toyota Way 2001",
+            "https://www.toyota-global.com/pages/contents/investors/ir_library/annual/pdf/2018/ar18_3_en.pdf":
+                "Toyota Annual Report 2018, the Toyota Way keywords",
+            "https://www.toyota-global.com/company/history_of_toyota/75years/data/conditions/philosophy/index.html":
+                "Toyota Corporate Philosophy",
             "https://www.blueorigin.com/careers/work-culture":
                 "Blue Origin Work Culture",
+            "https://www.blueorigin.com/about-blue":
+                "About Blue Origin",
+            "https://www.mcjrotc.marines.mil/About/Leadership-Traits/":
+                "Leadership Traits",
+            "https://www.trngcmd.marines.mil/Portals/207/Site%20Images/TBS/B1X0099XQ%20Officership%20Foundations.pdf":
+                "Officership Foundations, The Basic School",
             "https://www.marines.mil/News/Publications/MCPEL/Electronic-Library-Display/Article/899578/mcwp-6-10/":
                 "MCWP 6-10 Leading Marines",
             "https://www.marines.mil/News/Publications/MCPEL/Electronic-Library-Display/Article/898678/mcdp-6/":
@@ -178,8 +207,10 @@ class FurtherReadingTest(unittest.TestCase):
                 "Lejeune Leadership Institute, Marine Corps University",
             "https://www.usmcu.edu/Academic-Programs/Lejeune-Leadership-Institute/Marine-Leader-Development/":
                 "Marine Leader Development, Marine Corps University",
-            "https://grc-usmcu.libguides.com/CMCPRP":
+            "https://grc-usmcu.libguides.com/cmc-reading-list":
                 "Commandant's Professional Reading List",
+            "https://www.usmcu.edu/Academic-Programs/Lejeune-Leadership-Institute/LLI-Professional-Reading-List/":
+                "Commandant's Professional Reading List, Lejeune Leadership Institute",
         }
         seen = {url: 0 for url in expected}
         for name, items in lists():
@@ -187,9 +218,8 @@ class FurtherReadingTest(unittest.TestCase):
                 continue
             for item in items or []:
                 url = item["url"]
-                if url not in expected:
-                    continue
                 with self.subTest(file=name, url=url):
+                    self.assertIn(url, expected, "unexpected official URL")
                     self.assertEqual(item["title"], expected[url])
                     self.assertNotIn("\u2014", item["note"])
                 seen[url] += 1

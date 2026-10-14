@@ -655,6 +655,9 @@ def validate_teaching(by_company, errs, root=None):
         catalog = None
     teaching = os.path.join(root or DATA, "teaching")
     if not os.path.isdir(teaching):
+        if root is None:
+            errs.append("data/teaching: missing")
+            require_teaching_coverage(by_company, teaching, errs)
         return
     for company in sorted(os.listdir(teaching)):
         cdir = os.path.join(teaching, company)
