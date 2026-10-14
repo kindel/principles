@@ -49,7 +49,7 @@
       "situation": "When time or privacy limits what you can say",
       "under": "Goes silent and lets them invent the story.",
       "justRight": "Says what you can, says what you cannot, and tells them when more will come.",
-      "over": "Hints until they guess, and the guess is worse than the truth."
+      "over": "Says past the limit after they already have the boundary."
     },
     {
       "id": "they-have-to-continue-without-you",

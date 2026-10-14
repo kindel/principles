@@ -4862,7 +4862,7 @@
           "situation": "You cannot say everything",
           "under": "Goes silent and lets them invent the story.",
           "justRight": "Says what you can, says what you cannot, and tells them when more will come.",
-          "over": "Hints until they guess, and the guess is worse than the truth.",
+          "over": "Says past the limit after they already have the boundary.",
           "words": "generated"
         },
         {
@@ -5178,7 +5178,7 @@
           "situation": "A senior asks for work you cannot hold",
           "under": "Says yes and hides the mismatch.",
           "justRight": "Names the capability you have, the gap, and what you can take instead.",
-          "over": "Says no to work you can do because saying no feels like protecting the team.",
+          "over": "Refuses the slice you can take, so the unit never hears the part it can hold.",
           "words": "generated"
         },
         {

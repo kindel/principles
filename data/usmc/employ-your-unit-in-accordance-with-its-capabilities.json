@@ -56,7 +56,7 @@
       "situation": "When a senior asks for work the unit cannot hold",
       "under": "Says yes and hides the mismatch.",
       "justRight": "Names the capability you have, the gap, and what you can take instead.",
-      "over": "Says no to work you can do because saying no feels like protecting the team."
+      "over": "Refuses the slice you can take, so the unit never hears the part it can hold."
     }
   ]
 }
