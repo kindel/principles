@@ -241,7 +241,7 @@ generated set marked as generated.
   first and Transparency last (one through six), the order that spells CREDIT.
   Dawn is Think big, start small first and Race on the racetrack, walk on ice
   last (one through 15), following the document's numbering. Toyota is Challenge
-  first and Teamwork last (one through five).   Blue Origin is Passion for our
+  first and Teamwork last (one through five). Blue Origin is Passion for our
   Mission first and Have Backbone; Disagree and Commit last (one through 14).
   The U.S. Marine Corps is Know yourself and seek self-improvement first and
   Seek responsibility and take responsibility for your actions last (one through
