@@ -24,7 +24,11 @@
     {
       "id": "self-assessment",
       "label": "self-assessment",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "honest-self-assessment",
+        "seeking-honest-opinions"
+      ]
     }
   ],
   "rows": [
