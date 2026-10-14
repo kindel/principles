@@ -22,8 +22,9 @@ TEACH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
                      "data", "teaching")
 BLOG_HOST = "blog.kindel.com"
 # Amazon: 14 principle files plus the set index. Any Company adds
-# Intentional About Culture, which has no file to copy.
-EXPECTED = {"amazon": 15, "generic": 16}
+# Intentional About Culture, which has no file to copy. USMC is the
+# set catalog only: Further reading for the 14 traits, no principle files.
+EXPECTED = {"amazon": 15, "generic": 16, "usmc": 1}
 
 
 def is_tig(url):

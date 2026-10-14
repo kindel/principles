@@ -110,8 +110,7 @@ COMPANY_META = collections.OrderedDict([
             "are guided by 11 leadership principles. The 14 leadership "
             "traits, remembered as JJ DID TIE BUCKLE, are the character "
             "those principles rest on. They are further reading, not a "
-            "second set of principles: "
-            "https://www.mcjrotc.marines.mil/About/Leadership-Traits/"
+            "second set of principles."
         ),
     }),
 ])
