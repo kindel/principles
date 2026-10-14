@@ -19,7 +19,10 @@
     {
       "id": "give-the-why",
       "label": "give the why",
-      "kind": "equivalent"
+      "kind": "facet",
+      "rows": [
+        "why-the-work"
+      ]
     }
   ],
   "rows": [
