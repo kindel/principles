@@ -1,0 +1,62 @@
+{
+  "id": 10010,
+  "slug": "employ-your-unit-in-accordance-with-its-capabilities",
+  "company": "usmc",
+  "name": "Employ your unit in accordance with its capabilities",
+  "sort": 10,
+  "definition": "Successful completion of a task depends upon how well you know your unit's capabilities. If the task assigned is one that your unit has not been trained to do, failure is very likely to result.",
+  "terms": [
+    {
+      "id": "employ-your-unit-in-accordance-with-its-capabilities",
+      "label": "employ your unit in accordance with its capabilities",
+      "kind": "alias"
+    },
+    {
+      "id": "employ-within-capabilities",
+      "label": "employ within capabilities",
+      "kind": "alias"
+    },
+    {
+      "id": "know-the-team-limits",
+      "label": "know the team limits",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "a-task-they-were-not-trained-for",
+      "situation": "When the ask is outside what the team can do",
+      "under": "Accepts it anyway and hopes they figure it out.",
+      "justRight": "Says the team is not trained for that work, names what it would take, or declines it.",
+      "over": "Refuses every new kind of work, including a stretch they could make with a short prep."
+    },
+    {
+      "id": "three-to-do-the-job-of-ten",
+      "situation": "When the load is larger than the people you have",
+      "under": "Assigns it as if the roster were full.",
+      "justRight": "Cuts the scope, gets more people, or says no before the team breaks.",
+      "over": "Protects the team by under-committing work they can already do well."
+    },
+    {
+      "id": "unused-capacity",
+      "situation": "When the team has unused strength",
+      "under": "Leaves capable people on work that does not need them.",
+      "justRight": "Puts unused capacity on a challenge they are prepared to finish.",
+      "over": "Fills every idle hour so nobody has slack when the real load arrives."
+    },
+    {
+      "id": "a-stretch-they-can-make",
+      "situation": "When a harder task would grow the team",
+      "under": "Keeps them on last month's work because it is safe.",
+      "justRight": "Takes the stretch they are trained to attempt, and prepares the gap first.",
+      "over": "Takes a stretch they cannot survive so the team looks ambitious."
+    },
+    {
+      "id": "saying-no-to-the-wrong-work",
+      "situation": "When a senior asks for work the unit cannot hold",
+      "under": "Says yes and hides the mismatch.",
+      "justRight": "Names the capability you have, the gap, and what you can take instead.",
+      "over": "Says no to work you can do because saying no feels like protecting the team."
+    }
+  ]
+}

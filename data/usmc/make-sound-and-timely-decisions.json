@@ -1,0 +1,84 @@
+{
+  "id": 10008,
+  "slug": "make-sound-and-timely-decisions",
+  "company": "usmc",
+  "name": "Make sound and timely decisions",
+  "sort": 8,
+  "definition": "The leader must be able to rapidly estimate a situation and make a sound decision based on that estimation. Hesitation or reluctance to make a decision leads subordinates to lose confidence in your abilities as a leader.",
+  "terms": [
+    {
+      "id": "make-sound-and-timely-decisions",
+      "label": "make sound and timely decisions",
+      "kind": "alias"
+    },
+    {
+      "id": "sound-and-timely",
+      "label": "sound and timely",
+      "kind": "alias"
+    },
+    {
+      "id": "are-right-a-lot",
+      "label": "are right a lot",
+      "kind": "facet",
+      "rows": [
+        "estimating-the-situation",
+        "revising-a-wrong-call",
+        "bluffing-through"
+      ]
+    },
+    {
+      "id": "bias-for-action",
+      "label": "bias for action",
+      "kind": "facet",
+      "rows": [
+        "hesitation",
+        "a-decision-that-can-wait",
+        "deciding-without-all-the-facts"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "estimating-the-situation",
+      "situation": "When you have to choose a path",
+      "under": "Picks from habit, or from whoever spoke last, without a real estimate.",
+      "justRight": "Takes a fast, honest read of the facts you have, then chooses.",
+      "over": "Builds a perfect picture of the situation and the window closes."
+    },
+    {
+      "id": "deciding-without-all-the-facts",
+      "situation": "When the remaining facts would take too long",
+      "under": "Waits for a complete file and the team sits still.",
+      "justRight": "Decides on what you have, says what you assumed, and watches for the fact that would change it.",
+      "over": "Decides on a hunch and treats later facts as an insult."
+    },
+    {
+      "id": "hesitation",
+      "situation": "When the team is waiting on your call",
+      "under": "Delays until they lose confidence and start guessing.",
+      "justRight": "Makes the call as soon as you have enough to be sound, and says it clearly.",
+      "over": "Snaps a call so you look decisive, then spends the week undoing it."
+    },
+    {
+      "id": "revising-a-wrong-call",
+      "situation": "When the decision you made is wrong",
+      "under": "Bluffs through it so you do not look indecisive.",
+      "justRight": "Revises it as soon as you know, and tells the people who are already moving.",
+      "over": "Revises so often that nobody trusts the current call."
+    },
+    {
+      "id": "a-decision-that-can-wait",
+      "situation": "When a little more time would change the quality of the call",
+      "under": "Treats every wait as weakness and forces a thin call.",
+      "justRight": "Takes the time when the wait is cheap and the extra fact is real, then decides.",
+      "over": "Uses one more input as a habit, including on calls that will not get better."
+    },
+    {
+      "id": "bluffing-through",
+      "situation": "When people can already see the call is thin",
+      "under": "Pretends certainty you do not have.",
+      "justRight": "Names the weak spot, keeps or changes the call, and does not bluff.",
+      "over": "Walks back a sound call because someone looked doubtful."
+    }
+  ]
+}

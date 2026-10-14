@@ -1,0 +1,62 @@
+{
+  "id": 10005,
+  "slug": "set-the-example",
+  "company": "usmc",
+  "name": "Set the example",
+  "sort": 5,
+  "definition": "As Marines progress through the ranks by promotion, all too often they take the attitude of \"do as I say, not as I do.\" Nothing turns Marines off faster! As a Marine leader, your duty is to set the standards for your Marines by personal example.",
+  "terms": [
+    {
+      "id": "set-the-example",
+      "label": "set the example",
+      "kind": "alias"
+    },
+    {
+      "id": "lead-by-example",
+      "label": "lead by example",
+      "kind": "equivalent"
+    },
+    {
+      "id": "personal-example",
+      "label": "personal example",
+      "kind": "alias"
+    }
+  ],
+  "rows": [
+    {
+      "id": "the-standard-you-keep",
+      "situation": "When you ask the team for a standard",
+      "under": "Asks for a standard you do not keep yourself.",
+      "justRight": "Keeps the same standard in your own work, then asks it of them.",
+      "over": "Performs the standard so loudly that the work becomes a show about you."
+    },
+    {
+      "id": "do-as-i-say",
+      "situation": "When a shortcut would be convenient for you",
+      "under": "Takes the shortcut and tells them not to.",
+      "justRight": "Does the step you asked them to do, including the unglamorous one.",
+      "over": "Refuses every convenience, including ones that do not touch the standard, to look stricter than the team."
+    },
+    {
+      "id": "they-copy-what-you-do",
+      "situation": "When people are watching how you handle a hard week",
+      "under": "Lets the week show as complaint, lateness, or a drop in care.",
+      "justRight": "Holds appearance, attitude, and follow-through at the same bar you set on a calm week.",
+      "over": "Performs stamina and will not name a real limit, so they hide theirs too."
+    },
+    {
+      "id": "a-cut-you-want-for-yourself",
+      "situation": "When you want an exception you would not give them",
+      "under": "Takes the exception and hopes they do not notice.",
+      "justRight": "Applies the same rule to yourself, or changes the rule for everyone.",
+      "over": "Denies yourself a reasonable exception to make a point, and the team learns the rule is theater."
+    },
+    {
+      "id": "when-nobody-is-watching",
+      "situation": "When the standard is easy to skip in private",
+      "under": "Keeps the standard only when someone will see it.",
+      "justRight": "Does the same work the same way when the room is empty.",
+      "over": "Audits yourself in public so often that the point becomes being seen."
+    }
+  ]
+}

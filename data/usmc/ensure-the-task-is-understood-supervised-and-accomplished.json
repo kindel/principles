@@ -1,0 +1,66 @@
+{
+  "id": 10006,
+  "slug": "ensure-the-task-is-understood-supervised-and-accomplished",
+  "company": "usmc",
+  "name": "Ensure the task is understood, supervised and accomplished",
+  "sort": 6,
+  "definition": "This principle is necessary in the exercise of command. Before you can expect your Marines to perform, they must know first what is expected of them. You must communicate your instructions in a clear, concise manner.",
+  "terms": [
+    {
+      "id": "ensure-the-task-is-understood-supervised-and-accomplished",
+      "label": "ensure the task is understood, supervised and accomplished",
+      "kind": "alias"
+    },
+    {
+      "id": "understood-supervised-and-accomplished",
+      "label": "understood, supervised, and accomplished",
+      "kind": "alias"
+    },
+    {
+      "id": "supervise-the-work",
+      "label": "supervise the work",
+      "kind": "facet",
+      "rows": [
+        "checking-progress",
+        "too-much-supervision"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "what-is-expected",
+      "situation": "When you assign a task",
+      "under": "Leaves them to infer the outcome from a vague ask.",
+      "justRight": "States the outcome, the constraints, and what done looks like, in words they can use.",
+      "over": "Scripts every step so tightly that they cannot use their own judgment."
+    },
+    {
+      "id": "they-have-questions",
+      "situation": "Before the work starts",
+      "under": "Sends them off before they can ask, then is surprised by the miss.",
+      "justRight": "Leaves room for questions, answers them, and checks that they can repeat the task in their own words.",
+      "over": "Holds a long briefing that insults their intelligence and still skips the check."
+    },
+    {
+      "id": "checking-progress",
+      "situation": "While the work is underway",
+      "under": "Assigns it and does not look again until the due date.",
+      "justRight": "Checks progress at a few points that would still let them recover, then lets them work.",
+      "over": "Hovers on every step and becomes the bottleneck."
+    },
+    {
+      "id": "too-much-supervision",
+      "situation": "When you are tempted to watch every move",
+      "under": "Stays away so completely that a miss has no warning.",
+      "justRight": "Lets them use their own technique and checks the outcome, not the keystrokes.",
+      "over": "Treats any method that is not yours as a defect."
+    },
+    {
+      "id": "calling-it-done",
+      "situation": "When they say the task is finished",
+      "under": "Takes their word and never looks at the result.",
+      "justRight": "Confirms the work meets what you named, then closes it.",
+      "over": "Reopens finished work for nits that were never in the ask."
+    }
+  ]
+}

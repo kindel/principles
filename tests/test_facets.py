@@ -90,10 +90,11 @@ class FacetSharingTest(unittest.TestCase):
 
     def test_acts_like_an_owner_includes_the_owner_principles(self):
         # acts-like-an-owner maps Amazon 1002, Dawn 6004, Arm 2008, DH 4001,
-        # Any Company Ownership 8003, and Blue Origin Ownership 9007.
+        # Any Company Ownership 8003, Blue Origin Ownership 9007, and
+        # USMC Seek responsibility 10011.
         facet = facet_by_id(self.facets, "acts-like-an-owner")
         self.assertIsNotNone(facet)
-        self.assertEqual(sorted(facet["principles"]), [1002, 2008, 4001, 6004, 8003, 9007])
+        self.assertEqual(sorted(facet["principles"]), [1002, 2008, 4001, 6004, 8003, 9007, 10011])
 
     def test_toyota_genchi_genbutsu_shares_dive_deep(self):
         # Toyota 7003 is the same go-and-see behavior as Amazon, Coupang,

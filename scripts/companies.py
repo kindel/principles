@@ -96,4 +96,22 @@ COMPANY_META = collections.OrderedDict([
             "culture and unyielding dedication to mission success."
         ),
     }),
+    ("usmc", {
+        "block": 10000,
+        "name": "U.S. Marine Corps",
+        "set": "Leadership Principles",
+        # Official TECOM / The Basic School handout. MCU's Marine Leader
+        # Development page lists the same lesson as RP0103. Definitions are
+        # leading excerpts of that handout. The 14 leadership traits are
+        # character, not a second principle set; see the preamble.
+        "source": "https://www.trngcmd.marines.mil/Portals/207/Site%20Images/TBS/B1X0099XQ%20Officership%20Foundations.pdf",
+        "preamble": (
+            "Being of good character is not enough to lead. Marine leaders "
+            "are guided by 11 leadership principles. The 14 leadership "
+            "traits, remembered as JJ DID TIE BUCKLE, are the character "
+            "those principles rest on. They are further reading, not a "
+            "second set of principles: "
+            "https://www.mcjrotc.marines.mil/About/Leadership-Traits/"
+        ),
+    }),
 ])

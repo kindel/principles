@@ -1,0 +1,62 @@
+{
+  "id": 10003,
+  "slug": "know-your-marines-and-look-out-for-their-welfare",
+  "company": "usmc",
+  "name": "Know your Marines and look out for their welfare",
+  "sort": 3,
+  "definition": "One of the most important principles, you should know your Marines and how they react to different situations. This knowledge can save lives.",
+  "terms": [
+    {
+      "id": "know-your-marines-and-look-out-for-their-welfare",
+      "label": "know your Marines and look out for their welfare",
+      "kind": "alias"
+    },
+    {
+      "id": "look-out-for-their-welfare",
+      "label": "look out for their welfare",
+      "kind": "alias"
+    },
+    {
+      "id": "know-your-people",
+      "label": "know your people",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "knowing-the-person",
+      "situation": "When you assign work to someone you barely know",
+      "under": "Treats them as a seat and a skill list.",
+      "justRight": "Knows how they work under pressure, what they carry outside the job, and when they need a closer check.",
+      "over": "Collects personal detail they did not offer and uses it as leverage."
+    },
+    {
+      "id": "someone-is-struggling",
+      "situation": "When someone on the team is struggling",
+      "under": "Waits for them to bring it, or treats it as a performance problem only.",
+      "justRight": "Asks, names the load you can see, and gets them help that actually lands.",
+      "over": "Takes over their life and becomes the person they cannot tell the truth to."
+    },
+    {
+      "id": "matching-the-assignment",
+      "situation": "When a high-stakes call has to be made fast",
+      "under": "Hands it to whoever is free, including the person who freezes under that kind of pressure.",
+      "justRight": "Puts the person who can make that call on it, and stays close to the person who cannot yet.",
+      "over": "Protects people from every hard assignment, and they never get stronger."
+    },
+    {
+      "id": "welfare-before-your-comfort",
+      "situation": "When your comfort and their welfare are in the same choice",
+      "under": "Takes the easy slot and leaves them the leftover.",
+      "justRight": "Puts their rest, food, and recovery ahead of yours, and still holds the standard.",
+      "over": "Performs self-sacrifice so loudly that they cannot accept ordinary help."
+    },
+    {
+      "id": "a-problem-they-brought-you",
+      "situation": "When someone brings you a problem outside the work",
+      "under": "Says it is not your job and sends them away.",
+      "justRight": "Takes it far enough that they have a next step and a person who can help.",
+      "over": "Becomes their only fixer, and the work they own stops moving."
+    }
+  ]
+}

@@ -206,8 +206,10 @@ generated set marked as generated.
   addresses a principle by `id` alone and cannot land on the wrong record.
 - Each company owns a block of a thousand ids: Amazon 1000, Arm 2000, Coupang
   3000, Delivery Hero 4000, GitLab 5000, Dawn 6000, Toyota 7000, Generic 8000,
-  Blue Origin 9000. The published source is
-  https://www.blueorigin.com/careers/work-culture.
+  Blue Origin 9000, U.S. Marine Corps 10000. Blue Origin's published source is
+  https://www.blueorigin.com/careers/work-culture. The Marine Corps source is
+  the official TECOM / The Basic School Officership Foundations handout,
+  https://www.trngcmd.marines.mil/Portals/207/Site%20Images/TBS/B1X0099XQ%20Officership%20Foundations.pdf.
   `block` in
   `scripts/companies.py` is the registry, and claiming the next free block is
   the whole of adding a company. A new principle takes the next free number in
@@ -222,7 +224,7 @@ generated set marked as generated.
   signal that they may be describing the same behavior, so `validate.py` prints
   the list rather than hiding it.
 - `company` is kebab-case and matches the parent directory. Current companies
-  are `generic`, `amazon`, `arm`, `coupang`, `delivery-hero`, `gitlab`, `dawn`, `toyota`, and `blue-origin`.
+  are `generic`, `amazon`, `arm`, `coupang`, `delivery-hero`, `gitlab`, `dawn`, `toyota`, `blue-origin`, and `usmc`.
 - `group` is optional, and a record carries it when the company publishes its
   set under lenses. Arm has two, `one-arm` and `accelerate-impact`, five
   principles each. Toyota has two, `continuous-improvement` and
@@ -239,11 +241,13 @@ generated set marked as generated.
   first and Transparency last (one through six), the order that spells CREDIT.
   Dawn is Think big, start small first and Race on the racetrack, walk on ice
   last (one through 15), following the document's numbering. Toyota is Challenge
-  first and Teamwork last (one through five). Blue Origin is Passion for our
+  first and Teamwork last (one through five).   Blue Origin is Passion for our
   Mission first and Have Backbone; Disagree and Commit last (one through 14).
-  Generic, shown as Universal Leadership Principles, is Customer Obsession first
-  and Intentional About Culture last (one through 15), the order in
-  kindel/principles issue 71.
+  The U.S. Marine Corps is Know yourself and seek self-improvement first and
+  Seek responsibility and take responsibility for your actions last (one through
+  11), the numbered doctrine order Marines recite. Generic, shown as Universal
+  Leadership Principles, is Customer Obsession first and Intentional About
+  Culture last (one through 15), the order in kindel/principles issue 71.
 - `definition` is the short statement of the principle, transcribed from
   `source` under Sourcing below. For a company set that source is the
   company's own text. For the generic set it is kindel/principles issue 71.

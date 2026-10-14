@@ -1,0 +1,67 @@
+{
+  "id": 10011,
+  "slug": "seek-responsibility-and-take-responsibility-for-your-actions",
+  "company": "usmc",
+  "name": "Seek responsibility and take responsibility for your actions",
+  "sort": 11,
+  "definition": "For professional development, you must actively seek out challenging assignments. You must use initiative and sound judgment when trying to accomplish jobs that are not required by your grade.",
+  "terms": [
+    {
+      "id": "seek-responsibility-and-take-responsibility-for-your-actions",
+      "label": "seek responsibility and take responsibility for your actions",
+      "kind": "alias"
+    },
+    {
+      "id": "seek-responsibility",
+      "label": "seek responsibility",
+      "kind": "alias"
+    },
+    {
+      "id": "take-responsibility",
+      "label": "take responsibility",
+      "kind": "alias"
+    },
+    {
+      "id": "acts-like-an-owner",
+      "label": "acts like an owner",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "seeking-a-harder-assignment",
+      "situation": "When a harder assignment is available",
+      "under": "Waits to be asked, and stays inside the work your grade already requires.",
+      "justRight": "Asks for the harder assignment and does it with judgment, not as a stunt.",
+      "over": "Collects extra work until the jobs you already own slip."
+    },
+    {
+      "id": "after-a-miss-you-own",
+      "situation": "When the result is yours",
+      "under": "Points at the people who executed and keeps the story clean.",
+      "justRight": "Owns the outcome, including what they did on your order, and names the next fix.",
+      "over": "Takes all the blame as theater and skips the fix."
+    },
+    {
+      "id": "their-mistake-is-yours",
+      "situation": "When someone you lead misses",
+      "under": "Removes them so the miss is no longer attached to you.",
+      "justRight": "Keeps the responsibility, does not hide behind their error, and does not punish them for a miss that started with your call.",
+      "over": "Shields them from every consequence, including ones that are actually theirs."
+    },
+    {
+      "id": "waiting-to-be-asked",
+      "situation": "When work that needs an owner is sitting there",
+      "under": "Leaves it because it is not required of your seat.",
+      "justRight": "Picks it up, or stays until it has an owner, and uses judgment on how far to take it.",
+      "over": "Takes every unowned thing so you can be the person who seeks responsibility."
+    },
+    {
+      "id": "credit-and-blame",
+      "situation": "When the result is mixed",
+      "under": "Takes the credit and leaves the miss for someone else to explain.",
+      "justRight": "Puts your name on the decision, the miss, and the next step.",
+      "over": "Writes your name on work you barely touched so you look responsible."
+    }
+  ]
+}

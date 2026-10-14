@@ -1,0 +1,67 @@
+{
+  "id": 10001,
+  "slug": "know-yourself-and-seek-self-improvement",
+  "company": "usmc",
+  "name": "Know yourself and seek self-improvement",
+  "sort": 1,
+  "definition": "This principle of leadership is developed through the use of leadership traits. Evaluate yourself using the leadership traits to determine your strengths and weaknesses. Work to improve your weaknesses and use your strengths.",
+  "terms": [
+    {
+      "id": "know-yourself-and-seek-self-improvement",
+      "label": "know yourself and seek self-improvement",
+      "kind": "alias"
+    },
+    {
+      "id": "know-yourself",
+      "label": "know yourself",
+      "kind": "alias"
+    },
+    {
+      "id": "self-improvement",
+      "label": "self-improvement",
+      "kind": "alias"
+    },
+    {
+      "id": "self-assessment",
+      "label": "self-assessment",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "honest-self-assessment",
+      "situation": "When you need to know how you actually lead",
+      "under": "Skips the look at yourself, or writes only the strengths.",
+      "justRight": "Names the strengths you use and the weaknesses that still show up, specifically enough to act.",
+      "over": "Turns self-assessment into a performance. The list is long and nothing changes."
+    },
+    {
+      "id": "seeking-honest-opinions",
+      "situation": "When you need a read you cannot give yourself",
+      "under": "Asks people who will praise you, or does not ask.",
+      "justRight": "Asks a senior, a peer, and someone you lead for a plain read, and writes down what you will change.",
+      "over": "Collects so much feedback that you never pick a next step."
+    },
+    {
+      "id": "using-strengths",
+      "situation": "When the work needs what you already do well",
+      "under": "Hides a strength so you do not look like you are showing off.",
+      "justRight": "Puts the strength on the work that needs it, and says so.",
+      "over": "Leans on the strength for every problem, including the ones it does not fit."
+    },
+    {
+      "id": "improving-weaknesses",
+      "situation": "When a weakness is already costing the team",
+      "under": "Names it once and leaves it.",
+      "justRight": "Picks one weakness, makes a definite plan, and checks whether the next month looks different.",
+      "over": "Tries to fix every weakness at once and does none of them."
+    },
+    {
+      "id": "after-feedback",
+      "situation": "When someone tells you how you come across",
+      "under": "Defends the story you already had about yourself.",
+      "justRight": "Takes the part that is true, says what you will change, and uses the strength they also named.",
+      "over": "Rewrites your whole style after one comment, including the parts that already work."
+    }
+  ]
+}
