@@ -49,7 +49,7 @@
       "situation": "When they miss after you delegated",
       "under": "Takes the work back and does not give it again.",
       "justRight": "Owns the outcome with them, names the gap, and leaves the authority in place for the next try.",
-      "over": "Treats the miss as proof that delegation was the mistake."
+      "over": "Hands them a harder piece after the miss without naming the gap, so the next miss is larger."
     },
     {
       "id": "faith-in-their-judgment",

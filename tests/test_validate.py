@@ -877,6 +877,18 @@ class TeachingValidatorTest(unittest.TestCase):
             })
             self.assertEqual([], self.check(root))
 
+    def test_a_teaching_file_must_be_listed_in_the_catalog(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "index.json", {
+                "principles": [],
+                "blog": self.reading(),
+            })
+            self.write(root, "customer-obsession.json", self.good())
+            errs = self.check(root)
+            self.assertTrue(
+                any("not listed in the catalog" in e for e in errs),
+                errs)
+
     def test_a_catalog_file_must_exist(self):
         with tempfile.TemporaryDirectory() as root:
             self.write(root, "index.json", {

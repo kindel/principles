@@ -564,10 +564,6 @@
         },
         {
           "principle": 10008,
-          "id": "a-decision-that-can-wait"
-        },
-        {
-          "principle": 10008,
           "id": "deciding-without-all-the-facts"
         },
         {
@@ -2116,6 +2112,10 @@
         {
           "principle": 10008,
           "id": "estimating-the-situation"
+        },
+        {
+          "principle": 10008,
+          "id": "a-decision-that-can-wait"
         },
         {
           "principle": 10008,
