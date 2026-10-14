@@ -39,7 +39,7 @@
       "situation": "Before the work starts",
       "under": "Sends them off before they can ask, then is surprised by the miss.",
       "justRight": "Leaves room for questions, answers them, and checks that they can repeat the task in their own words.",
-      "over": "Holds a long briefing that insults their intelligence and still skips the check."
+      "over": "Asks for another read-back after they already have it, and the work does not start."
     },
     {
       "id": "checking-progress",
