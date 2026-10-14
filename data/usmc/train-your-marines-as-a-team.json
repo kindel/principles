@@ -1,0 +1,62 @@
+{
+  "id": 10007,
+  "slug": "train-your-marines-as-a-team",
+  "company": "usmc",
+  "name": "Train your Marines as a team",
+  "sort": 7,
+  "definition": "Every waking hour Marines should be trained and schooled, challenged and tested, and corrected and encouraged with perfection and teamwork as a goal.",
+  "terms": [
+    {
+      "id": "train-your-marines-as-a-team",
+      "label": "train your Marines as a team",
+      "kind": "alias"
+    },
+    {
+      "id": "train-as-a-team",
+      "label": "train as a team",
+      "kind": "alias"
+    },
+    {
+      "id": "teamwork",
+      "label": "teamwork",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "training-together",
+      "situation": "When the next hard week is coming",
+      "under": "Lets each person practice alone and hopes they will join up under pressure.",
+      "justRight": "Practices the real handoffs as a group, with the same load they will carry.",
+      "over": "Schedules so much group practice that nobody can finish this week's work."
+    },
+    {
+      "id": "knowing-your-role",
+      "situation": "When someone is new to the team",
+      "under": "Leaves them to discover their seat by colliding with someone else's.",
+      "justRight": "Makes the role, the handoff, and who they back up explicit, then practices it.",
+      "over": "Writes a role chart so detailed that they cannot move when the plan breaks."
+    },
+    {
+      "id": "a-team-that-is-only-jobs",
+      "situation": "When the group is a set of specialists",
+      "under": "Staffs the seats and treats a team as something that appears later.",
+      "justRight": "Trains, works, and reviews as a group, so each person knows how their piece serves the others.",
+      "over": "Blends every role so thoroughly that nobody is accountable for a piece."
+    },
+    {
+      "id": "hard-practice",
+      "situation": "When practice could be easy or real",
+      "under": "Runs a rehearsal that never stresses the weak join.",
+      "justRight": "Makes the practice hard enough that the real day is familiar, and corrects without humiliation.",
+      "over": "Turns practice into punishment, and people hide the misses you needed to see."
+    },
+    {
+      "id": "after-a-miss-as-a-group",
+      "situation": "When the team misses together",
+      "under": "Picks one person to blame and leaves the join-up unfixed.",
+      "justRight": "Names the handoff that failed, practices that piece, and keeps the people in their seats.",
+      "over": "Makes every miss a full reset of the team, and nobody trusts the next practice."
+    }
+  ]
+}

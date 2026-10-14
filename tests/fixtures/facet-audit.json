@@ -607,6 +607,72 @@
       "decision": "map",
       "facets": ["have-backbone-disagree-and-commit"],
       "reason": "Challenge respectfully, no compromise for social cohesion, commit wholly. Same challenge-then-commit behavior as Amazon Have Backbone; Disagree and Commit."
+    },
+    {
+      "id": 10001,
+      "decision": "map",
+      "facets": ["know-yourself"],
+      "reason": "Honest self-assessment, seeking a plain read, and a plan to improve. The curiosity table is new tools and unfamiliar work, not a look at how you lead. know-yourself is the table."
+    },
+    {
+      "id": 10002,
+      "decision": "map",
+      "facets": ["technically-proficient"],
+      "reason": "Know the job before you lead, answer from the work, and stay current. The high-standards table is the quality bar, not craft competence. technically-proficient is the table."
+    },
+    {
+      "id": 10003,
+      "decision": "map",
+      "facets": ["look-out-for-their-welfare"],
+      "reason": "Know the person, match the assignment, and look after their welfare. The help-anyway table is covering work, not knowing people. look-out-for-their-welfare is the table."
+    },
+    {
+      "id": 10004,
+      "decision": "map",
+      "facets": ["keep-them-informed"],
+      "reason": "Give the why, enough of the situation to act, and a picture they can continue without you. The public-docs table is private versus public files. keep-them-informed is the table."
+    },
+    {
+      "id": 10005,
+      "decision": "map",
+      "facets": ["set-the-example"],
+      "reason": "Keep the standard you ask for, including when nobody is watching. The culture table is the room and the hard meeting, not personal example. set-the-example is the table."
+    },
+    {
+      "id": 10006,
+      "decision": "map",
+      "facets": ["understood-supervised-and-accomplished"],
+      "reason": "Understood, supervised, and accomplished is one loop. The concrete table drops the check. The results table drops the briefing. understood-supervised-and-accomplished is the table."
+    },
+    {
+      "id": 10007,
+      "decision": "map",
+      "facets": ["train-as-a-team"],
+      "reason": "Practice the handoffs as a group, know your role, and train for the real day. pull-people-together is direction and feedback, not training. train-as-a-team is the table."
+    },
+    {
+      "id": 10008,
+      "decision": "map",
+      "facets": ["are-right-a-lot", "bias-for-action"],
+      "reason": "Sound is the estimate and the revision. Timely is the call before hesitation costs confidence. Those are the two existing tables, composed, not a third."
+    },
+    {
+      "id": 10009,
+      "decision": "map",
+      "facets": ["grow-the-team"],
+      "reason": "Delegate the authority, let them do it, and leave the seat in place after a miss. Same grow-the-team behavior as Toyota Teamwork. The hiring table stays off."
+    },
+    {
+      "id": 10010,
+      "decision": "map",
+      "facets": ["employ-within-capabilities"],
+      "reason": "Match the work to what the team is trained to hold, including unused capacity and a stretch they can make. The endurance table is personal energy. employ-within-capabilities is the table."
+    },
+    {
+      "id": 10011,
+      "decision": "map",
+      "facets": ["acts-like-an-owner"],
+      "reason": "Seek the harder assignment, own the miss, and do not hide behind people you lead. Same owner behavior as Amazon Ownership."
     }
   ]
 }

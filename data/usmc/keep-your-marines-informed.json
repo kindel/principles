@@ -1,0 +1,65 @@
+{
+  "id": 10004,
+  "slug": "keep-your-marines-informed",
+  "company": "usmc",
+  "name": "Keep your Marines informed",
+  "sort": 4,
+  "definition": "Marines are inquisitive by nature. To promote efficiency and morale, you should inform your Marines of all happenings and give reasons why things are to be done.",
+  "terms": [
+    {
+      "id": "keep-your-marines-informed",
+      "label": "keep your Marines informed",
+      "kind": "alias"
+    },
+    {
+      "id": "keep-them-informed",
+      "label": "keep them informed",
+      "kind": "alias"
+    },
+    {
+      "id": "give-the-why",
+      "label": "give the why",
+      "kind": "facet",
+      "rows": [
+        "why-the-work"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "why-the-work",
+      "situation": "When you hand someone a task",
+      "under": "Gives the task and none of the reason. They cannot adapt when the path breaks.",
+      "justRight": "Says what to do and why, so they can carry on when you are not there.",
+      "over": "Gives a speech about context and they still cannot name the next step."
+    },
+    {
+      "id": "a-change-they-will-feel",
+      "situation": "When a decision will change their week",
+      "under": "Lets them find out when the work lands differently.",
+      "justRight": "Tells them as soon as you can, including what stays the same.",
+      "over": "Forwards every rumor so they spend the week decoding noise."
+    },
+    {
+      "id": "enough-to-act",
+      "situation": "When they need to act without you",
+      "under": "Holds the picture in your head and answers one question at a time.",
+      "justRight": "Gives them enough of the situation to do the job intelligently and to use their own judgment.",
+      "over": "Dumps the whole file and calls that informing them."
+    },
+    {
+      "id": "when-you-cannot-say-everything",
+      "situation": "When time or privacy limits what you can say",
+      "under": "Goes silent and lets them invent the story.",
+      "justRight": "Says what you can, says what you cannot, and tells them when more will come.",
+      "over": "Says past the limit after they already have the boundary."
+    },
+    {
+      "id": "they-have-to-continue-without-you",
+      "situation": "When you will be gone and the work will not",
+      "under": "Leaves them a task list with no picture of the situation.",
+      "justRight": "Leaves the goal, the constraints, and who to ask, so they can continue without you.",
+      "over": "Writes a manual so long that nobody can find the one decision they will have to make."
+    }
+  ]
+}

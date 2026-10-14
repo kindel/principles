@@ -256,6 +256,8 @@ def validate_record(company, filename, rec, errs):
 
     if not SLUG.match(rec.get("slug") or ""):
         errs.append("%s: slug is not kebab-case" % where)
+    elif rec.get("slug") == "index":
+        errs.append("%s: index is reserved for the catalog" % where)
     if not SLUG.match(rec.get("company", "")):
         errs.append("%s: company is not kebab-case" % where)
 
@@ -637,6 +639,10 @@ def validate_teaching(by_company, errs, root=None):
     Each related id must be one too. Every {lp:slug} token in the prose,
     in a related note, or in a Further reading note must resolve, and it
     must be listed in related. A token in the catalog must resolve.
+    A catalog principles list may be empty. A listed file has to exist
+    in that directory, and a slug is listed once. index is reserved for
+    the catalog. When the catalog exists, a teaching file other than
+    the catalog has to be listed.
     root is for tests; the corpus uses DATA.
     """
     catalog, catalog_err = essay_links.load_catalog()
@@ -661,6 +667,8 @@ def validate_teaching(by_company, errs, root=None):
             slug_ = rec.get("slug")
             if isinstance(slug_, str):
                 slugs[slug_] = rec
+        listed_slugs = None
+        teaching_stems = []
         for filename in sorted(os.listdir(cdir)):
             path = os.path.join(cdir, filename)
             where = "data/teaching/%s/%s" % (company, filename)
@@ -681,9 +689,11 @@ def validate_teaching(by_company, errs, root=None):
             check_teaching_dashes(doc, where, errs)
             if filename == "index.json":
                 principles = doc.get("principles")
-                if not isinstance(principles, list) or not principles:
-                    errs.append("%s: principles must be a non-empty list" % where)
+                if not isinstance(principles, list):
+                    errs.append("%s: principles must be a list" % where)
                 else:
+                    listed_slugs = set()
+                    seen_slugs = set()
                     for item in principles:
                         if not isinstance(item, dict):
                             errs.append("%s: catalog entry must be an object" % where)
@@ -692,10 +702,25 @@ def validate_teaching(by_company, errs, root=None):
                         if slug_ not in slugs:
                             errs.append("%s: catalog slug %r does not exist" % (where, slug_))
                             continue
+                        if slug_ == "index" or item.get("file") == "index.json":
+                            errs.append("%s: index is reserved for the catalog" % where)
+                            continue
+                        if slug_ in seen_slugs:
+                            errs.append("%s: catalog slug %r is listed more than once"
+                                        % (where, slug_))
+                        seen_slugs.add(slug_)
+                        listed_slugs.add(slug_)
                         rec = slugs[slug_]
                         if item.get("id") != rec.get("id"):
                             errs.append("%s: catalog id for %s is %r, record is %r"
                                         % (where, slug_, item.get("id"), rec.get("id")))
+                        file_ = item.get("file")
+                        expect = slug_ + ".json" if isinstance(slug_, str) else ""
+                        if file_ != expect:
+                            errs.append("%s: catalog file for %s must be %s"
+                                        % (where, slug_, expect))
+                        elif not os.path.isfile(os.path.join(cdir, file_)):
+                            errs.append("%s: catalog file %s does not exist" % (where, file_))
                 validate_blog(doc.get("blog"), where, errs)
                 texts = []
                 _strings(doc, texts)
@@ -705,6 +730,7 @@ def validate_teaching(by_company, errs, root=None):
                         if tok not in slugs:
                             errs.append("%s: {lp:%s} does not resolve" % (where, tok))
                 continue
+            teaching_stems.append(filename[:-5])
             validate_teaching_shape(doc, where, errs)
             validate_blog(doc.get("blog"), where, errs)
             stem = filename[:-5]
@@ -742,6 +768,11 @@ def validate_teaching(by_company, errs, root=None):
                         errs.append("%s: {lp:%s} does not resolve" % (where, tok))
                     elif tok not in related:
                         errs.append("%s: {lp:%s} is missing from related" % (where, tok))
+        if listed_slugs is not None:
+            for stem in teaching_stems:
+                if stem not in listed_slugs:
+                    errs.append("data/teaching/%s/%s.json: not listed in the catalog"
+                                % (company, stem))
 
 
 def _record_by_id(by_company, company):

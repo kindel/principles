@@ -1,0 +1,62 @@
+{
+  "id": 10009,
+  "slug": "develop-a-sense-of-responsibility-in-your-subordinates",
+  "company": "usmc",
+  "name": "Develop a sense of responsibility in your subordinates",
+  "sort": 9,
+  "definition": "Another way to show your Marines that you are interested in their welfare is to give them the opportunity for professional development. Assigning tasks and delegating the authority to accomplish tasks promotes mutual confidence and respect between the leader and subordinates.",
+  "terms": [
+    {
+      "id": "develop-a-sense-of-responsibility-in-your-subordinates",
+      "label": "develop a sense of responsibility in your subordinates",
+      "kind": "alias"
+    },
+    {
+      "id": "develop-subordinates",
+      "label": "develop subordinates",
+      "kind": "alias"
+    },
+    {
+      "id": "grow-the-team",
+      "label": "grow the team",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "delegating-authority",
+      "situation": "When the work could be theirs",
+      "under": "Keeps the authority and hands them tasks with no room to decide.",
+      "justRight": "Assigns the task and the authority to finish it, then holds them for the result.",
+      "over": "Hands them a title and disappears, including on work they are not yet ready to own."
+    },
+    {
+      "id": "doing-it-yourself",
+      "situation": "When it would be faster to do it yourself",
+      "under": "Does their work so it is right, and they never own it.",
+      "justRight": "Lets them do it, stays close enough to catch a real miss, and gives the work back.",
+      "over": "Makes them do work they cannot yet finish so you can say you delegated."
+    },
+    {
+      "id": "a-person-ready-for-more",
+      "situation": "When someone is ready for a harder seat",
+      "under": "Keeps the hard work because you already trust yourself with it.",
+      "justRight": "Gives them the next responsibility and the authority that goes with it.",
+      "over": "Pushes them into a seat they cannot hold so the development story looks good."
+    },
+    {
+      "id": "after-they-miss",
+      "situation": "When they miss after you delegated",
+      "under": "Takes the work back and does not give it again.",
+      "justRight": "Owns the outcome with them, names the gap, and leaves the authority in place for the next try.",
+      "over": "Hands them a harder piece after the miss without naming the gap, so the next miss is larger."
+    },
+    {
+      "id": "faith-in-their-judgment",
+      "situation": "When they would choose a method that is not yours",
+      "under": "Overrides the method so the work looks like you did it.",
+      "justRight": "Lets them use their own technique when the outcome is still sound, and says why you trust it.",
+      "over": "Praises every choice so they never hear when the judgment was actually thin."
+    }
+  ]
+}

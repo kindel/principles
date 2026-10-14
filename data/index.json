@@ -1097,6 +1097,126 @@
           ]
         }
       ]
+    },
+    {
+      "id": "usmc",
+      "name": "U.S. Marine Corps",
+      "set": "Leadership Principles",
+      "source": "https://www.trngcmd.marines.mil/Portals/207/Site%20Images/TBS/B1X0099XQ%20Officership%20Foundations.pdf",
+      "preamble": "Being of good character is not enough to lead. Marine leaders are guided by 11 leadership principles. The 14 leadership traits, remembered as JJ DID TIE BUCKLE, are the character those principles rest on. They are further reading, not a second set of principles.",
+      "principles": [
+        {
+          "id": 10001,
+          "slug": "know-yourself-and-seek-self-improvement",
+          "name": "Know yourself and seek self-improvement",
+          "sort": 1,
+          "file": "data/usmc/know-yourself-and-seek-self-improvement.json",
+          "facets": [
+            "know-yourself"
+          ]
+        },
+        {
+          "id": 10002,
+          "slug": "be-technically-and-tactically-proficient",
+          "name": "Be technically and tactically proficient",
+          "sort": 2,
+          "file": "data/usmc/be-technically-and-tactically-proficient.json",
+          "facets": [
+            "technically-proficient"
+          ]
+        },
+        {
+          "id": 10003,
+          "slug": "know-your-marines-and-look-out-for-their-welfare",
+          "name": "Know your Marines and look out for their welfare",
+          "sort": 3,
+          "file": "data/usmc/know-your-marines-and-look-out-for-their-welfare.json",
+          "facets": [
+            "look-out-for-their-welfare"
+          ]
+        },
+        {
+          "id": 10004,
+          "slug": "keep-your-marines-informed",
+          "name": "Keep your Marines informed",
+          "sort": 4,
+          "file": "data/usmc/keep-your-marines-informed.json",
+          "facets": [
+            "keep-them-informed"
+          ]
+        },
+        {
+          "id": 10005,
+          "slug": "set-the-example",
+          "name": "Set the example",
+          "sort": 5,
+          "file": "data/usmc/set-the-example.json",
+          "facets": [
+            "set-the-example"
+          ]
+        },
+        {
+          "id": 10006,
+          "slug": "ensure-the-task-is-understood-supervised-and-accomplished",
+          "name": "Ensure the task is understood, supervised and accomplished",
+          "sort": 6,
+          "file": "data/usmc/ensure-the-task-is-understood-supervised-and-accomplished.json",
+          "facets": [
+            "understood-supervised-and-accomplished"
+          ]
+        },
+        {
+          "id": 10007,
+          "slug": "train-your-marines-as-a-team",
+          "name": "Train your Marines as a team",
+          "sort": 7,
+          "file": "data/usmc/train-your-marines-as-a-team.json",
+          "facets": [
+            "train-as-a-team"
+          ]
+        },
+        {
+          "id": 10008,
+          "slug": "make-sound-and-timely-decisions",
+          "name": "Make sound and timely decisions",
+          "sort": 8,
+          "file": "data/usmc/make-sound-and-timely-decisions.json",
+          "facets": [
+            "are-right-a-lot",
+            "bias-for-action"
+          ]
+        },
+        {
+          "id": 10009,
+          "slug": "develop-a-sense-of-responsibility-in-your-subordinates",
+          "name": "Develop a sense of responsibility in your subordinates",
+          "sort": 9,
+          "file": "data/usmc/develop-a-sense-of-responsibility-in-your-subordinates.json",
+          "facets": [
+            "grow-the-team"
+          ]
+        },
+        {
+          "id": 10010,
+          "slug": "employ-your-unit-in-accordance-with-its-capabilities",
+          "name": "Employ your unit in accordance with its capabilities",
+          "sort": 10,
+          "file": "data/usmc/employ-your-unit-in-accordance-with-its-capabilities.json",
+          "facets": [
+            "employ-within-capabilities"
+          ]
+        },
+        {
+          "id": 10011,
+          "slug": "seek-responsibility-and-take-responsibility-for-your-actions",
+          "name": "Seek responsibility and take responsibility for your actions",
+          "sort": 11,
+          "file": "data/usmc/seek-responsibility-and-take-responsibility-for-your-actions.json",
+          "facets": [
+            "acts-like-an-owner"
+          ]
+        }
+      ]
     }
   ]
 }

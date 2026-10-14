@@ -206,8 +206,10 @@ generated set marked as generated.
   addresses a principle by `id` alone and cannot land on the wrong record.
 - Each company owns a block of a thousand ids: Amazon 1000, Arm 2000, Coupang
   3000, Delivery Hero 4000, GitLab 5000, Dawn 6000, Toyota 7000, Generic 8000,
-  Blue Origin 9000. The published source is
-  https://www.blueorigin.com/careers/work-culture.
+  Blue Origin 9000, U.S. Marine Corps 10000. Blue Origin's published source is
+  https://www.blueorigin.com/careers/work-culture. The Marine Corps source is
+  the official TECOM / The Basic School Officership Foundations handout,
+  https://www.trngcmd.marines.mil/Portals/207/Site%20Images/TBS/B1X0099XQ%20Officership%20Foundations.pdf.
   `block` in
   `scripts/companies.py` is the registry, and claiming the next free block is
   the whole of adding a company. A new principle takes the next free number in
@@ -222,7 +224,7 @@ generated set marked as generated.
   signal that they may be describing the same behavior, so `validate.py` prints
   the list rather than hiding it.
 - `company` is kebab-case and matches the parent directory. Current companies
-  are `generic`, `amazon`, `arm`, `coupang`, `delivery-hero`, `gitlab`, `dawn`, `toyota`, and `blue-origin`.
+  are `generic`, `amazon`, `arm`, `coupang`, `delivery-hero`, `gitlab`, `dawn`, `toyota`, `blue-origin`, and `usmc`.
 - `group` is optional, and a record carries it when the company publishes its
   set under lenses. Arm has two, `one-arm` and `accelerate-impact`, five
   principles each. Toyota has two, `continuous-improvement` and
@@ -241,9 +243,11 @@ generated set marked as generated.
   last (one through 15), following the document's numbering. Toyota is Challenge
   first and Teamwork last (one through five). Blue Origin is Passion for our
   Mission first and Have Backbone; Disagree and Commit last (one through 14).
-  Generic, shown as Universal Leadership Principles, is Customer Obsession first
-  and Intentional About Culture last (one through 15), the order in
-  kindel/principles issue 71.
+  The U.S. Marine Corps is Know yourself and seek self-improvement first and
+  Seek responsibility and take responsibility for your actions last (one through
+  11), the numbered doctrine order Marines recite. Generic, shown as Universal
+  Leadership Principles, is Customer Obsession first and Intentional About
+  Culture last (one through 15), the order in kindel/principles issue 71.
 - `definition` is the short statement of the principle, transcribed from
   `source` under Sourcing below. For a company set that source is the
   company's own text. For the generic set it is kindel/principles issue 71.
@@ -360,6 +364,8 @@ the files already use. `blog` is the Further reading list. It is not renamed.
 - `data/teaching/<company>/index.json` catalog, for each company that has teaching.
 - `data/teaching/<company>/<slug>.json` one principle.
 
+A catalog `principles` list may be empty. That is Further reading for the set and no principle teaching files yet. USMC is that case. Each entry is `id`, `slug`, and `file`. `file` is `<slug>.json` in that directory, and the file has to exist. A slug is listed once. `index` is reserved for the catalog and is not a principle slug. When the catalog exists, a teaching file other than the catalog has to be listed.
+
 Amazon is the classic 14. Any Company (`generic`) reuses that teaching.
 `data/maps/<source>-<target>.json` records the reuse. The file names both
 companies, and every lookup uses those ids. `generic-amazon.json` is the Any
@@ -431,7 +437,7 @@ Rules:
 - Every string: no em dash, no `---`, Oxford commas, numbers under 10 spelled out.
 - No source-company names, products, executives, internal tools, or wiki chrome in the prose and notes. Further reading titles may name the author, the book, or the source company.
 
-`validate.py` checks that the slug exists, that each `related` id exists, and that every `{lp:...}` token in the prose and notes resolves to a slug in the company and is listed in `related`. A token in the catalog must resolve too. It also checks the counts and object shapes in the rules above, and that `blog` is a non-empty list of title, url, and note. It rejects an em dash and `---`. An en dash is allowed only in a Further reading title. It rejects a `blog.kindel.com` link whose post is in `scripts/essay_catalog.json`, and an essays link that is not exactly `https://kindel.com/essays/<slug>/` for a slug in that file. Dot segments are folded first. A stored field keeps its trailing punctuation for that check. A `url` value with other text or surrounding space fails too. Percent-encoding is decoded once. `tests/test_reading.py` checks the Further reading shape and the approved cites.
+`validate.py` checks that the slug exists, that each `related` id exists, and that every `{lp:...}` token in the prose and notes resolves to a slug in the company and is listed in `related`. A token in the catalog must resolve too. A catalog `principles` list may be empty. Each listed `file` has to exist in that directory, named `<slug>.json`, and a slug is listed once. `index` is reserved for the catalog and is not a principle slug. When the catalog exists, a teaching file other than the catalog has to be listed. It also checks the counts and object shapes in the rules above, and that `blog` is a non-empty list of title, url, and note. It rejects an em dash and `---`. An en dash is allowed only in a Further reading title. It rejects a `blog.kindel.com` link whose post is in `scripts/essay_catalog.json`, and an essays link that is not exactly `https://kindel.com/essays/<slug>/` for a slug in that file. Dot segments are folded first. A stored field keeps its trailing punctuation for that check. A `url` value with other text or surrounding space fails too. Percent-encoding is decoded once. `tests/test_reading.py` checks the Further reading shape and the approved cites.
 
 ## Sourcing
 

@@ -10,7 +10,8 @@
         4001,
         6004,
         8003,
-        9007
+        9007,
+        10011
       ],
       "rows": [
         {
@@ -108,6 +109,26 @@
         {
           "principle": 9007,
           "id": "unowned-gap"
+        },
+        {
+          "principle": 10011,
+          "id": "seeking-a-harder-assignment"
+        },
+        {
+          "principle": 10011,
+          "id": "after-a-miss-you-own"
+        },
+        {
+          "principle": 10011,
+          "id": "their-mistake-is-yours"
+        },
+        {
+          "principle": 10011,
+          "id": "waiting-to-be-asked"
+        },
+        {
+          "principle": 10011,
+          "id": "credit-and-blame"
         },
         {
           "id": "covering-before-time-off",
@@ -441,7 +462,8 @@
         3014,
         6007,
         8010,
-        9006
+        9006,
+        10008
       ],
       "rows": [
         {
@@ -535,6 +557,14 @@
         {
           "principle": 9006,
           "id": "study-as-delay"
+        },
+        {
+          "principle": 10008,
+          "id": "hesitation"
+        },
+        {
+          "principle": 10008,
+          "id": "deciding-without-all-the-facts"
         },
         {
           "id": "a-thread-that-needs-a-decision",
@@ -2071,12 +2101,29 @@
       "label": "are right a lot",
       "principles": [
         1004,
-        8004
+        8004,
+        10008
       ],
       "rows": [
         {
           "principle": 1004,
           "id": "using-data"
+        },
+        {
+          "principle": 10008,
+          "id": "estimating-the-situation"
+        },
+        {
+          "principle": 10008,
+          "id": "a-decision-that-can-wait"
+        },
+        {
+          "principle": 10008,
+          "id": "revising-a-wrong-call"
+        },
+        {
+          "principle": 10008,
+          "id": "bluffing-through"
         },
         {
           "id": "someone-junior-has-the-fact",
@@ -2250,12 +2297,33 @@
       "id": "grow-the-team",
       "label": "grow the team",
       "principles": [
-        7005
+        7005,
+        10009
       ],
       "rows": [
         {
           "principle": 7005,
           "id": "a-person-ready-for-more"
+        },
+        {
+          "principle": 10009,
+          "id": "delegating-authority"
+        },
+        {
+          "principle": 10009,
+          "id": "doing-it-yourself"
+        },
+        {
+          "principle": 10009,
+          "id": "a-person-ready-for-more"
+        },
+        {
+          "principle": 10009,
+          "id": "after-they-miss"
+        },
+        {
+          "principle": 10009,
+          "id": "faith-in-their-judgment"
         },
         {
           "id": "a-person-ready-for-harder-work",
@@ -4503,6 +4571,622 @@
           "under": "Mentions the risk once and goes back to the schedule.",
           "justRight": "Escalates until the risk has an owner and a next step, then returns to the work that is still safe to do.",
           "over": "Escalates every discomfort as a stop, and the people who own the real risks stop listening.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "know-yourself",
+      "label": "know yourself",
+      "principles": [
+        10001
+      ],
+      "rows": [
+        {
+          "principle": 10001,
+          "id": "honest-self-assessment"
+        },
+        {
+          "principle": 10001,
+          "id": "seeking-honest-opinions"
+        },
+        {
+          "principle": 10001,
+          "id": "using-strengths"
+        },
+        {
+          "principle": 10001,
+          "id": "improving-weaknesses"
+        },
+        {
+          "principle": 10001,
+          "id": "after-feedback"
+        },
+        {
+          "id": "a-look-at-how-you-lead",
+          "situation": "A look at how you lead",
+          "under": "Skips it, or writes only the strengths.",
+          "justRight": "Names a strength you use and a weakness that still shows up, specifically enough to act.",
+          "over": "Produces a long inventory and changes nothing.",
+          "words": "generated"
+        },
+        {
+          "id": "asking-for-a-plain-read",
+          "situation": "Asking for a plain read",
+          "under": "Asks people who will praise you, or does not ask.",
+          "justRight": "Asks someone who will tell you the truth, and writes down one change.",
+          "over": "Collects so much feedback that you never pick a next step.",
+          "words": "generated"
+        },
+        {
+          "id": "a-strength-the-work-needs",
+          "situation": "A strength the work needs",
+          "under": "Hides it so you do not look like you are showing off.",
+          "justRight": "Puts the strength on the work that needs it.",
+          "over": "Uses the same strength on every problem, including the ones it does not fit.",
+          "words": "generated"
+        },
+        {
+          "id": "a-weakness-that-is-already-costing",
+          "situation": "A weakness that is already costing the team",
+          "under": "Names it once and leaves it.",
+          "justRight": "Picks one weakness and a definite plan, then checks whether the next month looks different.",
+          "over": "Tries to fix every weakness at once and does none of them.",
+          "words": "generated"
+        },
+        {
+          "id": "someone-told-you-how-you-come-across",
+          "situation": "Someone told you how you come across",
+          "under": "Defends the story you already had about yourself.",
+          "justRight": "Takes the part that is true and says what you will change.",
+          "over": "Rewrites your whole style after one comment, including the parts that already work.",
+          "words": "generated"
+        },
+        {
+          "id": "a-plan-that-never-starts",
+          "situation": "A plan that never starts",
+          "under": "Says you will improve and never picks a first step.",
+          "justRight": "Puts a first step on the calendar and treats a miss of that step as a miss.",
+          "over": "Builds a development plan so large that this week's work is the thing that slips.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "technically-proficient",
+      "label": "technically proficient",
+      "principles": [
+        10002
+      ],
+      "rows": [
+        {
+          "principle": 10002,
+          "id": "before-you-lead"
+        },
+        {
+          "principle": 10002,
+          "id": "answering-the-job-question"
+        },
+        {
+          "principle": 10002,
+          "id": "learning-the-craft"
+        },
+        {
+          "principle": 10002,
+          "id": "next-role-competence"
+        },
+        {
+          "principle": 10002,
+          "id": "staying-current"
+        },
+        {
+          "id": "leading-work-you-do-not-know",
+          "situation": "Leading work you do not yet know",
+          "under": "Takes the title and hopes the people who know it will carry you.",
+          "justRight": "Learns the job well enough to do it, answer questions, and judge the work.",
+          "over": "Refuses to lead until you are the best expert in the room.",
+          "words": "generated"
+        },
+        {
+          "id": "a-how-does-this-work-question",
+          "situation": "A how-does-this-work question",
+          "under": "Points at a specialist and cannot say the next step yourself.",
+          "justRight": "Answers from the work, or says what you still need to learn and goes to learn it.",
+          "over": "Gives a lecture that buries the one thing they needed today.",
+          "words": "generated"
+        },
+        {
+          "id": "the-method-has-moved",
+          "situation": "The method has moved",
+          "under": "Stays on last year's method and calls it experience.",
+          "justRight": "Practices the new piece until you can do it, then teaches it.",
+          "over": "Keeps practicing the new piece after you can already do it, and this week's work waits.",
+          "words": "generated"
+        },
+        {
+          "id": "the-next-seat-is-in-view",
+          "situation": "The next seat is already in view",
+          "under": "Waits to be taught it after the promotion.",
+          "justRight": "Learns the duties of the next seat now, without dropping this week's job.",
+          "over": "Studies the next seat so hard that this week's job slips.",
+          "words": "generated"
+        },
+        {
+          "id": "a-tool-you-do-not-use-yet",
+          "situation": "A tool you do not use yet",
+          "under": "Keeps the old way because you already know it.",
+          "justRight": "Learns the new way well enough to judge it, and drops the old way when it no longer serves.",
+          "over": "Chases every new tool and the team never settles.",
+          "words": "generated"
+        },
+        {
+          "id": "judging-someone-elses-work",
+          "situation": "Judging someone else's work",
+          "under": "Approves it because you cannot tell good from finished.",
+          "justRight": "Knows the craft well enough to catch a real miss and to leave a sound method alone.",
+          "over": "Rewrites competent work so it looks like yours.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "look-out-for-their-welfare",
+      "label": "look out for their welfare",
+      "principles": [
+        10003
+      ],
+      "rows": [
+        {
+          "principle": 10003,
+          "id": "knowing-the-person"
+        },
+        {
+          "principle": 10003,
+          "id": "someone-is-struggling"
+        },
+        {
+          "principle": 10003,
+          "id": "matching-the-assignment"
+        },
+        {
+          "principle": 10003,
+          "id": "welfare-before-your-comfort"
+        },
+        {
+          "principle": 10003,
+          "id": "a-problem-they-brought-you"
+        },
+        {
+          "id": "assigning-work-to-someone-new",
+          "situation": "Assigning work to someone you barely know",
+          "under": "Treats them as a seat and a skill list.",
+          "justRight": "Learns how they work under pressure and when they need a closer check.",
+          "over": "Collects personal detail they did not offer and uses it as leverage.",
+          "words": "generated"
+        },
+        {
+          "id": "a-teammate-is-struggling",
+          "situation": "A teammate is struggling",
+          "under": "Waits for them to bring it, or treats it as a performance problem only.",
+          "justRight": "Asks, names the load you can see, and gets them help that actually lands.",
+          "over": "Takes over their life and becomes the person they cannot tell the truth to.",
+          "words": "generated"
+        },
+        {
+          "id": "a-high-stakes-call",
+          "situation": "A high-stakes call that has to be made fast",
+          "under": "Hands it to whoever is free, including the person who freezes under that pressure.",
+          "justRight": "Puts the person who can make that call on it, and stays close to the person who cannot yet.",
+          "over": "Protects people from every hard assignment, and they never get stronger.",
+          "words": "generated"
+        },
+        {
+          "id": "your-comfort-or-theirs",
+          "situation": "Your comfort or theirs",
+          "under": "Takes the easy slot and leaves them the leftover.",
+          "justRight": "Puts their rest and recovery ahead of yours, and still holds the standard.",
+          "over": "Performs self-sacrifice so loudly that they cannot accept ordinary help.",
+          "words": "generated"
+        },
+        {
+          "id": "a-problem-outside-the-work",
+          "situation": "A problem they brought you outside the work",
+          "under": "Says it is not your job and sends them away.",
+          "justRight": "Takes it far enough that they have a next step and a person who can help.",
+          "over": "Becomes their only fixer, and the work they own stops moving.",
+          "words": "generated"
+        },
+        {
+          "id": "you-do-not-know-who-is-hurting",
+          "situation": "You do not know who is hurting",
+          "under": "Assumes silence means they are fine.",
+          "justRight": "Checks in before the miss, especially with the person who never complains.",
+          "over": "Holds so many welfare talks that the work has no owner.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "keep-them-informed",
+      "label": "keep them informed",
+      "principles": [
+        10004
+      ],
+      "rows": [
+        {
+          "principle": 10004,
+          "id": "why-the-work"
+        },
+        {
+          "principle": 10004,
+          "id": "a-change-they-will-feel"
+        },
+        {
+          "principle": 10004,
+          "id": "enough-to-act"
+        },
+        {
+          "principle": 10004,
+          "id": "when-you-cannot-say-everything"
+        },
+        {
+          "principle": 10004,
+          "id": "they-have-to-continue-without-you"
+        },
+        {
+          "id": "handing-someone-a-task",
+          "situation": "Handing someone a task",
+          "under": "Gives the task and none of the reason.",
+          "justRight": "Says what to do and why, so they can adapt when the path breaks.",
+          "over": "Gives a speech about context and they still cannot name the next step.",
+          "words": "generated"
+        },
+        {
+          "id": "a-decision-that-changes-their-week",
+          "situation": "A decision that will change their week",
+          "under": "Lets them find out when the work lands differently.",
+          "justRight": "Tells them as soon as you can, including what stays the same.",
+          "over": "Forwards every rumor so they spend the week decoding noise.",
+          "words": "generated"
+        },
+        {
+          "id": "they-have-to-act-without-you",
+          "situation": "They have to act without you",
+          "under": "Holds the picture in your head and answers one question at a time.",
+          "justRight": "Gives them enough of the situation to do the job and to use their own judgment.",
+          "over": "Dumps the whole file and calls that informing them.",
+          "words": "generated"
+        },
+        {
+          "id": "you-cannot-say-everything",
+          "situation": "You cannot say everything",
+          "under": "Goes silent and lets them invent the story.",
+          "justRight": "Says what you can, says what you cannot, and tells them when more will come.",
+          "over": "Says past the limit after they already have the boundary.",
+          "words": "generated"
+        },
+        {
+          "id": "you-will-be-gone",
+          "situation": "You will be gone and the work will not",
+          "under": "Leaves a task list with no picture of the situation.",
+          "justRight": "Leaves the goal, the constraints, and who to ask.",
+          "over": "Writes a manual so long that nobody can find the one decision they will have to make.",
+          "words": "generated"
+        },
+        {
+          "id": "they-ask-why",
+          "situation": "They ask why",
+          "under": "Treats the question as resistance.",
+          "justRight": "Gives the reason they need to do the job intelligently.",
+          "over": "Opens a debate on every order, including ones that cannot wait.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "set-the-example",
+      "label": "set the example",
+      "principles": [
+        10005
+      ],
+      "rows": [
+        {
+          "principle": 10005,
+          "id": "the-standard-you-keep"
+        },
+        {
+          "principle": 10005,
+          "id": "do-as-i-say"
+        },
+        {
+          "principle": 10005,
+          "id": "they-copy-what-you-do"
+        },
+        {
+          "principle": 10005,
+          "id": "a-cut-you-want-for-yourself"
+        },
+        {
+          "principle": 10005,
+          "id": "when-nobody-is-watching"
+        },
+        {
+          "id": "a-standard-you-asked-for",
+          "situation": "A standard you asked for",
+          "under": "Asks for a standard you do not keep yourself.",
+          "justRight": "Keeps the same standard in your own work, then asks it of them.",
+          "over": "Performs the standard so loudly that the work becomes a show about you.",
+          "words": "generated"
+        },
+        {
+          "id": "a-shortcut-that-is-convenient-for-you",
+          "situation": "A shortcut that is convenient for you",
+          "under": "Takes the shortcut and tells them not to.",
+          "justRight": "Does the step you asked them to do, including the unglamorous one.",
+          "over": "Refuses every convenience, including ones that do not touch the standard.",
+          "words": "generated"
+        },
+        {
+          "id": "a-hard-week-people-can-see",
+          "situation": "A hard week people can see",
+          "under": "Lets the week show as complaint, lateness, or a drop in care.",
+          "justRight": "Holds the same bar you set on a calm week.",
+          "over": "Performs stamina and will not name a real limit, so they hide theirs too.",
+          "words": "generated"
+        },
+        {
+          "id": "an-exception-you-want",
+          "situation": "An exception you want for yourself",
+          "under": "Takes the exception and hopes they do not notice.",
+          "justRight": "Applies the same rule to yourself, or changes the rule for everyone.",
+          "over": "Denies yourself a reasonable exception to make a point.",
+          "words": "generated"
+        },
+        {
+          "id": "the-room-is-empty",
+          "situation": "The room is empty",
+          "under": "Keeps the standard only when someone will see it.",
+          "justRight": "Does the same work the same way when nobody is watching.",
+          "over": "Reworks private work past the standard you set, and the job does not leave the room.",
+          "words": "generated"
+        },
+        {
+          "id": "they-copied-you",
+          "situation": "They copied you",
+          "under": "Blames them for a habit they learned from watching you.",
+          "justRight": "Owns the example they copied and changes it in yourself first.",
+          "over": "Rewrites a sound part of the habit because they copied it, and they copy the excess next.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "understood-supervised-and-accomplished",
+      "label": "understood, supervised, and accomplished",
+      "principles": [
+        10006
+      ],
+      "rows": [
+        {
+          "principle": 10006,
+          "id": "what-is-expected"
+        },
+        {
+          "principle": 10006,
+          "id": "they-have-questions"
+        },
+        {
+          "principle": 10006,
+          "id": "checking-progress"
+        },
+        {
+          "principle": 10006,
+          "id": "too-much-supervision"
+        },
+        {
+          "principle": 10006,
+          "id": "calling-it-done"
+        },
+        {
+          "id": "assigning-a-task",
+          "situation": "Assigning a task",
+          "under": "Leaves them to infer the outcome from a vague ask.",
+          "justRight": "States the outcome, the constraints, and what done looks like.",
+          "over": "Scripts every step so tightly that they cannot use their own judgment.",
+          "words": "generated"
+        },
+        {
+          "id": "before-the-work-starts",
+          "situation": "Before the work starts",
+          "under": "Sends them off before they can ask, then is surprised by the miss.",
+          "justRight": "Leaves room for questions and checks that they can repeat the task.",
+          "over": "Asks for another read-back after they already have it, and the work does not start.",
+          "words": "generated"
+        },
+        {
+          "id": "the-work-is-underway",
+          "situation": "The work is underway",
+          "under": "Assigns it and does not look again until the due date.",
+          "justRight": "Checks at a few points that would still let them recover, then lets them work.",
+          "over": "Hovers on every step and becomes the bottleneck.",
+          "words": "generated"
+        },
+        {
+          "id": "watching-every-move",
+          "situation": "Watching every move",
+          "under": "Stays away so completely that a miss has no warning.",
+          "justRight": "Lets them use their own technique and checks the outcome, not the keystrokes.",
+          "over": "Treats any method that is not yours as a defect.",
+          "words": "generated"
+        },
+        {
+          "id": "they-say-it-is-finished",
+          "situation": "They say it is finished",
+          "under": "Takes their word and never looks at the result.",
+          "justRight": "Confirms the work meets what you named, then closes it.",
+          "over": "Reopens finished work for nits that were never in the ask.",
+          "words": "generated"
+        },
+        {
+          "id": "a-task-that-drifted",
+          "situation": "A task that drifted",
+          "under": "Notices the drift after the date.",
+          "justRight": "Catches it early enough to reset the outcome without taking the work back.",
+          "over": "Resets so often that they stop starting until you are in the room.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "train-as-a-team",
+      "label": "train as a team",
+      "principles": [
+        10007
+      ],
+      "rows": [
+        {
+          "principle": 10007,
+          "id": "training-together"
+        },
+        {
+          "principle": 10007,
+          "id": "knowing-your-role"
+        },
+        {
+          "principle": 10007,
+          "id": "a-team-that-is-only-jobs"
+        },
+        {
+          "principle": 10007,
+          "id": "hard-practice"
+        },
+        {
+          "principle": 10007,
+          "id": "after-a-miss-as-a-group"
+        },
+        {
+          "id": "the-next-hard-week",
+          "situation": "The next hard week is coming",
+          "under": "Lets each person practice alone and hopes they will join up under pressure.",
+          "justRight": "Practices the real handoffs as a group, with the same load they will carry.",
+          "over": "Schedules so much group practice that nobody can finish this week's work.",
+          "words": "generated"
+        },
+        {
+          "id": "someone-is-new-to-the-team",
+          "situation": "Someone is new to the team",
+          "under": "Leaves them to discover their seat by colliding with someone else's.",
+          "justRight": "Makes the role, the handoff, and who they back up explicit, then practices it.",
+          "over": "Writes a role chart so detailed that they cannot move when the plan breaks.",
+          "words": "generated"
+        },
+        {
+          "id": "a-group-of-specialists",
+          "situation": "A group of specialists",
+          "under": "Staffs the seats and treats a team as something that appears later.",
+          "justRight": "Trains and reviews as a group, so each person knows how their piece serves the others.",
+          "over": "Blends every role so thoroughly that nobody is accountable for a piece.",
+          "words": "generated"
+        },
+        {
+          "id": "practice-could-be-easy",
+          "situation": "Practice could be easy or real",
+          "under": "Runs a rehearsal that never stresses the weak join.",
+          "justRight": "Makes the practice hard enough that the real day is familiar, and corrects without humiliation.",
+          "over": "Turns practice into punishment, and people hide the misses you needed to see.",
+          "words": "generated"
+        },
+        {
+          "id": "the-team-missed-together",
+          "situation": "The team missed together",
+          "under": "Picks one person to blame and leaves the join-up unfixed.",
+          "justRight": "Names the handoff that failed, practices that piece, and keeps the people in their seats.",
+          "over": "Makes every miss a full reset of the team.",
+          "words": "generated"
+        },
+        {
+          "id": "they-do-not-know-who-backs-them-up",
+          "situation": "They do not know who backs them up",
+          "under": "Finds out on the day someone is out.",
+          "justRight": "Practices the backup before the day it is needed.",
+          "over": "Cross-trains everyone on everything until nobody is deep in their own seat.",
+          "words": "generated"
+        }
+      ]
+    },
+    {
+      "id": "employ-within-capabilities",
+      "label": "employ within capabilities",
+      "principles": [
+        10010
+      ],
+      "rows": [
+        {
+          "principle": 10010,
+          "id": "a-task-they-were-not-trained-for"
+        },
+        {
+          "principle": 10010,
+          "id": "three-to-do-the-job-of-ten"
+        },
+        {
+          "principle": 10010,
+          "id": "unused-capacity"
+        },
+        {
+          "principle": 10010,
+          "id": "a-stretch-they-can-make"
+        },
+        {
+          "principle": 10010,
+          "id": "saying-no-to-the-wrong-work"
+        },
+        {
+          "id": "the-ask-is-outside-the-team",
+          "situation": "The ask is outside what the team can do",
+          "under": "Accepts it anyway and hopes they figure it out.",
+          "justRight": "Says the team is not trained for that work, names what it would take, or declines it.",
+          "over": "Refuses every new kind of work, including a stretch they could make with a short prep.",
+          "words": "generated"
+        },
+        {
+          "id": "the-load-is-larger-than-the-roster",
+          "situation": "The load is larger than the roster",
+          "under": "Assigns it as if the roster were full.",
+          "justRight": "Cuts the scope, gets more people, or says no before the team breaks.",
+          "over": "Protects the team by under-committing work they can already do well.",
+          "words": "generated"
+        },
+        {
+          "id": "unused-strength",
+          "situation": "Unused strength",
+          "under": "Leaves capable people on work that does not need them.",
+          "justRight": "Puts unused capacity on a challenge they are prepared to finish.",
+          "over": "Fills every idle hour so nobody has slack when the real load arrives.",
+          "words": "generated"
+        },
+        {
+          "id": "a-harder-task-would-grow-them",
+          "situation": "A harder task would grow them",
+          "under": "Keeps them on last month's work because it is safe.",
+          "justRight": "Takes the stretch they are trained to attempt, and prepares the gap first.",
+          "over": "Takes a stretch they cannot survive so the team looks ambitious.",
+          "words": "generated"
+        },
+        {
+          "id": "a-senior-asks-for-work-you-cannot-hold",
+          "situation": "A senior asks for work you cannot hold",
+          "under": "Says yes and hides the mismatch.",
+          "justRight": "Names the capability you have, the gap, and what you can take instead.",
+          "over": "Refuses the slice you can take, so the unit never hears the part it can hold.",
+          "words": "generated"
+        },
+        {
+          "id": "you-do-not-know-what-they-can-hold",
+          "situation": "You do not know what they can hold",
+          "under": "Guesses from last quarter and overloads them.",
+          "justRight": "Checks what they are trained to do before you accept the work.",
+          "over": "Runs a survey of capacity so long that the work is already late.",
           "words": "generated"
         }
       ]

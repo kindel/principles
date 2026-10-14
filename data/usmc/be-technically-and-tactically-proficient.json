@@ -1,0 +1,62 @@
+{
+  "id": 10002,
+  "slug": "be-technically-and-tactically-proficient",
+  "company": "usmc",
+  "name": "Be technically and tactically proficient",
+  "sort": 2,
+  "definition": "Before you can lead, you must be able to do the job; the first principle is to know your job. As a Marine, you must demonstrate your ability to accomplish the mission and be capable of answering questions and demonstrating competence in your military occupational specialty (MOS).",
+  "terms": [
+    {
+      "id": "be-technically-and-tactically-proficient",
+      "label": "be technically and tactically proficient",
+      "kind": "alias"
+    },
+    {
+      "id": "technically-proficient",
+      "label": "technically proficient",
+      "kind": "alias"
+    },
+    {
+      "id": "know-your-job",
+      "label": "know your job",
+      "kind": "equivalent"
+    }
+  ],
+  "rows": [
+    {
+      "id": "before-you-lead",
+      "situation": "When you are asked to lead work you do not yet know",
+      "under": "Takes the title and hopes the people who know it will carry you.",
+      "justRight": "Learns the job well enough to do it, answer questions, and judge the work.",
+      "over": "Refuses to lead until you are the best expert in the room."
+    },
+    {
+      "id": "answering-the-job-question",
+      "situation": "When someone asks how the work is actually done",
+      "under": "Points at a specialist and cannot say the next step yourself.",
+      "justRight": "Answers from the work, or says what you still need to learn and goes to learn it.",
+      "over": "Gives a lecture that buries the one thing they needed to do today."
+    },
+    {
+      "id": "learning-the-craft",
+      "situation": "When the job has moved past what you already know",
+      "under": "Stays on last year's method and calls it experience.",
+      "justRight": "Spends time with people who are current, and practices the new piece until you can do it.",
+      "over": "Keeps practicing the new piece after you can already do it, and this week's work waits."
+    },
+    {
+      "id": "next-role-competence",
+      "situation": "When the next job up is already in view",
+      "under": "Waits to be taught it after the promotion.",
+      "justRight": "Learns the duties of the next seat now, so you can take them without a scramble.",
+      "over": "Studies the next seat so hard that this week's job slips."
+    },
+    {
+      "id": "staying-current",
+      "situation": "When the tools or the method have changed",
+      "under": "Keeps using the old way because you already know it.",
+      "justRight": "Learns the new way well enough to teach it, and drops the old way when it no longer serves.",
+      "over": "Chases every new tool and the team never settles."
+    }
+  ]
+}
