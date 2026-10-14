@@ -862,6 +862,71 @@ class TeachingValidatorTest(unittest.TestCase):
             errs = self.check(root)
             self.assertTrue(any("{lp:nope} does not resolve" in e for e in errs), errs)
 
+    def reading(self):
+        return [{
+            "title": "A source",
+            "url": "https://example.com/source",
+            "note": "Why it belongs.",
+        }]
+
+    def test_a_catalog_may_list_no_principles(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "index.json", {
+                "principles": [],
+                "blog": self.reading(),
+            })
+            self.assertEqual([], self.check(root))
+
+    def test_a_catalog_file_must_exist(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "index.json", {
+                "principles": [{
+                    "slug": "customer-obsession",
+                    "id": 1001,
+                    "file": "customer-obsession.json",
+                }],
+                "blog": self.reading(),
+            })
+            errs = self.check(root)
+            self.assertTrue(
+                any("catalog file customer-obsession.json does not exist" in e for e in errs),
+                errs)
+            self.write(root, "customer-obsession.json", self.good())
+            self.assertEqual([], self.check(root))
+
+    def test_a_catalog_slug_is_listed_once(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "customer-obsession.json", self.good())
+            entry = {
+                "slug": "customer-obsession",
+                "id": 1001,
+                "file": "customer-obsession.json",
+            }
+            self.write(root, "index.json", {
+                "principles": [entry, dict(entry)],
+                "blog": self.reading(),
+            })
+            errs = self.check(root)
+            self.assertTrue(
+                any("listed more than once" in e for e in errs),
+                errs)
+
+    def test_a_catalog_file_must_match_the_slug(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "index.json", {
+                "principles": [{
+                    "slug": "customer-obsession",
+                    "id": 1001,
+                    "file": "other.json",
+                }],
+                "blog": self.reading(),
+            })
+            errs = self.check(root)
+            self.assertTrue(
+                any("catalog file for customer-obsession must be customer-obsession.json" in e
+                    for e in errs),
+                errs)
+
     def test_unknown_company_is_rejected(self):
         with tempfile.TemporaryDirectory() as root:
             self.write(root, "x.json", {"slug": "x"}, company="nope")

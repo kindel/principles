@@ -637,6 +637,8 @@ def validate_teaching(by_company, errs, root=None):
     Each related id must be one too. Every {lp:slug} token in the prose,
     in a related note, or in a Further reading note must resolve, and it
     must be listed in related. A token in the catalog must resolve.
+    A catalog principles list may be empty. A listed file has to exist
+    in that directory, and a slug is listed once.
     root is for tests; the corpus uses DATA.
     """
     catalog, catalog_err = essay_links.load_catalog()
@@ -681,9 +683,10 @@ def validate_teaching(by_company, errs, root=None):
             check_teaching_dashes(doc, where, errs)
             if filename == "index.json":
                 principles = doc.get("principles")
-                if not isinstance(principles, list) or not principles:
-                    errs.append("%s: principles must be a non-empty list" % where)
+                if not isinstance(principles, list):
+                    errs.append("%s: principles must be a list" % where)
                 else:
+                    seen_slugs = set()
                     for item in principles:
                         if not isinstance(item, dict):
                             errs.append("%s: catalog entry must be an object" % where)
@@ -692,10 +695,21 @@ def validate_teaching(by_company, errs, root=None):
                         if slug_ not in slugs:
                             errs.append("%s: catalog slug %r does not exist" % (where, slug_))
                             continue
+                        if slug_ in seen_slugs:
+                            errs.append("%s: catalog slug %r is listed more than once"
+                                        % (where, slug_))
+                        seen_slugs.add(slug_)
                         rec = slugs[slug_]
                         if item.get("id") != rec.get("id"):
                             errs.append("%s: catalog id for %s is %r, record is %r"
                                         % (where, slug_, item.get("id"), rec.get("id")))
+                        file_ = item.get("file")
+                        expect = slug_ + ".json" if isinstance(slug_, str) else ""
+                        if file_ != expect:
+                            errs.append("%s: catalog file for %s must be %s"
+                                        % (where, slug_, expect))
+                        elif not os.path.isfile(os.path.join(cdir, file_)):
+                            errs.append("%s: catalog file %s does not exist" % (where, file_))
                 validate_blog(doc.get("blog"), where, errs)
                 texts = []
                 _strings(doc, texts)

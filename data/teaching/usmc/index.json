@@ -1,63 +1,7 @@
 {
   "title": "U.S. Marine Corps Leadership Principles",
   "source": "TECOM / The Basic School Officership Foundations handout. Set-level Further reading only. No principle teaching files.",
-  "principles": [
-    {
-      "id": 10001,
-      "slug": "know-yourself-and-seek-self-improvement",
-      "file": "know-yourself-and-seek-self-improvement.json"
-    },
-    {
-      "id": 10002,
-      "slug": "be-technically-and-tactically-proficient",
-      "file": "be-technically-and-tactically-proficient.json"
-    },
-    {
-      "id": 10003,
-      "slug": "know-your-marines-and-look-out-for-their-welfare",
-      "file": "know-your-marines-and-look-out-for-their-welfare.json"
-    },
-    {
-      "id": 10004,
-      "slug": "keep-your-marines-informed",
-      "file": "keep-your-marines-informed.json"
-    },
-    {
-      "id": 10005,
-      "slug": "set-the-example",
-      "file": "set-the-example.json"
-    },
-    {
-      "id": 10006,
-      "slug": "ensure-the-task-is-understood-supervised-and-accomplished",
-      "file": "ensure-the-task-is-understood-supervised-and-accomplished.json"
-    },
-    {
-      "id": 10007,
-      "slug": "train-your-marines-as-a-team",
-      "file": "train-your-marines-as-a-team.json"
-    },
-    {
-      "id": 10008,
-      "slug": "make-sound-and-timely-decisions",
-      "file": "make-sound-and-timely-decisions.json"
-    },
-    {
-      "id": 10009,
-      "slug": "develop-a-sense-of-responsibility-in-your-subordinates",
-      "file": "develop-a-sense-of-responsibility-in-your-subordinates.json"
-    },
-    {
-      "id": 10010,
-      "slug": "employ-your-unit-in-accordance-with-its-capabilities",
-      "file": "employ-your-unit-in-accordance-with-its-capabilities.json"
-    },
-    {
-      "id": 10011,
-      "slug": "seek-responsibility-and-take-responsibility-for-your-actions",
-      "file": "seek-responsibility-and-take-responsibility-for-your-actions.json"
-    }
-  ],
+  "principles": [],
   "blog": [
     {
       "title": "Leadership Traits",
