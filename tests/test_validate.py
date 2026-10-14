@@ -82,6 +82,10 @@ class ValidatorTest(unittest.TestCase):
         self.assertCaught(record(), "does not match the filename",
                           filename="something-else.json")
 
+    def test_index_is_reserved_for_the_catalog(self):
+        self.assertCaught(record(slug="index"), "index is reserved",
+                          filename="index.json")
+
     def test_company_must_match_the_directory(self):
         rec = record(company="amazon")
         self.assertCaught(rec, "does not match the directory", company="coupang")
@@ -921,6 +925,28 @@ class TeachingValidatorTest(unittest.TestCase):
             errs = self.check(root)
             self.assertTrue(
                 any("listed more than once" in e for e in errs),
+                errs)
+
+    def test_a_catalog_cannot_list_the_catalog_file(self):
+        with tempfile.TemporaryDirectory() as root:
+            bank = {
+                "amazon": [
+                    ("customer-obsession.json",
+                     {"id": 1001, "slug": "customer-obsession"}),
+                    ("index.json", {"id": 1099, "slug": "index"}),
+                ]
+            }
+            self.write(root, "index.json", {
+                "principles": [{
+                    "slug": "index",
+                    "id": 1099,
+                    "file": "index.json",
+                }],
+                "blog": self.reading(),
+            })
+            errs = self.check(root, bank=bank)
+            self.assertTrue(
+                any("index is reserved for the catalog" in e for e in errs),
                 errs)
 
     def test_a_catalog_file_must_match_the_slug(self):

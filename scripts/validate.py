@@ -256,6 +256,8 @@ def validate_record(company, filename, rec, errs):
 
     if not SLUG.match(rec.get("slug") or ""):
         errs.append("%s: slug is not kebab-case" % where)
+    elif rec.get("slug") == "index":
+        errs.append("%s: index is reserved for the catalog" % where)
     if not SLUG.match(rec.get("company", "")):
         errs.append("%s: company is not kebab-case" % where)
 
@@ -638,8 +640,9 @@ def validate_teaching(by_company, errs, root=None):
     in a related note, or in a Further reading note must resolve, and it
     must be listed in related. A token in the catalog must resolve.
     A catalog principles list may be empty. A listed file has to exist
-    in that directory, and a slug is listed once. When the catalog
-    exists, a teaching file other than the catalog has to be listed.
+    in that directory, and a slug is listed once. index is reserved for
+    the catalog. When the catalog exists, a teaching file other than
+    the catalog has to be listed.
     root is for tests; the corpus uses DATA.
     """
     catalog, catalog_err = essay_links.load_catalog()
@@ -698,6 +701,9 @@ def validate_teaching(by_company, errs, root=None):
                         slug_ = item.get("slug")
                         if slug_ not in slugs:
                             errs.append("%s: catalog slug %r does not exist" % (where, slug_))
+                            continue
+                        if slug_ == "index" or item.get("file") == "index.json":
+                            errs.append("%s: index is reserved for the catalog" % where)
                             continue
                         if slug_ in seen_slugs:
                             errs.append("%s: catalog slug %r is listed more than once"
