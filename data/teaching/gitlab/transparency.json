@@ -1,0 +1,16 @@
+{
+  "id": 5006,
+  "slug": "transparency",
+  "blog": [
+    {
+      "title": "GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/",
+      "note": "The published CREDIT values this principle belongs to."
+    },
+    {
+      "title": "Transparency, GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/#transparency",
+      "note": "The Transparency value, last in CREDIT."
+    }
+  ]
+}

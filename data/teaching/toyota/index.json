@@ -1,0 +1,48 @@
+{
+  "title": "The Toyota Way",
+  "source": "https://www.toyota-global.com/pages/contents/investors/ir_library/annual/pdf/2018/ar18_3_en.pdf",
+  "principles": [
+    {
+      "id": 7001,
+      "slug": "challenge",
+      "file": "challenge.json"
+    },
+    {
+      "id": 7002,
+      "slug": "kaizen",
+      "file": "kaizen.json"
+    },
+    {
+      "id": 7003,
+      "slug": "genchi-genbutsu",
+      "file": "genchi-genbutsu.json"
+    },
+    {
+      "id": 7004,
+      "slug": "respect",
+      "file": "respect.json"
+    },
+    {
+      "id": 7005,
+      "slug": "teamwork",
+      "file": "teamwork.json"
+    }
+  ],
+  "blog": [
+    {
+      "title": "Toyota Way 2001",
+      "url": "https://www.toyota-global.com/company/history_of_toyota/75years/data/conditions/philosophy/toyotaway2001.html",
+      "note": "The official page for the two pillars and the five keywords."
+    },
+    {
+      "title": "Toyota Annual Report 2018, the Toyota Way keywords",
+      "url": "https://www.toyota-global.com/pages/contents/investors/ir_library/annual/pdf/2018/ar18_3_en.pdf",
+      "note": "The first-party text that states each keyword. Page 29."
+    },
+    {
+      "title": "Toyota Corporate Philosophy",
+      "url": "https://www.toyota-global.com/company/history_of_toyota/75years/data/conditions/philosophy/index.html",
+      "note": "The philosophy index that places that set next to the Guiding Principles."
+    }
+  ]
+}

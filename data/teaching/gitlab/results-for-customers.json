@@ -1,0 +1,16 @@
+{
+  "id": 5002,
+  "slug": "results-for-customers",
+  "blog": [
+    {
+      "title": "GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/",
+      "note": "The published CREDIT values this principle belongs to."
+    },
+    {
+      "title": "Results for Customers, GitLab Values",
+      "url": "https://handbook.gitlab.com/handbook/values/#results",
+      "note": "The Results for Customers value, second in CREDIT."
+    }
+  ]
+}

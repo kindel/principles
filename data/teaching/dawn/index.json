@@ -1,0 +1,93 @@
+{
+  "title": "Dawn Aerospace Company Tenets",
+  "source": "Dawn Aerospace Company Tenets, Dawn's internal wiki, published with Dawn's permission",
+  "principles": [
+    {
+      "id": 6001,
+      "slug": "think-big-start-small",
+      "file": "think-big-start-small.json"
+    },
+    {
+      "id": 6002,
+      "slug": "customer-success-is-our-success",
+      "file": "customer-success-is-our-success.json"
+    },
+    {
+      "id": 6003,
+      "slug": "break-down-silos",
+      "file": "break-down-silos.json"
+    },
+    {
+      "id": 6004,
+      "slug": "ownership",
+      "file": "ownership.json"
+    },
+    {
+      "id": 6005,
+      "slug": "no-surprises",
+      "file": "no-surprises.json"
+    },
+    {
+      "id": 6006,
+      "slug": "invent-and-simplify",
+      "file": "invent-and-simplify.json"
+    },
+    {
+      "id": 6007,
+      "slug": "bias-for-action",
+      "file": "bias-for-action.json"
+    },
+    {
+      "id": 6008,
+      "slug": "earn-trust",
+      "file": "earn-trust.json"
+    },
+    {
+      "id": 6009,
+      "slug": "better-than-yesterday",
+      "file": "better-than-yesterday.json"
+    },
+    {
+      "id": 6010,
+      "slug": "hire-and-develop-the-best",
+      "file": "hire-and-develop-the-best.json"
+    },
+    {
+      "id": 6011,
+      "slug": "have-backbone-disagree-and-commit",
+      "file": "have-backbone-disagree-and-commit.json"
+    },
+    {
+      "id": 6012,
+      "slug": "respect-time",
+      "file": "respect-time.json"
+    },
+    {
+      "id": 6013,
+      "slug": "scrappy-not-crappy",
+      "file": "scrappy-not-crappy.json"
+    },
+    {
+      "id": 6014,
+      "slug": "rocket-engineering-not-rocket-science",
+      "file": "rocket-engineering-not-rocket-science.json"
+    },
+    {
+      "id": 6015,
+      "slug": "race-on-the-racetrack-walk-on-ice",
+      "file": "race-on-the-racetrack-walk-on-ice.json"
+    }
+  ],
+  "blog": [
+    {
+      "title": "About Dawn Aerospace",
+      "url": "https://www.dawnaerospace.com/about",
+      "note": "The public mission statement. The tenets are first-party text published with permission."
+    },
+    {
+      "title": "Careers at Dawn Aerospace",
+      "url": "https://www.dawnaerospace.com/careers",
+      "note": "How the company describes the work and the people it hires."
+    }
+  ]
+}

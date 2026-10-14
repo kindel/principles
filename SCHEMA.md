@@ -361,10 +361,22 @@ the files already use. `blog` is the Further reading list. It is not renamed.
 
 ### Files
 
-- `data/teaching/<company>/index.json` catalog, for each company that has teaching.
-- `data/teaching/<company>/<slug>.json` one principle.
+- `data/teaching/<company>/index.json` catalog. Every company has one.
+- `data/teaching/<company>/<slug>.json` one principle. Every principle has one.
 
-A catalog `principles` list may be empty. That is Further reading for the set and no principle teaching files yet. USMC is that case. Each entry is `id`, `slug`, and `file`. `file` is `<slug>.json` in that directory, and the file has to exist. A slug is listed once. `index` is reserved for the catalog and is not a principle slug. When the catalog exists, a teaching file other than the catalog has to be listed.
+A catalog `principles` list may be empty in a fixture. That is Further reading
+for the set and no principle teaching files yet. The live corpus lists every
+principle. Each entry is `id`, `slug`, and `file`. `file` is `<slug>.json` in
+that directory, and the file has to exist. A slug is listed once. `index` is
+reserved for the catalog and is not a principle slug. When the catalog exists,
+a teaching file other than the catalog has to be listed.
+
+A principle file may be reading-only: `id`, `slug`, and `blog`. Porridge
+renders that list on the principle page. Full teaching prose is required when
+any of `why`, `calibrationIntro`, `examples`, `looksLike`, `deepen`, or
+`related` is present. `validate.py` fails the live tree when a company is
+missing a catalog or a principle file. A missing file is a silent empty
+Further reading section in the apps, so the check is the contract.
 
 Amazon is the classic 14. Any Company (`generic`) reuses that teaching.
 `data/maps/<source>-<target>.json` records the reuse. The file names both
@@ -427,17 +439,17 @@ Rules:
 
 - `id` is the numeric id of the principle record in this company.
 - `slug` matches the filename without `.json`, and that slug exists on a principle record for the company.
-- `why` is 3-6 short paragraphs. Each array item is one paragraph.
-- `examples` 2-4 teaching cases. Generalize retail and ops specifics. Drop named-exec anecdotes you cannot restate without the company.
-- `deepen` 6-12 questions. Each is a full sentence ending with `?`.
-- `related` is the union of every `{lp:slug}` token in the prose fields and notes plus any extra curated links. Each `related` id is a slug in this company. Two is a floor, not a cap.
+- `why` is 3-6 short paragraphs. Each array item is one paragraph. Omit it on a reading-only file.
+- `examples` 2-4 teaching cases. Generalize retail and ops specifics. Drop named-exec anecdotes you cannot restate without the company. Omit them on a reading-only file.
+- `deepen` 6-12 questions. Each is a full sentence ending with `?`. Omit them on a reading-only file.
+- `related` is the union of every `{lp:slug}` token in the prose fields and notes plus any extra curated links. Each `related` id is a slug in this company. Two is a floor, not a cap. Omit it on a reading-only file. A reading-only note must not carry a `{lp:slug}` token, because there is no `related` list to put it on.
 - `blog` is the Further reading list. It holds published tig.log essays that amplify this principle, plus at least one external source: the published principles, a shareholder letter, a book, or an essay or talk by someone who shaped the practice. Same shape on every file, including the catalog. Empty is not allowed. A principle with no tig.log essay still gets its external source. A reused set may append Further reading after the copied list. Copied entries stay in step with the target. Extra entries are the source set's own. `validate.py` allows a longer `blog` array on the source when the target's entries are the prefix.
 - A tig.log essay, a post in the WordPress Essays category (slug `essays`, id 448), is linked at `https://kindel.com/essays/<slug>/` with the trailing slash. A blog post outside that category stays at `https://blog.kindel.com/YYYY/MM/DD/<slug>/`. `scripts/essay_catalog.json` is the checked-in list of essay ids and slugs, from `https://blog.kindel.com/wp-json/wp/v2/posts?categories=448`. Refresh it by fetching every page (`per_page=100`, follow `X-WP-TotalPages`), keeping `id` and `slug`, and sorting by slug. `validate.py` rejects a `blog.kindel.com` URL whose dated slug or `?p=` id is in that list, and leaves every other blog URL alone. An apex essay link has to be exactly `https://kindel.com/essays/<slug>/`, and that slug has to be in the catalog. A typo, a missing trailing slash, `http`, a root-relative path, a path with no leading slash, an extra segment, a doubled slash, a dot segment, or an encoded slash fails. Percent-encoding is decoded once, including on a blog permalink. A stored field is judged before trailing punctuation is removed. A `url` or `href` value is judged as the whole string, before it is split. Only a parsed kindel.com host whose path is under essays has to be the canonical catalog URL. A Markdown destination is read whole, including balanced parentheses and angle brackets, and a title after it is not part of the link. A backslash escapes ASCII punctuation only. One terminal DNS dot on the host is ignored. A kindel.com or blog.kindel.com link with no scheme is checked the same way. A bare URL keeps balanced parentheses. An equals sign before a root-relative path is not part of the link. JSON files are checked after decoding, which lets a sentence end on a canonical essay link.
 - Every `blog` link is real. Never invent a URL, and check that each URL resolves before it lands. External titles are the cite on the list. Use the published heading when it already names the work. When it is only a year or a short title, name the author or the source, and the work. Titles may name the source company or an executive. Notes follow the rules below.
 - Every string: no em dash, no `---`, Oxford commas, numbers under 10 spelled out.
 - No source-company names, products, executives, internal tools, or wiki chrome in the prose and notes. Further reading titles may name the author, the book, or the source company.
 
-`validate.py` checks that the slug exists, that each `related` id exists, and that every `{lp:...}` token in the prose and notes resolves to a slug in the company and is listed in `related`. A token in the catalog must resolve too. A catalog `principles` list may be empty. Each listed `file` has to exist in that directory, named `<slug>.json`, and a slug is listed once. `index` is reserved for the catalog and is not a principle slug. When the catalog exists, a teaching file other than the catalog has to be listed. It also checks the counts and object shapes in the rules above, and that `blog` is a non-empty list of title, url, and note. It rejects an em dash and `---`. An en dash is allowed only in a Further reading title. It rejects a `blog.kindel.com` link whose post is in `scripts/essay_catalog.json`, and an essays link that is not exactly `https://kindel.com/essays/<slug>/` for a slug in that file. Dot segments are folded first. A stored field keeps its trailing punctuation for that check. A `url` value with other text or surrounding space fails too. Percent-encoding is decoded once. `tests/test_reading.py` checks the Further reading shape and the approved cites.
+`validate.py` checks that the slug exists, that each `related` id exists, and that every `{lp:...}` token in the prose and notes resolves to a slug in the company and is listed in `related`. A token in the catalog must resolve too. A catalog `principles` list may be empty. Each listed `file` has to exist in that directory, named `<slug>.json`, and a slug is listed once. `index` is reserved for the catalog and is not a principle slug. When the catalog exists, a teaching file other than the catalog has to be listed. A file whose keys are only `id`, `slug`, and `blog` skips the prose counts. Any other teaching field requires those counts. The live tree must have a catalog and a teaching file for every principle. It also checks the counts and object shapes in the rules above, and that `blog` is a non-empty list of title, url, and note. It rejects an em dash and `---`. An en dash is allowed only in a Further reading title. It rejects a `blog.kindel.com` link whose post is in `scripts/essay_catalog.json`, and an essays link that is not exactly `https://kindel.com/essays/<slug>/` for a slug in that file. Dot segments are folded first. A stored field keeps its trailing punctuation for that check. A `url` value with other text or surrounding space fails too. Percent-encoding is decoded once. `tests/test_reading.py` checks the Further reading shape and the approved cites.
 
 ## Sourcing
 

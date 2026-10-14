@@ -24,9 +24,11 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
 
 from companies import COMPANY_META
 import essay_links
+import validate
 from validate import (expected_index, load_facets, load_records, validate_company,
                       validate_calibration_coverage, validate_derivation_maps,
-                      validate_facets, validate_record, validate_teaching)
+                      validate_facets, validate_record, validate_teaching,
+                      require_teaching_coverage)
 
 
 def row(i, **kw):
@@ -569,6 +571,77 @@ class TeachingValidatorTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as root:
             self.write(root, "customer-obsession.json", self.good())
             self.assertEqual([], self.check(root))
+
+    def test_a_reading_only_teaching_file_passes(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "customer-obsession.json", {
+                "id": 1001,
+                "slug": "customer-obsession",
+                "blog": self.reading(),
+            })
+            self.assertEqual([], self.check(root))
+
+    def test_a_reading_only_file_still_needs_blog(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "customer-obsession.json", {
+                "id": 1001,
+                "slug": "customer-obsession",
+            })
+            errs = self.check(root)
+            self.assertTrue(any("blog must be a non-empty list" in e for e in errs), errs)
+
+    def test_a_partial_prose_file_is_not_reading_only(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "customer-obsession.json", {
+                "id": 1001,
+                "slug": "customer-obsession",
+                "why": ["One paragraph.", "Another paragraph.", "A third."],
+                "blog": self.reading(),
+            })
+            errs = self.check(root)
+            self.assertTrue(any("calibrationIntro" in e for e in errs), errs)
+
+    def test_live_coverage_requires_a_catalog(self):
+        with tempfile.TemporaryDirectory() as root:
+            errs = []
+            require_teaching_coverage(self.bank(), os.path.join(root, "teaching"), errs)
+            self.assertTrue(
+                any("data/teaching/amazon/index.json: missing" in e for e in errs),
+                errs)
+
+    def test_live_coverage_requires_every_principle_file(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write(root, "index.json", {
+                "principles": [],
+                "blog": self.reading(),
+            })
+            self.write(root, "customer-obsession.json", {
+                "id": 1001,
+                "slug": "customer-obsession",
+                "blog": self.reading(),
+            })
+            errs = []
+            require_teaching_coverage(self.bank(), os.path.join(root, "teaching"), errs)
+            self.assertTrue(
+                any("data/teaching/amazon/ownership.json: missing" in e for e in errs),
+                errs)
+            self.assertFalse(
+                any("customer-obsession.json: missing" in e for e in errs),
+                errs)
+
+    def test_live_coverage_runs_when_the_teaching_root_is_absent(self):
+        with tempfile.TemporaryDirectory() as empty:
+            old = validate.DATA
+            validate.DATA = empty
+            try:
+                errs = []
+                validate_teaching(self.bank(), errs)
+            finally:
+                validate.DATA = old
+            self.assertTrue(any("data/teaching: missing" in e for e in errs), errs)
+            self.assertTrue(
+                any("data/teaching/amazon/index.json: missing" in e for e in errs),
+                errs)
 
     def test_a_blog_essay_url_is_rejected(self):
         with tempfile.TemporaryDirectory() as root:
